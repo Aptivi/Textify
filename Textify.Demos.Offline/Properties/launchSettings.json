@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Textify - Offline - AnalyzeSpaces": {
+      "commandName": "Project",
+      "commandLineArgs": "AnalyzeSpaces"
+    },
+    "Textify - Offline - RepairSpaces": {
+      "commandName": "Project",
+      "commandLineArgs": "RepairSpaces"
+    },
+    "Textify - Offline - QueryUnicode": {
+      "commandName": "Project",
+      "commandLineArgs": "QueryUnicode"
+    },
+    "Textify - Offline - VersionInfo": {
+      "commandName": "Project",
+      "commandLineArgs": "VersionInfo"
+    },
+    "Textify - Offline - VersionInfoRev": {
+      "commandName": "Project",
+      "commandLineArgs": "VersionInfoRev"
+    }
+  }
+}

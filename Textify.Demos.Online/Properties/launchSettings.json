@@ -1,0 +1,24 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Textify - Online - Dictionary": {
+      "commandName": "Project",
+      "commandLineArgs": "Dictionary"
+    },
+    "Textify - Online - Addresstigation": {
+      "commandName": "Project",
+      "commandLineArgs": "Addresstigation"
+    },
+    "Textify - Online - NameGen": {
+      "commandName": "Project",
+      "commandLineArgs": "NameGen"
+    },
+    "Textify - Online - WordGet": {
+      "commandName": "Project",
+      "commandLineArgs": "WordGet"
+    }
+  }
+}
