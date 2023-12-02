@@ -40,40 +40,6 @@ namespace Textify.Tests.SpaceManager
         }
 
         [Test]
-        public void TestAnalyzeSpacesNonBreakingSpace()
-        {
-            //                  v~~~~ This is a non-breaking space
-            string text = "Hello world!";
-            int length = Encoding.UTF8.GetByteCount(text);
-            var result = SpaceAnalysisTools.AnalyzeSpaces(text);
-            result.ShouldNotBeNull();
-            result.ResultingStream.ShouldNotBeNull();
-            result.ResultingStream.Length.ShouldBe(length);
-            result.FalseSpaces.ShouldNotBeEmpty();
-            result.FalseSpaces[0].Item1.ShouldBe('\u00a0');
-            result.FalseSpaces[0].Item2.ShouldBe("NON-BREAKING SPACE");
-        }
-
-        [Test]
-        public void TestAnalyzeSpacesMultipleNonBreakingSpaces()
-        {
-            //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
-            string text = "Hello and welcome to the world!";
-            int length = Encoding.UTF8.GetByteCount(text);
-            var result = SpaceAnalysisTools.AnalyzeSpaces(text);
-            result.ShouldNotBeNull();
-            result.ResultingStream.ShouldNotBeNull();
-            result.ResultingStream.Length.ShouldBe(length);
-            result.FalseSpaces.ShouldNotBeEmpty();
-            result.FalseSpaces.Length.ShouldBe(1);
-            foreach (var space in result.FalseSpaces)
-            {
-                space.Item1.ShouldBe('\u00a0');
-                space.Item2.ShouldBe("NON-BREAKING SPACE");
-            }
-        }
-
-        [Test]
         public void TestAnalyzeSpacesNonBreakingSpaceExplicit()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
