@@ -1,0 +1,268 @@
+{
+  "sitemap": {
+    "baseUrl": "https://aptivi.github.io/Textify/"
+  },
+  "source_base_path": "/github/workspace/DocGen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.CharManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.CharManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.EnclosedDoubleQuotesType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.EnclosedDoubleQuotesType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.JsonTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.JsonTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.TextTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.TextTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.SpaceManager.Analysis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.SpaceManager.Analysis.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.SpaceManager.Conversion.SpaceConversionTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.SpaceManager.Conversion.SpaceConversionTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.SpaceManager.Conversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.SpaceManager.Conversion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.TextifyException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.TextifyException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.Char.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.Char.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.Namealias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.Namealias.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.Repertoire.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.Repertoire.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.Ucd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.Ucd.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.UnicodeQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.UnicodeQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.UnicodeQueryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.UnicodeQueryType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Unicode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Unicode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Versioning.SemVer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Versioning.SemVer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Versioning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Versioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
