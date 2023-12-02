@@ -19,6 +19,7 @@
     <PackageVersion>1.0.0</PackageVersion>
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageId>Textify.Offline</PackageId>
     <LangVersion>latest</LangVersion>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
