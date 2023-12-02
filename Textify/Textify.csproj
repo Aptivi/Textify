@@ -23,7 +23,6 @@
     <LangVersion>latest</LangVersion>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
-    <UserSecretsId>0038947d-d600-4dd3-93c0-d8b744ca38e3</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -44,7 +43,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Terminaux" Version="1.12.3" />
   </ItemGroup>
 
   <ItemGroup>

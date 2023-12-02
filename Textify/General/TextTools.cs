@@ -23,8 +23,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Terminaux.Sequences.Tools;
-using Textify.General;
+using Textify.Sequences.Tools;
 
 namespace Textify.General
 {
