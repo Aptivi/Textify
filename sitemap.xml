@@ -2,229 +2,229 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.General.CharManager.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.General.EnclosedDoubleQuotesType.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.General.JsonTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.General.TextTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.General.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.ApcSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.C1Sequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.CsiSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.DcsSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.EscSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.OscSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.PmSequences.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.Types.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.VtSequenceBasicChars.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.VtSequenceBuilderTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.VtSequenceSpecificTypes.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Builder.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Tools.VtSequenceRegexes.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Tools.VtSequenceTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Tools.VtSequenceType.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Sequences.Tools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.SpaceManager.Analysis.SpaceAnalysisTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.SpaceManager.Analysis.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.SpaceManager.Conversion.SpaceConversionTools.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.SpaceManager.Conversion.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.TextifyException.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.Char.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.Namealias.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.Repertoire.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.Ucd.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.UnicodeQuery.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.UnicodeQueryType.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Unicode.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Versioning.SemVer.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.Versioning.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/api/Textify.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/Textify/index.html</loc>
-    <lastmod>2023-12-02T03:35:39+00:00</lastmod>
+    <lastmod>2023-12-02T04:15:58+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
