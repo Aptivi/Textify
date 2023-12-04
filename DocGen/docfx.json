@@ -30,7 +30,7 @@
         ],
         "dest": "../docs",
         "globalMetadata": {
-            "_appTitle": "Textify API - Aptivi Internals",
+            "_appTitle": "Textify API - Aptivi",
             "_enableSearch": true
         },
         "globalMetadataFiles": [],
