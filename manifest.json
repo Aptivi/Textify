@@ -65,6 +65,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.NameGen.NameGenderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.NameGen.NameGenderType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.NameGen.NameGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.NameGen.NameGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.NameGen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.NameGen.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Sequences.Builder.Types.ApcSequences.yml",
       "output": {
         ".html": {
@@ -369,6 +399,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.Versioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Words.WordManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Words.WordManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Words.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Words.html"
         }
       },
       "version": ""

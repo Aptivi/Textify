@@ -503,6 +503,354 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.Truncate
   nameWithType: TextTools.Truncate
+- uid: Textify.NameGen
+  name: Textify.NameGen
+  href: api/Textify.NameGen.html
+  commentId: N:Textify.NameGen
+  fullName: Textify.NameGen
+  nameWithType: Textify.NameGen
+- uid: Textify.NameGen.NameGenderType
+  name: NameGenderType
+  href: api/Textify.NameGen.NameGenderType.html
+  commentId: T:Textify.NameGen.NameGenderType
+  fullName: Textify.NameGen.NameGenderType
+  nameWithType: NameGenderType
+- uid: Textify.NameGen.NameGenderType.Female
+  name: Female
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Female
+  commentId: F:Textify.NameGen.NameGenderType.Female
+  fullName: Textify.NameGen.NameGenderType.Female
+  nameWithType: NameGenderType.Female
+- uid: Textify.NameGen.NameGenderType.Male
+  name: Male
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Male
+  commentId: F:Textify.NameGen.NameGenderType.Male
+  fullName: Textify.NameGen.NameGenderType.Male
+  nameWithType: NameGenderType.Male
+- uid: Textify.NameGen.NameGenderType.Unified
+  name: Unified
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Unified
+  commentId: F:Textify.NameGen.NameGenderType.Unified
+  fullName: Textify.NameGen.NameGenderType.Unified
+  nameWithType: NameGenderType.Unified
+- uid: Textify.NameGen.NameGenerator
+  name: NameGenerator
+  href: api/Textify.NameGen.NameGenerator.html
+  commentId: T:Textify.NameGen.NameGenerator
+  fullName: Textify.NameGen.NameGenerator
+  nameWithType: NameGenerator
+- uid: Textify.NameGen.NameGenerator.FindFirstNames(System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: FindFirstNames(string, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNames_System_String_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.FindFirstNames(System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: FindFirstNames(String, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.FindFirstNames(string, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.FindFirstNames(String, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNames(string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNames(String, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.FindFirstNames(System.String,Textify.NameGen.NameGenderType)
+  name: FindFirstNames(string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNames_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.FindFirstNames(System.String,Textify.NameGen.NameGenderType)
+  name.vb: FindFirstNames(String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.FindFirstNames(string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.FindFirstNames(String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNames(string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNames(String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.FindFirstNames*
+  name: FindFirstNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.FindFirstNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.FindFirstNames
+  nameWithType: NameGenerator.FindFirstNames
+- uid: Textify.NameGen.NameGenerator.FindFirstNamesAsync(System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: FindFirstNamesAsync(string, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNamesAsync_System_String_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.FindFirstNamesAsync(System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: FindFirstNamesAsync(String, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.FindFirstNamesAsync(string, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.FindFirstNamesAsync(String, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNamesAsync(string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNamesAsync(String, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.FindFirstNamesAsync(System.String,Textify.NameGen.NameGenderType)
+  name: FindFirstNamesAsync(string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNamesAsync_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.FindFirstNamesAsync(System.String,Textify.NameGen.NameGenderType)
+  name.vb: FindFirstNamesAsync(String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.FindFirstNamesAsync(string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.FindFirstNamesAsync(String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNamesAsync(string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNamesAsync(String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.FindFirstNamesAsync*
+  name: FindFirstNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindFirstNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.FindFirstNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.FindFirstNamesAsync
+  nameWithType: NameGenerator.FindFirstNamesAsync
+- uid: Textify.NameGen.NameGenerator.FindLastNames(System.String)
+  name: FindLastNames(string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNames_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.FindLastNames(System.String)
+  name.vb: FindLastNames(String)
+  fullName: Textify.NameGen.NameGenerator.FindLastNames(string)
+  fullName.vb: Textify.NameGen.NameGenerator.FindLastNames(String)
+  nameWithType: NameGenerator.FindLastNames(string)
+  nameWithType.vb: NameGenerator.FindLastNames(String)
+- uid: Textify.NameGen.NameGenerator.FindLastNames(System.String,System.String,System.String)
+  name: FindLastNames(string, string, string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNames_System_String_System_String_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.FindLastNames(System.String,System.String,System.String)
+  name.vb: FindLastNames(String, String, String)
+  fullName: Textify.NameGen.NameGenerator.FindLastNames(string, string, string)
+  fullName.vb: Textify.NameGen.NameGenerator.FindLastNames(String, String, String)
+  nameWithType: NameGenerator.FindLastNames(string, string, string)
+  nameWithType.vb: NameGenerator.FindLastNames(String, String, String)
+- uid: Textify.NameGen.NameGenerator.FindLastNames*
+  name: FindLastNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.FindLastNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.FindLastNames
+  nameWithType: NameGenerator.FindLastNames
+- uid: Textify.NameGen.NameGenerator.FindLastNamesAsync(System.String)
+  name: FindLastNamesAsync(string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNamesAsync_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.FindLastNamesAsync(System.String)
+  name.vb: FindLastNamesAsync(String)
+  fullName: Textify.NameGen.NameGenerator.FindLastNamesAsync(string)
+  fullName.vb: Textify.NameGen.NameGenerator.FindLastNamesAsync(String)
+  nameWithType: NameGenerator.FindLastNamesAsync(string)
+  nameWithType.vb: NameGenerator.FindLastNamesAsync(String)
+- uid: Textify.NameGen.NameGenerator.FindLastNamesAsync(System.String,System.String,System.String)
+  name: FindLastNamesAsync(string, string, string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNamesAsync_System_String_System_String_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.FindLastNamesAsync(System.String,System.String,System.String)
+  name.vb: FindLastNamesAsync(String, String, String)
+  fullName: Textify.NameGen.NameGenerator.FindLastNamesAsync(string, string, string)
+  fullName.vb: Textify.NameGen.NameGenerator.FindLastNamesAsync(String, String, String)
+  nameWithType: NameGenerator.FindLastNamesAsync(string, string, string)
+  nameWithType.vb: NameGenerator.FindLastNamesAsync(String, String, String)
+- uid: Textify.NameGen.NameGenerator.FindLastNamesAsync*
+  name: FindLastNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_FindLastNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.FindLastNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.FindLastNamesAsync
+  nameWithType: NameGenerator.FindLastNamesAsync
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: GenerateFirstNames(int, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNames_System_Int32_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: GenerateFirstNames(Integer, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNames(int, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateFirstNames(Integer, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(int, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNames(System.Int32,Textify.NameGen.NameGenderType)
+  name: GenerateFirstNames(int, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNames_System_Int32_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNames(System.Int32,Textify.NameGen.NameGenderType)
+  name.vb: GenerateFirstNames(Integer, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNames(int, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateFirstNames(Integer, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNames(Textify.NameGen.NameGenderType)
+  name: GenerateFirstNames(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNames_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNames(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNames(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNames*
+  name: GenerateFirstNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateFirstNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNames
+  nameWithType: NameGenerator.GenerateFirstNames
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: GenerateFirstNamesAsync(int, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNamesAsync_System_Int32_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: GenerateFirstNamesAsync(Integer, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(int, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(Integer, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(int, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(System.Int32,Textify.NameGen.NameGenderType)
+  name: GenerateFirstNamesAsync(int, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNamesAsync_System_Int32_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(System.Int32,Textify.NameGen.NameGenderType)
+  name.vb: GenerateFirstNamesAsync(Integer, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(int, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(Integer, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(Textify.NameGen.NameGenderType)
+  name: GenerateFirstNamesAsync(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNamesAsync_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync*
+  name: GenerateFirstNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateFirstNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateFirstNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateFirstNamesAsync
+  nameWithType: NameGenerator.GenerateFirstNamesAsync
+- uid: Textify.NameGen.NameGenerator.GenerateLastNames
+  name: GenerateLastNames()
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNames
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNames
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNames()
+  nameWithType: NameGenerator.GenerateLastNames()
+- uid: Textify.NameGen.NameGenerator.GenerateLastNames(System.Int32)
+  name: GenerateLastNames(int)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNames_System_Int32_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNames(System.Int32)
+  name.vb: GenerateLastNames(Integer)
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNames(int)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateLastNames(Integer)
+  nameWithType: NameGenerator.GenerateLastNames(int)
+  nameWithType.vb: NameGenerator.GenerateLastNames(Integer)
+- uid: Textify.NameGen.NameGenerator.GenerateLastNames(System.Int32,System.String,System.String)
+  name: GenerateLastNames(int, string, string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNames_System_Int32_System_String_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNames(System.Int32,System.String,System.String)
+  name.vb: GenerateLastNames(Integer, String, String)
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNames(int, string, string)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateLastNames(Integer, String, String)
+  nameWithType: NameGenerator.GenerateLastNames(int, string, string)
+  nameWithType.vb: NameGenerator.GenerateLastNames(Integer, String, String)
+- uid: Textify.NameGen.NameGenerator.GenerateLastNames*
+  name: GenerateLastNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateLastNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNames
+  nameWithType: NameGenerator.GenerateLastNames
+- uid: Textify.NameGen.NameGenerator.GenerateLastNamesAsync
+  name: GenerateLastNamesAsync()
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNamesAsync
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNamesAsync
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNamesAsync()
+  nameWithType: NameGenerator.GenerateLastNamesAsync()
+- uid: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(System.Int32)
+  name: GenerateLastNamesAsync(int)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNamesAsync_System_Int32_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNamesAsync(System.Int32)
+  name.vb: GenerateLastNamesAsync(Integer)
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(int)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(Integer)
+  nameWithType: NameGenerator.GenerateLastNamesAsync(int)
+  nameWithType.vb: NameGenerator.GenerateLastNamesAsync(Integer)
+- uid: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(System.Int32,System.String,System.String)
+  name: GenerateLastNamesAsync(int, string, string)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNamesAsync_System_Int32_System_String_System_String_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateLastNamesAsync(System.Int32,System.String,System.String)
+  name.vb: GenerateLastNamesAsync(Integer, String, String)
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(int, string, string)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateLastNamesAsync(Integer, String, String)
+  nameWithType: NameGenerator.GenerateLastNamesAsync(int, string, string)
+  nameWithType.vb: NameGenerator.GenerateLastNamesAsync(Integer, String, String)
+- uid: Textify.NameGen.NameGenerator.GenerateLastNamesAsync*
+  name: GenerateLastNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateLastNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateLastNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateLastNamesAsync
+  nameWithType: NameGenerator.GenerateLastNamesAsync
+- uid: Textify.NameGen.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: GenerateNames(int, string, string, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNames_System_Int32_System_String_System_String_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: GenerateNames(Integer, String, String, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNames(int, string, string, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateNames(Integer, String, String, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(int, string, string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNames(Integer, String, String, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNames(System.Int32,Textify.NameGen.NameGenderType)
+  name: GenerateNames(int, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNames_System_Int32_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNames(System.Int32,Textify.NameGen.NameGenderType)
+  name.vb: GenerateNames(Integer, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNames(int, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateNames(Integer, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNames(Integer, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNames(Textify.NameGen.NameGenderType)
+  name: GenerateNames(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNames_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNames(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNames(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNames*
+  name: GenerateNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateNames
+  nameWithType: NameGenerator.GenerateNames
+- uid: Textify.NameGen.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name: GenerateNamesAsync(int, string, string, string, string, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNamesAsync_System_Int32_System_String_System_String_System_String_System_String_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String,Textify.NameGen.NameGenderType)
+  name.vb: GenerateNamesAsync(Integer, String, String, String, String, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNamesAsync(int, string, string, string, string, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateNamesAsync(Integer, String, String, String, String, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(int, string, string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer, String, String, String, String, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNamesAsync(System.Int32,Textify.NameGen.NameGenderType)
+  name: GenerateNamesAsync(int, NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNamesAsync_System_Int32_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNamesAsync(System.Int32,Textify.NameGen.NameGenderType)
+  name.vb: GenerateNamesAsync(Integer, NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNamesAsync(int, Textify.NameGen.NameGenderType)
+  fullName.vb: Textify.NameGen.NameGenerator.GenerateNamesAsync(Integer, Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer, NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNamesAsync(Textify.NameGen.NameGenderType)
+  name: GenerateNamesAsync(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNamesAsync_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GenerateNamesAsync(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GenerateNamesAsync(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GenerateNamesAsync*
+  name: GenerateNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GenerateNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.GenerateNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GenerateNamesAsync
+  nameWithType: NameGenerator.GenerateNamesAsync
+- uid: Textify.NameGen.NameGenerator.PopulateNames(Textify.NameGen.NameGenderType)
+  name: PopulateNames(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_PopulateNames_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.PopulateNames(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.PopulateNames(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.PopulateNames(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.PopulateNames*
+  name: PopulateNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_PopulateNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.PopulateNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.PopulateNames
+  nameWithType: NameGenerator.PopulateNames
+- uid: Textify.NameGen.NameGenerator.PopulateNamesAsync(Textify.NameGen.NameGenderType)
+  name: PopulateNamesAsync(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_PopulateNamesAsync_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.PopulateNamesAsync(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.PopulateNamesAsync(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.PopulateNamesAsync(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.PopulateNamesAsync*
+  name: PopulateNamesAsync
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_PopulateNamesAsync_
+  commentId: Overload:Textify.NameGen.NameGenerator.PopulateNamesAsync
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.PopulateNamesAsync
+  nameWithType: NameGenerator.PopulateNamesAsync
 - uid: Textify.Sequences.Builder
   name: Textify.Sequences.Builder
   href: api/Textify.Sequences.Builder.html
@@ -9012,3 +9360,125 @@ references:
   fullName.vb: Textify.Versioning.SemVer.<=
   nameWithType: SemVer.operator <=
   nameWithType.vb: SemVer.<=
+- uid: Textify.Words
+  name: Textify.Words
+  href: api/Textify.Words.html
+  commentId: N:Textify.Words
+  fullName: Textify.Words
+  nameWithType: Textify.Words
+- uid: Textify.Words.WordManager
+  name: WordManager
+  href: api/Textify.Words.WordManager.html
+  commentId: T:Textify.Words.WordManager
+  fullName: Textify.Words.WordManager
+  nameWithType: WordManager
+- uid: Textify.Words.WordManager.GetRandomWord
+  name: GetRandomWord()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWord
+  commentId: M:Textify.Words.WordManager.GetRandomWord
+  fullName: Textify.Words.WordManager.GetRandomWord()
+  nameWithType: WordManager.GetRandomWord()
+- uid: Textify.Words.WordManager.GetRandomWord*
+  name: GetRandomWord
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWord_
+  commentId: Overload:Textify.Words.WordManager.GetRandomWord
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetRandomWord
+  nameWithType: WordManager.GetRandomWord
+- uid: Textify.Words.WordManager.GetRandomWordAsync
+  name: GetRandomWordAsync()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordAsync
+  commentId: M:Textify.Words.WordManager.GetRandomWordAsync
+  fullName: Textify.Words.WordManager.GetRandomWordAsync()
+  nameWithType: WordManager.GetRandomWordAsync()
+- uid: Textify.Words.WordManager.GetRandomWordAsync*
+  name: GetRandomWordAsync
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordAsync_
+  commentId: Overload:Textify.Words.WordManager.GetRandomWordAsync
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetRandomWordAsync
+  nameWithType: WordManager.GetRandomWordAsync
+- uid: Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32)
+  name: GetRandomWordConditional(int, string, string, int)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_
+  commentId: M:Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32)
+  name.vb: GetRandomWordConditional(Integer, String, String, Integer)
+  fullName: Textify.Words.WordManager.GetRandomWordConditional(int, string, string, int)
+  fullName.vb: Textify.Words.WordManager.GetRandomWordConditional(Integer, String, String, Integer)
+  nameWithType: WordManager.GetRandomWordConditional(int, string, string, int)
+  nameWithType.vb: WordManager.GetRandomWordConditional(Integer, String, String, Integer)
+- uid: Textify.Words.WordManager.GetRandomWordConditional*
+  name: GetRandomWordConditional
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditional_
+  commentId: Overload:Textify.Words.WordManager.GetRandomWordConditional
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetRandomWordConditional
+  nameWithType: WordManager.GetRandomWordConditional
+- uid: Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32)
+  name: GetRandomWordConditionalAsync(int, string, string, int)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_
+  commentId: M:Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32)
+  name.vb: GetRandomWordConditionalAsync(Integer, String, String, Integer)
+  fullName: Textify.Words.WordManager.GetRandomWordConditionalAsync(int, string, string, int)
+  fullName.vb: Textify.Words.WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer)
+  nameWithType: WordManager.GetRandomWordConditionalAsync(int, string, string, int)
+  nameWithType.vb: WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer)
+- uid: Textify.Words.WordManager.GetRandomWordConditionalAsync*
+  name: GetRandomWordConditionalAsync
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditionalAsync_
+  commentId: Overload:Textify.Words.WordManager.GetRandomWordConditionalAsync
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetRandomWordConditionalAsync
+  nameWithType: WordManager.GetRandomWordConditionalAsync
+- uid: Textify.Words.WordManager.GetWords
+  name: GetWords()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWords
+  commentId: M:Textify.Words.WordManager.GetWords
+  fullName: Textify.Words.WordManager.GetWords()
+  nameWithType: WordManager.GetWords()
+- uid: Textify.Words.WordManager.GetWords*
+  name: GetWords
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWords_
+  commentId: Overload:Textify.Words.WordManager.GetWords
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetWords
+  nameWithType: WordManager.GetWords
+- uid: Textify.Words.WordManager.GetWordsAsync
+  name: GetWordsAsync()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWordsAsync
+  commentId: M:Textify.Words.WordManager.GetWordsAsync
+  fullName: Textify.Words.WordManager.GetWordsAsync()
+  nameWithType: WordManager.GetWordsAsync()
+- uid: Textify.Words.WordManager.GetWordsAsync*
+  name: GetWordsAsync
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWordsAsync_
+  commentId: Overload:Textify.Words.WordManager.GetWordsAsync
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.GetWordsAsync
+  nameWithType: WordManager.GetWordsAsync
+- uid: Textify.Words.WordManager.InitializeWords
+  name: InitializeWords()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWords
+  commentId: M:Textify.Words.WordManager.InitializeWords
+  fullName: Textify.Words.WordManager.InitializeWords()
+  nameWithType: WordManager.InitializeWords()
+- uid: Textify.Words.WordManager.InitializeWords*
+  name: InitializeWords
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWords_
+  commentId: Overload:Textify.Words.WordManager.InitializeWords
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.InitializeWords
+  nameWithType: WordManager.InitializeWords
+- uid: Textify.Words.WordManager.InitializeWordsAsync
+  name: InitializeWordsAsync()
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWordsAsync
+  commentId: M:Textify.Words.WordManager.InitializeWordsAsync
+  fullName: Textify.Words.WordManager.InitializeWordsAsync()
+  nameWithType: WordManager.InitializeWordsAsync()
+- uid: Textify.Words.WordManager.InitializeWordsAsync*
+  name: InitializeWordsAsync
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWordsAsync_
+  commentId: Overload:Textify.Words.WordManager.InitializeWordsAsync
+  isSpec: "True"
+  fullName: Textify.Words.WordManager.InitializeWordsAsync
+  nameWithType: WordManager.InitializeWordsAsync
