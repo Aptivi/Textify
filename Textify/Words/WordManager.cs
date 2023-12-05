@@ -20,11 +20,13 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
+using Textify.General;
+using Textify.Words.Resources;
 
-namespace Textify.Online.Words
+namespace Textify.Words
 {
     /// <summary>
     /// The word management class
@@ -32,7 +34,6 @@ namespace Textify.Online.Words
     public static class WordManager
     {
         private static readonly List<string> Words = [];
-        private static readonly HttpClient httpClient = new();
         private static readonly Random rng = new();
 
         /// <summary>
@@ -43,11 +44,12 @@ namespace Textify.Online.Words
             // Download the words
             if (Words.Count == 0)
             {
-                var response = httpClient.GetAsync("https://cdn.jsdelivr.net/gh/dwyl/english-words/words_alpha.txt").Result;
-                var contentStream = new MemoryStream();
-                response.Content.ReadAsStreamAsync().Result.CopyTo(contentStream);
-                contentStream.Seek(0L, SeekOrigin.Begin);
-                Words.AddRange(new StreamReader(contentStream).ReadToEnd().SplitNewLines().ToList());
+                var contentStream = new MemoryStream(WordsData.words_alpha);
+                var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
+
+                // Open the XML to stream
+                var content = archive.GetEntry("words_alpha.txt").Open();
+                Words.AddRange(new StreamReader(content).ReadToEnd().SplitNewLines().ToList());
             }
         }
 
@@ -59,12 +61,13 @@ namespace Textify.Online.Words
             // Download the words
             if (Words.Count == 0)
             {
-                var response = await httpClient.GetAsync("https://cdn.jsdelivr.net/gh/dwyl/english-words/words_alpha.txt");
-                var contentStream = new MemoryStream();
-                var stream = await response.Content.ReadAsStreamAsync();
-                stream.CopyTo(contentStream);
-                contentStream.Seek(0L, SeekOrigin.Begin);
-                Words.AddRange(new StreamReader(contentStream).ReadToEnd().SplitNewLines().ToList());
+                var contentStream = new MemoryStream(WordsData.words_alpha);
+                var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
+
+                // Open the XML to stream
+                var content = archive.GetEntry("words_alpha.txt").Open();
+                var read = await new StreamReader(content).ReadToEndAsync();
+                Words.AddRange(read.SplitNewLines().ToList());
             }
         }
 
@@ -161,9 +164,5 @@ namespace Textify.Online.Words
             // Get a word that satisfies all the conditions
             return word;
         }
-
-        private static string[] SplitNewLines(this string Str) =>
-            Str.Replace(Convert.ToChar(13).ToString(), "")
-               .Split(Convert.ToChar(10));
     }
 }

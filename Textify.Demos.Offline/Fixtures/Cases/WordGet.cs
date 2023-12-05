@@ -17,9 +17,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
-using Textify.Online.Words;
+using Textify.Words;
 
-namespace Textify.Demos.Online.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures.Cases
 {
     internal class WordGet : IFixture
     {

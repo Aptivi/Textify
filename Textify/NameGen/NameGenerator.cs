@@ -21,10 +21,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
+using Textify.General;
+using Textify.NameGen.Resources;
 
-namespace Textify.Online.NameGen
+namespace Textify.NameGen
 {
     /// <summary>
     /// Name generator class
@@ -34,12 +35,6 @@ namespace Textify.Online.NameGen
         internal static string[] Names = [];
         internal static string[] Surnames = [];
         private static NameGenderType lastGenderType = NameGenderType.Unified;
-        private static readonly HttpClient NameClient = new();
-        private static readonly string nameAddressPart = "https://cdn.jsdelivr.net/gh/Aptivi/NamesList@latest/Processed/";
-        private static readonly string unifiedNameListFileName = "FirstNames.txt";
-        private static readonly string femaleNameListFileName = "FirstNames_Female.txt";
-        private static readonly string maleNameListFileName = "FirstNames_Male.txt";
-        private static readonly string surnameListFileName = "Surnames.txt";
 
         /// <summary>
         /// Populates the names and the surnames for the purpose of initialization
@@ -56,17 +51,20 @@ namespace Textify.Online.NameGen
         {
             try
             {
-                string surnameAddress = $"{nameAddressPart}{surnameListFileName}";
-                string namesFileName =
-                    genderType == NameGenderType.Female ? femaleNameListFileName :
-                    genderType == NameGenderType.Male ? maleNameListFileName :
-                    unifiedNameListFileName;
-                string nameAddress = $"{nameAddressPart}{namesFileName}";
-
                 if (Names.Length == 0 || genderType != lastGenderType)
-                    Names = await PopulateInternalAsync(nameAddress);
+                {
+                    var namesBytes =
+                        genderType == NameGenderType.Female ? NamesData.FirstNames_Female :
+                        genderType == NameGenderType.Male ? NamesData.FirstNames_Male :
+                        NamesData.FirstNames;
+                    var namesByteStream = new MemoryStream(namesBytes);
+                    Names = (await new StreamReader(namesByteStream).ReadToEndAsync()).SplitNewLines();
+                }
                 if (Surnames.Length == 0)
-                    Surnames = await PopulateInternalAsync(surnameAddress);
+                {
+                    var lastsByteStream = new MemoryStream(NamesData.Surnames);
+                    Surnames = (await new StreamReader(lastsByteStream).ReadToEndAsync()).SplitNewLines();
+                }
                 lastGenderType = genderType;
             }
             catch (Exception ex)
@@ -491,22 +489,5 @@ namespace Textify.Online.NameGen
             }
             return [.. namesList];
         }
-
-        internal static async Task<string[]> PopulateInternalAsync(string nameLink)
-        {
-            HttpResponseMessage Response = await NameClient.GetAsync(nameLink);
-            Response.EnsureSuccessStatusCode();
-            Stream SurnamesStream = await Response.Content.ReadAsStreamAsync();
-            string SurnamesString = new StreamReader(SurnamesStream).ReadToEnd();
-            return SurnamesString.SplitNewLines();
-        }
-
-        /// <summary>
-        /// Makes a string array with new line as delimiter
-        /// </summary>
-        /// <param name="Str">Target string</param>
-        /// <returns></returns>
-        internal static string[] SplitNewLines(this string Str) =>
-            Str.Replace(Convert.ToChar(13), default).Split(Convert.ToChar(10));
     }
 }

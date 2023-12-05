@@ -17,18 +17,17 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
-using Textify.Online.NameGen;
 
-namespace Textify.Demos.Online.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class NameGen : IFixture
+    internal class NameGenerator : IFixture
     {
-        public string FixtureID => "NameGen";
+        public string FixtureID => "NameGenerator";
         public void RunFixture()
         {
-            string[] names = NameGenerator.GenerateNames(10);
-            string[] firstNames = NameGenerator.GenerateFirstNames(10);
-            string[] surnames = NameGenerator.GenerateLastNames(10);
+            string[] names = NameGen.NameGenerator.GenerateNames(10);
+            string[] firstNames = NameGen.NameGenerator.GenerateFirstNames(10);
+            string[] surnames = NameGen.NameGenerator.GenerateLastNames(10);
 
             Console.WriteLine($"10 names: {string.Join(", ", names)}");
             Console.WriteLine($"10 first names: {string.Join(", ", firstNames)}");

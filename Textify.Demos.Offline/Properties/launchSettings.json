@@ -23,6 +23,14 @@
     "Textify - Offline - VersionInfoRev": {
       "commandName": "Project",
       "commandLineArgs": "VersionInfoRev"
+    },
+    "Textify - Offline - WordGet": {
+      "commandName": "Project",
+      "commandLineArgs": "WordGet"
+    },
+    "Textify - Offline - NameGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "NameGenerator"
     }
   }
 }

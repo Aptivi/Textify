@@ -36,6 +36,12 @@ namespace Textify.Demos.Offline.Fixtures
             // Versioning
             new VersionInfo(),
             new VersionInfoRev(),
+
+            // NameGen
+            new NameGenerator(),
+
+            // Words
+            new WordGet(),
         ];
 
         internal static IFixture GetFixtureFromName(string name)

@@ -31,12 +31,6 @@ namespace Textify.Demos.Online.Fixtures
 
             // MailAddress
             new Addresstigation(),
-
-            // NameGen
-            new NameGen(),
-
-            // Words
-            new WordGet(),
         ];
 
         internal static IFixture GetFixtureFromName(string name)

@@ -1,0 +1,6 @@
+[submodule "assets/NamesList"]
+	path = assets/NamesList
+	url = https://github.com/Aptivi/NamesList.git
+[submodule "assets/WordsList"]
+	path = assets/WordsList
+	url = https://github.com/Aptivi/WordsList.git
