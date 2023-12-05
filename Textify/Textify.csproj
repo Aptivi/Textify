@@ -5,7 +5,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
     <Description>Text tools</Description>
@@ -16,7 +16,7 @@
     <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library</PackageTags>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Textify.Offline</PackageId>

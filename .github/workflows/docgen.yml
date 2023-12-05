@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Fetching the KS source
+        with:
+          submodules: 'true'
+          ref: ${{ github.ref }}
       - uses: "AptiviCEO/docfx-action@master"
         name: Generating documentation
         with:
