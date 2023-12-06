@@ -18,7 +18,7 @@ jobs:
         with:
           submodules: 'true'
           ref: ${{ github.ref }}
-      - uses: "AptiviCEO/docfx-action@master"
+      - uses: "nunit/docfx-action@master"
         name: Generating documentation
         with:
           args: DocGen/docfx.json
