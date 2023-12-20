@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using Textify.General;
@@ -53,17 +54,28 @@ namespace Textify.NameGen
             {
                 if (Names.Length == 0 || genderType != lastGenderType)
                 {
-                    var namesBytes =
-                        genderType == NameGenderType.Female ? NamesData.FirstNames_Female :
-                        genderType == NameGenderType.Male ? NamesData.FirstNames_Male :
-                        NamesData.FirstNames;
-                    var namesByteStream = new MemoryStream(namesBytes);
-                    Names = (await new StreamReader(namesByteStream).ReadToEndAsync()).SplitNewLines();
+                    (byte[] bytes, string fileName) =
+                        genderType == NameGenderType.Female ? (NamesData.FirstNames_Female, "FirstNames_Female.txt") :
+                        genderType == NameGenderType.Male ? (NamesData.FirstNames_Male, "FirstNames_Male.txt") :
+                        (NamesData.FirstNames, "FirstNames.txt");
+                    var contentStream = new MemoryStream(bytes);
+                    var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
+
+                    // Open the XML to stream
+                    var content = archive.GetEntry(fileName).Open();
+                    var read = await new StreamReader(content).ReadToEndAsync();
+                    Names = read.SplitNewLines();
                 }
                 if (Surnames.Length == 0)
                 {
-                    var lastsByteStream = new MemoryStream(NamesData.Surnames);
-                    Surnames = (await new StreamReader(lastsByteStream).ReadToEndAsync()).SplitNewLines();
+                    (byte[] bytes, string fileName) = (NamesData.Surnames, "Surnames.txt");
+                    var contentStream = new MemoryStream(bytes);
+                    var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
+
+                    // Open the XML to stream
+                    var content = archive.GetEntry(fileName).Open();
+                    var read = await new StreamReader(content).ReadToEndAsync();
+                    Surnames = read.SplitNewLines();
                 }
                 lastGenderType = genderType;
             }
