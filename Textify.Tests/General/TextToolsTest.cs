@@ -105,7 +105,7 @@ namespace Textify.Tests.General
         [Description("Querying")]
         public void TestTruncate()
         {
-            string expected = "Nitrocid is awesome...";
+            string expected = "Nitrocid is awesome ...";
             string Source = "Nitrocid is awesome and is great!";
             int Target = 20;
             Source = Source.Truncate(Target);

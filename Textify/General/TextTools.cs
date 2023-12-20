@@ -225,7 +225,7 @@ namespace Textify.General
             // truncate the non-VT sequences.
             int newLength = VtSequenceTools.FilterVTSequences(target).Length;
             if (newLength > threshold)
-                return target.Substring(0, threshold - 1) + "...";
+                return target.Substring(0, threshold) + "...";
             else
                 return target;
         }
