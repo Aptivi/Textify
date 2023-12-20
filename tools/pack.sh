@@ -17,7 +17,6 @@ fi
 # Pack binary
 echo Packing binary...
 cd "../Textify/bin/$releaseconf/netstandard2.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
-cd "../Textify.Online/bin/$releaseconf/netstandard2.0/" && "$zippath" -r /tmp/$version-online.zip . && cd -
 if [ ! $? == 0 ]; then
 	echo Packing using zip failed.
 	exit 1
@@ -25,6 +24,5 @@ fi
 
 # Inform success
 mv ~/tmp/$version-bin.zip .
-mv ~/tmp/$version-online.zip .
 echo Build and pack successful.
 exit 0
