@@ -612,6 +612,26 @@ namespace Textify.Tests.General
             actualDecoded.ShouldBe(expectedDecoded);
         }
 
+        /// <summary>
+        /// Shifts the letters in a string
+        /// </summary>
+        [Test]
+        [TestCase("", -255, "")]
+        [TestCase("Hello", -1, "Gdkkn")]
+        [TestCase("Hello", 1, "Ifmmp")]
+        [TestCase("Hello", -256, "Gdkkn")]
+        [TestCase("Hello", 256, "Ifmmp")]
+        [TestCase("Hello", -2, "Fcjjm")]
+        [TestCase("Hello", 2, "Jgnnq")]
+        [TestCase("Hello", -257, "Fcjjm")]
+        [TestCase("Hello", 257, "Jgnnq")]
+        [Description("Querying")]
+        public void TestShiftLetters(string text, int shift, string expectedShifted)
+        {
+            string actualShifted = text.ShiftLetters(shift);
+            actualShifted.ShouldBe(expectedShifted);
+        }
+
     }
 
 }

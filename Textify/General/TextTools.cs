@@ -468,5 +468,42 @@ namespace Textify.General
             byte[] textBytes = Convert.FromBase64String(text);
             return Encoding.Default.GetString(textBytes);
         }
+
+        /// <summary>
+        /// Shifts the letters in a string
+        /// </summary>
+        /// <param name="text">Text to shift</param>
+        /// <param name="shift">How many times to shift</param>
+        /// <returns>A string containing shifted letters</returns>
+        public static string ShiftLetters(this string text, int shift)
+        {
+            // Get the character array
+            char[] chars = text.ToCharArray();
+
+            // Now, add each character with shift threshold, taking overflows into account
+            while (shift < -255)
+                shift += 255;
+            while (shift > 255)
+                shift -= 255;
+            for (int i = 0; i < chars.Length; i++)
+            {
+                // Get a character and its integer value
+                char character = chars[i];
+                int charInt = character;
+
+                // Add by shift threshold
+                charInt += shift;
+                while (charInt < -255)
+                    charInt += 255;
+                while (charInt > 255)
+                    charInt -= 255;
+
+                // Now, convert the final result to the character
+                character = (char)charInt;
+                chars[i] = character;
+            }
+
+            return string.Join("", chars);
+        }
     }
 }
