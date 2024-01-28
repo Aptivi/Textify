@@ -215,6 +215,10 @@ namespace Textify.General
         {
             if (target is null)
                 throw new TextifyException("The target may not be null");
+            if (threshold < 0)
+                threshold = 0;
+            if (threshold == 0)
+                return "";
 
             // Try to truncate string. If the string length is bigger than the threshold, it'll be truncated to the length of
             // the threshold, putting three dots next to it. We don't use ellipsis marks here because we're dealing with the
