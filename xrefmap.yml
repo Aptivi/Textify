@@ -407,6 +407,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceLastOccurrence
   nameWithType: TextTools.ReplaceLastOccurrence
+- uid: Textify.General.TextTools.ShiftLetters(System.String,System.Int32)
+  name: ShiftLetters(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ShiftLetters_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.ShiftLetters(System.String,System.Int32)
+  name.vb: ShiftLetters(String, Integer)
+  fullName: Textify.General.TextTools.ShiftLetters(string, int)
+  fullName.vb: Textify.General.TextTools.ShiftLetters(String, Integer)
+  nameWithType: TextTools.ShiftLetters(string, int)
+  nameWithType.vb: TextTools.ShiftLetters(String, Integer)
+- uid: Textify.General.TextTools.ShiftLetters*
+  name: ShiftLetters
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ShiftLetters_
+  commentId: Overload:Textify.General.TextTools.ShiftLetters
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ShiftLetters
+  nameWithType: TextTools.ShiftLetters
 - uid: Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String)
   name: SplitEncloseDoubleQuotes(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotes_System_String_
