@@ -1,12 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Textify
-  name: Textify
-  href: api/Textify.html
-  commentId: N:Textify
-  fullName: Textify
-  nameWithType: Textify
 - uid: Textify.General
   name: Textify.General
   href: api/Textify.General.html
@@ -7000,47 +6994,53 @@ references:
   isSpec: "True"
   fullName: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesToString
   nameWithType: SpaceConversionTools.ConvertSpacesToString
-- uid: Textify.TextifyException
+- uid: Textify.Tools
+  name: Textify.Tools
+  href: api/Textify.Tools.html
+  commentId: N:Textify.Tools
+  fullName: Textify.Tools
+  nameWithType: Textify.Tools
+- uid: Textify.Tools.TextifyException
   name: TextifyException
-  href: api/Textify.TextifyException.html
-  commentId: T:Textify.TextifyException
-  fullName: Textify.TextifyException
+  href: api/Textify.Tools.TextifyException.html
+  commentId: T:Textify.Tools.TextifyException
+  fullName: Textify.Tools.TextifyException
   nameWithType: TextifyException
-- uid: Textify.TextifyException.#ctor
+- uid: Textify.Tools.TextifyException.#ctor
   name: TextifyException()
-  href: api/Textify.TextifyException.html#Textify_TextifyException__ctor
-  commentId: M:Textify.TextifyException.#ctor
+  href: api/Textify.Tools.TextifyException.html#Textify_Tools_TextifyException__ctor
+  commentId: M:Textify.Tools.TextifyException.#ctor
   name.vb: New()
-  fullName: Textify.TextifyException.TextifyException()
-  fullName.vb: Textify.TextifyException.New()
+  fullName: Textify.Tools.TextifyException.TextifyException()
+  fullName.vb: Textify.Tools.TextifyException.New()
   nameWithType: TextifyException.TextifyException()
   nameWithType.vb: TextifyException.New()
-- uid: Textify.TextifyException.#ctor(System.String)
+- uid: Textify.Tools.TextifyException.#ctor(System.String)
   name: TextifyException(string)
-  href: api/Textify.TextifyException.html#Textify_TextifyException__ctor_System_String_
-  commentId: M:Textify.TextifyException.#ctor(System.String)
+  href: api/Textify.Tools.TextifyException.html#Textify_Tools_TextifyException__ctor_System_String_
+  commentId: M:Textify.Tools.TextifyException.#ctor(System.String)
   name.vb: New(String)
-  fullName: Textify.TextifyException.TextifyException(string)
-  fullName.vb: Textify.TextifyException.New(String)
+  fullName: Textify.Tools.TextifyException.TextifyException(string)
+  fullName.vb: Textify.Tools.TextifyException.New(String)
   nameWithType: TextifyException.TextifyException(string)
   nameWithType.vb: TextifyException.New(String)
-- uid: Textify.TextifyException.#ctor(System.String,System.Exception)
+- uid: Textify.Tools.TextifyException.#ctor(System.String,System.Exception)
   name: TextifyException(string, Exception)
-  href: api/Textify.TextifyException.html#Textify_TextifyException__ctor_System_String_System_Exception_
-  commentId: M:Textify.TextifyException.#ctor(System.String,System.Exception)
+  href: api/Textify.Tools.TextifyException.html#Textify_Tools_TextifyException__ctor_System_String_System_Exception_
+  commentId: M:Textify.Tools.TextifyException.#ctor(System.String,System.Exception)
   name.vb: New(String, Exception)
-  fullName: Textify.TextifyException.TextifyException(string, System.Exception)
-  fullName.vb: Textify.TextifyException.New(String, System.Exception)
+  fullName: Textify.Tools.TextifyException.TextifyException(string, System.Exception)
+  fullName.vb: Textify.Tools.TextifyException.New(String, System.Exception)
   nameWithType: TextifyException.TextifyException(string, Exception)
   nameWithType.vb: TextifyException.New(String, Exception)
-- uid: Textify.TextifyException.#ctor*
+- uid: Textify.Tools.TextifyException.#ctor*
   name: TextifyException
-  href: api/Textify.TextifyException.html#Textify_TextifyException__ctor_
-  commentId: Overload:Textify.TextifyException.#ctor
+  href: api/Textify.Tools.TextifyException.html#Textify_Tools_TextifyException__ctor_
+  commentId: Overload:Textify.Tools.TextifyException.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: Textify.TextifyException.TextifyException
-  fullName.vb: Textify.TextifyException.New
+  fullName: Textify.Tools.TextifyException.TextifyException
+  fullName.vb: Textify.Tools.TextifyException.New
   nameWithType: TextifyException.TextifyException
   nameWithType.vb: TextifyException.New
 - uid: Textify.Unicode

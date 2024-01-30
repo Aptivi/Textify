@@ -305,10 +305,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.TextifyException.yml",
+      "source_relative_path": "api/Textify.Tools.TextifyException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.TextifyException.html"
+          "relative_path": "api/Textify.Tools.TextifyException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Tools.html"
         }
       },
       "version": ""
@@ -419,16 +429,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.Words.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.html"
         }
       },
       "version": ""

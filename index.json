@@ -144,10 +144,15 @@
     "title": "Namespace Textify.SpaceManager.Conversion | Textify API - Aptivi",
     "keywords": "Namespace Textify.SpaceManager.Conversion Classes SpaceConversionTools Tools that allow you to use the analysis results to convert the spaces"
   },
-  "api/Textify.TextifyException.html": {
-    "href": "api/Textify.TextifyException.html",
+  "api/Textify.Tools.TextifyException.html": {
+    "href": "api/Textify.Tools.TextifyException.html",
     "title": "Class TextifyException | Textify API - Aptivi",
-    "keywords": "Class TextifyException Textify error class Inheritance object Exception TextifyException Namespace: Textify Assembly: Textify.dll Syntax public class TextifyException : Exception Constructors | Edit this page View Source TextifyException() Reports a Textify error Declaration public TextifyException() | Edit this page View Source TextifyException(string) Reports a Textify error Declaration public TextifyException(string message) Parameters Type Name Description string message Message to use with reporting an error | Edit this page View Source TextifyException(string, Exception) Reports a Textify error Declaration public TextifyException(string message, Exception innerException) Parameters Type Name Description string message Message to use with reporting an error Exception innerException Inner exception to use with reporting an error"
+    "keywords": "Class TextifyException Textify error class Inheritance object Exception TextifyException Namespace: Textify.Tools Assembly: Textify.dll Syntax public class TextifyException : Exception Constructors | Edit this page View Source TextifyException() Reports a Textify error Declaration public TextifyException() | Edit this page View Source TextifyException(string) Reports a Textify error Declaration public TextifyException(string message) Parameters Type Name Description string message Message to use with reporting an error | Edit this page View Source TextifyException(string, Exception) Reports a Textify error Declaration public TextifyException(string message, Exception innerException) Parameters Type Name Description string message Message to use with reporting an error Exception innerException Inner exception to use with reporting an error"
+  },
+  "api/Textify.Tools.html": {
+    "href": "api/Textify.Tools.html",
+    "title": "Namespace Textify.Tools | Textify API - Aptivi",
+    "keywords": "Namespace Textify.Tools Classes TextifyException Textify error class"
   },
   "api/Textify.Unicode.Char.html": {
     "href": "api/Textify.Unicode.Char.html",
@@ -203,11 +208,6 @@
     "href": "api/Textify.Words.html",
     "title": "Namespace Textify.Words | Textify API - Aptivi",
     "keywords": "Namespace Textify.Words Classes WordManager The word management class"
-  },
-  "api/Textify.html": {
-    "href": "api/Textify.html",
-    "title": "Namespace Textify | Textify API - Aptivi",
-    "keywords": "Namespace Textify Classes TextifyException Textify error class"
   },
   "index.html": {
     "href": "index.html",
