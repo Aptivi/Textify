@@ -15,6 +15,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.DataInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.DataInitializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.DataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.DataType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.General.CharManager.yml",
       "output": {
         ".html": {

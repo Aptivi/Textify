@@ -1,4 +1,19 @@
 {
+  "api/Textify.Data.DataInitializer.html": {
+    "href": "api/Textify.Data.DataInitializer.html",
+    "title": "Class DataInitializer | Textify API - Aptivi",
+    "keywords": "Class DataInitializer Data initialization class Inheritance object DataInitializer Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public static class DataInitializer Methods | Edit this page View Source Initialize() Initializes all the needed data Declaration public static void Initialize() | Edit this page View Source Initialize(DataType) Initializes all the needed data Declaration public static void Initialize(DataType types) Parameters Type Name Description DataType types Types to initialize"
+  },
+  "api/Textify.Data.DataType.html": {
+    "href": "api/Textify.Data.DataType.html",
+    "title": "Enum DataType | Textify API - Aptivi",
+    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description Names Initializes the zip files containing names and surnames Unicode Initializes the zip files containing Unicode data Words Initializes the zip files containing word lists"
+  },
+  "api/Textify.Data.html": {
+    "href": "api/Textify.Data.html",
+    "title": "Namespace Textify.Data | Textify API - Aptivi",
+    "keywords": "Namespace Textify.Data Classes DataInitializer Data initialization class Enums DataType Data type"
+  },
   "api/Textify.General.CharManager.html": {
     "href": "api/Textify.General.CharManager.html",
     "title": "Class CharManager | Textify API - Aptivi",

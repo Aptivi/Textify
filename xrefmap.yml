@@ -1,6 +1,61 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Textify.Data
+  name: Textify.Data
+  href: api/Textify.Data.html
+  commentId: N:Textify.Data
+  fullName: Textify.Data
+  nameWithType: Textify.Data
+- uid: Textify.Data.DataInitializer
+  name: DataInitializer
+  href: api/Textify.Data.DataInitializer.html
+  commentId: T:Textify.Data.DataInitializer
+  fullName: Textify.Data.DataInitializer
+  nameWithType: DataInitializer
+- uid: Textify.Data.DataInitializer.Initialize
+  name: Initialize()
+  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize
+  commentId: M:Textify.Data.DataInitializer.Initialize
+  fullName: Textify.Data.DataInitializer.Initialize()
+  nameWithType: DataInitializer.Initialize()
+- uid: Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
+  name: Initialize(DataType)
+  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize_Textify_Data_DataType_
+  commentId: M:Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
+  fullName: Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
+  nameWithType: DataInitializer.Initialize(DataType)
+- uid: Textify.Data.DataInitializer.Initialize*
+  name: Initialize
+  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize_
+  commentId: Overload:Textify.Data.DataInitializer.Initialize
+  isSpec: "True"
+  fullName: Textify.Data.DataInitializer.Initialize
+  nameWithType: DataInitializer.Initialize
+- uid: Textify.Data.DataType
+  name: DataType
+  href: api/Textify.Data.DataType.html
+  commentId: T:Textify.Data.DataType
+  fullName: Textify.Data.DataType
+  nameWithType: DataType
+- uid: Textify.Data.DataType.Names
+  name: Names
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Names
+  commentId: F:Textify.Data.DataType.Names
+  fullName: Textify.Data.DataType.Names
+  nameWithType: DataType.Names
+- uid: Textify.Data.DataType.Unicode
+  name: Unicode
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Unicode
+  commentId: F:Textify.Data.DataType.Unicode
+  fullName: Textify.Data.DataType.Unicode
+  nameWithType: DataType.Unicode
+- uid: Textify.Data.DataType.Words
+  name: Words
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Words
+  commentId: F:Textify.Data.DataType.Words
+  fullName: Textify.Data.DataType.Words
+  nameWithType: DataType.Words
 - uid: Textify.General
   name: Textify.General
   href: api/Textify.General.html
