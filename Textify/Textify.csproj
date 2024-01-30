@@ -52,39 +52,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="NameGen\Resources\NamesData.Designer.cs">
-      <DependentUpon>NamesData.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="Unicode/Resources/UnicodeData.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>UnicodeData.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Words\Resources\WordsData.Designer.cs">
-      <DependentUpon>WordsData.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="NameGen\Resources\NamesData.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>NamesData.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Unicode/Resources/UnicodeData.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>UnicodeData.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Words\Resources\WordsData.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>WordsData.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
 </Project>

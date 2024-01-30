@@ -22,7 +22,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Xml;
 using System.Xml.Serialization;
-using Textify.Unicode.Resources;
+using Textify.Tools;
 
 namespace Textify.Unicode
 {
@@ -42,11 +42,11 @@ namespace Textify.Unicode
                 switch (type)
                 {
                     case UnicodeQueryType.Simple:
-                        unicodeData = UnicodeData.ucd_nounihan_flat;
+                        unicodeData = DataTools.GetDataFrom("ucd_nounihan_flat");
                         xmlFile = "ucd.nounihan.flat.xml";
                         break;
                     case UnicodeQueryType.Full:
-                        unicodeData = UnicodeData.ucd_all_flat;
+                        unicodeData = DataTools.GetDataFrom("ucd_all_flat");
                         xmlFile = "ucd.all.flat.xml";
                         break;
                 }

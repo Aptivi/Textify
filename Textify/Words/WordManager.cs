@@ -24,7 +24,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using Textify.General;
-using Textify.Words.Resources;
+using Textify.Tools;
 
 namespace Textify.Words
 {
@@ -44,11 +44,7 @@ namespace Textify.Words
             // Download the words
             if (Words.Count == 0)
             {
-                var contentStream = new MemoryStream(WordsData.words_alpha);
-                var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
-
-                // Open the XML to stream
-                var content = archive.GetEntry("words_alpha.txt").Open();
+                var content = GetContentStream();
                 Words.AddRange(new StreamReader(content).ReadToEnd().SplitNewLines().ToList());
             }
         }
@@ -61,11 +57,7 @@ namespace Textify.Words
             // Download the words
             if (Words.Count == 0)
             {
-                var contentStream = new MemoryStream(WordsData.words_alpha);
-                var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
-
-                // Open the XML to stream
-                var content = archive.GetEntry("words_alpha.txt").Open();
+                var content = GetContentStream();
                 var read = await new StreamReader(content).ReadToEndAsync();
                 Words.AddRange(read.SplitNewLines().ToList());
             }
@@ -163,6 +155,16 @@ namespace Textify.Words
 
             // Get a word that satisfies all the conditions
             return word;
+        }
+
+        private static Stream GetContentStream()
+        {
+            var contentStream = new MemoryStream(DataTools.GetDataFrom("words_alpha"));
+            var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
+
+            // Open the XML to stream
+            var content = archive.GetEntry("words_alpha.txt").Open();
+            return content;
         }
     }
 }

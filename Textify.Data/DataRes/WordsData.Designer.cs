@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Textify.Words.Resources {
+namespace Textify.Data.DataRes {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Textify.Words.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Textify.Words.Resources.WordsData", typeof(WordsData).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Textify.Data.DataRes.WordsData", typeof(WordsData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

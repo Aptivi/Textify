@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Textify.Sequences.Builder.Types;
 using Textify.Sequences.Tools;
+using Textify.Tools;
 
 namespace Textify.Sequences.Builder
 {

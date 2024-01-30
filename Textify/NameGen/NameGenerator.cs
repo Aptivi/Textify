@@ -24,7 +24,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using Textify.General;
-using Textify.NameGen.Resources;
+using Textify.Tools;
 
 namespace Textify.NameGen
 {
@@ -55,9 +55,9 @@ namespace Textify.NameGen
                 if (Names.Length == 0 || genderType != lastGenderType)
                 {
                     (byte[] bytes, string fileName) =
-                        genderType == NameGenderType.Female ? (NamesData.FirstNames_Female, "FirstNames_Female.txt") :
-                        genderType == NameGenderType.Male ? (NamesData.FirstNames_Male, "FirstNames_Male.txt") :
-                        (NamesData.FirstNames, "FirstNames.txt");
+                        genderType == NameGenderType.Female ? (DataTools.GetDataFrom("FirstNames_Female"), "FirstNames_Female.txt") :
+                        genderType == NameGenderType.Male ? (DataTools.GetDataFrom("FirstNames_Male"), "FirstNames_Male.txt") :
+                        (DataTools.GetDataFrom("FirstNames"), "FirstNames.txt");
                     var contentStream = new MemoryStream(bytes);
                     var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 
@@ -68,7 +68,7 @@ namespace Textify.NameGen
                 }
                 if (Surnames.Length == 0)
                 {
-                    (byte[] bytes, string fileName) = (NamesData.Surnames, "Surnames.txt");
+                    (byte[] bytes, string fileName) = (DataTools.GetDataFrom("Surnames"), "Surnames.txt");
                     var contentStream = new MemoryStream(bytes);
                     var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 

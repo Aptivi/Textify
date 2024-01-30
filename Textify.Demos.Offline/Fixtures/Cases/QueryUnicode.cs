@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
+using Textify.Data;
 using Textify.Unicode;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
@@ -32,6 +33,7 @@ namespace Textify.Demos.Offline.Fixtures.Cases
             Console.WriteLine();
 
             // Query it
+            DataInitializer.Initialize(DataType.Unicode);
             var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
             Console.WriteLine($"Na (current): {charInstance.Na}");
             Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");

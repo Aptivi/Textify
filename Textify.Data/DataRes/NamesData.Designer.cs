@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Textify.Unicode.Resources {
+namespace Textify.Data.DataRes {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Textify.Unicode.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class UnicodeData {
+    internal class NamesData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal UnicodeData() {
+        internal NamesData() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Textify.Unicode.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Textify.Unicode.Resources.UnicodeData", typeof(UnicodeData).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Textify.Data.DataRes.NamesData", typeof(NamesData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace Textify.Unicode.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ucd_all_flat {
+        internal static byte[] FirstNames {
             get {
-                object obj = ResourceManager.GetObject("ucd_all_flat", resourceCulture);
+                object obj = ResourceManager.GetObject("FirstNames", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,9 +73,29 @@ namespace Textify.Unicode.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ucd_nounihan_flat {
+        internal static byte[] FirstNames_Female {
             get {
-                object obj = ResourceManager.GetObject("ucd_nounihan_flat", resourceCulture);
+                object obj = ResourceManager.GetObject("FirstNames_Female", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FirstNames_Male {
+            get {
+                object obj = ResourceManager.GetObject("FirstNames_Male", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Surnames {
+            get {
+                object obj = ResourceManager.GetObject("Surnames", resourceCulture);
                 return ((byte[])(obj));
             }
         }

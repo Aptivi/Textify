@@ -19,7 +19,7 @@
 
 using System;
 
-namespace Textify
+namespace Textify.Tools
 {
     /// <summary>
     /// Textify error class

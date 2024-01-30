@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
+using Textify.Data;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
@@ -25,6 +26,7 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public string FixtureID => "NameGenerator";
         public void RunFixture()
         {
+            DataInitializer.Initialize(DataType.Names);
             string[] names = NameGen.NameGenerator.GenerateNames(10);
             string[] firstNames = NameGen.NameGenerator.GenerateFirstNames(10);
             string[] surnames = NameGen.NameGenerator.GenerateLastNames(10);

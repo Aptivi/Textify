@@ -24,6 +24,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using Textify.Sequences.Tools;
+using Textify.Tools;
 
 namespace Textify.General
 {
