@@ -24,5 +24,3 @@ jobs:
       run: |
         dotnet nuget push "Textify/bin/Release/*.nupkg" --api-key ${{ secrets.NUGET_APIKEY }} --source "nuget.org"
         dotnet nuget push "Textify.Data/bin/Release/*.nupkg" --api-key ${{ secrets.NUGET_APIKEY }} --source "nuget.org"
-        dotnet nuget push "Textify/bin/Release/*.snupkg" --symbol-api-key ${{ secrets.NUGET_APIKEY }} --source "nuget.org"
-        dotnet nuget push "Textify.Data/bin/Release/*.snupkg" --symbol-api-key ${{ secrets.NUGET_APIKEY }} --source "nuget.org"
