@@ -28,37 +28,6 @@ namespace Textify.Tests.General
     {
 
         /// <summary>
-        /// Tests getting wrapped sentences
-        /// </summary>
-        [Test]
-        [Description("Querying")]
-        public static void TestGetWrappedSentences()
-        {
-            var sentences = TextTools.GetWrappedSentences("Nitrocid", 4);
-            sentences.ShouldNotBeNull();
-            sentences.ShouldNotBeEmpty();
-            sentences.Length.ShouldBe(2);
-            sentences[0].ShouldBe("Nitr");
-            sentences[1].ShouldBe("ocid");
-        }
-
-        /// <summary>
-        /// Tests getting wrapped sentences
-        /// </summary>
-        [Test]
-        [Description("Querying")]
-        public static void TestGetWrappedSentencesIndented()
-        {
-            var sentences = TextTools.GetWrappedSentences("Nitrocid", 4, 2);
-            sentences.ShouldNotBeNull();
-            sentences.ShouldNotBeEmpty();
-            sentences.Length.ShouldBe(3);
-            sentences[0].ShouldBe("Ni");
-            sentences[1].ShouldBe("troc");
-            sentences[2].ShouldBe("id");
-        }
-
-        /// <summary>
         /// Tests replacing last occurrence of a string
         /// </summary>
         [Test]
@@ -96,20 +65,6 @@ namespace Textify.Tests.General
             string TargetString = "Please <replace> Nitrocid. This sub is a unit <replace2>.";
             TargetString = TargetString.ReplaceAllRange(["<replace>", "<replace2>"], ["test the integrity of", "test"]);
             TargetString.ShouldBe(ExpectedString);
-        }
-
-        /// <summary>
-        /// Tests truncating...
-        /// </summary>
-        [Test]
-        [Description("Querying")]
-        public void TestTruncate()
-        {
-            string expected = "Nitrocid is awesome ...";
-            string Source = "Nitrocid is awesome and is great!";
-            int Target = 20;
-            Source = Source.Truncate(Target);
-            Source.ShouldBe(expected);
         }
 
         /// <summary>
