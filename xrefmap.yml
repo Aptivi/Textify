@@ -319,6 +319,56 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetEnclosedDoubleQuotesType
   nameWithType: TextTools.GetEnclosedDoubleQuotesType
+- uid: Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)
+  name: GetWrappedSentences(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)
+  name.vb: GetWrappedSentences(String, Integer)
+  fullName: Textify.General.TextTools.GetWrappedSentences(string, int)
+  fullName.vb: Textify.General.TextTools.GetWrappedSentences(String, Integer)
+  nameWithType: TextTools.GetWrappedSentences(string, int)
+  nameWithType.vb: TextTools.GetWrappedSentences(String, Integer)
+- uid: Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32,System.Int32)
+  name: GetWrappedSentences(string, int, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32_
+  commentId: M:Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32,System.Int32)
+  name.vb: GetWrappedSentences(String, Integer, Integer)
+  fullName: Textify.General.TextTools.GetWrappedSentences(string, int, int)
+  fullName.vb: Textify.General.TextTools.GetWrappedSentences(String, Integer, Integer)
+  nameWithType: TextTools.GetWrappedSentences(string, int, int)
+  nameWithType.vb: TextTools.GetWrappedSentences(String, Integer, Integer)
+- uid: Textify.General.TextTools.GetWrappedSentences*
+  name: GetWrappedSentences
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_
+  commentId: Overload:Textify.General.TextTools.GetWrappedSentences
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetWrappedSentences
+  nameWithType: TextTools.GetWrappedSentences
+- uid: Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32)
+  name: GetWrappedSentencesByWords(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32)
+  name.vb: GetWrappedSentencesByWords(String, Integer)
+  fullName: Textify.General.TextTools.GetWrappedSentencesByWords(string, int)
+  fullName.vb: Textify.General.TextTools.GetWrappedSentencesByWords(String, Integer)
+  nameWithType: TextTools.GetWrappedSentencesByWords(string, int)
+  nameWithType.vb: TextTools.GetWrappedSentencesByWords(String, Integer)
+- uid: Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32,System.Int32)
+  name: GetWrappedSentencesByWords(string, int, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32_
+  commentId: M:Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32,System.Int32)
+  name.vb: GetWrappedSentencesByWords(String, Integer, Integer)
+  fullName: Textify.General.TextTools.GetWrappedSentencesByWords(string, int, int)
+  fullName.vb: Textify.General.TextTools.GetWrappedSentencesByWords(String, Integer, Integer)
+  nameWithType: TextTools.GetWrappedSentencesByWords(string, int, int)
+  nameWithType.vb: TextTools.GetWrappedSentencesByWords(String, Integer, Integer)
+- uid: Textify.General.TextTools.GetWrappedSentencesByWords*
+  name: GetWrappedSentencesByWords
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentencesByWords_
+  commentId: Overload:Textify.General.TextTools.GetWrappedSentencesByWords
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetWrappedSentencesByWords
+  nameWithType: TextTools.GetWrappedSentencesByWords
 - uid: Textify.General.TextTools.IsStringNumeric(System.String)
   name: IsStringNumeric(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_IsStringNumeric_System_String_
@@ -527,6 +577,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.StartsWithAnyOf
   nameWithType: TextTools.StartsWithAnyOf
+- uid: Textify.General.TextTools.TruncateString(System.String,System.Int32)
+  name: TruncateString(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_TruncateString_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.TruncateString(System.String,System.Int32)
+  name.vb: TruncateString(String, Integer)
+  fullName: Textify.General.TextTools.TruncateString(string, int)
+  fullName.vb: Textify.General.TextTools.TruncateString(String, Integer)
+  nameWithType: TextTools.TruncateString(string, int)
+  nameWithType.vb: TextTools.TruncateString(String, Integer)
+- uid: Textify.General.TextTools.TruncateString*
+  name: TruncateString
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_TruncateString_
+  commentId: Overload:Textify.General.TextTools.TruncateString
+  isSpec: "True"
+  fullName: Textify.General.TextTools.TruncateString
+  nameWithType: TextTools.TruncateString
 - uid: Textify.NameGen
   name: Textify.NameGen
   href: api/Textify.NameGen.html

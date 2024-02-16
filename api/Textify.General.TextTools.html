@@ -417,6 +417,250 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentences(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L393">View Source</a>
+  </span>
+  <a id="Textify_General_TextTools_GetWrappedSentences_" data-uid="Textify.General.TextTools.GetWrappedSentences*"></a>
+  <h4 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)">GetWrappedSentences(string, int)</h4>
+  <div class="markdown level1 summary"><p>Gets the wrapped sentences for text wrapping for console (with character wrapping, without VT sequence support)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] GetWrappedSentences(string text, int maximumLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to be wrapped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maximumLength</span></td>
+        <td><p>Maximum length of text before wrapping</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentences(System.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L403">View Source</a>
+  </span>
+  <a id="Textify_General_TextTools_GetWrappedSentences_" data-uid="Textify.General.TextTools.GetWrappedSentences*"></a>
+  <h4 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32,System.Int32)">GetWrappedSentences(string, int, int)</h4>
+  <div class="markdown level1 summary"><p>Gets the wrapped sentences for text wrapping for console (with character wrapping, without VT sequence support)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] GetWrappedSentences(string text, int maximumLength, int indentLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to be wrapped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maximumLength</span></td>
+        <td><p>Maximum length of text before wrapping</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">indentLength</span></td>
+        <td><p>Indentation length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentencesByWords(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L468">View Source</a>
+  </span>
+  <a id="Textify_General_TextTools_GetWrappedSentencesByWords_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords*"></a>
+  <h4 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32)">GetWrappedSentencesByWords(string, int)</h4>
+  <div class="markdown level1 summary"><p>Gets the wrapped sentences for text wrapping for console (with word wrapping, without VT sequence support)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] GetWrappedSentencesByWords(string text, int maximumLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to be wrapped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maximumLength</span></td>
+        <td><p>Maximum length of text before wrapping</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentencesByWords(System.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L478">View Source</a>
+  </span>
+  <a id="Textify_General_TextTools_GetWrappedSentencesByWords_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords*"></a>
+  <h4 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32,System.Int32)">GetWrappedSentencesByWords(string, int, int)</h4>
+  <div class="markdown level1 summary"><p>Gets the wrapped sentences for text wrapping for console (with word wrapping, without VT sequence support)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] GetWrappedSentencesByWords(string text, int maximumLength, int indentLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to be wrapped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">maximumLength</span></td>
+        <td><p>Maximum length of text before wrapping</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">indentLength</span></td>
+        <td><p>Indentation length</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_IsStringNumeric_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.IsStringNumeric(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1150,6 +1394,65 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_TruncateString_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.TruncateString(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L576">View Source</a>
+  </span>
+  <a id="Textify_General_TextTools_TruncateString_" data-uid="Textify.General.TextTools.TruncateString*"></a>
+  <h4 id="Textify_General_TextTools_TruncateString_System_String_System_Int32_" data-uid="Textify.General.TextTools.TruncateString(System.String,System.Int32)">TruncateString(string, int)</h4>
+  <div class="markdown level1 summary"><p>Truncates the string if the string is larger than the threshold, otherwise, returns an unchanged string (without VT sequence support)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TruncateString(this string target, int threshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Source string to truncate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>Max number of string characters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Truncated string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Textify_General_TextTools_TruncateString_System_String_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</p>
+</div>
 
 </article>
           </div>
