@@ -23,21 +23,34 @@ using Textify.Versioning;
 
 namespace Textify.Tests.Versioning
 {
+    [TestClass]
     public class SemVerParseTests
     {
         [TestMethod]
-        [DataRow("1.0.0", new object[] { 1, 0, 0, "", "" })]
-        [DataRow("1.0.0-alpha1", new object[] { 1, 0, 0, "alpha1", "" })]
-        [DataRow("1.0.0+234F234D", new object[] { 1, 0, 0, "", "234F234D" })]
-        [DataRow("1.0.0-alpha1+234F234D", new object[] { 1, 0, 0, "alpha1", "234F234D" })]
-        [DataRow("0.1.0", new object[] { 0, 1, 0, "", "" })]
-        [DataRow("0.1.0-alpha1", new object[] { 0, 1, 0, "alpha1", "" })]
-        [DataRow("0.1.0+234F234D", new object[] { 0, 1, 0, "", "234F234D" })]
-        [DataRow("0.1.0-alpha1+234F234D", new object[] { 0, 1, 0, "alpha1", "234F234D" })]
-        [DataRow("0.0.1", new object[] { 0, 0, 1, "", "" })]
-        [DataRow("0.0.1-alpha1", new object[] { 0, 0, 1, "alpha1", "" })]
-        [DataRow("0.0.1+234F234D", new object[] { 0, 0, 1, "", "234F234D" })]
-        [DataRow("0.0.1-alpha1+234F234D", new object[] { 0, 0, 1, "alpha1", "234F234D" })]
+        [DataRow("1.0.0", new object[] { 1, 0, 0, 0, "", "" })]
+        [DataRow("1.0.0-alpha1", new object[] { 1, 0, 0, 0, "alpha1", "" })]
+        [DataRow("1.0.0+234F234D", new object[] { 1, 0, 0, 0, "", "234F234D" })]
+        [DataRow("1.0.0-alpha1+234F234D", new object[] { 1, 0, 0, 0, "alpha1", "234F234D" })]
+        [DataRow("0.1.0", new object[] { 0, 1, 0, 0, "", "" })]
+        [DataRow("0.1.0-alpha1", new object[] { 0, 1, 0, 0, "alpha1", "" })]
+        [DataRow("0.1.0+234F234D", new object[] { 0, 1, 0, 0, "", "234F234D" })]
+        [DataRow("0.1.0-alpha1+234F234D", new object[] { 0, 1, 0, 0, "alpha1", "234F234D" })]
+        [DataRow("0.0.1", new object[] { 0, 0, 1, 0, "", "" })]
+        [DataRow("0.0.1-alpha1", new object[] { 0, 0, 1, 0, "alpha1", "" })]
+        [DataRow("0.0.1+234F234D", new object[] { 0, 0, 1, 0, "", "234F234D" })]
+        [DataRow("0.0.1-alpha1+234F234D", new object[] { 0, 0, 1, 0, "alpha1", "234F234D" })]
+        [DataRow("1.0.0.5", new object[] { 1, 0, 0, 5, "", "" })]
+        [DataRow("1.0.0.5-alpha1", new object[] { 1, 0, 0, 5, "alpha1", "" })]
+        [DataRow("1.0.0.5+234F234D", new object[] { 1, 0, 0, 5, "", "234F234D" })]
+        [DataRow("1.0.0.5-alpha1+234F234D", new object[] { 1, 0, 0, 5, "alpha1", "234F234D" })]
+        [DataRow("0.1.0.5", new object[] { 0, 1, 0, 5, "", "" })]
+        [DataRow("0.1.0.5-alpha1", new object[] { 0, 1, 0, 5, "alpha1", "" })]
+        [DataRow("0.1.0.5+234F234D", new object[] { 0, 1, 0, 5, "", "234F234D" })]
+        [DataRow("0.1.0.5-alpha1+234F234D", new object[] { 0, 1, 0, 5, "alpha1", "234F234D" })]
+        [DataRow("0.0.1.5", new object[] { 0, 0, 1, 5, "", "" })]
+        [DataRow("0.0.1.5-alpha1", new object[] { 0, 0, 1, 5, "alpha1", "" })]
+        [DataRow("0.0.1.5+234F234D", new object[] { 0, 0, 1, 5, "", "234F234D" })]
+        [DataRow("0.0.1.5-alpha1+234F234D", new object[] { 0, 0, 1, 5, "alpha1", "234F234D" })]
         public void TestSemVer(string version, object[] elements)
         {
             SemVer semVer = SemVer.Parse(version);
@@ -46,6 +59,7 @@ namespace Textify.Tests.Versioning
                 semVer.MajorVersion,
                 semVer.MinorVersion,
                 semVer.PatchVersion,
+                semVer.RevisionVersion,
                 semVer.PreReleaseInfo,
                 semVer.BuildMetadata
             ];
@@ -63,6 +77,16 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
         [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        [DataRow("1.0.0.5", "1.0.0.5", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1", false)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5+234F234D", false)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1+234F234D", false)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerEquality(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
@@ -85,6 +109,20 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0", true)]
         [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", false)]
+        [DataRow("0.9.0.5", "1.0.0.5", true)]
+        [DataRow("0.9.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.1.0.0", "1.0.0.5", false)]
+        [DataRow("1.1.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5", false)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1", false)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5-alpha1", false)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5+234F234D", false)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5+234F234D", false)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1+234F234D", false)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", false)]
         public void TestSemVerIsOlderThan(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
@@ -107,6 +145,20 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0", true)]
         [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        [DataRow("0.9.0.5", "1.0.0.5", true)]
+        [DataRow("0.9.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.1.0.0", "1.0.0.5", false)]
+        [DataRow("1.1.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1", false)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5+234F234D", false)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1+234F234D", false)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerIsOlderOrEqualTo(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
@@ -128,6 +180,19 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
         [DataRow("1.0.0", "1.0.0-alpha1+234F234D", true)]
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", false)]
+        [DataRow("0.9.0.5", "1.0.0.5", false)]
+        [DataRow("0.9.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.1.0.0", "1.0.0.5", true)]
+        [DataRow("1.1.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5-alpha1", false)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5+234F234D", false)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", false)]
         public void TestSemVerIsNewerThan(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
@@ -150,6 +215,20 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
         [DataRow("1.0.0", "1.0.0-alpha1+234F234D", true)]
         [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        [DataRow("0.9.0.5", "1.0.0.5", false)]
+        [DataRow("0.9.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.1.0.0", "1.0.0.5", true)]
+        [DataRow("1.1.0.5-alpha1", "1.0.0.5", true)]
+        [DataRow("1.0.0.5", "1.0.0.5", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5-alpha1", "1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5+234F234D", "1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5", false)]
+        [DataRow("1.0.0.5", "1.0.0.5-alpha1+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerIsNewerOrEqualTo(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);

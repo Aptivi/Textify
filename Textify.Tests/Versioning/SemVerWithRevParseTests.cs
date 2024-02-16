@@ -23,6 +23,7 @@ using Textify.Versioning;
 
 namespace Textify.Tests.Versioning
 {
+    [TestClass]
     public class SemVerWithRevParseWithRevTests
     {
         [TestMethod]

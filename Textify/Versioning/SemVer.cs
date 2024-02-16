@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Textify.General;
 
 namespace Textify.Versioning
 {
@@ -34,6 +35,8 @@ namespace Textify.Versioning
         private readonly int rev = 0;
         private readonly string preReleaseInfo = "";
         private readonly string buildMetadata = "";
+        private static readonly Regex revValidator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
+        private static readonly Regex normalValidator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
 
         /// <summary>
         /// Gets the major version part of the version
@@ -109,16 +112,28 @@ namespace Textify.Versioning
         }
 
         /// <summary>
-        /// Parses the semantic version string
+        /// Parses the semantic version string (revision or not revision)
         /// </summary>
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
         public static SemVer Parse(string value)
         {
+            if (HasRevision(value))
+                return ParseWithRev(value);
+            return ParseWithoutRev(value);
+        }
+
+        /// <summary>
+        /// Parses the semantic version string (no revision only)
+        /// </summary>
+        /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
+        /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
+        /// <exception cref="SemVerException"></exception>
+        public static SemVer ParseWithoutRev(string value)
+        {
             // Verify that the semantic versioning string is a valid SemVer string
-            Regex validator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
-            MatchCollection matches = validator.Matches(value);
+            MatchCollection matches = normalValidator.Matches(value);
             if (matches.Count == 0)
                 throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
 
@@ -140,7 +155,7 @@ namespace Textify.Versioning
         }
 
         /// <summary>
-        /// Parses the semantic version string with revision part
+        /// Parses the semantic version string (revision only)
         /// </summary>
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
@@ -148,8 +163,7 @@ namespace Textify.Versioning
         public static SemVer ParseWithRev(string value)
         {
             // Verify that the semantic versioning string is a valid SemVer string
-            Regex validator = new(@"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$");
-            MatchCollection matches = validator.Matches(value);
+            MatchCollection matches = revValidator.Matches(value);
             if (matches.Count == 0)
                 throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
 
@@ -302,6 +316,18 @@ namespace Textify.Versioning
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(PreReleaseInfo);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(BuildMetadata);
             return hashCode;
+        }
+
+        internal static bool HasRevision(string value)
+        {
+            bool revValid, normalValid;
+            MatchCollection matches = normalValidator.Matches(value);
+            MatchCollection matchesRev = revValidator.Matches(value);
+            normalValid = matches.Count > 0;
+            revValid = matchesRev.Count > 0;
+            if (!revValid && !normalValid)
+                throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
+            return revValid;
         }
 
     }

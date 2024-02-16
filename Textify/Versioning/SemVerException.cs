@@ -18,22 +18,32 @@
 //
 
 using System;
-using System.Runtime.Serialization;
 
 namespace Textify.Versioning
 {
+    /// <summary>
+    /// Exception for semantic versioning
+    /// </summary>
     public class SemVerException : Exception
     {
+        /// <summary>
+        /// Initializes a new instance of <see cref="SemVerException"/>
+        /// </summary>
         public SemVerException()
         { }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="SemVerException"/>
+        /// </summary>
         public SemVerException(string message)
             : base(message)
         { }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="SemVerException"/>
+        /// </summary>
         public SemVerException(string message, Exception innerException)
             : base(message, innerException)
-        { }
-        protected SemVerException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
         { }
     }
 }
