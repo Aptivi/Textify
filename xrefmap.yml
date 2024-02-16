@@ -32,6 +32,30 @@ references:
   isSpec: "True"
   fullName: Textify.Data.DataInitializer.Initialize
   nameWithType: DataInitializer.Initialize
+- uid: Textify.Data.DataRes
+  name: Textify.Data.DataRes
+  href: api/Textify.Data.DataRes.html
+  commentId: N:Textify.Data.DataRes
+  fullName: Textify.Data.DataRes
+  nameWithType: Textify.Data.DataRes
+- uid: Textify.Data.DataRes.NamesData
+  name: NamesData
+  href: api/Textify.Data.DataRes.NamesData.html
+  commentId: T:Textify.Data.DataRes.NamesData
+  fullName: Textify.Data.DataRes.NamesData
+  nameWithType: NamesData
+- uid: Textify.Data.DataRes.UnicodeData
+  name: UnicodeData
+  href: api/Textify.Data.DataRes.UnicodeData.html
+  commentId: T:Textify.Data.DataRes.UnicodeData
+  fullName: Textify.Data.DataRes.UnicodeData
+  nameWithType: UnicodeData
+- uid: Textify.Data.DataRes.WordsData
+  name: WordsData
+  href: api/Textify.Data.DataRes.WordsData.html
+  commentId: T:Textify.Data.DataRes.WordsData
+  fullName: Textify.Data.DataRes.WordsData
+  nameWithType: WordsData
 - uid: Textify.Data.DataType
   name: DataType
   href: api/Textify.Data.DataType.html
@@ -3465,6 +3489,58 @@ references:
   fullName.vb: Textify.Versioning.SemVer.<=
   nameWithType: SemVer.operator <=
   nameWithType.vb: SemVer.<=
+- uid: Textify.Versioning.SemVerException
+  name: SemVerException
+  href: api/Textify.Versioning.SemVerException.html
+  commentId: T:Textify.Versioning.SemVerException
+  fullName: Textify.Versioning.SemVerException
+  nameWithType: SemVerException
+- uid: Textify.Versioning.SemVerException.#ctor
+  name: SemVerException()
+  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor
+  commentId: M:Textify.Versioning.SemVerException.#ctor
+  name.vb: New()
+  fullName: Textify.Versioning.SemVerException.SemVerException()
+  fullName.vb: Textify.Versioning.SemVerException.New()
+  nameWithType: SemVerException.SemVerException()
+  nameWithType.vb: SemVerException.New()
+- uid: Textify.Versioning.SemVerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: SemVerException(SerializationInfo, StreamingContext)
+  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:Textify.Versioning.SemVerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: New(SerializationInfo, StreamingContext)
+  fullName: Textify.Versioning.SemVerException.SemVerException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: Textify.Versioning.SemVerException.New(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: SemVerException.SemVerException(SerializationInfo, StreamingContext)
+  nameWithType.vb: SemVerException.New(SerializationInfo, StreamingContext)
+- uid: Textify.Versioning.SemVerException.#ctor(System.String)
+  name: SemVerException(string)
+  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_System_String_
+  commentId: M:Textify.Versioning.SemVerException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Textify.Versioning.SemVerException.SemVerException(string)
+  fullName.vb: Textify.Versioning.SemVerException.New(String)
+  nameWithType: SemVerException.SemVerException(string)
+  nameWithType.vb: SemVerException.New(String)
+- uid: Textify.Versioning.SemVerException.#ctor(System.String,System.Exception)
+  name: SemVerException(string, Exception)
+  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_System_String_System_Exception_
+  commentId: M:Textify.Versioning.SemVerException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: Textify.Versioning.SemVerException.SemVerException(string, System.Exception)
+  fullName.vb: Textify.Versioning.SemVerException.New(String, System.Exception)
+  nameWithType: SemVerException.SemVerException(string, Exception)
+  nameWithType.vb: SemVerException.New(String, Exception)
+- uid: Textify.Versioning.SemVerException.#ctor*
+  name: SemVerException
+  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_
+  commentId: Overload:Textify.Versioning.SemVerException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Textify.Versioning.SemVerException.SemVerException
+  fullName.vb: Textify.Versioning.SemVerException.New
+  nameWithType: SemVerException.SemVerException
+  nameWithType.vb: SemVerException.New
 - uid: Textify.Words
   name: Textify.Words
   href: api/Textify.Words.html
