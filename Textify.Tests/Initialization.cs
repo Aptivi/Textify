@@ -18,6 +18,7 @@
 //
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
 using Textify.Data;
 
 namespace Textify.Tests
@@ -26,7 +27,12 @@ namespace Textify.Tests
     public class Initialization
     {
         [AssemblyInitialize]
-        public static void OneTimeSetUp(TestContext ctx) =>
+        public static void OneTimeSetUp(TestContext ctx)
+        {
+            if (ctx is null)
+                Debug.WriteLine("No test context.");
+
             DataInitializer.Initialize();
+        }
     }
 }
