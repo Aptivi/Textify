@@ -3310,6 +3310,22 @@ references:
   isSpec: "True"
   fullName: Textify.Versioning.SemVer.ParseWithRev
   nameWithType: SemVer.ParseWithRev
+- uid: Textify.Versioning.SemVer.ParseWithoutRev(System.String)
+  name: ParseWithoutRev(string)
+  href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_ParseWithoutRev_System_String_
+  commentId: M:Textify.Versioning.SemVer.ParseWithoutRev(System.String)
+  name.vb: ParseWithoutRev(String)
+  fullName: Textify.Versioning.SemVer.ParseWithoutRev(string)
+  fullName.vb: Textify.Versioning.SemVer.ParseWithoutRev(String)
+  nameWithType: SemVer.ParseWithoutRev(string)
+  nameWithType.vb: SemVer.ParseWithoutRev(String)
+- uid: Textify.Versioning.SemVer.ParseWithoutRev*
+  name: ParseWithoutRev
+  href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_ParseWithoutRev_
+  commentId: Overload:Textify.Versioning.SemVer.ParseWithoutRev
+  isSpec: "True"
+  fullName: Textify.Versioning.SemVer.ParseWithoutRev
+  nameWithType: SemVer.ParseWithoutRev
 - uid: Textify.Versioning.SemVer.PatchVersion
   name: PatchVersion
   href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_PatchVersion
@@ -3504,15 +3520,6 @@ references:
   fullName.vb: Textify.Versioning.SemVerException.New()
   nameWithType: SemVerException.SemVerException()
   nameWithType.vb: SemVerException.New()
-- uid: Textify.Versioning.SemVerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: SemVerException(SerializationInfo, StreamingContext)
-  href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Textify.Versioning.SemVerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name.vb: New(SerializationInfo, StreamingContext)
-  fullName: Textify.Versioning.SemVerException.SemVerException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  fullName.vb: Textify.Versioning.SemVerException.New(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: SemVerException.SemVerException(SerializationInfo, StreamingContext)
-  nameWithType.vb: SemVerException.New(SerializationInfo, StreamingContext)
 - uid: Textify.Versioning.SemVerException.#ctor(System.String)
   name: SemVerException(string)
   href: api/Textify.Versioning.SemVerException.html#Textify_Versioning_SemVerException__ctor_System_String_
