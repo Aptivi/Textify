@@ -383,5 +383,212 @@ namespace Textify.General
 
             return string.Join("", chars);
         }
+
+        /// <summary>
+        /// Gets the wrapped sentences for text wrapping for console (with character wrapping, without VT sequence support)
+        /// </summary>
+        /// <param name="text">Text to be wrapped</param>
+        /// <param name="maximumLength">Maximum length of text before wrapping</param>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string[] GetWrappedSentences(string text, int maximumLength) =>
+            GetWrappedSentences(text, maximumLength, 0);
+
+        /// <summary>
+        /// Gets the wrapped sentences for text wrapping for console (with character wrapping, without VT sequence support)
+        /// </summary>
+        /// <param name="text">Text to be wrapped</param>
+        /// <param name="maximumLength">Maximum length of text before wrapping</param>
+        /// <param name="indentLength">Indentation length</param>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string[] GetWrappedSentences(string text, int maximumLength, int indentLength)
+        {
+            if (string.IsNullOrEmpty(text))
+                return [""];
+
+            // Split the paragraph into sentences that have the length of maximum characters that can be printed in various terminal
+            // sizes.
+            var IncompleteSentences = new List<string>();
+            var IncompleteSentenceBuilder = new StringBuilder();
+
+            // Make the text look like it came from Linux
+            text = text.Replace(Convert.ToString(Convert.ToChar(13)), "");
+
+            // Convert tabs to four spaces
+            text = text.Replace("\t", "    ");
+
+            // This indent length count tells us how many spaces are used for indenting the paragraph. This is only set for
+            // the first time and will be reverted back to zero after the incomplete sentence is formed.
+            foreach (string splitText in text.SplitNewLines())
+            {
+                int compensate = 0;
+                if (splitText.Length == 0)
+                    IncompleteSentences.Add(splitText);
+                for (int i = 0; i < splitText.Length; i++)
+                {
+                    // Check the character to see if we're at the VT sequence
+                    bool explicitNewLine = splitText[splitText.Length - 1] == '\n';
+                    char ParagraphChar = splitText[i];
+                    bool isNewLine = splitText[i] == '\n';
+
+                    // Append the character into the incomplete sentence builder.
+                    if (!isNewLine)
+                        IncompleteSentenceBuilder.Append(ParagraphChar.ToString());
+
+                    // Also, compensate the \0 characters
+                    if (splitText[i] == '\0')
+                        compensate++;
+
+                    // Check to see if we're at the maximum character number or at the new line
+                    if (IncompleteSentenceBuilder.Length == maximumLength - indentLength + compensate |
+                        i == splitText.Length - 1 |
+                        isNewLine)
+                    {
+                        // We're at the character number of maximum character. Add the sentence to the list for "wrapping" in columns.
+                        IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
+                        if (explicitNewLine)
+                            IncompleteSentences.Add("");
+
+                        // Clean everything up
+                        IncompleteSentenceBuilder.Clear();
+                        indentLength = 0;
+                        compensate = 0;
+                    }
+                }
+            }
+
+            return [.. IncompleteSentences];
+        }
+
+        /// <summary>
+        /// Gets the wrapped sentences for text wrapping for console (with word wrapping, without VT sequence support)
+        /// </summary>
+        /// <param name="text">Text to be wrapped</param>
+        /// <param name="maximumLength">Maximum length of text before wrapping</param>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string[] GetWrappedSentencesByWords(string text, int maximumLength) =>
+            GetWrappedSentencesByWords(text, maximumLength, 0);
+
+        /// <summary>
+        /// Gets the wrapped sentences for text wrapping for console (with word wrapping, without VT sequence support)
+        /// </summary>
+        /// <param name="text">Text to be wrapped</param>
+        /// <param name="maximumLength">Maximum length of text before wrapping</param>
+        /// <param name="indentLength">Indentation length</param>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string[] GetWrappedSentencesByWords(string text, int maximumLength, int indentLength)
+        {
+            if (string.IsNullOrEmpty(text))
+                return [""];
+
+            // Split the paragraph into sentences that have the length of maximum characters that can be printed in various terminal
+            // sizes.
+            var IncompleteSentences = new List<string>();
+            var IncompleteSentenceBuilder = new StringBuilder();
+
+            // Make the text look like it came from Linux
+            text = text.Replace(Convert.ToString(Convert.ToChar(13)), "");
+
+            // Convert tabs to four spaces
+            text = text.Replace("\t", "    ");
+
+            // This indent length count tells us how many spaces are used for indenting the paragraph. This is only set for
+            // the first time and will be reverted back to zero after the incomplete sentence is formed.
+            var lines = text.SplitNewLines();
+            foreach (string splitText in lines)
+            {
+                int compensate = 0;
+                if (splitText.Length == 0)
+                {
+                    IncompleteSentences.Add(splitText);
+                    continue;
+                }
+
+                // Split the text by spaces
+                var words = splitText.Split(' ');
+                for (int i = 0; i < words.Length; i++)
+                {
+                    // Check the character to see if we're at the VT sequence
+                    string word = words[i];
+
+                    // Compensate the \0 characters
+                    if (splitText[i] == '\0')
+                        compensate++;
+
+                    // Append the word into the incomplete sentence builder.
+                    int finalMaximum = maximumLength - indentLength + compensate;
+                    if (word.Length >= finalMaximum)
+                    {
+                        var charSplit = GetWrappedSentences(word, maximumLength, indentLength);
+                        for (int splitIdx = 0; splitIdx < charSplit.Length - 1; splitIdx++)
+                        {
+                            string charSplitText = charSplit[splitIdx];
+
+                            // We need to add character splits, except the last one.
+                            if (IncompleteSentenceBuilder.Length > 0)
+                                IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
+                            IncompleteSentences.Add(charSplitText);
+
+                            // Clean everything up
+                            IncompleteSentenceBuilder.Clear();
+                            indentLength = 0;
+                            compensate = 0;
+                        }
+
+                        // Process the character split last text
+                        string charSplitLastText = charSplit[charSplit.Length - 1];
+                        word = charSplitLastText;
+                        finalMaximum = maximumLength - indentLength + compensate;
+                        IncompleteSentenceBuilder.Append(charSplitLastText);
+                    }
+                    else if (IncompleteSentenceBuilder.Length + word.Length < finalMaximum)
+                        IncompleteSentenceBuilder.Append(word);
+
+                    // Check to see if we're at the maximum length
+                    int nextWord = i + 1 >= words.Length ? 1 : words[i + 1].Length + 1;
+                    if (IncompleteSentenceBuilder.Length + nextWord >= finalMaximum)
+                    {
+                        // We're at the character number of maximum character. Add the sentence to the list for "wrapping" in columns.
+                        IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
+
+                        // Clean everything up
+                        IncompleteSentenceBuilder.Clear();
+                        indentLength = 0;
+                        compensate = 0;
+                    }
+                    else
+                        IncompleteSentenceBuilder.Append(IncompleteSentenceBuilder.Length + nextWord >= finalMaximum || i + 1 >= words.Length ? "" : " ");
+                }
+                if (IncompleteSentenceBuilder.Length > 0)
+                    IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
+                IncompleteSentenceBuilder.Clear();
+            }
+
+            return [.. IncompleteSentences];
+        }
+
+        /// <summary>
+        /// Truncates the string if the string is larger than the threshold, otherwise, returns an unchanged string (without VT sequence support)
+        /// </summary>
+        /// <param name="target">Source string to truncate</param>
+        /// <param name="threshold">Max number of string characters</param>
+        /// <returns>Truncated string</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string TruncateString(this string target, int threshold)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (threshold < 0)
+                threshold = 0;
+            if (threshold == 0)
+                return "";
+
+            // Try to truncate string. If the string length is bigger than the threshold, it'll be truncated to the length of
+            // the threshold, putting three dots next to it. We don't use ellipsis marks here because we might use this
+            // function with the console.
+            if (target.Length > threshold)
+                return target.Substring(0, threshold) + "...";
+            else
+                return target;
+        }
     }
 }
