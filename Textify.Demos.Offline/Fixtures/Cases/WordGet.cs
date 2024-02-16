@@ -22,7 +22,7 @@ using Textify.Words;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class WordGet : IFixture
+    public class WordGet : IFixture
     {
         public string FixtureID => "WordGet";
         public void RunFixture()

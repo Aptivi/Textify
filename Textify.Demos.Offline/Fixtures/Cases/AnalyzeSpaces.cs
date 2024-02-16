@@ -21,7 +21,7 @@ using Textify.SpaceManager.Analysis;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class AnalyzeSpaces : IFixture
+    public class AnalyzeSpaces : IFixture
     {
         public string FixtureID => "AnalyzeSpaces";
         public void RunFixture()

@@ -22,7 +22,7 @@ using System.Runtime.Serialization;
 
 namespace Textify.Versioning
 {
-    internal class SemVerException : Exception
+    public class SemVerException : Exception
     {
         public SemVerException()
         { }

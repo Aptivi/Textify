@@ -17,33 +17,35 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using Textify.Unicode;
 
 namespace Textify.Tests.Unicode
 {
-    internal class UnicodeQueryTests
+    [TestClass]
+    public class UnicodeQueryTests
     {
-        [Test]
-        [TestCase('A', "LATIN CAPITAL LETTER A")]
-        [TestCase('P', "LATIN CAPITAL LETTER P")]
-        [TestCase('T', "LATIN CAPITAL LETTER T")]
-        [TestCase('V', "LATIN CAPITAL LETTER V")]
-        [TestCase('a', "LATIN SMALL LETTER A")]
-        [TestCase('p', "LATIN SMALL LETTER P")]
-        [TestCase('t', "LATIN SMALL LETTER T")]
-        [TestCase('v', "LATIN SMALL LETTER V")]
+        [TestMethod]
+        [DataRow('A', "LATIN CAPITAL LETTER A")]
+        [DataRow('P', "LATIN CAPITAL LETTER P")]
+        [DataRow('T', "LATIN CAPITAL LETTER T")]
+        [DataRow('V', "LATIN CAPITAL LETTER V")]
+        [DataRow('a', "LATIN SMALL LETTER A")]
+        [DataRow('p', "LATIN SMALL LETTER P")]
+        [DataRow('t', "LATIN SMALL LETTER T")]
+        [DataRow('v', "LATIN SMALL LETTER V")]
         public void QueryUnicodeCharacter(char character, string expectedUnicodeName)
         {
             var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
             charInstance.Na.ShouldBe(expectedUnicodeName);
         }
 
-        [Test]
-        [TestCase('\r', "CARRIAGE RETURN (CR)")]
-        [TestCase('\n', "LINE FEED (LF)")]
-        [TestCase('\t', "CHARACTER TABULATION")]
-        [TestCase('\b', "BACKSPACE")]
+        [TestMethod]
+        [DataRow('\r', "CARRIAGE RETURN (CR)")]
+        [DataRow('\n', "LINE FEED (LF)")]
+        [DataRow('\t', "CHARACTER TABULATION")]
+        [DataRow('\b', "BACKSPACE")]
         public void QueryUnicodeControlCharacter(char character, string expectedUnicodeName)
         {
             var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);

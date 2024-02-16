@@ -22,7 +22,7 @@ namespace Textify.Data.DataRes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class UnicodeData {
+    public class UnicodeData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         

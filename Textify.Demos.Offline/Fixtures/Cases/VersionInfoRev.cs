@@ -21,7 +21,7 @@ using Textify.Versioning;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class VersionInfoRev : IFixture
+    public class VersionInfoRev : IFixture
     {
         public string FixtureID => "VersionInfoRev";
         public void RunFixture()

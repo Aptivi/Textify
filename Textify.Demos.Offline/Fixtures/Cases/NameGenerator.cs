@@ -21,7 +21,7 @@ using Textify.Data;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class NameGenerator : IFixture
+    public class NameGenerator : IFixture
     {
         public string FixtureID => "NameGenerator";
         public void RunFixture()

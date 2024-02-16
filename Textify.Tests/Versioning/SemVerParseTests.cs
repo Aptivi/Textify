@@ -17,29 +17,31 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shouldly;
 using Textify.Versioning;
 
 namespace Textify.Tests.Versioning
 {
     public class SemVerParseTests
     {
-        [Test]
-        [TestCase("1.0.0", ExpectedResult = new object[] { 1, 0, 0, "", "" })]
-        [TestCase("1.0.0-alpha1", ExpectedResult = new object[] { 1, 0, 0, "alpha1", "" })]
-        [TestCase("1.0.0+234F234D", ExpectedResult = new object[] { 1, 0, 0, "", "234F234D" })]
-        [TestCase("1.0.0-alpha1+234F234D", ExpectedResult = new object[] { 1, 0, 0, "alpha1", "234F234D" })]
-        [TestCase("0.1.0", ExpectedResult = new object[] { 0, 1, 0, "", "" })]
-        [TestCase("0.1.0-alpha1", ExpectedResult = new object[] { 0, 1, 0, "alpha1", "" })]
-        [TestCase("0.1.0+234F234D", ExpectedResult = new object[] { 0, 1, 0, "", "234F234D" })]
-        [TestCase("0.1.0-alpha1+234F234D", ExpectedResult = new object[] { 0, 1, 0, "alpha1", "234F234D" })]
-        [TestCase("0.0.1", ExpectedResult = new object[] { 0, 0, 1, "", "" })]
-        [TestCase("0.0.1-alpha1", ExpectedResult = new object[] { 0, 0, 1, "alpha1", "" })]
-        [TestCase("0.0.1+234F234D", ExpectedResult = new object[] { 0, 0, 1, "", "234F234D" })]
-        [TestCase("0.0.1-alpha1+234F234D", ExpectedResult = new object[] { 0, 0, 1, "alpha1", "234F234D" })]
-        public object[] TestSemVer(string version)
+        [TestMethod]
+        [DataRow("1.0.0", new object[] { 1, 0, 0, "", "" })]
+        [DataRow("1.0.0-alpha1", new object[] { 1, 0, 0, "alpha1", "" })]
+        [DataRow("1.0.0+234F234D", new object[] { 1, 0, 0, "", "234F234D" })]
+        [DataRow("1.0.0-alpha1+234F234D", new object[] { 1, 0, 0, "alpha1", "234F234D" })]
+        [DataRow("0.1.0", new object[] { 0, 1, 0, "", "" })]
+        [DataRow("0.1.0-alpha1", new object[] { 0, 1, 0, "alpha1", "" })]
+        [DataRow("0.1.0+234F234D", new object[] { 0, 1, 0, "", "234F234D" })]
+        [DataRow("0.1.0-alpha1+234F234D", new object[] { 0, 1, 0, "alpha1", "234F234D" })]
+        [DataRow("0.0.1", new object[] { 0, 0, 1, "", "" })]
+        [DataRow("0.0.1-alpha1", new object[] { 0, 0, 1, "alpha1", "" })]
+        [DataRow("0.0.1+234F234D", new object[] { 0, 0, 1, "", "234F234D" })]
+        [DataRow("0.0.1-alpha1+234F234D", new object[] { 0, 0, 1, "alpha1", "234F234D" })]
+        public void TestSemVer(string version, object[] elements)
         {
             SemVer semVer = SemVer.Parse(version);
-            return
+            object[] actual =
             [
                 semVer.MajorVersion,
                 semVer.MinorVersion,
@@ -47,111 +49,112 @@ namespace Textify.Tests.Versioning
                 semVer.PreReleaseInfo,
                 semVer.BuildMetadata
             ];
+            actual.ShouldBe(elements);
         }
 
-        [Test]
-        [TestCase("1.0.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1", "1.0.0-alpha1", ExpectedResult = true)]
-        [TestCase("1.0.0+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0+234F234D", "1.0.0+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", ExpectedResult = true)]
-        public bool TestSemVerEquality(string version, string otherVersion)
+        [TestMethod]
+        [DataRow("1.0.0", "1.0.0", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1", false)]
+        [DataRow("1.0.0-alpha1", "1.0.0-alpha1", true)]
+        [DataRow("1.0.0+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0+234F234D", false)]
+        [DataRow("1.0.0+234F234D", "1.0.0+234F234D", true)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        public void TestSemVerEquality(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
             SemVer semVer2 = SemVer.Parse(otherVersion);
-            return semVer == semVer2;
+            (semVer == semVer2).ShouldBe(expected);
         }
 
-        [Test]
-        [TestCase("0.9.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("0.9.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.1.0", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.1.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0-alpha1", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1", "1.0.0-alpha1", ExpectedResult = false)]
-        [TestCase("1.0.0+234F234D", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0+234F234D", "1.0.0+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0-alpha1+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", ExpectedResult = false)]
-        public bool TestSemVerIsOlderThan(string version, string otherVersion)
+        [TestMethod]
+        [DataRow("0.9.0", "1.0.0", true)]
+        [DataRow("0.9.0-alpha1", "1.0.0", true)]
+        [DataRow("1.1.0", "1.0.0", false)]
+        [DataRow("1.1.0-alpha1", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0", false)]
+        [DataRow("1.0.0-alpha1", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0-alpha1", false)]
+        [DataRow("1.0.0-alpha1", "1.0.0-alpha1", false)]
+        [DataRow("1.0.0+234F234D", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0+234F234D", false)]
+        [DataRow("1.0.0+234F234D", "1.0.0+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", false)]
+        public void TestSemVerIsOlderThan(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
             SemVer semVer2 = SemVer.Parse(otherVersion);
-            return semVer < semVer2;
+            (semVer < semVer2).ShouldBe(expected);
         }
 
-        [Test]
-        [TestCase("0.9.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("0.9.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.1.0", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.1.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0-alpha1", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1", "1.0.0-alpha1", ExpectedResult = true)]
-        [TestCase("1.0.0+234F234D", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0+234F234D", "1.0.0+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0-alpha1+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", ExpectedResult = true)]
-        public bool TestSemVerIsOlderOrEqualTo(string version, string otherVersion)
+        [TestMethod]
+        [DataRow("0.9.0", "1.0.0", true)]
+        [DataRow("0.9.0-alpha1", "1.0.0", true)]
+        [DataRow("1.1.0", "1.0.0", false)]
+        [DataRow("1.1.0-alpha1", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0-alpha1", false)]
+        [DataRow("1.0.0-alpha1", "1.0.0-alpha1", true)]
+        [DataRow("1.0.0+234F234D", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0+234F234D", false)]
+        [DataRow("1.0.0+234F234D", "1.0.0+234F234D", true)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0-alpha1+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        public void TestSemVerIsOlderOrEqualTo(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
             SemVer semVer2 = SemVer.Parse(otherVersion);
-            return semVer <= semVer2;
+            (semVer <= semVer2).ShouldBe(expected);
         }
 
-        [Test]
-        [TestCase("0.9.0", "1.0.0", ExpectedResult = false)]
-        [TestCase("0.9.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.1.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.1.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0-alpha1", ExpectedResult = false)]
-        [TestCase("1.0.0+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0+234F234D", "1.0.0+234F234D", ExpectedResult = false)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", ExpectedResult = false)]
-        public bool TestSemVerIsNewerThan(string version, string otherVersion)
+        [TestMethod]
+        [DataRow("0.9.0", "1.0.0", false)]
+        [DataRow("0.9.0-alpha1", "1.0.0", false)]
+        [DataRow("1.1.0", "1.0.0", true)]
+        [DataRow("1.1.0-alpha1", "1.0.0", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0-alpha1", false)]
+        [DataRow("1.0.0+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0+234F234D", true)]
+        [DataRow("1.0.0+234F234D", "1.0.0+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1+234F234D", true)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", false)]
+        public void TestSemVerIsNewerThan(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
             SemVer semVer2 = SemVer.Parse(otherVersion);
-            return semVer > semVer2;
+            (semVer > semVer2).ShouldBe(expected);
         }
 
-        [Test]
-        [TestCase("0.9.0", "1.0.0", ExpectedResult = false)]
-        [TestCase("0.9.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.1.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.1.0-alpha1", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0", "1.0.0", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1", "1.0.0-alpha1", ExpectedResult = true)]
-        [TestCase("1.0.0+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0+234F234D", "1.0.0+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0", ExpectedResult = false)]
-        [TestCase("1.0.0", "1.0.0-alpha1+234F234D", ExpectedResult = true)]
-        [TestCase("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", ExpectedResult = true)]
-        public bool TestSemVerIsNewerOrEqualTo(string version, string otherVersion)
+        [TestMethod]
+        [DataRow("0.9.0", "1.0.0", false)]
+        [DataRow("0.9.0-alpha1", "1.0.0", false)]
+        [DataRow("1.1.0", "1.0.0", true)]
+        [DataRow("1.1.0-alpha1", "1.0.0", true)]
+        [DataRow("1.0.0", "1.0.0", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1", true)]
+        [DataRow("1.0.0-alpha1", "1.0.0-alpha1", true)]
+        [DataRow("1.0.0+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0+234F234D", true)]
+        [DataRow("1.0.0+234F234D", "1.0.0+234F234D", true)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0", false)]
+        [DataRow("1.0.0", "1.0.0-alpha1+234F234D", true)]
+        [DataRow("1.0.0-alpha1+234F234D", "1.0.0-alpha1+234F234D", true)]
+        public void TestSemVerIsNewerOrEqualTo(string version, string otherVersion, bool expected)
         {
             SemVer semVer = SemVer.Parse(version);
             SemVer semVer2 = SemVer.Parse(otherVersion);
-            return semVer >= semVer2;
+            (semVer >= semVer2).ShouldBe(expected);
         }
     }
 }

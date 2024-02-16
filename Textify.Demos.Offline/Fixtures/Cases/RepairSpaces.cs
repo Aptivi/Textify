@@ -23,7 +23,7 @@ using Textify.SpaceManager.Conversion;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class RepairSpaces : IFixture
+    public class RepairSpaces : IFixture
     {
         public string FixtureID => "RepairSpaces";
         public void RunFixture()

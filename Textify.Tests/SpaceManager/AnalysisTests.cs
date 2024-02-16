@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using System.Text;
 using Textify.SpaceManager;
@@ -24,9 +25,10 @@ using Textify.SpaceManager.Analysis;
 
 namespace Textify.Tests.SpaceManager
 {
+    [TestClass]
     public class AnalysisTests
     {
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesNormal()
         {
             //                  v~~~~ This is a normal space
@@ -39,7 +41,7 @@ namespace Textify.Tests.SpaceManager
             result.FalseSpaces.ShouldBeEmpty();
         }
 
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesNonBreakingSpaceExplicit()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
@@ -54,7 +56,7 @@ namespace Textify.Tests.SpaceManager
             result.FalseSpaces[0].Item2.ShouldBe("NON-BREAKING SPACE");
         }
 
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesMultipleNonBreakingSpacesExplicit()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -73,7 +75,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesWithBadSpacesExplicit()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -94,7 +96,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesWithMultipleBadSpacesExplicit()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -119,7 +121,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestAnalyzeSpacesMultipleDifferentSpacesExplicit()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the bad spaces

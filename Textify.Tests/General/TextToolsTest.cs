@@ -17,20 +17,22 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
+using System.Linq;
 using Textify.General;
 
 namespace Textify.Tests.General
 {
 
-    [TestFixture]
+    [TestClass]
     public class TextToolsTest
     {
 
         /// <summary>
         /// Tests replacing last occurrence of a string
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestReplaceLastOccurrence()
         {
@@ -44,7 +46,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests replacing all specified occurrences of strings with a single string
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestReplaceAll()
         {
@@ -57,7 +59,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests replacing all specified occurrences of strings with multiple strings
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestReplaceAllRange()
         {
@@ -70,7 +72,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests string formatting
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestFormatString()
         {
@@ -86,7 +88,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests string formatting with reference to null
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestFormatStringNullReference()
         {
@@ -97,21 +99,9 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
-        /// Tests reserving orders of characters in a string
-        /// </summary>
-        [Test]
-        [Description("Querying")]
-        public void TestReverse()
-        {
-            string expected = "Hello";
-            string TargetString = "olleH";
-            TargetString.Reverse().ShouldBe(expected);
-        }
-
-        /// <summary>
         /// Tests removing the prefix
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestRemovePrefix()
         {
@@ -123,7 +113,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests removing the suffix
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestRemoveSuffix()
         {
@@ -135,81 +125,81 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests releasing a string from double quotes
         /// </summary>
-        [Test]
-        [TestCase("", "")]
-        [TestCase("\"Hi!\"", "Hi!")]
-        [TestCase("'Hi!'", "Hi!")]
-        [TestCase("`Hi!`", "Hi!")]
-        [TestCase("Hi!", "Hi!")]
-        [TestCase("\"Hi! as in \"Hello!\"\"", "Hi! as in \"Hello!\"")]
-        [TestCase("\"Hi! as in \"Hello!\"", "Hi! as in \"Hello!")]
-        [TestCase("'Hi! as in \"Hello!\"'", "Hi! as in \"Hello!\"")]
-        [TestCase("'Hi! as in \"Hello!'", "Hi! as in \"Hello!")]
-        [TestCase("`Hi! as in \"Hello!\"`", "Hi! as in \"Hello!\"")]
-        [TestCase("`Hi! as in \"Hello!`", "Hi! as in \"Hello!")]
-        [TestCase("\"Hi! as in 'Hello!'\"", "Hi! as in 'Hello!'")]
-        [TestCase("\"Hi! as in 'Hello!\"", "Hi! as in 'Hello!")]
-        [TestCase("'Hi! as in 'Hello!''", "Hi! as in 'Hello!'")]
-        [TestCase("'Hi! as in 'Hello!'", "Hi! as in 'Hello!")]
-        [TestCase("`Hi! as in 'Hello!'`", "Hi! as in 'Hello!'")]
-        [TestCase("`Hi! as in 'Hello!`", "Hi! as in 'Hello!")]
-        [TestCase("\"Hi! as in `Hello!`\"", "Hi! as in `Hello!`")]
-        [TestCase("\"Hi! as in `Hello!\"", "Hi! as in `Hello!")]
-        [TestCase("'Hi! as in `Hello!`'", "Hi! as in `Hello!`")]
-        [TestCase("'Hi! as in `Hello!'", "Hi! as in `Hello!")]
-        [TestCase("`Hi! as in `Hello!``", "Hi! as in `Hello!`")]
-        [TestCase("`Hi! as in `Hello!`", "Hi! as in `Hello!")]
-        [TestCase("\"Hi! as in \"Hello!`\"", "Hi! as in \"Hello!`")]
-        [TestCase("'Hi! as in \"Hello!`'", "Hi! as in \"Hello!`")]
-        [TestCase("`Hi! as in \"Hello!``", "Hi! as in \"Hello!`")]
-        [TestCase("\"Hi! as in 'Hello!`\"", "Hi! as in 'Hello!`")]
-        [TestCase("'Hi! as in 'Hello!`'", "Hi! as in 'Hello!`")]
-        [TestCase("`Hi! as in 'Hello!``", "Hi! as in 'Hello!`")]
-        [TestCase("\"Hi! as in `Hello!'\"", "Hi! as in `Hello!'")]
-        [TestCase("'Hi! as in `Hello!''", "Hi! as in `Hello!'")]
-        [TestCase("`Hi! as in `Hello!'`", "Hi! as in `Hello!'")]
-        [TestCase("Hi! as in \"Hello!\"", "Hi! as in \"Hello!\"")]
-        [TestCase("Hi! as in \"Hello!", "Hi! as in \"Hello!")]
-        [TestCase("Hi! as in 'Hello!'", "Hi! as in 'Hello!'")]
-        [TestCase("Hi! as in 'Hello!", "Hi! as in 'Hello!")]
-        [TestCase("Hi! as in `Hello!`", "Hi! as in `Hello!`")]
-        [TestCase("Hi! as in `Hello!", "Hi! as in `Hello!")]
-        [TestCase("\"\"\"", "\"")]
-        [TestCase("\"'\"", "'")]
-        [TestCase("\"`\"", "`")]
-        [TestCase("'\"'", "\"")]
-        [TestCase("'''", "'")]
-        [TestCase("'`'", "`")]
-        [TestCase("`\"`", "\"")]
-        [TestCase("`'`", "'")]
-        [TestCase("```", "`")]
-        [TestCase("\"", "\"")]
-        [TestCase("'", "'")]
-        [TestCase("`", "`")]
-        [TestCase("\"\"\"\"", "\"\"")]
-        [TestCase("\"''\"", "''")]
-        [TestCase("\"``\"", "``")]
-        [TestCase("'\"\"'", "\"\"")]
-        [TestCase("''''", "''")]
-        [TestCase("'``'", "``")]
-        [TestCase("`\"\"`", "\"\"")]
-        [TestCase("`''`", "''")]
-        [TestCase("````", "``")]
-        [TestCase("\"\"", "")]
-        [TestCase("''", "")]
-        [TestCase("``", "")]
-        [TestCase("\"\"`\"", "\"`")]
-        [TestCase("\"'`\"", "'`")]
-        [TestCase("\"`'\"", "`'")]
-        [TestCase("'\"`'", "\"`")]
-        [TestCase("''`'", "'`")]
-        [TestCase("'`''", "`'")]
-        [TestCase("`\"'`", "\"'")]
-        [TestCase("`'``", "'`")]
-        [TestCase("``'`", "`'")]
-        [TestCase("\"'", "\"'")]
-        [TestCase("'`", "'`")]
-        [TestCase("`'", "`'")]
+        [TestMethod]
+        [DataRow("", "")]
+        [DataRow("\"Hi!\"", "Hi!")]
+        [DataRow("'Hi!'", "Hi!")]
+        [DataRow("`Hi!`", "Hi!")]
+        [DataRow("Hi!", "Hi!")]
+        [DataRow("\"Hi! as in \"Hello!\"\"", "Hi! as in \"Hello!\"")]
+        [DataRow("\"Hi! as in \"Hello!\"", "Hi! as in \"Hello!")]
+        [DataRow("'Hi! as in \"Hello!\"'", "Hi! as in \"Hello!\"")]
+        [DataRow("'Hi! as in \"Hello!'", "Hi! as in \"Hello!")]
+        [DataRow("`Hi! as in \"Hello!\"`", "Hi! as in \"Hello!\"")]
+        [DataRow("`Hi! as in \"Hello!`", "Hi! as in \"Hello!")]
+        [DataRow("\"Hi! as in 'Hello!'\"", "Hi! as in 'Hello!'")]
+        [DataRow("\"Hi! as in 'Hello!\"", "Hi! as in 'Hello!")]
+        [DataRow("'Hi! as in 'Hello!''", "Hi! as in 'Hello!'")]
+        [DataRow("'Hi! as in 'Hello!'", "Hi! as in 'Hello!")]
+        [DataRow("`Hi! as in 'Hello!'`", "Hi! as in 'Hello!'")]
+        [DataRow("`Hi! as in 'Hello!`", "Hi! as in 'Hello!")]
+        [DataRow("\"Hi! as in `Hello!`\"", "Hi! as in `Hello!`")]
+        [DataRow("\"Hi! as in `Hello!\"", "Hi! as in `Hello!")]
+        [DataRow("'Hi! as in `Hello!`'", "Hi! as in `Hello!`")]
+        [DataRow("'Hi! as in `Hello!'", "Hi! as in `Hello!")]
+        [DataRow("`Hi! as in `Hello!``", "Hi! as in `Hello!`")]
+        [DataRow("`Hi! as in `Hello!`", "Hi! as in `Hello!")]
+        [DataRow("\"Hi! as in \"Hello!`\"", "Hi! as in \"Hello!`")]
+        [DataRow("'Hi! as in \"Hello!`'", "Hi! as in \"Hello!`")]
+        [DataRow("`Hi! as in \"Hello!``", "Hi! as in \"Hello!`")]
+        [DataRow("\"Hi! as in 'Hello!`\"", "Hi! as in 'Hello!`")]
+        [DataRow("'Hi! as in 'Hello!`'", "Hi! as in 'Hello!`")]
+        [DataRow("`Hi! as in 'Hello!``", "Hi! as in 'Hello!`")]
+        [DataRow("\"Hi! as in `Hello!'\"", "Hi! as in `Hello!'")]
+        [DataRow("'Hi! as in `Hello!''", "Hi! as in `Hello!'")]
+        [DataRow("`Hi! as in `Hello!'`", "Hi! as in `Hello!'")]
+        [DataRow("Hi! as in \"Hello!\"", "Hi! as in \"Hello!\"")]
+        [DataRow("Hi! as in \"Hello!", "Hi! as in \"Hello!")]
+        [DataRow("Hi! as in 'Hello!'", "Hi! as in 'Hello!'")]
+        [DataRow("Hi! as in 'Hello!", "Hi! as in 'Hello!")]
+        [DataRow("Hi! as in `Hello!`", "Hi! as in `Hello!`")]
+        [DataRow("Hi! as in `Hello!", "Hi! as in `Hello!")]
+        [DataRow("\"\"\"", "\"")]
+        [DataRow("\"'\"", "'")]
+        [DataRow("\"`\"", "`")]
+        [DataRow("'\"'", "\"")]
+        [DataRow("'''", "'")]
+        [DataRow("'`'", "`")]
+        [DataRow("`\"`", "\"")]
+        [DataRow("`'`", "'")]
+        [DataRow("```", "`")]
+        [DataRow("\"", "\"")]
+        [DataRow("'", "'")]
+        [DataRow("`", "`")]
+        [DataRow("\"\"\"\"", "\"\"")]
+        [DataRow("\"''\"", "''")]
+        [DataRow("\"``\"", "``")]
+        [DataRow("'\"\"'", "\"\"")]
+        [DataRow("''''", "''")]
+        [DataRow("'``'", "``")]
+        [DataRow("`\"\"`", "\"\"")]
+        [DataRow("`''`", "''")]
+        [DataRow("````", "``")]
+        [DataRow("\"\"", "")]
+        [DataRow("''", "")]
+        [DataRow("``", "")]
+        [DataRow("\"\"`\"", "\"`")]
+        [DataRow("\"'`\"", "'`")]
+        [DataRow("\"`'\"", "`'")]
+        [DataRow("'\"`'", "\"`")]
+        [DataRow("''`'", "'`")]
+        [DataRow("'`''", "`'")]
+        [DataRow("`\"'`", "\"'")]
+        [DataRow("`'``", "'`")]
+        [DataRow("``'`", "`'")]
+        [DataRow("\"'", "\"'")]
+        [DataRow("'`", "'`")]
+        [DataRow("`'", "`'")]
         [Description("Querying")]
         public void TestReleaseDoubleQuotes(string TargetString, string expected)
         {
@@ -219,81 +209,81 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting the enclosed double quotes type from the string
         /// </summary>
-        [Test]
-        [TestCase("", EnclosedDoubleQuotesType.None)]
-        [TestCase("\"Hi!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi!'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi!`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("Hi!", EnclosedDoubleQuotesType.None)]
-        [TestCase("\"Hi! as in \"Hello!\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"Hi! as in \"Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in \"Hello!\"'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'Hi! as in \"Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in \"Hello!\"`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`Hi! as in \"Hello!`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"Hi! as in 'Hello!'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"Hi! as in 'Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in 'Hello!''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'Hi! as in 'Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in 'Hello!'`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`Hi! as in 'Hello!`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"Hi! as in `Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"Hi! as in `Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in `Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'Hi! as in `Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in `Hello!``", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`Hi! as in `Hello!`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"Hi! as in \"Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in \"Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in \"Hello!``", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"Hi! as in 'Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in 'Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in 'Hello!``", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"Hi! as in `Hello!'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'Hi! as in `Hello!''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`Hi! as in `Hello!'`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("Hi! as in \"Hello!\"", EnclosedDoubleQuotesType.None)]
-        [TestCase("Hi! as in \"Hello!", EnclosedDoubleQuotesType.None)]
-        [TestCase("Hi! as in 'Hello!'", EnclosedDoubleQuotesType.None)]
-        [TestCase("Hi! as in 'Hello!", EnclosedDoubleQuotesType.None)]
-        [TestCase("Hi! as in `Hello!`", EnclosedDoubleQuotesType.None)]
-        [TestCase("Hi! as in `Hello!", EnclosedDoubleQuotesType.None)]
-        [TestCase("\"\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'\"'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`\"`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`'`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("```", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"", EnclosedDoubleQuotesType.None)]
-        [TestCase("'", EnclosedDoubleQuotesType.None)]
-        [TestCase("`", EnclosedDoubleQuotesType.None)]
-        [TestCase("\"\"\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"''\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"``\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'\"\"'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("''''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'``'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`\"\"`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`''`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("````", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("``", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"\"`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"'`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("\"`'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
-        [TestCase("'\"`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("''`'", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("'`''", EnclosedDoubleQuotesType.SingleQuotes)]
-        [TestCase("`\"'`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("`'``", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("``'`", EnclosedDoubleQuotesType.Backticks)]
-        [TestCase("\"'", EnclosedDoubleQuotesType.None)]
-        [TestCase("'`", EnclosedDoubleQuotesType.None)]
-        [TestCase("`'", EnclosedDoubleQuotesType.None)]
+        [TestMethod]
+        [DataRow("", EnclosedDoubleQuotesType.None)]
+        [DataRow("\"Hi!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi!'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi!`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("Hi!", EnclosedDoubleQuotesType.None)]
+        [DataRow("\"Hi! as in \"Hello!\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"Hi! as in \"Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in \"Hello!\"'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'Hi! as in \"Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in \"Hello!\"`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`Hi! as in \"Hello!`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"Hi! as in 'Hello!'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"Hi! as in 'Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in 'Hello!''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'Hi! as in 'Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in 'Hello!'`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`Hi! as in 'Hello!`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"Hi! as in `Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"Hi! as in `Hello!\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in `Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'Hi! as in `Hello!'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in `Hello!``", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`Hi! as in `Hello!`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"Hi! as in \"Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in \"Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in \"Hello!``", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"Hi! as in 'Hello!`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in 'Hello!`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in 'Hello!``", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"Hi! as in `Hello!'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'Hi! as in `Hello!''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`Hi! as in `Hello!'`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("Hi! as in \"Hello!\"", EnclosedDoubleQuotesType.None)]
+        [DataRow("Hi! as in \"Hello!", EnclosedDoubleQuotesType.None)]
+        [DataRow("Hi! as in 'Hello!'", EnclosedDoubleQuotesType.None)]
+        [DataRow("Hi! as in 'Hello!", EnclosedDoubleQuotesType.None)]
+        [DataRow("Hi! as in `Hello!`", EnclosedDoubleQuotesType.None)]
+        [DataRow("Hi! as in `Hello!", EnclosedDoubleQuotesType.None)]
+        [DataRow("\"\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'\"'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`\"`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`'`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("```", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"", EnclosedDoubleQuotesType.None)]
+        [DataRow("'", EnclosedDoubleQuotesType.None)]
+        [DataRow("`", EnclosedDoubleQuotesType.None)]
+        [DataRow("\"\"\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"''\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"``\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'\"\"'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("''''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'``'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`\"\"`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`''`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("````", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("``", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"\"`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"'`\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("\"`'\"", EnclosedDoubleQuotesType.DoubleQuotes)]
+        [DataRow("'\"`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("''`'", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("'`''", EnclosedDoubleQuotesType.SingleQuotes)]
+        [DataRow("`\"'`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("`'``", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("``'`", EnclosedDoubleQuotesType.Backticks)]
+        [DataRow("\"'", EnclosedDoubleQuotesType.None)]
+        [DataRow("'`", EnclosedDoubleQuotesType.None)]
+        [DataRow("`'", EnclosedDoubleQuotesType.None)]
         [Description("Querying")]
         public void TestGetEnclosedDoubleQuotesType(string TargetString, EnclosedDoubleQuotesType expected)
         {
@@ -303,7 +293,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting all indexes of a character
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestAllIndexesOf()
         {
@@ -317,7 +307,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests checking if the string contains any of the target strings.
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestContainsAnyOf()
         {
@@ -329,7 +319,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests checking to see if the string starts with any of the values
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestStartsWithAnyOf()
         {
@@ -340,7 +330,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesCrLf()
         {
@@ -352,7 +342,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesLf()
         {
@@ -364,7 +354,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCr)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesCr()
         {
@@ -376,7 +366,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbCr)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesCrLfCr()
         {
@@ -388,7 +378,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesCrLfLf()
         {
@@ -400,7 +390,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbCrLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesCrLfCrLf()
         {
@@ -412,7 +402,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldCrLf()
         {
@@ -424,7 +414,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldLf()
         {
@@ -436,7 +426,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCr)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldCr()
         {
@@ -448,7 +438,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbCr)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldCrLfCr()
         {
@@ -460,7 +450,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldCrLfLf()
         {
@@ -472,7 +462,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with new lines (vbCrLf + vbCrLf)
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitNewLinesOldCrLfCrLf()
         {
@@ -484,7 +474,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with double quotes enclosed
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitEncloseDoubleQuotes()
         {
@@ -497,7 +487,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests splitting a string with double quotes enclosed without releasing them
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestSplitEncloseDoubleQuotesNoRelease()
         {
@@ -510,7 +500,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests checking to see if the string is numeric
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestIsStringNumeric()
         {
@@ -521,7 +511,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// [Counterexample] Tests checking to see if the string is numeric
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestIsStringNumericCounterexample()
         {
@@ -532,15 +522,15 @@ namespace Textify.Tests.General
         /// <summary>
         /// Gets a BASE64-encoded string
         /// </summary>
-        [Test]
-        [TestCase("", "")]
-        [TestCase("Hello", "SGVsbG8=")]
-        [TestCase("Nitrocid KS", "Tml0cm9jaWQgS1M=")]
-        [TestCase("Test text", "VGVzdCB0ZXh0")]
-        [TestCase("123456789", "MTIzNDU2Nzg5")]
-        [TestCase("Test with :[]:", "VGVzdCB3aXRoIDpbXTo=")]
-        [TestCase("Test with this long text", "VGVzdCB3aXRoIHRoaXMgbG9uZyB0ZXh0")]
-        [TestCase("Test with this even longer text", "VGVzdCB3aXRoIHRoaXMgZXZlbiBsb25nZXIgdGV4dA==")]
+        [TestMethod]
+        [DataRow("", "")]
+        [DataRow("Hello", "SGVsbG8=")]
+        [DataRow("Nitrocid KS", "Tml0cm9jaWQgS1M=")]
+        [DataRow("Test text", "VGVzdCB0ZXh0")]
+        [DataRow("123456789", "MTIzNDU2Nzg5")]
+        [DataRow("Test with :[]:", "VGVzdCB3aXRoIDpbXTo=")]
+        [DataRow("Test with this long text", "VGVzdCB3aXRoIHRoaXMgbG9uZyB0ZXh0")]
+        [DataRow("Test with this even longer text", "VGVzdCB3aXRoIHRoaXMgZXZlbiBsb25nZXIgdGV4dA==")]
         [Description("Querying")]
         public void TestGetBase64Encoded(string text, string expectedEncoded)
         {
@@ -551,15 +541,15 @@ namespace Textify.Tests.General
         /// <summary>
         /// Gets a BASE64-decoded string
         /// </summary>
-        [Test]
-        [TestCase("", "")]
-        [TestCase("SGVsbG8=", "Hello")]
-        [TestCase("Tml0cm9jaWQgS1M=", "Nitrocid KS")]
-        [TestCase("VGVzdCB0ZXh0", "Test text")]
-        [TestCase("MTIzNDU2Nzg5", "123456789")]
-        [TestCase("VGVzdCB3aXRoIDpbXTo=", "Test with :[]:")]
-        [TestCase("VGVzdCB3aXRoIHRoaXMgbG9uZyB0ZXh0", "Test with this long text")]
-        [TestCase("VGVzdCB3aXRoIHRoaXMgZXZlbiBsb25nZXIgdGV4dA==", "Test with this even longer text")]
+        [TestMethod]
+        [DataRow("", "")]
+        [DataRow("SGVsbG8=", "Hello")]
+        [DataRow("Tml0cm9jaWQgS1M=", "Nitrocid KS")]
+        [DataRow("VGVzdCB0ZXh0", "Test text")]
+        [DataRow("MTIzNDU2Nzg5", "123456789")]
+        [DataRow("VGVzdCB3aXRoIDpbXTo=", "Test with :[]:")]
+        [DataRow("VGVzdCB3aXRoIHRoaXMgbG9uZyB0ZXh0", "Test with this long text")]
+        [DataRow("VGVzdCB3aXRoIHRoaXMgZXZlbiBsb25nZXIgdGV4dA==", "Test with this even longer text")]
         [Description("Querying")]
         public void TestGetBase64Decoded(string text, string expectedDecoded)
         {
@@ -570,16 +560,16 @@ namespace Textify.Tests.General
         /// <summary>
         /// Shifts the letters in a string
         /// </summary>
-        [Test]
-        [TestCase("", -255, "")]
-        [TestCase("Hello", -1, "Gdkkn")]
-        [TestCase("Hello", 1, "Ifmmp")]
-        [TestCase("Hello", -256, "Gdkkn")]
-        [TestCase("Hello", 256, "Ifmmp")]
-        [TestCase("Hello", -2, "Fcjjm")]
-        [TestCase("Hello", 2, "Jgnnq")]
-        [TestCase("Hello", -257, "Fcjjm")]
-        [TestCase("Hello", 257, "Jgnnq")]
+        [TestMethod]
+        [DataRow("", -255, "")]
+        [DataRow("Hello", -1, "Gdkkn")]
+        [DataRow("Hello", 1, "Ifmmp")]
+        [DataRow("Hello", -256, "Gdkkn")]
+        [DataRow("Hello", 256, "Ifmmp")]
+        [DataRow("Hello", -2, "Fcjjm")]
+        [DataRow("Hello", 2, "Jgnnq")]
+        [DataRow("Hello", -257, "Fcjjm")]
+        [DataRow("Hello", 257, "Jgnnq")]
         [Description("Querying")]
         public void TestShiftLetters(string text, int shift, string expectedShifted)
         {
@@ -590,7 +580,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting wrapped sentences
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestGetWrappedSentences()
         {
@@ -605,7 +595,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting wrapped sentences
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestGetWrappedSentencesIndented()
         {
@@ -621,7 +611,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting wrapped sentences
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestGetWrappedSentencesByWords()
         {
@@ -640,7 +630,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests getting wrapped sentences
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestGetWrappedSentencesByWordsIndented()
         {
@@ -660,7 +650,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests truncating...
         /// </summary>
-        [Test]
+        [TestMethod]
         [Description("Querying")]
         public void TestTruncate()
         {

@@ -22,7 +22,7 @@ using Textify.Demos.Offline.Fixtures;
 
 namespace Textify.Demos.Offline
 {
-    internal class Entry
+    public class Entry
     {
         static void Main(string[] args)
         {

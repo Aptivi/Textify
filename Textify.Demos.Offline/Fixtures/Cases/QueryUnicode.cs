@@ -22,7 +22,7 @@ using Textify.Unicode;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
-    internal class QueryUnicode : IFixture
+    public class QueryUnicode : IFixture
     {
         public string FixtureID => "QueryUnicode";
         public void RunFixture()

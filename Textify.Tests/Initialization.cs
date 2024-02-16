@@ -17,17 +17,16 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Textify.Data;
 
 namespace Textify.Tests
 {
-    [SetUpFixture]
-    internal class Initialization
+    [TestClass]
+    public class Initialization
     {
-        [OneTimeSetUp]
-        public static void OneTimeSetUp()
-        {
+        [AssemblyInitialize]
+        public static void OneTimeSetUp(TestContext ctx) =>
             DataInitializer.Initialize();
-        }
     }
 }

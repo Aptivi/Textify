@@ -17,7 +17,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
+using System.IO;
 using System.Text;
 using Textify.SpaceManager;
 using Textify.SpaceManager.Analysis;
@@ -25,9 +27,10 @@ using Textify.SpaceManager.Conversion;
 
 namespace Textify.Tests.SpaceManager
 {
+    [TestClass]
     public class ConversionTests
     {
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNormal()
         {
             //                  v~~~~ This is a normal space
@@ -41,7 +44,7 @@ namespace Textify.Tests.SpaceManager
             result.Length.ShouldBe(expectedBytes.Length);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpace()
         {
             //                  v~~~~ This is a non-breaking space
@@ -56,7 +59,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldNotContain((byte)'\u00a0');
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpaces()
         {
             //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
@@ -71,7 +74,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldNotContain((byte)'\u00a0');
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceExplicit()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
@@ -86,7 +89,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldNotContain((byte)'\u00a0');
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesExplicit()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -101,7 +104,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldNotContain((byte)'\u00a0');
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithBadSpacesExplicit()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -121,7 +124,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithMultipleBadSpacesExplicit()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -141,7 +144,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleDifferentSpacesExplicit()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -158,7 +161,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldNotBeOneOf(Spaces.badSpaces["PUNCTUATION SPACE"]);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNormalToText()
         {
             //                  v~~~~ This is a normal space
@@ -170,7 +173,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceToText()
         {
             //                  v~~~~ This is a non-breaking space
@@ -182,7 +185,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesToText()
         {
             //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
@@ -194,7 +197,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceExplicitToText()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
@@ -206,7 +209,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesExplicitToText()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -218,7 +221,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithBadSpacesExplicitToText()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -235,7 +238,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithMultipleBadSpacesExplicitToText()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -252,7 +255,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleDifferentSpacesExplicitToText()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -264,7 +267,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNormalToStream()
         {
             //                  v~~~~ This is a normal space
@@ -283,7 +286,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceToStream()
         {
             //                  v~~~~ This is a non-breaking space
@@ -302,7 +305,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesToStream()
         {
             //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
@@ -321,7 +324,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceExplicitToStream()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
@@ -340,7 +343,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesExplicitToStream()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -359,7 +362,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithBadSpacesExplicitToStream()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -383,7 +386,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithMultipleBadSpacesExplicitToStream()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -407,7 +410,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleDifferentSpacesExplicitToStream()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -426,7 +429,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNormalToFile()
         {
             //                  v~~~~ This is a normal space
@@ -440,7 +443,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceToFile()
         {
             //                  v~~~~ This is a non-breaking space
@@ -454,7 +457,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesToFile()
         {
             //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
@@ -468,7 +471,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesNonBreakingSpaceExplicitToFile()
         {
             //                  vvvvvv~~~~ This is a non-breaking space
@@ -482,7 +485,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleNonBreakingSpacesExplicitToFile()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
@@ -496,7 +499,7 @@ namespace Textify.Tests.SpaceManager
             result.ShouldBe(expectedResult);
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithBadSpacesExplicitToFile()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -515,7 +518,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesWithMultipleBadSpacesExplicitToFile()
         {
             foreach (var badSpace in Spaces.badSpaces)
@@ -534,7 +537,7 @@ namespace Textify.Tests.SpaceManager
             }
         }
 
-        [Test]
+        [TestMethod]
         public void TestConvertSpacesMultipleDifferentSpacesExplicitToFile()
         {
             //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are bad spaces
