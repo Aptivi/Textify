@@ -1,4 +1,4 @@
-name: Build Project (Linux, Release)
+name: Build Project (Release)
 
 on:
   push:
@@ -10,16 +10,17 @@ on:
     
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.runs-on }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
-        submodules: 'true'
         ref: ${{ github.ref }}
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
     - name: Solution Compilation
