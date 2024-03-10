@@ -2,7 +2,7 @@
   "sitemap": {
     "baseUrl": "https://aptivi.github.io/Textify/"
   },
-  "source_base_path": "/github/workspace/DocGen",
+  "source_base_path": "/home/runner/work/Textify/Textify/DocGen",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
