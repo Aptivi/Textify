@@ -4,3 +4,6 @@
 [submodule "assets/WordsList"]
 	path = assets/WordsList
 	url = https://github.com/Aptivi/WordsList.git
+[submodule "assets/UnicodeList"]
+	path = assets/UnicodeList
+	url = https://github.com/Aptivi/UnicodeList
