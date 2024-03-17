@@ -38,12 +38,6 @@ references:
   commentId: N:Textify.Data.DataRes
   fullName: Textify.Data.DataRes
   nameWithType: Textify.Data.DataRes
-- uid: Textify.Data.DataRes.NamesData
-  name: NamesData
-  href: api/Textify.Data.DataRes.NamesData.html
-  commentId: T:Textify.Data.DataRes.NamesData
-  fullName: Textify.Data.DataRes.NamesData
-  nameWithType: NamesData
 - uid: Textify.Data.DataRes.UnicodeData
   name: UnicodeData
   href: api/Textify.Data.DataRes.UnicodeData.html
@@ -62,18 +56,60 @@ references:
   commentId: T:Textify.Data.DataType
   fullName: Textify.Data.DataType
   nameWithType: DataType
+- uid: Textify.Data.DataType.All
+  name: All
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_All
+  commentId: F:Textify.Data.DataType.All
+  fullName: Textify.Data.DataType.All
+  nameWithType: DataType.All
 - uid: Textify.Data.DataType.Names
   name: Names
   href: api/Textify.Data.DataType.html#Textify_Data_DataType_Names
   commentId: F:Textify.Data.DataType.Names
   fullName: Textify.Data.DataType.Names
   nameWithType: DataType.Names
+- uid: Textify.Data.DataType.NamesFemale
+  name: NamesFemale
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesFemale
+  commentId: F:Textify.Data.DataType.NamesFemale
+  fullName: Textify.Data.DataType.NamesFemale
+  nameWithType: DataType.NamesFemale
+- uid: Textify.Data.DataType.NamesFemaleImplicit
+  name: NamesFemaleImplicit
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesFemaleImplicit
+  commentId: F:Textify.Data.DataType.NamesFemaleImplicit
+  fullName: Textify.Data.DataType.NamesFemaleImplicit
+  nameWithType: DataType.NamesFemaleImplicit
+- uid: Textify.Data.DataType.NamesMale
+  name: NamesMale
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesMale
+  commentId: F:Textify.Data.DataType.NamesMale
+  fullName: Textify.Data.DataType.NamesMale
+  nameWithType: DataType.NamesMale
+- uid: Textify.Data.DataType.NamesMaleImplicit
+  name: NamesMaleImplicit
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesMaleImplicit
+  commentId: F:Textify.Data.DataType.NamesMaleImplicit
+  fullName: Textify.Data.DataType.NamesMaleImplicit
+  nameWithType: DataType.NamesMaleImplicit
+- uid: Textify.Data.DataType.NamesNatural
+  name: NamesNatural
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesNatural
+  commentId: F:Textify.Data.DataType.NamesNatural
+  fullName: Textify.Data.DataType.NamesNatural
+  nameWithType: DataType.NamesNatural
 - uid: Textify.Data.DataType.Unicode
   name: Unicode
   href: api/Textify.Data.DataType.html#Textify_Data_DataType_Unicode
   commentId: F:Textify.Data.DataType.Unicode
   fullName: Textify.Data.DataType.Unicode
   nameWithType: DataType.Unicode
+- uid: Textify.Data.DataType.UnicodeNoUnihan
+  name: UnicodeNoUnihan
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_UnicodeNoUnihan
+  commentId: F:Textify.Data.DataType.UnicodeNoUnihan
+  fullName: Textify.Data.DataType.UnicodeNoUnihan
+  nameWithType: DataType.UnicodeNoUnihan
 - uid: Textify.Data.DataType.Words
   name: Words
   href: api/Textify.Data.DataType.html#Textify_Data_DataType_Words

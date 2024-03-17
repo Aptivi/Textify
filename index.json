@@ -4,11 +4,6 @@
     "title": "Class DataInitializer | Textify API - Aptivi",
     "keywords": "Class DataInitializer Data initialization class Inheritance object DataInitializer Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public static class DataInitializer Methods | Edit this page View Source Initialize() Initializes all the needed data Declaration public static void Initialize() | Edit this page View Source Initialize(DataType) Initializes all the needed data Declaration public static void Initialize(DataType types) Parameters Type Name Description DataType types Types to initialize"
   },
-  "api/Textify.Data.DataRes.NamesData.html": {
-    "href": "api/Textify.Data.DataRes.NamesData.html",
-    "title": "Class NamesData | Textify API - Aptivi",
-    "keywords": "Class NamesData A strongly-typed resource class, for looking up localized strings, etc. Inheritance object NamesData Namespace: Textify.Data.DataRes Assembly: Textify.Data.dll Syntax public class NamesData"
-  },
   "api/Textify.Data.DataRes.UnicodeData.html": {
     "href": "api/Textify.Data.DataRes.UnicodeData.html",
     "title": "Class UnicodeData | Textify API - Aptivi",
@@ -22,12 +17,12 @@
   "api/Textify.Data.DataRes.html": {
     "href": "api/Textify.Data.DataRes.html",
     "title": "Namespace Textify.Data.DataRes | Textify API - Aptivi",
-    "keywords": "Namespace Textify.Data.DataRes Classes NamesData A strongly-typed resource class, for looking up localized strings, etc. UnicodeData A strongly-typed resource class, for looking up localized strings, etc. WordsData A strongly-typed resource class, for looking up localized strings, etc."
+    "keywords": "Namespace Textify.Data.DataRes Classes UnicodeData A strongly-typed resource class, for looking up localized strings, etc. WordsData A strongly-typed resource class, for looking up localized strings, etc."
   },
   "api/Textify.Data.DataType.html": {
     "href": "api/Textify.Data.DataType.html",
     "title": "Enum DataType | Textify API - Aptivi",
-    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description Names Initializes the zip files containing names and surnames Unicode Initializes the zip files containing Unicode data Words Initializes the zip files containing word lists"
+    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description All Initializes the zip files for all data Names Initializes the zip files containing names NamesFemale Initializes the zip files containing female names NamesFemaleImplicit Initializes the zip files containing implicit female names NamesMale Initializes the zip files containing male names NamesMaleImplicit Initializes the zip files containing implicit male names NamesNatural Initializes the zip files containing natural names Unicode Initializes the zip files containing Unicode data UnicodeNoUnihan Initializes the zip files containing Unicode data without Unihan data Words Initializes the zip files containing word lists"
   },
   "api/Textify.Data.html": {
     "href": "api/Textify.Data.html",
