@@ -25,16 +25,44 @@ namespace Textify.Data
     public enum DataType
     {
         /// <summary>
-        /// Initializes the zip files containing names and surnames
+        /// Initializes the zip files containing names
         /// </summary>
         Names = 1,
         /// <summary>
+        /// Initializes the zip files containing female names
+        /// </summary>
+        NamesFemale = 2,
+        /// <summary>
+        /// Initializes the zip files containing male names
+        /// </summary>
+        NamesMale = 4,
+        /// <summary>
+        /// Initializes the zip files containing implicit female names
+        /// </summary>
+        NamesFemaleImplicit = 8,
+        /// <summary>
+        /// Initializes the zip files containing implicit male names
+        /// </summary>
+        NamesMaleImplicit = 16,
+        /// <summary>
+        /// Initializes the zip files containing natural names
+        /// </summary>
+        NamesNatural = 32,
+        /// <summary>
+        /// Initializes the zip files containing Unicode data without Unihan data
+        /// </summary>
+        UnicodeNoUnihan = 64,
+        /// <summary>
         /// Initializes the zip files containing Unicode data
         /// </summary>
-        Unicode = 2,
+        Unicode = 128,
         /// <summary>
         /// Initializes the zip files containing word lists
         /// </summary>
-        Words = 4,
+        Words = 256,
+        /// <summary>
+        /// Initializes the zip files for all data
+        /// </summary>
+        All = Names | NamesFemale | NamesMale | NamesFemaleImplicit | NamesMaleImplicit | NamesNatural | UnicodeNoUnihan | Unicode | Words,
     }
 }

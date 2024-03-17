@@ -127,6 +127,15 @@
   <data name="FirstNames_Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>../../assets/NamesList/Processed/FirstNames_Male.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="FirstNames_Female_Implicit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/NamesList/Processed/FirstNames_Female_Implicit.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FirstNames_Male_Implicit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/NamesList/Processed/FirstNames_Male_Implicit.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FirstNames_Natural" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/NamesList/Processed/FirstNames_Natural.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Surnames" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>../../assets/NamesList/Processed/Surnames.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

@@ -22,7 +22,7 @@ namespace Textify.Data.DataRes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class NamesData {
+    internal class NamesData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -83,9 +83,39 @@ namespace Textify.Data.DataRes {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] FirstNames_Female_Implicit {
+            get {
+                object obj = ResourceManager.GetObject("FirstNames_Female_Implicit", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] FirstNames_Male {
             get {
                 object obj = ResourceManager.GetObject("FirstNames_Male", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FirstNames_Male_Implicit {
+            get {
+                object obj = ResourceManager.GetObject("FirstNames_Male_Implicit", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FirstNames_Natural {
+            get {
+                object obj = ResourceManager.GetObject("FirstNames_Natural", resourceCulture);
                 return ((byte[])(obj));
             }
         }

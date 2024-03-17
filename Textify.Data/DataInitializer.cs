@@ -27,13 +27,11 @@ namespace Textify.Data
     /// </summary>
     public static class DataInitializer
     {
-        internal static bool initialized = false;
-
         /// <summary>
         /// Initializes all the needed data
         /// </summary>
         public static void Initialize() =>
-            Initialize(DataType.Names | DataType.Unicode | DataType.Words);
+            Initialize(DataType.All);
 
         /// <summary>
         /// Initializes all the needed data
@@ -41,31 +39,69 @@ namespace Textify.Data
         /// <param name="types">Types to initialize</param>
         public static void Initialize(DataType types)
         {
-            // If already initialized, bail.
-            if (initialized)
-                return;
-            initialized = true;
-
             // Some variables for needed data
             bool needsNames = types.HasFlag(DataType.Names);
+            bool needsFemaleNames = types.HasFlag(DataType.NamesFemale);
+            bool needsMaleNames = types.HasFlag(DataType.NamesMale);
+            bool needsFemaleImplicitNames = types.HasFlag(DataType.NamesFemaleImplicit);
+            bool needsMaleImplicitNames = types.HasFlag(DataType.NamesMaleImplicit);
+            bool needsNaturalNames = types.HasFlag(DataType.NamesNatural);
             bool needsUnicode = types.HasFlag(DataType.Unicode);
+            bool needsUnicodeNoUnihan = types.HasFlag(DataType.UnicodeNoUnihan);
             bool needsWords = types.HasFlag(DataType.Words);
+            bool needsSurnames = needsNames || needsFemaleNames || needsMaleNames || needsFemaleImplicitNames || needsMaleImplicitNames || needsNaturalNames;
 
             // Go through all the types
             if (needsNames)
             {
-                DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Female), NamesData.FirstNames_Female);
-                DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Male), NamesData.FirstNames_Male);
-                DataTools.dataStreams.Add(nameof(NamesData.FirstNames), NamesData.FirstNames);
-                DataTools.dataStreams.Add(nameof(NamesData.Surnames), NamesData.Surnames);
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames), NamesData.FirstNames);
+            }
+            if (needsFemaleNames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames_Female)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Female), NamesData.FirstNames_Female);
+            }
+            if (needsMaleNames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames_Male)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Male), NamesData.FirstNames_Male);
+            }
+            if (needsFemaleImplicitNames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames_Female_Implicit)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Female_Implicit), NamesData.FirstNames_Female_Implicit);
+            }
+            if (needsMaleImplicitNames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames_Male_Implicit)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Male_Implicit), NamesData.FirstNames_Male_Implicit);
+            }
+            if (needsNaturalNames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.FirstNames_Natural)))
+                    DataTools.dataStreams.Add(nameof(NamesData.FirstNames_Natural), NamesData.FirstNames_Natural);
+            }
+            if (needsSurnames)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(NamesData.Surnames)))
+                    DataTools.dataStreams.Add(nameof(NamesData.Surnames), NamesData.Surnames);
             }
             if (needsUnicode)
             {
-                DataTools.dataStreams.Add(nameof(UnicodeData.ucd_nounihan_flat), UnicodeData.ucd_nounihan_flat);
-                DataTools.dataStreams.Add(nameof(UnicodeData.ucd_all_flat), UnicodeData.ucd_all_flat);
+                if (!DataTools.dataStreams.ContainsKey(nameof(UnicodeData.ucd_all_flat)))
+                    DataTools.dataStreams.Add(nameof(UnicodeData.ucd_all_flat), UnicodeData.ucd_all_flat);
+            }
+            if (needsUnicodeNoUnihan)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(UnicodeData.ucd_nounihan_flat)))
+                    DataTools.dataStreams.Add(nameof(UnicodeData.ucd_nounihan_flat), UnicodeData.ucd_nounihan_flat);
             }
             if (needsWords)
-                DataTools.dataStreams.Add(nameof(WordsData.words_alpha), WordsData.words_alpha);
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_alpha)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words_alpha), WordsData.words_alpha);
+            }
         }
     }
 }
