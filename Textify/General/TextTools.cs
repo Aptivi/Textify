@@ -507,12 +507,12 @@ namespace Textify.General
                 var words = splitText.Split(' ');
                 for (int i = 0; i < words.Length; i++)
                 {
-                    // Check the character to see if we're at the VT sequence
                     string word = words[i];
 
                     // Compensate the \0 characters
-                    if (splitText[i] == '\0')
-                        compensate++;
+                    for (int c = 0; c < word.Length; c++)
+                        if (splitText[c] == '\0')
+                            compensate++;
 
                     // Append the word into the incomplete sentence builder.
                     int finalMaximum = maximumLength - indentLength + compensate;
