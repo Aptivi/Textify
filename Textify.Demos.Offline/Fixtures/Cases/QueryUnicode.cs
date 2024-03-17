@@ -33,7 +33,7 @@ namespace Textify.Demos.Offline.Fixtures.Cases
             Console.WriteLine();
 
             // Query it
-            DataInitializer.Initialize(DataType.Unicode);
+            DataInitializer.Initialize(DataType.UnicodeNoUnihan);
             var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
             Console.WriteLine($"Na (current): {charInstance.Na}");
             Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
