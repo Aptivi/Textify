@@ -33,9 +33,8 @@ namespace Textify.NameGen
     /// </summary>
 	public static class NameGenerator
     {
-        internal static string[] Names = [];
+        internal static Dictionary<NameGenderType, string[]> Names = [];
         internal static string[] Surnames = [];
-        private static NameGenderType lastGenderType = NameGenderType.Unified;
 
         /// <summary>
         /// Populates the names and the surnames for the purpose of initialization
@@ -52,11 +51,14 @@ namespace Textify.NameGen
         {
             try
             {
-                if (Names.Length == 0 || genderType != lastGenderType)
+                if (!Names.ContainsKey(genderType))
                 {
                     (byte[] bytes, string fileName) =
                         genderType == NameGenderType.Female ? (DataTools.GetDataFrom("FirstNames_Female"), "FirstNames_Female.txt") :
                         genderType == NameGenderType.Male ? (DataTools.GetDataFrom("FirstNames_Male"), "FirstNames_Male.txt") :
+                        genderType == NameGenderType.FemaleImplicit ? (DataTools.GetDataFrom("FirstNames_Female_Implicit"), "FirstNames_Female_Implicit.txt") :
+                        genderType == NameGenderType.MaleImplicit ? (DataTools.GetDataFrom("FirstNames_Male_Implicit"), "FirstNames_Male_Implicit.txt") :
+                        genderType == NameGenderType.Natural ? (DataTools.GetDataFrom("FirstNames_Natural"), "FirstNames_Natural.txt") :
                         (DataTools.GetDataFrom("FirstNames"), "FirstNames.txt");
                     var contentStream = new MemoryStream(bytes);
                     var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
@@ -64,7 +66,7 @@ namespace Textify.NameGen
                     // Open the XML to stream
                     var content = archive.GetEntry(fileName).Open();
                     var read = await new StreamReader(content).ReadToEndAsync();
-                    Names = read.SplitNewLines();
+                    Names.Add(genderType, read.SplitNewLines());
                 }
                 if (Surnames.Length == 0)
                 {
@@ -77,7 +79,6 @@ namespace Textify.NameGen
                     var read = await new StreamReader(content).ReadToEndAsync();
                     Surnames = read.SplitNewLines();
                 }
-                lastGenderType = genderType;
             }
             catch (Exception ex)
             {
@@ -116,7 +117,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             PopulateNames(genderType);
-            return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix);
+            return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix, genderType);
         }
 
         /// <summary>
@@ -150,7 +151,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             await PopulateNamesAsync(genderType);
-            return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix);
+            return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix, genderType);
         }
 
         /// <summary>
@@ -182,7 +183,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             PopulateNames(genderType);
-            return GenerateFirstNameArray(Count, NamePrefix, NameSuffix);
+            return GenerateFirstNameArray(Count, NamePrefix, NameSuffix, genderType);
         }
 
         /// <summary>
@@ -214,7 +215,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             await PopulateNamesAsync(genderType);
-            return GenerateFirstNameArray(Count, NamePrefix, NameSuffix);
+            return GenerateFirstNameArray(Count, NamePrefix, NameSuffix, genderType);
         }
 
         /// <summary>
@@ -296,7 +297,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             PopulateNames(genderType);
-            return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix);
+            return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix, genderType);
         }
 
         /// <summary>
@@ -320,7 +321,7 @@ namespace Textify.NameGen
         {
             // Initialize names
             await PopulateNamesAsync(genderType);
-            return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix);
+            return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix, genderType);
         }
 
         /// <summary>
@@ -367,7 +368,7 @@ namespace Textify.NameGen
             return GenerateLastNameArray(nameSearchTerm, SurnamePrefix, SurnameSuffix);
         }
 
-        internal static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix)
+        internal static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType)
         {
             var random = new Random();
             List<string> namesList = [];
@@ -377,13 +378,13 @@ namespace Textify.NameGen
             bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
 
             // Process the names according to suffix and/or prefix check requirement
-            string[] ProcessedNames = Names;
+            string[] ProcessedNames = Names[genderType];
             if (NamePrefixCheckRequired && NameSuffixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
             else if (NamePrefixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix)).ToArray();
             else if (NameSuffixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.EndsWith(NameSuffix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.EndsWith(NameSuffix)).ToArray();
 
             // Check the names
             if (ProcessedNames.Length == 0)
@@ -431,7 +432,7 @@ namespace Textify.NameGen
             return [.. surnamesList];
         }
 
-        internal static string[] GenerateFirstNameArray(string nameSearchTerm, string NamePrefix, string NameSuffix)
+        internal static string[] GenerateFirstNameArray(string nameSearchTerm, string NamePrefix, string NameSuffix, NameGenderType genderType)
         {
             var random = new Random();
             List<string> namesList = [];
@@ -441,13 +442,13 @@ namespace Textify.NameGen
             bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
 
             // Process the names according to suffix and/or prefix check requirement
-            string[] ProcessedNames = Names;
+            string[] ProcessedNames = Names[genderType];
             if (NamePrefixCheckRequired && NameSuffixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
             else if (NamePrefixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix)).ToArray();
             else if (NameSuffixCheckRequired)
-                ProcessedNames = Names.Where((str) => str.EndsWith(NameSuffix)).ToArray();
+                ProcessedNames = Names[genderType].Where((str) => str.EndsWith(NameSuffix)).ToArray();
             ProcessedNames = ProcessedNames.Where(str => str.Contains(nameSearchTerm)).ToArray();
 
             // Check the names
@@ -483,12 +484,12 @@ namespace Textify.NameGen
             return ProcessedSurnames;
         }
 
-        internal static string[] GenerateNameArray(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix)
+        internal static string[] GenerateNameArray(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix, NameGenderType genderType)
         {
             List<string> namesList = [];
 
             // Get random names and surnames
-            string[] names = GenerateFirstNameArray(Count, NamePrefix, NameSuffix);
+            string[] names = GenerateFirstNameArray(Count, NamePrefix, NameSuffix, genderType);
             string[] surnames = GenerateLastNameArray(Count, SurnamePrefix, SurnameSuffix);
 
             // Select random names

@@ -32,8 +32,21 @@ namespace Textify.NameGen
         /// Uses the list of female names
         /// </summary>
         Female,
-        /// <summary>s list
+        /// <summary>
+        /// Uses the list of male names
         /// </summary>
         Male,
+        /// <summary>
+        /// Uses the list of implicit female names
+        /// </summary>
+        FemaleImplicit,
+        /// <summary>
+        /// Uses the list of implicit male names
+        /// </summary>
+        MaleImplicit,
+        /// <summary>
+        /// Uses the list of unified natural names
+        /// </summary>
+        Natural,
     }
 }

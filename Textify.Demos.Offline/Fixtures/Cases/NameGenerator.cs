@@ -26,13 +26,23 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public string FixtureID => "NameGenerator";
         public void RunFixture()
         {
-            DataInitializer.Initialize(DataType.Names);
+            DataInitializer.Initialize(DataType.Names | DataType.NamesFemale | DataType.NamesMale | DataType.NamesFemaleImplicit | DataType.NamesMaleImplicit | DataType.NamesNatural);
             string[] names = NameGen.NameGenerator.GenerateNames(10);
             string[] firstNames = NameGen.NameGenerator.GenerateFirstNames(10);
+            string[] firstFemaleNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Female);
+            string[] firstMaleNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Male);
+            string[] firstFemaleImplicitNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.FemaleImplicit);
+            string[] firstMaleImplicitNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.MaleImplicit);
+            string[] firstNaturalNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Natural);
             string[] surnames = NameGen.NameGenerator.GenerateLastNames(10);
 
             Console.WriteLine($"10 names: {string.Join(", ", names)}");
             Console.WriteLine($"10 first names: {string.Join(", ", firstNames)}");
+            Console.WriteLine($"10 first female names: {string.Join(", ", firstFemaleNames)}");
+            Console.WriteLine($"10 first male names: {string.Join(", ", firstMaleNames)}");
+            Console.WriteLine($"10 first implicit female names: {string.Join(", ", firstFemaleImplicitNames)}");
+            Console.WriteLine($"10 first implicit male names: {string.Join(", ", firstMaleImplicitNames)}");
+            Console.WriteLine($"10 first natural names: {string.Join(", ", firstNaturalNames)}");
             Console.WriteLine($"10 last names: {string.Join(", ", surnames)}");
         }
     }
