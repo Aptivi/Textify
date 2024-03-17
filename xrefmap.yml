@@ -671,12 +671,30 @@ references:
   commentId: F:Textify.NameGen.NameGenderType.Female
   fullName: Textify.NameGen.NameGenderType.Female
   nameWithType: NameGenderType.Female
+- uid: Textify.NameGen.NameGenderType.FemaleImplicit
+  name: FemaleImplicit
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_FemaleImplicit
+  commentId: F:Textify.NameGen.NameGenderType.FemaleImplicit
+  fullName: Textify.NameGen.NameGenderType.FemaleImplicit
+  nameWithType: NameGenderType.FemaleImplicit
 - uid: Textify.NameGen.NameGenderType.Male
   name: Male
   href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Male
   commentId: F:Textify.NameGen.NameGenderType.Male
   fullName: Textify.NameGen.NameGenderType.Male
   nameWithType: NameGenderType.Male
+- uid: Textify.NameGen.NameGenderType.MaleImplicit
+  name: MaleImplicit
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_MaleImplicit
+  commentId: F:Textify.NameGen.NameGenderType.MaleImplicit
+  fullName: Textify.NameGen.NameGenderType.MaleImplicit
+  nameWithType: NameGenderType.MaleImplicit
+- uid: Textify.NameGen.NameGenderType.Natural
+  name: Natural
+  href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Natural
+  commentId: F:Textify.NameGen.NameGenderType.Natural
+  fullName: Textify.NameGen.NameGenderType.Natural
+  nameWithType: NameGenderType.Natural
 - uid: Textify.NameGen.NameGenderType.Unified
   name: Unified
   href: api/Textify.NameGen.NameGenderType.html#Textify_NameGen_NameGenderType_Unified

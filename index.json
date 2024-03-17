@@ -57,7 +57,7 @@
   "api/Textify.NameGen.NameGenderType.html": {
     "href": "api/Textify.NameGen.NameGenderType.html",
     "title": "Enum NameGenderType | Textify API - Aptivi",
-    "keywords": "Enum NameGenderType Name gender type Namespace: Textify.NameGen Assembly: Textify.dll Syntax public enum NameGenderType Fields Name Description Female Uses the list of female names Male s list Unified Uses the list of both male and female names"
+    "keywords": "Enum NameGenderType Name gender type Namespace: Textify.NameGen Assembly: Textify.dll Syntax public enum NameGenderType Fields Name Description Female Uses the list of female names FemaleImplicit Uses the list of implicit female names Male Uses the list of male names MaleImplicit Uses the list of implicit male names Natural Uses the list of unified natural names Unified Uses the list of both male and female names"
   },
   "api/Textify.NameGen.NameGenerator.html": {
     "href": "api/Textify.NameGen.NameGenerator.html",
