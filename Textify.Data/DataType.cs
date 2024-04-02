@@ -61,8 +61,12 @@ namespace Textify.Data
         /// </summary>
         Words = 256,
         /// <summary>
+        /// Initializes the zip files containing Unicode data with just Unihan data
+        /// </summary>
+        UnicodeUnihan = 512,
+        /// <summary>
         /// Initializes the zip files for all data
         /// </summary>
-        All = Names | NamesFemale | NamesMale | NamesFemaleImplicit | NamesMaleImplicit | NamesNatural | UnicodeNoUnihan | Unicode | Words,
+        All = Names | NamesFemale | NamesMale | NamesFemaleImplicit | NamesMaleImplicit | NamesNatural | UnicodeNoUnihan | Unicode | Words | UnicodeUnihan,
     }
 }

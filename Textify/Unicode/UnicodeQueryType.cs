@@ -29,6 +29,10 @@ namespace Textify.Unicode
         /// </summary>
         Simple,
         /// <summary>
+        /// Unihan characters
+        /// </summary>
+        Unihan,
+        /// <summary>
         /// All characters
         /// </summary>
         Full

@@ -48,6 +48,7 @@ namespace Textify.Data
             bool needsNaturalNames = types.HasFlag(DataType.NamesNatural);
             bool needsUnicode = types.HasFlag(DataType.Unicode);
             bool needsUnicodeNoUnihan = types.HasFlag(DataType.UnicodeNoUnihan);
+            bool needsUnicodeUnihan = types.HasFlag(DataType.UnicodeUnihan);
             bool needsWords = types.HasFlag(DataType.Words);
             bool needsSurnames = needsNames || needsFemaleNames || needsMaleNames || needsFemaleImplicitNames || needsMaleImplicitNames || needsNaturalNames;
 
@@ -96,6 +97,11 @@ namespace Textify.Data
             {
                 if (!DataTools.dataStreams.ContainsKey(nameof(UnicodeData.ucd_nounihan_flat)))
                     DataTools.dataStreams.Add(nameof(UnicodeData.ucd_nounihan_flat), UnicodeData.ucd_nounihan_flat);
+            }
+            if (needsUnicodeUnihan)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(UnicodeData.ucd_unihan_flat)))
+                    DataTools.dataStreams.Add(nameof(UnicodeData.ucd_unihan_flat), UnicodeData.ucd_unihan_flat);
             }
             if (needsWords)
             {

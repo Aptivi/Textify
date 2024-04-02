@@ -45,6 +45,10 @@ namespace Textify.Unicode
                         unicodeData = DataTools.GetDataFrom("ucd_nounihan_flat");
                         xmlFile = "ucd.nounihan.flat.xml";
                         break;
+                    case UnicodeQueryType.Unihan:
+                        unicodeData = DataTools.GetDataFrom("ucd_unihan_flat");
+                        xmlFile = "ucd.unihan.flat.xml";
+                        break;
                     case UnicodeQueryType.Full:
                         unicodeData = DataTools.GetDataFrom("ucd_all_flat");
                         xmlFile = "ucd.all.flat.xml";

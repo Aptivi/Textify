@@ -22,7 +22,7 @@ namespace Textify.Data.DataRes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class UnicodeData {
+    internal class UnicodeData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -76,6 +76,16 @@ namespace Textify.Data.DataRes {
         internal static byte[] ucd_nounihan_flat {
             get {
                 object obj = ResourceManager.GetObject("ucd_nounihan_flat", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ucd_unihan_flat {
+            get {
+                object obj = ResourceManager.GetObject("ucd_unihan_flat", resourceCulture);
                 return ((byte[])(obj));
             }
         }
