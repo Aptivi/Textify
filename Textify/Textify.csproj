@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.4.1</Version>
+    <Version>1.5.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
     <Description>A collection of tools that provide you text tools for your C# and Visual Basic applications.</Description>
@@ -17,7 +17,7 @@
     <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library</PackageTags>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.4.1</PackageVersion>
+    <PackageVersion>1.5.0</PackageVersion>
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Textify.Offline</PackageId>
