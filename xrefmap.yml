@@ -38,12 +38,6 @@ references:
   commentId: N:Textify.Data.DataRes
   fullName: Textify.Data.DataRes
   nameWithType: Textify.Data.DataRes
-- uid: Textify.Data.DataRes.UnicodeData
-  name: UnicodeData
-  href: api/Textify.Data.DataRes.UnicodeData.html
-  commentId: T:Textify.Data.DataRes.UnicodeData
-  fullName: Textify.Data.DataRes.UnicodeData
-  nameWithType: UnicodeData
 - uid: Textify.Data.DataRes.WordsData
   name: WordsData
   href: api/Textify.Data.DataRes.WordsData.html
@@ -110,6 +104,12 @@ references:
   commentId: F:Textify.Data.DataType.UnicodeNoUnihan
   fullName: Textify.Data.DataType.UnicodeNoUnihan
   nameWithType: DataType.UnicodeNoUnihan
+- uid: Textify.Data.DataType.UnicodeUnihan
+  name: UnicodeUnihan
+  href: api/Textify.Data.DataType.html#Textify_Data_DataType_UnicodeUnihan
+  commentId: F:Textify.Data.DataType.UnicodeUnihan
+  fullName: Textify.Data.DataType.UnicodeUnihan
+  nameWithType: DataType.UnicodeUnihan
 - uid: Textify.Data.DataType.Words
   name: Words
   href: api/Textify.Data.DataType.html#Textify_Data_DataType_Words
@@ -3179,6 +3179,12 @@ references:
   commentId: F:Textify.Unicode.UnicodeQueryType.Simple
   fullName: Textify.Unicode.UnicodeQueryType.Simple
   nameWithType: UnicodeQueryType.Simple
+- uid: Textify.Unicode.UnicodeQueryType.Unihan
+  name: Unihan
+  href: api/Textify.Unicode.UnicodeQueryType.html#Textify_Unicode_UnicodeQueryType_Unihan
+  commentId: F:Textify.Unicode.UnicodeQueryType.Unihan
+  fullName: Textify.Unicode.UnicodeQueryType.Unihan
+  nameWithType: UnicodeQueryType.Unihan
 - uid: Textify.Versioning
   name: Textify.Versioning
   href: api/Textify.Versioning.html

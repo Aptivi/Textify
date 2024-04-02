@@ -4,11 +4,6 @@
     "title": "Class DataInitializer | Textify API - Aptivi",
     "keywords": "Class DataInitializer Data initialization class Inheritance object DataInitializer Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public static class DataInitializer Methods | Edit this page View Source Initialize() Initializes all the needed data Declaration public static void Initialize() | Edit this page View Source Initialize(DataType) Initializes all the needed data Declaration public static void Initialize(DataType types) Parameters Type Name Description DataType types Types to initialize"
   },
-  "api/Textify.Data.DataRes.UnicodeData.html": {
-    "href": "api/Textify.Data.DataRes.UnicodeData.html",
-    "title": "Class UnicodeData | Textify API - Aptivi",
-    "keywords": "Class UnicodeData A strongly-typed resource class, for looking up localized strings, etc. Inheritance object UnicodeData Namespace: Textify.Data.DataRes Assembly: Textify.Data.dll Syntax public class UnicodeData"
-  },
   "api/Textify.Data.DataRes.WordsData.html": {
     "href": "api/Textify.Data.DataRes.WordsData.html",
     "title": "Class WordsData | Textify API - Aptivi",
@@ -17,12 +12,12 @@
   "api/Textify.Data.DataRes.html": {
     "href": "api/Textify.Data.DataRes.html",
     "title": "Namespace Textify.Data.DataRes | Textify API - Aptivi",
-    "keywords": "Namespace Textify.Data.DataRes Classes UnicodeData A strongly-typed resource class, for looking up localized strings, etc. WordsData A strongly-typed resource class, for looking up localized strings, etc."
+    "keywords": "Namespace Textify.Data.DataRes Classes WordsData A strongly-typed resource class, for looking up localized strings, etc."
   },
   "api/Textify.Data.DataType.html": {
     "href": "api/Textify.Data.DataType.html",
     "title": "Enum DataType | Textify API - Aptivi",
-    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description All Initializes the zip files for all data Names Initializes the zip files containing names NamesFemale Initializes the zip files containing female names NamesFemaleImplicit Initializes the zip files containing implicit female names NamesMale Initializes the zip files containing male names NamesMaleImplicit Initializes the zip files containing implicit male names NamesNatural Initializes the zip files containing natural names Unicode Initializes the zip files containing Unicode data UnicodeNoUnihan Initializes the zip files containing Unicode data without Unihan data Words Initializes the zip files containing word lists"
+    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description All Initializes the zip files for all data Names Initializes the zip files containing names NamesFemale Initializes the zip files containing female names NamesFemaleImplicit Initializes the zip files containing implicit female names NamesMale Initializes the zip files containing male names NamesMaleImplicit Initializes the zip files containing implicit male names NamesNatural Initializes the zip files containing natural names Unicode Initializes the zip files containing Unicode data UnicodeNoUnihan Initializes the zip files containing Unicode data without Unihan data UnicodeUnihan Initializes the zip files containing Unicode data with just Unihan data Words Initializes the zip files containing word lists"
   },
   "api/Textify.Data.html": {
     "href": "api/Textify.Data.html",
@@ -132,7 +127,7 @@
   "api/Textify.Unicode.UnicodeQueryType.html": {
     "href": "api/Textify.Unicode.UnicodeQueryType.html",
     "title": "Enum UnicodeQueryType | Textify API - Aptivi",
-    "keywords": "Enum UnicodeQueryType Unicode character query type Namespace: Textify.Unicode Assembly: Textify.dll Syntax public enum UnicodeQueryType Fields Name Description Full All characters Simple Simple Unicode characters without the Unihan characters"
+    "keywords": "Enum UnicodeQueryType Unicode character query type Namespace: Textify.Unicode Assembly: Textify.dll Syntax public enum UnicodeQueryType Fields Name Description Full All characters Simple Simple Unicode characters without the Unihan characters Unihan Unihan characters"
   },
   "api/Textify.Unicode.html": {
     "href": "api/Textify.Unicode.html",
