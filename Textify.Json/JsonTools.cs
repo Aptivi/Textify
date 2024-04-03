@@ -20,7 +20,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Textify.General
+namespace Textify.Json
 {
     /// <summary>
     /// JSON tools

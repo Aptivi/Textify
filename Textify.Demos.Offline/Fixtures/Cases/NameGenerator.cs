@@ -18,7 +18,6 @@
 //
 
 using System;
-using Textify.Data;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
@@ -27,7 +26,6 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public string FixtureID => "NameGenerator";
         public void RunFixture()
         {
-            DataInitializer.Initialize(DataType.Names | DataType.NamesFemale | DataType.NamesMale | DataType.NamesFemaleImplicit | DataType.NamesMaleImplicit | DataType.NamesNatural);
             string[] names = NameGen.NameGenerator.GenerateNames(10);
             string[] firstNames = NameGen.NameGenerator.GenerateFirstNames(10);
             string[] firstFemaleNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Female);

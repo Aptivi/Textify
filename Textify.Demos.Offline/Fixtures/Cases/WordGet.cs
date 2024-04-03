@@ -18,7 +18,6 @@
 //
 
 using System;
-using Textify.Data;
 using Textify.Words;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
@@ -29,7 +28,6 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public void RunFixture()
         {
             // Get 10 random words
-            DataInitializer.Initialize(DataType.Words);
             for (int i = 0; i < 10; i++)
             {
                 string word = WordManager.GetRandomWord();

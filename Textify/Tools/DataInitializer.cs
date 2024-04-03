@@ -18,26 +18,19 @@
 //
 
 using Textify.Data.DataRes;
-using Textify.Tools;
 
-namespace Textify.Data
+namespace Textify.Tools
 {
     /// <summary>
     /// Data initialization class
     /// </summary>
-    public static class DataInitializer
+    internal static class DataInitializer
     {
         /// <summary>
         /// Initializes all the needed data
         /// </summary>
-        public static void Initialize() =>
-            Initialize(DataType.All);
-
-        /// <summary>
-        /// Initializes all the needed data
-        /// </summary>
         /// <param name="types">Types to initialize</param>
-        public static void Initialize(DataType types)
+        internal static void Initialize(DataType types)
         {
             // Some variables for needed data
             bool needsNames = types.HasFlag(DataType.Names);
@@ -50,7 +43,7 @@ namespace Textify.Data
             bool needsUnicodeNoUnihan = types.HasFlag(DataType.UnicodeNoUnihan);
             bool needsUnicodeUnihan = types.HasFlag(DataType.UnicodeUnihan);
             bool needsWords = types.HasFlag(DataType.Words);
-            bool needsSurnames = needsNames || needsFemaleNames || needsMaleNames || needsFemaleImplicitNames || needsMaleImplicitNames || needsNaturalNames;
+            bool needsSurnames = types.HasFlag(DataType.Surnames);
 
             // Go through all the types
             if (needsNames)

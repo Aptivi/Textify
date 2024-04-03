@@ -53,6 +53,7 @@ namespace Textify.NameGen
             {
                 if (!Names.ContainsKey(genderType))
                 {
+                    LoadData(genderType);
                     (byte[] bytes, string fileName) =
                         genderType == NameGenderType.Female ? (DataTools.GetDataFrom("FirstNames_Female"), "FirstNames_Female.txt") :
                         genderType == NameGenderType.Male ? (DataTools.GetDataFrom("FirstNames_Male"), "FirstNames_Male.txt") :
@@ -70,6 +71,7 @@ namespace Textify.NameGen
                 }
                 if (Surnames.Length == 0)
                 {
+                    DataInitializer.Initialize(DataType.Surnames);
                     (byte[] bytes, string fileName) = (DataTools.GetDataFrom("Surnames"), "Surnames.txt");
                     var contentStream = new MemoryStream(bytes);
                     var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
@@ -481,6 +483,33 @@ namespace Textify.NameGen
             else if (SurnameSuffixCheckRequired)
                 data = Surnames.Where((str) => str.EndsWith(suffix)).ToArray();
             return data.Where((str) => str.Contains(searchTerm)).ToArray();
+        }
+
+        private static void LoadData(NameGenderType gender)
+        {
+            switch (gender)
+            {
+                case NameGenderType.Unified:
+                    DataInitializer.Initialize(DataType.Names);
+                    break;
+                case NameGenderType.Female:
+                    DataInitializer.Initialize(DataType.NamesFemale);
+                    break;
+                case NameGenderType.Male:
+                    DataInitializer.Initialize(DataType.NamesMale);
+                    break;
+                case NameGenderType.FemaleImplicit:
+                    DataInitializer.Initialize(DataType.NamesFemaleImplicit);
+                    break;
+                case NameGenderType.MaleImplicit:
+                    DataInitializer.Initialize(DataType.NamesMaleImplicit);
+                    break;
+                case NameGenderType.Natural:
+                    DataInitializer.Initialize(DataType.NamesNatural);
+                    break;
+                default:
+                    throw new TextifyException($"Gender type {gender} is invalid.");
+            }
         }
     }
 }

@@ -17,12 +17,12 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-namespace Textify.Data
+namespace Textify.Tools
 {
     /// <summary>
     /// Data type
     /// </summary>
-    public enum DataType
+    internal enum DataType
     {
         /// <summary>
         /// Initializes the zip files containing names
@@ -49,24 +49,24 @@ namespace Textify.Data
         /// </summary>
         NamesNatural = 32,
         /// <summary>
+        /// Initializes the zip files containing surnames
+        /// </summary>
+        Surnames = 64,
+        /// <summary>
         /// Initializes the zip files containing Unicode data without Unihan data
         /// </summary>
-        UnicodeNoUnihan = 64,
-        /// <summary>
-        /// Initializes the zip files containing Unicode data
-        /// </summary>
-        Unicode = 128,
-        /// <summary>
-        /// Initializes the zip files containing word lists
-        /// </summary>
-        Words = 256,
+        UnicodeNoUnihan = 128,
         /// <summary>
         /// Initializes the zip files containing Unicode data with just Unihan data
         /// </summary>
-        UnicodeUnihan = 512,
+        UnicodeUnihan = 256,
         /// <summary>
-        /// Initializes the zip files for all data
+        /// Initializes the zip files containing Unicode data
         /// </summary>
-        All = Names | NamesFemale | NamesMale | NamesFemaleImplicit | NamesMaleImplicit | NamesNatural | UnicodeNoUnihan | Unicode | Words | UnicodeUnihan,
+        Unicode = 512,
+        /// <summary>
+        /// Initializes the zip files containing word lists
+        /// </summary>
+        Words = 1024,
     }
 }

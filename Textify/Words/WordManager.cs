@@ -159,6 +159,7 @@ namespace Textify.Words
 
         private static Stream GetContentStream()
         {
+            DataInitializer.Initialize(DataType.Words);
             var contentStream = new MemoryStream(DataTools.GetDataFrom("words_alpha"));
             var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 

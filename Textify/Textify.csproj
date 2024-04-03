@@ -49,4 +49,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Textify.Data\Textify.Data.csproj" />
+  </ItemGroup>
+
 </Project>
