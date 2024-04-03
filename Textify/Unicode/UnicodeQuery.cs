@@ -53,10 +53,7 @@ namespace Textify.Unicode
         /// </summary>
         /// <param name="charNum">Character number</param>
         /// <param name="type">Database type to query</param>
-        public static Char QueryChar(int charNum, UnicodeQueryType type)
-        {
-            UnicodeQueryHandler.UnpackUnicodeDataToStream(type);
-            return UnicodeQueryHandler.Serialize(charNum);
-        }
+        public static Char QueryChar(int charNum, UnicodeQueryType type) =>
+            UnicodeQueryHandler.Serialize(charNum, type);
     }
 }

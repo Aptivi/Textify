@@ -18,6 +18,7 @@
 //
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Xml;
@@ -28,52 +29,61 @@ namespace Textify.Unicode
 {
     internal static class UnicodeQueryHandler
     {
-        static Stream cachedXmlStream = null;
-        static Ucd cachedUcd = null;
+        static readonly Dictionary<UnicodeQueryType, (Stream, Ucd)> cachedQueries = [];
 
-        internal static void UnpackUnicodeDataToStream(UnicodeQueryType type)
+        internal static Stream UnpackUnicodeDataToStream(UnicodeQueryType type)
         {
             // If we've cached, just bail
-            if (cachedXmlStream == null)
+            if (cachedQueries.ContainsKey(type))
+                return cachedQueries[type].Item1;
+
+            // Select XML file based on type
+            var unicodeData = Array.Empty<byte>();
+            var xmlFile = "";
+            switch (type)
             {
-                // Select XML file based on type
-                var unicodeData = Array.Empty<byte>();
-                var xmlFile = "";
-                switch (type)
-                {
-                    case UnicodeQueryType.Simple:
-                        unicodeData = DataTools.GetDataFrom("ucd_nounihan_flat");
-                        xmlFile = "ucd.nounihan.flat.xml";
-                        break;
-                    case UnicodeQueryType.Unihan:
-                        unicodeData = DataTools.GetDataFrom("ucd_unihan_flat");
-                        xmlFile = "ucd.unihan.flat.xml";
-                        break;
-                    case UnicodeQueryType.Full:
-                        unicodeData = DataTools.GetDataFrom("ucd_all_flat");
-                        xmlFile = "ucd.all.flat.xml";
-                        break;
-                }
-
-                // Unpack the ZIP to stream
-                var archiveByte = new MemoryStream(unicodeData);
-                var archive = new ZipArchive(archiveByte, ZipArchiveMode.Read);
-
-                // Open the XML to stream
-                cachedXmlStream = archive.GetEntry(xmlFile).Open();
+                case UnicodeQueryType.Simple:
+                    unicodeData = DataTools.GetDataFrom("ucd_nounihan_flat");
+                    xmlFile = "ucd.nounihan.flat.xml";
+                    break;
+                case UnicodeQueryType.Unihan:
+                    unicodeData = DataTools.GetDataFrom("ucd_unihan_flat");
+                    xmlFile = "ucd.unihan.flat.xml";
+                    break;
+                case UnicodeQueryType.Full:
+                    unicodeData = DataTools.GetDataFrom("ucd_all_flat");
+                    xmlFile = "ucd.all.flat.xml";
+                    break;
             }
+
+            // Unpack the ZIP to stream
+            var archiveByte = new MemoryStream(unicodeData);
+            var archive = new ZipArchive(archiveByte, ZipArchiveMode.Read);
+
+            // Open the XML to stream
+            return archive.GetEntry(xmlFile).Open();
         }
 
-        internal static Char Serialize(int charNum)
+        internal static Char Serialize(int charNum, UnicodeQueryType type)
         {
-            if (cachedUcd is null)
+            var stream = UnpackUnicodeDataToStream(type);
+            Repertoire repertoire = null;
+
+            // Get the repertoire
+            if (cachedQueries.ContainsKey(type))
+                repertoire = cachedQueries[type].Item2.Repertoire;
+            else
             {
                 var serializer = new XmlSerializer(typeof(Ucd), "http://www.unicode.org/ns/2003/ucd/1.0");
-                using var reader = XmlReader.Create(cachedXmlStream);
-                cachedUcd = (Ucd)serializer.Deserialize(reader);
+                using var reader = XmlReader.Create(stream);
+                var ucd = (Ucd)serializer.Deserialize(reader);
+                repertoire = ucd.Repertoire;
             }
 
-            return cachedUcd.Repertoire.Char[charNum];
+            // Now, get the Char instance by char number
+            if (charNum > repertoire.Char.Length)
+                throw new TextifyException($"Char number {charNum} exceeds {repertoire.Char.Length} available characters.");
+            return repertoire.Char[charNum];
         }
     }
 }
