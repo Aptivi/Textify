@@ -1,37 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Textify.Data
-  name: Textify.Data
-  href: api/Textify.Data.html
-  commentId: N:Textify.Data
-  fullName: Textify.Data
-  nameWithType: Textify.Data
-- uid: Textify.Data.DataInitializer
-  name: DataInitializer
-  href: api/Textify.Data.DataInitializer.html
-  commentId: T:Textify.Data.DataInitializer
-  fullName: Textify.Data.DataInitializer
-  nameWithType: DataInitializer
-- uid: Textify.Data.DataInitializer.Initialize
-  name: Initialize()
-  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize
-  commentId: M:Textify.Data.DataInitializer.Initialize
-  fullName: Textify.Data.DataInitializer.Initialize()
-  nameWithType: DataInitializer.Initialize()
-- uid: Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
-  name: Initialize(DataType)
-  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize_Textify_Data_DataType_
-  commentId: M:Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
-  fullName: Textify.Data.DataInitializer.Initialize(Textify.Data.DataType)
-  nameWithType: DataInitializer.Initialize(DataType)
-- uid: Textify.Data.DataInitializer.Initialize*
-  name: Initialize
-  href: api/Textify.Data.DataInitializer.html#Textify_Data_DataInitializer_Initialize_
-  commentId: Overload:Textify.Data.DataInitializer.Initialize
-  isSpec: "True"
-  fullName: Textify.Data.DataInitializer.Initialize
-  nameWithType: DataInitializer.Initialize
 - uid: Textify.Data.DataRes
   name: Textify.Data.DataRes
   href: api/Textify.Data.DataRes.html
@@ -44,78 +13,6 @@ references:
   commentId: T:Textify.Data.DataRes.WordsData
   fullName: Textify.Data.DataRes.WordsData
   nameWithType: WordsData
-- uid: Textify.Data.DataType
-  name: DataType
-  href: api/Textify.Data.DataType.html
-  commentId: T:Textify.Data.DataType
-  fullName: Textify.Data.DataType
-  nameWithType: DataType
-- uid: Textify.Data.DataType.All
-  name: All
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_All
-  commentId: F:Textify.Data.DataType.All
-  fullName: Textify.Data.DataType.All
-  nameWithType: DataType.All
-- uid: Textify.Data.DataType.Names
-  name: Names
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Names
-  commentId: F:Textify.Data.DataType.Names
-  fullName: Textify.Data.DataType.Names
-  nameWithType: DataType.Names
-- uid: Textify.Data.DataType.NamesFemale
-  name: NamesFemale
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesFemale
-  commentId: F:Textify.Data.DataType.NamesFemale
-  fullName: Textify.Data.DataType.NamesFemale
-  nameWithType: DataType.NamesFemale
-- uid: Textify.Data.DataType.NamesFemaleImplicit
-  name: NamesFemaleImplicit
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesFemaleImplicit
-  commentId: F:Textify.Data.DataType.NamesFemaleImplicit
-  fullName: Textify.Data.DataType.NamesFemaleImplicit
-  nameWithType: DataType.NamesFemaleImplicit
-- uid: Textify.Data.DataType.NamesMale
-  name: NamesMale
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesMale
-  commentId: F:Textify.Data.DataType.NamesMale
-  fullName: Textify.Data.DataType.NamesMale
-  nameWithType: DataType.NamesMale
-- uid: Textify.Data.DataType.NamesMaleImplicit
-  name: NamesMaleImplicit
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesMaleImplicit
-  commentId: F:Textify.Data.DataType.NamesMaleImplicit
-  fullName: Textify.Data.DataType.NamesMaleImplicit
-  nameWithType: DataType.NamesMaleImplicit
-- uid: Textify.Data.DataType.NamesNatural
-  name: NamesNatural
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_NamesNatural
-  commentId: F:Textify.Data.DataType.NamesNatural
-  fullName: Textify.Data.DataType.NamesNatural
-  nameWithType: DataType.NamesNatural
-- uid: Textify.Data.DataType.Unicode
-  name: Unicode
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Unicode
-  commentId: F:Textify.Data.DataType.Unicode
-  fullName: Textify.Data.DataType.Unicode
-  nameWithType: DataType.Unicode
-- uid: Textify.Data.DataType.UnicodeNoUnihan
-  name: UnicodeNoUnihan
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_UnicodeNoUnihan
-  commentId: F:Textify.Data.DataType.UnicodeNoUnihan
-  fullName: Textify.Data.DataType.UnicodeNoUnihan
-  nameWithType: DataType.UnicodeNoUnihan
-- uid: Textify.Data.DataType.UnicodeUnihan
-  name: UnicodeUnihan
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_UnicodeUnihan
-  commentId: F:Textify.Data.DataType.UnicodeUnihan
-  fullName: Textify.Data.DataType.UnicodeUnihan
-  nameWithType: DataType.UnicodeUnihan
-- uid: Textify.Data.DataType.Words
-  name: Words
-  href: api/Textify.Data.DataType.html#Textify_Data_DataType_Words
-  commentId: F:Textify.Data.DataType.Words
-  fullName: Textify.Data.DataType.Words
-  nameWithType: DataType.Words
 - uid: Textify.General
   name: Textify.General
   href: api/Textify.General.html
@@ -451,44 +348,6 @@ references:
   commentId: F:Textify.General.EnclosedDoubleQuotesType.SingleQuotes
   fullName: Textify.General.EnclosedDoubleQuotesType.SingleQuotes
   nameWithType: EnclosedDoubleQuotesType.SingleQuotes
-- uid: Textify.General.JsonTools
-  name: JsonTools
-  href: api/Textify.General.JsonTools.html
-  commentId: T:Textify.General.JsonTools
-  fullName: Textify.General.JsonTools
-  nameWithType: JsonTools
-- uid: Textify.General.JsonTools.BeautifyJsonText(System.String)
-  name: BeautifyJsonText(string)
-  href: api/Textify.General.JsonTools.html#Textify_General_JsonTools_BeautifyJsonText_System_String_
-  commentId: M:Textify.General.JsonTools.BeautifyJsonText(System.String)
-  name.vb: BeautifyJsonText(String)
-  fullName: Textify.General.JsonTools.BeautifyJsonText(string)
-  fullName.vb: Textify.General.JsonTools.BeautifyJsonText(String)
-  nameWithType: JsonTools.BeautifyJsonText(string)
-  nameWithType.vb: JsonTools.BeautifyJsonText(String)
-- uid: Textify.General.JsonTools.BeautifyJsonText*
-  name: BeautifyJsonText
-  href: api/Textify.General.JsonTools.html#Textify_General_JsonTools_BeautifyJsonText_
-  commentId: Overload:Textify.General.JsonTools.BeautifyJsonText
-  isSpec: "True"
-  fullName: Textify.General.JsonTools.BeautifyJsonText
-  nameWithType: JsonTools.BeautifyJsonText
-- uid: Textify.General.JsonTools.MinifyJsonText(System.String)
-  name: MinifyJsonText(string)
-  href: api/Textify.General.JsonTools.html#Textify_General_JsonTools_MinifyJsonText_System_String_
-  commentId: M:Textify.General.JsonTools.MinifyJsonText(System.String)
-  name.vb: MinifyJsonText(String)
-  fullName: Textify.General.JsonTools.MinifyJsonText(string)
-  fullName.vb: Textify.General.JsonTools.MinifyJsonText(String)
-  nameWithType: JsonTools.MinifyJsonText(string)
-  nameWithType.vb: JsonTools.MinifyJsonText(String)
-- uid: Textify.General.JsonTools.MinifyJsonText*
-  name: MinifyJsonText
-  href: api/Textify.General.JsonTools.html#Textify_General_JsonTools_MinifyJsonText_
-  commentId: Overload:Textify.General.JsonTools.MinifyJsonText
-  isSpec: "True"
-  fullName: Textify.General.JsonTools.MinifyJsonText
-  nameWithType: JsonTools.MinifyJsonText
 - uid: Textify.General.TextTools
   name: TextTools
   href: api/Textify.General.TextTools.html
@@ -993,6 +852,50 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.UpperFirst
   nameWithType: TextTools.UpperFirst
+- uid: Textify.Json
+  name: Textify.Json
+  href: api/Textify.Json.html
+  commentId: N:Textify.Json
+  fullName: Textify.Json
+  nameWithType: Textify.Json
+- uid: Textify.Json.JsonTools
+  name: JsonTools
+  href: api/Textify.Json.JsonTools.html
+  commentId: T:Textify.Json.JsonTools
+  fullName: Textify.Json.JsonTools
+  nameWithType: JsonTools
+- uid: Textify.Json.JsonTools.BeautifyJsonText(System.String)
+  name: BeautifyJsonText(string)
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_BeautifyJsonText_System_String_
+  commentId: M:Textify.Json.JsonTools.BeautifyJsonText(System.String)
+  name.vb: BeautifyJsonText(String)
+  fullName: Textify.Json.JsonTools.BeautifyJsonText(string)
+  fullName.vb: Textify.Json.JsonTools.BeautifyJsonText(String)
+  nameWithType: JsonTools.BeautifyJsonText(string)
+  nameWithType.vb: JsonTools.BeautifyJsonText(String)
+- uid: Textify.Json.JsonTools.BeautifyJsonText*
+  name: BeautifyJsonText
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_BeautifyJsonText_
+  commentId: Overload:Textify.Json.JsonTools.BeautifyJsonText
+  isSpec: "True"
+  fullName: Textify.Json.JsonTools.BeautifyJsonText
+  nameWithType: JsonTools.BeautifyJsonText
+- uid: Textify.Json.JsonTools.MinifyJsonText(System.String)
+  name: MinifyJsonText(string)
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_MinifyJsonText_System_String_
+  commentId: M:Textify.Json.JsonTools.MinifyJsonText(System.String)
+  name.vb: MinifyJsonText(String)
+  fullName: Textify.Json.JsonTools.MinifyJsonText(string)
+  fullName.vb: Textify.Json.JsonTools.MinifyJsonText(String)
+  nameWithType: JsonTools.MinifyJsonText(string)
+  nameWithType.vb: JsonTools.MinifyJsonText(String)
+- uid: Textify.Json.JsonTools.MinifyJsonText*
+  name: MinifyJsonText
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_MinifyJsonText_
+  commentId: Overload:Textify.Json.JsonTools.MinifyJsonText
+  isSpec: "True"
+  fullName: Textify.Json.JsonTools.MinifyJsonText
+  nameWithType: JsonTools.MinifyJsonText
 - uid: Textify.NameGen
   name: Textify.NameGen
   href: api/Textify.NameGen.html

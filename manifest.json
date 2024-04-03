@@ -15,16 +15,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.DataInitializer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Data.DataInitializer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.DataRes.WordsData.yml",
       "output": {
         ".html": {
@@ -39,26 +29,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.Data.DataRes.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.DataType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Data.DataType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Data.html"
         }
       },
       "version": ""
@@ -85,16 +55,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.General.JsonTools.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.General.JsonTools.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.General.TextTools.yml",
       "output": {
         ".html": {
@@ -109,6 +69,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.General.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Json.JsonTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Json.JsonTools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Json.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Json.html"
         }
       },
       "version": ""

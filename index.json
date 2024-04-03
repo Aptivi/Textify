@@ -1,9 +1,4 @@
 {
-  "api/Textify.Data.DataInitializer.html": {
-    "href": "api/Textify.Data.DataInitializer.html",
-    "title": "Class DataInitializer | Textify API - Aptivi",
-    "keywords": "Class DataInitializer Data initialization class Inheritance object DataInitializer Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public static class DataInitializer Methods | Edit this page View Source Initialize() Initializes all the needed data Declaration public static void Initialize() | Edit this page View Source Initialize(DataType) Initializes all the needed data Declaration public static void Initialize(DataType types) Parameters Type Name Description DataType types Types to initialize"
-  },
   "api/Textify.Data.DataRes.WordsData.html": {
     "href": "api/Textify.Data.DataRes.WordsData.html",
     "title": "Class WordsData | Textify API - Aptivi",
@@ -13,16 +8,6 @@
     "href": "api/Textify.Data.DataRes.html",
     "title": "Namespace Textify.Data.DataRes | Textify API - Aptivi",
     "keywords": "Namespace Textify.Data.DataRes Classes WordsData A strongly-typed resource class, for looking up localized strings, etc."
-  },
-  "api/Textify.Data.DataType.html": {
-    "href": "api/Textify.Data.DataType.html",
-    "title": "Enum DataType | Textify API - Aptivi",
-    "keywords": "Enum DataType Data type Namespace: Textify.Data Assembly: Textify.Data.dll Syntax public enum DataType Fields Name Description All Initializes the zip files for all data Names Initializes the zip files containing names NamesFemale Initializes the zip files containing female names NamesFemaleImplicit Initializes the zip files containing implicit female names NamesMale Initializes the zip files containing male names NamesMaleImplicit Initializes the zip files containing implicit male names NamesNatural Initializes the zip files containing natural names Unicode Initializes the zip files containing Unicode data UnicodeNoUnihan Initializes the zip files containing Unicode data without Unihan data UnicodeUnihan Initializes the zip files containing Unicode data with just Unihan data Words Initializes the zip files containing word lists"
-  },
-  "api/Textify.Data.html": {
-    "href": "api/Textify.Data.html",
-    "title": "Namespace Textify.Data | Textify API - Aptivi",
-    "keywords": "Namespace Textify.Data Classes DataInitializer Data initialization class Enums DataType Data type"
   },
   "api/Textify.General.CharManager.html": {
     "href": "api/Textify.General.CharManager.html",
@@ -34,11 +19,6 @@
     "title": "Enum EnclosedDoubleQuotesType | Textify API - Aptivi",
     "keywords": "Enum EnclosedDoubleQuotesType Type of enclosed double quotes in a word or phrase Namespace: Textify.General Assembly: Textify.dll Syntax public enum EnclosedDoubleQuotesType Fields Name Description Backticks Text enclosed by the backticks DoubleQuotes Text enclosed by the double quotes None No double quotes to be enclosed SingleQuotes Text enclosed by the single quotes"
   },
-  "api/Textify.General.JsonTools.html": {
-    "href": "api/Textify.General.JsonTools.html",
-    "title": "Class JsonTools | Textify API - Aptivi",
-    "keywords": "Class JsonTools JSON tools Inheritance object JsonTools Namespace: Textify.General Assembly: Textify.Json.dll Syntax public static class JsonTools Methods | Edit this page View Source BeautifyJsonText(string) Beautifies the JSON text. Declaration public static string BeautifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a minified JSON. Returns Type Description string Beautified JSON | Edit this page View Source MinifyJsonText(string) Minifies the JSON text. Declaration public static string MinifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a beautified JSON. Returns Type Description string Minified JSON"
-  },
   "api/Textify.General.TextTools.html": {
     "href": "api/Textify.General.TextTools.html",
     "title": "Class TextTools | Textify API - Aptivi",
@@ -47,7 +27,17 @@
   "api/Textify.General.html": {
     "href": "api/Textify.General.html",
     "title": "Namespace Textify.General | Textify API - Aptivi",
-    "keywords": "Namespace Textify.General Classes CharManager Character querying and management module JsonTools JSON tools TextTools Tools for text manipulation Enums EnclosedDoubleQuotesType Type of enclosed double quotes in a word or phrase"
+    "keywords": "Namespace Textify.General Classes CharManager Character querying and management module TextTools Tools for text manipulation Enums EnclosedDoubleQuotesType Type of enclosed double quotes in a word or phrase"
+  },
+  "api/Textify.Json.JsonTools.html": {
+    "href": "api/Textify.Json.JsonTools.html",
+    "title": "Class JsonTools | Textify API - Aptivi",
+    "keywords": "Class JsonTools JSON tools Inheritance object JsonTools Namespace: Textify.Json Assembly: Textify.Json.dll Syntax public static class JsonTools Methods | Edit this page View Source BeautifyJsonText(string) Beautifies the JSON text. Declaration public static string BeautifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a minified JSON. Returns Type Description string Beautified JSON | Edit this page View Source MinifyJsonText(string) Minifies the JSON text. Declaration public static string MinifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a beautified JSON. Returns Type Description string Minified JSON"
+  },
+  "api/Textify.Json.html": {
+    "href": "api/Textify.Json.html",
+    "title": "Namespace Textify.Json | Textify API - Aptivi",
+    "keywords": "Namespace Textify.Json Classes JsonTools JSON tools"
   },
   "api/Textify.NameGen.NameGenderType.html": {
     "href": "api/Textify.NameGen.NameGenderType.html",
