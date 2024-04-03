@@ -1333,6 +1333,32 @@ references:
   isSpec: "True"
   fullName: Textify.NameGen.NameGenerator.GenerateNamesAsync
   nameWithType: NameGenerator.GenerateNamesAsync
+- uid: Textify.NameGen.NameGenerator.GetAllFirstNames(Textify.NameGen.NameGenderType)
+  name: GetAllFirstNames(NameGenderType)
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GetAllFirstNames_Textify_NameGen_NameGenderType_
+  commentId: M:Textify.NameGen.NameGenerator.GetAllFirstNames(Textify.NameGen.NameGenderType)
+  fullName: Textify.NameGen.NameGenerator.GetAllFirstNames(Textify.NameGen.NameGenderType)
+  nameWithType: NameGenerator.GetAllFirstNames(NameGenderType)
+- uid: Textify.NameGen.NameGenerator.GetAllFirstNames*
+  name: GetAllFirstNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GetAllFirstNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.GetAllFirstNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GetAllFirstNames
+  nameWithType: NameGenerator.GetAllFirstNames
+- uid: Textify.NameGen.NameGenerator.GetAllLastNames
+  name: GetAllLastNames()
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GetAllLastNames
+  commentId: M:Textify.NameGen.NameGenerator.GetAllLastNames
+  fullName: Textify.NameGen.NameGenerator.GetAllLastNames()
+  nameWithType: NameGenerator.GetAllLastNames()
+- uid: Textify.NameGen.NameGenerator.GetAllLastNames*
+  name: GetAllLastNames
+  href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_GetAllLastNames_
+  commentId: Overload:Textify.NameGen.NameGenerator.GetAllLastNames
+  isSpec: "True"
+  fullName: Textify.NameGen.NameGenerator.GetAllLastNames
+  nameWithType: NameGenerator.GetAllLastNames
 - uid: Textify.NameGen.NameGenerator.PopulateNames(Textify.NameGen.NameGenderType)
   name: PopulateNames(NameGenderType)
   href: api/Textify.NameGen.NameGenerator.html#Textify_NameGen_NameGenerator_PopulateNames_Textify_NameGen_NameGenderType_
