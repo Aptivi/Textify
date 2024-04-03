@@ -162,6 +162,62 @@ namespace Textify.General
         }
 
         /// <summary>
+        /// Checks to see if the string starts with all of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool StartsWithAllOf(this string source, string[] values)
+        {
+            if (source is null)
+                throw new ArgumentNullException(nameof(source));
+
+            List<string> done = [];
+            foreach (string Value in values)
+            {
+                if (source.StartsWith(Value))
+                    done.Add(Value);
+            }
+            return done.SequenceEqual(values);
+        }
+
+        /// <summary>
+        /// Checks to see if the string ends with any of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool EndsWithAnyOf(this string source, string[] values)
+        {
+            if (source is null)
+                throw new ArgumentNullException(nameof(source));
+            var Started = default(bool);
+            foreach (string Value in values)
+            {
+                if (source.EndsWith(Value))
+                    Started = true;
+            }
+            return Started;
+        }
+
+        /// <summary>
+        /// Checks to see if the string ends with all of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool EndsWithAllOf(this string source, string[] values)
+        {
+            if (source is null)
+                throw new ArgumentNullException(nameof(source));
+
+            List<string> done = [];
+            foreach (string Value in values)
+            {
+                if (source.EndsWith(Value))
+                    done.Add(Value);
+            }
+            return done.SequenceEqual(values);
+        }
+
+        /// <summary>
         /// Checks to see if the string contains any of the target strings.
         /// </summary>
         /// <param name="source">Source string</param>
@@ -176,6 +232,26 @@ namespace Textify.General
                 if (source.Contains(target))
                     return true;
             return false;
+        }
+
+        /// <summary>
+        /// Checks to see if the string contains all of the target strings.
+        /// </summary>
+        /// <param name="source">Source string</param>
+        /// <param name="targets">Target strings</param>
+        /// <returns>True if all of them are found; else, false.</returns>
+        public static bool ContainsAllOf(this string source, string[] targets)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            List<string> done = [];
+            foreach (string Target in targets)
+            {
+                if (source.Contains(Target))
+                    done.Add(Target);
+            }
+            return done.SequenceEqual(targets);
         }
 
         /// <summary>
@@ -589,6 +665,82 @@ namespace Textify.General
                 return target.Substring(0, threshold) + "...";
             else
                 return target;
+        }
+
+        /// <summary>
+        /// Reverses the order of characters in a string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        public static string Reverse(this string target)
+        {
+            if (string.IsNullOrEmpty(target))
+                return "";
+
+            // Now, get lines, because we may have been provided multi-line strings
+            StringBuilder builder = new();
+            var lines = target.SplitNewLines();
+            for (int l = 0; l < lines.Length; l++)
+            {
+                string line = lines[l];
+                for (int lc = line.Length - 1; lc >= 0; lc--)
+                {
+                    char c = line[lc];
+                    builder.Append(c);
+                }
+                if (l + 1 < lines.Length)
+                    builder.AppendLine();
+            }
+
+            // Return the result
+            return builder.ToString();
+        }
+
+        /// <summary>
+        /// Makes the first character of the string uppercase
+        /// </summary>
+        /// <param name="Str">The target string</param>
+        /// <returns>A string that starts with the capital letter</returns>
+        public static string UpperFirst(this string Str)
+        {
+            char[] chars = Str.ToCharArray();
+            chars[0] = char.ToUpper(chars[0]);
+            return string.Join("", chars);
+        }
+
+        /// <summary>
+        /// Makes the first character of the string lowercase
+        /// </summary>
+        /// <param name="Str">The target string</param>
+        /// <returns>A string that starts with the small letter</returns>
+        public static string LowerFirst(this string Str)
+        {
+            char[] chars = Str.ToCharArray();
+            chars[0] = char.ToLower(chars[0]);
+            return string.Join("", chars);
+        }
+
+        /// <summary>
+        /// Title cases the string
+        /// </summary>
+        /// <param name="Str">String to convert to title case</param>
+        /// <returns>The string that has title case</returns>
+        public static string ToTitleCase(this string Str)
+        {
+            string[] exclusions = ["of", "the", "a", "an", "in", "on", "to", "from"];
+
+            // Split the string to words and make them the titlecase
+            string[] words = Str.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i];
+
+                // If the word isn't in the exclusions list, uppercase the first character
+                if (!exclusions.Contains(word))
+                    words[i] = word.UpperFirst();
+            }
+
+            // Form a final string
+            return string.Join(" ", words);
         }
     }
 }

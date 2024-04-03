@@ -19,6 +19,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
+using System;
 using System.Linq;
 using Textify.General;
 
@@ -28,7 +29,6 @@ namespace Textify.Tests.General
     [TestClass]
     public class TextToolsTest
     {
-
         /// <summary>
         /// Tests replacing last occurrence of a string
         /// </summary>
@@ -317,6 +317,18 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests checking if the string contains all of the target strings.
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestContainsAllOf()
+        {
+            string TargetString = "Hello, Extensification users!";
+            TargetString.ContainsAllOf(["Extensification", "users"]).ShouldBeTrue();
+            TargetString.ContainsAllOf(["Awesome", "developers"]).ShouldBeFalse();
+        }
+
+        /// <summary>
         /// Tests checking to see if the string starts with any of the values
         /// </summary>
         [TestMethod]
@@ -325,6 +337,39 @@ namespace Textify.Tests.General
         {
             string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
             TargetString.StartsWithAnyOf(["dotnet", "sdk"]).ShouldBeTrue();
+        }
+
+        /// <summary>
+        /// Tests checking to see if the string starts with all of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestStartsWithAllOf()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.StartsWithAllOf(["dotnet", "dotnet-hostfxr"]).ShouldBeTrue();
+        }
+
+        /// <summary>
+        /// Tests checking to see if the string ends with any of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestEndsWithAnyOf()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.EndsWithAnyOf(["5.0", "3.1"]).ShouldBeTrue();
+        }
+
+        /// <summary>
+        /// Tests checking to see if the string ends with all of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestEndsWithAllOf()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.EndsWithAllOf(["5.0", "sdk-5.0"]).ShouldBeTrue();
         }
 
         /// <summary>
@@ -674,6 +719,61 @@ namespace Textify.Tests.General
             Source.ShouldBe(expected);
         }
 
+        /// <summary>
+        /// Tests reversing the order of characters (single line)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReverseSingleLine()
+        {
+            string expected = "desreveR";
+            string Source = "Reversed";
+            Source = Source.Reverse();
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests reversing the order of characters (multiple lines)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReverseMultipleLines()
+        {
+            string expected = $"desreveR{Environment.NewLine}elpitlum{Environment.NewLine}enil";
+            string Source = $"Reversed{Environment.NewLine}multiple{Environment.NewLine}line";
+            Source = Source.Reverse();
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests making the first character of the string uppercase
+        /// </summary>
+        [TestMethod]
+        public void TestUpperFirst()
+        {
+            string TargetString = "hello";
+            TargetString.UpperFirst().ShouldBe("Hello");
+        }
+
+        /// <summary>
+        /// Tests making the first character of the string lowercase
+        /// </summary>
+        [TestMethod]
+        public void TestLowerFirst()
+        {
+            string TargetString = "Hello";
+            TargetString.LowerFirst().ShouldBe("hello");
+        }
+
+        /// <summary>
+        /// Tests making the string have the title case
+        /// </summary>
+        [TestMethod]
+        public void TestToTitleCase()
+        {
+            string TargetString = "Reconnecting your network to the work connection...";
+            TargetString.ToTitleCase().ShouldBe("Reconnecting Your Network to the Work Connection...");
+        }
     }
 
 }
