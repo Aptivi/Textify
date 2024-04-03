@@ -169,7 +169,7 @@ namespace Textify.General
         public static bool StartsWithAllOf(this string source, string[] values)
         {
             if (source is null)
-                throw new ArgumentNullException(nameof(source));
+                throw new TextifyException("The target may not be null");
 
             List<string> done = [];
             foreach (string Value in values)
@@ -188,7 +188,7 @@ namespace Textify.General
         public static bool EndsWithAnyOf(this string source, string[] values)
         {
             if (source is null)
-                throw new ArgumentNullException(nameof(source));
+                throw new TextifyException("The target may not be null");
             var Started = default(bool);
             foreach (string Value in values)
             {
@@ -206,7 +206,7 @@ namespace Textify.General
         public static bool EndsWithAllOf(this string source, string[] values)
         {
             if (source is null)
-                throw new ArgumentNullException(nameof(source));
+                throw new TextifyException("The target may not be null");
 
             List<string> done = [];
             foreach (string Value in values)
@@ -386,6 +386,9 @@ namespace Textify.General
 		/// </summary>
 		public static string RemovePrefix(this string text, string prefix)
         {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
             if (text.StartsWith(prefix))
                 return text.Substring(prefix.Length).Trim();
             return text;
@@ -396,6 +399,9 @@ namespace Textify.General
         /// </summary>
         public static string RemoveSuffix(this string text, string suffix)
         {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
             if (text.EndsWith(suffix))
                 return text.Substring(0, text.Length - suffix.Length);
             return text;
@@ -408,6 +414,9 @@ namespace Textify.General
         /// <returns>A BASE64-encoded string from the text</returns>
         public static string GetBase64Encoded(this string text)
         {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
             byte[] textBytes = Encoding.Default.GetBytes(text);
             return Convert.ToBase64String(textBytes);
         }
@@ -419,6 +428,9 @@ namespace Textify.General
         /// <returns>A BASE64-encoded string from the text</returns>
         public static string GetBase64Decoded(this string text)
         {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
             byte[] textBytes = Convert.FromBase64String(text);
             return Encoding.Default.GetString(textBytes);
         }
@@ -431,6 +443,9 @@ namespace Textify.General
         /// <returns>A string containing shifted letters</returns>
         public static string ShiftLetters(this string text, int shift)
         {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
             // Get the character array
             char[] chars = text.ToCharArray();
 
@@ -698,11 +713,14 @@ namespace Textify.General
         /// <summary>
         /// Makes the first character of the string uppercase
         /// </summary>
-        /// <param name="Str">The target string</param>
+        /// <param name="target">The target string</param>
         /// <returns>A string that starts with the capital letter</returns>
-        public static string UpperFirst(this string Str)
+        public static string UpperFirst(this string target)
         {
-            char[] chars = Str.ToCharArray();
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            char[] chars = target.ToCharArray();
             chars[0] = char.ToUpper(chars[0]);
             return string.Join("", chars);
         }
@@ -710,11 +728,14 @@ namespace Textify.General
         /// <summary>
         /// Makes the first character of the string lowercase
         /// </summary>
-        /// <param name="Str">The target string</param>
+        /// <param name="target">The target string</param>
         /// <returns>A string that starts with the small letter</returns>
-        public static string LowerFirst(this string Str)
+        public static string LowerFirst(this string target)
         {
-            char[] chars = Str.ToCharArray();
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            char[] chars = target.ToCharArray();
             chars[0] = char.ToLower(chars[0]);
             return string.Join("", chars);
         }
@@ -722,14 +743,17 @@ namespace Textify.General
         /// <summary>
         /// Title cases the string
         /// </summary>
-        /// <param name="Str">String to convert to title case</param>
+        /// <param name="target">String to convert to title case</param>
         /// <returns>The string that has title case</returns>
-        public static string ToTitleCase(this string Str)
+        public static string ToTitleCase(this string target)
         {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
             string[] exclusions = ["of", "the", "a", "an", "in", "on", "to", "from"];
 
             // Split the string to words and make them the titlecase
-            string[] words = Str.Split(' ');
+            string[] words = target.Split(' ');
             for (int i = 0; i < words.Length; i++)
             {
                 string word = words[i];
