@@ -299,6 +299,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.AllIndexesOf
   nameWithType: TextTools.AllIndexesOf
+- uid: Textify.General.TextTools.ContainsAllOf(System.String,System.String[])
+  name: ContainsAllOf(string, string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAllOf_System_String_System_String___
+  commentId: M:Textify.General.TextTools.ContainsAllOf(System.String,System.String[])
+  name.vb: ContainsAllOf(String, String())
+  fullName: Textify.General.TextTools.ContainsAllOf(string, string[])
+  fullName.vb: Textify.General.TextTools.ContainsAllOf(String, String())
+  nameWithType: TextTools.ContainsAllOf(string, string[])
+  nameWithType.vb: TextTools.ContainsAllOf(String, String())
+- uid: Textify.General.TextTools.ContainsAllOf*
+  name: ContainsAllOf
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAllOf_
+  commentId: Overload:Textify.General.TextTools.ContainsAllOf
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ContainsAllOf
+  nameWithType: TextTools.ContainsAllOf
 - uid: Textify.General.TextTools.ContainsAnyOf(System.String,System.String[])
   name: ContainsAnyOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAnyOf_System_String_System_String___
@@ -315,6 +331,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ContainsAnyOf
   nameWithType: TextTools.ContainsAnyOf
+- uid: Textify.General.TextTools.EndsWithAllOf(System.String,System.String[])
+  name: EndsWithAllOf(string, string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAllOf_System_String_System_String___
+  commentId: M:Textify.General.TextTools.EndsWithAllOf(System.String,System.String[])
+  name.vb: EndsWithAllOf(String, String())
+  fullName: Textify.General.TextTools.EndsWithAllOf(string, string[])
+  fullName.vb: Textify.General.TextTools.EndsWithAllOf(String, String())
+  nameWithType: TextTools.EndsWithAllOf(string, string[])
+  nameWithType.vb: TextTools.EndsWithAllOf(String, String())
+- uid: Textify.General.TextTools.EndsWithAllOf*
+  name: EndsWithAllOf
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAllOf_
+  commentId: Overload:Textify.General.TextTools.EndsWithAllOf
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EndsWithAllOf
+  nameWithType: TextTools.EndsWithAllOf
+- uid: Textify.General.TextTools.EndsWithAnyOf(System.String,System.String[])
+  name: EndsWithAnyOf(string, string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAnyOf_System_String_System_String___
+  commentId: M:Textify.General.TextTools.EndsWithAnyOf(System.String,System.String[])
+  name.vb: EndsWithAnyOf(String, String())
+  fullName: Textify.General.TextTools.EndsWithAnyOf(string, string[])
+  fullName.vb: Textify.General.TextTools.EndsWithAnyOf(String, String())
+  nameWithType: TextTools.EndsWithAnyOf(string, string[])
+  nameWithType.vb: TextTools.EndsWithAnyOf(String, String())
+- uid: Textify.General.TextTools.EndsWithAnyOf*
+  name: EndsWithAnyOf
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAnyOf_
+  commentId: Overload:Textify.General.TextTools.EndsWithAnyOf
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EndsWithAnyOf
+  nameWithType: TextTools.EndsWithAnyOf
 - uid: Textify.General.TextTools.FormatString(System.String,System.Object[])
   name: FormatString(string, params object[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_FormatString_System_String_System_Object___
@@ -445,6 +493,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.IsStringNumeric
   nameWithType: TextTools.IsStringNumeric
+- uid: Textify.General.TextTools.LowerFirst(System.String)
+  name: LowerFirst(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_LowerFirst_System_String_
+  commentId: M:Textify.General.TextTools.LowerFirst(System.String)
+  name.vb: LowerFirst(String)
+  fullName: Textify.General.TextTools.LowerFirst(string)
+  fullName.vb: Textify.General.TextTools.LowerFirst(String)
+  nameWithType: TextTools.LowerFirst(string)
+  nameWithType.vb: TextTools.LowerFirst(String)
+- uid: Textify.General.TextTools.LowerFirst*
+  name: LowerFirst
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_LowerFirst_
+  commentId: Overload:Textify.General.TextTools.LowerFirst
+  isSpec: "True"
+  fullName: Textify.General.TextTools.LowerFirst
+  nameWithType: TextTools.LowerFirst
 - uid: Textify.General.TextTools.ReleaseDoubleQuotes(System.String)
   name: ReleaseDoubleQuotes(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReleaseDoubleQuotes_System_String_
@@ -541,6 +605,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceLastOccurrence
   nameWithType: TextTools.ReplaceLastOccurrence
+- uid: Textify.General.TextTools.Reverse(System.String)
+  name: Reverse(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Reverse_System_String_
+  commentId: M:Textify.General.TextTools.Reverse(System.String)
+  name.vb: Reverse(String)
+  fullName: Textify.General.TextTools.Reverse(string)
+  fullName.vb: Textify.General.TextTools.Reverse(String)
+  nameWithType: TextTools.Reverse(string)
+  nameWithType.vb: TextTools.Reverse(String)
+- uid: Textify.General.TextTools.Reverse*
+  name: Reverse
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Reverse_
+  commentId: Overload:Textify.General.TextTools.Reverse
+  isSpec: "True"
+  fullName: Textify.General.TextTools.Reverse
+  nameWithType: TextTools.Reverse
 - uid: Textify.General.TextTools.ShiftLetters(System.String,System.Int32)
   name: ShiftLetters(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ShiftLetters_System_String_System_Int32_
@@ -621,6 +701,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.SplitNewLinesOld
   nameWithType: TextTools.SplitNewLinesOld
+- uid: Textify.General.TextTools.StartsWithAllOf(System.String,System.String[])
+  name: StartsWithAllOf(string, string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAllOf_System_String_System_String___
+  commentId: M:Textify.General.TextTools.StartsWithAllOf(System.String,System.String[])
+  name.vb: StartsWithAllOf(String, String())
+  fullName: Textify.General.TextTools.StartsWithAllOf(string, string[])
+  fullName.vb: Textify.General.TextTools.StartsWithAllOf(String, String())
+  nameWithType: TextTools.StartsWithAllOf(string, string[])
+  nameWithType.vb: TextTools.StartsWithAllOf(String, String())
+- uid: Textify.General.TextTools.StartsWithAllOf*
+  name: StartsWithAllOf
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAllOf_
+  commentId: Overload:Textify.General.TextTools.StartsWithAllOf
+  isSpec: "True"
+  fullName: Textify.General.TextTools.StartsWithAllOf
+  nameWithType: TextTools.StartsWithAllOf
 - uid: Textify.General.TextTools.StartsWithAnyOf(System.String,System.String[])
   name: StartsWithAnyOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAnyOf_System_String_System_String___
@@ -637,6 +733,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.StartsWithAnyOf
   nameWithType: TextTools.StartsWithAnyOf
+- uid: Textify.General.TextTools.ToTitleCase(System.String)
+  name: ToTitleCase(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToTitleCase_System_String_
+  commentId: M:Textify.General.TextTools.ToTitleCase(System.String)
+  name.vb: ToTitleCase(String)
+  fullName: Textify.General.TextTools.ToTitleCase(string)
+  fullName.vb: Textify.General.TextTools.ToTitleCase(String)
+  nameWithType: TextTools.ToTitleCase(string)
+  nameWithType.vb: TextTools.ToTitleCase(String)
+- uid: Textify.General.TextTools.ToTitleCase*
+  name: ToTitleCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToTitleCase_
+  commentId: Overload:Textify.General.TextTools.ToTitleCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ToTitleCase
+  nameWithType: TextTools.ToTitleCase
 - uid: Textify.General.TextTools.TruncateString(System.String,System.Int32)
   name: TruncateString(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_TruncateString_System_String_System_Int32_
@@ -653,6 +765,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.TruncateString
   nameWithType: TextTools.TruncateString
+- uid: Textify.General.TextTools.UpperFirst(System.String)
+  name: UpperFirst(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UpperFirst_System_String_
+  commentId: M:Textify.General.TextTools.UpperFirst(System.String)
+  name.vb: UpperFirst(String)
+  fullName: Textify.General.TextTools.UpperFirst(string)
+  fullName.vb: Textify.General.TextTools.UpperFirst(String)
+  nameWithType: TextTools.UpperFirst(string)
+  nameWithType.vb: TextTools.UpperFirst(String)
+- uid: Textify.General.TextTools.UpperFirst*
+  name: UpperFirst
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UpperFirst_
+  commentId: Overload:Textify.General.TextTools.UpperFirst
+  isSpec: "True"
+  fullName: Textify.General.TextTools.UpperFirst
+  nameWithType: TextTools.UpperFirst
 - uid: Textify.NameGen
   name: Textify.NameGen
   href: api/Textify.NameGen.html
