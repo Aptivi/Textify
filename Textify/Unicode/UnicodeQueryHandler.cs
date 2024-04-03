@@ -77,6 +77,7 @@ namespace Textify.Unicode
                 var serializer = new XmlSerializer(typeof(Ucd), "http://www.unicode.org/ns/2003/ucd/1.0");
                 using var reader = XmlReader.Create(stream);
                 var ucd = (Ucd)serializer.Deserialize(reader);
+                cachedQueries.Add(type, (stream, ucd));
                 repertoire = ucd.Repertoire;
             }
 
