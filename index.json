@@ -37,7 +37,7 @@
   "api/Textify.General.JsonTools.html": {
     "href": "api/Textify.General.JsonTools.html",
     "title": "Class JsonTools | Textify API - Aptivi",
-    "keywords": "Class JsonTools JSON tools Inheritance object JsonTools Namespace: Textify.General Assembly: Textify.dll Syntax public static class JsonTools Methods | Edit this page View Source BeautifyJsonText(string) Beautifies the JSON text. Declaration public static string BeautifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a minified JSON. Returns Type Description string Beautified JSON | Edit this page View Source MinifyJsonText(string) Minifies the JSON text. Declaration public static string MinifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a beautified JSON. Returns Type Description string Minified JSON"
+    "keywords": "Class JsonTools JSON tools Inheritance object JsonTools Namespace: Textify.General Assembly: Textify.Json.dll Syntax public static class JsonTools Methods | Edit this page View Source BeautifyJsonText(string) Beautifies the JSON text. Declaration public static string BeautifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a minified JSON. Returns Type Description string Beautified JSON | Edit this page View Source MinifyJsonText(string) Minifies the JSON text. Declaration public static string MinifyJsonText(string JsonText) Parameters Type Name Description string JsonText Contents of a beautified JSON. Returns Type Description string Minified JSON"
   },
   "api/Textify.General.TextTools.html": {
     "href": "api/Textify.General.TextTools.html",
