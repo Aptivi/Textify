@@ -36,6 +36,8 @@ namespace Textify.Demos.Offline.Fixtures.Cases
             string[] firstMaleImplicitNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.MaleImplicit);
             string[] firstNaturalNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Natural);
             string[] surnames = NameGen.NameGenerator.GenerateLastNames(10);
+            string[] allNames = NameGen.NameGenerator.GetAllFirstNames();
+            string[] allSurnames = NameGen.NameGenerator.GetAllLastNames();
 
             Console.WriteLine($"10 names: {string.Join(", ", names)}");
             Console.WriteLine($"10 first names: {string.Join(", ", firstNames)}");
@@ -45,6 +47,8 @@ namespace Textify.Demos.Offline.Fixtures.Cases
             Console.WriteLine($"10 first implicit male names: {string.Join(", ", firstMaleImplicitNames)}");
             Console.WriteLine($"10 first natural names: {string.Join(", ", firstNaturalNames)}");
             Console.WriteLine($"10 last names: {string.Join(", ", surnames)}");
+            Console.WriteLine();
+            Console.WriteLine($"...out of {allNames.Length} names, {allSurnames.Length} surnames");
         }
     }
 }

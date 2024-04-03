@@ -325,6 +325,14 @@ namespace Textify.NameGen
         }
 
         /// <summary>
+        /// Gets all the first names
+        /// </summary>
+        /// <param name="genderType">Gender type to use when generating names</param>
+        /// <returns>List of all the first names</returns>
+        public static string[] GetAllFirstNames(NameGenderType genderType = NameGenderType.Unified) =>
+            FindFirstNames("", "", "", genderType);
+
+        /// <summary>
         /// Generates the last names
         /// </summary>
         /// <param name="nameSearchTerm">Search term for the name</param>
@@ -367,6 +375,13 @@ namespace Textify.NameGen
             await PopulateNamesAsync();
             return GenerateLastNameArray(nameSearchTerm, SurnamePrefix, SurnameSuffix);
         }
+
+        /// <summary>
+        /// Gets all the last names
+        /// </summary>
+        /// <returns>List of all the last names</returns>
+        public static string[] GetAllLastNames() =>
+            FindLastNames("", "", "");
 
         private static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType)
         {
