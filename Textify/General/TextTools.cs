@@ -274,7 +274,7 @@ namespace Textify.General
         /// <param name="Format">The string to format</param>
         /// <param name="Vars">The variables used</param>
         /// <returns>A formatted string if successful, or the unformatted one if failed.</returns>
-        public static string FormatString(string Format, params object[] Vars)
+        public static string FormatString(this string Format, params object[] Vars)
         {
             if (Format is null)
                 throw new TextifyException("The target format may not be null");
@@ -297,7 +297,7 @@ namespace Textify.General
         /// Is the string numeric?
         /// </summary>
         /// <param name="Expression">The expression</param>
-        public static bool IsStringNumeric(string Expression)
+        public static bool IsStringNumeric(this string Expression)
         {
             if (string.IsNullOrWhiteSpace(Expression))
                 throw new TextifyException("The target expression may not be null");
@@ -390,7 +390,7 @@ namespace Textify.General
         /// <param name="text">Text to be wrapped</param>
         /// <param name="maximumLength">Maximum length of text before wrapping</param>
         /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
-        public static string[] GetWrappedSentences(string text, int maximumLength) =>
+        public static string[] GetWrappedSentences(this string text, int maximumLength) =>
             GetWrappedSentences(text, maximumLength, 0);
 
         /// <summary>
@@ -400,7 +400,7 @@ namespace Textify.General
         /// <param name="maximumLength">Maximum length of text before wrapping</param>
         /// <param name="indentLength">Indentation length</param>
         /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
-        public static string[] GetWrappedSentences(string text, int maximumLength, int indentLength)
+        public static string[] GetWrappedSentences(this string text, int maximumLength, int indentLength)
         {
             if (string.IsNullOrEmpty(text))
                 return [""];
@@ -465,7 +465,7 @@ namespace Textify.General
         /// <param name="text">Text to be wrapped</param>
         /// <param name="maximumLength">Maximum length of text before wrapping</param>
         /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
-        public static string[] GetWrappedSentencesByWords(string text, int maximumLength) =>
+        public static string[] GetWrappedSentencesByWords(this string text, int maximumLength) =>
             GetWrappedSentencesByWords(text, maximumLength, 0);
 
         /// <summary>
@@ -475,7 +475,7 @@ namespace Textify.General
         /// <param name="maximumLength">Maximum length of text before wrapping</param>
         /// <param name="indentLength">Indentation length</param>
         /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
-        public static string[] GetWrappedSentencesByWords(string text, int maximumLength, int indentLength)
+        public static string[] GetWrappedSentencesByWords(this string text, int maximumLength, int indentLength)
         {
             if (string.IsNullOrEmpty(text))
                 return [""];
