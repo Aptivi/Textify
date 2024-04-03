@@ -82,7 +82,7 @@ namespace Textify.NameGen
             }
             catch (Exception ex)
             {
-                throw new Exception("Can't get names and surnames:" + $" {ex.Message}", ex);
+                throw new TextifyException("Can't get names and surnames:" + $" {ex.Message}", ex);
             }
         }
 
@@ -368,27 +368,15 @@ namespace Textify.NameGen
             return GenerateLastNameArray(nameSearchTerm, SurnamePrefix, SurnameSuffix);
         }
 
-        internal static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType)
+        private static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType)
         {
             var random = new Random();
             List<string> namesList = [];
-
-            // Check if the prefix and suffix check is required
-            bool NamePrefixCheckRequired = !string.IsNullOrEmpty(NamePrefix);
-            bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
-
-            // Process the names according to suffix and/or prefix check requirement
-            string[] ProcessedNames = Names[genderType];
-            if (NamePrefixCheckRequired && NameSuffixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
-            else if (NamePrefixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix)).ToArray();
-            else if (NameSuffixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.EndsWith(NameSuffix)).ToArray();
+            string[] ProcessedNames = ProcessConditions(Names[genderType], NamePrefix, NameSuffix);
 
             // Check the names
             if (ProcessedNames.Length == 0)
-                throw new Exception("The names are not found! Please ensure that the name conditions are correct.");
+                throw new TextifyException("The names are not found! Please ensure that the name conditions are correct.");
 
             // Select random names
             for (int NameNum = 1; NameNum <= Count; NameNum++)
@@ -400,27 +388,15 @@ namespace Textify.NameGen
             return [.. namesList];
         }
 
-        internal static string[] GenerateLastNameArray(int Count, string SurnamePrefix, string SurnameSuffix)
+        private static string[] GenerateLastNameArray(int Count, string SurnamePrefix, string SurnameSuffix)
         {
             var random = new Random();
             List<string> surnamesList = [];
-
-            // Check if the prefix and suffix check is required
-            bool SurnamePrefixCheckRequired = !string.IsNullOrEmpty(SurnamePrefix);
-            bool SurnameSuffixCheckRequired = !string.IsNullOrEmpty(SurnameSuffix);
-
-            // Process the surnames according to suffix and/or prefix check requirement
-            string[] ProcessedSurnames = Surnames;
-            if (SurnamePrefixCheckRequired && SurnameSuffixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix) && str.EndsWith(SurnameSuffix)).ToArray();
-            else if (SurnamePrefixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix)).ToArray();
-            else if (SurnameSuffixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.EndsWith(SurnameSuffix)).ToArray();
+            string[] ProcessedSurnames = ProcessConditions(Surnames, SurnamePrefix, SurnameSuffix);
 
             // Check the surnames
             if (ProcessedSurnames.Length == 0)
-                throw new Exception("The surnames are not found! Please ensure that the surname conditions are correct.");
+                throw new TextifyException("The surnames are not found! Please ensure that the surname conditions are correct.");
 
             // Select random surnames
             for (int NameNum = 1; NameNum <= Count; NameNum++)
@@ -432,59 +408,31 @@ namespace Textify.NameGen
             return [.. surnamesList];
         }
 
-        internal static string[] GenerateFirstNameArray(string nameSearchTerm, string NamePrefix, string NameSuffix, NameGenderType genderType)
+        private static string[] GenerateFirstNameArray(string nameSearchTerm, string NamePrefix, string NameSuffix, NameGenderType genderType)
         {
-            var random = new Random();
-            List<string> namesList = [];
-
-            // Check if the prefix and suffix check is required
-            bool NamePrefixCheckRequired = !string.IsNullOrEmpty(NamePrefix);
-            bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
-
             // Process the names according to suffix and/or prefix check requirement
-            string[] ProcessedNames = Names[genderType];
-            if (NamePrefixCheckRequired && NameSuffixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
-            else if (NamePrefixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.StartsWith(NamePrefix)).ToArray();
-            else if (NameSuffixCheckRequired)
-                ProcessedNames = Names[genderType].Where((str) => str.EndsWith(NameSuffix)).ToArray();
-            ProcessedNames = ProcessedNames.Where(str => str.Contains(nameSearchTerm)).ToArray();
+            string[] ProcessedNames = ProcessConditions(Names[genderType], NamePrefix, NameSuffix, nameSearchTerm);
 
             // Check the names
             if (ProcessedNames.Length == 0)
-                throw new Exception("The names are not found! Please ensure that the name conditions are correct.");
+                throw new TextifyException("The names are not found! Please ensure that the name conditions are correct.");
 
             return ProcessedNames;
         }
 
-        internal static string[] GenerateLastNameArray(string nameSearchTerm, string SurnamePrefix, string SurnameSuffix)
+        private static string[] GenerateLastNameArray(string nameSearchTerm, string SurnamePrefix, string SurnameSuffix)
         {
-            var random = new Random();
-            List<string> surnamesList = [];
-
-            // Check if the prefix and suffix check is required
-            bool SurnamePrefixCheckRequired = !string.IsNullOrEmpty(SurnamePrefix);
-            bool SurnameSuffixCheckRequired = !string.IsNullOrEmpty(SurnameSuffix);
-
             // Process the surnames according to suffix and/or prefix check requirement
-            string[] ProcessedSurnames = Surnames;
-            if (SurnamePrefixCheckRequired && SurnameSuffixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix) && str.EndsWith(SurnameSuffix)).ToArray();
-            else if (SurnamePrefixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix)).ToArray();
-            else if (SurnameSuffixCheckRequired)
-                ProcessedSurnames = Surnames.Where((str) => str.EndsWith(SurnameSuffix)).ToArray();
-            ProcessedSurnames = ProcessedSurnames.Where(str => str.Contains(nameSearchTerm)).ToArray();
+            string[] ProcessedSurnames = ProcessConditions(Surnames, SurnamePrefix, SurnameSuffix, nameSearchTerm);
 
             // Check the surnames
             if (ProcessedSurnames.Length == 0)
-                throw new Exception("The surnames are not found! Please ensure that the surname conditions are correct.");
+                throw new TextifyException("The surnames are not found! Please ensure that the surname conditions are correct.");
 
             return ProcessedSurnames;
         }
 
-        internal static string[] GenerateNameArray(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix, NameGenderType genderType)
+        private static string[] GenerateNameArray(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix, NameGenderType genderType)
         {
             List<string> namesList = [];
 
@@ -501,6 +449,23 @@ namespace Textify.NameGen
                 namesList.Add(GeneratedName + " " + GeneratedSurname);
             }
             return [.. namesList];
+        }
+
+        private static string[] ProcessConditions(string[] data, string prefix, string suffix, string searchTerm = "")
+        {
+            // Check if the prefix and suffix check is required
+            bool SurnamePrefixCheckRequired = !string.IsNullOrEmpty(prefix);
+            bool SurnameSuffixCheckRequired = !string.IsNullOrEmpty(suffix);
+
+            // Process the surnames according to suffix and/or prefix check requirement
+            string[] ProcessedSurnames = Surnames;
+            if (SurnamePrefixCheckRequired && SurnameSuffixCheckRequired)
+                data = Surnames.Where((str) => str.StartsWith(prefix) && str.EndsWith(suffix)).ToArray();
+            else if (SurnamePrefixCheckRequired)
+                data = Surnames.Where((str) => str.StartsWith(prefix)).ToArray();
+            else if (SurnameSuffixCheckRequired)
+                data = Surnames.Where((str) => str.EndsWith(suffix)).ToArray();
+            return data.Where((str) => str.Contains(searchTerm)).ToArray();
         }
     }
 }
