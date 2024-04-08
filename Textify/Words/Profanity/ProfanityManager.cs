@@ -67,7 +67,8 @@ namespace Textify.Words.Profanity
                     if (knownWords.Any((knownWord) => word.Equals(knownWord, StringComparison.OrdinalIgnoreCase)))
                         continue;
                 }
-                var info = new ProfanityOccurrenceInfo(searchType, match.Value, match.Value);
+                string source = sentence.GetEnclosedWordFromIndex(match.Index);
+                var info = new ProfanityOccurrenceInfo(searchType, match.Value, source.Length < 2 ? match.Value : source);
                 occurrences.Add(info);
             }
             return [.. occurrences];
