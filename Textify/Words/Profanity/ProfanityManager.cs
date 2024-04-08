@@ -75,7 +75,7 @@ namespace Textify.Words.Profanity
 
         private static void InitializeMatchers()
         {
-            if (thoroughProfanityMatcher is not null && shallowProfanityMatcher is not null)
+            if (thoroughProfanityMatcher is not null && shallowProfanityMatcher is not null && partialProfanityMatcher is not null)
                 return;
 
             // Get the profanities and make two matchers: thorough and shallow.
