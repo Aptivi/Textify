@@ -20,26 +20,25 @@
 namespace Textify.Words.Profanity
 {
     /// <summary>
-    /// Profanity occurrence info class
+    /// Profanity search type
     /// </summary>
-    public class ProfanityOccurrenceInfo
+    public enum ProfanitySearchType
     {
-        internal ProfanitySearchType searchType = ProfanitySearchType.Shallow;
-
         /// <summary>
-        /// The profane word in which the profanity manager matched successfully
+        /// Shallow searching. May not find swearing embedded in two or more words and/or separated by whitespace.
         /// </summary>
-        public string ProfaneWord { get; private set; }
+        Shallow,
         /// <summary>
-        /// The source word containing either a profane word or being a profane word
+        /// Thorough searching. May not find swearing embedded in two or more words.
         /// </summary>
-        public string SourceWord { get; private set; }
-
-        internal ProfanityOccurrenceInfo(ProfanitySearchType searchType, string profaneWord, string sourceWord)
-        {
-            this.searchType = searchType;
-            ProfaneWord = profaneWord;
-            SourceWord = sourceWord;
-        }
+        Thorough,
+        /// <summary>
+        /// Partial searching. May cause legitimate words to be found, such as Scunthorpe.
+        /// </summary>
+        Partial,
+        /// <summary>
+        /// Mitigated partial searching. May not find swearing that has its characters separated by whitespace.
+        /// </summary>
+        Mitigated,
     }
 }

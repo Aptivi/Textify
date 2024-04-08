@@ -17,9 +17,11 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using Textify.General;
 
@@ -31,26 +33,60 @@ namespace Textify.Words.Profanity
     public static class ProfanityManager
     {
         private static Regex thoroughProfanityMatcher;
+        private static Regex partialProfanityMatcher;
         private static Regex shallowProfanityMatcher;
 
         /// <summary>
         /// Gets a list of profane words in a sentence
         /// </summary>
         /// <param name="sentence">A sentence which may contain profanity</param>
-        /// <param name="thorough">Whether to analyze the sentence thoroughly or not</param>
+        /// <param name="searchType">Specifies how to analyze the sentence</param>
         /// <returns>An array of profanity occurrence info</returns>
-        public static ProfanityOccurrenceInfo[] GetProfanities(string sentence, bool thorough = false)
+        public static ProfanityOccurrenceInfo[] GetProfanities(string sentence, ProfanitySearchType searchType = ProfanitySearchType.Shallow)
         {
             // Initialize the profanity matchers
             InitializeMatchers();
 
             // Now, try to match profanity
-            var matcher = thorough ? thoroughProfanityMatcher : shallowProfanityMatcher;
+            var matcher =
+                searchType == ProfanitySearchType.Thorough ? thoroughProfanityMatcher :
+                searchType == ProfanitySearchType.Partial ? partialProfanityMatcher :
+                searchType == ProfanitySearchType.Mitigated ? partialProfanityMatcher :
+                shallowProfanityMatcher;
             var matches = matcher.Matches(sentence);
             List<ProfanityOccurrenceInfo> occurrences = [];
             foreach (Match match in matches)
             {
-                var info = new ProfanityOccurrenceInfo(thorough, match.Groups[0].Value, match.Value);
+                if (searchType == ProfanitySearchType.Mitigated)
+                {
+                    // Load the list of known words
+                    var knownWords = WordManager.GetWords(WordDataType.WordsFull);
+
+                    // Calculate the distance between two word spaces
+                    int distance = 0, idx;
+                    for (idx = match.Index; idx > 0; idx--)
+                    {
+                        var character = sentence[idx];
+                        if (!char.IsLetterOrDigit(character))
+                        {
+                            idx++;
+                            break;
+                        }
+                    }
+                    for (int distanceIdx = idx; distanceIdx < sentence.Length; distanceIdx++)
+                    {
+                        var character = sentence[distanceIdx];
+                        if (!char.IsLetterOrDigit(character))
+                            break;
+                        distance++;
+                    }
+
+                    // Now, get a word from these two values and compare it to the list of known words
+                    string word = sentence.Substring(idx, distance);
+                    if (knownWords.Any((knownWord) => word.Equals(knownWord, StringComparison.OrdinalIgnoreCase)))
+                        continue;
+                }
+                var info = new ProfanityOccurrenceInfo(searchType, match.Value, match.Value);
                 occurrences.Add(info);
             }
             return [.. occurrences];
@@ -66,9 +102,12 @@ namespace Textify.Words.Profanity
             string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
             string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
             string thoroughPattern = string.Join("|", profanities.Select(word => string.Join(@"\s*", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
+            string partialPattern = string.Join(@"|", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
             string shallowPattern = string.Join(@"\b|\b", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
             thoroughProfanityMatcher = new Regex(
                 @"\b(" + thoroughPattern + @")\b", RegexOptions.IgnoreCase);
+            partialProfanityMatcher = new Regex(
+                @"(" + partialPattern + @")", RegexOptions.IgnoreCase);
             shallowProfanityMatcher = new Regex(
                 @"(\b" + shallowPattern + @"\b)", RegexOptions.IgnoreCase);
         }
