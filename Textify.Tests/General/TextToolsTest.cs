@@ -802,6 +802,34 @@ namespace Textify.Tests.General
             string actual = text.GetEnclosedWordFromIndex(idx, true);
             actual.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests escaping characters
+        /// </summary>
+        [TestMethod]
+        [DataRow("", "")]
+        [DataRow("Hello world!", @"Hello\ world\!")]
+        [DataRow("Helloworld", "Helloworld")]
+        [Description("Querying")]
+        public void TestEscape(string text, string expected)
+        {
+            string actual = text.Escape();
+            actual.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests unescaping characters
+        /// </summary>
+        [TestMethod]
+        [DataRow("", "")]
+        [DataRow(@"Hello\ world!", "Hello world!")]
+        [DataRow("Helloworld!", "Helloworld!")]
+        [Description("Querying")]
+        public void TestUnescape(string text, string expected)
+        {
+            string actual = text.Unescape();
+            actual.ShouldBe(expected);
+        }
     }
 
 }

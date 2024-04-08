@@ -34,6 +34,8 @@ namespace Textify.General
     {
         private static readonly string regexMatchEnclosedStrings = /* lang=regex */
             @"(""(.+?)(?<![^\\]\\)"")|('(.+?)(?<![^\\]\\)')|(`(.+?)(?<![^\\]\\)`)|(?:[^\\\s]|\\.)+|\S+";
+        private static readonly string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
+        private static readonly string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
@@ -805,6 +807,34 @@ namespace Textify.General
             // Now, get a word from these two values.
             string word = target.Substring(idx, distance);
             return word;
+        }
+
+        /// <summary>
+        /// Gets a string containing escaped characters
+        /// </summary>
+        /// <param name="target">Target string to escape characters</param>
+        /// <returns>A string containing escaped characters</returns>
+        public static string Escape(this string target)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            // Escape characters now.
+            return target.ReplaceAllRange(unescaped, escaped);
+        }
+
+        /// <summary>
+        /// Gets a string containing unescaped characters
+        /// </summary>
+        /// <param name="target">Target string to unescape characters</param>
+        /// <returns>A string containing unescaped characters</returns>
+        public static string Unescape(this string target)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            // Unescape characters now.
+            return target.ReplaceAllRange(escaped, unescaped);
         }
     }
 }
