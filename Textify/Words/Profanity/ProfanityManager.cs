@@ -80,11 +80,9 @@ namespace Textify.Words.Profanity
 
             // Get the profanities and make two matchers: thorough and shallow.
             string[] profanities = WordManager.GetWords(WordDataType.BadWords);
-            string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
-            string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
-            string thoroughPattern = string.Join("|", profanities.Select(word => string.Join(@"\s*", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
-            string partialPattern = string.Join(@"|", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
-            string shallowPattern = string.Join(@"\b|\b", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
+            string thoroughPattern = string.Join("|", profanities.Select(word => string.Join(@"\s*", word.ToCharArray().Select((ch) => $"{ch}".Escape()))));
+            string partialPattern = string.Join(@"|", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".Escape()))));
+            string shallowPattern = string.Join(@"\b|\b", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".Escape()))));
             thoroughProfanityMatcher = new Regex(
                 @"\b(" + thoroughPattern + @")\b", RegexOptions.IgnoreCase);
             partialProfanityMatcher = new Regex(
