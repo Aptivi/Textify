@@ -22,7 +22,7 @@ namespace Textify.Data.DataRes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class WordsData {
+    internal class WordsData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -63,9 +63,49 @@ namespace Textify.Data.DataRes {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] bad_words {
+            get {
+                object obj = ResourceManager.GetObject("bad_words", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] words {
+            get {
+                object obj = ResourceManager.GetObject("words", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] words_alpha {
             get {
                 object obj = ResourceManager.GetObject("words_alpha", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] words_clean {
+            get {
+                object obj = ResourceManager.GetObject("words_clean", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] words_clean_alpha {
+            get {
+                object obj = ResourceManager.GetObject("words_clean_alpha", resourceCulture);
                 return ((byte[])(obj));
             }
         }

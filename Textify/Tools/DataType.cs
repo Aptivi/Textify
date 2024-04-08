@@ -68,5 +68,21 @@ namespace Textify.Tools
         /// Initializes the zip files containing word lists
         /// </summary>
         Words = 1024,
+        /// <summary>
+        /// Initializes the zip files containing word lists, including alphanumeric characters
+        /// </summary>
+        WordsFull = 2048,
+        /// <summary>
+        /// Initializes the zip files containing word lists, including offensive words (18+)
+        /// </summary>
+        WordsDirty = 4096,
+        /// <summary>
+        /// Initializes the zip files containing word lists, including offensive words (18+) and alphanumeric characters
+        /// </summary>
+        WordsDirtyFull = 8192,
+        /// <summary>
+        /// Initializes the zip files containing just the offensive words (18+) for bad word filtering
+        /// </summary>
+        WordsJustDirty = 16384,
     }
 }

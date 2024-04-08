@@ -116,16 +116,20 @@ namespace Textify.General
         /// Makes a string array with new line as delimiter
         /// </summary>
         /// <param name="target">Target string</param>
+        /// <param name="emptyStrings">Whether to include empty strings in the output or not</param>
         /// <returns>List of words that are separated by the new lines</returns>
-        public static string[] SplitNewLines(this string target)
+        public static string[] SplitNewLines(this string target, bool emptyStrings = true)
         {
             if (target is null)
                 throw new TextifyException("The target may not be null");
 
-            return target
+            var result = target
                 .Replace($"{Convert.ToChar(13)}{Convert.ToChar(10)}", $"{Convert.ToChar(10)}")
                 .Replace($"{Convert.ToChar(13)}", $"{Convert.ToChar(10)}")
                 .Split(Convert.ToChar(10));
+            if (!emptyStrings)
+                result = result.Where((str) => !string.IsNullOrEmpty(str)).ToArray();
+            return result;
         }
 
         /// <summary>

@@ -39,11 +39,15 @@ namespace Textify.Tools
             bool needsFemaleImplicitNames = types.HasFlag(DataType.NamesFemaleImplicit);
             bool needsMaleImplicitNames = types.HasFlag(DataType.NamesMaleImplicit);
             bool needsNaturalNames = types.HasFlag(DataType.NamesNatural);
+            bool needsSurnames = types.HasFlag(DataType.Surnames);
             bool needsUnicode = types.HasFlag(DataType.Unicode);
             bool needsUnicodeNoUnihan = types.HasFlag(DataType.UnicodeNoUnihan);
             bool needsUnicodeUnihan = types.HasFlag(DataType.UnicodeUnihan);
             bool needsWords = types.HasFlag(DataType.Words);
-            bool needsSurnames = types.HasFlag(DataType.Surnames);
+            bool needsWordsFull = types.HasFlag(DataType.WordsFull);
+            bool needsWordsDirty = types.HasFlag(DataType.WordsDirty);
+            bool needsWordsDirtyFull = types.HasFlag(DataType.WordsDirtyFull);
+            bool needsWordsJustDirty = types.HasFlag(DataType.WordsJustDirty);
 
             // Go through all the types
             if (needsNames)
@@ -98,8 +102,28 @@ namespace Textify.Tools
             }
             if (needsWords)
             {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_clean_alpha)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words_clean_alpha), WordsData.words_clean_alpha);
+            }
+            if (needsWordsFull)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_clean)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words_clean), WordsData.words_clean);
+            }
+            if (needsWordsDirty)
+            {
                 if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_alpha)))
                     DataTools.dataStreams.Add(nameof(WordsData.words_alpha), WordsData.words_alpha);
+            }
+            if (needsWordsDirtyFull)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words), WordsData.words);
+            }
+            if (needsWordsJustDirty)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.bad_words)))
+                    DataTools.dataStreams.Add(nameof(WordsData.bad_words), WordsData.bad_words);
             }
         }
     }

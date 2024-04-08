@@ -121,4 +121,16 @@
   <data name="words_alpha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>../../assets/WordsList/words_alpha.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="words" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/WordsList/words.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="words_clean_alpha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/WordsList/words-clean-alpha.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="words_clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/WordsList/words-clean.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bad_words" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>../../assets/WordsList/bad-words.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

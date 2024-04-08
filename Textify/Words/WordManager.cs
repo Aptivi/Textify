@@ -21,7 +21,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Threading.Tasks;
 using Textify.General;
 using Textify.Tools;
@@ -33,54 +32,30 @@ namespace Textify.Words
     /// </summary>
     public static class WordManager
     {
-        private static readonly List<string> Words = [];
+        private static readonly Dictionary<WordDataType, string[]> words = [];
         private static readonly Random rng = new();
 
         /// <summary>
-        /// Initializes the words. Does nothing if already downloaded.
-        /// </summary>
-        public static void InitializeWords()
-        {
-            // Download the words
-            if (Words.Count == 0)
-            {
-                var content = GetContentStream();
-                Words.AddRange(new StreamReader(content).ReadToEnd().SplitNewLines().ToList());
-            }
-        }
-
-        /// <summary>
-        /// Initializes the words. Does nothing if already downloaded.
-        /// </summary>
-        public static async Task InitializeWordsAsync()
-        {
-            // Download the words
-            if (Words.Count == 0)
-            {
-                var content = GetContentStream();
-                var read = await new StreamReader(content).ReadToEndAsync();
-                Words.AddRange(read.SplitNewLines().ToList());
-            }
-        }
-
-        /// <summary>
         /// Gets all words
         /// </summary>
-        public static string[] GetWords()
+        /// <param name="type">Specifies the word data type</param>
+        public static string[] GetWords(WordDataType type = WordDataType.Words)
         {
-            InitializeWords();
-            return [.. Words];
+            if (!words.ContainsKey(type))
+            {
+                var content = GetWordListAsync(type).Result;
+                words.Add(type, content);
+            }
+            return words[type];
         }
 
         /// <summary>
         /// Gets a random word
         /// </summary>
+        /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
-        public static string GetRandomWord()
-        {
-            InitializeWords();
-            return Words[rng.Next(Words.Count)];
-        }
+        public static string GetRandomWord(WordDataType type = WordDataType.Words) =>
+            GetWords(type)[rng.Next(words.Count)];
 
         /// <summary>
         /// Gets a random word conditionally
@@ -89,11 +64,12 @@ namespace Textify.Words
         /// <param name="wordStartsWith">The word starts with...</param>
         /// <param name="wordEndsWith">The word ends with...</param>
         /// <param name="wordExactLength">The exact length of the word</param>
+        /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
-        public static string GetRandomWordConditional(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength)
+        public static string GetRandomWordConditional(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)
         {
             // Get an initial word
-            string word = GetRandomWord();
+            string word = GetRandomWord(type);
             bool lengthCheck = wordMaxLength > 0;
             bool startsCheck = !string.IsNullOrWhiteSpace(wordStartsWith);
             bool endsCheck = !string.IsNullOrWhiteSpace(wordEndsWith);
@@ -104,7 +80,7 @@ namespace Textify.Words
                      (startsCheck && word.StartsWith(wordStartsWith) || !startsCheck) &&
                      (endsCheck && word.EndsWith(wordEndsWith) || !endsCheck) &&
                      (exactLengthCheck && word.Length == wordExactLength || !exactLengthCheck)))
-                word = GetRandomWord();
+                word = GetRandomWord(type);
 
             // Get a word that satisfies all the conditions
             return word;
@@ -113,20 +89,24 @@ namespace Textify.Words
         /// <summary>
         /// Gets all words
         /// </summary>
-        public static async Task<string[]> GetWordsAsync()
+        public static async Task<string[]> GetWordsAsync(WordDataType type = WordDataType.Words)
         {
-            await InitializeWordsAsync();
-            return [.. Words];
+            if (!words.ContainsKey(type))
+            {
+                var content = await GetWordListAsync(type);
+                words.Add(type, content);
+            }
+            return words[type];
         }
 
         /// <summary>
         /// Gets a random word
         /// </summary>
         /// <returns>A random word</returns>
-        public static async Task<string> GetRandomWordAsync()
+        public static async Task<string> GetRandomWordAsync(WordDataType type = WordDataType.Words)
         {
-            await InitializeWordsAsync();
-            return Words[rng.Next(Words.Count)];
+            var wordList = await GetWordsAsync(type);
+            return wordList[rng.Next(words.Count)];
         }
 
         /// <summary>
@@ -136,11 +116,12 @@ namespace Textify.Words
         /// <param name="wordStartsWith">The word starts with...</param>
         /// <param name="wordEndsWith">The word ends with...</param>
         /// <param name="wordExactLength">The exact length of the word</param>
+        /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
-        public static async Task<string> GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength)
+        public static async Task<string> GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)
         {
             // Get an initial word
-            string word = await GetRandomWordAsync();
+            string word = await GetRandomWordAsync(type);
             bool lengthCheck = wordMaxLength > 0;
             bool startsCheck = !string.IsNullOrWhiteSpace(wordStartsWith);
             bool endsCheck = !string.IsNullOrWhiteSpace(wordEndsWith);
@@ -151,21 +132,29 @@ namespace Textify.Words
                      (startsCheck && word.StartsWith(wordStartsWith) || !startsCheck) &&
                      (endsCheck && word.EndsWith(wordEndsWith) || !endsCheck) &&
                      (exactLengthCheck && word.Length == wordExactLength || !exactLengthCheck)))
-                word = GetRandomWord();
+                word = await GetRandomWordAsync(type);
 
             // Get a word that satisfies all the conditions
             return word;
         }
 
-        private static Stream GetContentStream()
+        private static async Task<string[]> GetWordListAsync(WordDataType type)
         {
-            DataInitializer.Initialize(DataType.Words);
-            var contentStream = new MemoryStream(DataTools.GetDataFrom("words_alpha"));
+            (DataType dataType, string resourceName, string fileName) =
+                type == WordDataType.Words ? (DataType.Words, "words_clean_alpha", "words-clean-alpha.txt") :
+                type == WordDataType.WordsFull ? (DataType.WordsFull, "words_clean", "words-clean.txt") :
+                type == WordDataType.WordsDirty ? (DataType.WordsDirty, "words_alpha", "words_alpha.txt") :
+                type == WordDataType.WordsDirtyFull ? (DataType.WordsDirtyFull, "words", "words.txt") :
+                type == WordDataType.BadWords ? (DataType.WordsJustDirty, "bad_words", "bad-words.txt") :
+                throw new TextifyException();
+            DataInitializer.Initialize(dataType);
+            var contentStream = new MemoryStream(DataTools.GetDataFrom(resourceName));
             var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 
             // Open the XML to stream
-            var content = archive.GetEntry("words_alpha.txt").Open();
-            return content;
+            var content = archive.GetEntry(fileName).Open();
+            var read = await new StreamReader(content).ReadToEndAsync();
+            return read.SplitNewLines(false);
         }
     }
 }
