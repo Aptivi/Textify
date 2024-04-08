@@ -30,29 +30,47 @@ namespace Textify.Tests.Words.Profanity
     public class ProfanityManagerTests
     {
         [TestMethod]
-        [DataRow(false, "Who gives a shit? Get off your fucking high horse!")]
-        [DataRow(false, "Who gives a s h i t? Get off your f u c k ing high horse!")]
-        [DataRow(true, "Who gives a ----? Get off your ----ing high horse!")]
-        public void TestAnalyzeSentenceShallow(bool clean, string sentence)
+        [DataRow("Who gives a shit? Get off your fucking high horse!", true)]
+        [DataRow("Who gives a s h i t? Get off your f u c k ing high horse!", false)]
+        [DataRow("Who gives a ----? Get off your ----ing high horse!", false)]
+        public void TestAnalyzeSentenceShallow(string sentence, bool expected)
         {
             var profanities = ProfanityManager.GetProfanities(sentence);
-            if (clean)
-                profanities.ShouldBeEmpty();
-            else
-                profanities.ShouldNotBeEmpty();
+            bool result = profanities.Length > 0;
+            result.ShouldBe(expected);
         }
 
         [TestMethod]
-        [DataRow(false, "Who gives a shit? Get off your fucking high horse!")]
-        [DataRow(false, "Who gives a s h i t? Get off your f u c k ing high horse!")]
-        [DataRow(true, "Who gives a ----? Get off your ----ing high horse!")]
-        public void TestAnalyzeSentenceThorough(bool clean, string sentence)
+        [DataRow("Who gives a shit? Get off your fucking high horse!", true)]
+        [DataRow("Who gives a s h i t? Get off your f u c k ing high horse!", true)]
+        [DataRow("Who gives a ----? Get off your ----ing high horse!", false)]
+        public void TestAnalyzeSentenceThorough(string sentence, bool expected)
         {
             var profanities = ProfanityManager.GetProfanities(sentence, true);
-            if (clean)
-                profanities.ShouldBeEmpty();
-            else
-                profanities.ShouldNotBeEmpty();
+            bool result = profanities.Length > 0;
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", true)]
+        [DataRow("Who lives in Scunthorpe?", false)]
+        [DataRow("Who are these jackasses from Scunthorpe?", true)]
+        public void TestAnalyzeScunthorpeSentenceShallow(string sentence, bool expected)
+        {
+            var profanities = ProfanityManager.GetProfanities(sentence);
+            bool result = profanities.Length > 0;
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", true)]
+        [DataRow("Who lives in Scunthorpe?", false)]
+        [DataRow("Who are these jackasses from Scunthorpe?", true)]
+        public void TestAnalyzeScunthorpeSentenceThorough(string sentence, bool expected)
+        {
+            var profanities = ProfanityManager.GetProfanities(sentence, true);
+            bool result = profanities.Length > 0;
+            result.ShouldBe(expected);
         }
     }
 }

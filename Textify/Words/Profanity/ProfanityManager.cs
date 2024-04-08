@@ -66,10 +66,11 @@ namespace Textify.Words.Profanity
             string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
             string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
             string thoroughPattern = string.Join("|", profanities.Select(word => string.Join(@"\s*", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
+            string shallowPattern = string.Join(@"\b|\b", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".ReplaceAllRange(unescaped, escaped)))));
             thoroughProfanityMatcher = new Regex(
                 @"\b(" + thoroughPattern + @")\b", RegexOptions.IgnoreCase);
             shallowProfanityMatcher = new Regex(
-                @"\b(" + string.Join("|", profanities) + @")\b", RegexOptions.IgnoreCase);
+                @"(\b" + shallowPattern + @"\b)", RegexOptions.IgnoreCase);
         }
     }
 }
