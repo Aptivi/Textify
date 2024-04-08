@@ -486,6 +486,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetEnclosedDoubleQuotesType
   nameWithType: TextTools.GetEnclosedDoubleQuotesType
+- uid: Textify.General.TextTools.GetEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)
+  name: GetEnclosedWordFromIndex(string, int, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_
+  commentId: M:Textify.General.TextTools.GetEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)
+  name.vb: GetEnclosedWordFromIndex(String, Integer, Boolean)
+  fullName: Textify.General.TextTools.GetEnclosedWordFromIndex(string, int, bool)
+  fullName.vb: Textify.General.TextTools.GetEnclosedWordFromIndex(String, Integer, Boolean)
+  nameWithType: TextTools.GetEnclosedWordFromIndex(string, int, bool)
+  nameWithType.vb: TextTools.GetEnclosedWordFromIndex(String, Integer, Boolean)
+- uid: Textify.General.TextTools.GetEnclosedWordFromIndex*
+  name: GetEnclosedWordFromIndex
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetEnclosedWordFromIndex_
+  commentId: Overload:Textify.General.TextTools.GetEnclosedWordFromIndex
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetEnclosedWordFromIndex
+  nameWithType: TextTools.GetEnclosedWordFromIndex
 - uid: Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)
   name: GetWrappedSentences(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_
