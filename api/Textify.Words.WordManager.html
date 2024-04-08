@@ -99,20 +99,38 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWord.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWord%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWord_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWord(Textify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L79">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L57">View Source</a>
   </span>
   <a id="Textify_Words_WordManager_GetRandomWord_" data-uid="Textify.Words.WordManager.GetRandomWord*"></a>
-  <h4 id="Textify_Words_WordManager_GetRandomWord" data-uid="Textify.Words.WordManager.GetRandomWord">GetRandomWord()</h4>
+  <h4 id="Textify_Words_WordManager_GetRandomWord_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetRandomWord(Textify.Words.WordDataType)">GetRandomWord(WordDataType)</h4>
   <div class="markdown level1 summary"><p>Gets a random word</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetRandomWord()</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetRandomWord(WordDataType type = WordDataType.Words)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Specifies the word data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -131,51 +149,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordAsync.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordAsync_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordAsync(Textify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L126">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L106">View Source</a>
   </span>
   <a id="Textify_Words_WordManager_GetRandomWordAsync_" data-uid="Textify.Words.WordManager.GetRandomWordAsync*"></a>
-  <h4 id="Textify_Words_WordManager_GetRandomWordAsync" data-uid="Textify.Words.WordManager.GetRandomWordAsync">GetRandomWordAsync()</h4>
+  <h4 id="Textify_Words_WordManager_GetRandomWordAsync_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetRandomWordAsync(Textify.Words.WordDataType)">GetRandomWordAsync(WordDataType)</h4>
   <div class="markdown level1 summary"><p>Gets a random word</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;string&gt; GetRandomWordAsync()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td><p>A random word</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordConditional(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L93">View Source</a>
-  </span>
-  <a id="Textify_Words_WordManager_GetRandomWordConditional_" data-uid="Textify.Words.WordManager.GetRandomWordConditional*"></a>
-  <h4 id="Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_" data-uid="Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32)">GetRandomWordConditional(int, string, string, int)</h4>
-  <div class="markdown level1 summary"><p>Gets a random word conditionally</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetRandomWordConditional(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;string&gt; GetRandomWordAsync(WordDataType type = WordDataType.Words)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -188,96 +174,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">wordMaxLength</span></td>
-        <td><p>The maximum length of the word</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">wordStartsWith</span></td>
-        <td><p>The word starts with...</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">wordEndsWith</span></td>
-        <td><p>The word ends with...</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">wordExactLength</span></td>
-        <td><p>The exact length of the word</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>A random word</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L140">View Source</a>
-  </span>
-  <a id="Textify_Words_WordManager_GetRandomWordConditionalAsync_" data-uid="Textify.Words.WordManager.GetRandomWordConditionalAsync*"></a>
-  <h4 id="Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_" data-uid="Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32)">GetRandomWordConditionalAsync(int, string, string, int)</h4>
-  <div class="markdown level1 summary"><p>Gets a random word conditionally</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;string&gt; GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">wordMaxLength</span></td>
-        <td><p>The maximum length of the word</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">wordStartsWith</span></td>
-        <td><p>The word starts with...</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">wordEndsWith</span></td>
-        <td><p>The word ends with...</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">wordExactLength</span></td>
-        <td><p>The exact length of the word</p>
-</td>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -299,20 +198,186 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetWords.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetWords%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordConditional(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Int32%2CTextify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L69">View Source</a>
   </span>
+  <a id="Textify_Words_WordManager_GetRandomWordConditional_" data-uid="Textify.Words.WordManager.GetRandomWordConditional*"></a>
+  <h4 id="Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)">GetRandomWordConditional(int, string, string, int, WordDataType)</h4>
+  <div class="markdown level1 summary"><p>Gets a random word conditionally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetRandomWordConditional(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">wordMaxLength</span></td>
+        <td><p>The maximum length of the word</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">wordStartsWith</span></td>
+        <td><p>The word starts with...</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">wordEndsWith</span></td>
+        <td><p>The word ends with...</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">wordExactLength</span></td>
+        <td><p>The exact length of the word</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Specifies the word data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A random word</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Int32%2CTextify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L121">View Source</a>
+  </span>
+  <a id="Textify_Words_WordManager_GetRandomWordConditionalAsync_" data-uid="Textify.Words.WordManager.GetRandomWordConditionalAsync*"></a>
+  <h4 id="Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)">GetRandomWordConditionalAsync(int, string, string, int, WordDataType)</h4>
+  <div class="markdown level1 summary"><p>Gets a random word conditionally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;string&gt; GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">wordMaxLength</span></td>
+        <td><p>The maximum length of the word</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">wordStartsWith</span></td>
+        <td><p>The word starts with...</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">wordEndsWith</span></td>
+        <td><p>The word ends with...</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">wordExactLength</span></td>
+        <td><p>The exact length of the word</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Specifies the word data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><p>A random word</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetWords_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetWords(Textify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L42">View Source</a>
+  </span>
   <a id="Textify_Words_WordManager_GetWords_" data-uid="Textify.Words.WordManager.GetWords*"></a>
-  <h4 id="Textify_Words_WordManager_GetWords" data-uid="Textify.Words.WordManager.GetWords">GetWords()</h4>
+  <h4 id="Textify_Words_WordManager_GetWords_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetWords(Textify.Words.WordDataType)">GetWords(WordDataType)</h4>
   <div class="markdown level1 summary"><p>Gets all words</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string[] GetWords()</code></pre>
+    <pre><code class="lang-csharp hljs">public static string[] GetWords(WordDataType type = WordDataType.Words)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Specifies the word data type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -330,20 +395,37 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetWordsAsync.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetWordsAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_GetWordsAsync_Textify_Words_WordDataType_.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.GetWordsAsync(Textify.Words.WordDataType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L116">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L92">View Source</a>
   </span>
   <a id="Textify_Words_WordManager_GetWordsAsync_" data-uid="Textify.Words.WordManager.GetWordsAsync*"></a>
-  <h4 id="Textify_Words_WordManager_GetWordsAsync" data-uid="Textify.Words.WordManager.GetWordsAsync">GetWordsAsync()</h4>
+  <h4 id="Textify_Words_WordManager_GetWordsAsync_Textify_Words_WordDataType_" data-uid="Textify.Words.WordManager.GetWordsAsync(Textify.Words.WordDataType)">GetWordsAsync(WordDataType)</h4>
   <div class="markdown level1 summary"><p>Gets all words</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;string[]&gt; GetWordsAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;string[]&gt; GetWordsAsync(WordDataType type = WordDataType.Words)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Textify.Words.WordDataType.html">WordDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
@@ -355,53 +437,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_InitializeWords.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.InitializeWords%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L42">View Source</a>
-  </span>
-  <a id="Textify_Words_WordManager_InitializeWords_" data-uid="Textify.Words.WordManager.InitializeWords*"></a>
-  <h4 id="Textify_Words_WordManager_InitializeWords" data-uid="Textify.Words.WordManager.InitializeWords">InitializeWords()</h4>
-  <div class="markdown level1 summary"><p>Initializes the words. Does nothing if already downloaded.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InitializeWords()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager_InitializeWordsAsync.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager.InitializeWordsAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L55">View Source</a>
-  </span>
-  <a id="Textify_Words_WordManager_InitializeWordsAsync_" data-uid="Textify.Words.WordManager.InitializeWordsAsync*"></a>
-  <h4 id="Textify_Words_WordManager_InitializeWordsAsync" data-uid="Textify.Words.WordManager.InitializeWordsAsync">InitializeWordsAsync()</h4>
-  <div class="markdown level1 summary"><p>Initializes the words. Does nothing if already downloaded.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task InitializeWordsAsync()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -418,7 +453,7 @@
                     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Words_WordManager.md&amp;value=---%0Auid%3A%20Textify.Words.WordManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/Words/WordManager.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

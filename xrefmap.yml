@@ -1,18 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Textify.Data.DataRes
-  name: Textify.Data.DataRes
-  href: api/Textify.Data.DataRes.html
-  commentId: N:Textify.Data.DataRes
-  fullName: Textify.Data.DataRes
-  nameWithType: Textify.Data.DataRes
-- uid: Textify.Data.DataRes.WordsData
-  name: WordsData
-  href: api/Textify.Data.DataRes.WordsData.html
-  commentId: T:Textify.Data.DataRes.WordsData
-  fullName: Textify.Data.DataRes.WordsData
-  nameWithType: WordsData
 - uid: Textify.General
   name: Textify.General
   href: api/Textify.General.html
@@ -740,15 +728,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease
   nameWithType: TextTools.SplitEncloseDoubleQuotesNoRelease
-- uid: Textify.General.TextTools.SplitNewLines(System.String)
-  name: SplitNewLines(string)
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitNewLines_System_String_
-  commentId: M:Textify.General.TextTools.SplitNewLines(System.String)
-  name.vb: SplitNewLines(String)
-  fullName: Textify.General.TextTools.SplitNewLines(string)
-  fullName.vb: Textify.General.TextTools.SplitNewLines(String)
-  nameWithType: TextTools.SplitNewLines(string)
-  nameWithType.vb: TextTools.SplitNewLines(String)
+- uid: Textify.General.TextTools.SplitNewLines(System.String,System.Boolean)
+  name: SplitNewLines(string, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitNewLines_System_String_System_Boolean_
+  commentId: M:Textify.General.TextTools.SplitNewLines(System.String,System.Boolean)
+  name.vb: SplitNewLines(String, Boolean)
+  fullName: Textify.General.TextTools.SplitNewLines(string, bool)
+  fullName.vb: Textify.General.TextTools.SplitNewLines(String, Boolean)
+  nameWithType: TextTools.SplitNewLines(string, bool)
+  nameWithType.vb: TextTools.SplitNewLines(String, Boolean)
 - uid: Textify.General.TextTools.SplitNewLines*
   name: SplitNewLines
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitNewLines_
@@ -3883,18 +3871,54 @@ references:
   commentId: N:Textify.Words
   fullName: Textify.Words
   nameWithType: Textify.Words
+- uid: Textify.Words.WordDataType
+  name: WordDataType
+  href: api/Textify.Words.WordDataType.html
+  commentId: T:Textify.Words.WordDataType
+  fullName: Textify.Words.WordDataType
+  nameWithType: WordDataType
+- uid: Textify.Words.WordDataType.BadWords
+  name: BadWords
+  href: api/Textify.Words.WordDataType.html#Textify_Words_WordDataType_BadWords
+  commentId: F:Textify.Words.WordDataType.BadWords
+  fullName: Textify.Words.WordDataType.BadWords
+  nameWithType: WordDataType.BadWords
+- uid: Textify.Words.WordDataType.Words
+  name: Words
+  href: api/Textify.Words.WordDataType.html#Textify_Words_WordDataType_Words
+  commentId: F:Textify.Words.WordDataType.Words
+  fullName: Textify.Words.WordDataType.Words
+  nameWithType: WordDataType.Words
+- uid: Textify.Words.WordDataType.WordsDirty
+  name: WordsDirty
+  href: api/Textify.Words.WordDataType.html#Textify_Words_WordDataType_WordsDirty
+  commentId: F:Textify.Words.WordDataType.WordsDirty
+  fullName: Textify.Words.WordDataType.WordsDirty
+  nameWithType: WordDataType.WordsDirty
+- uid: Textify.Words.WordDataType.WordsDirtyFull
+  name: WordsDirtyFull
+  href: api/Textify.Words.WordDataType.html#Textify_Words_WordDataType_WordsDirtyFull
+  commentId: F:Textify.Words.WordDataType.WordsDirtyFull
+  fullName: Textify.Words.WordDataType.WordsDirtyFull
+  nameWithType: WordDataType.WordsDirtyFull
+- uid: Textify.Words.WordDataType.WordsFull
+  name: WordsFull
+  href: api/Textify.Words.WordDataType.html#Textify_Words_WordDataType_WordsFull
+  commentId: F:Textify.Words.WordDataType.WordsFull
+  fullName: Textify.Words.WordDataType.WordsFull
+  nameWithType: WordDataType.WordsFull
 - uid: Textify.Words.WordManager
   name: WordManager
   href: api/Textify.Words.WordManager.html
   commentId: T:Textify.Words.WordManager
   fullName: Textify.Words.WordManager
   nameWithType: WordManager
-- uid: Textify.Words.WordManager.GetRandomWord
-  name: GetRandomWord()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWord
-  commentId: M:Textify.Words.WordManager.GetRandomWord
-  fullName: Textify.Words.WordManager.GetRandomWord()
-  nameWithType: WordManager.GetRandomWord()
+- uid: Textify.Words.WordManager.GetRandomWord(Textify.Words.WordDataType)
+  name: GetRandomWord(WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWord_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetRandomWord(Textify.Words.WordDataType)
+  fullName: Textify.Words.WordManager.GetRandomWord(Textify.Words.WordDataType)
+  nameWithType: WordManager.GetRandomWord(WordDataType)
 - uid: Textify.Words.WordManager.GetRandomWord*
   name: GetRandomWord
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWord_
@@ -3902,12 +3926,12 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetRandomWord
   nameWithType: WordManager.GetRandomWord
-- uid: Textify.Words.WordManager.GetRandomWordAsync
-  name: GetRandomWordAsync()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordAsync
-  commentId: M:Textify.Words.WordManager.GetRandomWordAsync
-  fullName: Textify.Words.WordManager.GetRandomWordAsync()
-  nameWithType: WordManager.GetRandomWordAsync()
+- uid: Textify.Words.WordManager.GetRandomWordAsync(Textify.Words.WordDataType)
+  name: GetRandomWordAsync(WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordAsync_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetRandomWordAsync(Textify.Words.WordDataType)
+  fullName: Textify.Words.WordManager.GetRandomWordAsync(Textify.Words.WordDataType)
+  nameWithType: WordManager.GetRandomWordAsync(WordDataType)
 - uid: Textify.Words.WordManager.GetRandomWordAsync*
   name: GetRandomWordAsync
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordAsync_
@@ -3915,15 +3939,15 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetRandomWordAsync
   nameWithType: WordManager.GetRandomWordAsync
-- uid: Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32)
-  name: GetRandomWordConditional(int, string, string, int)
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_
-  commentId: M:Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32)
-  name.vb: GetRandomWordConditional(Integer, String, String, Integer)
-  fullName: Textify.Words.WordManager.GetRandomWordConditional(int, string, string, int)
-  fullName.vb: Textify.Words.WordManager.GetRandomWordConditional(Integer, String, String, Integer)
-  nameWithType: WordManager.GetRandomWordConditional(int, string, string, int)
-  nameWithType.vb: WordManager.GetRandomWordConditional(Integer, String, String, Integer)
+- uid: Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)
+  name: GetRandomWordConditional(int, string, string, int, WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditional_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetRandomWordConditional(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)
+  name.vb: GetRandomWordConditional(Integer, String, String, Integer, WordDataType)
+  fullName: Textify.Words.WordManager.GetRandomWordConditional(int, string, string, int, Textify.Words.WordDataType)
+  fullName.vb: Textify.Words.WordManager.GetRandomWordConditional(Integer, String, String, Integer, Textify.Words.WordDataType)
+  nameWithType: WordManager.GetRandomWordConditional(int, string, string, int, WordDataType)
+  nameWithType.vb: WordManager.GetRandomWordConditional(Integer, String, String, Integer, WordDataType)
 - uid: Textify.Words.WordManager.GetRandomWordConditional*
   name: GetRandomWordConditional
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditional_
@@ -3931,15 +3955,15 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetRandomWordConditional
   nameWithType: WordManager.GetRandomWordConditional
-- uid: Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32)
-  name: GetRandomWordConditionalAsync(int, string, string, int)
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_
-  commentId: M:Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32)
-  name.vb: GetRandomWordConditionalAsync(Integer, String, String, Integer)
-  fullName: Textify.Words.WordManager.GetRandomWordConditionalAsync(int, string, string, int)
-  fullName.vb: Textify.Words.WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer)
-  nameWithType: WordManager.GetRandomWordConditionalAsync(int, string, string, int)
-  nameWithType.vb: WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer)
+- uid: Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)
+  name: GetRandomWordConditionalAsync(int, string, string, int, WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditionalAsync_System_Int32_System_String_System_String_System_Int32_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetRandomWordConditionalAsync(System.Int32,System.String,System.String,System.Int32,Textify.Words.WordDataType)
+  name.vb: GetRandomWordConditionalAsync(Integer, String, String, Integer, WordDataType)
+  fullName: Textify.Words.WordManager.GetRandomWordConditionalAsync(int, string, string, int, Textify.Words.WordDataType)
+  fullName.vb: Textify.Words.WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer, Textify.Words.WordDataType)
+  nameWithType: WordManager.GetRandomWordConditionalAsync(int, string, string, int, WordDataType)
+  nameWithType.vb: WordManager.GetRandomWordConditionalAsync(Integer, String, String, Integer, WordDataType)
 - uid: Textify.Words.WordManager.GetRandomWordConditionalAsync*
   name: GetRandomWordConditionalAsync
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetRandomWordConditionalAsync_
@@ -3947,12 +3971,12 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetRandomWordConditionalAsync
   nameWithType: WordManager.GetRandomWordConditionalAsync
-- uid: Textify.Words.WordManager.GetWords
-  name: GetWords()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWords
-  commentId: M:Textify.Words.WordManager.GetWords
-  fullName: Textify.Words.WordManager.GetWords()
-  nameWithType: WordManager.GetWords()
+- uid: Textify.Words.WordManager.GetWords(Textify.Words.WordDataType)
+  name: GetWords(WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWords_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetWords(Textify.Words.WordDataType)
+  fullName: Textify.Words.WordManager.GetWords(Textify.Words.WordDataType)
+  nameWithType: WordManager.GetWords(WordDataType)
 - uid: Textify.Words.WordManager.GetWords*
   name: GetWords
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWords_
@@ -3960,12 +3984,12 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetWords
   nameWithType: WordManager.GetWords
-- uid: Textify.Words.WordManager.GetWordsAsync
-  name: GetWordsAsync()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWordsAsync
-  commentId: M:Textify.Words.WordManager.GetWordsAsync
-  fullName: Textify.Words.WordManager.GetWordsAsync()
-  nameWithType: WordManager.GetWordsAsync()
+- uid: Textify.Words.WordManager.GetWordsAsync(Textify.Words.WordDataType)
+  name: GetWordsAsync(WordDataType)
+  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWordsAsync_Textify_Words_WordDataType_
+  commentId: M:Textify.Words.WordManager.GetWordsAsync(Textify.Words.WordDataType)
+  fullName: Textify.Words.WordManager.GetWordsAsync(Textify.Words.WordDataType)
+  nameWithType: WordManager.GetWordsAsync(WordDataType)
 - uid: Textify.Words.WordManager.GetWordsAsync*
   name: GetWordsAsync
   href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_GetWordsAsync_
@@ -3973,29 +3997,3 @@ references:
   isSpec: "True"
   fullName: Textify.Words.WordManager.GetWordsAsync
   nameWithType: WordManager.GetWordsAsync
-- uid: Textify.Words.WordManager.InitializeWords
-  name: InitializeWords()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWords
-  commentId: M:Textify.Words.WordManager.InitializeWords
-  fullName: Textify.Words.WordManager.InitializeWords()
-  nameWithType: WordManager.InitializeWords()
-- uid: Textify.Words.WordManager.InitializeWords*
-  name: InitializeWords
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWords_
-  commentId: Overload:Textify.Words.WordManager.InitializeWords
-  isSpec: "True"
-  fullName: Textify.Words.WordManager.InitializeWords
-  nameWithType: WordManager.InitializeWords
-- uid: Textify.Words.WordManager.InitializeWordsAsync
-  name: InitializeWordsAsync()
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWordsAsync
-  commentId: M:Textify.Words.WordManager.InitializeWordsAsync
-  fullName: Textify.Words.WordManager.InitializeWordsAsync()
-  nameWithType: WordManager.InitializeWordsAsync()
-- uid: Textify.Words.WordManager.InitializeWordsAsync*
-  name: InitializeWordsAsync
-  href: api/Textify.Words.WordManager.html#Textify_Words_WordManager_InitializeWordsAsync_
-  commentId: Overload:Textify.Words.WordManager.InitializeWordsAsync
-  isSpec: "True"
-  fullName: Textify.Words.WordManager.InitializeWordsAsync
-  nameWithType: WordManager.InitializeWordsAsync
