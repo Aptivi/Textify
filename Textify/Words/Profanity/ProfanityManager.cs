@@ -62,27 +62,8 @@ namespace Textify.Words.Profanity
                     // Load the list of known words
                     var knownWords = WordManager.GetWords(WordDataType.WordsFull);
 
-                    // Calculate the distance between two word spaces
-                    int distance = 0, idx;
-                    for (idx = match.Index; idx > 0; idx--)
-                    {
-                        var character = sentence[idx];
-                        if (!char.IsLetterOrDigit(character))
-                        {
-                            idx++;
-                            break;
-                        }
-                    }
-                    for (int distanceIdx = idx; distanceIdx < sentence.Length; distanceIdx++)
-                    {
-                        var character = sentence[distanceIdx];
-                        if (!char.IsLetterOrDigit(character))
-                            break;
-                        distance++;
-                    }
-
-                    // Now, get a word from these two values and compare it to the list of known words
-                    string word = sentence.Substring(idx, distance);
+                    // Get a word from these two values and compare it to the list of known words
+                    string word = sentence.GetEnclosedWordFromIndex(match.Index);
                     if (knownWords.Any((knownWord) => word.Equals(knownWord, StringComparison.OrdinalIgnoreCase)))
                         continue;
                 }

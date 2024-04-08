@@ -774,6 +774,34 @@ namespace Textify.Tests.General
             string TargetString = "Reconnecting your network to the work connection...";
             TargetString.ToTitleCase().ShouldBe("Reconnecting Your Network to the Work Connection...");
         }
+
+        /// <summary>
+        /// Tests getting enclosed word from index that represents a start of a substring (without symbols)
+        /// </summary>
+        [TestMethod]
+        [DataRow("", 0, "")]
+        [DataRow("Hello world!", 2, "Hello")]
+        [DataRow("Hello world!", 8, "world")]
+        [Description("Querying")]
+        public void TestGetEnclosedWordFromIndex(string text, int idx, string expected)
+        {
+            string actual = text.GetEnclosedWordFromIndex(idx);
+            actual.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting enclosed word from index that represents a start of a substring (with symbols)
+        /// </summary>
+        [TestMethod]
+        [DataRow("", 0, "")]
+        [DataRow("Hello world!", 2, "Hello")]
+        [DataRow("Hello world!", 8, "world!")]
+        [Description("Querying")]
+        public void TestGetEnclosedWordFromIndexSymbols(string text, int idx, string expected)
+        {
+            string actual = text.GetEnclosedWordFromIndex(idx, true);
+            actual.ShouldBe(expected);
+        }
     }
 
 }

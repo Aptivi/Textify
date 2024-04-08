@@ -770,5 +770,41 @@ namespace Textify.General
             // Form a final string
             return string.Join(" ", words);
         }
+
+        /// <summary>
+        /// Gets enclosed word from index that represents a start of a substring
+        /// </summary>
+        /// <param name="target">Target string that contains a substring</param>
+        /// <param name="sourceIdx">Target string index that usually starts a substring</param>
+        /// <param name="includeSymbols">Whether to include symbols, such as punctuation, in the search or not</param>
+        /// <returns>The enclosed word from the specified index</returns>
+        public static string GetEnclosedWordFromIndex(this string target, int sourceIdx, bool includeSymbols = false)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            // Calculate the distance between two word spaces
+            int distance = 0, idx;
+            for (idx = sourceIdx; idx > 0; idx--)
+            {
+                var character = target[idx];
+                if ((!includeSymbols && !char.IsLetterOrDigit(character)) || (includeSymbols && char.IsWhiteSpace(character)))
+                {
+                    idx++;
+                    break;
+                }
+            }
+            for (int distanceIdx = idx; distanceIdx < target.Length; distanceIdx++)
+            {
+                var character = target[distanceIdx];
+                if ((!includeSymbols && !char.IsLetterOrDigit(character)) || (includeSymbols && char.IsWhiteSpace(character)))
+                    break;
+                distance++;
+            }
+
+            // Now, get a word from these two values.
+            string word = target.Substring(idx, distance);
+            return word;
+        }
     }
 }
