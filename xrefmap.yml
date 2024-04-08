@@ -422,6 +422,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.EndsWithAnyOf
   nameWithType: TextTools.EndsWithAnyOf
+- uid: Textify.General.TextTools.Escape(System.String)
+  name: Escape(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Escape_System_String_
+  commentId: M:Textify.General.TextTools.Escape(System.String)
+  name.vb: Escape(String)
+  fullName: Textify.General.TextTools.Escape(string)
+  fullName.vb: Textify.General.TextTools.Escape(String)
+  nameWithType: TextTools.Escape(string)
+  nameWithType.vb: TextTools.Escape(String)
+- uid: Textify.General.TextTools.Escape*
+  name: Escape
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Escape_
+  commentId: Overload:Textify.General.TextTools.Escape
+  isSpec: "True"
+  fullName: Textify.General.TextTools.Escape
+  nameWithType: TextTools.Escape
 - uid: Textify.General.TextTools.FormatString(System.String,System.Object[])
   name: FormatString(string, params object[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_FormatString_System_String_System_Object___
@@ -840,6 +856,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.TruncateString
   nameWithType: TextTools.TruncateString
+- uid: Textify.General.TextTools.Unescape(System.String)
+  name: Unescape(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Unescape_System_String_
+  commentId: M:Textify.General.TextTools.Unescape(System.String)
+  name.vb: Unescape(String)
+  fullName: Textify.General.TextTools.Unescape(string)
+  fullName.vb: Textify.General.TextTools.Unescape(String)
+  nameWithType: TextTools.Unescape(string)
+  nameWithType.vb: TextTools.Unescape(String)
+- uid: Textify.General.TextTools.Unescape*
+  name: Unescape
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_Unescape_
+  commentId: Overload:Textify.General.TextTools.Unescape
+  isSpec: "True"
+  fullName: Textify.General.TextTools.Unescape
+  nameWithType: TextTools.Unescape
 - uid: Textify.General.TextTools.UpperFirst(System.String)
   name: UpperFirst(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_UpperFirst_System_String_
