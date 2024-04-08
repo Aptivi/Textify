@@ -132,17 +132,22 @@
   "api/Textify.Words.Profanity.ProfanityManager.html": {
     "href": "api/Textify.Words.Profanity.ProfanityManager.html",
     "title": "Class ProfanityManager | Textify API - Aptivi",
-    "keywords": "Class ProfanityManager Profanity management class Inheritance object ProfanityManager Namespace: Textify.Words.Profanity Assembly: Textify.dll Syntax public static class ProfanityManager Methods | Edit this page View Source GetProfanities(string, bool) Gets a list of profane words in a sentence Declaration public static ProfanityOccurrenceInfo[] GetProfanities(string sentence, bool thorough = false) Parameters Type Name Description string sentence A sentence which may contain profanity bool thorough Whether to analyze the sentence thoroughly or not Returns Type Description ProfanityOccurrenceInfo[] An array of profanity occurrence info"
+    "keywords": "Class ProfanityManager Profanity management class Inheritance object ProfanityManager Namespace: Textify.Words.Profanity Assembly: Textify.dll Syntax public static class ProfanityManager Methods | Edit this page View Source GetProfanities(string, ProfanitySearchType) Gets a list of profane words in a sentence Declaration public static ProfanityOccurrenceInfo[] GetProfanities(string sentence, ProfanitySearchType searchType = ProfanitySearchType.Shallow) Parameters Type Name Description string sentence A sentence which may contain profanity ProfanitySearchType searchType Specifies how to analyze the sentence Returns Type Description ProfanityOccurrenceInfo[] An array of profanity occurrence info"
   },
   "api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html": {
     "href": "api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html",
     "title": "Class ProfanityOccurrenceInfo | Textify API - Aptivi",
     "keywords": "Class ProfanityOccurrenceInfo Profanity occurrence info class Inheritance object ProfanityOccurrenceInfo Namespace: Textify.Words.Profanity Assembly: Textify.dll Syntax public class ProfanityOccurrenceInfo Properties | Edit this page View Source ProfaneWord The profane word in which the profanity manager matched successfully Declaration public string ProfaneWord { get; } Property Value Type Description string | Edit this page View Source SourceWord The source word containing either a profane word or being a profane word Declaration public string SourceWord { get; } Property Value Type Description string"
   },
+  "api/Textify.Words.Profanity.ProfanitySearchType.html": {
+    "href": "api/Textify.Words.Profanity.ProfanitySearchType.html",
+    "title": "Enum ProfanitySearchType | Textify API - Aptivi",
+    "keywords": "Enum ProfanitySearchType Profanity search type Namespace: Textify.Words.Profanity Assembly: Textify.dll Syntax public enum ProfanitySearchType Fields Name Description Mitigated Mitigated partial searching. May not find swearing that has its characters separated by whitespace. Partial Partial searching. May cause legitimate words to be found, such as Scunthorpe. Shallow Shallow searching. May not find swearing embedded in two or more words and/or separated by whitespace. Thorough Thorough searching. May not find swearing embedded in two or more words."
+  },
   "api/Textify.Words.Profanity.html": {
     "href": "api/Textify.Words.Profanity.html",
     "title": "Namespace Textify.Words.Profanity | Textify API - Aptivi",
-    "keywords": "Namespace Textify.Words.Profanity Classes ProfanityManager Profanity management class ProfanityOccurrenceInfo Profanity occurrence info class"
+    "keywords": "Namespace Textify.Words.Profanity Classes ProfanityManager Profanity management class ProfanityOccurrenceInfo Profanity occurrence info class Enums ProfanitySearchType Profanity search type"
   },
   "api/Textify.Words.WordDataType.html": {
     "href": "api/Textify.Words.WordDataType.html",

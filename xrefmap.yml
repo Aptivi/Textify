@@ -3883,15 +3883,15 @@ references:
   commentId: T:Textify.Words.Profanity.ProfanityManager
   fullName: Textify.Words.Profanity.ProfanityManager
   nameWithType: ProfanityManager
-- uid: Textify.Words.Profanity.ProfanityManager.GetProfanities(System.String,System.Boolean)
-  name: GetProfanities(string, bool)
-  href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_GetProfanities_System_String_System_Boolean_
-  commentId: M:Textify.Words.Profanity.ProfanityManager.GetProfanities(System.String,System.Boolean)
-  name.vb: GetProfanities(String, Boolean)
-  fullName: Textify.Words.Profanity.ProfanityManager.GetProfanities(string, bool)
-  fullName.vb: Textify.Words.Profanity.ProfanityManager.GetProfanities(String, Boolean)
-  nameWithType: ProfanityManager.GetProfanities(string, bool)
-  nameWithType.vb: ProfanityManager.GetProfanities(String, Boolean)
+- uid: Textify.Words.Profanity.ProfanityManager.GetProfanities(System.String,Textify.Words.Profanity.ProfanitySearchType)
+  name: GetProfanities(string, ProfanitySearchType)
+  href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_GetProfanities_System_String_Textify_Words_Profanity_ProfanitySearchType_
+  commentId: M:Textify.Words.Profanity.ProfanityManager.GetProfanities(System.String,Textify.Words.Profanity.ProfanitySearchType)
+  name.vb: GetProfanities(String, ProfanitySearchType)
+  fullName: Textify.Words.Profanity.ProfanityManager.GetProfanities(string, Textify.Words.Profanity.ProfanitySearchType)
+  fullName.vb: Textify.Words.Profanity.ProfanityManager.GetProfanities(String, Textify.Words.Profanity.ProfanitySearchType)
+  nameWithType: ProfanityManager.GetProfanities(string, ProfanitySearchType)
+  nameWithType.vb: ProfanityManager.GetProfanities(String, ProfanitySearchType)
 - uid: Textify.Words.Profanity.ProfanityManager.GetProfanities*
   name: GetProfanities
   href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_GetProfanities_
@@ -3931,6 +3931,36 @@ references:
   isSpec: "True"
   fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceWord
   nameWithType: ProfanityOccurrenceInfo.SourceWord
+- uid: Textify.Words.Profanity.ProfanitySearchType
+  name: ProfanitySearchType
+  href: api/Textify.Words.Profanity.ProfanitySearchType.html
+  commentId: T:Textify.Words.Profanity.ProfanitySearchType
+  fullName: Textify.Words.Profanity.ProfanitySearchType
+  nameWithType: ProfanitySearchType
+- uid: Textify.Words.Profanity.ProfanitySearchType.Mitigated
+  name: Mitigated
+  href: api/Textify.Words.Profanity.ProfanitySearchType.html#Textify_Words_Profanity_ProfanitySearchType_Mitigated
+  commentId: F:Textify.Words.Profanity.ProfanitySearchType.Mitigated
+  fullName: Textify.Words.Profanity.ProfanitySearchType.Mitigated
+  nameWithType: ProfanitySearchType.Mitigated
+- uid: Textify.Words.Profanity.ProfanitySearchType.Partial
+  name: Partial
+  href: api/Textify.Words.Profanity.ProfanitySearchType.html#Textify_Words_Profanity_ProfanitySearchType_Partial
+  commentId: F:Textify.Words.Profanity.ProfanitySearchType.Partial
+  fullName: Textify.Words.Profanity.ProfanitySearchType.Partial
+  nameWithType: ProfanitySearchType.Partial
+- uid: Textify.Words.Profanity.ProfanitySearchType.Shallow
+  name: Shallow
+  href: api/Textify.Words.Profanity.ProfanitySearchType.html#Textify_Words_Profanity_ProfanitySearchType_Shallow
+  commentId: F:Textify.Words.Profanity.ProfanitySearchType.Shallow
+  fullName: Textify.Words.Profanity.ProfanitySearchType.Shallow
+  nameWithType: ProfanitySearchType.Shallow
+- uid: Textify.Words.Profanity.ProfanitySearchType.Thorough
+  name: Thorough
+  href: api/Textify.Words.Profanity.ProfanitySearchType.html#Textify_Words_Profanity_ProfanitySearchType_Thorough
+  commentId: F:Textify.Words.Profanity.ProfanitySearchType.Thorough
+  fullName: Textify.Words.Profanity.ProfanitySearchType.Thorough
+  nameWithType: ProfanitySearchType.Thorough
 - uid: Textify.Words.WordDataType
   name: WordDataType
   href: api/Textify.Words.WordDataType.html
