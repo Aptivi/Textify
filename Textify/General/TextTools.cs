@@ -786,16 +786,10 @@ namespace Textify.General
                 throw new TextifyException("The target may not be null");
 
             // Calculate the distance between two word spaces
-            int distance = 0, idx;
-            for (idx = sourceIdx; idx > 0; idx--)
-            {
-                var character = target[idx];
-                if ((!includeSymbols && !char.IsLetterOrDigit(character)) || (includeSymbols && char.IsWhiteSpace(character)))
-                {
-                    idx++;
-                    break;
-                }
-            }
+            int distance = 0;
+            int idx = GetIndexOfEnclosedWordFromIndex(target, sourceIdx, includeSymbols);
+            if (idx < 0)
+                return "";
             for (int distanceIdx = idx; distanceIdx < target.Length; distanceIdx++)
             {
                 var character = target[distanceIdx];
@@ -838,20 +832,22 @@ namespace Textify.General
         }
 
         /// <summary>
-        /// Gets enclosed word from index that represents a start of a substring
+        /// Gets the index of the enclosed word from index that represents a start of a substring
         /// </summary>
         /// <param name="target">Target string that contains a substring</param>
         /// <param name="sourceIdx">Target string index that usually starts a substring</param>
         /// <param name="includeSymbols">Whether to include symbols, such as punctuation, in the search or not</param>
-        /// <returns>The enclosed word from the specified index</returns>
+        /// <returns>The index of the enclosed enclosed word from the specified index, or -1 if the string is empty</returns>
         public static int GetIndexOfEnclosedWordFromIndex(this string target, int sourceIdx, bool includeSymbols = false)
         {
             if (target is null)
                 throw new TextifyException("The target may not be null");
+            if (string.IsNullOrEmpty(target))
+                return -1;
 
             // Calculate the word begin index
             int idx;
-            for (idx = sourceIdx; idx > 0; idx--)
+            for (idx = sourceIdx; idx >= 0; idx--)
             {
                 var character = target[idx];
                 if ((!includeSymbols && !char.IsLetterOrDigit(character)) || (includeSymbols && char.IsWhiteSpace(character)))
@@ -860,6 +856,8 @@ namespace Textify.General
                     break;
                 }
             }
+            if (idx < 0)
+                idx = 0;
             return idx;
         }
     }

@@ -830,6 +830,34 @@ namespace Textify.Tests.General
             string actual = text.Unescape();
             actual.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests getting the index of the enclosed word from index that represents a start of a substring (without symbols)
+        /// </summary>
+        [TestMethod]
+        [DataRow("", 0, -1)]
+        [DataRow("!Hello world!", 2, 1)]
+        [DataRow("Hello world!", 8, 6)]
+        [Description("Querying")]
+        public void TestGetIndexOfEnclosedWordFromIndex(string text, int idx, int expected)
+        {
+            int actual = text.GetIndexOfEnclosedWordFromIndex(idx);
+            actual.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting the index of the enclosed word from index that represents a start of a substring (with symbols)
+        /// </summary>
+        [TestMethod]
+        [DataRow("", 0, -1)]
+        [DataRow("!Hello world!", 2, 0)]
+        [DataRow("Hello world!", 8, 6)]
+        [Description("Querying")]
+        public void TestGetIndexOfEnclosedWordFromIndexSymbols(string text, int idx, int expected)
+        {
+            int actual = text.GetIndexOfEnclosedWordFromIndex(idx, true);
+            actual.ShouldBe(expected);
+        }
     }
 
 }
