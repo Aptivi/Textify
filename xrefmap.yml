@@ -3884,6 +3884,22 @@ references:
   isSpec: "True"
   fullName: Textify.Versioning.SemVer.GetHashCode
   nameWithType: SemVer.GetHashCode
+- uid: Textify.Versioning.SemVer.HasRevision(System.String)
+  name: HasRevision(string)
+  href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_HasRevision_System_String_
+  commentId: M:Textify.Versioning.SemVer.HasRevision(System.String)
+  name.vb: HasRevision(String)
+  fullName: Textify.Versioning.SemVer.HasRevision(string)
+  fullName.vb: Textify.Versioning.SemVer.HasRevision(String)
+  nameWithType: SemVer.HasRevision(string)
+  nameWithType.vb: SemVer.HasRevision(String)
+- uid: Textify.Versioning.SemVer.HasRevision*
+  name: HasRevision
+  href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_HasRevision_
+  commentId: Overload:Textify.Versioning.SemVer.HasRevision
+  isSpec: "True"
+  fullName: Textify.Versioning.SemVer.HasRevision
+  nameWithType: SemVer.HasRevision
 - uid: Textify.Versioning.SemVer.IsNewerThan(Textify.Versioning.SemVer)
   name: IsNewerThan(SemVer)
   href: api/Textify.Versioning.SemVer.html#Textify_Versioning_SemVer_IsNewerThan_Textify_Versioning_SemVer_
