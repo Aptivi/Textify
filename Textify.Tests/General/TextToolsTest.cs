@@ -20,6 +20,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Textify.General;
 
@@ -29,6 +31,40 @@ namespace Textify.Tests.General
     [TestClass]
     public class TextToolsTest
     {
+        public static IEnumerable<object[]> LrpData
+        {
+            get
+            {
+                return
+                [
+                    ["", TestTools.GetDictionaryFrom([])],
+                    ["H", TestTools.GetDictionaryFrom(new() { { 1, 1 } })],
+                    ["He", TestTools.GetDictionaryFrom(new() { { 1, 2 }, { 2, 1 } })],
+                    ["Hel", TestTools.GetDictionaryFrom(new() { { 1, 3 }, { 2, 3 }, { 3, 1 } })],
+                    ["Hell", TestTools.GetDictionaryFrom(new() { { 1, 4 }, { 2, 2 }, { 3, 4 }, { 4, 1 } })],
+                    ["Hello", TestTools.GetDictionaryFrom(new() { { 1, 5 }, { 2, 5 }, { 3, 5 }, { 4, 5 }, { 5, 1 } })],
+                    ["Hello!", TestTools.GetDictionaryFrom(new() { { 1, 6 }, { 2, 3 }, { 3, 2 }, { 4, 3 }, { 5, 6 }, { 6, 1 } })],
+                ];
+            }
+        }
+        
+        public static IEnumerable<object[]> LrpDataTwice
+        {
+            get
+            {
+                return
+                [
+                    ["", TestTools.GetDictionaryFrom([])],
+                    ["H", TestTools.GetDictionaryFrom(new() { { 1, 1 }, { 2, 1 } })],
+                    ["He", TestTools.GetDictionaryFrom(new() { { 1, 2 }, { 2, 1 }, { 3, 2 }, { 4, 1 } })],
+                    ["Hel", TestTools.GetDictionaryFrom(new() { { 1, 3 }, { 2, 3 }, { 3, 1 }, { 4, 3 }, { 5, 3 }, { 6, 1 } })],
+                    ["Hell", TestTools.GetDictionaryFrom(new() { { 1, 4 }, { 2, 2 }, { 3, 4 }, { 4, 1 }, { 5, 4 }, { 6, 2 }, { 7, 4 }, { 8, 1 } })],
+                    ["Hello", TestTools.GetDictionaryFrom(new() { { 1, 5 }, { 2, 5 }, { 3, 5 }, { 4, 5 }, { 5, 1 }, { 6, 5 }, { 7, 5 }, { 8, 5 }, { 9, 5 }, { 10, 1 } })],
+                    ["Hello!", TestTools.GetDictionaryFrom(new() { { 1, 6 }, { 2, 3 }, { 3, 2 }, { 4, 3 }, { 5, 6 }, { 6, 1 }, { 7, 6 }, { 8, 3 }, { 9, 2 }, { 10, 3 }, { 11, 6 }, { 12, 1 } })],
+                ];
+            }
+        }
+
         /// <summary>
         /// Tests replacing last occurrence of a string
         /// </summary>
@@ -857,6 +893,123 @@ namespace Textify.Tests.General
         {
             int actual = text.GetIndexOfEnclosedWordFromIndex(idx, true);
             actual.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP from string
+        /// </summary>
+        [TestMethod]
+        [DataRow("", 1, 0)]
+        [DataRow("", 2, 0)]
+        [DataRow("", 3, 0)]
+        [DataRow("", 10, 0)]
+        [DataRow("H", 1, 1)]
+        [DataRow("H", 2, 1)]
+        [DataRow("He", 1, 2)]
+        [DataRow("He", 2, 1)]
+        [DataRow("He", 3, 2)]
+        [DataRow("He", 4, 1)]
+        [DataRow("Hel", 1, 3)]
+        [DataRow("Hel", 2, 3)]
+        [DataRow("Hel", 3, 1)]
+        [DataRow("Hel", 4, 3)]
+        [DataRow("Hel", 5, 3)]
+        [DataRow("Hel", 6, 1)]
+        [DataRow("Hell", 1, 4)]
+        [DataRow("Hell", 2, 2)]
+        [DataRow("Hell", 3, 4)]
+        [DataRow("Hell", 4, 1)]
+        [DataRow("Hell", 5, 4)]
+        [DataRow("Hell", 6, 2)]
+        [DataRow("Hell", 7, 4)]
+        [DataRow("Hell", 8, 1)]
+        [DataRow("Hello", 1, 5)]
+        [DataRow("Hello", 2, 5)]
+        [DataRow("Hello", 3, 5)]
+        [DataRow("Hello", 4, 5)]
+        [DataRow("Hello", 5, 1)]
+        [DataRow("Hello", 6, 5)]
+        [DataRow("Hello", 7, 5)]
+        [DataRow("Hello", 8, 5)]
+        [DataRow("Hello", 9, 5)]
+        [DataRow("Hello", 10, 1)]
+        [DataRow("Hello!", 1, 6)]
+        [DataRow("Hello!", 2, 3)]
+        [DataRow("Hello!", 3, 2)]
+        [DataRow("Hello!", 4, 3)]
+        [DataRow("Hello!", 5, 6)]
+        [DataRow("Hello!", 6, 1)]
+        [DataRow("Hello!", 7, 6)]
+        [DataRow("Hello!", 8, 3)]
+        [DataRow("Hello!", 9, 2)]
+        [DataRow("Hello!", 10, 3)]
+        [DataRow("Hello!", 11, 6)]
+        [DataRow("Hello!", 12, 1)]
+        [Description("Querying")]
+        public void TestLRP(string target, int lrpSteps, int expected)
+        {
+            int lrp = target.GetLetterRepetitionPattern(lrpSteps);
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP table from string
+        /// </summary>
+        [TestMethod]
+        [DynamicData(nameof(LrpData))]
+        [Description("Querying")]
+        public void TestLRPTable(string target, ReadOnlyDictionary<int, int> expected)
+        {
+            var lrp = target.GetLetterRepetitionPatternTable();
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP table from string (twice)
+        /// </summary>
+        [TestMethod]
+        [DynamicData(nameof(LrpDataTwice))]
+        [Description("Querying")]
+        public void TestLRPTableTwice(string target, ReadOnlyDictionary<int, int> expected)
+        {
+            var lrp = target.GetLetterRepetitionPatternTable(true);
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting list of repeated letters without wiping the single letter occurrences
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestGetListOfRepeatedLettersNoWipe()
+        {
+            var repeated = "Hello!".GetListOfRepeatedLetters();
+            repeated.ShouldContainKey('H');
+            repeated['H'].ShouldBe(1);
+            repeated.ShouldContainKey('e');
+            repeated['e'].ShouldBe(1);
+            repeated.ShouldContainKey('l');
+            repeated['l'].ShouldBe(2);
+            repeated.ShouldContainKey('o');
+            repeated['o'].ShouldBe(1);
+            repeated.ShouldContainKey('!');
+            repeated['!'].ShouldBe(1);
+        }
+
+        /// <summary>
+        /// Tests getting list of repeated letters without wiping the single letter occurrences
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestGetListOfRepeatedLettersWipe()
+        {
+            var repeated = "Hello!".GetListOfRepeatedLetters(true);
+            repeated.ShouldNotContainKey('H');
+            repeated.ShouldNotContainKey('e');
+            repeated.ShouldContainKey('l');
+            repeated['l'].ShouldBe(2);
+            repeated.ShouldNotContainKey('o');
+            repeated.ShouldNotContainKey('!');
         }
     }
 

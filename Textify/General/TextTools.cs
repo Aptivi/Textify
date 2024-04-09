@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -859,6 +860,112 @@ namespace Textify.General
             if (idx < 0)
                 idx = 0;
             return idx;
+        }
+
+        /// <summary>
+        /// Gets the letter repetition pattern (LRP) that determines how many times the program needs to step "<paramref name="steps"/>" times on the string until it reaches the end of the string.
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="steps">Number of steps</param>
+        public static int GetLetterRepetitionPattern(this string target, int steps)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (steps <= 0)
+                throw new TextifyException("Can't get the letter repetition pattern with zero or negative number of steps.");
+            if (target.Length == 0)
+                return 0;
+
+            // Some variables
+            int length = target.Length;
+            int lastPosition = 0;
+            int repeatTimes = 0;
+
+            // The LRP formula requires a loop
+            while (true)
+            {
+                // Loop through the number of steps with the last position
+                int step = 0;
+                for (int i = lastPosition; i <= steps + lastPosition; i++)
+                {
+                    step = i;
+
+                    // Check to see if the number of steps exceeds the string length
+                    while (step > length)
+                        step -= length;
+                }
+
+                // Now, update the last position and increment the repeat times by one
+                lastPosition = step;
+                repeatTimes += 1;
+
+                // If we're at the end of the string, return the repeat times
+                if (lastPosition == length)
+                    return repeatTimes;
+            }
+        }
+
+        /// <summary>
+        /// Gets the letter repetition pattern (LRP) table from the length of the string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="twice">Whether to add the LRP of the string using the number of steps up to twice the string length or not</param>
+        public static ReadOnlyDictionary<int, int> GetLetterRepetitionPatternTable(this string target, bool twice = false)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (target.Length == 0)
+                return new(new Dictionary<int, int>());
+
+            // Now, iterate through the target length
+            Dictionary<int, int> lrpTable = [];
+            int targetLength = target.Length * (twice ? 2 : 1);
+            for (int i = 1; i <= targetLength; i++)
+            {
+                int lrp = target.GetLetterRepetitionPattern(i);
+                lrpTable.Add(i, lrp);
+            }
+
+            // Return the resulting dictionary
+            return new(lrpTable);
+        }
+
+        /// <summary>
+        /// Gets the list of repeated letters, including those that have occurred only once
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="removeSingle">Whether to remove all characters that only contain a single occurrence or not</param>
+        public static ReadOnlyDictionary<char, int> GetListOfRepeatedLetters(this string target, bool removeSingle = false)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (target.Length == 0)
+                return new(new Dictionary<char, int>());
+
+            // Add repeated letters to the list
+            var letters = new Dictionary<char, int>();
+            foreach (char chr in target)
+            {
+                if (letters.ContainsKey(chr))
+                    letters[chr]++;
+                else
+                    letters.Add(chr, 1);
+            }
+
+            // Remove a letter that only occurred once
+            if (removeSingle)
+            {
+                for (int i = letters.Count - 1; i >= 0; i--)
+                {
+                    char character = letters.Keys.ElementAt(i);
+                    int repetitions = letters[character];
+                    if (repetitions == 1)
+                        letters.Remove(character);
+                }
+            }
+
+            // Return the resulting dictionary
+            return new(letters);
         }
     }
 }
