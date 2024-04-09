@@ -19,7 +19,7 @@
 
 using Textify.Data.DataRes;
 
-namespace Textify.Tools
+namespace Textify.Data.Analysis.Tools
 {
     /// <summary>
     /// Data initialization class

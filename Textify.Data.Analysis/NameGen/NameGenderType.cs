@@ -17,7 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-namespace Textify.NameGen
+namespace Textify.Data.Analysis.NameGen
 {
     /// <summary>
     /// Name gender type

@@ -3,7 +3,7 @@
         {
             "src": [
                 {
-                    "files": [ "Textify/**.csproj", "Textify.Data/**.csproj", "Textify.Json/**.csproj" ],
+                    "files": [ "Textify/**.csproj", "Textify.Data/**.csproj", "Textify.Data.Analysis/**.csproj", "Textify.Json/**.csproj" ],
                     "src": ".."
                 }
             ],

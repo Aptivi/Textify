@@ -18,7 +18,7 @@
 //
 
 using System;
-using Textify.Unicode;
+using Textify.Data.Analysis.Unicode;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {

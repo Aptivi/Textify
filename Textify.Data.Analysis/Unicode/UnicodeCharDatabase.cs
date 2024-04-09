@@ -20,7 +20,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Textify.Unicode
+namespace Textify.Data.Analysis.Unicode
 {
     /// <summary>
     /// Name alias

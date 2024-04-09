@@ -22,10 +22,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
+using Textify.Data.Analysis.Tools;
 using Textify.General;
 using Textify.Tools;
 
-namespace Textify.Words
+namespace Textify.Data.Analysis.Words
 {
     /// <summary>
     /// The word management class
@@ -146,7 +147,7 @@ namespace Textify.Words
                 type == WordDataType.WordsDirty ? (DataType.WordsDirty, "words_alpha", "words_alpha.txt") :
                 type == WordDataType.WordsDirtyFull ? (DataType.WordsDirtyFull, "words", "words.txt") :
                 type == WordDataType.BadWords ? (DataType.WordsJustDirty, "bad_words", "bad-words.txt") :
-                throw new TextifyException();
+                throw new TextifyException("Invalid word data type");
             DataInitializer.Initialize(dataType);
             var contentStream = new MemoryStream(DataTools.GetDataFrom(resourceName));
             var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);

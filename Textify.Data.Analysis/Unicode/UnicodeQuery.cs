@@ -19,7 +19,7 @@
 
 using System;
 
-namespace Textify.Unicode
+namespace Textify.Data.Analysis.Unicode
 {
     /// <summary>
     /// Unicode querying tools

@@ -18,6 +18,8 @@
 //
 
 using System;
+using Textify.Data.Analysis.NameGen;
+using NameGen = Textify.Data.Analysis.NameGen.NameGenerator;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {
@@ -26,16 +28,16 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public string FixtureID => "NameGenerator";
         public void RunFixture()
         {
-            string[] names = NameGen.NameGenerator.GenerateNames(10);
-            string[] firstNames = NameGen.NameGenerator.GenerateFirstNames(10);
-            string[] firstFemaleNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Female);
-            string[] firstMaleNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Male);
-            string[] firstFemaleImplicitNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.FemaleImplicit);
-            string[] firstMaleImplicitNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.MaleImplicit);
-            string[] firstNaturalNames = NameGen.NameGenerator.GenerateFirstNames(10, NameGen.NameGenderType.Natural);
-            string[] surnames = NameGen.NameGenerator.GenerateLastNames(10);
-            string[] allNames = NameGen.NameGenerator.GetAllFirstNames();
-            string[] allSurnames = NameGen.NameGenerator.GetAllLastNames();
+            string[] names = NameGen.GenerateNames(10);
+            string[] firstNames = NameGen.GenerateFirstNames(10);
+            string[] firstFemaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Female);
+            string[] firstMaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Male);
+            string[] firstFemaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.FemaleImplicit);
+            string[] firstMaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.MaleImplicit);
+            string[] firstNaturalNames = NameGen.GenerateFirstNames(10, NameGenderType.Natural);
+            string[] surnames = NameGen.GenerateLastNames(10);
+            string[] allNames = NameGen.GetAllFirstNames();
+            string[] allSurnames = NameGen.GetAllLastNames();
 
             Console.WriteLine($"10 names: {string.Join(", ", names)}");
             Console.WriteLine($"10 first names: {string.Join(", ", firstNames)}");

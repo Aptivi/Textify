@@ -19,7 +19,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
-using Textify.Words.Profanity;
+using Textify.Data.Analysis.Words.Profanity;
 
 namespace Textify.Tests.Words.Profanity
 {

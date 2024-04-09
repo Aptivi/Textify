@@ -23,9 +23,10 @@ using System.IO;
 using System.IO.Compression;
 using System.Xml;
 using System.Xml.Serialization;
+using Textify.Data.Analysis.Tools;
 using Textify.Tools;
 
-namespace Textify.Unicode
+namespace Textify.Data.Analysis.Unicode
 {
     internal static class UnicodeQueryHandler
     {

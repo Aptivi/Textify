@@ -17,32 +17,28 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-namespace Textify.Words
+namespace Textify.Data.Analysis.Words.Profanity
 {
     /// <summary>
-    /// Word data type to select what kind of words do we need to fetch
+    /// Profanity search type
     /// </summary>
-    public enum WordDataType
+    public enum ProfanitySearchType
     {
         /// <summary>
-        /// Word list
+        /// Shallow searching. May not find swearing embedded in two or more words and/or separated by whitespace.
         /// </summary>
-        Words,
+        Shallow,
         /// <summary>
-        /// Word list, including alphanumeric characters
+        /// Thorough searching. May not find swearing embedded in two or more words.
         /// </summary>
-        WordsFull,
+        Thorough,
         /// <summary>
-        /// Word list, including offensive words (18+)
+        /// Partial searching. May cause legitimate words to be found, such as Scunthorpe.
         /// </summary>
-        WordsDirty,
+        Partial,
         /// <summary>
-        /// Word list, including offensive words (18+) and alphanumeric characters
+        /// Mitigated partial searching. May not find swearing that has its characters separated by whitespace.
         /// </summary>
-        WordsDirtyFull,
-        /// <summary>
-        /// Offensive words list (18+) for bad word filtering
-        /// </summary>
-        BadWords,
+        Mitigated,
     }
 }

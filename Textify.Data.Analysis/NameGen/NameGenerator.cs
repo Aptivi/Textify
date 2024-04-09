@@ -23,10 +23,11 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
+using Textify.Data.Analysis.Tools;
 using Textify.General;
 using Textify.Tools;
 
-namespace Textify.NameGen
+namespace Textify.Data.Analysis.NameGen
 {
     /// <summary>
     /// Name generator class

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Textify.Data.Analysis\Textify.Data.Analysis.csproj" />
     <ProjectReference Include="..\Textify.Data\Textify.Data.csproj" />
     <ProjectReference Include="..\Textify\Textify.csproj" />
   </ItemGroup>

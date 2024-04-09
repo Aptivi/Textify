@@ -9,7 +9,10 @@
     <Version>1.6.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
-    <Description>A collection of tools that provide you text tools for your C# and Visual Basic applications.</Description>
+    <Description>
+      A collection of tools that provide you text tools for your C# and Visual Basic applications.
+      This package provides the necessary analysis tools for Unicode, Words, and Names.
+    </Description>
     <Copyright>Copyright (c) 2023-2024 Aptivi.</Copyright>
     <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
@@ -20,7 +23,7 @@
     <PackageVersion>1.6.0</PackageVersion>
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageId>Textify.Offline</PackageId>
+    <PackageId>Textify.Offline.Data.Analysis</PackageId>
     <LangVersion>latest</LangVersion>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
@@ -43,10 +46,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="OfficialAppIcon-Textify-512.png">
+    <None Include="..\Textify\OfficialAppIcon-Textify-512.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Textify.Data\Textify.Data.csproj" />
+    <ProjectReference Include="..\Textify\Textify.csproj" />
   </ItemGroup>
 
 </Project>

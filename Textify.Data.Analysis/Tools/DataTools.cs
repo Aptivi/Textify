@@ -18,8 +18,9 @@
 //
 
 using System.Collections.Generic;
+using Textify.Tools;
 
-namespace Textify.Tools
+namespace Textify.Data.Analysis.Tools
 {
     internal static class DataTools
     {
