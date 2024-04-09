@@ -253,6 +253,24 @@ namespace Textify.Versioning
         }
 
         /// <summary>
+        /// Checks to see if the version string has the SemVer revision part or not
+        /// </summary>
+        /// <param name="version">Version to parse</param>
+        /// <returns>True if the version contains the revision part (the fourth part of the version), or false if otherwise.</returns>
+        /// <exception cref="SemVerException"></exception>
+        public static bool HasRevision(string version)
+        {
+            bool revValid, normalValid;
+            MatchCollection matches = normalValidator.Matches(version);
+            MatchCollection matchesRev = revValidator.Matches(version);
+            normalValid = matches.Count > 0;
+            revValid = matchesRev.Count > 0;
+            if (!revValid && !normalValid)
+                throw new SemVerException($"This version [{version}] is not a valid SemVer string.");
+            return revValid;
+        }
+
+        /// <summary>
         /// Checks to see whether all the version elements are equal to these elements in the other instance. Simply, checks
         /// to see whether this <see cref="SemVer"/> instance equals the <paramref name="other"/> <see cref="SemVer"/> instance.
         /// </summary>
@@ -317,18 +335,5 @@ namespace Textify.Versioning
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(BuildMetadata);
             return hashCode;
         }
-
-        internal static bool HasRevision(string value)
-        {
-            bool revValid, normalValid;
-            MatchCollection matches = normalValidator.Matches(value);
-            MatchCollection matchesRev = revValidator.Matches(value);
-            normalValid = matches.Count > 0;
-            revValid = matchesRev.Count > 0;
-            if (!revValid && !normalValid)
-                throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
-            return revValid;
-        }
-
     }
 }

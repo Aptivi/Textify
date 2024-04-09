@@ -235,5 +235,41 @@ namespace Textify.Tests.Versioning
             SemVer semVer2 = SemVer.Parse(otherVersion);
             (semVer >= semVer2).ShouldBe(expected);
         }
+        [TestMethod]
+        [DataRow("0.9.0", false)]
+        [DataRow("0.9.0-alpha1", false)]
+        [DataRow("1.0.0", false)]
+        [DataRow("1.0.0-alpha1", false)]
+        [DataRow("1.0.0+234F234D", false)]
+        [DataRow("1.0.0-alpha1+234F234D", false)]
+        [DataRow("0.1.0", false)]
+        [DataRow("0.1.0-alpha1", false)]
+        [DataRow("0.1.0+234F234D", false)]
+        [DataRow("0.1.0-alpha1+234F234D", false)]
+        [DataRow("0.0.1", false)]
+        [DataRow("0.0.1-alpha1", false)]
+        [DataRow("0.0.1+234F234D", false)]
+        [DataRow("0.0.1-alpha1+234F234D", false)]
+        [DataRow("1.0.0.5", true)]
+        [DataRow("1.0.0.5-alpha1", true)]
+        [DataRow("1.0.0.5+234F234D", true)]
+        [DataRow("1.0.0.5-alpha1+234F234D", true)]
+        [DataRow("0.1.0.5", true)]
+        [DataRow("0.1.0.5-alpha1", true)]
+        [DataRow("0.1.0.5+234F234D", true)]
+        [DataRow("0.1.0.5-alpha1+234F234D", true)]
+        [DataRow("0.0.1.5", true)]
+        [DataRow("0.0.1.5-alpha1", true)]
+        [DataRow("0.0.1.5+234F234D", true)]
+        [DataRow("0.0.1.5-alpha1+234F234D", true)]
+        [DataRow("0.9.0.5", true)]
+        [DataRow("0.9.0.5-alpha1", true)]
+        [DataRow("1.1.0.0", true)]
+        [DataRow("1.1.0.5-alpha1", true)]
+        public void TestSemVerHasRevision(string version, bool expected)
+        {
+            bool actual = SemVer.HasRevision(version);
+            actual.ShouldBe(expected);
+        }
     }
 }
