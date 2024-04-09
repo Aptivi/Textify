@@ -27,19 +27,34 @@ namespace Textify.Words.Profanity
         internal ProfanitySearchType searchType = ProfanitySearchType.Shallow;
 
         /// <summary>
-        /// The profane word in which the profanity manager matched successfully
+        /// The profane word in which the profanity manager has matched successfully
         /// </summary>
         public string ProfaneWord { get; private set; }
         /// <summary>
         /// The source word containing either a profane word or being a profane word
         /// </summary>
         public string SourceWord { get; private set; }
+        /// <summary>
+        /// The source sentence in which the profanity manager has analyzed
+        /// </summary>
+        public string SourceSentence { get; private set; }
+        /// <summary>
+        /// Index of the profane word in which the profanity manager has matched successfully
+        /// </summary>
+        public int ProfaneIndex { get; private set; }
+        /// <summary>
+        /// Index of the source word containing either a profane word or being a profane word
+        /// </summary>
+        public int SourceIndex { get; private set; }
 
-        internal ProfanityOccurrenceInfo(ProfanitySearchType searchType, string profaneWord, string sourceWord)
+        internal ProfanityOccurrenceInfo(ProfanitySearchType searchType, string profaneWord, string sourceWord, string sourceSentence, int profaneIndex, int sourceIndex)
         {
             this.searchType = searchType;
             ProfaneWord = profaneWord;
             SourceWord = sourceWord;
+            SourceSentence = sourceSentence;
+            ProfaneIndex = profaneIndex;
+            SourceIndex = sourceIndex;
         }
     }
 }

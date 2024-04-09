@@ -19,7 +19,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -44,6 +43,9 @@ namespace Textify.Words.Profanity
         /// <returns>An array of profanity occurrence info</returns>
         public static ProfanityOccurrenceInfo[] GetProfanities(string sentence, ProfanitySearchType searchType = ProfanitySearchType.Shallow)
         {
+            if (string.IsNullOrWhiteSpace(sentence))
+                return [];
+
             // Initialize the profanity matchers
             InitializeMatchers();
 
@@ -68,10 +70,51 @@ namespace Textify.Words.Profanity
                         continue;
                 }
                 string source = sentence.GetEnclosedWordFromIndex(match.Index);
-                var info = new ProfanityOccurrenceInfo(searchType, match.Value, source.Length < 2 ? match.Value : source);
+                int sourceIndex = sentence.GetIndexOfEnclosedWordFromIndex(match.Index);
+                source = source.Length < 2 ? match.Value : source;
+                var info = new ProfanityOccurrenceInfo(searchType, match.Value, source, sentence, match.Index, sourceIndex);
                 occurrences.Add(info);
             }
             return [.. occurrences];
+        }
+
+        /// <summary>
+        /// Filter profane words in the sentence
+        /// </summary>
+        /// <param name="sentence">A sentence which may contain profanity</param>
+        /// <param name="searchType">Specifies how to analyze the sentence</param>
+        /// <returns>A filtered sentence that contain censored profanity with asterisks</returns>
+        public static string FilterProfanities(string sentence, ProfanitySearchType searchType = ProfanitySearchType.Shallow)
+        {
+            // Get the profanities and check to see if it contains profanity or not
+            var profanities = GetProfanities(sentence, searchType);
+            if (profanities is null || profanities.Length == 0)
+                return sentence;
+
+            // Now, filter them!
+            return FilterProfanities(profanities);
+        }
+
+        private static string FilterProfanities(ProfanityOccurrenceInfo[] profanities)
+        {
+            if (profanities is null || profanities.Length == 0)
+                return "";
+
+            // Get the profanity properties and use them to filter swear words. We need to sort by decreasing index
+            // for safety by getting from the last profanity occurrence to the first one.
+            StringBuilder sentenceBuilder = new(profanities[0].SourceSentence);
+            for (int i = profanities.Length - 1; i >= 0; i--)
+            {
+                var profanity = profanities[i];
+                int sourceIndex = profanity.SourceIndex;
+                int sourceLength = profanity.SourceWord.Length;
+                string replacement = new('*', sourceLength);
+                sentenceBuilder.Remove(sourceIndex, sourceLength);
+                sentenceBuilder.Insert(sourceIndex, replacement);
+            }
+
+            // Return the resulting string
+            return sentenceBuilder.ToString();
         }
 
         private static void InitializeMatchers()
@@ -79,7 +122,7 @@ namespace Textify.Words.Profanity
             if (thoroughProfanityMatcher is not null && shallowProfanityMatcher is not null && partialProfanityMatcher is not null)
                 return;
 
-            // Get the profanities and make two matchers: thorough and shallow.
+            // Get the profanities and make three matchers: thorough, partial, and shallow.
             string[] profanities = WordManager.GetWords(WordDataType.BadWords);
             string thoroughPattern = string.Join("|", profanities.Select(word => string.Join(@"\s*", word.ToCharArray().Select((ch) => $"{ch}".Escape()))));
             string partialPattern = string.Join(@"|", profanities.Select(word => string.Join("", word.ToCharArray().Select((ch) => $"{ch}".Escape()))));

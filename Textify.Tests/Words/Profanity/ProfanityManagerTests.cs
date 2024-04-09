@@ -19,9 +19,6 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
-using System.Collections.Generic;
-using System.Linq;
-using Textify.Words;
 using Textify.Words.Profanity;
 
 namespace Textify.Tests.Words.Profanity
@@ -102,5 +99,74 @@ namespace Textify.Tests.Words.Profanity
             bool result = profanities.Length > 0;
             result.ShouldBe(expected);
         }
+        
+        [TestMethod]
+        [DataRow("Who gives a shit? Get off your fucking high horse!", "Who gives a ****? Get off your ******* high horse!")]
+        [DataRow("Who gives a s h i t? Get off your f u c k ing high horse!", "Who gives a *******? Get off your ******* ing high horse!")]
+        [DataRow("Who gives? Get off your high horse! You s u c k   b a l l s!", "Who gives? Get off your high horse! You s u c k   b a l l s!")]
+        [DataRow("Who gives a ----? Get off your ----ing high horse!", "Who gives a ----? Get off your ----ing high horse!")]
+        public void TestFilterSentenceShallow(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence);
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit? Get off your fucking high horse!", "Who gives a ****? Get off your ******* high horse!")]
+        [DataRow("Who gives a s h i t? Get off your f u c k ing high horse!", "Who gives a *******? Get off your ******* ing high horse!")]
+        [DataRow("Who gives? Get off your high horse! You s u c k   b a l l s!", "Who gives? Get off your high horse! You *******   *********!")]
+        [DataRow("Who gives a ----? Get off your ----ing high horse!", "Who gives a ----? Get off your ----ing high horse!")]
+        public void TestFilterSentenceThorough(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence, ProfanitySearchType.Thorough);
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", "Who gives a ****?")]
+        [DataRow("Who givesashit?", "Who givesashit?")]
+        [DataRow("Who lives in Scunthorpe?", "Who lives in Scunthorpe?")]
+        [DataRow("Who are these jackasses from Scunthorpe?", "Who are these ********* from Scunthorpe?")]
+        public void TestFilterScunthorpeSentenceShallow(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence);
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", "Who gives a ****?")]
+        [DataRow("Who givesashit?", "Who givesashit?")]
+        [DataRow("Who lives in Scunthorpe?", "Who lives in Scunthorpe?")]
+        [DataRow("Who are these jackasses from Scunthorpe?", "Who are these ********* from Scunthorpe?")]
+        public void TestFilterScunthorpeSentenceThorough(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence, ProfanitySearchType.Thorough);
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", "*** gives a ****?")]
+        [DataRow("Who givesashit?", "*** **********?")]
+        [DataRow("Who lives in Scunthorpe?", "*** lives in **********?")]
+        [DataRow("Who are these jackasses from Scunthorpe?", "*** are these ********* from **********?")]
+        [DataRow("Who are these j a c k a s s e s from Scunthorpe?", "*** are these j a c k ***** e s from **********?")]
+        public void TestFilterScunthorpeSentencePartial(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence, ProfanitySearchType.Partial);
+            result.ShouldBe(expected);
+        }
+
+        [TestMethod]
+        [DataRow("Who gives a shit?", "Who gives a ****?")]
+        [DataRow("Who givesashit?", "Who **********?")]
+        [DataRow("Who lives in Scunthorpe?", "Who lives in Scunthorpe?")]
+        [DataRow("Who are these jackasses from Scunthorpe?", "Who are these ********* from Scunthorpe?")]
+        [DataRow("Who are these j a c k a s s e s from Scunthorpe?", "Who are these j a c k a s s e s from Scunthorpe?")]
+        public void TestFilterScunthorpeSentencePartialMitigated(string sentence, string expected)
+        {
+            string result = ProfanityManager.FilterProfanities(sentence, ProfanitySearchType.Mitigated);
+            result.ShouldBe(expected);
+        }
+
     }
 }
