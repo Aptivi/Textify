@@ -518,6 +518,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetEnclosedWordFromIndex
   nameWithType: TextTools.GetEnclosedWordFromIndex
+- uid: Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)
+  name: GetIndexOfEnclosedWordFromIndex(string, int, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetIndexOfEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_
+  commentId: M:Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)
+  name.vb: GetIndexOfEnclosedWordFromIndex(String, Integer, Boolean)
+  fullName: Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(string, int, bool)
+  fullName.vb: Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(String, Integer, Boolean)
+  nameWithType: TextTools.GetIndexOfEnclosedWordFromIndex(string, int, bool)
+  nameWithType.vb: TextTools.GetIndexOfEnclosedWordFromIndex(String, Integer, Boolean)
+- uid: Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex*
+  name: GetIndexOfEnclosedWordFromIndex
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetIndexOfEnclosedWordFromIndex_
+  commentId: Overload:Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex
+  nameWithType: TextTools.GetIndexOfEnclosedWordFromIndex
 - uid: Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)
   name: GetWrappedSentences(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_
@@ -3931,6 +3947,22 @@ references:
   commentId: T:Textify.Words.Profanity.ProfanityManager
   fullName: Textify.Words.Profanity.ProfanityManager
   nameWithType: ProfanityManager
+- uid: Textify.Words.Profanity.ProfanityManager.FilterProfanities(System.String,Textify.Words.Profanity.ProfanitySearchType)
+  name: FilterProfanities(string, ProfanitySearchType)
+  href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_FilterProfanities_System_String_Textify_Words_Profanity_ProfanitySearchType_
+  commentId: M:Textify.Words.Profanity.ProfanityManager.FilterProfanities(System.String,Textify.Words.Profanity.ProfanitySearchType)
+  name.vb: FilterProfanities(String, ProfanitySearchType)
+  fullName: Textify.Words.Profanity.ProfanityManager.FilterProfanities(string, Textify.Words.Profanity.ProfanitySearchType)
+  fullName.vb: Textify.Words.Profanity.ProfanityManager.FilterProfanities(String, Textify.Words.Profanity.ProfanitySearchType)
+  nameWithType: ProfanityManager.FilterProfanities(string, ProfanitySearchType)
+  nameWithType.vb: ProfanityManager.FilterProfanities(String, ProfanitySearchType)
+- uid: Textify.Words.Profanity.ProfanityManager.FilterProfanities*
+  name: FilterProfanities
+  href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_FilterProfanities_
+  commentId: Overload:Textify.Words.Profanity.ProfanityManager.FilterProfanities
+  isSpec: "True"
+  fullName: Textify.Words.Profanity.ProfanityManager.FilterProfanities
+  nameWithType: ProfanityManager.FilterProfanities
 - uid: Textify.Words.Profanity.ProfanityManager.GetProfanities(System.String,Textify.Words.Profanity.ProfanitySearchType)
   name: GetProfanities(string, ProfanitySearchType)
   href: api/Textify.Words.Profanity.ProfanityManager.html#Textify_Words_Profanity_ProfanityManager_GetProfanities_System_String_Textify_Words_Profanity_ProfanitySearchType_
@@ -3953,6 +3985,19 @@ references:
   commentId: T:Textify.Words.Profanity.ProfanityOccurrenceInfo
   fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo
   nameWithType: ProfanityOccurrenceInfo
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex
+  name: ProfaneIndex
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_ProfaneIndex
+  commentId: P:Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex
+  nameWithType: ProfanityOccurrenceInfo.ProfaneIndex
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex*
+  name: ProfaneIndex
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_ProfaneIndex_
+  commentId: Overload:Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex
+  isSpec: "True"
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneIndex
+  nameWithType: ProfanityOccurrenceInfo.ProfaneIndex
 - uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneWord
   name: ProfaneWord
   href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_ProfaneWord
@@ -3966,6 +4011,32 @@ references:
   isSpec: "True"
   fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.ProfaneWord
   nameWithType: ProfanityOccurrenceInfo.ProfaneWord
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex
+  name: SourceIndex
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_SourceIndex
+  commentId: P:Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex
+  nameWithType: ProfanityOccurrenceInfo.SourceIndex
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex*
+  name: SourceIndex
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_SourceIndex_
+  commentId: Overload:Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex
+  isSpec: "True"
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceIndex
+  nameWithType: ProfanityOccurrenceInfo.SourceIndex
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence
+  name: SourceSentence
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_SourceSentence
+  commentId: P:Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence
+  nameWithType: ProfanityOccurrenceInfo.SourceSentence
+- uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence*
+  name: SourceSentence
+  href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_SourceSentence_
+  commentId: Overload:Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence
+  isSpec: "True"
+  fullName: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceSentence
+  nameWithType: ProfanityOccurrenceInfo.SourceSentence
 - uid: Textify.Words.Profanity.ProfanityOccurrenceInfo.SourceWord
   name: SourceWord
   href: api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html#Textify_Words_Profanity_ProfanityOccurrenceInfo_SourceWord
