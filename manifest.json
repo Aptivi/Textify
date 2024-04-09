@@ -15,6 +15,176 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.NameGen.NameGenderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.NameGen.NameGenderType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.NameGen.NameGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.NameGen.NameGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.NameGen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.NameGen.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Char.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.Char.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Namealias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.Namealias.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Repertoire.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.Repertoire.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Ucd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.Ucd.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQueryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQueryType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Unicode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityOccurrenceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityOccurrenceInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanitySearchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanitySearchType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.WordDataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.WordDataType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.WordManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.WordManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Analysis.Words.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Analysis.Words.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.General.CharManager.yml",
       "output": {
         ".html": {
@@ -69,36 +239,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.Json.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.NameGen.NameGenderType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.NameGen.NameGenderType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.NameGen.NameGenerator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.NameGen.NameGenerator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.NameGen.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.NameGen.html"
         }
       },
       "version": ""
@@ -175,76 +315,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.Char.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.Char.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.Namealias.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.Namealias.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.Repertoire.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.Repertoire.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.Ucd.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.Ucd.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.UnicodeQuery.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.UnicodeQuery.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.UnicodeQueryType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.UnicodeQueryType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Unicode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Unicode.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Versioning.SemVer.yml",
       "output": {
         ".html": {
@@ -269,76 +339,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.Versioning.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.Profanity.ProfanityManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.Profanity.ProfanityManager.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.Profanity.ProfanityOccurrenceInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.Profanity.ProfanityOccurrenceInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.Profanity.ProfanitySearchType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.Profanity.ProfanitySearchType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.Profanity.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.Profanity.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.WordDataType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.WordDataType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.WordManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.WordManager.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Words.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Words.html"
         }
       },
       "version": ""
