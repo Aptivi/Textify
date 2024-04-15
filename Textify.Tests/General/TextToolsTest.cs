@@ -650,10 +650,11 @@ namespace Textify.Tests.General
         [Description("Querying")]
         public void TestSplitEncloseDoubleQuotesEdgeCase3()
         {
-            string TargetString = "test  est";
+            string TargetString = "test  est     \"Textify Terminaux\"";
             var TargetArray = TargetString.SplitEncloseDoubleQuotes();
-            TargetArray.Length.ShouldBe(2);
+            TargetArray.Length.ShouldBe(3);
             TargetArray[1].ShouldBe("est");
+            TargetArray[2].ShouldBe("Textify Terminaux");
         }
 
         /// <summary>

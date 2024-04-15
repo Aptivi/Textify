@@ -63,8 +63,12 @@ namespace Textify.General
                 char character = target[i];
                 if (char.IsWhiteSpace(character) && !inEscape && !inQuote)
                 {
-                    matchesStr.Add(builder.ToString());
-                    builder.Clear();
+                    // Ignore all empty strings
+                    if (builder.Length > 0)
+                    {
+                        matchesStr.Add(builder.ToString());
+                        builder.Clear();
+                    }
                 }
                 else
                     builder.Append(character);
@@ -75,7 +79,8 @@ namespace Textify.General
                 else if (inEscape)
                     inEscape = false;
             }
-            matchesStr.Add(builder.ToString());
+            if (builder.Length > 0)
+                matchesStr.Add(builder.ToString());
             return [.. matchesStr];
         }
 
