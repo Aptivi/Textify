@@ -631,6 +631,32 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests splitting a string with double quotes enclosed (edge case regarding single escape with space)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesEdgeCase2()
+        {
+            string TargetString = "test\"\0t est";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe("\0t est");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed (edge case regarding two or more spaces that used to be ignored)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesEdgeCase3()
+        {
+            string TargetString = "test  est";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe("est");
+        }
+
+        /// <summary>
         /// Tests checking to see if the string is numeric
         /// </summary>
         [TestMethod]
