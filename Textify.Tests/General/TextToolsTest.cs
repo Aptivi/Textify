@@ -579,6 +579,58 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests splitting a string with double quotes enclosed (quotes inside quotes)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesInQuote()
+        {
+            string TargetString = "First \"Second \\\"quote quote\\\" Third\" Fourth";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(3);
+            TargetArray[1].ShouldBe("Second \\\"quote quote\\\" Third");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed without releasing them (quotes inside quotes)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesNoReleaseInQuote()
+        {
+            string TargetString = "First \"Second \\\"quote quote\\\" Third\" Fourth";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotesNoRelease();
+            TargetArray.Length.ShouldBe(3);
+            TargetArray[1].ShouldBe("\"Second \\\"quote quote\\\" Third\"");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed (edge case regarding escaped quotes alone)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesEdgeCase()
+        {
+            string TargetString = @"wrap ""echo \\\""hello\\\""""";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe(@"echo \\\""hello\\\""");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed without releasing them (edge case regarding escaped quotes alone)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesNoReleaseEdgeCase()
+        {
+            string TargetString = @"wrap ""echo \\\""hello\\\""""";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotesNoRelease();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe(@"""echo \\\""hello\\\""""");
+        }
+
+        /// <summary>
         /// Tests checking to see if the string is numeric
         /// </summary>
         [TestMethod]

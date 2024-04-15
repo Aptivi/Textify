@@ -33,8 +33,6 @@ namespace Textify.General
     /// </summary>
     public static class TextTools
     {
-        private static readonly string regexMatchEnclosedStrings = /* lang=regex */
-            @"(""(.+?)(?<![^\\]\\)"")|('(.+?)(?<![^\\]\\)')|(`(.+?)(?<![^\\]\\)`)|(?:[^\\\s]|\\.)+|\S+";
         private static readonly string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
         private static readonly string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
 
@@ -42,19 +40,10 @@ namespace Textify.General
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
         /// </summary>
         /// <param name="target">Target string</param>
-        public static string[] SplitEncloseDoubleQuotes(this string target)
-        {
-            if (target is null)
-                throw new TextifyException("The target may not be null");
-
-            var matches = Regex.Matches(target, regexMatchEnclosedStrings);
-            var matchList = new List<Match>();
-            foreach (Match match in matches)
-                matchList.Add(match);
-            return matchList
-                .Select((m) => m.Value.ReleaseDoubleQuotes())
+        public static string[] SplitEncloseDoubleQuotes(this string target) =>
+            target.SplitEncloseDoubleQuotesNoRelease()
+                .Select((s) => s.ReleaseDoubleQuotes())
                 .ToArray();
-        }
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula without releasing double quotes
@@ -65,13 +54,29 @@ namespace Textify.General
             if (target is null)
                 throw new TextifyException("The target may not be null");
 
-            var matches = Regex.Matches(target, regexMatchEnclosedStrings);
-            var matchList = new List<Match>();
-            foreach (Match match in matches)
-                matchList.Add(match);
-            return matchList
-                .Select((m) => m.Value)
-                .ToArray();
+            List<string> matchesStr = [];
+            bool inEscape = false;
+            bool inQuote = false;
+            StringBuilder builder = new();
+            for (int i = 0; i < target.Length; i++)
+            {
+                char character = target[i];
+                if (char.IsWhiteSpace(character) && !inEscape && !inQuote)
+                {
+                    matchesStr.Add(builder.ToString());
+                    builder.Clear();
+                }
+                else
+                    builder.Append(character);
+                if ((character == '\"' || character == '\'' || character == '`') && !inEscape)
+                    inQuote = !inQuote;
+                if (character == '\\')
+                    inEscape = true;
+                else if (inEscape)
+                    inEscape = false;
+            }
+            matchesStr.Add(builder.ToString());
+            return [.. matchesStr];
         }
 
         /// <summary>
