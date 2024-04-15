@@ -54,12 +54,14 @@ namespace Textify.General
             if (target is null)
                 throw new TextifyException("The target may not be null");
 
+            // Build the split matches
             List<string> matchesStr = [];
             bool inEscape = false;
             bool inQuote = false;
             StringBuilder builder = new();
             for (int i = 0; i < target.Length; i++)
             {
+                // Add a character
                 char character = target[i];
                 if (char.IsWhiteSpace(character) && !inEscape && !inQuote)
                 {
@@ -72,15 +74,31 @@ namespace Textify.General
                 }
                 else
                     builder.Append(character);
+
+                // Deal with the quotes
                 if ((character == '\"' || character == '\'' || character == '`') && !inEscape)
                     inQuote = !inQuote;
+
+                // Deal with the escapes
                 if (character == '\\')
                     inEscape = true;
                 else if (inEscape)
                     inEscape = false;
             }
+
+            // Add the final portion, but check the quotes
             if (builder.Length > 0)
-                matchesStr.Add(builder.ToString());
+            {
+                string final = builder.ToString();
+                if (inQuote)
+                {
+                    // Now, split this portion normally with spaces
+                    var splitFinal = final.Split(' ');
+                    matchesStr.AddRange(splitFinal);
+                }
+                else
+                    matchesStr.Add(final);
+            }
             return [.. matchesStr];
         }
 

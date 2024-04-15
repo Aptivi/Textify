@@ -640,7 +640,7 @@ namespace Textify.Tests.General
             string TargetString = "test\"\0t est";
             var TargetArray = TargetString.SplitEncloseDoubleQuotes();
             TargetArray.Length.ShouldBe(2);
-            TargetArray[1].ShouldBe("\0t est");
+            TargetArray[1].ShouldBe("est");
         }
 
         /// <summary>
@@ -655,6 +655,19 @@ namespace Textify.Tests.General
             TargetArray.Length.ShouldBe(3);
             TargetArray[1].ShouldBe("est");
             TargetArray[2].ShouldBe("Textify Terminaux");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed (edge case regarding single escape with space)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesEdgeCase4()
+        {
+            string TargetString = "test\\\"\0t est\"a fne\"fs";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe("est\"a fne\"fs");
         }
 
         /// <summary>
