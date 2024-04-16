@@ -58,6 +58,7 @@ namespace Textify.General
             List<string> matchesStr = [];
             bool inEscape = false;
             bool inQuote = false;
+            char quoteChar = default;
             StringBuilder builder = new();
             for (int i = 0; i < target.Length; i++)
             {
@@ -77,7 +78,18 @@ namespace Textify.General
 
                 // Deal with the quotes
                 if ((character == '\"' || character == '\'' || character == '`') && !inEscape)
-                    inQuote = !inQuote;
+                {
+                    if (!inQuote)
+                    {
+                        quoteChar = character;
+                        inQuote = true;
+                    }
+                    else if (character == quoteChar)
+                    {
+                        quoteChar = default;
+                        inQuote = false;
+                    }
+                }
 
                 // Deal with the escapes
                 if (character == '\\')
@@ -92,8 +104,12 @@ namespace Textify.General
                 string final = builder.ToString();
                 if (inQuote)
                 {
-                    // Now, split this portion normally with spaces
-                    var splitFinal = final.Split(' ');
+                    // Now, split this portion normally with spaces, but check for at least three quotes
+                    int finalQuoteIdx = final.LastIndexOf(quoteChar);
+                    string firstPart = final.Substring(0, finalQuoteIdx);
+                    string secondPart = final.Substring(finalQuoteIdx);
+                    var splitFinal = secondPart.Split(CharManager.GetAllWhitespaceChars());
+                    splitFinal[0] = firstPart + splitFinal[0];
                     matchesStr.AddRange(splitFinal);
                 }
                 else

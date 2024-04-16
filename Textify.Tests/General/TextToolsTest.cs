@@ -671,6 +671,19 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests splitting a string with double quotes enclosed (edge case regarding a complete quote and a dangling quote)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesEdgeCase5()
+        {
+            string TargetString = "test\"t est\"a\"s fnefs";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes();
+            TargetArray.Length.ShouldBe(2);
+            TargetArray[1].ShouldBe("fnefs");
+        }
+
+        /// <summary>
         /// Tests checking to see if the string is numeric
         /// </summary>
         [TestMethod]
