@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.6.0.2</Version>
+    <Version>1.7.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi Corp.</Company>
     <Description>
