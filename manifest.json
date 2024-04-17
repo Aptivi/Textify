@@ -15,6 +15,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Accessibility.BrailleBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Accessibility.BrailleBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Accessibility.BrailleDots.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Accessibility.BrailleDots.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Accessibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Accessibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.Analysis.NameGen.NameGenderType.yml",
       "output": {
         ".html": {

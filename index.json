@@ -1,4 +1,19 @@
 {
+  "api/Textify.Accessibility.BrailleBuilder.html": {
+    "href": "api/Textify.Accessibility.BrailleBuilder.html",
+    "title": "Class BrailleBuilder | Textify API - Aptivi",
+    "keywords": "Class BrailleBuilder Braille building tools Inheritance object BrailleBuilder Namespace: Textify.Accessibility Assembly: Textify.dll Syntax public static class BrailleBuilder"
+  },
+  "api/Textify.Accessibility.BrailleDots.html": {
+    "href": "api/Textify.Accessibility.BrailleDots.html",
+    "title": "Enum BrailleDots | Textify API - Aptivi",
+    "keywords": "Enum BrailleDots Braille dot enumeration Namespace: Textify.Accessibility Assembly: Textify.dll Syntax public enum BrailleDots Fields Name Description Fifth Fifth dot, located in the second column, second row. (⠐) First First dot, located in the first column, first row. (⠁) Fourth Fourth dot, located in the second column, first row. (⠈) None No dot. (⠀) Second Second dot, located in the first column, second row. (⠂) Sixth Sixth dot, located in the second column, third row. (⠠) Third Third dot, located in the first column, third row. (⠄)"
+  },
+  "api/Textify.Accessibility.html": {
+    "href": "api/Textify.Accessibility.html",
+    "title": "Namespace Textify.Accessibility | Textify API - Aptivi",
+    "keywords": "Namespace Textify.Accessibility Classes BrailleBuilder Braille building tools Enums BrailleDots Braille dot enumeration"
+  },
   "api/Textify.Data.Analysis.NameGen.NameGenderType.html": {
     "href": "api/Textify.Data.Analysis.NameGen.NameGenderType.html",
     "title": "Enum NameGenderType | Textify API - Aptivi",

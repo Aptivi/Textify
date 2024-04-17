@@ -1,6 +1,66 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Textify.Accessibility
+  name: Textify.Accessibility
+  href: api/Textify.Accessibility.html
+  commentId: N:Textify.Accessibility
+  fullName: Textify.Accessibility
+  nameWithType: Textify.Accessibility
+- uid: Textify.Accessibility.BrailleBuilder
+  name: BrailleBuilder
+  href: api/Textify.Accessibility.BrailleBuilder.html
+  commentId: T:Textify.Accessibility.BrailleBuilder
+  fullName: Textify.Accessibility.BrailleBuilder
+  nameWithType: BrailleBuilder
+- uid: Textify.Accessibility.BrailleDots
+  name: BrailleDots
+  href: api/Textify.Accessibility.BrailleDots.html
+  commentId: T:Textify.Accessibility.BrailleDots
+  fullName: Textify.Accessibility.BrailleDots
+  nameWithType: BrailleDots
+- uid: Textify.Accessibility.BrailleDots.Fifth
+  name: Fifth
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_Fifth
+  commentId: F:Textify.Accessibility.BrailleDots.Fifth
+  fullName: Textify.Accessibility.BrailleDots.Fifth
+  nameWithType: BrailleDots.Fifth
+- uid: Textify.Accessibility.BrailleDots.First
+  name: First
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_First
+  commentId: F:Textify.Accessibility.BrailleDots.First
+  fullName: Textify.Accessibility.BrailleDots.First
+  nameWithType: BrailleDots.First
+- uid: Textify.Accessibility.BrailleDots.Fourth
+  name: Fourth
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_Fourth
+  commentId: F:Textify.Accessibility.BrailleDots.Fourth
+  fullName: Textify.Accessibility.BrailleDots.Fourth
+  nameWithType: BrailleDots.Fourth
+- uid: Textify.Accessibility.BrailleDots.None
+  name: None
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_None
+  commentId: F:Textify.Accessibility.BrailleDots.None
+  fullName: Textify.Accessibility.BrailleDots.None
+  nameWithType: BrailleDots.None
+- uid: Textify.Accessibility.BrailleDots.Second
+  name: Second
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_Second
+  commentId: F:Textify.Accessibility.BrailleDots.Second
+  fullName: Textify.Accessibility.BrailleDots.Second
+  nameWithType: BrailleDots.Second
+- uid: Textify.Accessibility.BrailleDots.Sixth
+  name: Sixth
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_Sixth
+  commentId: F:Textify.Accessibility.BrailleDots.Sixth
+  fullName: Textify.Accessibility.BrailleDots.Sixth
+  nameWithType: BrailleDots.Sixth
+- uid: Textify.Accessibility.BrailleDots.Third
+  name: Third
+  href: api/Textify.Accessibility.BrailleDots.html#Textify_Accessibility_BrailleDots_Third
+  commentId: F:Textify.Accessibility.BrailleDots.Third
+  fullName: Textify.Accessibility.BrailleDots.Third
+  nameWithType: BrailleDots.Third
 - uid: Textify.Data.Analysis.NameGen
   name: Textify.Data.Analysis.NameGen
   href: api/Textify.Data.Analysis.NameGen.html
