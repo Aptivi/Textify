@@ -9,7 +9,7 @@ fi
 
 # Build KS
 echo Building documentation...
-docfx DocGen/docfx.json
+docfx ../DocGen/docfx.json
 if [ ! $? == 0 ]; then
 	echo Build failed.
 	exit 1
