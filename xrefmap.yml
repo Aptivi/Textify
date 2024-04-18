@@ -13,6 +13,22 @@ references:
   commentId: T:Textify.Accessibility.BrailleBuilder
   fullName: Textify.Accessibility.BrailleBuilder
   nameWithType: BrailleBuilder
+- uid: Textify.Accessibility.BrailleBuilder.ToBraille(System.String)
+  name: ToBraille(string)
+  href: api/Textify.Accessibility.BrailleBuilder.html#Textify_Accessibility_BrailleBuilder_ToBraille_System_String_
+  commentId: M:Textify.Accessibility.BrailleBuilder.ToBraille(System.String)
+  name.vb: ToBraille(String)
+  fullName: Textify.Accessibility.BrailleBuilder.ToBraille(string)
+  fullName.vb: Textify.Accessibility.BrailleBuilder.ToBraille(String)
+  nameWithType: BrailleBuilder.ToBraille(string)
+  nameWithType.vb: BrailleBuilder.ToBraille(String)
+- uid: Textify.Accessibility.BrailleBuilder.ToBraille*
+  name: ToBraille
+  href: api/Textify.Accessibility.BrailleBuilder.html#Textify_Accessibility_BrailleBuilder_ToBraille_
+  commentId: Overload:Textify.Accessibility.BrailleBuilder.ToBraille
+  isSpec: "True"
+  fullName: Textify.Accessibility.BrailleBuilder.ToBraille
+  nameWithType: BrailleBuilder.ToBraille
 - uid: Textify.Accessibility.BrailleDots
   name: BrailleDots
   href: api/Textify.Accessibility.BrailleDots.html
@@ -3640,6 +3656,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.Unescape
   nameWithType: TextTools.Unescape
+- uid: Textify.General.TextTools.UnixifyNewLines(System.String)
+  name: UnixifyNewLines(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UnixifyNewLines_System_String_
+  commentId: M:Textify.General.TextTools.UnixifyNewLines(System.String)
+  name.vb: UnixifyNewLines(String)
+  fullName: Textify.General.TextTools.UnixifyNewLines(string)
+  fullName.vb: Textify.General.TextTools.UnixifyNewLines(String)
+  nameWithType: TextTools.UnixifyNewLines(string)
+  nameWithType.vb: TextTools.UnixifyNewLines(String)
+- uid: Textify.General.TextTools.UnixifyNewLines*
+  name: UnixifyNewLines
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UnixifyNewLines_
+  commentId: Overload:Textify.General.TextTools.UnixifyNewLines
+  isSpec: "True"
+  fullName: Textify.General.TextTools.UnixifyNewLines
+  nameWithType: TextTools.UnixifyNewLines
 - uid: Textify.General.TextTools.UpperFirst(System.String)
   name: UpperFirst(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_UpperFirst_System_String_
