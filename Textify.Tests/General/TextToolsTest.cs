@@ -485,11 +485,11 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldCrLf()
+        public void TestUnixifyNewLinesCrLf()
         {
             string TargetString = "First line\r\nSecond line\r\nThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldBe(3);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
         }
 
         /// <summary>
@@ -497,11 +497,11 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldLf()
+        public void TestUnixifyNewLinesLf()
         {
             string TargetString = "First line\nSecond line\nThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldBe(3);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
         }
 
         /// <summary>
@@ -509,11 +509,11 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldCr()
+        public void TestUnixifyNewLinesCr()
         {
             string TargetString = "First line\rSecond line\rThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldNotBe(3);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
         }
 
         /// <summary>
@@ -521,11 +521,11 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldCrLfCr()
+        public void TestUnixifyNewLinesCrLfCr()
         {
             string TargetString = "First line\r\n\rSecond line\r\n\rThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldNotBe(5);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\n\nSecond line\n\nThird line");
         }
 
         /// <summary>
@@ -533,11 +533,11 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldCrLfLf()
+        public void TestUnixifyNewLinesCrLfLf()
         {
             string TargetString = "First line\r\n\nSecond line\r\n\nThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldBe(5);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\n\nSecond line\n\nThird line");
         }
 
         /// <summary>
@@ -545,11 +545,47 @@ namespace Textify.Tests.General
         /// </summary>
         [TestMethod]
         [Description("Querying")]
-        public void TestSplitNewLinesOldCrLfCrLf()
+        public void TestUnixifyNewLinesCrLfCrLf()
         {
             string TargetString = "First line\r\n\r\nSecond line\r\n\r\nThird line";
-            var TargetArray = TargetString.SplitNewLinesOld();
-            TargetArray.Length.ShouldBe(5);
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\n\nSecond line\n\nThird line");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with new lines (VT and FF)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestUnixifyNewLinesUnusual1()
+        {
+            string TargetString = $"First line{Convert.ToChar(11)}Second line{Convert.ToChar(12)}Third line";
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with new lines (NEL)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestUnixifyNewLinesUnusual2()
+        {
+            string TargetString = $"First line{Convert.ToChar(133)}Second line{Convert.ToChar(133)}Third line";
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with new lines (LS and PS)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestUnixifyNewLinesUnusual3()
+        {
+            string TargetString = $"First line{Convert.ToChar(0x2028)}Second line{Convert.ToChar(0x2029)}Third line";
+            var result = TargetString.UnixifyNewLines();
+            result.ShouldBe("First line\nSecond line\nThird line");
         }
 
         /// <summary>

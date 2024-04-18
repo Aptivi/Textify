@@ -181,6 +181,7 @@ namespace Textify.General
         /// </summary>
         /// <param name="target">Target string</param>
         /// <returns>List of words that are separated by the new lines</returns>
+        [Obsolete("This doesn't properly split Mac OS 9 newlines.")]
         public static string[] SplitNewLinesOld(this string target)
         {
             if (target is null)
@@ -204,8 +205,14 @@ namespace Textify.General
 
             // Convert Windows (CR+LF) and Mac OS 9 (CR) to Unix (LF)
             return target
-                .Replace($"{Convert.ToChar(13)}{Convert.ToChar(10)}", $"{Convert.ToChar(10)}")
-                .Replace($"{Convert.ToChar(13)}", $"{Convert.ToChar(10)}");
+                .Replace($"{Convert.ToChar(13)}{Convert.ToChar(10)}", $"{Convert.ToChar(10)}")  // CRLF
+                .Replace($"{Convert.ToChar(13)}", $"{Convert.ToChar(10)}")                      // CR
+                .Replace($"{Convert.ToChar(11)}", $"{Convert.ToChar(10)}")                      // VT
+                .Replace($"{Convert.ToChar(12)}", $"{Convert.ToChar(10)}")                      // FF
+                .Replace($"{Convert.ToChar(133)}", $"{Convert.ToChar(10)}")                     // NEL
+                .Replace($"{Convert.ToChar(0x2028)}", $"{Convert.ToChar(10)}")                  // LS
+                .Replace($"{Convert.ToChar(0x2029)}", $"{Convert.ToChar(10)}")                  // PS
+            ;
         }
 
         /// <summary>
