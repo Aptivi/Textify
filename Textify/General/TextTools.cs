@@ -170,10 +170,7 @@ namespace Textify.General
             if (target is null)
                 throw new TextifyException("The target may not be null");
 
-            var result = target
-                .Replace($"{Convert.ToChar(13)}{Convert.ToChar(10)}", $"{Convert.ToChar(10)}")
-                .Replace($"{Convert.ToChar(13)}", $"{Convert.ToChar(10)}")
-                .Split(Convert.ToChar(10));
+            var result = target.UnixifyNewLines().Split(Convert.ToChar(10));
             if (!emptyStrings)
                 result = result.Where((str) => !string.IsNullOrEmpty(str)).ToArray();
             return result;
@@ -192,6 +189,23 @@ namespace Textify.General
             return target
                 .Replace(Convert.ToChar(13).ToString(), "")
                 .Split(Convert.ToChar(10));
+        }
+
+        /// <summary>
+        /// Converts any existing new lines (Windows and Mac OS 9) to Unix format (Line Feeds) for universal parsing and for general use
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <returns>A string that contains new lines converted to the Unix format</returns>
+        /// <exception cref="TextifyException"></exception>
+        public static string UnixifyNewLines(this string target)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            // Convert Windows (CR+LF) and Mac OS 9 (CR) to Unix (LF)
+            return target
+                .Replace($"{Convert.ToChar(13)}{Convert.ToChar(10)}", $"{Convert.ToChar(10)}")
+                .Replace($"{Convert.ToChar(13)}", $"{Convert.ToChar(10)}");
         }
 
         /// <summary>

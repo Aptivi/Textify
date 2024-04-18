@@ -20,6 +20,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using Textify.Accessibility;
+using Textify.General;
 
 namespace Textify.Tests.Accessibility
 {
@@ -39,7 +40,7 @@ namespace Textify.Tests.Accessibility
         public void TestBuildBraille(string target, string expected)
         {
             string braille = BrailleBuilder.ToBraille(target);
-            braille.ShouldBe(expected);
+            braille.UnixifyNewLines().ShouldBe(expected);
         }
     }
 }
