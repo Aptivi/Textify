@@ -87,7 +87,7 @@
   "api/Textify.Data.Analysis.Words.WordDataType.html": {
     "href": "api/Textify.Data.Analysis.Words.WordDataType.html",
     "title": "Enum WordDataType | Textify API - Aptivi",
-    "keywords": "Enum WordDataType Word data type to select what kind of words do we need to fetch Namespace: Textify.Data.Analysis.Words Assembly: Textify.Data.Analysis.dll Syntax public enum WordDataType Fields Name Description BadWords Offensive words list (18+) for bad word filtering Words Word list WordsDirty Word list, including offensive words (18+) WordsDirtyFull Word list, including offensive words (18+) and alphanumeric characters WordsFull Word list, including alphanumeric characters"
+    "keywords": "Enum WordDataType Word data type to select what kind of words do we need to fetch Namespace: Textify.Data.Analysis.Words Assembly: Textify.Data.Analysis.dll Syntax public enum WordDataType Fields Name Description BadWords Offensive words list (18+) for bad word filtering CommonWords Common word list CommonWordsDirty Common word list, including offensive words (18+) Words Word list WordsDirty Word list, including offensive words (18+) WordsDirtyFull Word list, including offensive words (18+) and alphanumeric characters WordsFull Word list, including alphanumeric characters"
   },
   "api/Textify.Data.Analysis.Words.WordManager.html": {
     "href": "api/Textify.Data.Analysis.Words.WordManager.html",

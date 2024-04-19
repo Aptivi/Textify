@@ -2607,6 +2607,18 @@ references:
   commentId: F:Textify.Data.Analysis.Words.WordDataType.BadWords
   fullName: Textify.Data.Analysis.Words.WordDataType.BadWords
   nameWithType: WordDataType.BadWords
+- uid: Textify.Data.Analysis.Words.WordDataType.CommonWords
+  name: CommonWords
+  href: api/Textify.Data.Analysis.Words.WordDataType.html#Textify_Data_Analysis_Words_WordDataType_CommonWords
+  commentId: F:Textify.Data.Analysis.Words.WordDataType.CommonWords
+  fullName: Textify.Data.Analysis.Words.WordDataType.CommonWords
+  nameWithType: WordDataType.CommonWords
+- uid: Textify.Data.Analysis.Words.WordDataType.CommonWordsDirty
+  name: CommonWordsDirty
+  href: api/Textify.Data.Analysis.Words.WordDataType.html#Textify_Data_Analysis_Words_WordDataType_CommonWordsDirty
+  commentId: F:Textify.Data.Analysis.Words.WordDataType.CommonWordsDirty
+  fullName: Textify.Data.Analysis.Words.WordDataType.CommonWordsDirty
+  nameWithType: WordDataType.CommonWordsDirty
 - uid: Textify.Data.Analysis.Words.WordDataType.Words
   name: Words
   href: api/Textify.Data.Analysis.Words.WordDataType.html#Textify_Data_Analysis_Words_WordDataType_Words
