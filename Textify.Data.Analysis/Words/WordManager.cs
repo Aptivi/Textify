@@ -56,7 +56,7 @@ namespace Textify.Data.Analysis.Words
         /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
         public static string GetRandomWord(WordDataType type = WordDataType.Words) =>
-            GetWords(type)[rng.Next(words.Count)];
+            GetWords(type)[rng.Next(words[type].Length)];
 
         /// <summary>
         /// Gets a random word conditionally
