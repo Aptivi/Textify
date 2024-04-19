@@ -84,5 +84,13 @@ namespace Textify.Data.Analysis.Tools
         /// Initializes the zip files containing just the offensive words (18+) for bad word filtering
         /// </summary>
         WordsJustDirty = 16384,
+        /// <summary>
+        /// Initializes the zip files containing common words list
+        /// </summary>
+        CommonWords = 32768,
+        /// <summary>
+        /// Initializes the zip files containing common words list, including the offensive words (18+)
+        /// </summary>
+        CommonWordsDirty = 65536,
     }
 }

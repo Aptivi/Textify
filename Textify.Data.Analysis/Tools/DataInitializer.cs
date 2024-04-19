@@ -48,6 +48,8 @@ namespace Textify.Data.Analysis.Tools
             bool needsWordsDirty = types.HasFlag(DataType.WordsDirty);
             bool needsWordsDirtyFull = types.HasFlag(DataType.WordsDirtyFull);
             bool needsWordsJustDirty = types.HasFlag(DataType.WordsJustDirty);
+            bool needsCommonWords = types.HasFlag(DataType.CommonWords);
+            bool needsCommonWordsDirty = types.HasFlag(DataType.CommonWordsDirty);
 
             // Go through all the types
             if (needsNames)
@@ -124,6 +126,16 @@ namespace Textify.Data.Analysis.Tools
             {
                 if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.bad_words)))
                     DataTools.dataStreams.Add(nameof(WordsData.bad_words), WordsData.bad_words);
+            }
+            if (needsCommonWords)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_common_clean)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words_common_clean), WordsData.words_common_clean);
+            }
+            if (needsCommonWordsDirty)
+            {
+                if (!DataTools.dataStreams.ContainsKey(nameof(WordsData.words_common)))
+                    DataTools.dataStreams.Add(nameof(WordsData.words_common), WordsData.words_common);
             }
         }
     }

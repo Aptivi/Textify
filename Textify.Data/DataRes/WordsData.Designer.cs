@@ -109,5 +109,25 @@ namespace Textify.Data.DataRes {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] words_common {
+            get {
+                object obj = ResourceManager.GetObject("words_common", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] words_common_clean {
+            get {
+                object obj = ResourceManager.GetObject("words_common_clean", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

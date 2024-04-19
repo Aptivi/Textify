@@ -147,6 +147,8 @@ namespace Textify.Data.Analysis.Words
                 type == WordDataType.WordsDirty ? (DataType.WordsDirty, "words_alpha", "words_alpha.txt") :
                 type == WordDataType.WordsDirtyFull ? (DataType.WordsDirtyFull, "words", "words.txt") :
                 type == WordDataType.BadWords ? (DataType.WordsJustDirty, "bad_words", "bad-words.txt") :
+                type == WordDataType.CommonWords ? (DataType.CommonWords, "words_common_clean", "words-common-clean.txt") :
+                type == WordDataType.CommonWordsDirty ? (DataType.CommonWordsDirty, "words_common", "words-common.txt") :
                 throw new TextifyException("Invalid word data type");
             DataInitializer.Initialize(dataType);
             var contentStream = new MemoryStream(DataTools.GetDataFrom(resourceName));

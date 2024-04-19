@@ -44,5 +44,13 @@ namespace Textify.Data.Analysis.Words
         /// Offensive words list (18+) for bad word filtering
         /// </summary>
         BadWords,
+        /// <summary>
+        /// Common word list
+        /// </summary>
+        CommonWords,
+        /// <summary>
+        /// Common word list, including offensive words (18+)
+        /// </summary>
+        CommonWordsDirty,
     }
 }

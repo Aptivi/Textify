@@ -33,6 +33,13 @@ namespace Textify.Demos.Offline.Fixtures.Cases
                 string word = WordManager.GetRandomWord();
                 Console.WriteLine($"Word {i + 1}: {word}");
             }
+
+            // Get 10 random common words
+            for (int i = 0; i < 10; i++)
+            {
+                string word = WordManager.GetRandomWord(WordDataType.CommonWords);
+                Console.WriteLine($"Common word {i + 1}: {word}");
+            }
         }
     }
 }
