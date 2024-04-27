@@ -6,14 +6,10 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.7.0</Version>
-    <Authors>Aptivi</Authors>
-    <Company>Aptivi Corp.</Company>
     <Description>
       A collection of tools that provide you text tools for your C# and Visual Basic applications.
       This package provides the necessary analysis tools for Unicode, Words, and Names.
     </Description>
-    <Copyright>Copyright (c) 2023-2024 Aptivi.</Copyright>
     <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -23,9 +19,6 @@
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Textify.Offline.Data.Analysis</PackageId>
-    <LangVersion>latest</LangVersion>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,15 +26,6 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-  </ItemGroup>
-
-  <PropertyGroup>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Textify.Data.Analysis\Textify.Data.Analysis.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.SourceLink.GitHub" />
+  </ItemGroup>
+
 </Project>

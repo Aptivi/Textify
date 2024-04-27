@@ -1,0 +1,22 @@
+<Project>
+    <PropertyGroup>
+        <Version>1.4.2</Version>
+        <Authors>Aptivi</Authors>
+        <Company>Aptivi</Company>
+        <Copyright>Copyright (c) 2023-2024 Aptivi</Copyright>
+        <LangVersion>latest</LangVersion>
+        <DebugType>portable</DebugType>
+        <SignAssembly>True</SignAssembly>
+        <RootPath>$(MSBuildThisFileDirectory)</RootPath>
+        <AssemblyOriginatorKeyFile>$(RootPath)\aptivi_snk.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    </ItemGroup>
+</Project>
