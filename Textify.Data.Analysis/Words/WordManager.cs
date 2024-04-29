@@ -141,21 +141,21 @@ namespace Textify.Data.Analysis.Words
 
         private static async Task<string[]> GetWordListAsync(WordDataType type)
         {
-            (DataType dataType, string resourceName, string fileName) =
-                type == WordDataType.Words ? (DataType.Words, "words_clean_alpha", "words-clean-alpha.txt") :
-                type == WordDataType.WordsFull ? (DataType.WordsFull, "words_clean", "words-clean.txt") :
-                type == WordDataType.WordsDirty ? (DataType.WordsDirty, "words_alpha", "words_alpha.txt") :
-                type == WordDataType.WordsDirtyFull ? (DataType.WordsDirtyFull, "words", "words.txt") :
-                type == WordDataType.BadWords ? (DataType.WordsJustDirty, "bad_words", "bad-words.txt") :
-                type == WordDataType.CommonWords ? (DataType.CommonWords, "words_common_clean", "words-common-clean.txt") :
-                type == WordDataType.CommonWordsDirty ? (DataType.CommonWordsDirty, "words_common", "words-common.txt") :
+            (DataType dataType, string resourceName) =
+                type == WordDataType.Words ? (DataType.Words, "words-clean-alpha") :
+                type == WordDataType.WordsFull ? (DataType.WordsFull, "words-clean") :
+                type == WordDataType.WordsDirty ? (DataType.WordsDirty, "words_alpha") :
+                type == WordDataType.WordsDirtyFull ? (DataType.WordsDirtyFull, "words") :
+                type == WordDataType.BadWords ? (DataType.WordsJustDirty, "bad-words") :
+                type == WordDataType.CommonWords ? (DataType.CommonWords, "words-common-clean") :
+                type == WordDataType.CommonWordsDirty ? (DataType.CommonWordsDirty, "words-common") :
                 throw new TextifyException("Invalid word data type");
             DataInitializer.Initialize(dataType);
             var contentStream = new MemoryStream(DataTools.GetDataFrom(resourceName));
             var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 
             // Open the XML to stream
-            var content = archive.GetEntry(fileName).Open();
+            var content = archive.GetEntry(resourceName + ".txt").Open();
             var read = await new StreamReader(content).ReadToEndAsync();
             return read.SplitNewLines(false);
         }

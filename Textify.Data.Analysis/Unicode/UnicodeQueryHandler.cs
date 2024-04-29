@@ -45,17 +45,17 @@ namespace Textify.Data.Analysis.Unicode
             {
                 case UnicodeQueryType.Simple:
                     DataInitializer.Initialize(DataType.UnicodeNoUnihan);
-                    unicodeData = DataTools.GetDataFrom("ucd_nounihan_flat");
+                    unicodeData = DataTools.GetDataFrom("ucd.nounihan.flat");
                     xmlFile = "ucd.nounihan.flat.xml";
                     break;
                 case UnicodeQueryType.Unihan:
                     DataInitializer.Initialize(DataType.UnicodeUnihan);
-                    unicodeData = DataTools.GetDataFrom("ucd_unihan_flat");
+                    unicodeData = DataTools.GetDataFrom("ucd.unihan.flat");
                     xmlFile = "ucd.unihan.flat.xml";
                     break;
                 case UnicodeQueryType.Full:
                     DataInitializer.Initialize(DataType.Unicode);
-                    unicodeData = DataTools.GetDataFrom("ucd_all_flat");
+                    unicodeData = DataTools.GetDataFrom("ucd.all.flat");
                     xmlFile = "ucd.all.flat.xml";
                     break;
             }

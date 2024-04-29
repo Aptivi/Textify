@@ -37,38 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="DataRes\NamesData.Designer.cs">
-      <DependentUpon>NamesData.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="DataRes/UnicodeData.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>UnicodeData.resx</DependentUpon>
-    </Compile>
-    <Compile Update="DataRes\WordsData.Designer.cs">
-      <DependentUpon>WordsData.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="DataRes\NamesData.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>NamesData.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="DataRes/UnicodeData.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>UnicodeData.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="DataRes\WordsData.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>WordsData.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
+    <EmbeddedResource Include="../assets/WordsList/*.zip" />
+    <EmbeddedResource Include="../assets/UnicodeList/*.zip" />
+    <EmbeddedResource Include="../assets/NamesList/Processed/*.zip" />
   </ItemGroup>
 
 </Project>
