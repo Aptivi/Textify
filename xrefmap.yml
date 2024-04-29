@@ -3712,6 +3712,22 @@ references:
   commentId: T:Textify.Json.JsonTools
   fullName: Textify.Json.JsonTools
   nameWithType: JsonTools
+- uid: Textify.Json.JsonTools.BeautifyJson(System.String)
+  name: BeautifyJson(string)
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_BeautifyJson_System_String_
+  commentId: M:Textify.Json.JsonTools.BeautifyJson(System.String)
+  name.vb: BeautifyJson(String)
+  fullName: Textify.Json.JsonTools.BeautifyJson(string)
+  fullName.vb: Textify.Json.JsonTools.BeautifyJson(String)
+  nameWithType: JsonTools.BeautifyJson(string)
+  nameWithType.vb: JsonTools.BeautifyJson(String)
+- uid: Textify.Json.JsonTools.BeautifyJson*
+  name: BeautifyJson
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_BeautifyJson_
+  commentId: Overload:Textify.Json.JsonTools.BeautifyJson
+  isSpec: "True"
+  fullName: Textify.Json.JsonTools.BeautifyJson
+  nameWithType: JsonTools.BeautifyJson
 - uid: Textify.Json.JsonTools.BeautifyJsonText(System.String)
   name: BeautifyJsonText(string)
   href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_BeautifyJsonText_System_String_
@@ -3728,6 +3744,35 @@ references:
   isSpec: "True"
   fullName: Textify.Json.JsonTools.BeautifyJsonText
   nameWithType: JsonTools.BeautifyJsonText
+- uid: Textify.Json.JsonTools.FindDifferences(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)
+  name: FindDifferences(JToken, JToken)
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_FindDifferences_Newtonsoft_Json_Linq_JToken_Newtonsoft_Json_Linq_JToken_
+  commentId: M:Textify.Json.JsonTools.FindDifferences(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)
+  fullName: Textify.Json.JsonTools.FindDifferences(Newtonsoft.Json.Linq.JToken, Newtonsoft.Json.Linq.JToken)
+  nameWithType: JsonTools.FindDifferences(JToken, JToken)
+- uid: Textify.Json.JsonTools.FindDifferences*
+  name: FindDifferences
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_FindDifferences_
+  commentId: Overload:Textify.Json.JsonTools.FindDifferences
+  isSpec: "True"
+  fullName: Textify.Json.JsonTools.FindDifferences
+  nameWithType: JsonTools.FindDifferences
+- uid: Textify.Json.JsonTools.MinifyJson(System.String)
+  name: MinifyJson(string)
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_MinifyJson_System_String_
+  commentId: M:Textify.Json.JsonTools.MinifyJson(System.String)
+  name.vb: MinifyJson(String)
+  fullName: Textify.Json.JsonTools.MinifyJson(string)
+  fullName.vb: Textify.Json.JsonTools.MinifyJson(String)
+  nameWithType: JsonTools.MinifyJson(string)
+  nameWithType.vb: JsonTools.MinifyJson(String)
+- uid: Textify.Json.JsonTools.MinifyJson*
+  name: MinifyJson
+  href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_MinifyJson_
+  commentId: Overload:Textify.Json.JsonTools.MinifyJson
+  isSpec: "True"
+  fullName: Textify.Json.JsonTools.MinifyJson
+  nameWithType: JsonTools.MinifyJson
 - uid: Textify.Json.JsonTools.MinifyJsonText(System.String)
   name: MinifyJsonText(string)
   href: api/Textify.Json.JsonTools.html#Textify_Json_JsonTools_MinifyJsonText_System_String_
