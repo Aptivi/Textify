@@ -19,6 +19,8 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.IO;
+using System.Linq;
 
 namespace Textify.Json
 {
@@ -27,6 +29,32 @@ namespace Textify.Json
     /// </summary>
     public static class JsonTools
     {
+        /// <summary>
+        /// Beautifies the JSON text contained in the file.
+        /// </summary>
+        /// <param name="JsonFile">Path to JSON file.</param>
+        /// <returns>Beautified JSON</returns>
+        /// <exception cref="FileNotFoundException"></exception>
+        public static string BeautifyJson(string JsonFile)
+        {
+            // Try to beautify JSON
+            string JsonFileContents = File.ReadAllText(JsonFile);
+            return BeautifyJsonText(JsonFileContents);
+        }
+
+        /// <summary>
+        /// Minifies the JSON text contained in the file.
+        /// </summary>
+        /// <param name="JsonFile">Path to JSON file.</param>
+        /// <returns>Minified JSON</returns>
+        /// <exception cref="FileNotFoundException"></exception>
+        public static string MinifyJson(string JsonFile)
+        {
+            // Try to minify JSON
+            string JsonFileContents = File.ReadAllText(JsonFile);
+            return MinifyJsonText(JsonFileContents);
+        }
+
         /// <summary>
         /// Beautifies the JSON text.
         /// </summary>
@@ -55,6 +83,69 @@ namespace Textify.Json
             // Minify JSON
             string MinifiedJson = JsonConvert.SerializeObject(JsonToken);
             return MinifiedJson;
+        }
+
+        /// <summary>
+        /// Finds the JSON object differences between the two JSON object tokens
+        /// </summary>
+        /// <param name="sourceObj">Source object token</param>
+        /// <param name="targetObj">Target object token</param>
+        /// <returns>A JSON object containing differences for objects</returns>
+        public static JObject FindDifferences(JToken sourceObj, JToken targetObj)
+        {
+            var diff = new JObject();
+            if (!JToken.DeepEquals(targetObj, sourceObj))
+            {
+                // The objects are not equal.
+                switch (targetObj.Type)
+                {
+                    case JTokenType.Object:
+                        // Added keys
+                        var addedKeys = ((JObject)targetObj).Properties().Select(c => c.Name).Except(((JObject)sourceObj).Properties().Select(c => c.Name));
+                        foreach (var k in addedKeys)
+                        {
+                            diff[$"+{k}"] = new JObject
+                            {
+                                ["+"] = targetObj[k].Path
+                            };
+                        }
+
+                        // Removed keys
+                        var removedKeys = ((JObject)sourceObj).Properties().Select(c => c.Name).Except(((JObject)targetObj).Properties().Select(c => c.Name));
+                        foreach (var k in removedKeys)
+                        {
+                            diff[$"-{k}"] = new JObject
+                            {
+                                ["-"] = sourceObj[k].Path
+                            };
+                        }
+
+                        // Changed keys
+                        var changedKeys = ((JObject)targetObj).Properties().Where(c => !JToken.DeepEquals(c.Value, sourceObj[c.Name])).Select(c => c.Name);
+                        foreach (var k in changedKeys)
+                        {
+                            diff[$"*{k}"] = new JObject
+                            {
+                                ["*"] = new JObject
+                                {
+                                    ["source"] = sourceObj[k],
+                                    ["target"] = targetObj[k],
+                                }
+                            };
+                        }
+                        break;
+                    case JTokenType.Array:
+                        // Additions and subtractions
+                        diff["+"] = new JArray(((JArray)targetObj).Except(sourceObj));
+                        diff["-"] = new JArray(((JArray)sourceObj).Except(targetObj));
+                        break;
+                    default:
+                        diff["+"] = targetObj;
+                        diff["-"] = sourceObj;
+                        break;
+                }
+            }
+            return diff;
         }
     }
 }
