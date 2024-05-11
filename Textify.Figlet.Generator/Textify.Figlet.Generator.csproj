@@ -4,17 +4,43 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <IsRoslynComponent>true</IsRoslynComponent>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
     <Description>
       A collection of tools that provide you text tools for your C# and Visual Basic applications.
       This package provides the Figlet generator that you can use in conjunction with the main Textify.Figlet library.
     </Description>
+    <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library;json</PackageTags>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <NoWarn>$(NoWarn);NU5128</NoWarn>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Textify\OfficialAppIcon-Textify-512.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
@@ -23,17 +49,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" PrivateAssets="all" />
     <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="bin\Debug\netstandard2.0\\Textify.Figlet.dll" />
-    <None Include="$(OutputPath)\Textify.Figlet.dll" Pack="true" PackagePath="analyzers\dotnet\cs" />
-    <None Remove="bin\Debug\netstandard2.0\\Textify.Figlet.pdb" />
-    <None Include="$(OutputPath)\Textify.Figlet.pdb" Pack="true" PackagePath="analyzers\dotnet\cs" />
-    <None Remove="bin\Debug\netstandard2.0\\Textify.Figlet.Generator.dll" />
-    <None Include="$(OutputPath)\Textify.Figlet.Generator.dll" Pack="true" PackagePath="analyzers\dotnet\cs" />
-    <None Remove="bin\Debug\netstandard2.0\\Textify.Figlet.Generator.pdb" />
-    <None Include="$(OutputPath)\Textify.Figlet.Generator.pdb" Pack="true" PackagePath="analyzers\dotnet\cs" />
+    <PackageReference Update="Roslyn.Diagnostics.Analyzers" Version="3.3.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,7 +57,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="Roslyn.Diagnostics.Analyzers" Version="3.3.4" />
+    <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="$(OutputPath)\*.pdb" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
   </ItemGroup>
 
 </Project>

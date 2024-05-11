@@ -84,7 +84,7 @@ namespace Textify.Figlet.Generator
 
         public const string AttributeSource =
             $$"""
-                {{Header}}
+            {{Header}}
             using System;
             using System.Diagnostics;
             using System.Diagnostics.CodeAnalysis;
@@ -140,16 +140,20 @@ namespace Textify.Figlet.Generator
                     {
                         sb.AppendLine(
                             $$"""
-                                namespace {{type.Namespace}}
+                            namespace {{type.Namespace}}
+                            {
+                                partial class {{type.Class}}
+                                {
+                            """);
+                    }
+                    else
+                    {
+                        sb.AppendLine(
+                            $$"""
+                            partial class {{type.Class}}
                             {
                             """);
                     }
-
-                    sb.AppendLine(
-                        $$"""
-                                partial class {{type.Class}}
-                            {
-                        """);
 
                     foreach (var item in data.Items)
                     {
@@ -177,18 +181,21 @@ namespace Textify.Figlet.Generator
 
                         sb.AppendLine(
                             $$"""
-                                        public static string {{item.MemberName}} { get; } = @"{{text.Replace("\"", "\"\"")}}";
+                                {{(type.Namespace is not null ? "    " : "")}}public static string {{item.MemberName}} { get; } = @"{{text.Replace("\"", "\"\"")}}";
                             """);
                     }
 
-                    sb.AppendLine(
-                        """
-                            }
-                        """);
-
                     if (type.Namespace is not null)
                     {
-                        sb.Append('}');
+                        sb.Append(
+                            """
+                                }
+                            }
+                            """);
+                    }
+                    else
+                    {
+                        sb.AppendLine("}");
                     }
 
                     var hintName = type.Namespace is null
