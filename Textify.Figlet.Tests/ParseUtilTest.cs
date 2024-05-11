@@ -1,81 +1,91 @@
-﻿// Copyright Drew Noakes. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
-// Copyright 2023-2024 - Aptivi. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
+﻿//
+// Textify  Copyright (C) 2023-2024  Aptivi
+//
+// This file is part of Textify
+//
+// Textify is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Textify is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY, without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using Textify.Figlet.Utilities;
 
-namespace Textify.Figlet.Tests;
-
-public class ParseUtilTest
+namespace Textify.Figlet.Tests
 {
-    [TestMethod]
-    public void Parse()
+    public class ParseUtilTest
     {
-        void Test(string s, int expected)
+        [TestMethod]
+        [DataRow("1234", 1234)]
+        [DataRow("1234 ", 1234)]
+        [DataRow("1234  ", 1234)]
+        [DataRow("0X4D2", 1234)]
+        [DataRow("0h4D2", 1234)]
+        [DataRow("0x4d2", 1234)]
+        [DataRow("0x4D2  ", 1234)]
+        [DataRow("02322", 1234)]
+        [DataRow("02322  ", 1234)]
+        [DataRow("002322  ", 1234)]
+        [DataRow("0002322  ", 1234)]
+        [DataRow("-1234", -1234)]
+        [DataRow("-1234 ", -1234)]
+        [DataRow("-1234  ", -1234)]
+        [DataRow("-0X4D2", -1234)]
+        [DataRow("-0h4D2", -1234)]
+        [DataRow("-0x4d2", -1234)]
+        [DataRow("-0x4D2  ", -1234)]
+        [DataRow("-02322", -1234)]
+        [DataRow("-02322  ", -1234)]
+        [DataRow("-002322  ", -1234)]
+        [DataRow("-0002322  ", -1234)]
+        [DataRow(" 1234", 1234)]
+        [DataRow(" 1234 ", 1234)]
+        [DataRow("  1234  ", 1234)]
+        [DataRow(" 0X4D2", 1234)]
+        [DataRow(" 0h4D2", 1234)]
+        [DataRow(" 0x4d2", 1234)]
+        [DataRow(" 0x4D2  ", 1234)]
+        [DataRow(" 02322", 1234)]
+        [DataRow(" 02322  ", 1234)]
+        [DataRow(" 002322  ", 1234)]
+        [DataRow(" 0002322  ", 1234)]
+        [DataRow("0", 0)]
+        [DataRow("00", 0)]
+        [DataRow("000", 0)]
+        [DataRow("0x0", 0)]
+        [DataRow(" 0 ", 0)]
+        [DataRow(" 00 ", 0)]
+        [DataRow(" 000 ", 0)]
+        [DataRow(" 0x0 ", 0)]
+        public void TestParseValid(string s, int expected)
         {
             ParseUtil.TryParse(s, out var actual).ShouldBeTrue();
             actual.ShouldBe(expected);
         }
 
-        void TestFails(string s) =>
+        [TestMethod]
+        [DataRow("Hello")]
+        [DataRow("0Hello")]
+        [DataRow("0xx1234")]
+        [DataRow("04D2")]
+        [DataRow("4D2")]
+        [DataRow("098LKJ")]
+        [DataRow("0x")]
+        [DataRow("0x ")]
+        [DataRow(" 0x ")]
+        [DataRow("- 123")]
+        [DataRow("--123")]
+        public void TestParseInalid(string s) =>
             ParseUtil.TryParse(s, out var _).ShouldBeFalse();
-
-        Test("1234", 1234);
-        Test("1234 ", 1234);
-        Test("1234  ", 1234);
-        Test("0X4D2", 1234);
-        Test("0h4D2", 1234);
-        Test("0x4d2", 1234);
-        Test("0x4D2  ", 1234);
-        Test("02322", 1234);
-        Test("02322  ", 1234);
-        Test("002322  ", 1234);
-        Test("0002322  ", 1234);
-
-        Test("-1234", -1234);
-        Test("-1234 ", -1234);
-        Test("-1234  ", -1234);
-        Test("-0X4D2", -1234);
-        Test("-0h4D2", -1234);
-        Test("-0x4d2", -1234);
-        Test("-0x4D2  ", -1234);
-        Test("-02322", -1234);
-        Test("-02322  ", -1234);
-        Test("-002322  ", -1234);
-        Test("-0002322  ", -1234);
-
-        Test(" 1234", 1234);
-        Test(" 1234 ", 1234);
-        Test("  1234  ", 1234);
-        Test(" 0X4D2", 1234);
-        Test(" 0h4D2", 1234);
-        Test(" 0x4d2", 1234);
-        Test(" 0x4D2  ", 1234);
-        Test(" 02322", 1234);
-        Test(" 02322  ", 1234);
-        Test(" 002322  ", 1234);
-        Test(" 0002322  ", 1234);
-
-        Test("0", 0);
-        Test("00", 0);
-        Test("000", 0);
-        Test("0x0", 0);
-        Test(" 0 ", 0);
-        Test(" 00 ", 0);
-        Test(" 000 ", 0);
-        Test(" 0x0 ", 0);
-
-        TestFails("Hello");
-        TestFails("0Hello");
-        TestFails("0xx1234");
-        TestFails("04D2");
-        TestFails("4D2");
-        TestFails("098LKJ");
-        TestFails("0x");
-        TestFails("0x ");
-        TestFails(" 0x ");
-        TestFails("- 123");
-        TestFails("--123");
     }
 }

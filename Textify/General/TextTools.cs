@@ -23,7 +23,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using Textify.Tools;
 
 namespace Textify.General

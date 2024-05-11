@@ -17,29 +17,20 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shouldly;
-using Textify.Figlet.Utilities;
-
-namespace Textify.Figlet.Tests
+namespace Textify.Figlet.Utilities.Lines
 {
-    public class StringPoolTest
+    /// <summary>
+    /// Enumeration of possible text directions.
+    /// </summary>
+    public enum FigletTextDirection
     {
-        [TestMethod]
-        public void PoolsReferences()
-        {
-            var pool = new StringPool();
-
-            var s1 = "s";
-            var s2 = "S".ToLower();
-
-            Assert.AreNotSame(s1, s2);
-            s2.ShouldBe(s1);
-
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s2));
-            Assert.AreSame(s1, pool.Pool(s2));
-        }
+        /// <summary>
+        /// Text flows from the left to the right.
+        /// </summary>
+        LeftToRight = 0,
+        /// <summary>
+        /// Text flows from the right to the left.
+        /// </summary>
+        RightToLeft = 1
     }
 }

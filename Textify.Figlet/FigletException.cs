@@ -1,23 +1,37 @@
-// Copyright Drew Noakes. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
-// Copyright 2023-2024 - Aptivi. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
-
-
-// Copyright Drew Noakes. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
-// Copyright 2023-2024 - Aptivi. Licensed under the Apache-2.0 license. See the LICENSE file for more details.
+//
+// Textify  Copyright (C) 2023-2024  Aptivi
+//
+// This file is part of Textify
+//
+// Textify is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Textify is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY, without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
 
 using System;
 
-namespace Textify.Figlet;
-
-/// <summary>
-/// Type for exceptions raised by Figlet.
-/// </summary>
-public sealed class FigletException : Exception
+namespace Textify.Figlet
 {
     /// <summary>
-    /// Constructs a new Figlet exception.
+    /// Type for exceptions raised by Figlet.
     /// </summary>
-    /// <param name="message">A message explaining the exception.</param>
-    public FigletException(string message) : base(message)
-    { }
+    public sealed class FigletException : Exception
+    {
+        /// <summary>
+        /// Constructs a new Figlet exception.
+        /// </summary>
+        /// <param name="message">A message explaining the exception.</param>
+        public FigletException(string message) :
+            base(message)
+        { }
+    }
 }

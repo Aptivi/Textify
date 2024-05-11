@@ -17,29 +17,24 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shouldly;
-using Textify.Figlet.Utilities;
-
-namespace Textify.Figlet.Tests
+namespace Textify.Figlet.Utilities.Lines
 {
-    public class StringPoolTest
+    internal readonly struct Line
     {
-        [TestMethod]
-        public void PoolsReferences()
+        public string Content { get; }
+        public byte SpaceBefore { get; }
+        public byte SpaceAfter { get; }
+
+        public char FrontChar =>
+            Content.Length == SpaceBefore ? ' ' : Content[SpaceBefore];
+        public char BackChar =>
+            Content.Length == SpaceAfter ? ' ' : Content[Content.Length - SpaceAfter - 1];
+
+        public Line(string content, byte spaceBefore, byte spaceAfter)
         {
-            var pool = new StringPool();
-
-            var s1 = "s";
-            var s2 = "S".ToLower();
-
-            Assert.AreNotSame(s1, s2);
-            s2.ShouldBe(s1);
-
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s2));
-            Assert.AreSame(s1, pool.Pool(s2));
+            Content = content;
+            SpaceBefore = spaceBefore;
+            SpaceAfter = spaceAfter;
         }
     }
 }

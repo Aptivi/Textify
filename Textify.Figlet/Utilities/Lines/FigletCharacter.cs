@@ -17,29 +17,15 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shouldly;
-using Textify.Figlet.Utilities;
+using System.Collections.Generic;
 
-namespace Textify.Figlet.Tests
+namespace Textify.Figlet.Utilities.Lines
 {
-    public class StringPoolTest
+    internal sealed class FigletCharacter
     {
-        [TestMethod]
-        public void PoolsReferences()
-        {
-            var pool = new StringPool();
+        public IReadOnlyList<Line> Lines { get; }
 
-            var s1 = "s";
-            var s2 = "S".ToLower();
-
-            Assert.AreNotSame(s1, s2);
-            s2.ShouldBe(s1);
-
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s1));
-            Assert.AreSame(s1, pool.Pool(s2));
-            Assert.AreSame(s1, pool.Pool(s2));
-        }
+        public FigletCharacter(IReadOnlyList<Line> lines) =>
+            Lines = lines;
     }
 }
