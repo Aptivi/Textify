@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\Textify.Figlet\Utilities\ParseUtil.cs" Link="Source\ParseUtil.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Remove="Microsoft.SourceLink.GitHub" />
   </ItemGroup>
   

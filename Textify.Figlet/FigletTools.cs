@@ -31,13 +31,13 @@ namespace Textify.Figlet
     public static class FigletTools
     {
         internal readonly static Assembly assembly = typeof(FigletFonts).GetTypeInfo().Assembly;
-        private readonly static Dictionary<string, string> cachedFiglets = [];
-        private readonly static string[] figletFonts =
+        internal readonly static string[] figletFonts =
             assembly.GetManifestResourceNames().Select((name) =>
             {
                 string fileName = name.Substring(assembly.GetName().Name.Length + 1 + "Fonts.".Length);
                 return fileName.Substring(0, fileName.IndexOf('.'));
             }).ToArray();
+        private readonly static Dictionary<string, string> cachedFiglets = [];
 
         /// <summary>
         /// Gets the figlet lines
