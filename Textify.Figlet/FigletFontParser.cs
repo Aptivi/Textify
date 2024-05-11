@@ -101,61 +101,48 @@ namespace Textify.Figlet
             pool ??= new StringPool();
 
             /*
-            Characters 0-31 are control characters.
+                Characters 0-31 are control characters, so figlet fonts usually don't contain their representation.
 
-            Characters 32-126 appear in order:
+                Characters 32-64 appear in order as required:
 
-            32 (blank/space) 64 @             96  `
-            33 !             65 A             97  a
-            34 "             66 B             98  b
-            35 #             67 C             99  c
-            36 $             68 D             100 d
-            37 %             69 E             101 e
-            38 &             70 F             102 f
-            39 '             71 G             103 g
-            40 (             72 H             104 h
-            41 )             73 I             105 i
-            42 *             74 J             106 j
-            43 +             75 K             107 k
-            44 ,             76 L             108 l
-            45 -             77 M             109 m
-            46 .             78 N             110 n
-            47 /             79 O             111 o
-            48 0             80 P             112 p
-            49 1             81 Q             113 q
-            50 2             82 R             114 r
-            51 3             83 S             115 s
-            52 4             84 T             116 t
-            53 5             85 U             117 u
-            54 6             86 V             118 v
-            55 7             87 W             119 w
-            56 8             88 X             120 x
-            57 9             89 Y             121 y
-            58 :             90 Z             122 z
-            59 ;             91 [             123 {
-            60 <             92 \             124 |
-            61 =             93 ]             125 }
-            62 >             94 ^             126 ~
-            63 ?             95 _
+                32 (blank/space) 33 !             34 "              35 #             36 $             37 %
+                38 &             39 '             40 (              41 )             42 *             43 +
+                44 ,             45 -             46 .              47 /             48 0             49 1
+                50 2             51 3             52 4              53 5             54 6             55 7
+                56 8             57 9             58 :              59 ;             60 <             61 =
+                62 >             63 ?             64 @
 
-            Then codes:
+                Characters 65-126 appear in order as optional:
 
-            196 Ä
-            214 Ö
-            220 Ü
-            228 ä
-            246 ö
-            252 ü
-            223 ß
+                65 A             97  a             66 B             98  b             67 C             99  c
+                68 D             100 d             69 E             101 e             70 F             102 f
+                71 G             103 g             72 H             104 h             73 I             105 i
+                74 J             106 j             75 K             107 k             76 L             108 l
+                77 M             109 m             78 N             110 n             79 O             111 o
+                80 P             112 p             81 Q             113 q             82 R             114 r
+                83 S             115 s             84 T             116 t             85 U             117 u
+                86 V             118 v             87 W             119 w             88 X             120 x
+                89 Y             121 y             90 Z             122 z
+            
+                91 [             92 \              93 ]             94 ^              95 _             96  `
+                123 {            124 |             125 }            126 ~
 
-            If some of these characters are not desired, empty characters may be used, having endmarks flush with the margin.
+                Then codes:
 
-            After the required characters come "code tagged characters" in range -2147483648 to +2147483647, excluding -1. The assumed mapping is to ASCII/Latin-1/Unicode.
+                196 Ä            214 Ö            220 Ü              228 ä            246 ö            252 ü
+                223 ß
 
-            A zero character is treated as the character to be used whenever a required character is missing. If no zero character is available, nothing will be printed.
+                If some of these characters are not desired, empty characters may be used, having endmarks flush with the
+                margin. They may not be specified in the figlet font.
+
+                After the required characters come "code tagged characters" in range -2147483648 to +2147483647, excluding
+                -1. The assumed mapping is to ASCII/Latin-1/Unicode.
+
+                A zero character is treated as the character to be used whenever a required character is missing. If no
+                zero character is available, nothing will be printed.
             */
 
-            FigletCharacter ReadCharacter()
+            FigletCharacter ReadCharacter(bool optional = false)
             {
                 var lines = new Line[height];
 
@@ -180,8 +167,14 @@ namespace Textify.Figlet
                 for (var i = 0; i < height; i++)
                 {
                     // Get a line
-                    var line = reader.ReadLine() ??
-                        throw new FigletException("Unexpected EOF in Font file.");
+                    var line = reader.ReadLine();
+                    if (line == null)
+                    {
+                        if (!optional)
+                            throw new FigletException("Unexpected EOF in Font file.");
+                        else
+                            break;
+                    }
 
                     // Trim the end mark and make a new line instance holding info about the line
                     var endmark = line[line.Length - 1];
@@ -194,16 +187,19 @@ namespace Textify.Figlet
 
             var requiredCharacters = new FigletCharacter[256];
 
-            for (var i = 32; i < 127; i++)
+            for (var i = 32; i < 65; i++)
                 requiredCharacters[i] = ReadCharacter();
 
-            requiredCharacters[196] = ReadCharacter();
-            requiredCharacters[214] = ReadCharacter();
-            requiredCharacters[220] = ReadCharacter();
-            requiredCharacters[228] = ReadCharacter();
-            requiredCharacters[246] = ReadCharacter();
-            requiredCharacters[252] = ReadCharacter();
-            requiredCharacters[223] = ReadCharacter();
+            for (var i = 65; i < 127; i++)
+                requiredCharacters[i] = ReadCharacter(true);
+
+            requiredCharacters[196] = ReadCharacter(true);
+            requiredCharacters[214] = ReadCharacter(true);
+            requiredCharacters[220] = ReadCharacter(true);
+            requiredCharacters[228] = ReadCharacter(true);
+            requiredCharacters[246] = ReadCharacter(true);
+            requiredCharacters[252] = ReadCharacter(true);
+            requiredCharacters[223] = ReadCharacter(true);
 
             // support code-tagged characters
             var sparseCharacters = new Dictionary<int, FigletCharacter>();

@@ -17,8 +17,11 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System.Diagnostics;
+
 namespace Textify.Figlet.Utilities.Lines
 {
+    [DebuggerDisplay("{Content}")]
     internal readonly struct Line
     {
         public string Content { get; }

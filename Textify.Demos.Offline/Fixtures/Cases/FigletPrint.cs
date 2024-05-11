@@ -27,7 +27,7 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         public string FixtureID => "FigletPrint";
         public void RunFixture()
         {
-            string figlet = FigletTools.RenderFiglet("Hello!", "banner3");
+            string figlet = FigletTools.RenderFiglet("Hello!", "ANSISH_1");
             Console.WriteLine(figlet);
         }
     }
