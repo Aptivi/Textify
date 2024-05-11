@@ -43,6 +43,9 @@ namespace Textify.Demos.Offline.Fixtures
 
             // Words
             new WordGet(),
+
+            // Figlet
+            new FigletPrint(),
         ];
 
         internal static IFixture GetFixtureFromName(string name)
