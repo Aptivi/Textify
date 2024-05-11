@@ -1,4 +1,4 @@
-flf2a$ 8 6 59 15 22 0 24463 153
+flf2a$ 8 6 59 15 10 0 24463
 Big by Glenn Chappell 4/93 -- based on Standard
 Includes ISO Latin-1
 Greek characters by Bruce Jakeway <pbjakeway@neumann.uwaterloo.ca>
@@ -9,18 +9,6 @@ modifier's name is placed on a comment line.
 Modified by Paul Burton <solution@earthlink.net> 12/96 to include new parameter
 supported by FIGlet and FIGWin.  May also be slightly modified for better use
 of new full-width/kern/smush alternatives, but default output is NOT changed.
-
-Modified by Markus Gebhard 01/2004: removed this strange 'character' message
-from the end of the file:
--0x0005  
-alpha = a, beta = b, gamma = g, delta = d, epsilon = e   
-zeta = z, eta = h, theta = q, iota = i, lamda = l, mu = m
-nu = n, xi = x, omicron = o, pi = p, rho = r, sigma = s  
-phi = f, chi = c, psi = y, omega = w, final sigma = V    
-     pi symbol = v, theta symbol = J, phi symbol = j     
-     middle dot = :, ypogegrammeni = _                   
-     rough breathing = (, smooth breathing = )           
-     acute accent = ', grave accent = `, dialytika = ^   
  $@
  $@
  $@
@@ -2205,3 +2193,12 @@ phi = f, chi = c, psi = y, omega = w, final sigma = V
   \___^___/ @
             @
             @@
+-0x0005  
+alpha = a, beta = b, gamma = g, delta = d, epsilon = e   @
+zeta = z, eta = h, theta = q, iota = i, lamda = l, mu = m@
+nu = n, xi = x, omicron = o, pi = p, rho = r, sigma = s  @
+phi = f, chi = c, psi = y, omega = w, final sigma = V    @
+     pi symbol = v, theta symbol = J, phi symbol = j     @
+     middle dot = :, ypogegrammeni = _                   @
+     rough breathing = (, smooth breathing = )           @
+     acute accent = ', grave accent = `, dialytika = ^   @@

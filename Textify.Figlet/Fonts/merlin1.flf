@@ -1,4 +1,4 @@
-flf2a$ 8 7 16 0 19 0 64 0
+flf2a$ 8 7 16 0 24 0 64 0
 Author : LG Beard
 Date   : 2005/5/7 18:52:57
 Version: 1.0
@@ -18,14 +18,19 @@ Have a look at: http://www.jave.de
 
 Permission is hereby given to modify this font, as long as the
 modifier's name is placed on a comment line.
-$ #
-$ #
-$ #
-$ #
-$ #
-$ #
-$ #
-$ ##
+
+---
+
+Font modified June 17, 2007 by patorjk 
+This was to widen the space character.
+$  $#
+$  $#
+$  $#
+$  $#
+$  $#
+$  $#
+$  $#
+$  $##
     ___  #
    |"  | #
    ||  | #

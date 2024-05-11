@@ -18,6 +18,8 @@
 //
 
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Textify.Figlet.Utilities.Lines;
 using Textify.General;
 
@@ -28,7 +30,14 @@ namespace Textify.Figlet
     /// </summary>
     public static class FigletTools
     {
+        internal readonly static Assembly assembly = typeof(FigletFonts).GetTypeInfo().Assembly;
         private readonly static Dictionary<string, string> cachedFiglets = [];
+        private readonly static string[] figletFonts =
+            assembly.GetManifestResourceNames().Select((name) =>
+            {
+                string fileName = name.Substring(assembly.GetName().Name.Length + 1 + "Fonts.".Length);
+                return fileName.Substring(0, fileName.IndexOf('.'));
+            }).ToArray();
 
         /// <summary>
         /// Gets the figlet lines
@@ -66,7 +75,7 @@ namespace Textify.Figlet
             Dictionary<string, FigletFont> fonts = [];
 
             // Populate through all the built-in fonts
-            foreach (string fontName in FigletFonts._builtinFonts)
+            foreach (string fontName in figletFonts)
             {
                 var font = FigletFonts.TryGetByName(fontName);
                 if (font is not null)
