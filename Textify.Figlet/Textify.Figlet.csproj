@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Description>
+      A collection of tools that provide you text tools for your C# and Visual Basic applications.
+      This package provides Figlet functions that were originally found in the Figgle library that allow you to create stylish text.
+    </Description>
+    <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library;json</PackageTags>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageId>Textify.Figlet</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Textify\OfficialAppIcon-Textify-512.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Roslyn.Diagnostics.Analyzers" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts/*.flf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Textify\Textify.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="MSTest.Sdk/3.3.1">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net48</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Roslyn.Diagnostics.Analyzers" Version="3.3.4" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Textify.Figlet\Textify.Figlet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Textify.Figlet\Utilities\ParseUtil.cs" Link="Source\ParseUtil.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.SourceLink.GitHub" />
+  </ItemGroup>
+  
+</Project>
