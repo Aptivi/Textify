@@ -64,7 +64,7 @@ namespace Textify.Figlet
         /// <param name="Text">Text</param>
         /// <param name="FigletFont">Target figlet font</param>
         public static int GetFigletWidth(string Text, FigletFont FigletFont) =>
-            GetFigletLines(Text, FigletFont)[0].Length;
+            GetFigletLines(Text, FigletFont).Max((line) => line.Length);
 
         /// <summary>
         /// Gets the figlet fonts
