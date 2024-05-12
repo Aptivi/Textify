@@ -3937,6 +3937,34 @@ references:
   commentId: N:Textify.Tools
   fullName: Textify.Tools
   nameWithType: Textify.Tools
+- uid: Textify.Tools.RegexTools
+  name: RegexTools
+  href: api/Textify.Tools.RegexTools.html
+  commentId: T:Textify.Tools.RegexTools
+  fullName: Textify.Tools.RegexTools
+  nameWithType: RegexTools
+- uid: Textify.Tools.RegexTools.IsValidRegex(System.String)
+  name: IsValidRegex(string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsValidRegex_System_String_
+  commentId: M:Textify.Tools.RegexTools.IsValidRegex(System.String)
+  name.vb: IsValidRegex(String)
+  fullName: Textify.Tools.RegexTools.IsValidRegex(string)
+  fullName.vb: Textify.Tools.RegexTools.IsValidRegex(String)
+  nameWithType: RegexTools.IsValidRegex(string)
+  nameWithType.vb: RegexTools.IsValidRegex(String)
+- uid: Textify.Tools.RegexTools.IsValidRegex(System.Text.RegularExpressions.Regex)
+  name: IsValidRegex(Regex)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsValidRegex_System_Text_RegularExpressions_Regex_
+  commentId: M:Textify.Tools.RegexTools.IsValidRegex(System.Text.RegularExpressions.Regex)
+  fullName: Textify.Tools.RegexTools.IsValidRegex(System.Text.RegularExpressions.Regex)
+  nameWithType: RegexTools.IsValidRegex(Regex)
+- uid: Textify.Tools.RegexTools.IsValidRegex*
+  name: IsValidRegex
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsValidRegex_
+  commentId: Overload:Textify.Tools.RegexTools.IsValidRegex
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.IsValidRegex
+  nameWithType: RegexTools.IsValidRegex
 - uid: Textify.Tools.TextifyException
   name: TextifyException
   href: api/Textify.Tools.TextifyException.html

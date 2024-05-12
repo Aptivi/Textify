@@ -154,6 +154,11 @@
     "title": "Namespace Textify.SpaceManager.Conversion | Textify API - Aptivi",
     "keywords": "Namespace Textify.SpaceManager.Conversion Classes SpaceConversionTools Tools that allow you to use the analysis results to convert the spaces"
   },
+  "api/Textify.Tools.RegexTools.html": {
+    "href": "api/Textify.Tools.RegexTools.html",
+    "title": "Class RegexTools | Textify API - Aptivi",
+    "keywords": "Class RegexTools Regular expression tools Inheritance object RegexTools Namespace: Textify.Tools Assembly: Textify.dll Syntax public static class RegexTools Methods | Edit this page View Source IsValidRegex(string) Determines whether the specified regular expression pattern is valid or not Declaration public static bool IsValidRegex(string pattern) Parameters Type Name Description string pattern Specified pattern Returns Type Description bool True if valid; false otherwise | Edit this page View Source IsValidRegex(Regex) Determines whether the specified regular expression pattern is valid or not Declaration public static bool IsValidRegex(Regex pattern) Parameters Type Name Description Regex pattern Specified pattern Returns Type Description bool True if valid; false otherwise"
+  },
   "api/Textify.Tools.TextifyException.html": {
     "href": "api/Textify.Tools.TextifyException.html",
     "title": "Class TextifyException | Textify API - Aptivi",
@@ -162,7 +167,7 @@
   "api/Textify.Tools.html": {
     "href": "api/Textify.Tools.html",
     "title": "Namespace Textify.Tools | Textify API - Aptivi",
-    "keywords": "Namespace Textify.Tools Classes TextifyException Textify error class"
+    "keywords": "Namespace Textify.Tools Classes RegexTools Regular expression tools TextifyException Textify error class"
   },
   "api/Textify.Versioning.SemVer.html": {
     "href": "api/Textify.Versioning.SemVer.html",
