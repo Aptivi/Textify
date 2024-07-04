@@ -46,6 +46,7 @@ namespace Textify.Demos.Offline.Fixtures
 
             // Figlet
             new FigletPrint(),
+            new FigletPrintWrap(),
         ];
 
         internal static IFixture GetFixtureFromName(string name)

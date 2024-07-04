@@ -44,9 +44,10 @@ namespace Textify.Figlet
         /// </summary>
         /// <param name="Text">Text</param>
         /// <param name="FigletFont">Target figlet font</param>
-        public static string[] GetFigletLines(string Text, FigletFont FigletFont)
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
+        public static string[] GetFigletLines(string Text, FigletFont FigletFont, int width = 0)
         {
-            Text = FigletFont.Render(Text);
+            Text = FigletFont.Render(Text, null, width);
             return Text.SplitNewLines();
         }
 
@@ -55,16 +56,18 @@ namespace Textify.Figlet
         /// </summary>
         /// <param name="Text">Text</param>
         /// <param name="FigletFont">Target figlet font</param>
-        public static int GetFigletHeight(string Text, FigletFont FigletFont) =>
-            GetFigletLines(Text, FigletFont).Length;
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
+        public static int GetFigletHeight(string Text, FigletFont FigletFont, int width = 0) =>
+            GetFigletLines(Text, FigletFont, width).Length;
 
         /// <summary>
         /// Gets the figlet text width
         /// </summary>
         /// <param name="Text">Text</param>
         /// <param name="FigletFont">Target figlet font</param>
-        public static int GetFigletWidth(string Text, FigletFont FigletFont) =>
-            GetFigletLines(Text, FigletFont).Max((line) => line.Length);
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
+        public static int GetFigletWidth(string Text, FigletFont FigletFont, int width = 0) =>
+            GetFigletLines(Text, FigletFont, width).Max((line) => line.Length);
 
         /// <summary>
         /// Gets the figlet fonts
@@ -107,7 +110,7 @@ namespace Textify.Figlet
         public static string RenderFiglet(string Text, string figletFontName, params object[] Vars)
         {
             var FigletFont = GetFigletFont(figletFontName);
-            return RenderFiglet(Text, FigletFont, Vars);
+            return RenderFiglet(Text, FigletFont, 0, Vars);
         }
 
         /// <summary>
@@ -116,7 +119,30 @@ namespace Textify.Figlet
         /// <param name="Text">Text to render</param>
         /// <param name="FigletFont">Figlet font instance to render. Consult <see cref="GetFigletFonts()"/> for more info.</param>
         /// <param name="Vars">Variables to use when formatting the string</param>
-        public static string RenderFiglet(string Text, FigletFont FigletFont, params object[] Vars)
+        public static string RenderFiglet(string Text, FigletFont FigletFont, params object[] Vars) =>
+            RenderFiglet(Text, FigletFont, 0, Vars);
+
+        /// <summary>
+        /// Renders the figlet font
+        /// </summary>
+        /// <param name="Text">Text to render</param>
+        /// <param name="figletFontName">Figlet font name to render. Consult <see cref="GetFigletFonts()"/> for more info.</param>
+        /// <param name="Vars">Variables to use when formatting the string</param>
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
+        public static string RenderFiglet(string Text, string figletFontName, int width, params object[] Vars)
+        {
+            var FigletFont = GetFigletFont(figletFontName);
+            return RenderFiglet(Text, FigletFont, width, Vars);
+        }
+
+        /// <summary>
+        /// Renders the figlet font
+        /// </summary>
+        /// <param name="Text">Text to render</param>
+        /// <param name="FigletFont">Figlet font instance to render. Consult <see cref="GetFigletFonts()"/> for more info.</param>
+        /// <param name="Vars">Variables to use when formatting the string</param>
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
+        public static string RenderFiglet(string Text, FigletFont FigletFont, int width, params object[] Vars)
         {
             // Get the figlet font name.
             string figletFontName = FigletFont.Name;
@@ -124,8 +150,8 @@ namespace Textify.Figlet
                 return "";
 
             // Now, render the figlet and add to the cache
-            string cachedFigletKey = $"[{cachedFiglets.Count} - {figletFontName}] {Text}";
-            string cachedFigletKeyToAdd = $"[{cachedFiglets.Count + 1} - {figletFontName}] {Text}";
+            string cachedFigletKey = $"[{cachedFiglets.Count} - {figletFontName}] {Text} {width}";
+            string cachedFigletKeyToAdd = $"[{cachedFiglets.Count + 1} - {figletFontName}] {Text} {width}";
             if (cachedFiglets.ContainsKey(cachedFigletKey))
                 return cachedFiglets[cachedFigletKey];
             else
@@ -135,7 +161,7 @@ namespace Textify.Figlet
                     Text = TextTools.FormatString(Text, Vars);
 
                 // Write the font
-                Text = string.Join("\n", GetFigletLines(Text, FigletFont));
+                Text = string.Join("\n", GetFigletLines(Text, FigletFont, width));
                 cachedFiglets.Add(cachedFigletKeyToAdd, Text);
                 return Text;
             }

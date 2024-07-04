@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Textify.General;
 
 namespace Textify.Figlet.Utilities.Lines
 {
@@ -118,12 +119,15 @@ namespace Textify.Figlet.Utilities.Lines
         /// </summary>
         /// <param name="message">The text to render.</param>
         /// <param name="smushOverride">Optional override for the smush settings. Defaults to <c>null</c>, meaning the font's default setting is used.</param>
+        /// <param name="width">Max width of the resultant figlet rendered text. Pass 0 for single-line.</param>
         /// <returns></returns>
-        public string Render(string message, int? smushOverride = null)
+        public string Render(string message, int? smushOverride = null, int width = 0)
         {
             var smush = smushOverride ?? _smushMode;
             var outputLineBuilders = Enumerable.Range(0, Height).Select(_ => new StringBuilder()).ToList();
             FigletCharacter lastCh = null;
+            bool needsWidthCalc = width > 0;
+            int widthLine = 0;
 
             foreach (var c in message)
             {
@@ -150,7 +154,8 @@ namespace Textify.Figlet.Utilities.Lines
                                 var lineSpaceTrim = Math.Min(lineSpace, toMove);
                                 for (var i = 0; i < lineSpaceTrim; i++)
                                 {
-                                    if (outputLine[outputLine.Length - 1] != ' ') break;
+                                    if (outputLine[outputLine.Length - 1] != ' ')
+                                        break;
                                     toMove--;
                                     outputLine.Length--;
                                 }
@@ -159,10 +164,18 @@ namespace Textify.Figlet.Utilities.Lines
 
                         if (outputLine.Length != 0)
                         {
+                            string content = toMove == 0 ? charLine.Content : charLine.Content.Substring(toMove);
+                            if (needsWidthCalc && outputLine.ToString().SplitNewLines()[widthLine].Length + content.Length > width)
+                            {
+                                widthLine++;
+                                foreach (var builder in outputLineBuilders)
+                                    builder.Append("\n");
+                            }
+
                             var smushCharIndex = outputLine.Length - 1;
                             var cl = outputLine[smushCharIndex];
 
-                            outputLine.Append(toMove == 0 ? charLine.Content : charLine.Content.Substring(toMove));
+                            outputLine.Append(content);
 
                             if (toMove != 0 && outputLine.Length != 0 && ch.Lines[row].Content.Length != 0)
                             {
@@ -175,13 +188,21 @@ namespace Textify.Figlet.Utilities.Lines
                     }
                     else
                     {
-                        outputLine.Append(charLine.Content);
+                        string content = charLine.Content;
+                        if (needsWidthCalc && outputLine.ToString().SplitNewLines()[widthLine].Length + content.Length > width)
+                        {
+                            widthLine++;
+                            foreach (var builder in outputLineBuilders)
+                                builder.Append("\n");
+                        }
+                        outputLine.Append(content);
                     }
                 }
 
                 lastCh = ch;
             }
 
+            // Make the output lines and process them after trimming them
             var res = new StringBuilder();
             var outputLines = outputLineBuilders.Select((sb) => sb.Replace(_hardBlank, ' ').ToString()).ToList();
 
@@ -201,8 +222,22 @@ namespace Textify.Figlet.Utilities.Lines
                 outputLines.RemoveAt(line);
             }
 
+            // Move the newline indicators to their right places
+            int times = outputLines[0].SplitNewLines().Length;
+            var finalOutputLines = new List<string>(Enumerable.Range(0, outputLines.Count * times).Select((_) => ""));
+            for (int i = 0; i < outputLines.Count; i++)
+            {
+                string outputLine = outputLines[i];
+                string[] outputLinesAdditional = outputLine.SplitNewLines();
+                for (int lineIdx = 0; lineIdx < outputLinesAdditional.Length; lineIdx++)
+                {
+                    string outputLineAdditional = outputLinesAdditional[lineIdx];
+                    finalOutputLines[i + (outputLines.Count * lineIdx)] = outputLineAdditional;
+                }
+            }
+
             // Now, add the lines
-            foreach (string outputLine in outputLines)
+            foreach (var outputLine in finalOutputLines)
                 res.AppendLine(outputLine);
             return res.ToString(0, res.Length - Environment.NewLine.Length);
 
