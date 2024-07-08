@@ -3090,6 +3090,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.AllIndexesOf
   nameWithType: TextTools.AllIndexesOf
+- uid: Textify.General.TextTools.CompareLogical(System.String,System.String)
+  name: CompareLogical(string, string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_CompareLogical_System_String_System_String_
+  commentId: M:Textify.General.TextTools.CompareLogical(System.String,System.String)
+  name.vb: CompareLogical(String, String)
+  fullName: Textify.General.TextTools.CompareLogical(string, string)
+  fullName.vb: Textify.General.TextTools.CompareLogical(String, String)
+  nameWithType: TextTools.CompareLogical(string, string)
+  nameWithType.vb: TextTools.CompareLogical(String, String)
+- uid: Textify.General.TextTools.CompareLogical*
+  name: CompareLogical
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_CompareLogical_
+  commentId: Overload:Textify.General.TextTools.CompareLogical
+  isSpec: "True"
+  fullName: Textify.General.TextTools.CompareLogical
+  nameWithType: TextTools.CompareLogical
 - uid: Textify.General.TextTools.ContainsAllOf(System.String,System.String[])
   name: ContainsAllOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAllOf_System_String_System_String___
