@@ -189,6 +189,8 @@ namespace Textify.Figlet.Utilities.Lines
                     else
                     {
                         string content = charLine.Content;
+                        if (content is null)
+                            continue;
                         if (needsWidthCalc && outputLine.ToString().SplitNewLines()[widthLine].Length + content.Length > width)
                         {
                             widthLine++;
