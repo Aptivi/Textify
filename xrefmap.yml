@@ -3038,6 +3038,34 @@ references:
   isSpec: "True"
   fullName: Textify.General.CharManager.NewLine
   nameWithType: CharManager.NewLine
+- uid: Textify.General.Comparers
+  name: Textify.General.Comparers
+  href: api/Textify.General.Comparers.html
+  commentId: N:Textify.General.Comparers
+  fullName: Textify.General.Comparers
+  nameWithType: Textify.General.Comparers
+- uid: Textify.General.Comparers.LogicalComparer
+  name: LogicalComparer
+  href: api/Textify.General.Comparers.LogicalComparer.html
+  commentId: T:Textify.General.Comparers.LogicalComparer
+  fullName: Textify.General.Comparers.LogicalComparer
+  nameWithType: LogicalComparer
+- uid: Textify.General.Comparers.LogicalComparer.Compare(System.String,System.String)
+  name: Compare(string, string)
+  href: api/Textify.General.Comparers.LogicalComparer.html#Textify_General_Comparers_LogicalComparer_Compare_System_String_System_String_
+  commentId: M:Textify.General.Comparers.LogicalComparer.Compare(System.String,System.String)
+  name.vb: Compare(String, String)
+  fullName: Textify.General.Comparers.LogicalComparer.Compare(string, string)
+  fullName.vb: Textify.General.Comparers.LogicalComparer.Compare(String, String)
+  nameWithType: LogicalComparer.Compare(string, string)
+  nameWithType.vb: LogicalComparer.Compare(String, String)
+- uid: Textify.General.Comparers.LogicalComparer.Compare*
+  name: Compare
+  href: api/Textify.General.Comparers.LogicalComparer.html#Textify_General_Comparers_LogicalComparer_Compare_
+  commentId: Overload:Textify.General.Comparers.LogicalComparer.Compare
+  isSpec: "True"
+  fullName: Textify.General.Comparers.LogicalComparer.Compare
+  nameWithType: LogicalComparer.Compare
 - uid: Textify.General.EnclosedDoubleQuotesType
   name: EnclosedDoubleQuotesType
   href: api/Textify.General.EnclosedDoubleQuotesType.html
