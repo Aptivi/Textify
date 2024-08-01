@@ -21,8 +21,17 @@ using System.Collections.Generic;
 
 namespace Textify.General.Comparers
 {
-    internal class LogicalComparer : IComparer<string>
+    /// <summary>
+    /// Logical text comparer
+    /// </summary>
+    public class LogicalComparer : IComparer<string>
     {
+        /// <summary>
+        /// Compares between two strings in a logical way
+        /// </summary>
+        /// <param name="x">First string to compare</param>
+        /// <param name="y">Second string to compare</param>
+        /// <returns>Check <see cref="TextTools.CompareLogical(string, string)"/></returns>
         public int Compare(string x, string y) =>
             TextTools.CompareLogical(x, y);
     }
