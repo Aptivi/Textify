@@ -6,14 +6,14 @@ if "%releaseconfig%" == "" set releaseconfig=Release
 
 :download
 echo Downloading packages...
-"%ProgramFiles%\dotnet\dotnet.exe" restore "..\Textify.sln" --configuration %releaseconfig%
+"%ProgramFiles%\dotnet\dotnet.exe" restore "..\Textify.sln" -p:Configuration=%releaseconfig%
 if %errorlevel% == 0 goto :build
 echo There was an error trying to download packages (%errorlevel%).
 goto :finished
 
 :build
 echo Building Textify...
-"%ProgramFiles%\dotnet\dotnet.exe" build "..\Textify.sln" --configuration %releaseconfig%
+"%ProgramFiles%\dotnet\dotnet.exe" build "..\Textify.sln" -p:Configuration=%releaseconfig%
 if %errorlevel% == 0 goto :success
 echo There was an error trying to build (%errorlevel%).
 goto :finished

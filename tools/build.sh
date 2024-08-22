@@ -15,7 +15,7 @@ fi
 
 # Download packages
 echo Downloading packages...
-"$dotnetpath" restore "../Textify.sln" --configuration $releaseconf
+"$dotnetpath" restore "../Textify.sln" -p:Configuration=$releaseconf
 if [ ! $? == 0 ]; then
 	echo Download failed.
 	exit 1
@@ -23,7 +23,7 @@ fi
 
 # Build Textify
 echo Building Textify...
-"$dotnetpath" build "../Textify.sln" --configuration $releaseconf
+"$dotnetpath" build "../Textify.sln" -p:Configuration=$releaseconf
 if [ ! $? == 0 ]; then
 	echo Build failed.
 	exit 1
