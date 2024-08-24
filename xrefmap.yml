@@ -3066,6 +3066,60 @@ references:
   isSpec: "True"
   fullName: Textify.General.Comparers.LogicalComparer.Compare
   nameWithType: LogicalComparer.Compare
+- uid: Textify.General.Data
+  name: Textify.General.Data
+  href: api/Textify.General.Data.html
+  commentId: N:Textify.General.Data
+  fullName: Textify.General.Data
+  nameWithType: Textify.General.Data
+- uid: Textify.General.Data.CharWidthType
+  name: CharWidthType
+  href: api/Textify.General.Data.CharWidthType.html
+  commentId: T:Textify.General.Data.CharWidthType
+  fullName: Textify.General.Data.CharWidthType
+  nameWithType: CharWidthType
+- uid: Textify.General.Data.CharWidthType.Ambiguous
+  name: Ambiguous
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Ambiguous
+  commentId: F:Textify.General.Data.CharWidthType.Ambiguous
+  fullName: Textify.General.Data.CharWidthType.Ambiguous
+  nameWithType: CharWidthType.Ambiguous
+- uid: Textify.General.Data.CharWidthType.Combining
+  name: Combining
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Combining
+  commentId: F:Textify.General.Data.CharWidthType.Combining
+  fullName: Textify.General.Data.CharWidthType.Combining
+  nameWithType: CharWidthType.Combining
+- uid: Textify.General.Data.CharWidthType.DoubleWidth
+  name: DoubleWidth
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_DoubleWidth
+  commentId: F:Textify.General.Data.CharWidthType.DoubleWidth
+  fullName: Textify.General.Data.CharWidthType.DoubleWidth
+  nameWithType: CharWidthType.DoubleWidth
+- uid: Textify.General.Data.CharWidthType.Emoji
+  name: Emoji
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Emoji
+  commentId: F:Textify.General.Data.CharWidthType.Emoji
+  fullName: Textify.General.Data.CharWidthType.Emoji
+  nameWithType: CharWidthType.Emoji
+- uid: Textify.General.Data.CharWidthType.NonPrinting
+  name: NonPrinting
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_NonPrinting
+  commentId: F:Textify.General.Data.CharWidthType.NonPrinting
+  fullName: Textify.General.Data.CharWidthType.NonPrinting
+  nameWithType: CharWidthType.NonPrinting
+- uid: Textify.General.Data.CharWidthType.Private
+  name: Private
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Private
+  commentId: F:Textify.General.Data.CharWidthType.Private
+  fullName: Textify.General.Data.CharWidthType.Private
+  nameWithType: CharWidthType.Private
+- uid: Textify.General.Data.CharWidthType.Unassigned
+  name: Unassigned
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Unassigned
+  commentId: F:Textify.General.Data.CharWidthType.Unassigned
+  fullName: Textify.General.Data.CharWidthType.Unassigned
+  nameWithType: CharWidthType.Unassigned
 - uid: Textify.General.EnclosedDoubleQuotesType
   name: EnclosedDoubleQuotesType
   href: api/Textify.General.EnclosedDoubleQuotesType.html
@@ -3262,6 +3316,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetBase64Encoded
   nameWithType: TextTools.GetBase64Encoded
+- uid: Textify.General.TextTools.GetCharWidth(System.Int32)
+  name: GetCharWidth(int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetCharWidth_System_Int32_
+  commentId: M:Textify.General.TextTools.GetCharWidth(System.Int32)
+  name.vb: GetCharWidth(Integer)
+  fullName: Textify.General.TextTools.GetCharWidth(int)
+  fullName.vb: Textify.General.TextTools.GetCharWidth(Integer)
+  nameWithType: TextTools.GetCharWidth(int)
+  nameWithType.vb: TextTools.GetCharWidth(Integer)
+- uid: Textify.General.TextTools.GetCharWidth*
+  name: GetCharWidth
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetCharWidth_
+  commentId: Overload:Textify.General.TextTools.GetCharWidth
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetCharWidth
+  nameWithType: TextTools.GetCharWidth
+- uid: Textify.General.TextTools.GetCharWidthType(System.Int32)
+  name: GetCharWidthType(int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetCharWidthType_System_Int32_
+  commentId: M:Textify.General.TextTools.GetCharWidthType(System.Int32)
+  name.vb: GetCharWidthType(Integer)
+  fullName: Textify.General.TextTools.GetCharWidthType(int)
+  fullName.vb: Textify.General.TextTools.GetCharWidthType(Integer)
+  nameWithType: TextTools.GetCharWidthType(int)
+  nameWithType.vb: TextTools.GetCharWidthType(Integer)
+- uid: Textify.General.TextTools.GetCharWidthType*
+  name: GetCharWidthType
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetCharWidthType_
+  commentId: Overload:Textify.General.TextTools.GetCharWidthType
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetCharWidthType
+  nameWithType: TextTools.GetCharWidthType
 - uid: Textify.General.TextTools.GetEnclosedDoubleQuotesType(System.String)
   name: GetEnclosedDoubleQuotesType(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetEnclosedDoubleQuotesType_System_String_
@@ -3760,6 +3846,45 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.UpperFirst
   nameWithType: TextTools.UpperFirst
+- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
+  name: UseTwoCellsForAmbiguousChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars
+  commentId: P:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
+  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
+  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
+- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars*
+  name: UseTwoCellsForAmbiguousChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars_
+  commentId: Overload:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
+  isSpec: "True"
+  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
+  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
+- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars
+  name: UseTwoCellsForPrivateChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars
+  commentId: P:Textify.General.TextTools.UseTwoCellsForPrivateChars
+  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
+  nameWithType: TextTools.UseTwoCellsForPrivateChars
+- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars*
+  name: UseTwoCellsForPrivateChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars_
+  commentId: Overload:Textify.General.TextTools.UseTwoCellsForPrivateChars
+  isSpec: "True"
+  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
+  nameWithType: TextTools.UseTwoCellsForPrivateChars
+- uid: Textify.General.TextTools.UseTwoCellsForUnassignedChars
+  name: UseTwoCellsForUnassignedChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForUnassignedChars
+  commentId: P:Textify.General.TextTools.UseTwoCellsForUnassignedChars
+  fullName: Textify.General.TextTools.UseTwoCellsForUnassignedChars
+  nameWithType: TextTools.UseTwoCellsForUnassignedChars
+- uid: Textify.General.TextTools.UseTwoCellsForUnassignedChars*
+  name: UseTwoCellsForUnassignedChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForUnassignedChars_
+  commentId: Overload:Textify.General.TextTools.UseTwoCellsForUnassignedChars
+  isSpec: "True"
+  fullName: Textify.General.TextTools.UseTwoCellsForUnassignedChars
+  nameWithType: TextTools.UseTwoCellsForUnassignedChars
 - uid: Textify.Json
   name: Textify.Json
   href: api/Textify.Json.html
@@ -4025,6 +4150,138 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.IsValidRegex
   nameWithType: RegexTools.IsValidRegex
+- uid: Textify.Tools.StringSyntaxAttribute
+  name: StringSyntaxAttribute
+  href: api/Textify.Tools.StringSyntaxAttribute.html
+  commentId: T:Textify.Tools.StringSyntaxAttribute
+  fullName: Textify.Tools.StringSyntaxAttribute
+  nameWithType: StringSyntaxAttribute
+- uid: Textify.Tools.StringSyntaxAttribute.#ctor(System.String)
+  name: StringSyntaxAttribute(string)
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute__ctor_System_String_
+  commentId: M:Textify.Tools.StringSyntaxAttribute.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Textify.Tools.StringSyntaxAttribute.StringSyntaxAttribute(string)
+  fullName.vb: Textify.Tools.StringSyntaxAttribute.New(String)
+  nameWithType: StringSyntaxAttribute.StringSyntaxAttribute(string)
+  nameWithType.vb: StringSyntaxAttribute.New(String)
+- uid: Textify.Tools.StringSyntaxAttribute.#ctor(System.String,System.Object[])
+  name: StringSyntaxAttribute(string, params object[])
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute__ctor_System_String_System_Object___
+  commentId: M:Textify.Tools.StringSyntaxAttribute.#ctor(System.String,System.Object[])
+  name.vb: New(String, ParamArray Object())
+  fullName: Textify.Tools.StringSyntaxAttribute.StringSyntaxAttribute(string, params object[])
+  fullName.vb: Textify.Tools.StringSyntaxAttribute.New(String, ParamArray Object())
+  nameWithType: StringSyntaxAttribute.StringSyntaxAttribute(string, params object[])
+  nameWithType.vb: StringSyntaxAttribute.New(String, ParamArray Object())
+- uid: Textify.Tools.StringSyntaxAttribute.#ctor*
+  name: StringSyntaxAttribute
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute__ctor_
+  commentId: Overload:Textify.Tools.StringSyntaxAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Textify.Tools.StringSyntaxAttribute.StringSyntaxAttribute
+  fullName.vb: Textify.Tools.StringSyntaxAttribute.New
+  nameWithType: StringSyntaxAttribute.StringSyntaxAttribute
+  nameWithType.vb: StringSyntaxAttribute.New
+- uid: Textify.Tools.StringSyntaxAttribute.Arguments
+  name: Arguments
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Arguments
+  commentId: P:Textify.Tools.StringSyntaxAttribute.Arguments
+  fullName: Textify.Tools.StringSyntaxAttribute.Arguments
+  nameWithType: StringSyntaxAttribute.Arguments
+- uid: Textify.Tools.StringSyntaxAttribute.Arguments*
+  name: Arguments
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Arguments_
+  commentId: Overload:Textify.Tools.StringSyntaxAttribute.Arguments
+  isSpec: "True"
+  fullName: Textify.Tools.StringSyntaxAttribute.Arguments
+  nameWithType: StringSyntaxAttribute.Arguments
+- uid: Textify.Tools.StringSyntaxAttribute.CompositeFormat
+  name: CompositeFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_CompositeFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.CompositeFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.CompositeFormat
+  nameWithType: StringSyntaxAttribute.CompositeFormat
+- uid: Textify.Tools.StringSyntaxAttribute.DateOnlyFormat
+  name: DateOnlyFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_DateOnlyFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.DateOnlyFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.DateOnlyFormat
+  nameWithType: StringSyntaxAttribute.DateOnlyFormat
+- uid: Textify.Tools.StringSyntaxAttribute.DateTimeFormat
+  name: DateTimeFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_DateTimeFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.DateTimeFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.DateTimeFormat
+  nameWithType: StringSyntaxAttribute.DateTimeFormat
+- uid: Textify.Tools.StringSyntaxAttribute.EnumFormat
+  name: EnumFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_EnumFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.EnumFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.EnumFormat
+  nameWithType: StringSyntaxAttribute.EnumFormat
+- uid: Textify.Tools.StringSyntaxAttribute.GuidFormat
+  name: GuidFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_GuidFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.GuidFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.GuidFormat
+  nameWithType: StringSyntaxAttribute.GuidFormat
+- uid: Textify.Tools.StringSyntaxAttribute.Json
+  name: Json
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Json
+  commentId: F:Textify.Tools.StringSyntaxAttribute.Json
+  fullName: Textify.Tools.StringSyntaxAttribute.Json
+  nameWithType: StringSyntaxAttribute.Json
+- uid: Textify.Tools.StringSyntaxAttribute.NumericFormat
+  name: NumericFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_NumericFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.NumericFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.NumericFormat
+  nameWithType: StringSyntaxAttribute.NumericFormat
+- uid: Textify.Tools.StringSyntaxAttribute.Regex
+  name: Regex
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Regex
+  commentId: F:Textify.Tools.StringSyntaxAttribute.Regex
+  fullName: Textify.Tools.StringSyntaxAttribute.Regex
+  nameWithType: StringSyntaxAttribute.Regex
+- uid: Textify.Tools.StringSyntaxAttribute.Syntax
+  name: Syntax
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Syntax
+  commentId: P:Textify.Tools.StringSyntaxAttribute.Syntax
+  fullName: Textify.Tools.StringSyntaxAttribute.Syntax
+  nameWithType: StringSyntaxAttribute.Syntax
+- uid: Textify.Tools.StringSyntaxAttribute.Syntax*
+  name: Syntax
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Syntax_
+  commentId: Overload:Textify.Tools.StringSyntaxAttribute.Syntax
+  isSpec: "True"
+  fullName: Textify.Tools.StringSyntaxAttribute.Syntax
+  nameWithType: StringSyntaxAttribute.Syntax
+- uid: Textify.Tools.StringSyntaxAttribute.TimeOnlyFormat
+  name: TimeOnlyFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_TimeOnlyFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.TimeOnlyFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.TimeOnlyFormat
+  nameWithType: StringSyntaxAttribute.TimeOnlyFormat
+- uid: Textify.Tools.StringSyntaxAttribute.TimeSpanFormat
+  name: TimeSpanFormat
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_TimeSpanFormat
+  commentId: F:Textify.Tools.StringSyntaxAttribute.TimeSpanFormat
+  fullName: Textify.Tools.StringSyntaxAttribute.TimeSpanFormat
+  nameWithType: StringSyntaxAttribute.TimeSpanFormat
+- uid: Textify.Tools.StringSyntaxAttribute.Uri
+  name: Uri
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Uri
+  commentId: F:Textify.Tools.StringSyntaxAttribute.Uri
+  fullName: Textify.Tools.StringSyntaxAttribute.Uri
+  nameWithType: StringSyntaxAttribute.Uri
+- uid: Textify.Tools.StringSyntaxAttribute.Xml
+  name: Xml
+  href: api/Textify.Tools.StringSyntaxAttribute.html#Textify_Tools_StringSyntaxAttribute_Xml
+  commentId: F:Textify.Tools.StringSyntaxAttribute.Xml
+  fullName: Textify.Tools.StringSyntaxAttribute.Xml
+  nameWithType: StringSyntaxAttribute.Xml
 - uid: Textify.Tools.TextifyException
   name: TextifyException
   href: api/Textify.Tools.TextifyException.html
