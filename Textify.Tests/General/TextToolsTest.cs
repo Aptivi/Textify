@@ -1177,6 +1177,23 @@ namespace Textify.Tests.General
             string made = string.Join("\n", sorted);
             made.ShouldBe(textsAndNumbersExpected);
         }
+
+        /// <summary>
+        /// Tests reading null terminated string
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello\0", 0, "Hello")]
+        [DataRow("Hello\0", 3, "lo")]
+        [DataRow("\0", 0, "")]
+        [DataRow("Hello\0Goodbye", 3, "lo")]
+        [DataRow("Hello\0Goodbye", 5, "")]
+        [DataRow("Hello\0Goodbye", 6, "Goodbye")]
+        [Description("Querying")]
+        public void TestReadNullTerminatedString(string str, int offset, string expected)
+        {
+            string result = str.ReadNullTerminatedString(offset);
+            result.ShouldBe(expected);
+        }
     }
 
 }

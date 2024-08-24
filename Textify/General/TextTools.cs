@@ -1041,26 +1041,25 @@ namespace Textify.General
         public static int CompareLogical(string source, string compare)
         {
             string s1 = source;
-            if (s1 == null)
-                return 0;
             string s2 = compare;
-            if (s2 == null)
+            if (s1 == null || s2 == null)
                 return 0;
 
+            // Initialize markers
             int len1 = s1.Length;
             int len2 = s2.Length;
             int marker1 = 0;
             int marker2 = 0;
 
-            // Walk through two the strings with two markers.
+            // Walk through two strings with two markers.
             while (marker1 < len1 && marker2 < len2)
             {
+                // Get characters
                 char ch1 = s1[marker1];
                 char ch2 = s2[marker2];
-
                 char[] space1 = new char[len1];
-                int loc1 = 0;
                 char[] space2 = new char[len2];
+                int loc1 = 0;
                 int loc2 = 0;
 
                 do
@@ -1103,6 +1102,32 @@ namespace Textify.General
                     return result;
             }
             return len1 - len2;
+        }
+
+        /// <summary>
+        /// Reads a string until the null character is seen with the specified offset
+        /// </summary>
+        /// <param name="source">Source text to parse</param>
+        /// <param name="offset">Zero-based offset (from where do we start reading?)</param>
+        /// <returns>A read string</returns>
+        public static string ReadNullTerminatedString(this string source, int offset)
+        {
+            // Sanity checks
+            if (string.IsNullOrEmpty(source))
+                return "";
+            if (offset < 0 || offset >= source.Length)
+                throw new ArgumentOutOfRangeException(nameof(offset), offset, "Offset is out of range");
+            if (source[offset] == '\0')
+                return "";
+
+            // Check to see if there is a null terminator
+            source = source.Substring(offset);
+            int nullIdx = source.IndexOf('\0');
+            if (nullIdx == -1)
+                return source;
+
+            // Now, read until the first null terminator found
+            return source.Substring(0, nullIdx);
         }
     }
 }
