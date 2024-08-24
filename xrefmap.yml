@@ -3440,6 +3440,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.LowerFirst
   nameWithType: TextTools.LowerFirst
+- uid: Textify.General.TextTools.ReadNullTerminatedString(System.String,System.Int32)
+  name: ReadNullTerminatedString(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReadNullTerminatedString_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.ReadNullTerminatedString(System.String,System.Int32)
+  name.vb: ReadNullTerminatedString(String, Integer)
+  fullName: Textify.General.TextTools.ReadNullTerminatedString(string, int)
+  fullName.vb: Textify.General.TextTools.ReadNullTerminatedString(String, Integer)
+  nameWithType: TextTools.ReadNullTerminatedString(string, int)
+  nameWithType.vb: TextTools.ReadNullTerminatedString(String, Integer)
+- uid: Textify.General.TextTools.ReadNullTerminatedString*
+  name: ReadNullTerminatedString
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReadNullTerminatedString_
+  commentId: Overload:Textify.General.TextTools.ReadNullTerminatedString
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ReadNullTerminatedString
+  nameWithType: TextTools.ReadNullTerminatedString
 - uid: Textify.General.TextTools.ReleaseDoubleQuotes(System.String)
   name: ReleaseDoubleQuotes(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReleaseDoubleQuotes_System_String_
