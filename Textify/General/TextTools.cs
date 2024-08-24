@@ -23,6 +23,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Textify.General.Data;
 using Textify.Tools;
 
 namespace Textify.General
@@ -34,6 +35,20 @@ namespace Textify.General
     {
         private static readonly string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
         private static readonly string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
+        private static readonly Dictionary<int, (int, CharWidthType)> cachedWidths = [];
+
+        /// <summary>
+        /// Whether to use two cells for unassigned characters or only one cell
+        /// </summary>
+        public static bool UseTwoCellsForUnassignedChars { get; set; }
+        /// <summary>
+        /// Whether to use two cells for ambiguous characters or only one cell
+        /// </summary>
+        public static bool UseTwoCellsForAmbiguousChars { get; set; }
+        /// <summary>
+        /// Whether to use two cells for private characters or only one cell
+        /// </summary>
+        public static bool UseTwoCellsForPrivateChars { get; set; }
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
@@ -1128,6 +1143,129 @@ namespace Textify.General
 
             // Now, read until the first null terminator found
             return source.Substring(0, nullIdx);
+        }
+
+        /// <summary>
+        /// Gets the character width
+        /// </summary>
+        /// <param name="c">A character number (codepoint) to parse</param>
+        /// <returns>Either 0 for non-printing characters, 1 for half-width characters, or 2 for full-width characters</returns>
+        /// <exception cref="TextifyException"></exception>
+        public static int GetCharWidth(int c)
+        {
+            // Check the value
+            if (c < 0 || c > 0x10FFFF)
+                throw new TextifyException($"Invalid character number {c}.");
+
+            // Check the cached width
+            if (cachedWidths.ContainsKey(c))
+                return cachedWidths[c].Item1;
+
+            // Use the character cell table defined in a separate code class to be able to determine the width
+            int width = 1;
+            CharWidthType widthType = (CharWidthType)(-1);
+            bool cacheable = true;
+            foreach ((var range, int cells, CharWidthType type) in CharWidths.ranges)
+            {
+                // Check for each range if we have a Unicode character that falls under one of the characters that take
+                // up either no cells or more than one cell.
+                foreach ((int first, int last) in range)
+                {
+                    if (c >= first && c <= last)
+                    {
+                        widthType = type;
+                        width = cells;
+                        break;
+                    }
+                }
+                if (width == 1)
+                    continue;
+
+                // Now, check the value of the width
+                switch (width)
+                {
+                    case -1:
+                        // Unassigned character. This way, we need to let users select how to handle it by giving them a property
+                        // that allows them to set either one (default) or two cells to be taken.
+                        width = UseTwoCellsForUnassignedChars ? 2 : 1;
+                        cacheable = false;
+                        break;
+                    case -2:
+                        // Ambiguous character. See above.
+                        width = UseTwoCellsForAmbiguousChars ? 2 : 1;
+                        cacheable = false;
+                        break;
+                    case -3:
+                        // Private character. See above.
+                        width = UseTwoCellsForPrivateChars ? 2 : 1;
+                        cacheable = false;
+                        break;
+                }
+                break;
+            }
+
+            // Add to cache if we can
+            if (cacheable)
+            {
+                // To ensure that we don't have any race condition, lock here and check.
+                lock (cachedWidths)
+                {
+                    if (!cachedWidths.ContainsKey(c))
+                        cachedWidths.Add(c, (width, widthType));
+                }
+            }
+            return width;
+        }
+
+        /// <summary>
+        /// Gets the character width type
+        /// </summary>
+        /// <param name="c">A character number (codepoint) to parse</param>
+        /// <returns>Character width type</returns>
+        /// <exception cref="TextifyException"></exception>
+        public static CharWidthType GetCharWidthType(int c)
+        {
+            // Check the value
+            if (c < 0 || c > 0x10FFFF)
+                throw new TextifyException($"Invalid character number {c}.");
+
+            // Check the cached width
+            if (cachedWidths.ContainsKey(c))
+                return cachedWidths[c].Item2;
+
+            // Use the character cell table defined in a separate code class to be able to determine the width type
+            int width = 1;
+            CharWidthType widthType = (CharWidthType)(-1);
+            foreach ((var range, int cells, CharWidthType type) in CharWidths.ranges)
+            {
+                // Check for each range if we have a Unicode character that falls under one of the characters that take
+                // up either no cells or more than one cell.
+                foreach ((int first, int last) in range)
+                {
+                    if (c >= first && c <= last)
+                    {
+                        widthType = type;
+                        width = cells;
+                        break;
+                    }
+                }
+                if (width == 1)
+                    continue;
+                break;
+            }
+
+            // Add to cache if we can
+            bool cacheable = width >= 0;
+            if (cacheable)
+            {
+                // To ensure that we don't have any race condition, lock here and check.
+                lock (cachedWidths)
+                {
+                    if (!cachedWidths.ContainsKey(c))
+                        cachedWidths.Add(c, (width, widthType));
+                }
+            }
+            return widthType;
         }
     }
 }

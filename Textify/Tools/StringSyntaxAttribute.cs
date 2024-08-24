@@ -24,7 +24,9 @@
 //
 // Refer to: https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/CodeAnalysis/StringSyntaxAttribute.cs
 
-namespace System.Diagnostics.CodeAnalysis
+using System;
+
+namespace Textify.Tools
 {
     /// <summary>
     /// Specifies the syntax used in a string.
