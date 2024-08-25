@@ -24,9 +24,8 @@
 //
 // Refer to: https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/CodeAnalysis/StringSyntaxAttribute.cs
 
-using System;
-
-namespace Textify.Tools
+#pragma warning disable IDE0130
+namespace System.Diagnostics.CodeAnalysis
 {
     /// <summary>
     /// Specifies the syntax used in a string.
@@ -126,3 +125,4 @@ namespace Textify.Tools
         public const string Xml = nameof(Xml);
     }
 }
+#pragma warning restore IDE0130
