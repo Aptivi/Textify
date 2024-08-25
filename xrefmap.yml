@@ -3269,13 +3269,13 @@ references:
   fullName: Textify.General.TextTools.Escape
   nameWithType: TextTools.Escape
 - uid: Textify.General.TextTools.FormatString(System.String,System.Object[])
-  name: FormatString(string, params object[])
+  name: FormatString(string, params object?[]?)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_FormatString_System_String_System_Object___
   commentId: M:Textify.General.TextTools.FormatString(System.String,System.Object[])
   name.vb: FormatString(String, ParamArray Object())
-  fullName: Textify.General.TextTools.FormatString(string, params object[])
+  fullName: Textify.General.TextTools.FormatString(string, params object?[]?)
   fullName.vb: Textify.General.TextTools.FormatString(String, ParamArray Object())
-  nameWithType: TextTools.FormatString(string, params object[])
+  nameWithType: TextTools.FormatString(string, params object?[]?)
   nameWithType.vb: TextTools.FormatString(String, ParamArray Object())
 - uid: Textify.General.TextTools.FormatString*
   name: FormatString
