@@ -59,7 +59,7 @@ namespace Textify.Figlet
         /// </summary>
         /// <param name="name">the name of the font. Case-sensitive.</param>
         /// <returns>The font if found, otherwise <see langword="null"/>.</returns>
-        public static FigletFont TryGetByName(string name)
+        public static FigletFont? TryGetByName(string name)
         {
             // Check to see if we have the cached version
             if (_fontByName.TryGetValue(name, out var font))
@@ -74,7 +74,7 @@ namespace Textify.Figlet
             return font;
         }
 
-        private static FigletFont ParseEmbeddedFont(string name)
+        private static FigletFont? ParseEmbeddedFont(string name)
         {
             string fontName = $"{FigletTools.assembly.GetName().Name}.Fonts.{name}";
             using var stream =

@@ -116,7 +116,7 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer Parse(string value)
+        public static SemVer? Parse(string value)
         {
             if (HasRevision(value))
                 return ParseWithRev(value);
@@ -129,7 +129,7 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer ParseWithoutRev(string value)
+        public static SemVer? ParseWithoutRev(string value)
         {
             // Verify that the semantic versioning string is a valid SemVer string
             MatchCollection matches = normalValidator.Matches(value);
@@ -159,7 +159,7 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer ParseWithRev(string value)
+        public static SemVer? ParseWithRev(string value)
         {
             // Verify that the semantic versioning string is a valid SemVer string
             MatchCollection matches = revValidator.Matches(value);

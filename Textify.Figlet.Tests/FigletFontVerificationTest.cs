@@ -43,7 +43,7 @@ namespace Textify.Figlet.Tests
         [DynamicData(nameof(TestFigletFonts))]
         public void VerifyFont(string fontName)
         {
-            FigletFont font = null;
+            FigletFont? font = null;
             Should.NotThrow(() => font = FigletFonts.GetByName(fontName));
             font.ShouldNotBeNull();
             font.Name.ShouldBe(fontName);
@@ -53,7 +53,7 @@ namespace Textify.Figlet.Tests
         [DynamicData(nameof(TestFigletFonts))]
         public void VerifyFontRender(string fontName)
         {
-            FigletFont font = null;
+            FigletFont? font = null;
             Should.NotThrow(() => font = FigletFonts.GetByName(fontName));
             font.ShouldNotBeNull();
             font.Name.ShouldBe(fontName);

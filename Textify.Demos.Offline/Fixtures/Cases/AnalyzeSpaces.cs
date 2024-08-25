@@ -32,7 +32,7 @@ namespace Textify.Demos.Offline.Fixtures.Cases
 
             // Prompt for spaces
             Console.Write("Enter a text containing non-breaking spaces: ");
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             text = string.IsNullOrEmpty(input) ? text : input;
 
             // Analyze them

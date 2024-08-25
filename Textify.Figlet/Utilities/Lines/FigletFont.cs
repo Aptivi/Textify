@@ -125,7 +125,7 @@ namespace Textify.Figlet.Utilities.Lines
         {
             var smush = smushOverride ?? _smushMode;
             var outputLineBuilders = Enumerable.Range(0, Height).Select(_ => new StringBuilder()).ToList();
-            FigletCharacter lastCh = null;
+            FigletCharacter? lastCh = null;
             bool needsWidthCalc = width > 0;
             int widthLine = 0;
 
@@ -243,7 +243,7 @@ namespace Textify.Figlet.Utilities.Lines
                 res.AppendLine(outputLine);
             return res.ToString(0, res.Length - Environment.NewLine.Length);
 
-            int CalculateFitMove(FigletCharacter l, FigletCharacter r)
+            int CalculateFitMove(FigletCharacter? l, FigletCharacter r)
             {
                 if (smush == SM_FULLWIDTH)
                     return 0;

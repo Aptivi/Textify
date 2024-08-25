@@ -436,10 +436,12 @@ namespace Textify.General
         /// <param name="Format">The string to format</param>
         /// <param name="Vars">The variables used</param>
         /// <returns>A formatted string if successful, or the unformatted one if failed.</returns>
-        public static string FormatString(this string Format, params object[] Vars)
+        public static string FormatString(this string Format, params object?[]? Vars)
         {
             if (Format is null)
                 throw new TextifyException("The target format may not be null");
+            if (Vars is null)
+                throw new TextifyException("The target vars may not be null");
 
             string FormattedString = Format;
             try

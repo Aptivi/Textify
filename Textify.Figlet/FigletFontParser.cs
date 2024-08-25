@@ -61,7 +61,7 @@ namespace Textify.Figlet
         /// <returns>The font described by the stream.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="stream"/> is <c>null</c>.</exception>
         /// <exception cref="FigletException">The stream contained an error and could not be parsed.</exception>
-        public static FigletFont Parse(Stream stream, string name = "unknown", StringPool pool = null, Encoding encoding = null)
+        public static FigletFont Parse(Stream stream, string name = "unknown", StringPool? pool = null, Encoding? encoding = null)
         {
             // Validate before continuing
             var (reader, match) = ValidateFontStream(stream, encoding);
@@ -238,7 +238,7 @@ namespace Textify.Figlet
         /// <param name="stream">Stream that contains FLF information</param>
         /// <param name="encoding">Encoding to use while parsing font file</param>
         /// <returns>Read only list of comments</returns>
-        public static IReadOnlyList<string> ExtractComments(Stream stream, Encoding encoding = null)
+        public static IReadOnlyList<string> ExtractComments(Stream stream, Encoding? encoding = null)
         {
             // Validate before continuing
             var (reader, match) = ValidateFontStream(stream, encoding);
@@ -263,7 +263,7 @@ namespace Textify.Figlet
         /// <param name="encoding">Encoding to use while parsing font file</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FigletException"></exception>
-        public static (StreamReader reader, Match match) ValidateFontStream(Stream stream, Encoding encoding = null)
+        public static (StreamReader reader, Match match) ValidateFontStream(Stream stream, Encoding? encoding = null)
         {
             // Check the stream before opening it
             if (stream == null)
@@ -292,7 +292,7 @@ namespace Textify.Figlet
         /// <param name="stream">Stream that contains FLF information</param>
         /// <param name="encoding">Encoding to use while parsing font file</param>
         /// <returns>True with an instance of the reader and the match if found; otherwise, false with two null values.</returns>
-        public static (bool result, StreamReader reader, Match match) TryValidateFontStream(Stream stream, Encoding encoding = null)
+        public static (bool result, StreamReader? reader, Match? match) TryValidateFontStream(Stream stream, Encoding? encoding = null)
         {
             try
             {

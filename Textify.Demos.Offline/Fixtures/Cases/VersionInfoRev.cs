@@ -29,11 +29,18 @@ namespace Textify.Demos.Offline.Fixtures.Cases
         {
             // Prompt for a version
             Console.Write("Enter a version (0.0.0.0, 0.0.0.0-...): ");
-            string ver = Console.ReadLine();
+            string? ver = Console.ReadLine();
             Console.WriteLine();
 
             // Query it
+            if (ver is null)
+            {
+                Console.WriteLine("Are you sure that you really have a console?");
+                return;
+            }
             var verInstance = SemVer.ParseWithRev(ver);
+            if (verInstance is null)
+                return;
             Console.WriteLine($"Version (input): {ver}");
             Console.WriteLine($"Version (gen'd): {verInstance}");
             Console.WriteLine($"Major: {verInstance.MajorVersion}");

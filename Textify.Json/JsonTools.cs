@@ -106,7 +106,7 @@ namespace Textify.Json
                         {
                             diff[$"+{k}"] = new JObject
                             {
-                                ["+"] = targetObj[k].Path
+                                ["+"] = targetObj[k]?.Path
                             };
                         }
 
@@ -116,7 +116,7 @@ namespace Textify.Json
                         {
                             diff[$"-{k}"] = new JObject
                             {
-                                ["-"] = sourceObj[k].Path
+                                ["-"] = sourceObj[k]?.Path
                             };
                         }
 

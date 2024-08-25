@@ -71,7 +71,7 @@ namespace Textify.Data.Analysis.Unicode
         internal static Char Serialize(int charNum, UnicodeQueryType type)
         {
             var stream = UnpackUnicodeDataToStream(type);
-            Repertoire repertoire = null;
+            Repertoire? repertoire = null;
 
             // Get the repertoire
             if (cachedQueries.ContainsKey(type))
@@ -86,6 +86,8 @@ namespace Textify.Data.Analysis.Unicode
             }
 
             // Now, get the Char instance by char number
+            if (repertoire is null)
+                throw new TextifyException($"There is no repertoire for {charNum}, {type}.");
             if (charNum > repertoire.Char.Length)
                 throw new TextifyException($"Char number {charNum} exceeds {repertoire.Char.Length} available characters.");
             return repertoire.Char[charNum];

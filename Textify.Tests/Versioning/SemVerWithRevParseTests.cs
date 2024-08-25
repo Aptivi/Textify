@@ -41,7 +41,9 @@ namespace Textify.Tests.Versioning
         [DataRow("0.0.1.5-alpha1+234F234D", new object[] { 0, 0, 1, 5, "alpha1", "234F234D" })]
         public void TestSemVer(string version, object[] expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            if (semVer is null)
+                Assert.Fail();
             object[] actual =
             [
                 semVer.MajorVersion,
@@ -67,8 +69,10 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerEquality(string version, string otherVersion, bool expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
-            SemVer semVer2 = SemVer.ParseWithRev(otherVersion);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer2 = SemVer.ParseWithRev(otherVersion);
+            if (semVer is null || semVer2 is null)
+                Assert.Fail();
             (semVer == semVer2).ShouldBe(expected);
         }
 
@@ -89,8 +93,10 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", false)]
         public void TestSemVerIsOlderThan(string version, string otherVersion, bool expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
-            SemVer semVer2 = SemVer.ParseWithRev(otherVersion);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer2 = SemVer.ParseWithRev(otherVersion);
+            if (semVer is null || semVer2 is null)
+                Assert.Fail();
             (semVer < semVer2).ShouldBe(expected);
         }
 
@@ -111,8 +117,10 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerIsOlderOrEqualTo(string version, string otherVersion, bool expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
-            SemVer semVer2 = SemVer.ParseWithRev(otherVersion);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer2 = SemVer.ParseWithRev(otherVersion);
+            if (semVer is null || semVer2 is null)
+                Assert.Fail();
             (semVer <= semVer2).ShouldBe(expected);
         }
 
@@ -132,8 +140,10 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", false)]
         public void TestSemVerIsNewerThan(string version, string otherVersion, bool expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
-            SemVer semVer2 = SemVer.ParseWithRev(otherVersion);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer2 = SemVer.ParseWithRev(otherVersion);
+            if (semVer is null || semVer2 is null)
+                Assert.Fail();
             (semVer > semVer2).ShouldBe(expected);
         }
 
@@ -154,8 +164,10 @@ namespace Textify.Tests.Versioning
         [DataRow("1.0.0.5-alpha1+234F234D", "1.0.0.5-alpha1+234F234D", true)]
         public void TestSemVerIsNewerOrEqualTo(string version, string otherVersion, bool expected)
         {
-            SemVer semVer = SemVer.ParseWithRev(version);
-            SemVer semVer2 = SemVer.ParseWithRev(otherVersion);
+            SemVer? semVer = SemVer.ParseWithRev(version);
+            SemVer? semVer2 = SemVer.ParseWithRev(otherVersion);
+            if (semVer is null || semVer2 is null)
+                Assert.Fail();
             (semVer >= semVer2).ShouldBe(expected);
         }
     }

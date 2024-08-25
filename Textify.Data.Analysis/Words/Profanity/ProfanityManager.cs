@@ -31,9 +31,9 @@ namespace Textify.Data.Analysis.Words.Profanity
     /// </summary>
     public static class ProfanityManager
     {
-        private static Regex thoroughProfanityMatcher;
-        private static Regex partialProfanityMatcher;
-        private static Regex shallowProfanityMatcher;
+        private static Regex? thoroughProfanityMatcher;
+        private static Regex? partialProfanityMatcher;
+        private static Regex? shallowProfanityMatcher;
 
         /// <summary>
         /// Gets a list of profane words in a sentence
@@ -55,6 +55,8 @@ namespace Textify.Data.Analysis.Words.Profanity
                 searchType == ProfanitySearchType.Partial ? partialProfanityMatcher :
                 searchType == ProfanitySearchType.Mitigated ? partialProfanityMatcher :
                 shallowProfanityMatcher;
+            if (matcher is null)
+                return [];
             var matches = matcher.Matches(sentence);
             List<ProfanityOccurrenceInfo> occurrences = [];
             foreach (Match match in matches)
