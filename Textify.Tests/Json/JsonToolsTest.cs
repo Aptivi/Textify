@@ -128,11 +128,11 @@ namespace Textify.Tests.Json
             diffObject["*DebugPath"].ShouldNotBeNull();
             diffObject["*DebugPath2"].ShouldNotBeNull();
             diffObject["*DebugPath5"].ShouldNotBeNull();
-            ((JProperty)diffObject["+DebugPath5"].First).Name.ShouldBe("+");
-            ((JProperty)diffObject["-DebugPath4"].First).Name.ShouldBe("-");
-            ((JProperty)diffObject["*DebugPath"].First).Name.ShouldBe("*");
-            ((JProperty)diffObject["*DebugPath2"].First).Name.ShouldBe("*");
-            ((JProperty)diffObject["*DebugPath5"].First).Name.ShouldBe("*");
+            ((JProperty?)diffObject["+DebugPath5"]?.First)?.Name.ShouldBe("+");
+            ((JProperty?)diffObject["-DebugPath4"]?.First)?.Name.ShouldBe("-");
+            ((JProperty?)diffObject["*DebugPath"]?.First)?.Name.ShouldBe("*");
+            ((JProperty?)diffObject["*DebugPath2"]?.First)?.Name.ShouldBe("*");
+            ((JProperty?)diffObject["*DebugPath5"]?.First)?.Name.ShouldBe("*");
         }
 
         /// <summary>
@@ -182,8 +182,8 @@ namespace Textify.Tests.Json
             diffArray.Count.ShouldBe(2);
             diffArray["+"].ShouldNotBeNull();
             diffArray["-"].ShouldNotBeNull();
-            ((JArray)diffArray["+"]).Count.ShouldBe(0);
-            ((JArray)diffArray["-"]).Count.ShouldBe(2);
+            ((JArray?)diffArray["+"])?.Count.ShouldBe(0);
+            ((JArray?)diffArray["-"])?.Count.ShouldBe(2);
         }
 
         /// <summary>
