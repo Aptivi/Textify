@@ -375,16 +375,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Tools.StringSyntaxAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Tools.StringSyntaxAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Tools.TextifyException.yml",
       "output": {
         ".html": {
