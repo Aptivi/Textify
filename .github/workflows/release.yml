@@ -30,7 +30,9 @@ jobs:
           make doc
           cd tools ; ./docgen-pack.sh ; cd ..
           echo "SUBJECT=$(cat CHANGES.TITLE)" >> "$GITHUB_OUTPUT"
-          echo "BODY=$(cat CHANGES)" >> "$GITHUB_OUTPUT"
+          echo 'BODY<<EOF' >> "$GITHUB_OUTPUT"
+          cat CHANGES >> "$GITHUB_OUTPUT"
+          echo 'EOF' >> "$GITHUB_OUTPUT"
       - name: Release Making
         uses: softprops/action-gh-release@v2
         with:
