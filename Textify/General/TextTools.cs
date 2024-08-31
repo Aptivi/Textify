@@ -1101,8 +1101,8 @@ namespace Textify.General
                         break;
                 } while (char.IsDigit(ch2) == char.IsDigit(space2[0]));
 
-                string str1 = new string(space1);
-                string str2 = new string(space2);
+                string str1 = new(space1);
+                string str2 = new(space2);
 
                 int result;
 
