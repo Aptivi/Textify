@@ -23,14 +23,17 @@ jobs:
       - name: Setup DocFX
         run: dotnet tool install --global docfx
       - name: Release Asset Preparation
+        id: release-asset
         run: |
           chmod +x tools/*.sh
           make doc
           cd tools ; ./docgen-pack.sh ; cd ..
+          echo "SUBJECT=$(cat CHANGES.TITLE)" >> "$GITHUB_OUTPUT"
       - name: Release Draft Making
         uses: softprops/action-gh-release@v2
         with:
-          body: "This is a draft release. Fill this with a release snippet from the release sheet made internally."
+          body_path: CHANGES
+          name: ${{ steps.release-asset.outputs.SUBJECT }}
           draft: true
           files: |
             tools/*.zip
