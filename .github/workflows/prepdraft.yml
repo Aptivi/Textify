@@ -34,6 +34,5 @@ jobs:
         with:
           body_path: CHANGES
           name: ${{ steps.release-asset.outputs.SUBJECT }}
-          draft: true
           files: |
             tools/*.zip
