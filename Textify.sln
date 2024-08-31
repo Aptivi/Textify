@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Textify.Figlet.Tests", "Tex
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{5C00288C-5A15-406F-BFD6-B0073A9DF7D2}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGES = CHANGES
+		CHANGES.TITLE = CHANGES.TITLE
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject

@@ -1,10 +1,10 @@
-We've made this patch release to fix a regression regarding StringSyntaxAttribute.
+We've made this patch release to improve Figlet rendering a bit.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed StringSyntaxAttribute
+- `[*]` Trim the Figlet message input
 
 Review the commit history if you want to get a deep insight about the changes.
 
