@@ -128,6 +128,7 @@ namespace Textify.Figlet.Utilities.Lines
             FigletCharacter? lastCh = null;
             bool needsWidthCalc = width > 0;
             int widthLine = 0;
+            message = message.Trim();
 
             foreach (var c in message)
             {
@@ -249,7 +250,7 @@ namespace Textify.Figlet.Utilities.Lines
                     return 0;
 
                 if (l == null)
-                    return 0; // TODO could still shift b if it had whitespace in the first column
+                    return 0;
 
                 var minMove = int.MaxValue;
 
