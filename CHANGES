@@ -1,10 +1,10 @@
-We've made this patch release to improve Figlet rendering a bit.
+This Textify update now supports Unicode 16.0.0!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Trim the Figlet message input
+- `[*]` Updated Unicode to 16.0.0
 
 Review the commit history if you want to get a deep insight about the changes.
 
