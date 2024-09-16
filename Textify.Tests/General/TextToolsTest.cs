@@ -81,6 +81,46 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests replacing last occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceLastOccurrenceChar()
+        {
+            string expected = "Nitrocid is awesome and its features are great!";
+            string Source = "Nitrocid is awesome and i great!";
+            Source = Source.ReplaceLastOccurrence('i', "its features are");
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests replacing last occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceLastOccurrenceWithChar()
+        {
+            string expected = "Nitrocid is awesome and S great!";
+            string Source = "Nitrocid is awesome and is great!";
+            string Target = "is";
+            Source = Source.ReplaceLastOccurrence(Target, 'S');
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests replacing last occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceLastOccurrenceCharWithChar()
+        {
+            string expected = "Nitrocid is awesome and S great!";
+            string Source = "Nitrocid is awesome and i great!";
+            Source = Source.ReplaceLastOccurrence('i', 'S');
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
         /// Tests replacing all specified occurrences of strings with a single string
         /// </summary>
         [TestMethod]

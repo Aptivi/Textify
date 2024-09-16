@@ -542,6 +542,65 @@ namespace Textify.General
         }
 
         /// <summary>
+        /// Replaces last occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A string to be replaced</param>
+        /// <param name="replace">A character to replace</param>
+        /// <returns>String that has its last occurrence of text replaced</returns>
+        public static string ReplaceLastOccurrence(this string source, string searchText, char replace)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+            if (searchText is null)
+                throw new TextifyException("The search text may not be null");
+
+            int position = source.LastIndexOf(searchText);
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, searchText.Length).Insert(position, $"{replace}");
+            return result;
+        }
+
+        /// <summary>
+        /// Replaces last occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A character to be replaced</param>
+        /// <param name="replace">A string to replace</param>
+        /// <returns>String that has its last occurrence of text replaced</returns>
+        public static string ReplaceLastOccurrence(this string source, char searchText, string replace)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            int position = source.LastIndexOf(searchText);
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, 1).Insert(position, replace);
+            return result;
+        }
+
+        /// <summary>
+        /// Replaces last occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A character to be replaced</param>
+        /// <param name="replace">A character to replace</param>
+        /// <returns>String that has its last occurrence of text replaced</returns>
+        public static string ReplaceLastOccurrence(this string source, char searchText, char replace)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            int position = source.LastIndexOf(searchText);
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, 1).Insert(position, $"{replace}");
+            return result;
+        }
+
+        /// <summary>
         /// Get all indexes of a value in string
         /// </summary>
         /// <param name="target">Source string</param>
