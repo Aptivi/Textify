@@ -3781,6 +3781,33 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceAllRange
   nameWithType: TextTools.ReplaceAllRange
+- uid: Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.Char,System.Char)
+  name: ReplaceLastOccurrence(string, char, char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceLastOccurrence_System_String_System_Char_System_Char_
+  commentId: M:Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.Char,System.Char)
+  name.vb: ReplaceLastOccurrence(String, Char, Char)
+  fullName: Textify.General.TextTools.ReplaceLastOccurrence(string, char, char)
+  fullName.vb: Textify.General.TextTools.ReplaceLastOccurrence(String, Char, Char)
+  nameWithType: TextTools.ReplaceLastOccurrence(string, char, char)
+  nameWithType.vb: TextTools.ReplaceLastOccurrence(String, Char, Char)
+- uid: Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.Char,System.String)
+  name: ReplaceLastOccurrence(string, char, string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceLastOccurrence_System_String_System_Char_System_String_
+  commentId: M:Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.Char,System.String)
+  name.vb: ReplaceLastOccurrence(String, Char, String)
+  fullName: Textify.General.TextTools.ReplaceLastOccurrence(string, char, string)
+  fullName.vb: Textify.General.TextTools.ReplaceLastOccurrence(String, Char, String)
+  nameWithType: TextTools.ReplaceLastOccurrence(string, char, string)
+  nameWithType.vb: TextTools.ReplaceLastOccurrence(String, Char, String)
+- uid: Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.String,System.Char)
+  name: ReplaceLastOccurrence(string, string, char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceLastOccurrence_System_String_System_String_System_Char_
+  commentId: M:Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.String,System.Char)
+  name.vb: ReplaceLastOccurrence(String, String, Char)
+  fullName: Textify.General.TextTools.ReplaceLastOccurrence(string, string, char)
+  fullName.vb: Textify.General.TextTools.ReplaceLastOccurrence(String, String, Char)
+  nameWithType: TextTools.ReplaceLastOccurrence(string, string, char)
+  nameWithType.vb: TextTools.ReplaceLastOccurrence(String, String, Char)
 - uid: Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.String,System.String)
   name: ReplaceLastOccurrence(string, string, string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceLastOccurrence_System_String_System_String_System_String_
