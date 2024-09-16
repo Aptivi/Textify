@@ -4186,6 +4186,22 @@ references:
   isSpec: "True"
   fullName: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpaces
   nameWithType: SpaceConversionTools.ConvertSpaces
+- uid: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple(System.String)
+  name: ConvertSpacesSimple(string)
+  href: api/Textify.SpaceManager.Conversion.SpaceConversionTools.html#Textify_SpaceManager_Conversion_SpaceConversionTools_ConvertSpacesSimple_System_String_
+  commentId: M:Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple(System.String)
+  name.vb: ConvertSpacesSimple(String)
+  fullName: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple(string)
+  fullName.vb: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple(String)
+  nameWithType: SpaceConversionTools.ConvertSpacesSimple(string)
+  nameWithType.vb: SpaceConversionTools.ConvertSpacesSimple(String)
+- uid: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple*
+  name: ConvertSpacesSimple
+  href: api/Textify.SpaceManager.Conversion.SpaceConversionTools.html#Textify_SpaceManager_Conversion_SpaceConversionTools_ConvertSpacesSimple_
+  commentId: Overload:Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple
+  isSpec: "True"
+  fullName: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesSimple
+  nameWithType: SpaceConversionTools.ConvertSpacesSimple
 - uid: Textify.SpaceManager.Conversion.SpaceConversionTools.ConvertSpacesTo(Textify.SpaceManager.Analysis.SpaceAnalysisResult,System.IO.Stream)
   name: ConvertSpacesTo(SpaceAnalysisResult, Stream)
   href: api/Textify.SpaceManager.Conversion.SpaceConversionTools.html#Textify_SpaceManager_Conversion_SpaceConversionTools_ConvertSpacesTo_Textify_SpaceManager_Analysis_SpaceAnalysisResult_System_IO_Stream_
