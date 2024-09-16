@@ -5,7 +5,7 @@ In this updated version, we've added several overloads of text tools, as well as
 This release contains a variety of changes, including, but not limited to:
 
 - `[+]` Added several overloads of text tools
-- `[*]` Updated Unicode lookup performance
+- `[*]` Improved Unicode lookup performance
 
 Review the commit history if you want to get a deep insight about the changes.
 
