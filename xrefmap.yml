@@ -3302,6 +3302,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.CompareLogical
   nameWithType: TextTools.CompareLogical
+- uid: Textify.General.TextTools.ContainsAllOf(System.String,System.Char[])
+  name: ContainsAllOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAllOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.ContainsAllOf(System.String,System.Char[])
+  name.vb: ContainsAllOf(String, Char())
+  fullName: Textify.General.TextTools.ContainsAllOf(string, char[])
+  fullName.vb: Textify.General.TextTools.ContainsAllOf(String, Char())
+  nameWithType: TextTools.ContainsAllOf(string, char[])
+  nameWithType.vb: TextTools.ContainsAllOf(String, Char())
 - uid: Textify.General.TextTools.ContainsAllOf(System.String,System.String[])
   name: ContainsAllOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAllOf_System_String_System_String___
@@ -3318,6 +3327,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ContainsAllOf
   nameWithType: TextTools.ContainsAllOf
+- uid: Textify.General.TextTools.ContainsAnyOf(System.String,System.Char[])
+  name: ContainsAnyOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAnyOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.ContainsAnyOf(System.String,System.Char[])
+  name.vb: ContainsAnyOf(String, Char())
+  fullName: Textify.General.TextTools.ContainsAnyOf(string, char[])
+  fullName.vb: Textify.General.TextTools.ContainsAnyOf(String, Char())
+  nameWithType: TextTools.ContainsAnyOf(string, char[])
+  nameWithType.vb: TextTools.ContainsAnyOf(String, Char())
 - uid: Textify.General.TextTools.ContainsAnyOf(System.String,System.String[])
   name: ContainsAnyOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsAnyOf_System_String_System_String___
@@ -3334,6 +3352,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ContainsAnyOf
   nameWithType: TextTools.ContainsAnyOf
+- uid: Textify.General.TextTools.EndsWithAllOf(System.String,System.Char[])
+  name: EndsWithAllOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAllOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.EndsWithAllOf(System.String,System.Char[])
+  name.vb: EndsWithAllOf(String, Char())
+  fullName: Textify.General.TextTools.EndsWithAllOf(string, char[])
+  fullName.vb: Textify.General.TextTools.EndsWithAllOf(String, Char())
+  nameWithType: TextTools.EndsWithAllOf(string, char[])
+  nameWithType.vb: TextTools.EndsWithAllOf(String, Char())
 - uid: Textify.General.TextTools.EndsWithAllOf(System.String,System.String[])
   name: EndsWithAllOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAllOf_System_String_System_String___
@@ -3350,6 +3377,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.EndsWithAllOf
   nameWithType: TextTools.EndsWithAllOf
+- uid: Textify.General.TextTools.EndsWithAnyOf(System.String,System.Char[])
+  name: EndsWithAnyOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAnyOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.EndsWithAnyOf(System.String,System.Char[])
+  name.vb: EndsWithAnyOf(String, Char())
+  fullName: Textify.General.TextTools.EndsWithAnyOf(string, char[])
+  fullName.vb: Textify.General.TextTools.EndsWithAnyOf(String, Char())
+  nameWithType: TextTools.EndsWithAnyOf(string, char[])
+  nameWithType.vb: TextTools.EndsWithAnyOf(String, Char())
 - uid: Textify.General.TextTools.EndsWithAnyOf(System.String,System.String[])
   name: EndsWithAnyOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAnyOf_System_String_System_String___
@@ -3929,6 +3965,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.SplitNewLinesOld
   nameWithType: TextTools.SplitNewLinesOld
+- uid: Textify.General.TextTools.StartsWithAllOf(System.String,System.Char[])
+  name: StartsWithAllOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAllOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.StartsWithAllOf(System.String,System.Char[])
+  name.vb: StartsWithAllOf(String, Char())
+  fullName: Textify.General.TextTools.StartsWithAllOf(string, char[])
+  fullName.vb: Textify.General.TextTools.StartsWithAllOf(String, Char())
+  nameWithType: TextTools.StartsWithAllOf(string, char[])
+  nameWithType.vb: TextTools.StartsWithAllOf(String, Char())
 - uid: Textify.General.TextTools.StartsWithAllOf(System.String,System.String[])
   name: StartsWithAllOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAllOf_System_String_System_String___
@@ -3945,6 +3990,15 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.StartsWithAllOf
   nameWithType: TextTools.StartsWithAllOf
+- uid: Textify.General.TextTools.StartsWithAnyOf(System.String,System.Char[])
+  name: StartsWithAnyOf(string, char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAnyOf_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.StartsWithAnyOf(System.String,System.Char[])
+  name.vb: StartsWithAnyOf(String, Char())
+  fullName: Textify.General.TextTools.StartsWithAnyOf(string, char[])
+  fullName.vb: Textify.General.TextTools.StartsWithAnyOf(String, Char())
+  nameWithType: TextTools.StartsWithAnyOf(string, char[])
+  nameWithType.vb: TextTools.StartsWithAnyOf(String, Char())
 - uid: Textify.General.TextTools.StartsWithAnyOf(System.String,System.String[])
   name: StartsWithAnyOf(string, string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithAnyOf_System_String_System_String___
