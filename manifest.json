@@ -75,16 +75,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Char.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.Char.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.Analysis.Unicode.Namealias.yml",
       "output": {
         ".html": {
@@ -95,20 +85,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Repertoire.yml",
+      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeCharInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.Repertoire.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Ucd.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.Ucd.html"
+          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeCharInfo.html"
         }
       },
       "version": ""
