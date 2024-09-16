@@ -23,37 +23,16 @@ using System.Xml.Serialization;
 namespace Textify.Data.Analysis.Unicode
 {
     /// <summary>
-    /// Name alias
-    /// </summary>
-    [XmlRoot(ElementName = "name-alias")]
-    public class Namealias
-    {
-
-        /// <summary>
-        /// Alias name
-        /// </summary>
-        [XmlAttribute(AttributeName = "alias")]
-        public string Alias { get; set; } = "";
-
-        /// <summary>
-        /// Alias type
-        /// </summary>
-        [XmlAttribute(AttributeName = "type")]
-        public string Type { get; set; } = "";
-    }
-
-    /// <summary>
     /// Character
     /// </summary>
     [XmlRoot(ElementName = "char")]
-    public class Char
+    public class UnicodeCharInfo
     {
-
         /// <summary>
         /// Name aliases
         /// </summary>
         [XmlElement(ElementName = "namealias")]
-        public List<Namealias> Namealias { get; set; } = [];
+        public Namealias[] Namealias { get; set; } = [];
 
         /// <summary>
         /// Codepage number
@@ -721,6 +700,42 @@ namespace Textify.Data.Analysis.Unicode
         [XmlAttribute(AttributeName = "ExtPict")]
         public string ExtPict { get; set; } = "";
 
+        /// <summary>
+        /// NFKC_SCF?
+        /// </summary>
+        [XmlAttribute(AttributeName = "NFKC_SCF")]
+        public string NFKCSCF { get; set; } = "";
+
+        /// <summary>
+        /// ID_Compat_Math_Start
+        /// </summary>
+        [XmlAttribute(AttributeName = "ID_Compat_Math_Start")]
+        public string IdCompatMathStart { get; set; } = "";
+
+        /// <summary>
+        /// ID_Compat_Math_Continue
+        /// </summary>
+        [XmlAttribute(AttributeName = "ID_Compat_Math_Continue")]
+        public string IdCompatMathContinue { get; set; } = "";
+
+        /// <summary>
+        /// IDSU?
+        /// </summary>
+        [XmlAttribute(AttributeName = "IDSU")]
+        public string IDSU { get; set; } = "";
+
+        /// <summary>
+        /// InCB?
+        /// </summary>
+        [XmlAttribute(AttributeName = "InCB")]
+        public string InCB { get; set; } = "";
+
+        /// <summary>
+        /// MCM?
+        /// </summary>
+        [XmlAttribute(AttributeName = "MCM")]
+        public string MCM { get; set; } = "";
+
         // Unihan info
 
         /// <summary>
@@ -826,6 +841,12 @@ namespace Textify.Data.Analysis.Unicode
         public string KMandarin { get; set; } = "";
 
         /// <summary>
+        /// CihaiT
+        /// </summary>
+        [XmlAttribute(AttributeName = "kCihaiT")]
+        public string KCihaiT { get; set; } = "";
+
+        /// <summary>
         /// SBGY
         /// </summary>
         [XmlAttribute(AttributeName = "kSBGY")]
@@ -836,6 +857,12 @@ namespace Textify.Data.Analysis.Unicode
         /// </summary>
         [XmlAttribute(AttributeName = "kCangjie")]
         public string KCangjie { get; set; } = "";
+
+        /// <summary>
+        /// Kang Xi
+        /// </summary>
+        [XmlAttribute(AttributeName = "kKangXi")]
+        public string KKangXi { get; set; } = "";
 
         /// <summary>
         /// Hanyu Pinyin
@@ -856,10 +883,46 @@ namespace Textify.Data.Analysis.Unicode
         public double KIRGKangXi { get; set; }
 
         /// <summary>
+        /// Morohashi
+        /// </summary>
+        [XmlAttribute(AttributeName = "kMorohashi")]
+        public string KMorohashi { get; set; } = "";
+
+        /// <summary>
         /// Total strokes
         /// </summary>
         [XmlAttribute(AttributeName = "kTotalStrokes")]
         public string KTotalStrokes { get; set; } = "";
+
+        /// <summary>
+        /// Japanese
+        /// </summary>
+        [XmlAttribute(AttributeName = "kJapanese")]
+        public string KJapanese { get; set; } = "";
+
+        /// <summary>
+        /// Moji Joho
+        /// </summary>
+        [XmlAttribute(AttributeName = "kMojiJoho")]
+        public string KMojiJoho { get; set; } = "";
+
+        /// <summary>
+        /// Fanqie
+        /// </summary>
+        [XmlAttribute(AttributeName = "kFanqie")]
+        public string KFanqie { get; set; } = "";
+
+        /// <summary>
+        /// Strange
+        /// </summary>
+        [XmlAttribute(AttributeName = "kStrange")]
+        public string KStrange { get; set; } = "";
+
+        /// <summary>
+        /// RS Adobe Japan 1.6
+        /// </summary>
+        [XmlAttribute(AttributeName = "kRSAdobe_Japan1_6")]
+        public string KRSAdobeJapan16 { get; set; } = "";
 
         /// <summary>
         /// Cantonese
@@ -875,46 +938,21 @@ namespace Textify.Data.Analysis.Unicode
     }
 
     /// <summary>
-    /// Character repertoire
+    /// Name alias
     /// </summary>
-    [XmlRoot(ElementName = "repertoire")]
-    public class Repertoire
+    [XmlRoot(ElementName = "name-alias")]
+    public class Namealias
     {
         /// <summary>
-        /// List of characters
+        /// Alias name
         /// </summary>
-        [XmlElement(ElementName = "char")]
-        public Char[] Char { get; set; } = [];
-    }
-
-    /// <summary>
-    /// Unicode Database
-    /// </summary>
-    [XmlRoot(ElementName = "ucd")]
-    public class Ucd
-    {
-        /// <summary>
-        /// Unicode version
-        /// </summary>
-        [XmlElement(ElementName = "description")]
-        public string Description { get; set; } = "";
+        [XmlAttribute(AttributeName = "alias")]
+        public string Alias { get; set; } = "";
 
         /// <summary>
-        /// The Repertoire
+        /// Alias type
         /// </summary>
-        [XmlElement(ElementName = "repertoire")]
-        public Repertoire? Repertoire { get; set; }
-
-        /// <summary>
-        /// XML namespace
-        /// </summary>
-        [XmlAttribute(AttributeName = "xmlns")]
-        public string Xmlns { get; set; } = "";
-
-        /// <summary>
-        /// Text
-        /// </summary>
-        [XmlText]
-        public string Text { get; set; } = "";
+        [XmlAttribute(AttributeName = "type")]
+        public string Type { get; set; } = "";
     }
 }

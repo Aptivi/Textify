@@ -30,14 +30,14 @@ namespace Textify.Data.Analysis.Unicode
         /// Queries the character
         /// </summary>
         /// <param name="character">Character</param>
-        public static Char QueryChar(char character) =>
+        public static UnicodeCharInfo QueryChar(char character) =>
             QueryChar(Convert.ToInt32(character), UnicodeQueryType.Full);
 
         /// <summary>
         /// Queries the character
         /// </summary>
         /// <param name="charNum">Character number</param>
-        public static Char QueryChar(int charNum) =>
+        public static UnicodeCharInfo QueryChar(int charNum) =>
             QueryChar(charNum, UnicodeQueryType.Full);
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Textify.Data.Analysis.Unicode
         /// </summary>
         /// <param name="character">Character</param>
         /// <param name="type">Database type to query</param>
-        public static Char QueryChar(char character, UnicodeQueryType type) =>
+        public static UnicodeCharInfo QueryChar(char character, UnicodeQueryType type) =>
             QueryChar(Convert.ToInt32(character), type);
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Textify.Data.Analysis.Unicode
         /// </summary>
         /// <param name="charNum">Character number</param>
         /// <param name="type">Database type to query</param>
-        public static Char QueryChar(int charNum, UnicodeQueryType type) =>
+        public static UnicodeCharInfo QueryChar(int charNum, UnicodeQueryType type) =>
             UnicodeQueryHandler.Serialize(charNum, type);
     }
 }
