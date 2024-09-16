@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Textify.General;
 using Textify.SpaceManager.Analysis;
 
 namespace Textify.SpaceManager.Conversion
@@ -138,6 +139,19 @@ namespace Textify.SpaceManager.Conversion
             // Save the converted output to a stream
             var bytes = ConvertSpaces(analysisResult);
             stream.Write(bytes, 0, bytes.Length);
+        }
+
+        /// <summary>
+        /// Converts spaces to true spaces simply without any analysis result
+        /// </summary>
+        /// <param name="text">Target text to work on</param>
+        public static string ConvertSpacesSimple(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                throw new ArgumentNullException(nameof(text));
+
+            // Convert the spaces to a string
+            return text.ReplaceAll(Spaces.badSpaceChars, " ");
         }
     }
 }

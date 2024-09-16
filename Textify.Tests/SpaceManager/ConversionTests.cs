@@ -268,6 +268,104 @@ namespace Textify.Tests.SpaceManager
         }
 
         [TestMethod]
+        public void TestConvertSpacesSimpleNormalToText()
+        {
+            //                  v~~~~ This is a normal space
+            string text = "Hello world!";
+            string expectedResult = "Hello world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleNonBreakingSpaceToText()
+        {
+            //                  v~~~~ This is a non-breaking space
+            string text = "Hello world!";
+            string expectedResult = "Hello world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleMultipleNonBreakingSpacesToText()
+        {
+            //                  v~~~v~~~~~~~v~~v~~~v~~~~ These are the non-breaking spaces
+            string text = "Hello and welcome to the world!";
+            string expectedResult = "Hello and welcome to the world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleNonBreakingSpaceExplicitToText()
+        {
+            //                  vvvvvv~~~~ This is a non-breaking space
+            string text = "Hello\u00a0world!";
+            string expectedResult = "Hello world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleMultipleNonBreakingSpacesExplicitToText()
+        {
+            //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
+            string text = "Hello\u00a0and\u00a0welcome\u00a0to\u00a0the\u00a0world!";
+            string expectedResult = "Hello and welcome to the world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleWithBadSpacesExplicitToText()
+        {
+            foreach (var badSpace in Spaces.badSpaces)
+            {
+                char whiteSpace = Encoding.UTF8.GetString(badSpace.Value)[0];
+
+                //                   vvvvvvvvvvvv~~~~ This is a bad space
+                string text = $"Hello{whiteSpace}world!";
+                string expectedResult = "Hello world!";
+                string result = SpaceConversionTools.ConvertSpacesSimple(text);
+                result.ShouldNotBeNullOrEmpty();
+                result.ShouldBe(expectedResult);
+            }
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleWithMultipleBadSpacesExplicitToText()
+        {
+            foreach (var badSpace in Spaces.badSpaces)
+            {
+                char whiteSpace = Encoding.UTF8.GetString(badSpace.Value)[0];
+
+                //                   vvvvvvvvvvvv~~~vvvvvvvvvvvv~~~~~~~vvvvvvvvvvvv~~vvvvvvvvvvvv~~~vvvvvvvvvvvv~~~~ These are bad spaces
+                string text = $"Hello{whiteSpace}and{whiteSpace}welcome{whiteSpace}to{whiteSpace}the{whiteSpace}world!";
+                string expectedResult = "Hello and welcome to the world!";
+                string result = SpaceConversionTools.ConvertSpacesSimple(text);
+                result.ShouldNotBeNullOrEmpty();
+                result.ShouldBe(expectedResult);
+            }
+        }
+
+        [TestMethod]
+        public void TestConvertSpacesSimpleMultipleDifferentSpacesExplicitToText()
+        {
+            //                  vvvvvv~~~vvvvvv~~~~~~~vvvvvv~~vvvvvv~~~vvvvvv~~~~ These are the non-breaking spaces
+            string text = "Hello\u00a0and\u200Bwelcome\u2008to\u200Bthe\u00a0world!";
+            string expectedResult = "Hello and welcome to the world!";
+            string result = SpaceConversionTools.ConvertSpacesSimple(text);
+            result.ShouldNotBeNullOrEmpty();
+            result.ShouldBe(expectedResult);
+        }
+
+        [TestMethod]
         public void TestConvertSpacesNormalToStream()
         {
             //                  v~~~~ This is a normal space
