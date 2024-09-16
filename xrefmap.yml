@@ -3695,6 +3695,33 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.RemoveSuffix
   nameWithType: TextTools.RemoveSuffix
+- uid: Textify.General.TextTools.ReplaceAll(System.String,System.Char[],System.Char)
+  name: ReplaceAll(string, char[], char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAll_System_String_System_Char___System_Char_
+  commentId: M:Textify.General.TextTools.ReplaceAll(System.String,System.Char[],System.Char)
+  name.vb: ReplaceAll(String, Char(), Char)
+  fullName: Textify.General.TextTools.ReplaceAll(string, char[], char)
+  fullName.vb: Textify.General.TextTools.ReplaceAll(String, Char(), Char)
+  nameWithType: TextTools.ReplaceAll(string, char[], char)
+  nameWithType.vb: TextTools.ReplaceAll(String, Char(), Char)
+- uid: Textify.General.TextTools.ReplaceAll(System.String,System.Char[],System.String)
+  name: ReplaceAll(string, char[], string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAll_System_String_System_Char___System_String_
+  commentId: M:Textify.General.TextTools.ReplaceAll(System.String,System.Char[],System.String)
+  name.vb: ReplaceAll(String, Char(), String)
+  fullName: Textify.General.TextTools.ReplaceAll(string, char[], string)
+  fullName.vb: Textify.General.TextTools.ReplaceAll(String, Char(), String)
+  nameWithType: TextTools.ReplaceAll(string, char[], string)
+  nameWithType.vb: TextTools.ReplaceAll(String, Char(), String)
+- uid: Textify.General.TextTools.ReplaceAll(System.String,System.String[],System.Char)
+  name: ReplaceAll(string, string[], char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAll_System_String_System_String___System_Char_
+  commentId: M:Textify.General.TextTools.ReplaceAll(System.String,System.String[],System.Char)
+  name.vb: ReplaceAll(String, String(), Char)
+  fullName: Textify.General.TextTools.ReplaceAll(string, string[], char)
+  fullName.vb: Textify.General.TextTools.ReplaceAll(String, String(), Char)
+  nameWithType: TextTools.ReplaceAll(string, string[], char)
+  nameWithType.vb: TextTools.ReplaceAll(String, String(), Char)
 - uid: Textify.General.TextTools.ReplaceAll(System.String,System.String[],System.String)
   name: ReplaceAll(string, string[], string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAll_System_String_System_String___System_String_
@@ -3711,6 +3738,33 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceAll
   nameWithType: TextTools.ReplaceAll
+- uid: Textify.General.TextTools.ReplaceAllRange(System.String,System.Char[],System.Char[])
+  name: ReplaceAllRange(string, char[], char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAllRange_System_String_System_Char___System_Char___
+  commentId: M:Textify.General.TextTools.ReplaceAllRange(System.String,System.Char[],System.Char[])
+  name.vb: ReplaceAllRange(String, Char(), Char())
+  fullName: Textify.General.TextTools.ReplaceAllRange(string, char[], char[])
+  fullName.vb: Textify.General.TextTools.ReplaceAllRange(String, Char(), Char())
+  nameWithType: TextTools.ReplaceAllRange(string, char[], char[])
+  nameWithType.vb: TextTools.ReplaceAllRange(String, Char(), Char())
+- uid: Textify.General.TextTools.ReplaceAllRange(System.String,System.Char[],System.String[])
+  name: ReplaceAllRange(string, char[], string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAllRange_System_String_System_Char___System_String___
+  commentId: M:Textify.General.TextTools.ReplaceAllRange(System.String,System.Char[],System.String[])
+  name.vb: ReplaceAllRange(String, Char(), String())
+  fullName: Textify.General.TextTools.ReplaceAllRange(string, char[], string[])
+  fullName.vb: Textify.General.TextTools.ReplaceAllRange(String, Char(), String())
+  nameWithType: TextTools.ReplaceAllRange(string, char[], string[])
+  nameWithType.vb: TextTools.ReplaceAllRange(String, Char(), String())
+- uid: Textify.General.TextTools.ReplaceAllRange(System.String,System.String[],System.Char[])
+  name: ReplaceAllRange(string, string[], char[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAllRange_System_String_System_String___System_Char___
+  commentId: M:Textify.General.TextTools.ReplaceAllRange(System.String,System.String[],System.Char[])
+  name.vb: ReplaceAllRange(String, String(), Char())
+  fullName: Textify.General.TextTools.ReplaceAllRange(string, string[], char[])
+  fullName.vb: Textify.General.TextTools.ReplaceAllRange(String, String(), Char())
+  nameWithType: TextTools.ReplaceAllRange(string, string[], char[])
+  nameWithType.vb: TextTools.ReplaceAllRange(String, String(), Char())
 - uid: Textify.General.TextTools.ReplaceAllRange(System.String,System.String[],System.String[])
   name: ReplaceAllRange(string, string[], string[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceAllRange_System_String_System_String___System_String___
