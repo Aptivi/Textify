@@ -3261,6 +3261,15 @@ references:
   commentId: T:Textify.General.TextTools
   fullName: Textify.General.TextTools
   nameWithType: TextTools
+- uid: Textify.General.TextTools.AllIndexesOf(System.String,System.Char)
+  name: AllIndexesOf(string, char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_AllIndexesOf_System_String_System_Char_
+  commentId: M:Textify.General.TextTools.AllIndexesOf(System.String,System.Char)
+  name.vb: AllIndexesOf(String, Char)
+  fullName: Textify.General.TextTools.AllIndexesOf(string, char)
+  fullName.vb: Textify.General.TextTools.AllIndexesOf(String, Char)
+  nameWithType: TextTools.AllIndexesOf(string, char)
+  nameWithType.vb: TextTools.AllIndexesOf(String, Char)
 - uid: Textify.General.TextTools.AllIndexesOf(System.String,System.String)
   name: AllIndexesOf(string, string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_AllIndexesOf_System_String_System_String_
