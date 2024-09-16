@@ -94,6 +94,45 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests replacing all specified occurrences of strings with a single character
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllWithChar()
+        {
+            string ExpectedString = "Please c Nitrocid. This sub is a unit c.";
+            string TargetString = "Please <replace> Nitrocid. This sub is a unit <replace2>.";
+            TargetString = TargetString.ReplaceAll(["<replace>", "<replace2>"], 'c');
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
+        /// Tests replacing all specified occurrences of characters with a single string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllChars()
+        {
+            string ExpectedString = "PleaEsse NEsstrocEssd. ThEssEss Essub EssEss a unEsst z.";
+            string TargetString = "Please Nitrocid. This sub is a unit z.";
+            TargetString = TargetString.ReplaceAll(['s', 'i'], "Ess");
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
+        /// Tests replacing all specified occurrences of characters with a single character
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllCharsWithChar()
+        {
+            string ExpectedString = "Pleaze Nztroczd. Thzz zub zz a unzt z.";
+            string TargetString = "Please Nitrocid. This sub is a unit z.";
+            TargetString = TargetString.ReplaceAll(['i', 's'], 'z');
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
         /// Tests replacing all specified occurrences of strings with multiple strings
         /// </summary>
         [TestMethod]
@@ -103,6 +142,45 @@ namespace Textify.Tests.General
             string ExpectedString = "Please test the integrity of Nitrocid. This sub is a unit test.";
             string TargetString = "Please <replace> Nitrocid. This sub is a unit <replace2>.";
             TargetString = TargetString.ReplaceAllRange(["<replace>", "<replace2>"], ["test the integrity of", "test"]);
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
+        /// Tests replacing all specified occurrences of strings with multiple characters
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllRangeWithChars()
+        {
+            string ExpectedString = "Please Z Nitrocid. This sub is a unit T.";
+            string TargetString = "Please <replace> Nitrocid. This sub is a unit <replace2>.";
+            TargetString = TargetString.ReplaceAllRange(["<replace>", "<replace2>"], ['Z', 'T']);
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
+        /// Tests replacing all specified occurrences of characters with multiple strings
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllRangeChars()
+        {
+            string ExpectedString = "Please test the integrity of Nitrocid. This sub is a unit test.";
+            string TargetString = "Please < Nitrocid. This sub is a unit >.";
+            TargetString = TargetString.ReplaceAllRange(['<', '>'], ["test the integrity of", "test"]);
+            TargetString.ShouldBe(ExpectedString);
+        }
+
+        /// <summary>
+        /// Tests replacing all specified occurrences of characters with multiple characters
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceAllRangeCharsWithChars()
+        {
+            string ExpectedString = "Please Z Nitrocid. This sub is a unit T.";
+            string TargetString = "Please > Nitrocid. This sub is a unit <.";
+            TargetString = TargetString.ReplaceAllRange(['>', '<'], ['Z', 'T']);
             TargetString.ShouldBe(ExpectedString);
         }
 

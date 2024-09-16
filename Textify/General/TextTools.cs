@@ -361,6 +361,66 @@ namespace Textify.General
         }
 
         /// <summary>
+        /// Replaces all the instances of strings with a string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Strings to be replaced</param>
+        /// <param name="toReplace">Character to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static string ReplaceAll(this string target, string[] toBeReplaced, char toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced strings may not be null");
+
+            foreach (string ReplaceTarget in toBeReplaced)
+                target = target.Replace(ReplaceTarget, $"{toReplace}");
+            return target;
+        }
+
+        /// <summary>
+        /// Replaces all the instances of strings with a string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Characters to be replaced</param>
+        /// <param name="toReplace">String to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static string ReplaceAll(this string target, char[] toBeReplaced, string toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced strings may not be null");
+
+            foreach (char ReplaceTarget in toBeReplaced)
+                target = target.Replace($"{ReplaceTarget}", toReplace);
+            return target;
+        }
+
+        /// <summary>
+        /// Replaces all the instances of strings with a string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Characters to be replaced</param>
+        /// <param name="toReplace">Character to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static string ReplaceAll(this string target, char[] toBeReplaced, char toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced strings may not be null");
+
+            foreach (char ReplaceTarget in toBeReplaced)
+                target = target.Replace(ReplaceTarget, toReplace);
+            return target;
+        }
+
+        /// <summary>
         /// Replaces all the instances of strings with a string assigned to each entry
         /// </summary>
         /// <param name="target">Target string</param>
@@ -379,6 +439,81 @@ namespace Textify.General
                 throw new TextifyException("Array of to be replacement strings may not be null");
             if (toBeReplaced.Length != toReplace.Length)
                 throw new TextifyException("Array length of which strings to be replaced doesn't equal the array length of which strings to replace.");
+
+            for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
+                target = target.Replace(toBeReplaced[i], toReplace[i]);
+            return target;
+        }
+
+        /// <summary>
+        /// Replaces all the instances of strings with a character assigned to each entry
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Strings to be replaced</param>
+        /// <param name="toReplace">Characters to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        public static string ReplaceAllRange(this string target, string[] toBeReplaced, char[] toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced strings may not be null");
+            if (toReplace is null || toReplace.Length == 0)
+                throw new TextifyException("Array of to be replacement characters may not be null");
+            if (toBeReplaced.Length != toReplace.Length)
+                throw new TextifyException("Array length of which strings to be replaced doesn't equal the array length of which characters to replace.");
+
+            for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
+                target = target.Replace(toBeReplaced[i], $"{toReplace[i]}");
+            return target;
+        }
+
+        /// <summary>
+        /// Replaces all the instances of characters with a string assigned to each entry
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Characters to be replaced</param>
+        /// <param name="toReplace">Strings to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        public static string ReplaceAllRange(this string target, char[] toBeReplaced, string[] toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced characters may not be null");
+            if (toReplace is null || toReplace.Length == 0)
+                throw new TextifyException("Array of to be replacement strings may not be null");
+            if (toBeReplaced.Length != toReplace.Length)
+                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which strings to replace.");
+
+            for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
+                target = target.Replace($"{toBeReplaced[i]}", toReplace[i]);
+            return target;
+        }
+
+        /// <summary>
+        /// Replaces all the instances of characters with a character assigned to each entry
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="toBeReplaced">Characters to be replaced</param>
+        /// <param name="toReplace">Characters to replace with</param>
+        /// <returns>Modified string</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        public static string ReplaceAllRange(this string target, char[] toBeReplaced, char[] toReplace)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+            if (toBeReplaced is null || toBeReplaced.Length == 0)
+                throw new TextifyException("Array of to be replaced characters may not be null");
+            if (toReplace is null || toReplace.Length == 0)
+                throw new TextifyException("Array of to be replacement characters may not be null");
+            if (toBeReplaced.Length != toReplace.Length)
+                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which strings to replace.");
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace(toBeReplaced[i], toReplace[i]);
