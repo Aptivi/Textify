@@ -116,7 +116,7 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer? Parse(string value)
+        public static SemVer Parse(string value)
         {
             if (HasRevision(value))
                 return ParseWithRev(value);
@@ -129,12 +129,10 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer? ParseWithoutRev(string value)
+        public static SemVer ParseWithoutRev(string value)
         {
             // Verify that the semantic versioning string is a valid SemVer string
             MatchCollection matches = normalValidator.Matches(value);
-            if (matches.Count == 0)
-                throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
 
             // Now, iterate through the matches to find the version parts
             foreach (Match match in matches)
@@ -150,7 +148,7 @@ namespace Textify.Versioning
                 string buildMetadata = matchGroups[5].Value;
                 return new SemVer(major, minor, patch, preReleaseInfo, buildMetadata);
             }
-            return null;
+            throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
         }
 
         /// <summary>
@@ -159,12 +157,10 @@ namespace Textify.Versioning
         /// <param name="value">Value that contains a SemVer 2.0 compliant string</param>
         /// <returns>A <see cref="SemVer"/> class instance containing version information.</returns>
         /// <exception cref="SemVerException"></exception>
-        public static SemVer? ParseWithRev(string value)
+        public static SemVer ParseWithRev(string value)
         {
             // Verify that the semantic versioning string is a valid SemVer string
             MatchCollection matches = revValidator.Matches(value);
-            if (matches.Count == 0)
-                throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
 
             // Now, iterate through the matches to find the version parts
             foreach (Match match in matches)
@@ -182,7 +178,7 @@ namespace Textify.Versioning
                 string buildMetadata = matchGroups[6].Value;
                 return new SemVer(major, minor, patch, rev, preReleaseInfo, buildMetadata);
             }
-            return null;
+            throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
         }
 
         /// <summary>
