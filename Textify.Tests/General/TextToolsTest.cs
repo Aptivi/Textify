@@ -460,6 +460,20 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests getting all indexes of a character
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAllIndexesOfChar()
+        {
+            int expected = 4;
+            string Source = "Nitrocid is awesome and is great!";
+            char Target = 'i';
+            int Indexes = Source.AllIndexesOf(Target).Count();
+            Indexes.ShouldBe(expected);
+        }
+
+        /// <summary>
         /// Tests checking if the string contains any of the target strings.
         /// </summary>
         [TestMethod]

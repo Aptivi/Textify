@@ -625,6 +625,28 @@ namespace Textify.General
         }
 
         /// <summary>
+        /// Get all indexes of a value in string
+        /// </summary>
+        /// <param name="target">Source string</param>
+        /// <param name="value">A value</param>
+        /// <returns>Indexes of strings</returns>
+        public static IEnumerable<int> AllIndexesOf(this string target, char value)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            int index = 0;
+            while (true)
+            {
+                index = target.IndexOf(value, index);
+                if (index == -1)
+                    break;
+                yield return index;
+                index++;
+            }
+        }
+
+        /// <summary>
         /// Formats the string
         /// </summary>
         /// <param name="Format">The string to format</param>
