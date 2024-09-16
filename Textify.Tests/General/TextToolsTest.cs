@@ -486,15 +486,39 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests checking if the string contains any of the target strings.
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestContainsAnyOfChars()
+        {
+            string TargetString = "Hello, Nitrocid users!";
+            TargetString.ContainsAnyOf(['N', 'B']).ShouldBeTrue();
+            TargetString.ContainsAnyOf(['B', 'y']).ShouldBeFalse();
+        }
+
+        /// <summary>
         /// Tests checking if the string contains all of the target strings.
         /// </summary>
         [TestMethod]
         [Description("Querying")]
         public void TestContainsAllOf()
         {
-            string TargetString = "Hello, Extensification users!";
-            TargetString.ContainsAllOf(["Extensification", "users"]).ShouldBeTrue();
+            string TargetString = "Hello, BassBoom users!";
+            TargetString.ContainsAllOf(["BassBoom", "users"]).ShouldBeTrue();
             TargetString.ContainsAllOf(["Awesome", "developers"]).ShouldBeFalse();
+        }
+
+        /// <summary>
+        /// Tests checking if the string contains all of the target strings.
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestContainsAllOfChars()
+        {
+            string TargetString = "Hello, BassBoom users!";
+            TargetString.ContainsAllOf(['B', 'a']).ShouldBeTrue();
+            TargetString.ContainsAllOf(['i', 'n']).ShouldBeFalse();
         }
 
         /// <summary>
@@ -509,6 +533,17 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests checking to see if the string starts with any of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestStartsWithAnyOfChar()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.StartsWithAnyOf(['d', 'o']).ShouldBeTrue();
+        }
+
+        /// <summary>
         /// Tests checking to see if the string starts with all of the values
         /// </summary>
         [TestMethod]
@@ -517,6 +552,17 @@ namespace Textify.Tests.General
         {
             string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
             TargetString.StartsWithAllOf(["dotnet", "dotnet-hostfxr"]).ShouldBeTrue();
+        }
+
+        /// <summary>
+        /// Tests checking to see if the string starts with all of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestStartsWithAllOfChar()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.StartsWithAllOf(['d']).ShouldBeTrue();
         }
 
         /// <summary>
@@ -531,6 +577,17 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests checking to see if the string ends with any of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestEndsWithAnyOfChar()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.EndsWithAnyOf(['5', '.', '0']).ShouldBeTrue();
+        }
+
+        /// <summary>
         /// Tests checking to see if the string ends with all of the values
         /// </summary>
         [TestMethod]
@@ -539,6 +596,17 @@ namespace Textify.Tests.General
         {
             string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
             TargetString.EndsWithAllOf(["5.0", "sdk-5.0"]).ShouldBeTrue();
+        }
+
+        /// <summary>
+        /// Tests checking to see if the string ends with all of the values
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestEndsWithAllOfChar()
+        {
+            string TargetString = "dotnet-hostfxr-3.1 dotnet-hostfxr-5.0 runtime-3.1 runtime-5.0 sdk-3.1 sdk-5.0";
+            TargetString.EndsWithAllOf(['0']).ShouldBeTrue();
         }
 
         /// <summary>

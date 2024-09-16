@@ -341,6 +341,117 @@ namespace Textify.General
         }
 
         /// <summary>
+        /// Checks to see if the string starts with any of the values
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="values">Values</param>
+        /// <returns>True if the string starts with any of the values specified in the array. Otherwise, false.</returns>
+        public static bool StartsWithAnyOf(this string target, char[] values)
+        {
+            if (target is null)
+                throw new TextifyException("The target may not be null");
+
+            bool started = false;
+            foreach (char value in values)
+                if (target.StartsWith($"{value}"))
+                    started = true;
+            return started;
+        }
+
+        /// <summary>
+        /// Checks to see if the string starts with all of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool StartsWithAllOf(this string source, char[] values)
+        {
+            if (source is null)
+                throw new TextifyException("The target may not be null");
+
+            List<char> done = [];
+            foreach (char Value in values)
+            {
+                if (source.StartsWith($"{Value}"))
+                    done.Add(Value);
+            }
+            return done.SequenceEqual(values);
+        }
+
+        /// <summary>
+        /// Checks to see if the string ends with any of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool EndsWithAnyOf(this string source, char[] values)
+        {
+            if (source is null)
+                throw new TextifyException("The target may not be null");
+            var Started = default(bool);
+            foreach (char Value in values)
+            {
+                if (source.EndsWith($"{Value}"))
+                    Started = true;
+            }
+            return Started;
+        }
+
+        /// <summary>
+        /// Checks to see if the string ends with all of the values
+        /// </summary>
+        /// <param name="source">Target string</param>
+        /// <param name="values">Values</param>
+        public static bool EndsWithAllOf(this string source, char[] values)
+        {
+            if (source is null)
+                throw new TextifyException("The target may not be null");
+
+            List<char> done = [];
+            foreach (char Value in values)
+            {
+                if (source.EndsWith($"{Value}"))
+                    done.Add(Value);
+            }
+            return done.SequenceEqual(values);
+        }
+
+        /// <summary>
+        /// Checks to see if the string contains any of the target strings.
+        /// </summary>
+        /// <param name="source">Source string</param>
+        /// <param name="targets">Target strings</param>
+        /// <returns>True if one of them is found; otherwise, false.</returns>
+        public static bool ContainsAnyOf(this string source, char[] targets)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            foreach (char target in targets)
+                if (source.Contains(target))
+                    return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Checks to see if the string contains all of the target strings.
+        /// </summary>
+        /// <param name="source">Source string</param>
+        /// <param name="targets">Target strings</param>
+        /// <returns>True if all of them are found; else, false.</returns>
+        public static bool ContainsAllOf(this string source, char[] targets)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            List<char> done = [];
+            foreach (char Target in targets)
+            {
+                if (source.Contains(Target))
+                    done.Add(Target);
+            }
+            return done.SequenceEqual(targets);
+        }
+
+        /// <summary>
         /// Replaces all the instances of strings with a string
         /// </summary>
         /// <param name="target">Target string</param>
