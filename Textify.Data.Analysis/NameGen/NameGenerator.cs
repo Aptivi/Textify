@@ -68,7 +68,7 @@ namespace Textify.Data.Analysis.NameGen
                     // Open the XML to stream
                     var content = archive.GetEntry(fileName).Open();
                     var read = await new StreamReader(content).ReadToEndAsync();
-                    Names.Add(genderType, read.SplitNewLines());
+                    Names.Add(genderType, read.SplitNewLines(false));
                 }
                 if (Surnames.Length == 0)
                 {
@@ -80,7 +80,7 @@ namespace Textify.Data.Analysis.NameGen
                     // Open the XML to stream
                     var content = archive.GetEntry(fileName).Open();
                     var read = await new StreamReader(content).ReadToEndAsync();
-                    Surnames = read.SplitNewLines();
+                    Surnames = read.SplitNewLines(false);
                 }
             }
             catch (Exception ex)
