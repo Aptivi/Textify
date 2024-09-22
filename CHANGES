@@ -1,11 +1,10 @@
-In this updated version, we've added several overloads of text tools, as well as improved the Unicode lookup performance!
+We've processed the name lists by sorting and uniq'ing them, capitalizing every single first letter for each name in the process.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added several overloads of text tools
-- `[*]` Improved Unicode lookup performance
+- `[*]` Improved the name lists
 
 Review the commit history if you want to get a deep insight about the changes.
 
