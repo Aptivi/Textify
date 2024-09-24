@@ -38,7 +38,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="../assets/WordsList/*.zip" />
-    <EmbeddedResource Include="../assets/UnicodeList/*.zip" />
+    <EmbeddedResource Include="../assets/UnicodeList/Processed/*.zip" />
     <EmbeddedResource Include="../assets/NamesList/Processed/*.zip" />
   </ItemGroup>
 
