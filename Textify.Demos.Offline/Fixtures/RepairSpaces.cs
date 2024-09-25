@@ -19,49 +19,50 @@
 
 using System;
 using System.Text;
+using Terminaux.Colors.Data;
+using Terminaux.Reader;
+using Terminaux.Writer.ConsoleWriters;
 using Textify.SpaceManager.Analysis;
 using Textify.SpaceManager.Conversion;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures
 {
-    public class RepairSpaces : IFixture
+    public static class RepairSpaces
     {
-        public string FixtureID => "RepairSpaces";
-        public void RunFixture()
+        public static void Test()
         {
             char nbsp = '\u00a0';
             string text = $"Textify{nbsp}Test";
 
             // Prompt for spaces
-            Console.Write("Enter a text containing non-breaking spaces: ");
-            string? input = Console.ReadLine();
+            string input = TermReader.Read("Enter a text containing non-breaking spaces: ");
             text = string.IsNullOrEmpty(input) ? text : input;
 
             // Analyze them
             var result = SpaceAnalysisTools.AnalyzeSpaces(text);
-            Console.WriteLine($"Amount of false spaces: {result.FalseSpaces.Length}");
+            TextWriterColor.Write($"Amount of false spaces: {result.FalseSpaces.Length}");
             foreach (var line in result.FalseSpaces)
-                Console.WriteLine($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}");
+                TextWriterColor.WriteColor($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}", ConsoleColors.Red);
             if (result.FalseSpaces.Length == 0)
-                Console.WriteLine("  - Your text is clean!");
+                TextWriterColor.WriteColor("  - Your text is clean!", ConsoleColors.Lime);
             else
             {
                 // Fix them
-                Console.WriteLine("\nFixing your text...");
+                TextWriterColor.Write("\nFixing your text...");
                 byte[] convertedBytes = SpaceConversionTools.ConvertSpaces(result);
                 string converted = Encoding.UTF8.GetString(convertedBytes);
-                Console.WriteLine("Fixed! Here's your new text:");
-                Console.WriteLine($"  - {converted}\n");
+                TextWriterColor.WriteColor("Fixed! Here's your new text:", ConsoleColors.Lime);
+                TextWriterColor.WriteColor($"  - {converted}\n", ConsoleColors.Yellow);
 
                 // Verify the fixed text
                 var verified = SpaceAnalysisTools.AnalyzeSpaces(converted);
-                Console.WriteLine($"Amount of false spaces: {verified.FalseSpaces.Length}");
+                TextWriterColor.Write($"Amount of false spaces: {verified.FalseSpaces.Length}");
                 foreach (var line in verified.FalseSpaces)
-                    Console.WriteLine($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}");
+                    TextWriterColor.WriteColor($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}", ConsoleColors.Red);
                 if (verified.FalseSpaces.Length == 0)
-                    Console.WriteLine("  - Your text is clean!");
+                    TextWriterColor.WriteColor("  - Your text is clean!", ConsoleColors.Lime);
                 else
-                    Console.WriteLine("  - Your text is still not clean.");
+                    TextWriterColor.WriteColor("  - Your text is still not clean.", ConsoleColors.Red);
             }
         }
     }

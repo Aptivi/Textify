@@ -17,25 +17,17 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
+using Terminaux.Writer.ConsoleWriters;
+using Textify.Data.Figlet;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures
 {
-    public class QueryUnicode : IFixture
+    public static class FigletPrint
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
+        public static void Test()
         {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
-
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
+            string figlet = FigletTools.RenderFiglet("Hello!", "ANSISH_1");
+            TextWriterColor.Write(figlet);
         }
     }
 }

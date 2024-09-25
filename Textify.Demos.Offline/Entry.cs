@@ -17,19 +17,30 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
+using CliTester.Instances;
+using CliTester.Tools;
 using Textify.Demos.Offline.Fixtures;
 
 namespace Textify.Demos.Offline
 {
     public class Entry
     {
-        static void Main(string[] args)
+        private static readonly Fixture[] fixtures =
+        [
+            new FixtureUnconditional(nameof(AnalyzeSpaces), "Analyzes the spaces", AnalyzeSpaces.Test),
+            new FixtureUnconditional(nameof(FigletPrint), "Prints the figlet text", FigletPrint.Test),
+            new FixtureUnconditional(nameof(FigletPrintWrap), "Prints the wrapped figlet text", FigletPrintWrap.Test),
+            new FixtureUnconditional(nameof(NameGenerator), "Generates 10 names from all types", NameGenerator.Test),
+            new FixtureUnconditional(nameof(QueryUnicode), "Queries a Unicode character and gets info", QueryUnicode.Test),
+            new FixtureUnconditional(nameof(RepairSpaces), "Repairs the spaces", RepairSpaces.Test),
+            new FixtureUnconditional(nameof(VersionInfo), "Parses SemVer", VersionInfo.Test),
+            new FixtureUnconditional(nameof(VersionInfoRev), "Parses SemVer with revision part support", VersionInfoRev.Test),
+            new FixtureUnconditional(nameof(WordGet), "Gets 10 words from both the common and the normal word lists", WordGet.Test),
+        ];
+
+        static void Main()
         {
-            // Get the fixture name from argument and run it
-            string chosenFixture = args.Length == 0 ? "AnalyzeSpaces" : args[0];
-            Console.WriteLine($"Fixture to be tested: {chosenFixture}\n");
-            FixtureManager.GetFixtureFromName(chosenFixture).RunFixture();
+            FixtureSelector.OpenFixtureSelector(fixtures);
         }
     }
 }

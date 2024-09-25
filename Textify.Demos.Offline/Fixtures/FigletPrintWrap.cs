@@ -17,11 +17,17 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Terminaux.Writer.ConsoleWriters;
+using Textify.Data.Figlet;
+
 namespace Textify.Demos.Offline.Fixtures
 {
-    internal interface IFixture
+    public static class FigletPrintWrap
     {
-        string FixtureID { get; }
-        void RunFixture();
+        public static void Test()
+        {
+            string figlet = FigletTools.RenderFiglet("Hello!", "speed", 20);
+            TextWriterColor.Write(figlet);
+        }
     }
 }

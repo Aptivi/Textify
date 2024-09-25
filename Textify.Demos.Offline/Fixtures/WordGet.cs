@@ -18,27 +18,30 @@
 //
 
 using System;
+using Terminaux.Colors.Data;
+using Terminaux.Writer.ConsoleWriters;
 using Textify.Data.Words;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures
 {
-    public class WordGet : IFixture
+    public static class WordGet
     {
-        public string FixtureID => "WordGet";
-        public void RunFixture()
+        public static void Test()
         {
             // Get 10 random words
             for (int i = 0; i < 10; i++)
             {
                 string word = WordManager.GetRandomWord();
-                Console.WriteLine($"Word {i + 1}: {word}");
+                TextWriterColor.Write($"Word {i + 1}: ", false);
+                TextWriterColor.WriteColor(word, ConsoleColors.Yellow);
             }
 
             // Get 10 random common words
             for (int i = 0; i < 10; i++)
             {
                 string word = WordManager.GetRandomWord(WordDataType.CommonWords);
-                Console.WriteLine($"Common word {i + 1}: {word}");
+                TextWriterColor.Write($"Common {i + 1}: ", false);
+                TextWriterColor.WriteColor(word, ConsoleColors.Yellow);
             }
         }
     }

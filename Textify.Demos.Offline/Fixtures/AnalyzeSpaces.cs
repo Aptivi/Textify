@@ -17,31 +17,31 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
+using Terminaux.Colors.Data;
+using Terminaux.Reader;
+using Terminaux.Writer.ConsoleWriters;
 using Textify.SpaceManager.Analysis;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures
 {
-    public class AnalyzeSpaces : IFixture
+    public static class AnalyzeSpaces
     {
-        public string FixtureID => "AnalyzeSpaces";
-        public void RunFixture()
+        public static void Test()
         {
             char nbsp = '\u00a0';
             string text = $"Textify{nbsp}Test";
 
             // Prompt for spaces
-            Console.Write("Enter a text containing non-breaking spaces: ");
-            string? input = Console.ReadLine();
+            string input = TermReader.Read("Enter a text containing non-breaking spaces: ");
             text = string.IsNullOrEmpty(input) ? text : input;
 
             // Analyze them
             var result = SpaceAnalysisTools.AnalyzeSpaces(text);
-            Console.WriteLine($"Amount of false spaces: {result.FalseSpaces.Length}");
+            TextWriterColor.Write($"Amount of false spaces: {result.FalseSpaces.Length}");
             foreach (var line in result.FalseSpaces)
-                Console.WriteLine($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}");
+                TextWriterColor.WriteColor($"  - There is a false space with char id {(int)line.Item1} - {line.Item2}", ConsoleColors.Red);
             if (result.FalseSpaces.Length == 0)
-                Console.WriteLine("  - Your text is clean!");
+                TextWriterColor.WriteColor("  - Your text is clean!", ConsoleColors.Lime);
         }
     }
 }

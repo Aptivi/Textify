@@ -14,4 +14,8 @@
     <PackageReference Remove="Microsoft.SourceLink.GitHub" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CliTester" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>

@@ -18,15 +18,16 @@
 //
 
 using System;
+using Terminaux.Colors.Data;
+using Terminaux.Writer.ConsoleWriters;
 using Textify.Data.NameGen;
 using NameGen = Textify.Data.NameGen.NameGenerator;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Demos.Offline.Fixtures
 {
-    public class NameGenerator : IFixture
+    public static class NameGenerator
     {
-        public string FixtureID => "NameGenerator";
-        public void RunFixture()
+        public static void Test()
         {
             string[] names = NameGen.GenerateNames(10);
             string[] firstNames = NameGen.GenerateFirstNames(10);
@@ -39,16 +40,24 @@ namespace Textify.Demos.Offline.Fixtures.Cases
             string[] allNames = NameGen.GetAllFirstNames();
             string[] allSurnames = NameGen.GetAllLastNames();
 
-            Console.WriteLine($"10 names: {string.Join(", ", names)}");
-            Console.WriteLine($"10 first names: {string.Join(", ", firstNames)}");
-            Console.WriteLine($"10 first female names: {string.Join(", ", firstFemaleNames)}");
-            Console.WriteLine($"10 first male names: {string.Join(", ", firstMaleNames)}");
-            Console.WriteLine($"10 first implicit female names: {string.Join(", ", firstFemaleImplicitNames)}");
-            Console.WriteLine($"10 first implicit male names: {string.Join(", ", firstMaleImplicitNames)}");
-            Console.WriteLine($"10 first natural names: {string.Join(", ", firstNaturalNames)}");
-            Console.WriteLine($"10 last names: {string.Join(", ", surnames)}");
-            Console.WriteLine();
-            Console.WriteLine($"...out of {allNames.Length} names, {allSurnames.Length} surnames");
+            TextWriterColor.Write("10 names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", names), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first female names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstFemaleNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first male names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstMaleNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first implicit female names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstFemaleImplicitNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first implicit male names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstMaleImplicitNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 first natural names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", firstNaturalNames), ConsoleColors.Yellow);
+            TextWriterColor.Write("10 last names: ", false);
+            TextWriterColor.WriteColor(string.Join(", ", surnames), ConsoleColors.Yellow);
+            TextWriterRaw.Write();
+            TextWriterColor.WriteColor($"...out of {allNames.Length} names, {allSurnames.Length} surnames", ConsoleColors.Lime);
         }
     }
 }
