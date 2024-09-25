@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Enum ProfanitySearchType | Textify API - Aptivi </title>
+      <title>Class StringPool | Textify API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Enum ProfanitySearchType | Textify API - Aptivi ">
+      <meta name="title" content="Class StringPool | Textify API - Aptivi ">
     
-    <meta name="description" content="Profanity search type">
+    <meta name="description" content="An object pool for merging references to identical strings.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,53 +76,82 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Textify.Data.Analysis.Words.Profanity.ProfanitySearchType">
+            <article class="content wrap" id="_content" data-uid="Textify.Data.Figlet.Utilities.StringPool">
 
 
 
-
-  <h1 id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType" data-uid="Textify.Data.Analysis.Words.Profanity.ProfanitySearchType" class="text-break">Enum ProfanitySearchType</h1>
-  <div class="markdown level0 summary"><p>Profanity search type</p>
+  <h1 id="Textify_Data_Figlet_Utilities_StringPool" data-uid="Textify.Data.Figlet.Utilities.StringPool" class="text-break">Class StringPool</h1>
+  <div class="markdown level0 summary"><p>An object pool for merging references to identical strings.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Analysis.html">Analysis</a>.<a class="xref" href="Textify.Data.Analysis.Words.html">Words</a>.<a class="xref" href="Textify.Data.Analysis.Words.Profanity.html">Profanity</a></h6>
-  <h6><strong>Assembly</strong>: Textify.Data.Analysis.dll</h6>
-  <h5 id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum ProfanitySearchType</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">StringPool</span></div>
   </div>
-  <h3 id="fields">Fields
+  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Figlet.html">Figlet</a>.<a class="xref" href="Textify.Data.Figlet.Utilities.html">Utilities</a></h6>
+  <h6><strong>Assembly</strong>: Textify.Data.dll</h6>
+  <h5 id="Textify_Data_Figlet_Utilities_StringPool_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class StringPool</code></pre>
+  </div>
+  <h5 id="Textify_Data_Figlet_Utilities_StringPool_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Unlike string interning the pool may be released and garbage collected.</p>
+</div>
+  <h3 id="methods">Methods
 </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Figlet_Utilities_StringPool_Pool_System_String_.md&amp;value=---%0Auid%3A%20Textify.Data.Figlet.Utilities.StringPool.Pool(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data/Figlet/Utilities/StringPool.cs/#L41">View Source</a>
+  </span>
+  <a id="Textify_Data_Figlet_Utilities_StringPool_Pool_" data-uid="Textify.Data.Figlet.Utilities.StringPool.Pool*"></a>
+  <h4 id="Textify_Data_Figlet_Utilities_StringPool_Pool_System_String_" data-uid="Textify.Data.Figlet.Utilities.StringPool.Pool(System.String)">Pool(string)</h4>
+  <div class="markdown level1 summary"><p>Returns a reference to a string equal to <code class="paramref">s</code> from the pool.
+If no such string exists within the pool, it is added, and <code class="paramref">s</code> is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Pool(string s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
-    <thead>
-    </thead></thead><tbody>
+    </thead>
+    <tbody>
       <tr>
-        <td id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType_Mitigated">Mitigated</td>
-        <td><p>Mitigated partial searching. May not find swearing that has its characters separated by whitespace.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType_Partial">Partial</td>
-        <td><p>Partial searching. May cause legitimate words to be found, such as Scunthorpe.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType_Shallow">Shallow</td>
-        <td><p>Shallow searching. May not find swearing embedded in two or more words and/or separated by whitespace.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_Profanity_ProfanitySearchType_Thorough">Thorough</td>
-        <td><p>Thorough searching. May not find swearing embedded in two or more words.</p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">s</span></td>
+        <td><p>The string to pool.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A reference to the pooled string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
 </article>
           </div>
 
@@ -131,10 +160,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Analysis_Words_Profanity_ProfanitySearchType.md&amp;value=---%0Auid%3A%20Textify.Data.Analysis.Words.Profanity.ProfanitySearchType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Figlet_Utilities_StringPool.md&amp;value=---%0Auid%3A%20Textify.Data.Figlet.Utilities.StringPool%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data.Analysis/Words/Profanity/ProfanitySearchType.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data/Figlet/Utilities/StringPool.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Enum WordDataType | Textify API - Aptivi </title>
+      <title>Class FigletException | Textify API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Enum WordDataType | Textify API - Aptivi ">
+      <meta name="title" content="Class FigletException | Textify API - Aptivi ">
     
-    <meta name="description" content="Word data type to select what kind of words do we need to fetch">
+    <meta name="description" content="Type for exceptions raised by Figlet.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,68 +76,63 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Textify.Data.Analysis.Words.WordDataType">
+            <article class="content wrap" id="_content" data-uid="Textify.Data.Figlet.FigletException">
 
 
 
-
-  <h1 id="Textify_Data_Analysis_Words_WordDataType" data-uid="Textify.Data.Analysis.Words.WordDataType" class="text-break">Enum WordDataType</h1>
-  <div class="markdown level0 summary"><p>Word data type to select what kind of words do we need to fetch</p>
+  <h1 id="Textify_Data_Figlet_FigletException" data-uid="Textify.Data.Figlet.FigletException" class="text-break">Class FigletException</h1>
+  <div class="markdown level0 summary"><p>Type for exceptions raised by Figlet.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Analysis.html">Analysis</a>.<a class="xref" href="Textify.Data.Analysis.Words.html">Words</a></h6>
-  <h6><strong>Assembly</strong>: Textify.Data.Analysis.dll</h6>
-  <h5 id="Textify_Data_Analysis_Words_WordDataType_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum WordDataType</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
+    <div class="level2"><span class="xref">FigletException</span></div>
   </div>
-  <h3 id="fields">Fields
+  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Figlet.html">Figlet</a></h6>
+  <h6><strong>Assembly</strong>: Textify.Data.dll</h6>
+  <h5 id="Textify_Data_Figlet_FigletException_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class FigletException : Exception</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
 </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Figlet_FigletException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Textify.Data.Figlet.FigletException.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data/Figlet/FigletException.cs/#L33">View Source</a>
+  </span>
+  <a id="Textify_Data_Figlet_FigletException__ctor_" data-uid="Textify.Data.Figlet.FigletException.#ctor*"></a>
+  <h4 id="Textify_Data_Figlet_FigletException__ctor_System_String_" data-uid="Textify.Data.Figlet.FigletException.#ctor(System.String)">FigletException(string)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new Figlet exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FigletException(string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
-    <thead>
-    </thead></thead><tbody>
+    </thead>
+    <tbody>
       <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_BadWords">BadWords</td>
-        <td><p>Offensive words list (18+) for bad word filtering</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_CommonWords">CommonWords</td>
-        <td><p>Common word list</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_CommonWordsDirty">CommonWordsDirty</td>
-        <td><p>Common word list, including offensive words (18+)</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_Words">Words</td>
-        <td><p>Word list</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_WordsDirty">WordsDirty</td>
-        <td><p>Word list, including offensive words (18+)</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_WordsDirtyFull">WordsDirtyFull</td>
-        <td><p>Word list, including offensive words (18+) and alphanumeric characters</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Textify_Data_Analysis_Words_WordDataType_WordsFull">WordsFull</td>
-        <td><p>Word list, including alphanumeric characters</p>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>A message explaining the exception.</p>
 </td>
       </tr>
     </tbody>
   </table>
+
 </article>
           </div>
 
@@ -146,10 +141,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Analysis_Words_WordDataType.md&amp;value=---%0Auid%3A%20Textify.Data.Analysis.Words.WordDataType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Figlet_FigletException.md&amp;value=---%0Auid%3A%20Textify.Data.Figlet.FigletException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data.Analysis/Words/WordDataType.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Textify/blob/main/Textify.Data/Figlet/FigletException.cs/#L27" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

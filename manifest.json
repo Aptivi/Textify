@@ -45,150 +45,250 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.NameGen.NameGenderType.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.FigletException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.NameGen.NameGenderType.html"
+          "relative_path": "api/Textify.Data.Figlet.FigletException.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.NameGen.NameGenerator.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.FigletFontParser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.NameGen.NameGenerator.html"
+          "relative_path": "api/Textify.Data.Figlet.FigletFontParser.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.NameGen.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.FigletFonts.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.NameGen.html"
+          "relative_path": "api/Textify.Data.Figlet.FigletFonts.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.Namealias.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.FigletTools.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.Namealias.html"
+          "relative_path": "api/Textify.Data.Figlet.FigletTools.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeCharInfo.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletFont.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeCharInfo.html"
+          "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletFont.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQuery.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletTextDirection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQuery.html"
+          "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletTextDirection.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQueryType.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.Utilities.Lines.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.UnicodeQueryType.html"
+          "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Unicode.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.Utilities.StringPool.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Unicode.html"
+          "relative_path": "api/Textify.Data.Figlet.Utilities.StringPool.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityManager.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.Utilities.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityManager.html"
+          "relative_path": "api/Textify.Data.Figlet.Utilities.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityOccurrenceInfo.yml",
+      "source_relative_path": "api/Textify.Data.Figlet.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanityOccurrenceInfo.html"
+          "relative_path": "api/Textify.Data.Figlet.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanitySearchType.yml",
+      "source_relative_path": "api/Textify.Data.NameGen.NameGenderType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.ProfanitySearchType.html"
+          "relative_path": "api/Textify.Data.NameGen.NameGenderType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.Profanity.yml",
+      "source_relative_path": "api/Textify.Data.NameGen.NameGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.Profanity.html"
+          "relative_path": "api/Textify.Data.NameGen.NameGenerator.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.WordDataType.yml",
+      "source_relative_path": "api/Textify.Data.NameGen.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.WordDataType.html"
+          "relative_path": "api/Textify.Data.NameGen.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.WordManager.yml",
+      "source_relative_path": "api/Textify.Data.Unicode.Namealias.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.WordManager.html"
+          "relative_path": "api/Textify.Data.Unicode.Namealias.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Data.Analysis.Words.yml",
+      "source_relative_path": "api/Textify.Data.Unicode.UnicodeCharInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Textify.Data.Analysis.Words.html"
+          "relative_path": "api/Textify.Data.Unicode.UnicodeCharInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.UnicodeQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.UnicodeQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.UnicodeQueryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.UnicodeQueryType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.Profanity.ProfanityManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.Profanity.ProfanityManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.Profanity.ProfanityOccurrenceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.Profanity.ProfanityOccurrenceInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.Profanity.ProfanitySearchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.Profanity.ProfanitySearchType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.Profanity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.Profanity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.WordDataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.WordDataType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.WordManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.WordManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Words.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Words.html"
         }
       },
       "version": ""
@@ -275,26 +375,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Json.JsonTools.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Json.JsonTools.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Textify.Json.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Textify.Json.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.yml",
       "output": {
         ".html": {
@@ -339,6 +419,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Textify.SpaceManager.Conversion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Tools.JsonTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Tools.JsonTools.html"
         }
       },
       "version": ""
