@@ -20,8 +20,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using Textify.Data.Figlet.Utilities;
 using Textify.Data.Figlet.Utilities.Lines;
 using Textify.Data.Tools;
