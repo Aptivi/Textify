@@ -21,7 +21,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 using System.Collections.Generic;
 using System.Linq;
-using Textify.Data.Analysis.Words;
+using Textify.Data.Words;
 
 namespace Textify.Tests.Words
 {

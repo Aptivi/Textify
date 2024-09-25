@@ -19,7 +19,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
-using Textify.Data.Analysis.Unicode;
+using Textify.Data.Unicode;
 
 namespace Textify.Tests.Unicode
 {

@@ -6,9 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Textify.Figlet\Textify.Figlet.csproj" />
     <ProjectReference Include="..\Textify\Textify.csproj" />
-    <ProjectReference Include="..\Textify.Data.Analysis\Textify.Data.Analysis.csproj" />
+    <ProjectReference Include="..\Textify.Data\Textify.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -26,16 +26,30 @@ namespace Textify.Data.Tools
     {
         private static readonly string[] resourceNames = typeof(DataStreamTools).Assembly.GetManifestResourceNames();
 
-        internal static byte[] GetDataFrom(string type, string extension = "zip")
+        internal static bool HasResource(string type, string extension = "zip")
         {
             // Check the resource
             var asm = typeof(DataStreamTools).Assembly;
             string resourceName = $"{asm.GetName().Name}.{type}.{extension}";
-            if (!resourceNames.Contains(resourceName))
-                throw new InvalidDataException($"Resource {resourceName} not found.");
+            return resourceNames.Contains(resourceName);
+        }
 
+        internal static Stream GetStreamFrom(string type, string extension = "zip")
+        {
+            // Check the resource
+            var asm = typeof(DataStreamTools).Assembly;
+            string resourceName = $"{asm.GetName().Name}.{type}.{extension}";
+            if (!HasResource(type, extension))
+                throw new InvalidDataException($"Resource type {type} with extension {extension} not found [{resourceName}]");
+
+            // Return the stream
+            return asm.GetManifestResourceStream(resourceName);
+        }
+
+        internal static byte[] GetDataFrom(string type, string extension = "zip")
+        {
             // Now, use the stream to read the resource and return it
-            using var stream = asm.GetManifestResourceStream(resourceName);
+            using var stream = GetStreamFrom(type, extension);
             byte[] bytes = new byte[stream.Length];
             stream.Read(bytes, 0, (int)stream.Length);
             return bytes;

@@ -17,25 +17,23 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
+using System.Collections.Generic;
+using Textify.Tools;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Data.Tools
 {
-    public class QueryUnicode : IFixture
+    internal static class DataTools
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
+        internal static Dictionary<string, byte[]> dataStreams = [];
 
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
+        internal static byte[] GetDataFrom(string dataName)
+        {
+            // Check the data if it exists
+            if (!dataStreams.TryGetValue(dataName, out byte[] data))
+                throw new TextifyException($"Data {dataName} is not initialized yet. Ensure that you've called Initialize() from DataInitializer and try again.");
+
+            // Now, get the data
+            return data;
         }
     }
 }

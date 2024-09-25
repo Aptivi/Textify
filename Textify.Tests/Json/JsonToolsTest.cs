@@ -20,7 +20,7 @@
 using Newtonsoft.Json.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
-using Textify.Json;
+using Textify.Tools;
 
 namespace Textify.Tests.Json
 {

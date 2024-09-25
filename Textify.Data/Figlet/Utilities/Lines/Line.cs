@@ -17,25 +17,27 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
+using System.Diagnostics;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Data.Figlet.Utilities.Lines
 {
-    public class QueryUnicode : IFixture
+    [DebuggerDisplay("{Content}")]
+    internal readonly struct Line
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
+        public string Content { get; }
+        public byte SpaceBefore { get; }
+        public byte SpaceAfter { get; }
 
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
+        public char FrontChar =>
+            Content.Length == SpaceBefore ? ' ' : Content[SpaceBefore];
+        public char BackChar =>
+            Content.Length == SpaceAfter ? ' ' : Content[Content.Length - SpaceAfter - 1];
+
+        public Line(string content, byte spaceBefore, byte spaceAfter)
+        {
+            Content = content;
+            SpaceBefore = spaceBefore;
+            SpaceAfter = spaceAfter;
         }
     }
 }

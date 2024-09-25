@@ -17,25 +17,20 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
-
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Data.Figlet.Utilities.Lines
 {
-    public class QueryUnicode : IFixture
+    /// <summary>
+    /// Enumeration of possible text directions.
+    /// </summary>
+    public enum FigletTextDirection
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
-
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
-        }
+        /// <summary>
+        /// Text flows from the left to the right.
+        /// </summary>
+        LeftToRight = 0,
+        /// <summary>
+        /// Text flows from the right to the left.
+        /// </summary>
+        RightToLeft = 1
     }
 }

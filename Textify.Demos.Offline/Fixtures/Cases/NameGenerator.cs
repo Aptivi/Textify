@@ -18,8 +18,8 @@
 //
 
 using System;
-using Textify.Data.Analysis.NameGen;
-using NameGen = Textify.Data.Analysis.NameGen.NameGenerator;
+using Textify.Data.NameGen;
+using NameGen = Textify.Data.NameGen.NameGenerator;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {

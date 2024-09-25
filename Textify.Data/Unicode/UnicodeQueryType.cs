@@ -17,25 +17,24 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
-
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Data.Unicode
 {
-    public class QueryUnicode : IFixture
+    /// <summary>
+    /// Unicode character query type
+    /// </summary>
+    public enum UnicodeQueryType
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
-
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
-        }
+        /// <summary>
+        /// Simple Unicode characters without the Unihan characters
+        /// </summary>
+        Simple,
+        /// <summary>
+        /// Unihan characters
+        /// </summary>
+        Unihan,
+        /// <summary>
+        /// All characters
+        /// </summary>
+        Full
     }
 }

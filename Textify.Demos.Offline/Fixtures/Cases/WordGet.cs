@@ -18,7 +18,7 @@
 //
 
 using System;
-using Textify.Data.Analysis.Words;
+using Textify.Data.Words;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {

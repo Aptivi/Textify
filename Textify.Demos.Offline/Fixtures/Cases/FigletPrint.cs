@@ -18,7 +18,7 @@
 //
 
 using System;
-using Textify.Figlet;
+using Textify.Data.Figlet;
 
 namespace Textify.Demos.Offline.Fixtures.Cases
 {

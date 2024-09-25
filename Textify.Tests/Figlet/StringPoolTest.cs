@@ -17,25 +17,29 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shouldly;
+using Textify.Data.Figlet.Utilities;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Tests.Figlet
 {
-    public class QueryUnicode : IFixture
+    public class StringPoolTest
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
+        [TestMethod]
+        public void PoolsReferences()
         {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
+            var pool = new StringPool();
 
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
+            var s1 = "s";
+            var s2 = "S".ToLower();
+
+            Assert.AreNotSame(s1, s2);
+            s2.ShouldBe(s1);
+
+            Assert.AreSame(s1, pool.Pool(s1));
+            Assert.AreSame(s1, pool.Pool(s1));
+            Assert.AreSame(s1, pool.Pool(s2));
+            Assert.AreSame(s1, pool.Pool(s2));
         }
     }
 }

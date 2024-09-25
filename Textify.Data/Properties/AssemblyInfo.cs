@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2024  Aptivi
 //
 // This file is part of Textify
@@ -17,25 +17,6 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using System;
-using Textify.Data.Unicode;
+using System.Runtime.CompilerServices;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
-{
-    public class QueryUnicode : IFixture
-    {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
-
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
-        }
-    }
-}
+[assembly: InternalsVisibleTo("Textify.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100812e5231186da64504a543d5306da254e9062027fdaee10f569d93ecc1debc91770d1a077b762aea3ced57c09d9f033f9991960429980b625908628c80785a67a3b65bbb410c7623a0d7bbc1a9770b978358941714b5e2a806e5aa8fa58bb505f859be5fc3ebcce5b2c5d4c0820460c9d3e23cf66f3c00de5e0d154fec6a89b3")]

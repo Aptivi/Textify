@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2024  Aptivi
 //
 // This file is part of Textify
@@ -18,24 +18,20 @@
 //
 
 using System;
-using Textify.Data.Unicode;
 
-namespace Textify.Demos.Offline.Fixtures.Cases
+namespace Textify.Data.Figlet
 {
-    public class QueryUnicode : IFixture
+    /// <summary>
+    /// Type for exceptions raised by Figlet.
+    /// </summary>
+    public sealed class FigletException : Exception
     {
-        public string FixtureID => "QueryUnicode";
-        public void RunFixture()
-        {
-            // Prompt for a character
-            Console.Write("Enter a character: ");
-            char character = Console.ReadKey(true).KeyChar;
-            Console.WriteLine();
-
-            // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
-            Console.WriteLine($"Na (current): {charInstance.Na}");
-            Console.WriteLine($"Na1 (Unicode v1): {charInstance.Na1}");
-        }
+        /// <summary>
+        /// Constructs a new Figlet exception.
+        /// </summary>
+        /// <param name="message">A message explaining the exception.</param>
+        public FigletException(string message) :
+            base(message)
+        { }
     }
 }
