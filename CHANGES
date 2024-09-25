@@ -1,10 +1,11 @@
-We've processed the word lists by sorting and uniq'ing them.
+We've managed to reach the second major version by doing a huge restructure that caused us to delete three libraries to clean things up!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Improved word lists
+- `[*]` Merged `Textify.Data.Analysis` to `Textify.Data`
+- `[*]` Merged `Textify.Json` and `Textify.Figlet` to `Textify`
 
 Review the commit history if you want to get a deep insight about the changes.
 
