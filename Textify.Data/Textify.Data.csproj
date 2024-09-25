@@ -8,8 +8,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Description>
       A collection of tools that provide you text tools for your C# and Visual Basic applications.
-      This package provides the necessary data for Unicode, Words, and Names.
-      This package is installed automatically when installing Textify.Offline.Data.Analysis, so you don't need to install this package manually.
+      This package provides the necessary data for Unicode, Words, Figlet, and Names. You can use this if you need to use extra features mentioned.
     </Description>
     <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
