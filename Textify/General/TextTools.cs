@@ -1596,5 +1596,39 @@ namespace Textify.General
             }
             return widthType;
         }
+
+        /// <summary>
+        /// Checks whether the strings equal (case-insensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-insensitive)</param>
+        /// <returns>True if both strings equal; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool EqualsNoCase(this string source, string target, StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (comparison != StringComparison.CurrentCultureIgnoreCase &&
+                comparison != StringComparison.InvariantCultureIgnoreCase &&
+                comparison != StringComparison.OrdinalIgnoreCase)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+            return string.Equals(source, target, comparison);
+        }
+
+        /// <summary>
+        /// Checks whether the strings equal (case-sensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-sensitive)</param>
+        /// <returns>True if both strings equal; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool EqualsCase(this string source, string target, StringComparison comparison = StringComparison.Ordinal)
+        {
+            if (comparison != StringComparison.CurrentCulture &&
+                comparison != StringComparison.InvariantCulture &&
+                comparison != StringComparison.Ordinal)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+            return string.Equals(source, target, comparison);
+        }
     }
 }

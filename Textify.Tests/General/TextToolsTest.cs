@@ -1394,6 +1394,36 @@ namespace Textify.Tests.General
             string result = str.ReadNullTerminatedString(offset);
             result.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests comparing strings (case-insensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "HELLO", true)]
+        [DataRow("Hello", "Hello", true)]
+        [DataRow("", "", true)]
+        [DataRow(null, null, true)]
+        [Description("Querying")]
+        public void TestEqualsNoCase(string source, string target, bool expected)
+        {
+            bool result = source.EqualsNoCase(target);
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests comparing strings (case-sensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "HELLO", false)]
+        [DataRow("Hello", "Hello", true)]
+        [DataRow("", "", true)]
+        [DataRow(null, null, true)]
+        [Description("Querying")]
+        public void TestEqualsCase(string source, string target, bool expected)
+        {
+            bool result = source.EqualsCase(target);
+            result.ShouldBe(expected);
+        }
     }
 
 }
