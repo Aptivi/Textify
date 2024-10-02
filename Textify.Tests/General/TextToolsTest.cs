@@ -816,6 +816,32 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests splitting a string with double quotes enclosed
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesWithDot()
+        {
+            string TargetString = "First.\"Second.Third\".Fourth";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotes('.');
+            TargetArray.Length.ShouldBe(3);
+            TargetArray[1].ShouldBe("Second.Third");
+        }
+
+        /// <summary>
+        /// Tests splitting a string with double quotes enclosed without releasing them
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSplitEncloseDoubleQuotesNoReleaseWithDot()
+        {
+            string TargetString = "First.\"Second.Third\".Fourth";
+            var TargetArray = TargetString.SplitEncloseDoubleQuotesNoRelease('.');
+            TargetArray.Length.ShouldBe(3);
+            TargetArray[1].ShouldBe("\"Second.Third\"");
+        }
+
+        /// <summary>
         /// Tests splitting a string with double quotes enclosed (quotes inside quotes)
         /// </summary>
         [TestMethod]

@@ -60,10 +60,68 @@ namespace Textify.General
                 .ToArray();
 
         /// <summary>
+        /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotes(this string target, char[]? partialQuoteSplitChars = null) =>
+            target.SplitEncloseDoubleQuotesNoRelease(partialQuoteSplitChars)
+                .Select((s) => s.ReleaseDoubleQuotes())
+                .ToArray();
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="match">Character to match</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotes(this string target, char match = ' ', char[]? partialQuoteSplitChars = null) =>
+            target.SplitEncloseDoubleQuotesNoRelease(match, partialQuoteSplitChars)
+                .Select((s) => s.ReleaseDoubleQuotes())
+                .ToArray();
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="condition">Condition for matching</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotes(this string target, Func<char, bool> condition, char[]? partialQuoteSplitChars = null) =>
+            target.SplitEncloseDoubleQuotesNoRelease(condition, partialQuoteSplitChars)
+                .Select((s) => s.ReleaseDoubleQuotes())
+                .ToArray();
+
+        /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula without releasing double quotes
         /// </summary>
         /// <param name="target">Target string</param>
-        public static string[] SplitEncloseDoubleQuotesNoRelease(this string target)
+        public static string[] SplitEncloseDoubleQuotesNoRelease(this string target) =>
+            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, CharManager.GetAllWhitespaceChars());
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula without releasing double quotes
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, char[]? partialQuoteSplitChars = null) =>
+            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by a specific character using regular expression formula without releasing double quotes
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="match">Character to match</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, char match = ' ', char[]? partialQuoteSplitChars = null) =>
+            SplitEncloseDoubleQuotesNoRelease(target, match.Equals, partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
+
+        /// <summary>
+        /// Splits the string enclosed in double quotes delimited by a condition descriptor using regular expression formula without releasing double quotes
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="condition">Condition for matching</param>
+        /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
+        public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, Func<char, bool> condition, char[]? partialQuoteSplitChars = null)
         {
             if (target is null)
                 throw new TextifyException("The target may not be null");
@@ -78,7 +136,7 @@ namespace Textify.General
             {
                 // Add a character
                 char character = target[i];
-                if (char.IsWhiteSpace(character) && !inEscape && !inQuote)
+                if (condition(character) && !inEscape && !inQuote)
                 {
                     // Ignore all empty strings
                     if (builder.Length > 0)
@@ -122,7 +180,7 @@ namespace Textify.General
                     int finalQuoteIdx = final.LastIndexOf(quoteChar);
                     string firstPart = final.Substring(0, finalQuoteIdx);
                     string secondPart = final.Substring(finalQuoteIdx);
-                    var splitFinal = secondPart.Split(CharManager.GetAllWhitespaceChars());
+                    var splitFinal = secondPart.Split(partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
                     splitFinal[0] = firstPart + splitFinal[0];
                     matchesStr.AddRange(splitFinal);
                 }
