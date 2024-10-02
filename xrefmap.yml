@@ -4362,6 +4362,33 @@ references:
   fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotes(String)
   nameWithType: TextTools.SplitEncloseDoubleQuotes(string)
   nameWithType.vb: TextTools.SplitEncloseDoubleQuotes(String)
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Char,System.Char[])
+  name: SplitEncloseDoubleQuotes(string, char, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotes_System_String_System_Char_System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Char,System.Char[])
+  name.vb: SplitEncloseDoubleQuotes(String, Char, Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotes(string, char, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotes(String, Char, Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotes(string, char, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotes(String, Char, Char())
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Char[])
+  name: SplitEncloseDoubleQuotes(string, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotes_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Char[])
+  name.vb: SplitEncloseDoubleQuotes(String, Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotes(string, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotes(String, Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotes(string, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotes(String, Char())
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Func{System.Char,System.Boolean},System.Char[])
+  name: SplitEncloseDoubleQuotes(string, Func<char, bool>, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotes_System_String_System_Func_System_Char_System_Boolean__System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotes(System.String,System.Func{System.Char,System.Boolean},System.Char[])
+  name.vb: SplitEncloseDoubleQuotes(String, Func(Of Char, Boolean), Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotes(string, System.Func<char, bool>, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotes(String, System.Func(Of Char, Boolean), Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotes(string, Func<char, bool>, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotes(String, Func(Of Char, Boolean), Char())
 - uid: Textify.General.TextTools.SplitEncloseDoubleQuotes*
   name: SplitEncloseDoubleQuotes
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotes_
@@ -4378,6 +4405,33 @@ references:
   fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(String)
   nameWithType: TextTools.SplitEncloseDoubleQuotesNoRelease(string)
   nameWithType.vb: TextTools.SplitEncloseDoubleQuotesNoRelease(String)
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Char,System.Char[])
+  name: SplitEncloseDoubleQuotesNoRelease(string, char, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotesNoRelease_System_String_System_Char_System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Char,System.Char[])
+  name.vb: SplitEncloseDoubleQuotesNoRelease(String, Char, Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(string, char, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(String, Char, Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotesNoRelease(string, char, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotesNoRelease(String, Char, Char())
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Char[])
+  name: SplitEncloseDoubleQuotesNoRelease(string, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotesNoRelease_System_String_System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Char[])
+  name.vb: SplitEncloseDoubleQuotesNoRelease(String, Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(string, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(String, Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotesNoRelease(string, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotesNoRelease(String, Char())
+- uid: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Func{System.Char,System.Boolean},System.Char[])
+  name: SplitEncloseDoubleQuotesNoRelease(string, Func<char, bool>, char[]?)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotesNoRelease_System_String_System_Func_System_Char_System_Boolean__System_Char___
+  commentId: M:Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(System.String,System.Func{System.Char,System.Boolean},System.Char[])
+  name.vb: SplitEncloseDoubleQuotesNoRelease(String, Func(Of Char, Boolean), Char())
+  fullName: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(string, System.Func<char, bool>, char[]?)
+  fullName.vb: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease(String, System.Func(Of Char, Boolean), Char())
+  nameWithType: TextTools.SplitEncloseDoubleQuotesNoRelease(string, Func<char, bool>, char[]?)
+  nameWithType.vb: TextTools.SplitEncloseDoubleQuotesNoRelease(String, Func(Of Char, Boolean), Char())
 - uid: Textify.General.TextTools.SplitEncloseDoubleQuotesNoRelease*
   name: SplitEncloseDoubleQuotesNoRelease
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_SplitEncloseDoubleQuotesNoRelease_
