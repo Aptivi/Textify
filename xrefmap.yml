@@ -3822,6 +3822,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.EndsWithAnyOf
   nameWithType: TextTools.EndsWithAnyOf
+- uid: Textify.General.TextTools.EqualsCase(System.String,System.String,System.StringComparison)
+  name: EqualsCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EqualsCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.EqualsCase(System.String,System.String,System.StringComparison)
+  name.vb: EqualsCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.EqualsCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.EqualsCase(String, String, System.StringComparison)
+  nameWithType: TextTools.EqualsCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.EqualsCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.EqualsCase*
+  name: EqualsCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EqualsCase_
+  commentId: Overload:Textify.General.TextTools.EqualsCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EqualsCase
+  nameWithType: TextTools.EqualsCase
+- uid: Textify.General.TextTools.EqualsNoCase(System.String,System.String,System.StringComparison)
+  name: EqualsNoCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EqualsNoCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.EqualsNoCase(System.String,System.String,System.StringComparison)
+  name.vb: EqualsNoCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.EqualsNoCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.EqualsNoCase(String, String, System.StringComparison)
+  nameWithType: TextTools.EqualsNoCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.EqualsNoCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.EqualsNoCase*
+  name: EqualsNoCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EqualsNoCase_
+  commentId: Overload:Textify.General.TextTools.EqualsNoCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EqualsNoCase
+  nameWithType: TextTools.EqualsNoCase
 - uid: Textify.General.TextTools.Escape(System.String)
   name: Escape(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_Escape_System_String_
