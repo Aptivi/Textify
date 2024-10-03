@@ -3772,6 +3772,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ContainsAnyOf
   nameWithType: TextTools.ContainsAnyOf
+- uid: Textify.General.TextTools.ContainsWithNoCase(System.String,System.String)
+  name: ContainsWithNoCase(string, string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsWithNoCase_System_String_System_String_
+  commentId: M:Textify.General.TextTools.ContainsWithNoCase(System.String,System.String)
+  name.vb: ContainsWithNoCase(String, String)
+  fullName: Textify.General.TextTools.ContainsWithNoCase(string, string)
+  fullName.vb: Textify.General.TextTools.ContainsWithNoCase(String, String)
+  nameWithType: TextTools.ContainsWithNoCase(string, string)
+  nameWithType.vb: TextTools.ContainsWithNoCase(String, String)
+- uid: Textify.General.TextTools.ContainsWithNoCase*
+  name: ContainsWithNoCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ContainsWithNoCase_
+  commentId: Overload:Textify.General.TextTools.ContainsWithNoCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ContainsWithNoCase
+  nameWithType: TextTools.ContainsWithNoCase
 - uid: Textify.General.TextTools.EndsWithAllOf(System.String,System.Char[])
   name: EndsWithAllOf(string, char[])
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithAllOf_System_String_System_Char___
@@ -3822,6 +3838,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.EndsWithAnyOf
   nameWithType: TextTools.EndsWithAnyOf
+- uid: Textify.General.TextTools.EndsWithCase(System.String,System.String,System.StringComparison)
+  name: EndsWithCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.EndsWithCase(System.String,System.String,System.StringComparison)
+  name.vb: EndsWithCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.EndsWithCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.EndsWithCase(String, String, System.StringComparison)
+  nameWithType: TextTools.EndsWithCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.EndsWithCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.EndsWithCase*
+  name: EndsWithCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithCase_
+  commentId: Overload:Textify.General.TextTools.EndsWithCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EndsWithCase
+  nameWithType: TextTools.EndsWithCase
+- uid: Textify.General.TextTools.EndsWithNoCase(System.String,System.String,System.StringComparison)
+  name: EndsWithNoCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithNoCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.EndsWithNoCase(System.String,System.String,System.StringComparison)
+  name.vb: EndsWithNoCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.EndsWithNoCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.EndsWithNoCase(String, String, System.StringComparison)
+  nameWithType: TextTools.EndsWithNoCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.EndsWithNoCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.EndsWithNoCase*
+  name: EndsWithNoCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_EndsWithNoCase_
+  commentId: Overload:Textify.General.TextTools.EndsWithNoCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.EndsWithNoCase
+  nameWithType: TextTools.EndsWithNoCase
 - uid: Textify.General.TextTools.EqualsCase(System.String,System.String,System.StringComparison)
   name: EqualsCase(string, string, StringComparison)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_EqualsCase_System_String_System_String_System_StringComparison_
@@ -4521,6 +4569,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.StartsWithAnyOf
   nameWithType: TextTools.StartsWithAnyOf
+- uid: Textify.General.TextTools.StartsWithCase(System.String,System.String,System.StringComparison)
+  name: StartsWithCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.StartsWithCase(System.String,System.String,System.StringComparison)
+  name.vb: StartsWithCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.StartsWithCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.StartsWithCase(String, String, System.StringComparison)
+  nameWithType: TextTools.StartsWithCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.StartsWithCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.StartsWithCase*
+  name: StartsWithCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithCase_
+  commentId: Overload:Textify.General.TextTools.StartsWithCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.StartsWithCase
+  nameWithType: TextTools.StartsWithCase
+- uid: Textify.General.TextTools.StartsWithNoCase(System.String,System.String,System.StringComparison)
+  name: StartsWithNoCase(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithNoCase_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.StartsWithNoCase(System.String,System.String,System.StringComparison)
+  name.vb: StartsWithNoCase(String, String, StringComparison)
+  fullName: Textify.General.TextTools.StartsWithNoCase(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.StartsWithNoCase(String, String, System.StringComparison)
+  nameWithType: TextTools.StartsWithNoCase(string, string, StringComparison)
+  nameWithType.vb: TextTools.StartsWithNoCase(String, String, StringComparison)
+- uid: Textify.General.TextTools.StartsWithNoCase*
+  name: StartsWithNoCase
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_StartsWithNoCase_
+  commentId: Overload:Textify.General.TextTools.StartsWithNoCase
+  isSpec: "True"
+  fullName: Textify.General.TextTools.StartsWithNoCase
+  nameWithType: TextTools.StartsWithNoCase
 - uid: Textify.General.TextTools.ToTitleCase(System.String)
   name: ToTitleCase(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToTitleCase_System_String_
