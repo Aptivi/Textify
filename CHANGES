@@ -1,10 +1,10 @@
-We've released this version to add more split extensions!
+We've released this version to add more string extensions!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added character-based split
+- `[+]` Added more string extensions
 
 Review the commit history if you want to get a deep insight about the changes.
 
