@@ -1450,6 +1450,71 @@ namespace Textify.Tests.General
             bool result = source.EqualsCase(target);
             result.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests comparing strings (case-insensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "He", true)]
+        [DataRow("Hello", "HE", true)]
+        [Description("Querying")]
+        public void TestStartsWithNoCase(string source, string target, bool expected)
+        {
+            bool result = source.StartsWithNoCase(target);
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests comparing strings (case-sensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "He", true)]
+        [DataRow("Hello", "HE", false)]
+        [Description("Querying")]
+        public void TestStartsWithCase(string source, string target, bool expected)
+        {
+            bool result = source.StartsWithCase(target);
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests comparing strings (case-insensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "lo", true)]
+        [DataRow("Hello", "Lo", true)]
+        [Description("Querying")]
+        public void TestEndsWithNoCase(string source, string target, bool expected)
+        {
+            bool result = source.EndsWithNoCase(target);
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests comparing strings (case-sensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "lo", true)]
+        [DataRow("Hello", "Lo", false)]
+        [Description("Querying")]
+        public void TestEndsWithCase(string source, string target, bool expected)
+        {
+            bool result = source.EndsWithCase(target);
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests comparing strings (case-insensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Hello", "lo", true)]
+        [DataRow("Hello", "Lo", true)]
+        [Description("Querying")]
+        public void TestContainsWithNoCase(string source, string target, bool expected)
+        {
+            bool result = source.ContainsWithNoCase(target);
+            result.ShouldBe(expected);
+        }
     }
 
 }

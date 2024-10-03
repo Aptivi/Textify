@@ -1688,5 +1688,83 @@ namespace Textify.General
                 throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
             return string.Equals(source, target, comparison);
         }
+
+        /// <summary>
+        /// Checks whether the string starts with the specific target string (case-insensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-insensitive)</param>
+        /// <returns>True if the source string starts with the target substring; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool StartsWithNoCase(this string source, string target, StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (comparison != StringComparison.CurrentCultureIgnoreCase &&
+                comparison != StringComparison.InvariantCultureIgnoreCase &&
+                comparison != StringComparison.OrdinalIgnoreCase)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+            return source.StartsWith(target, comparison);
+        }
+
+        /// <summary>
+        /// Checks whether the string starts with the specific target string (case-sensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-sensitive)</param>
+        /// <returns>True if the source string starts with the target substring; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool StartsWithCase(this string source, string target, StringComparison comparison = StringComparison.Ordinal)
+        {
+            if (comparison != StringComparison.CurrentCulture &&
+                comparison != StringComparison.InvariantCulture &&
+                comparison != StringComparison.Ordinal)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+            return source.StartsWith(target, comparison);
+        }
+
+        /// <summary>
+        /// Checks whether the string ends with the specific target string (case-insensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-insensitive)</param>
+        /// <returns>True if the source string ends with the target substring; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool EndsWithNoCase(this string source, string target, StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (comparison != StringComparison.CurrentCultureIgnoreCase &&
+                comparison != StringComparison.InvariantCultureIgnoreCase &&
+                comparison != StringComparison.OrdinalIgnoreCase)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+            return source.EndsWith(target, comparison);
+        }
+
+        /// <summary>
+        /// Checks whether the string ends with the specific target string (case-sensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <param name="comparison">Comparison type (must be case-sensitive)</param>
+        /// <returns>True if the source string ends with the target substring; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool EndsWithCase(this string source, string target, StringComparison comparison = StringComparison.Ordinal)
+        {
+            if (comparison != StringComparison.CurrentCulture &&
+                comparison != StringComparison.InvariantCulture &&
+                comparison != StringComparison.Ordinal)
+                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+            return source.EndsWith(target, comparison);
+        }
+
+        /// <summary>
+        /// Checks whether the string contains a specific target string (case-insensitive)
+        /// </summary>
+        /// <param name="source">Source string to compare</param>
+        /// <param name="target">Target string to compare</param>
+        /// <returns>True if the source string contains a target substring; false otherwise</returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool ContainsWithNoCase(this string source, string target) =>
+            source.ToLower().Contains(target.ToLower());
     }
 }
