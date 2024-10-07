@@ -17,6 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
@@ -49,6 +50,38 @@ namespace Textify.Tools
             }
             catch
             {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Parses the regular expression pattern after validating it
+        /// </summary>
+        /// <param name="pattern">Specified pattern</param>
+        /// <returns>Regular expression instance of a valid regular expression pattern</returns>
+        public static Regex ParseRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
+        {
+            if (!IsValidRegex(pattern))
+                throw new ArgumentException($"Regular expression pattern is invalid. [{pattern}]");
+            return new Regex(pattern);
+        }
+
+        /// <summary>
+        /// Parses the regular expression pattern after validating it
+        /// </summary>
+        /// <param name="pattern">Specified pattern</param>
+        /// <param name="result">[<see langword="out"/>] Resultant regular expression instance</param>
+        /// <returns>True if valid; false otherwise</returns>
+        public static bool TryParseRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern, out Regex? result)
+        {
+            try
+            {
+                result = ParseRegex(pattern);
+                return true;
+            }
+            catch
+            {
+                result = null;
                 return false;
             }
         }
