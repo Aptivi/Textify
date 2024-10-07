@@ -29,16 +29,16 @@ namespace Textify.Demos.Offline.Fixtures
     {
         public static void Test()
         {
-            string[] names = NameGen.GenerateNames(10);
-            string[] firstNames = NameGen.GenerateFirstNames(10);
-            string[] firstFemaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Female);
-            string[] firstMaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Male);
-            string[] firstFemaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.FemaleImplicit);
-            string[] firstMaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.MaleImplicit);
-            string[] firstNaturalNames = NameGen.GenerateFirstNames(10, NameGenderType.Natural);
-            string[] surnames = NameGen.GenerateLastNames(10);
-            string[] allNames = NameGen.GetAllFirstNames();
-            string[] allSurnames = NameGen.GetAllLastNames();
+            var names = NameGen.GenerateNames(10);
+            var firstNames = NameGen.GenerateFirstNames(10);
+            var firstFemaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Female);
+            var firstMaleNames = NameGen.GenerateFirstNames(10, NameGenderType.Male);
+            var firstFemaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.FemaleImplicit);
+            var firstMaleImplicitNames = NameGen.GenerateFirstNames(10, NameGenderType.MaleImplicit);
+            var firstNaturalNames = NameGen.GenerateFirstNames(10, NameGenderType.Natural);
+            var surnames = NameGen.GenerateLastNames(10);
+            var allNames = NameGen.GetAllFirstNames();
+            var allSurnames = NameGen.GetAllLastNames();
 
             TextWriterColor.Write("10 names: ", false);
             TextWriterColor.WriteColor(string.Join(", ", names), ConsoleColors.Yellow);

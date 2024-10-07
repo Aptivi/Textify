@@ -34,8 +34,8 @@ namespace Textify.Data.NameGen
     /// </summary>
 	public static class NameGenerator
     {
-        internal static Dictionary<NameGenderType, string[]> Names = [];
-        internal static string[] Surnames = [];
+        internal static Dictionary<NameGenderType, MemoryStream> Names = [];
+        internal static MemoryStream? Surnames;
 
         /// <summary>
         /// Populates the names and the surnames for the purpose of initialization
@@ -65,18 +65,22 @@ namespace Textify.Data.NameGen
 
                     // Open the XML to stream
                     var content = archive.GetEntry(fileName).Open();
-                    var read = await new StreamReader(content).ReadToEndAsync();
-                    Names.Add(genderType, read.SplitNewLines(false));
+                    var extracted = new MemoryStream();
+                    await content.CopyToAsync(extracted);
+                    extracted.Seek(0, SeekOrigin.Begin);
+                    Names.Add(genderType, extracted);
                 }
-                if (Surnames.Length == 0)
+                if (Surnames is null)
                 {
                     (Stream stream, string fileName) = (DataInitializer.GetStreamFrom(DataType.Surnames), "Surnames.txt");
                     var archive = new ZipArchive(stream, ZipArchiveMode.Read);
 
                     // Open the XML to stream
                     var content = archive.GetEntry(fileName).Open();
-                    var read = await new StreamReader(content).ReadToEndAsync();
-                    Surnames = read.SplitNewLines(false);
+                    var extracted = new MemoryStream();
+                    await content.CopyToAsync(extracted);
+                    extracted.Seek(0, SeekOrigin.Begin);
+                    Surnames = extracted;
                 }
             }
             catch (Exception ex)
@@ -465,21 +469,38 @@ namespace Textify.Data.NameGen
             return [.. namesList];
         }
 
-        private static string[] ProcessConditions(string[] data, string prefix, string suffix, string searchTerm = "")
+        private static string[] ProcessConditions(MemoryStream? data, string prefix, string suffix, string searchTerm = "")
         {
-            // Check if the prefix and suffix check is required
-            bool SurnamePrefixCheckRequired = !string.IsNullOrEmpty(prefix);
-            bool SurnameSuffixCheckRequired = !string.IsNullOrEmpty(suffix);
+            if (data is null)
+                throw new ArgumentNullException(nameof(data));
+            data.Seek(0, SeekOrigin.Begin);
 
-            // Process the surnames according to suffix and/or prefix check requirement
-            string[] ProcessedSurnames = Surnames;
-            if (SurnamePrefixCheckRequired && SurnameSuffixCheckRequired)
-                data = Surnames.Where((str) => str.StartsWith(prefix) && str.EndsWith(suffix)).ToArray();
-            else if (SurnamePrefixCheckRequired)
-                data = Surnames.Where((str) => str.StartsWith(prefix)).ToArray();
-            else if (SurnameSuffixCheckRequired)
-                data = Surnames.Where((str) => str.EndsWith(suffix)).ToArray();
-            return data.Where((str) => str.Contains(searchTerm)).ToArray();
+            // Check if the prefix and suffix check is required
+            bool PrefixCheckRequired = !string.IsNullOrEmpty(prefix);
+            bool SuffixCheckRequired = !string.IsNullOrEmpty(suffix);
+
+            // Process them according to suffix and/or prefix check requirement
+            List<string> processed = [];
+            var dataReader = new StreamReader(data);
+            while (!dataReader.EndOfStream)
+            {
+                // Get a line
+                string line = dataReader.ReadLine();
+
+                // Now, check to see if this line meets the requirements.
+                if (!line.Contains(searchTerm))
+                    continue;
+                if (PrefixCheckRequired && !line.StartsWith(prefix))
+                    continue;
+                if (SuffixCheckRequired && !line.EndsWith(suffix))
+                    continue;
+
+                // Add this processed line
+                processed.Add(line);
+            }
+
+            // Return the result
+            return [.. processed];
         }
     }
 }
