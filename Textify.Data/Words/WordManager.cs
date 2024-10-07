@@ -33,30 +33,26 @@ namespace Textify.Data.Words
     /// </summary>
     public static class WordManager
     {
-        private static readonly Dictionary<WordDataType, string[]> words = [];
+        private static readonly Dictionary<WordDataType, MemoryStream> words = [];
         private static readonly Random rng = new();
 
         /// <summary>
         /// Gets all words
         /// </summary>
         /// <param name="type">Specifies the word data type</param>
-        public static string[] GetWords(WordDataType type = WordDataType.Words)
-        {
-            if (!words.ContainsKey(type))
-            {
-                var content = GetWordListAsync(type).Result;
-                words.Add(type, content);
-            }
-            return words[type];
-        }
+        public static string[] GetWords(WordDataType type = WordDataType.Words) =>
+            GetWordsAsync(type).ConfigureAwait(true).GetAwaiter().GetResult();
 
         /// <summary>
         /// Gets a random word
         /// </summary>
         /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
-        public static string GetRandomWord(WordDataType type = WordDataType.Words) =>
-            GetWords(type)[rng.Next(words[type].Length)];
+        public static string GetRandomWord(WordDataType type = WordDataType.Words)
+        {
+            var words = GetWords(type);
+            return words[rng.Next(words.Length)];
+        }
 
         /// <summary>
         /// Gets a random word conditionally
@@ -92,12 +88,26 @@ namespace Textify.Data.Words
         /// </summary>
         public static async Task<string[]> GetWordsAsync(WordDataType type = WordDataType.Words)
         {
-            if (!words.ContainsKey(type))
+            List<string> wordList = [];
+            if (!words.TryGetValue(type, out MemoryStream stream))
             {
-                var content = await GetWordListAsync(type);
-                words.Add(type, content);
+                stream = await GetWordListAsync(type);
+                words.Add(type, stream);
             }
-            return words[type];
+
+            // Now, get all the words
+            stream.Seek(0, SeekOrigin.Begin);
+            var dataReader = new StreamReader(stream);
+            while (!dataReader.EndOfStream)
+            {
+                // Get a line
+                string line = dataReader.ReadLine();
+
+                // TODO: Move condition processing here
+                // Add this processed line
+                wordList.Add(line);
+            }
+            return [.. wordList];
         }
 
         /// <summary>
@@ -139,7 +149,7 @@ namespace Textify.Data.Words
             return word;
         }
 
-        private static async Task<string[]> GetWordListAsync(WordDataType type)
+        private static async Task<MemoryStream> GetWordListAsync(WordDataType type)
         {
             (DataType dataType, string resourceName) =
                 type == WordDataType.Words ? (DataType.Words, "words-clean-alpha") :
@@ -155,8 +165,10 @@ namespace Textify.Data.Words
 
             // Open the XML to stream
             var content = archive.GetEntry(resourceName + ".txt").Open();
-            var read = await new StreamReader(content).ReadToEndAsync();
-            return read.SplitNewLines(false);
+            var extracted = new MemoryStream();
+            await content.CopyToAsync(extracted);
+            extracted.Seek(0, SeekOrigin.Begin);
+            return extracted;
         }
     }
 }
