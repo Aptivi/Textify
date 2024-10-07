@@ -35,30 +35,28 @@ namespace Textify.Data.Unicode
         internal static Stream UnpackUnicodeDataToStream(UnicodeQueryType type)
         {
             // Select XML file based on type
-            var unicodeData = Array.Empty<byte>();
-            var xmlFile = "";
+            Stream unicodeData;
+            string xmlFile;
             switch (type)
             {
                 case UnicodeQueryType.Simple:
-                    DataInitializer.Initialize(DataType.UnicodeNoUnihan);
-                    unicodeData = DataTools.GetDataFrom("ucd.nounihan.flat");
+                    unicodeData = DataInitializer.GetStreamFrom(DataType.UnicodeNoUnihan);
                     xmlFile = "ucd.nounihan.flat.xml";
                     break;
                 case UnicodeQueryType.Unihan:
-                    DataInitializer.Initialize(DataType.UnicodeUnihan);
-                    unicodeData = DataTools.GetDataFrom("ucd.unihan.flat");
+                    unicodeData = DataInitializer.GetStreamFrom(DataType.UnicodeUnihan);
                     xmlFile = "ucd.unihan.flat.xml";
                     break;
                 case UnicodeQueryType.Full:
-                    DataInitializer.Initialize(DataType.Unicode);
-                    unicodeData = DataTools.GetDataFrom("ucd.all.flat");
+                    unicodeData = DataInitializer.GetStreamFrom(DataType.Unicode);
                     xmlFile = "ucd.all.flat.xml";
                     break;
+                default:
+                    throw new ArgumentException("There is no Unicode query type of this type.");
             }
 
             // Unpack the ZIP to stream
-            var archiveByte = new MemoryStream(unicodeData);
-            var archive = new ZipArchive(archiveByte, ZipArchiveMode.Read);
+            var archive = new ZipArchive(unicodeData, ZipArchiveMode.Read);
 
             // Open the XML to stream
             return archive.GetEntry(xmlFile).Open();

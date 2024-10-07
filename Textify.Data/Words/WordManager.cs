@@ -150,8 +150,7 @@ namespace Textify.Data.Words
                 type == WordDataType.CommonWords ? (DataType.CommonWords, "words-common-clean") :
                 type == WordDataType.CommonWordsDirty ? (DataType.CommonWordsDirty, "words-common") :
                 throw new TextifyException("Invalid word data type");
-            DataInitializer.Initialize(dataType);
-            var contentStream = new MemoryStream(DataTools.GetDataFrom(resourceName));
+            var contentStream = DataInitializer.GetStreamFrom(dataType);
             var archive = new ZipArchive(contentStream, ZipArchiveMode.Read);
 
             // Open the XML to stream

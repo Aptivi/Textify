@@ -18,19 +18,13 @@
 //
 
 using System;
+using System.IO;
 
 namespace Textify.Data.Tools
 {
-    /// <summary>
-    /// Data initialization class
-    /// </summary>
     internal static class DataInitializer
     {
-        /// <summary>
-        /// Initializes all the needed data
-        /// </summary>
-        /// <param name="types">Types to initialize</param>
-        internal static void Initialize(DataType types)
+        internal static Stream GetStreamFrom(DataType types)
         {
             // Enumerate through all data types
             DataType[] enumTypes = (DataType[])Enum.GetValues(typeof(DataType));
@@ -39,13 +33,10 @@ namespace Textify.Data.Tools
                 if (types.HasFlag(enumType))
                 {
                     string name = GetResourceName(enumType);
-                    if (!DataTools.dataStreams.ContainsKey(name))
-                    {
-                        byte[] bytes = DataStreamTools.GetDataFrom(name);
-                        DataTools.dataStreams.Add(name, bytes);
-                    }
+                    return DataStreamTools.GetStreamFrom(name);
                 }
             }
+            throw new NotImplementedException("There is no stream with this enumeration");
         }
 
         private static string GetResourceName(DataType types) =>
