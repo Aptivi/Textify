@@ -23,7 +23,6 @@ using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
 using Textify.Data.Tools;
-using Textify.General;
 using Textify.Tools;
 
 namespace Textify.Data.Words
@@ -41,7 +40,7 @@ namespace Textify.Data.Words
         /// </summary>
         /// <param name="type">Specifies the word data type</param>
         public static string[] GetWords(WordDataType type = WordDataType.Words) =>
-            GetWordsAsync(type).ConfigureAwait(true).GetAwaiter().GetResult();
+            GetWordsFromConditions(0, "", "", 0, type);
 
         /// <summary>
         /// Gets a random word
@@ -50,8 +49,8 @@ namespace Textify.Data.Words
         /// <returns>A random word</returns>
         public static string GetRandomWord(WordDataType type = WordDataType.Words)
         {
-            var words = GetWords(type);
-            return words[rng.Next(words.Length)];
+            var wordList = GetWords(type);
+            return wordList[rng.Next(wordList.Length)];
         }
 
         /// <summary>
@@ -65,60 +64,23 @@ namespace Textify.Data.Words
         /// <returns>A random word</returns>
         public static string GetRandomWordConditional(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)
         {
-            // Get an initial word
-            string word = GetRandomWord(type);
-            bool lengthCheck = wordMaxLength > 0;
-            bool startsCheck = !string.IsNullOrWhiteSpace(wordStartsWith);
-            bool endsCheck = !string.IsNullOrWhiteSpace(wordEndsWith);
-            bool exactLengthCheck = wordExactLength > 0;
-
-            // Loop until all the conditions that need to be checked are satisfied
-            while (!((lengthCheck && word.Length <= wordMaxLength || !lengthCheck) &&
-                     (startsCheck && word.StartsWith(wordStartsWith) || !startsCheck) &&
-                     (endsCheck && word.EndsWith(wordEndsWith) || !endsCheck) &&
-                     (exactLengthCheck && word.Length == wordExactLength || !exactLengthCheck)))
-                word = GetRandomWord(type);
-
-            // Get a word that satisfies all the conditions
-            return word;
+            // Select a word
+            var words = GetWordsFromConditions(wordMaxLength, wordStartsWith, wordEndsWith, wordExactLength, type);
+            return words[rng.Next(words.Length)];
         }
 
         /// <summary>
         /// Gets all words
         /// </summary>
-        public static async Task<string[]> GetWordsAsync(WordDataType type = WordDataType.Words)
-        {
-            List<string> wordList = [];
-            if (!words.TryGetValue(type, out MemoryStream stream))
-            {
-                stream = await GetWordListAsync(type);
-                words.Add(type, stream);
-            }
-
-            // Now, get all the words
-            stream.Seek(0, SeekOrigin.Begin);
-            var dataReader = new StreamReader(stream);
-            while (!dataReader.EndOfStream)
-            {
-                // Get a line
-                string line = dataReader.ReadLine();
-
-                // TODO: Move condition processing here
-                // Add this processed line
-                wordList.Add(line);
-            }
-            return [.. wordList];
-        }
+        public static async Task<string[]> GetWordsAsync(WordDataType type = WordDataType.Words) =>
+            await Task.Run(() => GetWords(type));
 
         /// <summary>
         /// Gets a random word
         /// </summary>
         /// <returns>A random word</returns>
-        public static async Task<string> GetRandomWordAsync(WordDataType type = WordDataType.Words)
-        {
-            var wordList = await GetWordsAsync(type);
-            return wordList[rng.Next(words.Count)];
-        }
+        public static async Task<string> GetRandomWordAsync(WordDataType type = WordDataType.Words) =>
+            await Task.Run(() => GetRandomWord(type));
 
         /// <summary>
         /// Gets a random word conditionally
@@ -129,27 +91,47 @@ namespace Textify.Data.Words
         /// <param name="wordExactLength">The exact length of the word</param>
         /// <param name="type">Specifies the word data type</param>
         /// <returns>A random word</returns>
-        public static async Task<string> GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)
+        public static async Task<string> GetRandomWordConditionalAsync(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words) =>
+            await Task.Run(() => GetRandomWordConditional(wordMaxLength, wordStartsWith, wordEndsWith, wordExactLength, type));
+
+        private static string[] GetWordsFromConditions(int wordMaxLength, string wordStartsWith, string wordEndsWith, int wordExactLength, WordDataType type = WordDataType.Words)
         {
-            // Get an initial word
-            string word = await GetRandomWordAsync(type);
+            // Make a list
+            List<string> wordList = [];
+            if (!words.TryGetValue(type, out MemoryStream stream))
+            {
+                stream = GetWordList(type);
+                words.Add(type, stream);
+            }
+
+            // Check for conditionals
             bool lengthCheck = wordMaxLength > 0;
             bool startsCheck = !string.IsNullOrWhiteSpace(wordStartsWith);
             bool endsCheck = !string.IsNullOrWhiteSpace(wordEndsWith);
             bool exactLengthCheck = wordExactLength > 0;
 
-            // Loop until all the conditions that need to be checked are satisfied
-            while (!((lengthCheck && word.Length <= wordMaxLength || !lengthCheck) &&
-                     (startsCheck && word.StartsWith(wordStartsWith) || !startsCheck) &&
-                     (endsCheck && word.EndsWith(wordEndsWith) || !endsCheck) &&
-                     (exactLengthCheck && word.Length == wordExactLength || !exactLengthCheck)))
-                word = await GetRandomWordAsync(type);
+            // Now, get all the words
+            stream.Seek(0, SeekOrigin.Begin);
+            var dataReader = new StreamReader(stream);
+            while (!dataReader.EndOfStream)
+            {
+                // Get a line
+                string line = dataReader.ReadLine();
 
-            // Get a word that satisfies all the conditions
-            return word;
+                // Process the conditions
+                if (!((lengthCheck && line.Length <= wordMaxLength || !lengthCheck) &&
+                     (startsCheck && line.StartsWith(wordStartsWith) || !startsCheck) &&
+                     (endsCheck && line.EndsWith(wordEndsWith) || !endsCheck) &&
+                     (exactLengthCheck && line.Length == wordExactLength || !exactLengthCheck)))
+                    continue;
+
+                // Add this processed line
+                wordList.Add(line);
+            }
+            return [.. wordList];
         }
 
-        private static async Task<MemoryStream> GetWordListAsync(WordDataType type)
+        private static MemoryStream GetWordList(WordDataType type)
         {
             (DataType dataType, string resourceName) =
                 type == WordDataType.Words ? (DataType.Words, "words-clean-alpha") :
@@ -166,7 +148,7 @@ namespace Textify.Data.Words
             // Open the XML to stream
             var content = archive.GetEntry(resourceName + ".txt").Open();
             var extracted = new MemoryStream();
-            await content.CopyToAsync(extracted);
+            content.CopyTo(extracted);
             extracted.Seek(0, SeekOrigin.Begin);
             return extracted;
         }
