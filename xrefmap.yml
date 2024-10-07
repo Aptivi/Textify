@@ -5004,6 +5004,38 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.IsValidRegex
   nameWithType: RegexTools.IsValidRegex
+- uid: Textify.Tools.RegexTools.ParseRegex(System.String)
+  name: ParseRegex(string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_ParseRegex_System_String_
+  commentId: M:Textify.Tools.RegexTools.ParseRegex(System.String)
+  name.vb: ParseRegex(String)
+  fullName: Textify.Tools.RegexTools.ParseRegex(string)
+  fullName.vb: Textify.Tools.RegexTools.ParseRegex(String)
+  nameWithType: RegexTools.ParseRegex(string)
+  nameWithType.vb: RegexTools.ParseRegex(String)
+- uid: Textify.Tools.RegexTools.ParseRegex*
+  name: ParseRegex
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_ParseRegex_
+  commentId: Overload:Textify.Tools.RegexTools.ParseRegex
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.ParseRegex
+  nameWithType: RegexTools.ParseRegex
+- uid: Textify.Tools.RegexTools.TryParseRegex(System.String,System.Text.RegularExpressions.Regex@)
+  name: TryParseRegex(string, out Regex?)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_TryParseRegex_System_String_System_Text_RegularExpressions_Regex__
+  commentId: M:Textify.Tools.RegexTools.TryParseRegex(System.String,System.Text.RegularExpressions.Regex@)
+  name.vb: TryParseRegex(String, Regex)
+  fullName: Textify.Tools.RegexTools.TryParseRegex(string, out System.Text.RegularExpressions.Regex?)
+  fullName.vb: Textify.Tools.RegexTools.TryParseRegex(String, System.Text.RegularExpressions.Regex)
+  nameWithType: RegexTools.TryParseRegex(string, out Regex?)
+  nameWithType.vb: RegexTools.TryParseRegex(String, Regex)
+- uid: Textify.Tools.RegexTools.TryParseRegex*
+  name: TryParseRegex
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_TryParseRegex_
+  commentId: Overload:Textify.Tools.RegexTools.TryParseRegex
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.TryParseRegex
+  nameWithType: RegexTools.TryParseRegex
 - uid: Textify.Tools.TextifyException
   name: TextifyException
   href: api/Textify.Tools.TextifyException.html
