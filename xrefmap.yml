@@ -4071,6 +4071,15 @@ references:
   fullName.vb: Textify.General.TextTools.GetLetterRepetitionPatternTable(String, Boolean)
   nameWithType: TextTools.GetLetterRepetitionPatternTable(string, bool)
   nameWithType.vb: TextTools.GetLetterRepetitionPatternTable(String, Boolean)
+- uid: Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String,System.Int32)
+  name: GetLetterRepetitionPatternTable(string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetLetterRepetitionPatternTable_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String,System.Int32)
+  name.vb: GetLetterRepetitionPatternTable(String, Integer)
+  fullName: Textify.General.TextTools.GetLetterRepetitionPatternTable(string, int)
+  fullName.vb: Textify.General.TextTools.GetLetterRepetitionPatternTable(String, Integer)
+  nameWithType: TextTools.GetLetterRepetitionPatternTable(string, int)
+  nameWithType.vb: TextTools.GetLetterRepetitionPatternTable(String, Integer)
 - uid: Textify.General.TextTools.GetLetterRepetitionPatternTable*
   name: GetLetterRepetitionPatternTable
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetLetterRepetitionPatternTable_
