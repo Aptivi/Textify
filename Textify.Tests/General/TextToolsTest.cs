@@ -65,6 +65,23 @@ namespace Textify.Tests.General
                 ];
             }
         }
+        
+        public static IEnumerable<object[]> LrpDataThrice
+        {
+            get
+            {
+                return
+                [
+                    ["", TestTools.GetDictionaryFrom([])],
+                    ["H", TestTools.GetDictionaryFrom(new() { { 1, 1 }, { 2, 1 }, { 3, 1 } })],
+                    ["He", TestTools.GetDictionaryFrom(new() { { 1, 2 }, { 2, 1 }, { 3, 2 }, { 4, 1 }, { 5, 2 }, { 6, 1 } })],
+                    ["Hel", TestTools.GetDictionaryFrom(new() { { 1, 3 }, { 2, 3 }, { 3, 1 }, { 4, 3 }, { 5, 3 }, { 6, 1 }, { 7, 3 }, { 8, 3 }, { 9, 1 } })],
+                    ["Hell", TestTools.GetDictionaryFrom(new() { { 1, 4 }, { 2, 2 }, { 3, 4 }, { 4, 1 }, { 5, 4 }, { 6, 2 }, { 7, 4 }, { 8, 1 }, { 9, 4 }, { 10, 2 }, { 11, 4 }, { 12, 1 } })],
+                    ["Hello", TestTools.GetDictionaryFrom(new() { { 1, 5 }, { 2, 5 }, { 3, 5 }, { 4, 5 }, { 5, 1 }, { 6, 5 }, { 7, 5 }, { 8, 5 }, { 9, 5 }, { 10, 1 }, { 11, 5 }, { 12, 5 }, { 13, 5 }, { 14, 5 }, { 15, 1 } })],
+                    ["Hello!", TestTools.GetDictionaryFrom(new() { { 1, 6 }, { 2, 3 }, { 3, 2 }, { 4, 3 }, { 5, 6 }, { 6, 1 }, { 7, 6 }, { 8, 3 }, { 9, 2 }, { 10, 3 }, { 11, 6 }, { 12, 1 }, { 13, 6 }, { 14, 3 }, { 15, 2 }, { 16, 3 }, { 17, 6 }, { 18, 1 } })],
+                ];
+            }
+        }
 
         /// <summary>
         /// Tests replacing last occurrence of a string
@@ -1341,6 +1358,42 @@ namespace Textify.Tests.General
         public void TestLRPTableTwice(string target, ReadOnlyDictionary<int, int> expected)
         {
             var lrp = target.GetLetterRepetitionPatternTable(true);
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP table from string
+        /// </summary>
+        [TestMethod]
+        [DynamicData(nameof(LrpData))]
+        [Description("Querying")]
+        public void TestLRPTableNum(string target, ReadOnlyDictionary<int, int> expected)
+        {
+            var lrp = target.GetLetterRepetitionPatternTable(1);
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP table from string (twice)
+        /// </summary>
+        [TestMethod]
+        [DynamicData(nameof(LrpDataTwice))]
+        [Description("Querying")]
+        public void TestLRPTableNumTwice(string target, ReadOnlyDictionary<int, int> expected)
+        {
+            var lrp = target.GetLetterRepetitionPatternTable(2);
+            lrp.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests getting LRP table from string (thrice)
+        /// </summary>
+        [TestMethod]
+        [DynamicData(nameof(LrpDataThrice))]
+        [Description("Querying")]
+        public void TestLRPTableNumThrice(string target, ReadOnlyDictionary<int, int> expected)
+        {
+            var lrp = target.GetLetterRepetitionPatternTable(3);
             lrp.ShouldBe(expected);
         }
 

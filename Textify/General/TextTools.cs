@@ -1376,16 +1376,24 @@ namespace Textify.General
         /// </summary>
         /// <param name="target">Target string</param>
         /// <param name="twice">Whether to add the LRP of the string using the number of steps up to twice the string length or not</param>
-        public static ReadOnlyDictionary<int, int> GetLetterRepetitionPatternTable(this string target, bool twice = false)
+        public static ReadOnlyDictionary<int, int> GetLetterRepetitionPatternTable(this string target, bool twice = false) =>
+            GetLetterRepetitionPatternTable(target, twice ? 2 : 1);
+
+        /// <summary>
+        /// Gets the letter repetition pattern (LRP) table from the length of the string
+        /// </summary>
+        /// <param name="target">Target string</param>
+        /// <param name="iterations">Number of iterations</param>
+        public static ReadOnlyDictionary<int, int> GetLetterRepetitionPatternTable(this string target, int iterations)
         {
             if (target is null)
                 throw new TextifyException("The target may not be null");
-            if (target.Length == 0)
+            if (target.Length == 0 || iterations <= 0)
                 return new(new Dictionary<int, int>());
 
             // Now, iterate through the target length
             Dictionary<int, int> lrpTable = [];
-            int targetLength = target.Length * (twice ? 2 : 1);
+            int targetLength = target.Length * iterations;
             for (int i = 1; i <= targetLength; i++)
             {
                 int lrp = target.GetLetterRepetitionPattern(i);
