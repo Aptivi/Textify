@@ -271,6 +271,78 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests adding the prefix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddPrefix()
+        {
+            string expected = "strHello";
+            string TargetString = "Hello";
+            TargetString.AddPrefix("str").ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests adding the prefix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddPrefixNoCheck1()
+        {
+            string expected = "strHello";
+            string TargetString = "Hello";
+            TargetString.AddPrefix("str", false).ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests adding the prefix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddPrefixNoCheck2()
+        {
+            string expected = "strstrHello";
+            string TargetString = "strHello";
+            TargetString.AddPrefix("str", false).ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests adding the suffix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddSuffix()
+        {
+            string expected = "Hello_guy";
+            string TargetString = "Hello";
+            TargetString.AddSuffix("_guy").ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests adding the suffix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddSuffixNoCheck1()
+        {
+            string expected = "Hello_guy";
+            string TargetString = "Hello";
+            TargetString.AddSuffix("_guy", false).ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests adding the suffix
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestAddSuffixNoCheck2()
+        {
+            string expected = "Hello_guy_guy";
+            string TargetString = "Hello_guy";
+            TargetString.AddSuffix("_guy", false).ShouldBe(expected);
+        }
+
+        /// <summary>
         /// Tests removing the prefix
         /// </summary>
         [TestMethod]
@@ -292,6 +364,36 @@ namespace Textify.Tests.General
             string expected = "Hello";
             string TargetString = "Hello_guy";
             TargetString.RemoveSuffix("_guy").ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests verifying the prefix
+        /// </summary>
+        [TestMethod]
+        [DataRow("str", true)]
+        [DataRow("ster", false)]
+        [DataRow("", true)]
+        [Description("Querying")]
+        public void TestVerifyPrefix(string prefix, bool expected)
+        {
+            string TargetString = "strHello";
+            TargetString.VerifyPrefix(prefix).ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests verifying the suffix
+        /// </summary>
+        [TestMethod]
+        [DataRow("_guy", true)]
+        [DataRow("guy", true)]
+        [DataRow("_girl", false)]
+        [DataRow("girl", false)]
+        [DataRow("", true)]
+        [Description("Querying")]
+        public void TestVerifySuffix(string suffix, bool expected)
+        {
+            string TargetString = "Hello_guy";
+            TargetString.VerifySuffix(suffix).ShouldBe(expected);
         }
 
         /// <summary>

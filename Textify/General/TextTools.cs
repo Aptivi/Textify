@@ -857,6 +857,34 @@ namespace Textify.General
         }
 
         /// <summary>
+		/// Adds a prefix from the text
+		/// </summary>
+		public static string AddPrefix(this string text, string prefix, bool check = true)
+        {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
+            var builder = new StringBuilder(text);
+            if ((check && !text.VerifyPrefix(prefix)) || !check)
+                builder.Insert(0, prefix);
+            return builder.ToString();
+        }
+
+        /// <summary>
+        /// Adds a suffix from the text
+        /// </summary>
+        public static string AddSuffix(this string text, string suffix, bool check = true)
+        {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
+            var builder = new StringBuilder(text);
+            if ((check && !text.VerifySuffix(suffix)) || !check)
+                builder.Append(suffix);
+            return builder.ToString();
+        }
+
+        /// <summary>
 		/// Removes a prefix from the text
 		/// </summary>
 		public static string RemovePrefix(this string text, string prefix)
@@ -880,6 +908,28 @@ namespace Textify.General
             if (text.EndsWith(suffix))
                 return text.Substring(0, text.Length - suffix.Length);
             return text;
+        }
+
+        /// <summary>
+		/// Verifies a prefix from the text
+		/// </summary>
+		public static bool VerifyPrefix(this string text, string prefix, StringComparison comparison = StringComparison.CurrentCulture)
+        {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
+            return text.StartsWith(prefix, comparison);
+        }
+
+        /// <summary>
+        /// Verifies a suffix from the text
+        /// </summary>
+        public static bool VerifySuffix(this string text, string suffix, StringComparison comparison = StringComparison.CurrentCulture)
+        {
+            if (text is null)
+                throw new TextifyException("The target may not be null");
+
+            return text.EndsWith(suffix, comparison);
         }
 
         /// <summary>
