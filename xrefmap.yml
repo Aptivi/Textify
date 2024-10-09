@@ -4185,6 +4185,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetWrappedSentencesByWords
   nameWithType: TextTools.GetWrappedSentencesByWords
+- uid: Textify.General.TextTools.IsPalindrome(System.String,System.Boolean)
+  name: IsPalindrome(string, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_IsPalindrome_System_String_System_Boolean_
+  commentId: M:Textify.General.TextTools.IsPalindrome(System.String,System.Boolean)
+  name.vb: IsPalindrome(String, Boolean)
+  fullName: Textify.General.TextTools.IsPalindrome(string, bool)
+  fullName.vb: Textify.General.TextTools.IsPalindrome(String, Boolean)
+  nameWithType: TextTools.IsPalindrome(string, bool)
+  nameWithType.vb: TextTools.IsPalindrome(String, Boolean)
+- uid: Textify.General.TextTools.IsPalindrome*
+  name: IsPalindrome
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_IsPalindrome_
+  commentId: Overload:Textify.General.TextTools.IsPalindrome
+  isSpec: "True"
+  fullName: Textify.General.TextTools.IsPalindrome
+  nameWithType: TextTools.IsPalindrome
 - uid: Textify.General.TextTools.IsStringNumeric(System.String)
   name: IsStringNumeric(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_IsStringNumeric_System_String_
