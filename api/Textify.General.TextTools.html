@@ -197,7 +197,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_AddPrefix_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.AddPrefix(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L862">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L870">View Source</a>
   </span>
   <a id="Textify_General_TextTools_AddPrefix_" data-uid="Textify.General.TextTools.AddPrefix*"></a>
   <h4 id="Textify_General_TextTools_AddPrefix_System_String_System_String_System_Boolean_" data-uid="Textify.General.TextTools.AddPrefix(System.String,System.String,System.Boolean)">AddPrefix(string, string, bool)</h4>
@@ -221,17 +221,20 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">prefix</span></td>
-        <td></td>
+        <td><p>Prefix (that is, a string that marks the beginning of a string)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">check</span></td>
-        <td></td>
+        <td><p>Verify the prefix before inserting</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -246,16 +249,21 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>Modified string that contains a prefix before the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_AddPrefix_System_String_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the string contains a prefix that you've already put, and you're attempting to add the same prefix
+with checking turned on, the result will be the same as when you've passed in the target text.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_AddSuffix_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.AddSuffix(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L876">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L892">View Source</a>
   </span>
   <a id="Textify_General_TextTools_AddSuffix_" data-uid="Textify.General.TextTools.AddSuffix*"></a>
   <h4 id="Textify_General_TextTools_AddSuffix_System_String_System_String_System_Boolean_" data-uid="Textify.General.TextTools.AddSuffix(System.String,System.String,System.Boolean)">AddSuffix(string, string, bool)</h4>
@@ -279,17 +287,20 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">suffix</span></td>
-        <td></td>
+        <td><p>Suffix (that is, a string that marks the end of a string)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">check</span></td>
-        <td></td>
+        <td><p>Verify the suffix before inserting</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -304,10 +315,15 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>Modified string that contains a suffix after the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_AddSuffix_System_String_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the string contains a suffix that you've already put, and you're attempting to add the same suffix
+with checking turned on, the result will be the same as when you've passed in the target text.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_AllIndexesOf_System_String_System_Char_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.AllIndexesOf(System.String%2CSystem.Char)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
@@ -425,7 +441,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_CompareLogical_System_String_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.CompareLogical(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1503">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1545">View Source</a>
   </span>
   <a id="Textify_General_TextTools_CompareLogical_" data-uid="Textify.General.TextTools.CompareLogical*"></a>
   <h4 id="Textify_General_TextTools_CompareLogical_System_String_System_String_" data-uid="Textify.General.TextTools.CompareLogical(System.String,System.String)">CompareLogical(string, string)</h4>
@@ -705,7 +721,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_ContainsWithNoCase_System_String_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.ContainsWithNoCase(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1827">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1869">View Source</a>
   </span>
   <a id="Textify_General_TextTools_ContainsWithNoCase_" data-uid="Textify.General.TextTools.ContainsWithNoCase*"></a>
   <h4 id="Textify_General_TextTools_ContainsWithNoCase_System_String_System_String_" data-uid="Textify.General.TextTools.ContainsWithNoCase(System.String,System.String)">ContainsWithNoCase(string, string)</h4>
@@ -996,7 +1012,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_EndsWithCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.EndsWithCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1811">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1853">View Source</a>
   </span>
   <a id="Textify_General_TextTools_EndsWithCase_" data-uid="Textify.General.TextTools.EndsWithCase*"></a>
   <h4 id="Textify_General_TextTools_EndsWithCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.EndsWithCase(System.String,System.String,System.StringComparison)">EndsWithCase(string, string, StringComparison)</h4>
@@ -1073,7 +1089,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_EndsWithNoCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.EndsWithNoCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1794">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1836">View Source</a>
   </span>
   <a id="Textify_General_TextTools_EndsWithNoCase_" data-uid="Textify.General.TextTools.EndsWithNoCase*"></a>
   <h4 id="Textify_General_TextTools_EndsWithNoCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.EndsWithNoCase(System.String,System.String,System.StringComparison)">EndsWithNoCase(string, string, StringComparison)</h4>
@@ -1150,7 +1166,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_EqualsCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.EqualsCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1743">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1785">View Source</a>
   </span>
   <a id="Textify_General_TextTools_EqualsCase_" data-uid="Textify.General.TextTools.EqualsCase*"></a>
   <h4 id="Textify_General_TextTools_EqualsCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.EqualsCase(System.String,System.String,System.StringComparison)">EqualsCase(string, string, StringComparison)</h4>
@@ -1227,7 +1243,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_EqualsNoCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.EqualsNoCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1726">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1768">View Source</a>
   </span>
   <a id="Textify_General_TextTools_EqualsNoCase_" data-uid="Textify.General.TextTools.EqualsNoCase*"></a>
   <h4 id="Textify_General_TextTools_EqualsNoCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.EqualsNoCase(System.String,System.String,System.StringComparison)">EqualsNoCase(string, string, StringComparison)</h4>
@@ -1304,7 +1320,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_Escape_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.Escape(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1330">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1372">View Source</a>
   </span>
   <a id="Textify_General_TextTools_Escape_" data-uid="Textify.General.TextTools.Escape*"></a>
   <h4 id="Textify_General_TextTools_Escape_System_String_" data-uid="Textify.General.TextTools.Escape(System.String)">Escape(string)</h4>
@@ -1410,7 +1426,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetBase64Decoded_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetBase64Decoded(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L954">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L996">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetBase64Decoded_" data-uid="Textify.General.TextTools.GetBase64Decoded*"></a>
   <h4 id="Textify_General_TextTools_GetBase64Decoded_System_String_" data-uid="Textify.General.TextTools.GetBase64Decoded(System.String)">GetBase64Decoded(string)</h4>
@@ -1460,7 +1476,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetBase64Encoded_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetBase64Encoded(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L940">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L982">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetBase64Encoded_" data-uid="Textify.General.TextTools.GetBase64Encoded*"></a>
   <h4 id="Textify_General_TextTools_GetBase64Encoded_System_String_" data-uid="Textify.General.TextTools.GetBase64Encoded(System.String)">GetBase64Encoded(string)</h4>
@@ -1510,7 +1526,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetCharWidth_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetCharWidth(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1601">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1643">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetCharWidth_" data-uid="Textify.General.TextTools.GetCharWidth*"></a>
   <h4 id="Textify_General_TextTools_GetCharWidth_System_Int32_" data-uid="Textify.General.TextTools.GetCharWidth(System.Int32)">GetCharWidth(int)</h4>
@@ -1575,7 +1591,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetCharWidthType_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetCharWidthType(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1673">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1715">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetCharWidthType_" data-uid="Textify.General.TextTools.GetCharWidthType*"></a>
   <h4 id="Textify_General_TextTools_GetCharWidthType_System_Int32_" data-uid="Textify.General.TextTools.GetCharWidthType(System.Int32)">GetCharWidthType(int)</h4>
@@ -1690,7 +1706,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetEnclosedWordFromIndex(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1302">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1344">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetEnclosedWordFromIndex_" data-uid="Textify.General.TextTools.GetEnclosedWordFromIndex*"></a>
   <h4 id="Textify_General_TextTools_GetEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_" data-uid="Textify.General.TextTools.GetEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)">GetEnclosedWordFromIndex(string, int, bool)</h4>
@@ -1752,7 +1768,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetIndexOfEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1360">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1402">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetIndexOfEnclosedWordFromIndex_" data-uid="Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex*"></a>
   <h4 id="Textify_General_TextTools_GetIndexOfEnclosedWordFromIndex_System_String_System_Int32_System_Boolean_" data-uid="Textify.General.TextTools.GetIndexOfEnclosedWordFromIndex(System.String,System.Int32,System.Boolean)">GetIndexOfEnclosedWordFromIndex(string, int, bool)</h4>
@@ -1814,7 +1830,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetLetterRepetitionPattern_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetLetterRepetitionPattern(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1388">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1430">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetLetterRepetitionPattern_" data-uid="Textify.General.TextTools.GetLetterRepetitionPattern*"></a>
   <h4 id="Textify_General_TextTools_GetLetterRepetitionPattern_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetLetterRepetitionPattern(System.String,System.Int32)">GetLetterRepetitionPattern(string, int)</h4>
@@ -1869,7 +1885,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetLetterRepetitionPatternTable_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1431">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1473">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetLetterRepetitionPatternTable_" data-uid="Textify.General.TextTools.GetLetterRepetitionPatternTable*"></a>
   <h4 id="Textify_General_TextTools_GetLetterRepetitionPatternTable_System_String_System_Boolean_" data-uid="Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String,System.Boolean)">GetLetterRepetitionPatternTable(string, bool)</h4>
@@ -1924,7 +1940,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetLetterRepetitionPatternTable_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1439">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1481">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetLetterRepetitionPatternTable_" data-uid="Textify.General.TextTools.GetLetterRepetitionPatternTable*"></a>
   <h4 id="Textify_General_TextTools_GetLetterRepetitionPatternTable_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetLetterRepetitionPatternTable(System.String,System.Int32)">GetLetterRepetitionPatternTable(string, int)</h4>
@@ -1979,7 +1995,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetListOfRepeatedLetters_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetListOfRepeatedLetters(System.String%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1464">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1506">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetListOfRepeatedLetters_" data-uid="Textify.General.TextTools.GetListOfRepeatedLetters*"></a>
   <h4 id="Textify_General_TextTools_GetListOfRepeatedLetters_System_String_System_Boolean_" data-uid="Textify.General.TextTools.GetListOfRepeatedLetters(System.String,System.Boolean)">GetListOfRepeatedLetters(string, bool)</h4>
@@ -2034,7 +2050,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentences(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1009">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1051">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetWrappedSentences_" data-uid="Textify.General.TextTools.GetWrappedSentences*"></a>
   <h4 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)">GetWrappedSentences(string, int)</h4>
@@ -2092,7 +2108,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentences(System.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1019">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1061">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetWrappedSentences_" data-uid="Textify.General.TextTools.GetWrappedSentences*"></a>
   <h4 id="Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32,System.Int32)">GetWrappedSentences(string, int, int)</h4>
@@ -2156,7 +2172,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentencesByWords(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1084">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1126">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetWrappedSentencesByWords_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords*"></a>
   <h4 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32)">GetWrappedSentencesByWords(string, int)</h4>
@@ -2214,7 +2230,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.GetWrappedSentencesByWords(System.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1094">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1136">View Source</a>
   </span>
   <a id="Textify_General_TextTools_GetWrappedSentencesByWords_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords*"></a>
   <h4 id="Textify_General_TextTools_GetWrappedSentencesByWords_System_String_System_Int32_System_Int32_" data-uid="Textify.General.TextTools.GetWrappedSentencesByWords(System.String,System.Int32,System.Int32)">GetWrappedSentencesByWords(string, int, int)</h4>
@@ -2327,7 +2343,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_LowerFirst_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.LowerFirst(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1258">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1300">View Source</a>
   </span>
   <a id="Textify_General_TextTools_LowerFirst_" data-uid="Textify.General.TextTools.LowerFirst*"></a>
   <h4 id="Textify_General_TextTools_LowerFirst_System_String_" data-uid="Textify.General.TextTools.LowerFirst(System.String)">LowerFirst(string)</h4>
@@ -2377,7 +2393,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_OrderDescendLogically_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1859">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1901">View Source</a>
   </span>
   <a id="Textify_General_TextTools_OrderDescendLogically_" data-uid="Textify.General.TextTools.OrderDescendLogically*"></a>
   <h4 id="Textify_General_TextTools_OrderDescendLogically_System_Collections_Generic_IEnumerable_System_String__" data-uid="Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable{System.String})">OrderDescendLogically(IEnumerable&lt;string&gt;)</h4>
@@ -2427,7 +2443,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_OrderDescendLogically_System_String___.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.OrderDescendLogically(System.String%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1843">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1885">View Source</a>
   </span>
   <a id="Textify_General_TextTools_OrderDescendLogically_" data-uid="Textify.General.TextTools.OrderDescendLogically*"></a>
   <h4 id="Textify_General_TextTools_OrderDescendLogically_System_String___" data-uid="Textify.General.TextTools.OrderDescendLogically(System.String[])">OrderDescendLogically(string[])</h4>
@@ -2477,7 +2493,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_OrderLogically_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1851">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1893">View Source</a>
   </span>
   <a id="Textify_General_TextTools_OrderLogically_" data-uid="Textify.General.TextTools.OrderLogically*"></a>
   <h4 id="Textify_General_TextTools_OrderLogically_System_Collections_Generic_IEnumerable_System_String__" data-uid="Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable{System.String})">OrderLogically(IEnumerable&lt;string&gt;)</h4>
@@ -2527,7 +2543,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_OrderLogically_System_String___.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.OrderLogically(System.String%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1835">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1877">View Source</a>
   </span>
   <a id="Textify_General_TextTools_OrderLogically_" data-uid="Textify.General.TextTools.OrderLogically*"></a>
   <h4 id="Textify_General_TextTools_OrderLogically_System_String___" data-uid="Textify.General.TextTools.OrderLogically(System.String[])">OrderLogically(string[])</h4>
@@ -2577,7 +2593,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_ReadNullTerminatedString_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.ReadNullTerminatedString(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1575">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1617">View Source</a>
   </span>
   <a id="Textify_General_TextTools_ReadNullTerminatedString_" data-uid="Textify.General.TextTools.ReadNullTerminatedString*"></a>
   <h4 id="Textify_General_TextTools_ReadNullTerminatedString_System_String_System_Int32_" data-uid="Textify.General.TextTools.ReadNullTerminatedString(System.String,System.Int32)">ReadNullTerminatedString(string, int)</h4>
@@ -2683,7 +2699,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_RemovePrefix_System_String_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.RemovePrefix(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L890">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L912">View Source</a>
   </span>
   <a id="Textify_General_TextTools_RemovePrefix_" data-uid="Textify.General.TextTools.RemovePrefix*"></a>
   <h4 id="Textify_General_TextTools_RemovePrefix_System_String_System_String_" data-uid="Textify.General.TextTools.RemovePrefix(System.String,System.String)">RemovePrefix(string, string)</h4>
@@ -2707,12 +2723,14 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">prefix</span></td>
-        <td></td>
+        <td><p>Prefix (that is, a string that marks the beginning of a string)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2727,16 +2745,20 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>Modified string that doesn't contain a prefix before the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_RemovePrefix_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the string doesn't contain a prefix that you want to remove, the end result will be unchanged.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_RemoveSuffix_System_String_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.RemoveSuffix(System.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L903">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L931">View Source</a>
   </span>
   <a id="Textify_General_TextTools_RemoveSuffix_" data-uid="Textify.General.TextTools.RemoveSuffix*"></a>
   <h4 id="Textify_General_TextTools_RemoveSuffix_System_String_System_String_" data-uid="Textify.General.TextTools.RemoveSuffix(System.String,System.String)">RemoveSuffix(string, string)</h4>
@@ -2760,12 +2782,14 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">suffix</span></td>
-        <td></td>
+        <td><p>Suffix (that is, a string that marks the end of a string)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2780,10 +2804,14 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>Modified string that doesn't contain a suffix after the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_RemoveSuffix_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the string doesn't contain a suffix that you want to remove, the end result will be unchanged.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_ReplaceAll_System_String_System_Char___System_Char_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.ReplaceAll(System.String%2CSystem.Char%5B%5D%2CSystem.Char)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
@@ -3669,7 +3697,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_Reverse_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.Reverse(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1214">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1256">View Source</a>
   </span>
   <a id="Textify_General_TextTools_Reverse_" data-uid="Textify.General.TextTools.Reverse*"></a>
   <h4 id="Textify_General_TextTools_Reverse_System_String_" data-uid="Textify.General.TextTools.Reverse(System.String)">Reverse(string)</h4>
@@ -3718,7 +3746,7 @@
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_ShiftLetters_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.ShiftLetters(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L969">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1011">View Source</a>
   </span>
   <a id="Textify_General_TextTools_ShiftLetters_" data-uid="Textify.General.TextTools.ShiftLetters*"></a>
   <h4 id="Textify_General_TextTools_ShiftLetters_System_String_System_Int32_" data-uid="Textify.General.TextTools.ShiftLetters(System.String,System.Int32)">ShiftLetters(string, int)</h4>
@@ -4555,7 +4583,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_StartsWithCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.StartsWithCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1777">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1819">View Source</a>
   </span>
   <a id="Textify_General_TextTools_StartsWithCase_" data-uid="Textify.General.TextTools.StartsWithCase*"></a>
   <h4 id="Textify_General_TextTools_StartsWithCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.StartsWithCase(System.String,System.String,System.StringComparison)">StartsWithCase(string, string, StringComparison)</h4>
@@ -4632,7 +4660,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_StartsWithNoCase_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.StartsWithNoCase(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1760">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1802">View Source</a>
   </span>
   <a id="Textify_General_TextTools_StartsWithNoCase_" data-uid="Textify.General.TextTools.StartsWithNoCase*"></a>
   <h4 id="Textify_General_TextTools_StartsWithNoCase_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.StartsWithNoCase(System.String,System.String,System.StringComparison)">StartsWithNoCase(string, string, StringComparison)</h4>
@@ -4709,7 +4737,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_ToTitleCase_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.ToTitleCase(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1273">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1315">View Source</a>
   </span>
   <a id="Textify_General_TextTools_ToTitleCase_" data-uid="Textify.General.TextTools.ToTitleCase*"></a>
   <h4 id="Textify_General_TextTools_ToTitleCase_System_String_" data-uid="Textify.General.TextTools.ToTitleCase(System.String)">ToTitleCase(string)</h4>
@@ -4759,7 +4787,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_TruncateString_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.TruncateString(System.String%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1192">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1234">View Source</a>
   </span>
   <a id="Textify_General_TextTools_TruncateString_" data-uid="Textify.General.TextTools.TruncateString*"></a>
   <h4 id="Textify_General_TextTools_TruncateString_System_String_System_Int32_" data-uid="Textify.General.TextTools.TruncateString(System.String,System.Int32)">TruncateString(string, int)</h4>
@@ -4818,7 +4846,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_Unescape_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.Unescape(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1344">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1386">View Source</a>
   </span>
   <a id="Textify_General_TextTools_Unescape_" data-uid="Textify.General.TextTools.Unescape*"></a>
   <h4 id="Textify_General_TextTools_Unescape_System_String_" data-uid="Textify.General.TextTools.Unescape(System.String)">Unescape(string)</h4>
@@ -4933,7 +4961,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_UpperFirst_System_String_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.UpperFirst(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1243">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L1285">View Source</a>
   </span>
   <a id="Textify_General_TextTools_UpperFirst_" data-uid="Textify.General.TextTools.UpperFirst*"></a>
   <h4 id="Textify_General_TextTools_UpperFirst_System_String_" data-uid="Textify.General.TextTools.UpperFirst(System.String)">UpperFirst(string)</h4>
@@ -4983,7 +5011,7 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_VerifyPrefix_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.VerifyPrefix(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L916">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L951">View Source</a>
   </span>
   <a id="Textify_General_TextTools_VerifyPrefix_" data-uid="Textify.General.TextTools.VerifyPrefix*"></a>
   <h4 id="Textify_General_TextTools_VerifyPrefix_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.VerifyPrefix(System.String,System.String,System.StringComparison)">VerifyPrefix(string, string, StringComparison)</h4>
@@ -5007,17 +5035,20 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">prefix</span></td>
-        <td></td>
+        <td><p>Prefix (that is, a string that marks the beginning of a string)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparison</span></td>
-        <td></td>
+        <td><p>String comparison rules for case sensitivity and for culture settings</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -5032,16 +5063,20 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p>True if the prefix is detected; false otherwise.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_VerifyPrefix_System_String_System_String_System_StringComparison__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function is just a wrapper for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.startswith#system-string-startswith(system-string-system-stringcomparison)">StartsWith(string, StringComparison)</a></p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_General_TextTools_VerifySuffix_System_String_System_String_System_StringComparison_.md&amp;value=---%0Auid%3A%20Textify.General.TextTools.VerifySuffix(System.String%2CSystem.String%2CSystem.StringComparison)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L927">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/Textify/General/TextTools.cs/#L969">View Source</a>
   </span>
   <a id="Textify_General_TextTools_VerifySuffix_" data-uid="Textify.General.TextTools.VerifySuffix*"></a>
   <h4 id="Textify_General_TextTools_VerifySuffix_System_String_System_String_System_StringComparison_" data-uid="Textify.General.TextTools.VerifySuffix(System.String,System.String,System.StringComparison)">VerifySuffix(string, string, StringComparison)</h4>
@@ -5065,17 +5100,20 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>Target text</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">suffix</span></td>
-        <td></td>
+        <td><p>Suffix (that is, a string that marks the end of a string)</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparison</span></td>
-        <td></td>
+        <td><p>String comparison rules for case sensitivity and for culture settings</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -5090,10 +5128,14 @@ public static string[] SplitNewLinesOld(this string target)</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p>True if the suffix is detected; false otherwise.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Textify_General_TextTools_VerifySuffix_System_String_System_String_System_StringComparison__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function is just a wrapper for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.endswith#system-string-endswith(system-string-system-stringcomparison)">EndsWith(string, StringComparison)</a></p>
+</div>
 
 </article>
           </div>
