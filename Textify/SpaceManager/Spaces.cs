@@ -30,11 +30,6 @@ namespace Textify.SpaceManager
             '\u2005', '\u2006', '\u2007', '\u2008', '\u2009', '\u200A', '\u202F', '\u205F',
             '\u3000', '\u180E', '\u200B', '\u200C', '\u200D', '\u2060', '\uFEFF',
         ];
-        
-        internal static readonly char[] allSpaceChars =
-        [
-            ' ', .. badSpaceChars
-        ];
 
         internal static readonly Dictionary<string, byte[]> badSpaces = new()
         {

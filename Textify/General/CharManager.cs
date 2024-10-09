@@ -19,6 +19,7 @@
 
 using System;
 using System.Linq;
+using Textify.SpaceManager;
 
 namespace Textify.General
 {
@@ -27,6 +28,12 @@ namespace Textify.General
     /// </summary>
     public static class CharManager
     {
+        private static readonly char[] unicodeChars = Enumerable.Range(0, Convert.ToInt32(char.MaxValue) + 1).Select(Convert.ToChar).ToArray();
+        internal static readonly char[] allSpaceChars =
+        [
+            ' ', .. Spaces.badSpaceChars
+        ];
+
         /// <summary>
         /// New line constant
         /// </summary>
@@ -37,13 +44,13 @@ namespace Textify.General
         /// Gets all the letters and the numbers (ASCII).
         /// </summary>
         public static char[] GetAllAsciiChars() =>
-            Enumerable.Range(0, Convert.ToInt32(byte.MaxValue) + 1).Select(Convert.ToChar).ToArray();
+            unicodeChars.Take(byte.MaxValue).ToArray();
 
         /// <summary>
         /// Gets all the letters and the numbers (Unicode).
         /// </summary>
         public static char[] GetAllChars() =>
-            Enumerable.Range(0, Convert.ToInt32(char.MaxValue) + 1).Select(Convert.ToChar).ToArray();
+            unicodeChars;
 
         /// <summary>
         /// Gets all the letters and the numbers.

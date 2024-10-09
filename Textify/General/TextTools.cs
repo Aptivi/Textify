@@ -97,7 +97,7 @@ namespace Textify.General
         /// </summary>
         /// <param name="target">Target string</param>
         public static string[] SplitEncloseDoubleQuotesNoRelease(this string target) =>
-            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, Spaces.allSpaceChars);
+            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, CharManager.GetAllWhitespaceChars());
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula without releasing double quotes
@@ -105,7 +105,7 @@ namespace Textify.General
         /// <param name="target">Target string</param>
         /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
         public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, char[]? partialQuoteSplitChars = null) =>
-            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, partialQuoteSplitChars ?? Spaces.allSpaceChars);
+            SplitEncloseDoubleQuotesNoRelease(target, char.IsWhiteSpace, partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by a specific character using regular expression formula without releasing double quotes
@@ -114,7 +114,7 @@ namespace Textify.General
         /// <param name="match">Character to match</param>
         /// <param name="partialQuoteSplitChars">Split characters for partial quotes</param>
         public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, char match = ' ', char[]? partialQuoteSplitChars = null) =>
-            SplitEncloseDoubleQuotesNoRelease(target, match.Equals, partialQuoteSplitChars ?? Spaces.allSpaceChars);
+            SplitEncloseDoubleQuotesNoRelease(target, match.Equals, partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by a condition descriptor using regular expression formula without releasing double quotes
@@ -181,7 +181,7 @@ namespace Textify.General
                     int finalQuoteIdx = final.LastIndexOf(quoteChar);
                     string firstPart = final.Substring(0, finalQuoteIdx);
                     string secondPart = final.Substring(finalQuoteIdx);
-                    var splitFinal = secondPart.Split(partialQuoteSplitChars ?? Spaces.allSpaceChars);
+                    var splitFinal = secondPart.Split(partialQuoteSplitChars ?? CharManager.GetAllWhitespaceChars());
                     splitFinal[0] = firstPart + splitFinal[0];
                     matchesStr.AddRange(splitFinal);
                 }
