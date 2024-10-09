@@ -3681,6 +3681,38 @@ references:
   commentId: T:Textify.General.TextTools
   fullName: Textify.General.TextTools
   nameWithType: TextTools
+- uid: Textify.General.TextTools.AddPrefix(System.String,System.String,System.Boolean)
+  name: AddPrefix(string, string, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_AddPrefix_System_String_System_String_System_Boolean_
+  commentId: M:Textify.General.TextTools.AddPrefix(System.String,System.String,System.Boolean)
+  name.vb: AddPrefix(String, String, Boolean)
+  fullName: Textify.General.TextTools.AddPrefix(string, string, bool)
+  fullName.vb: Textify.General.TextTools.AddPrefix(String, String, Boolean)
+  nameWithType: TextTools.AddPrefix(string, string, bool)
+  nameWithType.vb: TextTools.AddPrefix(String, String, Boolean)
+- uid: Textify.General.TextTools.AddPrefix*
+  name: AddPrefix
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_AddPrefix_
+  commentId: Overload:Textify.General.TextTools.AddPrefix
+  isSpec: "True"
+  fullName: Textify.General.TextTools.AddPrefix
+  nameWithType: TextTools.AddPrefix
+- uid: Textify.General.TextTools.AddSuffix(System.String,System.String,System.Boolean)
+  name: AddSuffix(string, string, bool)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_AddSuffix_System_String_System_String_System_Boolean_
+  commentId: M:Textify.General.TextTools.AddSuffix(System.String,System.String,System.Boolean)
+  name.vb: AddSuffix(String, String, Boolean)
+  fullName: Textify.General.TextTools.AddSuffix(string, string, bool)
+  fullName.vb: Textify.General.TextTools.AddSuffix(String, String, Boolean)
+  nameWithType: TextTools.AddSuffix(string, string, bool)
+  nameWithType.vb: TextTools.AddSuffix(String, String, Boolean)
+- uid: Textify.General.TextTools.AddSuffix*
+  name: AddSuffix
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_AddSuffix_
+  commentId: Overload:Textify.General.TextTools.AddSuffix
+  isSpec: "True"
+  fullName: Textify.General.TextTools.AddSuffix
+  nameWithType: TextTools.AddSuffix
 - uid: Textify.General.TextTools.AllIndexesOf(System.String,System.Char)
   name: AllIndexesOf(string, char)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_AllIndexesOf_System_String_System_Char_
@@ -4185,6 +4217,56 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.LowerFirst
   nameWithType: TextTools.LowerFirst
+- uid: Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable{System.String})
+  name: OrderDescendLogically(IEnumerable<string>)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderDescendLogically_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: OrderDescendLogically(IEnumerable(Of String))
+  fullName: Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: Textify.General.TextTools.OrderDescendLogically(System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: TextTools.OrderDescendLogically(IEnumerable<string>)
+  nameWithType.vb: TextTools.OrderDescendLogically(IEnumerable(Of String))
+- uid: Textify.General.TextTools.OrderDescendLogically(System.String[])
+  name: OrderDescendLogically(string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderDescendLogically_System_String___
+  commentId: M:Textify.General.TextTools.OrderDescendLogically(System.String[])
+  name.vb: OrderDescendLogically(String())
+  fullName: Textify.General.TextTools.OrderDescendLogically(string[])
+  fullName.vb: Textify.General.TextTools.OrderDescendLogically(String())
+  nameWithType: TextTools.OrderDescendLogically(string[])
+  nameWithType.vb: TextTools.OrderDescendLogically(String())
+- uid: Textify.General.TextTools.OrderDescendLogically*
+  name: OrderDescendLogically
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderDescendLogically_
+  commentId: Overload:Textify.General.TextTools.OrderDescendLogically
+  isSpec: "True"
+  fullName: Textify.General.TextTools.OrderDescendLogically
+  nameWithType: TextTools.OrderDescendLogically
+- uid: Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable{System.String})
+  name: OrderLogically(IEnumerable<string>)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderLogically_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable{System.String})
+  name.vb: OrderLogically(IEnumerable(Of String))
+  fullName: Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: Textify.General.TextTools.OrderLogically(System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: TextTools.OrderLogically(IEnumerable<string>)
+  nameWithType.vb: TextTools.OrderLogically(IEnumerable(Of String))
+- uid: Textify.General.TextTools.OrderLogically(System.String[])
+  name: OrderLogically(string[])
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderLogically_System_String___
+  commentId: M:Textify.General.TextTools.OrderLogically(System.String[])
+  name.vb: OrderLogically(String())
+  fullName: Textify.General.TextTools.OrderLogically(string[])
+  fullName.vb: Textify.General.TextTools.OrderLogically(String())
+  nameWithType: TextTools.OrderLogically(string[])
+  nameWithType.vb: TextTools.OrderLogically(String())
+- uid: Textify.General.TextTools.OrderLogically*
+  name: OrderLogically
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_OrderLogically_
+  commentId: Overload:Textify.General.TextTools.OrderLogically
+  isSpec: "True"
+  fullName: Textify.General.TextTools.OrderLogically
+  nameWithType: TextTools.OrderLogically
 - uid: Textify.General.TextTools.ReadNullTerminatedString(System.String,System.Int32)
   name: ReadNullTerminatedString(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReadNullTerminatedString_System_String_System_Int32_
@@ -4729,6 +4811,38 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.UseTwoCellsForUnassignedChars
   nameWithType: TextTools.UseTwoCellsForUnassignedChars
+- uid: Textify.General.TextTools.VerifyPrefix(System.String,System.String,System.StringComparison)
+  name: VerifyPrefix(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_VerifyPrefix_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.VerifyPrefix(System.String,System.String,System.StringComparison)
+  name.vb: VerifyPrefix(String, String, StringComparison)
+  fullName: Textify.General.TextTools.VerifyPrefix(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.VerifyPrefix(String, String, System.StringComparison)
+  nameWithType: TextTools.VerifyPrefix(string, string, StringComparison)
+  nameWithType.vb: TextTools.VerifyPrefix(String, String, StringComparison)
+- uid: Textify.General.TextTools.VerifyPrefix*
+  name: VerifyPrefix
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_VerifyPrefix_
+  commentId: Overload:Textify.General.TextTools.VerifyPrefix
+  isSpec: "True"
+  fullName: Textify.General.TextTools.VerifyPrefix
+  nameWithType: TextTools.VerifyPrefix
+- uid: Textify.General.TextTools.VerifySuffix(System.String,System.String,System.StringComparison)
+  name: VerifySuffix(string, string, StringComparison)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_VerifySuffix_System_String_System_String_System_StringComparison_
+  commentId: M:Textify.General.TextTools.VerifySuffix(System.String,System.String,System.StringComparison)
+  name.vb: VerifySuffix(String, String, StringComparison)
+  fullName: Textify.General.TextTools.VerifySuffix(string, string, System.StringComparison)
+  fullName.vb: Textify.General.TextTools.VerifySuffix(String, String, System.StringComparison)
+  nameWithType: TextTools.VerifySuffix(string, string, StringComparison)
+  nameWithType.vb: TextTools.VerifySuffix(String, String, StringComparison)
+- uid: Textify.General.TextTools.VerifySuffix*
+  name: VerifySuffix
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_VerifySuffix_
+  commentId: Overload:Textify.General.TextTools.VerifySuffix
+  isSpec: "True"
+  fullName: Textify.General.TextTools.VerifySuffix
+  nameWithType: TextTools.VerifySuffix
 - uid: Textify.SpaceManager.Analysis
   name: Textify.SpaceManager.Analysis
   href: api/Textify.SpaceManager.Analysis.html
