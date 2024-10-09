@@ -859,6 +859,14 @@ namespace Textify.General
         /// <summary>
 		/// Adds a prefix from the text
 		/// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="prefix">Prefix (that is, a string that marks the beginning of a string)</param>
+        /// <param name="check">Verify the prefix before inserting</param>
+        /// <returns>Modified string that contains a prefix before the string.</returns>
+        /// <remarks>
+        /// If the string contains a prefix that you've already put, and you're attempting to add the same prefix
+        /// with checking turned on, the result will be the same as when you've passed in the target text.
+        /// </remarks>
 		public static string AddPrefix(this string text, string prefix, bool check = true)
         {
             if (text is null)
@@ -873,6 +881,14 @@ namespace Textify.General
         /// <summary>
         /// Adds a suffix from the text
         /// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="suffix">Suffix (that is, a string that marks the end of a string)</param>
+        /// <param name="check">Verify the suffix before inserting</param>
+        /// <returns>Modified string that contains a suffix after the string.</returns>
+        /// <remarks>
+        /// If the string contains a suffix that you've already put, and you're attempting to add the same suffix
+        /// with checking turned on, the result will be the same as when you've passed in the target text.
+        /// </remarks>
         public static string AddSuffix(this string text, string suffix, bool check = true)
         {
             if (text is null)
@@ -887,6 +903,12 @@ namespace Textify.General
         /// <summary>
 		/// Removes a prefix from the text
 		/// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="prefix">Prefix (that is, a string that marks the beginning of a string)</param>
+        /// <returns>Modified string that doesn't contain a prefix before the string.</returns>
+        /// <remarks>
+        /// If the string doesn't contain a prefix that you want to remove, the end result will be unchanged.
+        /// </remarks>
 		public static string RemovePrefix(this string text, string prefix)
         {
             if (text is null)
@@ -900,6 +922,12 @@ namespace Textify.General
         /// <summary>
         /// Removes a suffix from the text
         /// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="suffix">Suffix (that is, a string that marks the end of a string)</param>
+        /// <returns>Modified string that doesn't contain a suffix after the string.</returns>
+        /// <remarks>
+        /// If the string doesn't contain a suffix that you want to remove, the end result will be unchanged.
+        /// </remarks>
         public static string RemoveSuffix(this string text, string suffix)
         {
             if (text is null)
@@ -913,6 +941,13 @@ namespace Textify.General
         /// <summary>
 		/// Verifies a prefix from the text
 		/// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="prefix">Prefix (that is, a string that marks the beginning of a string)</param>
+        /// <param name="comparison">String comparison rules for case sensitivity and for culture settings</param>
+        /// <returns>True if the prefix is detected; false otherwise.</returns>
+        /// <remarks>
+        /// This function is just a wrapper for <see cref="string.StartsWith(string, StringComparison)"/>
+        /// </remarks>
 		public static bool VerifyPrefix(this string text, string prefix, StringComparison comparison = StringComparison.CurrentCulture)
         {
             if (text is null)
@@ -924,6 +959,13 @@ namespace Textify.General
         /// <summary>
         /// Verifies a suffix from the text
         /// </summary>
+        /// <param name="text">Target text</param>
+        /// <param name="suffix">Suffix (that is, a string that marks the end of a string)</param>
+        /// <param name="comparison">String comparison rules for case sensitivity and for culture settings</param>
+        /// <returns>True if the suffix is detected; false otherwise.</returns>
+        /// <remarks>
+        /// This function is just a wrapper for <see cref="string.EndsWith(string, StringComparison)"/>
+        /// </remarks>
         public static bool VerifySuffix(this string text, string suffix, StringComparison comparison = StringComparison.CurrentCulture)
         {
             if (text is null)
