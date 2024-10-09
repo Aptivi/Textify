@@ -1718,6 +1718,48 @@ namespace Textify.Tests.General
             bool result = source.ContainsWithNoCase(target);
             result.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests for palindrome (case-insensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Madam", true)]
+        [DataRow("Hello", false)]
+        [DataRow("Laal", true)]
+        [DataRow("Look", false)]
+        [DataRow("madam", true)]
+        [DataRow("hello", false)]
+        [DataRow("laal", true)]
+        [DataRow("look", false)]
+        [DataRow("", false)]
+        [DataRow(null, false)]
+        [Description("Querying")]
+        public void TestIsPalindromeNoCase(string source, bool expected)
+        {
+            bool result = source.IsPalindrome();
+            result.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests for palindrome (case-sensitive)
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Madam", false)]
+        [DataRow("Hello", false)]
+        [DataRow("Laal", false)]
+        [DataRow("Look", false)]
+        [DataRow("madam", true)]
+        [DataRow("hello", false)]
+        [DataRow("laal", true)]
+        [DataRow("look", false)]
+        [DataRow("", false)]
+        [DataRow(null, false)]
+        [Description("Querying")]
+        public void TestIsPalindromeCase(string source, bool expected)
+        {
+            bool result = source.IsPalindrome(true);
+            result.ShouldBe(expected);
+        }
     }
 
 }

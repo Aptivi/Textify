@@ -1900,5 +1900,40 @@ namespace Textify.General
         /// <returns>An array of logically sorted strings in a descending order</returns>
         public static IEnumerable<string> OrderDescendLogically(this IEnumerable<string> source) =>
             source.OrderByDescending(x => x, new LogicalComparer()).AsEnumerable();
+
+        /// <summary>
+        /// Checks to see if this string is a palindrome (madam) or not (alarm) and that it can form a mirror or not. This is a case-insensitive operation.
+        /// </summary>
+        /// <param name="target">Target string to process</param>
+        /// <param name="caseSensitive">Whether to process in case sensitive manner</param>
+        /// <returns>True if this string is a palindrome; false otherwise. Empty strings are not palindromes.</returns>
+        public static bool IsPalindrome(this string target, bool caseSensitive = false)
+        {
+            if (string.IsNullOrEmpty(target))
+                return false;
+
+            // Lowercase the string to make comparison case insensitive
+            if (!caseSensitive)
+                target = target.ToLower();
+
+            // Get the start and the end index
+            int leftMarker = 0;
+            int rightMarker = target.Length - 1;
+            while (leftMarker < rightMarker)
+            {
+                char leftChar = target[leftMarker];
+                char rightChar = target[rightMarker];
+
+                // Check for palindrome
+                if (leftChar != rightChar)
+                    return false;
+
+                leftMarker++;
+                rightMarker--;
+            }
+
+            // It's a palindrome
+            return true;
+        }
     }
 }
