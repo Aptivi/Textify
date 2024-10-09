@@ -1458,6 +1458,54 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests sorting strings alphanumerically (with extension)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSortAlphanumericallyExt()
+        {
+            string textsAndNumbers =
+                """
+                One
+                Two
+                Three
+                Test-4
+                Test-2
+                Test-29
+                Test-3
+                """;
+            string textsAndNumbersExpected ="One\nTest-2\nTest-3\nTest-4\nTest-29\nThree\nTwo";
+            string[] texts = textsAndNumbers.SplitNewLines();
+            string[] sorted = texts.OrderLogically();
+            string made = string.Join("\n", sorted);
+            made.ShouldBe(textsAndNumbersExpected);
+        }
+
+        /// <summary>
+        /// Tests sorting strings alphanumerically (with extension)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestSortAlphanumericallyExtDescending()
+        {
+            string textsAndNumbers =
+                """
+                One
+                Two
+                Three
+                Test-4
+                Test-2
+                Test-29
+                Test-3
+                """;
+            string textsAndNumbersExpected ="Two\nThree\nTest-29\nTest-4\nTest-3\nTest-2\nOne";
+            string[] texts = textsAndNumbers.SplitNewLines();
+            string[] sorted = texts.OrderDescendLogically();
+            string made = string.Join("\n", sorted);
+            made.ShouldBe(textsAndNumbersExpected);
+        }
+
+        /// <summary>
         /// Tests reading null terminated string
         /// </summary>
         [DataTestMethod]

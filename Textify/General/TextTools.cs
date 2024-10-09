@@ -23,6 +23,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Textify.General.Comparers;
 using Textify.General.Data;
 using Textify.SpaceManager;
 using Textify.Tools;
@@ -1775,5 +1776,37 @@ namespace Textify.General
         /// <exception cref="ArgumentException"></exception>
         public static bool ContainsWithNoCase(this string source, string target) =>
             source.ToLower().Contains(target.ToLower());
+
+        /// <summary>
+        /// Orders the string logically (alphanumerically) in an ascending order
+        /// </summary>
+        /// <param name="source">Source array of which it contains a string</param>
+        /// <returns>An array of logically sorted strings in an ascending order</returns>
+        public static string[] OrderLogically(this string[] source) =>
+            [.. OrderLogically(source as IEnumerable<string>)];
+
+        /// <summary>
+        /// Orders the string logically (alphanumerically) in a descending order
+        /// </summary>
+        /// <param name="source">Source array of which it contains a string</param>
+        /// <returns>An array of logically sorted strings in a descending order</returns>
+        public static string[] OrderDescendLogically(this string[] source) =>
+            [.. OrderDescendLogically(source as IEnumerable<string>)];
+
+        /// <summary>
+        /// Orders the string logically (alphanumerically) in an ascending order
+        /// </summary>
+        /// <param name="source">Source array of which it contains a string</param>
+        /// <returns>An array of logically sorted strings in an ascending order</returns>
+        public static IEnumerable<string> OrderLogically(this IEnumerable<string> source) =>
+            source.OrderBy(x => x, new LogicalComparer()).AsEnumerable();
+
+        /// <summary>
+        /// Orders the string logically (alphanumerically) in a descending order
+        /// </summary>
+        /// <param name="source">Source array of which it contains a string</param>
+        /// <returns>An array of logically sorted strings in a descending order</returns>
+        public static IEnumerable<string> OrderDescendLogically(this IEnumerable<string> source) =>
+            source.OrderByDescending(x => x, new LogicalComparer()).AsEnumerable();
     }
 }
