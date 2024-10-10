@@ -36,6 +36,8 @@ jobs:
           cat CHANGES >> "$GITHUB_OUTPUT"
           sha256sum tools/*.zip | sed -e 's/^/- /g' >> "$GITHUB_OUTPUT"
           echo 'EOF' >> "$GITHUB_OUTPUT"
+      - name: Release Asset Verification
+        run: |
           echo 'Body    | ${{ steps.release-asset.outputs.BODY }}'
           echo 'Subject | ${{ steps.release-asset.outputs.SUBJECT }}'
       - name: Binary Attestation
