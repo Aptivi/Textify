@@ -1,12 +1,12 @@
-We've released this version to speed up splitting with double quotes!
-
-**WARNING: The data's performance might be a little bit slow, but in an event that it becomes too slow, we'll revert the changes for the RAM usage.**
+We've released this version to add some more exciting string extensions!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Improved split performance
+- `[+]` Added palindrome detection extension
+- `[+]` Added more string extensions
+- `[*]` Improved CharManager performance
 
 Review the commit history if you want to get a deep insight about the changes.
 
