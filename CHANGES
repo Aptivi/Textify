@@ -1,11 +1,9 @@
-We've released this version to add some more exciting string extensions!
+We've released this version to further speed up character management!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added palindrome detection extension
-- `[+]` Added more string extensions
 - `[*]` Improved CharManager performance
 
 Review the commit history if you want to get a deep insight about the changes.
