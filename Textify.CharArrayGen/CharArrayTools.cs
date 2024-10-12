@@ -18,25 +18,19 @@
 //
 
 using System;
+using System.Linq;
 
-namespace Textify.General
+namespace Textify.CharArrayGen
 {
-    /// <summary>
-    /// Character querying and management module
-    /// </summary>
-    public static partial class CharManager
+    internal static class CharArrayTools
     {
-        /// <summary>
-        /// New line constant
-        /// </summary>
-        public static string NewLine =>
-            Environment.NewLine;
+        private static readonly char[] unicodeChars = Enumerable.Range(0, Convert.ToInt32(char.MaxValue) + 1).Select(Convert.ToChar).ToArray();
 
         /// <summary>
         /// Gets all the letters and the numbers (ASCII).
         /// </summary>
         public static char[] GetAllAsciiChars() =>
-            unicodeAsciiChars;
+            unicodeChars.Take(byte.MaxValue + 1).ToArray();
 
         /// <summary>
         /// Gets all the letters and the numbers (Unicode).
@@ -48,98 +42,91 @@ namespace Textify.General
         /// Gets all the letters and the numbers.
         /// </summary>
         public static char[] GetAllLettersAndNumbers(bool unicode = true) =>
-            unicode ? letterOrDigitChars : letterOrDigitAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsLetterOrDigit).ToArray();
 
         /// <summary>
         /// Gets all the letters.
         /// </summary>
         public static char[] GetAllLetters(bool unicode = true) =>
-            unicode ? letterChars : letterAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsLetter).ToArray();
 
         /// <summary>
         /// Gets all the numbers.
         /// </summary>
         public static char[] GetAllNumbers(bool unicode = true) =>
-            unicode ? numberChars : numberAsciiChars;
-
-        /// <summary>
-        /// Gets all the characters that represents a digit.
-        /// </summary>
-        public static char[] GetAllDigitChars(bool unicode = true) =>
-            unicode ? digitChars : digitAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsNumber).ToArray();
 
         /// <summary>
         /// Gets all the control characters.
         /// </summary>
         public static char[] GetAllControlChars() =>
-            controlChars;
+            GetAllChars().Where(char.IsControl).ToArray();
 
         /// <summary>
         /// Gets all the real control characters for binary file comparison.
         /// </summary>
         public static char[] GetAllRealControlChars() =>
-            realControlChars;
+            GetAllChars().Where(IsControlChar).ToArray();
+
+        /// <summary>
+        /// Gets all the characters that represents a digit.
+        /// </summary>
+        public static char[] GetAllDigitChars(bool unicode = true) =>
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsDigit).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a surrogate character.
         /// </summary>
         public static char[] GetAllSurrogateChars() =>
-            surrogateChars;
+            GetAllChars().Where(char.IsSurrogate).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a high surrogate character.
         /// </summary>
         public static char[] GetAllHighSurrogateChars() =>
-            highSurrogateChars;
+            GetAllChars().Where(char.IsHighSurrogate).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a low surrogate character.
         /// </summary>
         public static char[] GetAllLowSurrogateChars() =>
-            lowSurrogateChars;
+            GetAllChars().Where(char.IsLowSurrogate).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a lowercase character.
         /// </summary>
         public static char[] GetAllLowerChars(bool unicode = true) =>
-            unicode ? lowerChars : lowerAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsLower).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a uppercase character.
         /// </summary>
         public static char[] GetAllUpperChars(bool unicode = true) =>
-            unicode ? upperChars : upperAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsUpper).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a punctuation.
         /// </summary>
         public static char[] GetAllPunctuationChars(bool unicode = true) =>
-            unicode ? punctuationChars : punctuationAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsPunctuation).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a separator.
         /// </summary>
         public static char[] GetAllSeparatorChars(bool unicode = true) =>
-            unicode ? separatorChars : separatorAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsSeparator).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a separator.
         /// </summary>
         public static char[] GetAllSymbolChars(bool unicode = true) =>
-            unicode ? symbolChars : symbolAsciiChars;
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsSymbol).ToArray();
 
         /// <summary>
         /// Gets all the characters that represents a white space.
         /// </summary>
         public static char[] GetAllWhitespaceChars(bool unicode = true) =>
-            unicode ? whitespaceChars : whitespaceAsciiChars;
-
-        /// <summary>
-        /// A simplification for casting to return the ESC character
-        /// </summary>
-        /// <returns>ESC</returns>
-        public static char GetEsc() =>
-            '\x001b';
+            (unicode ? GetAllChars() : GetAllAsciiChars()).Where(char.IsWhiteSpace).ToArray();
 
         /// <summary>
         /// Is the character a real control character
