@@ -32,6 +32,3 @@ jobs:
         run: make dbg
       - name: Testing
         run: dotnet test --no-build --configuration Debug
-      - name: Debug (EmojiManager.g.cs)
-        if: always()
-        run: cat "/home/runner/work/Textify/Textify/Textify.Data/Generated/Textify.EmojiArrayGen/Textify.EmojiArrayGen.ArrayGenerator/EmojiManager.g.cs"
