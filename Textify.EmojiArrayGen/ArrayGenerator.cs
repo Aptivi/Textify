@@ -197,7 +197,7 @@ namespace Textify.EmojiArrayGen
                     .Replace("-", "")
                     .Replace(",", "")
                     .Replace(".", "")
-                    .Replace("’", "")
+                    .Replace("\u2019", "")
                     .Replace("#", "")
                     .Replace("*", "")
                     .Replace("(", "")
