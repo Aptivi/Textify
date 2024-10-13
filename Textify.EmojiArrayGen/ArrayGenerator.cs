@@ -191,7 +191,8 @@ namespace Textify.EmojiArrayGen
                         throw new Exception($"Status [{status}] is not valid"),
                 };
 
-                // Make the referencable names
+                // Make the referencable names. Any character that doesn't exist in ASCII should be placed as
+                // Unicode escapes in the oldValue parameter.
                 string safeName = name
                     .Replace(":", "")
                     .Replace("-", "")
