@@ -51,5 +51,62 @@ namespace Textify.Tests.Unicode
             var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
             charInstance.Na1.ShouldBe(expectedUnicodeName);
         }
+
+        [TestMethod]
+        [DataRow("😀", "grinning face")]
+        [DataRow("☺️", "smiling face")]
+        [DataRow("🤵‍♂️", "man in tuxedo")]
+        public void QueryEmojiFromEmoji(string emoji, string expectedName)
+        {
+            var emojiInstance = EmojiManager.GetEmojiFromEmoji(emoji);
+            emojiInstance.Name.ShouldBe(expectedName);
+        }
+
+        [TestMethod]
+        [DataRow("grinning face", "grinning face", "😀")]
+        [DataRow("smiling face", "smiling face", "☺️")]
+        [DataRow("man in tuxedo", "man in tuxedo", "🤵‍♂️")]
+        public void QueryEmojisFromEmojiName(string emoji, string expectedName, string expectedSequence)
+        {
+            var emojiInstance = EmojiManager.GetEmojisFromName(emoji)[0];
+            emojiInstance.Name.ShouldBe(expectedName);
+            emojiInstance.Sequence.ShouldBe(expectedSequence);
+        }
+
+        [TestMethod]
+        [DataRow(EmojiEnum.GrinningFace, "grinning face", "😀")]
+        [DataRow(EmojiEnum.SmilingFace, "smiling face", "☺️")]
+        [DataRow(EmojiEnum.ManInTuxedo, "man in tuxedo", "🤵‍♂️")]
+        public void QueryEmojisFromEmojiEnum(EmojiEnum emoji, string expectedName, string expectedSequence)
+        {
+            var emojiInstance = EmojiManager.GetEmojiFromEnum(emoji);
+            emojiInstance.Name.ShouldBe(expectedName);
+            emojiInstance.Sequence.ShouldBe(expectedSequence);
+        }
+
+        [TestMethod]
+        [DynamicData(nameof(EmojiData.AllEmojisFromEmojis), typeof(EmojiData))]
+        public void QueryEmojiFromEmojis(string emoji, string expectedName)
+        {
+            var emojiInstance = EmojiManager.GetEmojiFromEmoji(emoji);
+            emojiInstance.Name.ShouldBe(expectedName);
+        }
+
+        [TestMethod]
+        [DynamicData(nameof(EmojiData.AllEmojisFromEmojiNames), typeof(EmojiData))]
+        public void QueryEmojisFromEmojiNames(string emoji, string expectedName, string expectedSequence)
+        {
+            var emojiInstances = EmojiManager.GetEmojisFromName(emoji);
+            bool found = false;
+            foreach (var instance in emojiInstances)
+            {
+                if (instance.Name == expectedName && instance.Sequence == expectedSequence)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            found.ShouldBeTrue();
+        }
     }
 }

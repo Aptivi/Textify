@@ -21,7 +21,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -61,7 +60,7 @@ namespace Textify.EmojiArrayGen
 
                 using System.Collections.Generic;
 
-                namespace Textify.Unicode
+                namespace Textify.Data.Unicode
                 {
                     public static partial class EmojiManager
                     {
@@ -71,6 +70,9 @@ namespace Textify.EmojiArrayGen
                 $$"""
                     }
                     
+                    /// <summary>
+                    /// Emoji enumeration
+                    /// </summary>
                     public enum EmojiEnum
                     {
                 """;
@@ -100,7 +102,11 @@ namespace Textify.EmojiArrayGen
             var builder = new StringBuilder();
             for (int i = 0; i < emojis.Length; i++)
             {
-                var (_, refName, _, _) = emojis[i];
+                var (name, refName, sequence, status) = emojis[i];
+                string xmlName = name.Replace("&", "&amp;");
+                builder.AppendLine( "        /// <summary>");
+                builder.AppendLine($"        /// [<see cref=\"{status}\"/>] Emoji enumeration for \"{xmlName}\" that represents \"{sequence}\"");
+                builder.AppendLine( "        /// </summary>");
                 builder.AppendLine($"        {refName},");
             }
             return builder.ToString();
@@ -128,7 +134,7 @@ namespace Textify.EmojiArrayGen
                 string emojiEnumRef = $"EmojiEnum.{refName}";
 
                 // Add the resultant emoji info
-                builder.Append($"        {{ {emojiEnumRef}, new(\"{name}\", \"{sequence}\", {status}) }}");
+                builder.Append($"            {{ {emojiEnumRef}, new(\"{name}\", \"{sequence}\", {status}) }}");
                 if (i < emojis.Length - 1)
                     builder.AppendLine(",");
             }
@@ -180,7 +186,7 @@ namespace Textify.EmojiArrayGen
                     "component"             => "EmojiStatus.Component",
                     "fully-qualified"       => "EmojiStatus.FullyQualified",
                     "minimally-qualified"   => "EmojiStatus.MinimalQualified",
-                    "unqualified"           => "EmojiStatus.NonQualified",
+                    "unqualified"           => "EmojiStatus.NotQualified",
                     _ =>
                         throw new Exception($"Status [{status}] is not valid"),
                 };
@@ -198,6 +204,8 @@ namespace Textify.EmojiArrayGen
                     .Replace(")", "")
                     .Replace("“", "")
                     .Replace("”", "")
+                    .Replace("!", "")
+                    .Replace("&", "")
                 ;
                 string[] nameSplit = name.Split(' ').Skip(2).ToArray();
                 string[] sharpNameSplit = safeName.Split(' ').Skip(2).Select((name) =>
@@ -206,22 +214,20 @@ namespace Textify.EmojiArrayGen
                         return "";
                     var chars = name.ToCharArray();
                     chars[0] = char.ToUpper(chars[0]);
-                    return new string(chars);
+                    return char.IsNumber(chars[0]) ? $"Num{new string(chars)}" : new string(chars);
                 }).ToArray();
                 name = string.Join(" ", nameSplit);
                 string refName = string.Join("", sharpNameSplit);
 
                 // Check for conflicts
-                if (processedRefs.Contains(refName))
+                while (processedRefs.Contains(refName))
                 {
                     iteration++;
                     refName = $"{refName}{iteration}";
                 }
-                else
-                {
-                    iteration = 0;
+                if (!processedRefs.Contains(refName))
                     processedRefs.Add(refName);
-                }
+                iteration = 0;
 
                 // Add the final values
                 emojis.Add((name, refName, sequence, statusEnumRef));
