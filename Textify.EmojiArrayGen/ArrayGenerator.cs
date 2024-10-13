@@ -202,8 +202,8 @@ namespace Textify.EmojiArrayGen
                     .Replace("*", "")
                     .Replace("(", "")
                     .Replace(")", "")
-                    .Replace("“", "")
-                    .Replace("”", "")
+                    .Replace("\u201c", "")
+                    .Replace("\u201d", "")
                     .Replace("!", "")
                     .Replace("&", "")
                 ;
