@@ -19,6 +19,8 @@
     <PackageIcon>OfficialAppIcon-Textify-512.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Textify.Offline.Data</PackageId>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,9 +38,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="../assets/WordsList/Processed/*.zip" Visible="false" />
     <EmbeddedResource Include="../assets/UnicodeList/chars/*.zip" Visible="false" />
-    <EmbeddedResource Include="../assets/UnicodeList/emoji/emoji-test.txt" Visible="false" />
     <EmbeddedResource Include="../assets/NamesList/Processed/*.zip" Visible="false" />
     <EmbeddedResource Include="../assets/FigletFonts/*.flf" Visible="false" />
   </ItemGroup>

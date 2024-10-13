@@ -26,7 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{5C0028
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", "{F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textify.CharArrayGen", "Textify.CharArrayGen\Textify.CharArrayGen.csproj", "{D62E0479-796D-4497-9BD7-BFD1AFEED231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Textify.CharArrayGen", "Textify.CharArrayGen\Textify.CharArrayGen.csproj", "{D62E0479-796D-4497-9BD7-BFD1AFEED231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textify.EmojiArrayGen", "Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj", "{62DD1F22-852A-4571-A333-15FE29607D69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{D62E0479-796D-4497-9BD7-BFD1AFEED231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D62E0479-796D-4497-9BD7-BFD1AFEED231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D62E0479-796D-4497-9BD7-BFD1AFEED231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DD1F22-852A-4571-A333-15FE29607D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DD1F22-852A-4571-A333-15FE29607D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DD1F22-852A-4571-A333-15FE29607D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DD1F22-852A-4571-A333-15FE29607D69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{397ADB91-8A5D-405D-B714-06BD9E69AA63} = {DD49A9BB-1346-456A-91E6-067D54B5077C}
 		{7D95D016-F69E-4C27-946B-6657B9D25CF7} = {0A6A4E1B-3155-449E-9F2F-907FEBEDA33F}
 		{D62E0479-796D-4497-9BD7-BFD1AFEED231} = {F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}
+		{62DD1F22-852A-4571-A333-15FE29607D69} = {F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61AE20E4-668F-42E2-B113-3B8F2A86F008}
