@@ -1,10 +1,10 @@
-We've released this version to further speed up character management!
+We've released this version to introduce emoji management!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Improved CharManager performance
+- `[+]` Added emoji management
 
 Review the commit history if you want to get a deep insight about the changes.
 
