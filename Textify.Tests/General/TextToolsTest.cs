@@ -1790,6 +1790,19 @@ namespace Textify.Tests.General
             var result = source.ToStringBuilder();
             result.ToString().ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests breaking a surrogate pair
+        /// </summary>
+        [DataTestMethod]
+        [DynamicData(nameof(TextToolsData.BrokenSurrogates), typeof(TextToolsData))]
+        [Description("Querying")]
+        public void TestBreakSurrogates(string source, (char, char) expected)
+        {
+            var (high, low) = source.BreakSurrogates();
+            high.ShouldBe(expected.Item1);
+            low.ShouldBe(expected.Item2);
+        }
     }
 
 }

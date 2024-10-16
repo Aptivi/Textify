@@ -1971,5 +1971,20 @@ namespace Textify.General
                 return new();
             return new(source);
         }
+
+        /// <summary>
+        /// Breaks a surrogate pair into two surrogate characters
+        /// </summary>
+        /// <param name="source">Source string of exactly two characters that are valid surrogate characters and form a valid surrogate pair</param>
+        /// <returns>A tuple of high and low surrogate characters</returns>
+        /// <exception cref="TextifyException"></exception>
+        public static (char high, char low) BreakSurrogates(this string source)
+        {
+            if (source.Length != 2)
+                throw new TextifyException("To break surrogates, there needs to be two valid surrogate characters.");
+            if (!char.IsSurrogatePair(source[0], source[1]))
+                throw new TextifyException("The source string is not a valid surrogate pair.");
+            return (source[0], source[1]);
+        }
     }
 }
