@@ -1760,6 +1760,21 @@ namespace Textify.Tests.General
             bool result = source.IsPalindrome(true);
             result.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests for character replacement
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Textyfy", 4, 'i', "Textify")]
+        [DataRow("Nytrocid", 1, 'i', "Nitrocid")]
+        [DataRow("", 0, 'A', "")]
+        [DataRow(null, 0, 'A', "")]
+        [Description("Querying")]
+        public void TestReplaceChar(string source, int idx, char character, string expected)
+        {
+            string result = source.ReplaceChar(idx, character);
+            result.ShouldBe(expected);
+        }
     }
 
 }

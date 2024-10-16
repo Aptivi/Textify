@@ -1935,5 +1935,29 @@ namespace Textify.General
             // It's a palindrome
             return true;
         }
+
+        /// <summary>
+        /// Replaces a single character in a string with a new character
+        /// </summary>
+        /// <param name="source">Source string to process</param>
+        /// <param name="idx">Index of a character in which replacement is done</param>
+        /// <param name="replacement">Replacement character</param>
+        /// <returns>A modified string</returns>
+        /// <exception cref="Exception"></exception>
+        public static string ReplaceChar(this string source, int idx, char replacement)
+        {
+            // Sanity checks
+            if (string.IsNullOrEmpty(source))
+                return "";
+            if (idx < 0)
+                throw new Exception($"Specified index [{idx}] may not be less than zero");
+            if (idx >= source.Length)
+                throw new Exception($"Specified index [{idx}] may not be larger than the source string length [{source.Length}]");
+
+            // Replace the character in a specified index
+            char[] chars = source.ToCharArray();
+            chars[idx] = replacement;
+            return new(chars);
+        }
     }
 }
