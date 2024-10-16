@@ -25,6 +25,7 @@ using System.Linq;
 using System.Text;
 using Textify.General.Comparers;
 using Textify.General.Data;
+using Textify.General.Structures;
 using Textify.SpaceManager;
 using Textify.Tools;
 
@@ -1985,6 +1986,30 @@ namespace Textify.General
             if (!char.IsSurrogatePair(source[0], source[1]))
                 throw new TextifyException("The source string is not a valid surrogate pair.");
             return (source[0], source[1]);
+        }
+
+        /// <summary>
+        /// Gets a list of wide characters from a sentence
+        /// </summary>
+        /// <param name="sentence">Sentence to form</param>
+        /// <returns>Wide character instances</returns>
+        public static WideChar[] GetWideChars(this string sentence)
+        {
+            List<WideChar> wideChars = [];
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                char c = sentence[i];
+                if (!char.IsSurrogate(c))
+                    wideChars.Add((WideChar)c);
+                else if (i + 1 < sentence.Length && char.IsSurrogatePair(c, sentence[i + 1]))
+                {
+                    wideChars.Add(new WideChar(sentence[i + 1], c));
+                    i++;
+                }
+                else
+                    wideChars.Add((WideChar)c);
+            }
+            return [.. wideChars];
         }
     }
 }
