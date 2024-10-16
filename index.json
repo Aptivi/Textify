@@ -82,7 +82,7 @@
   "api/Textify.Data.Unicode.Emoji.html": {
     "href": "api/Textify.Data.Unicode.Emoji.html",
     "title": "Class Emoji | Textify API - Aptivi",
-    "keywords": "Class Emoji Emoji information Inheritance object Emoji Namespace: Textify.Data.Unicode Assembly: Textify.Data.dll Syntax public class Emoji Properties | Edit this page View Source Name Emoji name Declaration public string Name { get; } Property Value Type Description string | Edit this page View Source Sequence A sequence of characters that represent an emoji Declaration public string Sequence { get; } Property Value Type Description string | Edit this page View Source Status Emoji status Declaration public EmojiStatus Status { get; } Property Value Type Description EmojiStatus"
+    "keywords": "Class Emoji Emoji information Inheritance object Emoji Namespace: Textify.Data.Unicode Assembly: Textify.Data.dll Syntax public class Emoji Properties | Edit this page View Source Enum Emoji name enumeration Declaration public EmojiEnum Enum { get; } Property Value Type Description EmojiEnum | Edit this page View Source Name Emoji name Declaration public string Name { get; } Property Value Type Description string | Edit this page View Source Sequence A sequence of characters that represent an emoji Declaration public string Sequence { get; } Property Value Type Description string | Edit this page View Source Status Emoji status Declaration public EmojiStatus Status { get; } Property Value Type Description EmojiStatus"
   },
   "api/Textify.Data.Unicode.EmojiEnum.html": {
     "href": "api/Textify.Data.Unicode.EmojiEnum.html",

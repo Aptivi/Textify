@@ -901,6 +901,19 @@ references:
   commentId: T:Textify.Data.Unicode.Emoji
   fullName: Textify.Data.Unicode.Emoji
   nameWithType: Emoji
+- uid: Textify.Data.Unicode.Emoji.Enum
+  name: Enum
+  href: api/Textify.Data.Unicode.Emoji.html#Textify_Data_Unicode_Emoji_Enum
+  commentId: P:Textify.Data.Unicode.Emoji.Enum
+  fullName: Textify.Data.Unicode.Emoji.Enum
+  nameWithType: Emoji.Enum
+- uid: Textify.Data.Unicode.Emoji.Enum*
+  name: Enum
+  href: api/Textify.Data.Unicode.Emoji.html#Textify_Data_Unicode_Emoji_Enum_
+  commentId: Overload:Textify.Data.Unicode.Emoji.Enum
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.Emoji.Enum
+  nameWithType: Emoji.Enum
 - uid: Textify.Data.Unicode.Emoji.Name
   name: Name
   href: api/Textify.Data.Unicode.Emoji.html#Textify_Data_Unicode_Emoji_Name
