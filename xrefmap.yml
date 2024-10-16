@@ -34154,6 +34154,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.AllIndexesOf
   nameWithType: TextTools.AllIndexesOf
+- uid: Textify.General.TextTools.BreakSurrogates(System.String)
+  name: BreakSurrogates(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_BreakSurrogates_System_String_
+  commentId: M:Textify.General.TextTools.BreakSurrogates(System.String)
+  name.vb: BreakSurrogates(String)
+  fullName: Textify.General.TextTools.BreakSurrogates(string)
+  fullName.vb: Textify.General.TextTools.BreakSurrogates(String)
+  nameWithType: TextTools.BreakSurrogates(string)
+  nameWithType.vb: TextTools.BreakSurrogates(String)
+- uid: Textify.General.TextTools.BreakSurrogates*
+  name: BreakSurrogates
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_BreakSurrogates_
+  commentId: Overload:Textify.General.TextTools.BreakSurrogates
+  isSpec: "True"
+  fullName: Textify.General.TextTools.BreakSurrogates
+  nameWithType: TextTools.BreakSurrogates
 - uid: Textify.General.TextTools.CompareLogical(System.String,System.String)
   name: CompareLogical(string, string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_CompareLogical_System_String_System_String_
