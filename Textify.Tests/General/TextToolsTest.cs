@@ -1775,6 +1775,21 @@ namespace Textify.Tests.General
             string result = source.ReplaceChar(idx, character);
             result.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests for character replacement
+        /// </summary>
+        [DataTestMethod]
+        [DataRow("Textify", "Textify")]
+        [DataRow("Nitrocid", "Nitrocid")]
+        [DataRow("", "")]
+        [DataRow(null, "")]
+        [Description("Querying")]
+        public void TestToStringBuilder(string source, string expected)
+        {
+            var result = source.ToStringBuilder();
+            result.ToString().ShouldBe(expected);
+        }
     }
 
 }

@@ -1959,5 +1959,17 @@ namespace Textify.General
             chars[idx] = replacement;
             return new(chars);
         }
+
+        /// <summary>
+        /// Converts this string to a string builder
+        /// </summary>
+        /// <param name="source">Source string to convert from</param>
+        /// <returns>A string builder instance resulting from this string</returns>
+        public static StringBuilder ToStringBuilder(this string source)
+        {
+            if (string.IsNullOrEmpty(source))
+                return new();
+            return new(source);
+        }
     }
 }
