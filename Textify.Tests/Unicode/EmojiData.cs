@@ -30,5 +30,8 @@ namespace Textify.Tests.Unicode
 
         public static IEnumerable<object[]> AllEmojisFromEmojiNames =>
             EmojiManager.GetEmojis().Select((emoji) => new object[] { emoji.Name, emoji.Name, emoji.Sequence }).ToArray();
+
+        public static IEnumerable<object[]> AllEmojisFromEmojiEnums =>
+            EmojiManager.GetEmojis().Select((emoji) => new object[] { emoji.Enum, emoji.Name, emoji.Sequence }).ToArray();
     }
 }

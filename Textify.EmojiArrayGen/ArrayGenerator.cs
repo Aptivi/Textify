@@ -134,7 +134,7 @@ namespace Textify.EmojiArrayGen
                 string emojiEnumRef = $"EmojiEnum.{refName}";
 
                 // Add the resultant emoji info
-                builder.Append($"            {{ {emojiEnumRef}, new(\"{name}\", \"{sequence}\", {status}) }}");
+                builder.Append($"            {{ {emojiEnumRef}, new(\"{name}\", \"{sequence}\", {emojiEnumRef}, {status}) }}");
                 if (i < emojis.Length - 1)
                     builder.AppendLine(",");
             }

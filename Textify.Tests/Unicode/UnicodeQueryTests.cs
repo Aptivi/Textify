@@ -108,5 +108,14 @@ namespace Textify.Tests.Unicode
             }
             found.ShouldBeTrue();
         }
+
+        [TestMethod]
+        [DynamicData(nameof(EmojiData.AllEmojisFromEmojiEnums), typeof(EmojiData))]
+        public void QueryEmojiFromEmojiEnums(EmojiEnum emoji, string expectedName, string expectedSequence)
+        {
+            var emojiInstance = EmojiManager.GetEmojiFromEnum(emoji);
+            emojiInstance.Name.ShouldBe(expectedName);
+            emojiInstance.Sequence.ShouldBe(expectedSequence);
+        }
     }
 }

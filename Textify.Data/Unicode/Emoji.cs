@@ -26,6 +26,7 @@ namespace Textify.Data.Unicode
     {
         private readonly string name = "";
         private readonly string sequence = "";
+        private readonly EmojiEnum emojiEnum = (EmojiEnum)(-1);
         private readonly EmojiStatus status = EmojiStatus.Component;
 
         /// <summary>
@@ -41,15 +42,22 @@ namespace Textify.Data.Unicode
             sequence;
 
         /// <summary>
+        /// Emoji name enumeration
+        /// </summary>
+        public EmojiEnum Enum =>
+            emojiEnum;
+
+        /// <summary>
         /// Emoji status
         /// </summary>
         public EmojiStatus Status =>
             status;
 
-        internal Emoji(string name, string sequence, EmojiStatus status)
+        internal Emoji(string name, string sequence, EmojiEnum emojiEnum, EmojiStatus status)
         {
             this.name = name;
             this.sequence = sequence;
+            this.emojiEnum = emojiEnum;
             this.status = status;
         }
     }
