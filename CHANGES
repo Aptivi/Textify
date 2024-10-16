@@ -1,12 +1,14 @@
-**We apologize for your inconvenience, but it seems that uncontrollable internet connectivity and electricity issues in our environment is causing the release to be delayed, alongside other factors. We are extremely sorry for the release of 2.4.0 like that, and will conduct an internal investigation. Meanwhile, we'll stop further development of all projects until this investigation is complete and our environment is back to usable states.**
+**This release is a complementary release of the cancelled v2.4.0 of Textify.**
 
-We've released this version to introduce emoji management!
+We've released this version to introduce emoji management, as well as some more extensions and features!
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
 - `[+]` Added emoji management
+- `[+]` Added `WideChar` from Terminaux
+- `[+]` Added more extensions
 
 Review the commit history if you want to get a deep insight about the changes.
 
