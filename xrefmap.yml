@@ -34836,6 +34836,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceAllRange
   nameWithType: TextTools.ReplaceAllRange
+- uid: Textify.General.TextTools.ReplaceChar(System.String,System.Int32,System.Char)
+  name: ReplaceChar(string, int, char)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceChar_System_String_System_Int32_System_Char_
+  commentId: M:Textify.General.TextTools.ReplaceChar(System.String,System.Int32,System.Char)
+  name.vb: ReplaceChar(String, Integer, Char)
+  fullName: Textify.General.TextTools.ReplaceChar(string, int, char)
+  fullName.vb: Textify.General.TextTools.ReplaceChar(String, Integer, Char)
+  nameWithType: TextTools.ReplaceChar(string, int, char)
+  nameWithType.vb: TextTools.ReplaceChar(String, Integer, Char)
+- uid: Textify.General.TextTools.ReplaceChar*
+  name: ReplaceChar
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceChar_
+  commentId: Overload:Textify.General.TextTools.ReplaceChar
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ReplaceChar
+  nameWithType: TextTools.ReplaceChar
 - uid: Textify.General.TextTools.ReplaceLastOccurrence(System.String,System.Char,System.Char)
   name: ReplaceLastOccurrence(string, char, char)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceLastOccurrence_System_String_System_Char_System_Char_
