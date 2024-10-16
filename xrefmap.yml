@@ -35127,6 +35127,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.StartsWithNoCase
   nameWithType: TextTools.StartsWithNoCase
+- uid: Textify.General.TextTools.ToStringBuilder(System.String)
+  name: ToStringBuilder(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToStringBuilder_System_String_
+  commentId: M:Textify.General.TextTools.ToStringBuilder(System.String)
+  name.vb: ToStringBuilder(String)
+  fullName: Textify.General.TextTools.ToStringBuilder(string)
+  fullName.vb: Textify.General.TextTools.ToStringBuilder(String)
+  nameWithType: TextTools.ToStringBuilder(string)
+  nameWithType.vb: TextTools.ToStringBuilder(String)
+- uid: Textify.General.TextTools.ToStringBuilder*
+  name: ToStringBuilder
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToStringBuilder_
+  commentId: Overload:Textify.General.TextTools.ToStringBuilder
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ToStringBuilder
+  nameWithType: TextTools.ToStringBuilder
 - uid: Textify.General.TextTools.ToTitleCase(System.String)
   name: ToTitleCase(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_ToTitleCase_System_String_
