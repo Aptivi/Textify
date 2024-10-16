@@ -395,6 +395,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.Structures.WideChar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.Structures.WideChar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.Structures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.Structures.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.General.TextTools.yml",
       "output": {
         ".html": {

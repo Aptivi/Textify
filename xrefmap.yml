@@ -34091,6 +34091,459 @@ references:
   commentId: F:Textify.General.EnclosedDoubleQuotesType.SingleQuotes
   fullName: Textify.General.EnclosedDoubleQuotesType.SingleQuotes
   nameWithType: EnclosedDoubleQuotesType.SingleQuotes
+- uid: Textify.General.Structures
+  name: Textify.General.Structures
+  href: api/Textify.General.Structures.html
+  commentId: N:Textify.General.Structures
+  fullName: Textify.General.Structures
+  nameWithType: Textify.General.Structures
+- uid: Textify.General.Structures.WideChar
+  name: WideChar
+  href: api/Textify.General.Structures.WideChar.html
+  commentId: T:Textify.General.Structures.WideChar
+  fullName: Textify.General.Structures.WideChar
+  nameWithType: WideChar
+- uid: Textify.General.Structures.WideChar.#ctor(System.Char,System.Char,System.Boolean)
+  name: WideChar(char, char, bool)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar__ctor_System_Char_System_Char_System_Boolean_
+  commentId: M:Textify.General.Structures.WideChar.#ctor(System.Char,System.Char,System.Boolean)
+  name.vb: New(Char, Char, Boolean)
+  fullName: Textify.General.Structures.WideChar.WideChar(char, char, bool)
+  fullName.vb: Textify.General.Structures.WideChar.New(Char, Char, Boolean)
+  nameWithType: WideChar.WideChar(char, char, bool)
+  nameWithType.vb: WideChar.New(Char, Char, Boolean)
+- uid: Textify.General.Structures.WideChar.#ctor(System.Int64,System.Boolean)
+  name: WideChar(long, bool)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar__ctor_System_Int64_System_Boolean_
+  commentId: M:Textify.General.Structures.WideChar.#ctor(System.Int64,System.Boolean)
+  name.vb: New(Long, Boolean)
+  fullName: Textify.General.Structures.WideChar.WideChar(long, bool)
+  fullName.vb: Textify.General.Structures.WideChar.New(Long, Boolean)
+  nameWithType: WideChar.WideChar(long, bool)
+  nameWithType.vb: WideChar.New(Long, Boolean)
+- uid: Textify.General.Structures.WideChar.#ctor(System.String,System.Boolean)
+  name: WideChar(string, bool)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar__ctor_System_String_System_Boolean_
+  commentId: M:Textify.General.Structures.WideChar.#ctor(System.String,System.Boolean)
+  name.vb: New(String, Boolean)
+  fullName: Textify.General.Structures.WideChar.WideChar(string, bool)
+  fullName.vb: Textify.General.Structures.WideChar.New(String, Boolean)
+  nameWithType: WideChar.WideChar(string, bool)
+  nameWithType.vb: WideChar.New(String, Boolean)
+- uid: Textify.General.Structures.WideChar.#ctor*
+  name: WideChar
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar__ctor_
+  commentId: Overload:Textify.General.Structures.WideChar.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Textify.General.Structures.WideChar.WideChar
+  fullName.vb: Textify.General.Structures.WideChar.New
+  nameWithType: WideChar.WideChar
+  nameWithType.vb: WideChar.New
+- uid: Textify.General.Structures.WideChar.CompareTo(Textify.General.Structures.WideChar)
+  name: CompareTo(WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_CompareTo_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.CompareTo(Textify.General.Structures.WideChar)
+  fullName: Textify.General.Structures.WideChar.CompareTo(Textify.General.Structures.WideChar)
+  nameWithType: WideChar.CompareTo(WideChar)
+- uid: Textify.General.Structures.WideChar.CompareTo*
+  name: CompareTo
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_CompareTo_
+  commentId: Overload:Textify.General.Structures.WideChar.CompareTo
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.CompareTo
+  nameWithType: WideChar.CompareTo
+- uid: Textify.General.Structures.WideChar.Equals(System.Object)
+  name: Equals(object)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Equals_System_Object_
+  commentId: M:Textify.General.Structures.WideChar.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Textify.General.Structures.WideChar.Equals(object)
+  fullName.vb: Textify.General.Structures.WideChar.Equals(Object)
+  nameWithType: WideChar.Equals(object)
+  nameWithType.vb: WideChar.Equals(Object)
+- uid: Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar)
+  name: Equals(WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Equals_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar)
+  fullName: Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar)
+  nameWithType: WideChar.Equals(WideChar)
+- uid: Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: Equals(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Equals_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  fullName: Textify.General.Structures.WideChar.Equals(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.Equals(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.Equals*
+  name: Equals
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Equals_
+  commentId: Overload:Textify.General.Structures.WideChar.Equals
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.Equals
+  nameWithType: WideChar.Equals
+- uid: Textify.General.Structures.WideChar.GetCharCode
+  name: GetCharCode()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetCharCode
+  commentId: M:Textify.General.Structures.WideChar.GetCharCode
+  fullName: Textify.General.Structures.WideChar.GetCharCode()
+  nameWithType: WideChar.GetCharCode()
+- uid: Textify.General.Structures.WideChar.GetCharCode*
+  name: GetCharCode
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetCharCode_
+  commentId: Overload:Textify.General.Structures.WideChar.GetCharCode
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.GetCharCode
+  nameWithType: WideChar.GetCharCode
+- uid: Textify.General.Structures.WideChar.GetHashCode
+  name: GetHashCode()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetHashCode
+  commentId: M:Textify.General.Structures.WideChar.GetHashCode
+  fullName: Textify.General.Structures.WideChar.GetHashCode()
+  nameWithType: WideChar.GetHashCode()
+- uid: Textify.General.Structures.WideChar.GetHashCode*
+  name: GetHashCode
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetHashCode_
+  commentId: Overload:Textify.General.Structures.WideChar.GetHashCode
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.GetHashCode
+  nameWithType: WideChar.GetHashCode
+- uid: Textify.General.Structures.WideChar.GetLength
+  name: GetLength()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetLength
+  commentId: M:Textify.General.Structures.WideChar.GetLength
+  fullName: Textify.General.Structures.WideChar.GetLength()
+  nameWithType: WideChar.GetLength()
+- uid: Textify.General.Structures.WideChar.GetLength*
+  name: GetLength
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_GetLength_
+  commentId: Overload:Textify.General.Structures.WideChar.GetLength
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.GetLength
+  nameWithType: WideChar.GetLength
+- uid: Textify.General.Structures.WideChar.IsValidChar
+  name: IsValidChar()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_IsValidChar
+  commentId: M:Textify.General.Structures.WideChar.IsValidChar
+  fullName: Textify.General.Structures.WideChar.IsValidChar()
+  nameWithType: WideChar.IsValidChar()
+- uid: Textify.General.Structures.WideChar.IsValidChar*
+  name: IsValidChar
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_IsValidChar_
+  commentId: Overload:Textify.General.Structures.WideChar.IsValidChar
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.IsValidChar
+  nameWithType: WideChar.IsValidChar
+- uid: Textify.General.Structures.WideChar.IsValidSurrogate
+  name: IsValidSurrogate()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_IsValidSurrogate
+  commentId: M:Textify.General.Structures.WideChar.IsValidSurrogate
+  fullName: Textify.General.Structures.WideChar.IsValidSurrogate()
+  nameWithType: WideChar.IsValidSurrogate()
+- uid: Textify.General.Structures.WideChar.IsValidSurrogate*
+  name: IsValidSurrogate
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_IsValidSurrogate_
+  commentId: Overload:Textify.General.Structures.WideChar.IsValidSurrogate
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.IsValidSurrogate
+  nameWithType: WideChar.IsValidSurrogate
+- uid: Textify.General.Structures.WideChar.Parse(System.Char,System.Char)
+  name: Parse(char, char)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Parse_System_Char_System_Char_
+  commentId: M:Textify.General.Structures.WideChar.Parse(System.Char,System.Char)
+  name.vb: Parse(Char, Char)
+  fullName: Textify.General.Structures.WideChar.Parse(char, char)
+  fullName.vb: Textify.General.Structures.WideChar.Parse(Char, Char)
+  nameWithType: WideChar.Parse(char, char)
+  nameWithType.vb: WideChar.Parse(Char, Char)
+- uid: Textify.General.Structures.WideChar.Parse(System.Int64)
+  name: Parse(long)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Parse_System_Int64_
+  commentId: M:Textify.General.Structures.WideChar.Parse(System.Int64)
+  name.vb: Parse(Long)
+  fullName: Textify.General.Structures.WideChar.Parse(long)
+  fullName.vb: Textify.General.Structures.WideChar.Parse(Long)
+  nameWithType: WideChar.Parse(long)
+  nameWithType.vb: WideChar.Parse(Long)
+- uid: Textify.General.Structures.WideChar.Parse(System.String)
+  name: Parse(string)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Parse_System_String_
+  commentId: M:Textify.General.Structures.WideChar.Parse(System.String)
+  name.vb: Parse(String)
+  fullName: Textify.General.Structures.WideChar.Parse(string)
+  fullName.vb: Textify.General.Structures.WideChar.Parse(String)
+  nameWithType: WideChar.Parse(string)
+  nameWithType.vb: WideChar.Parse(String)
+- uid: Textify.General.Structures.WideChar.Parse*
+  name: Parse
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_Parse_
+  commentId: Overload:Textify.General.Structures.WideChar.Parse
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.Parse
+  nameWithType: WideChar.Parse
+- uid: Textify.General.Structures.WideChar.ToString
+  name: ToString()
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_ToString
+  commentId: M:Textify.General.Structures.WideChar.ToString
+  fullName: Textify.General.Structures.WideChar.ToString()
+  nameWithType: WideChar.ToString()
+- uid: Textify.General.Structures.WideChar.ToString*
+  name: ToString
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_ToString_
+  commentId: Overload:Textify.General.Structures.WideChar.ToString
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.ToString
+  nameWithType: WideChar.ToString
+- uid: Textify.General.Structures.WideChar.TryParse(System.Char,System.Char,System.Nullable{Textify.General.Structures.WideChar}@)
+  name: TryParse(char, char, out WideChar?)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_TryParse_System_Char_System_Char_System_Nullable_Textify_General_Structures_WideChar___
+  commentId: M:Textify.General.Structures.WideChar.TryParse(System.Char,System.Char,System.Nullable{Textify.General.Structures.WideChar}@)
+  name.vb: TryParse(Char, Char, WideChar?)
+  fullName: Textify.General.Structures.WideChar.TryParse(char, char, out Textify.General.Structures.WideChar?)
+  fullName.vb: Textify.General.Structures.WideChar.TryParse(Char, Char, Textify.General.Structures.WideChar?)
+  nameWithType: WideChar.TryParse(char, char, out WideChar?)
+  nameWithType.vb: WideChar.TryParse(Char, Char, WideChar?)
+- uid: Textify.General.Structures.WideChar.TryParse(System.Int64,System.Nullable{Textify.General.Structures.WideChar}@)
+  name: TryParse(long, out WideChar?)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_TryParse_System_Int64_System_Nullable_Textify_General_Structures_WideChar___
+  commentId: M:Textify.General.Structures.WideChar.TryParse(System.Int64,System.Nullable{Textify.General.Structures.WideChar}@)
+  name.vb: TryParse(Long, WideChar?)
+  fullName: Textify.General.Structures.WideChar.TryParse(long, out Textify.General.Structures.WideChar?)
+  fullName.vb: Textify.General.Structures.WideChar.TryParse(Long, Textify.General.Structures.WideChar?)
+  nameWithType: WideChar.TryParse(long, out WideChar?)
+  nameWithType.vb: WideChar.TryParse(Long, WideChar?)
+- uid: Textify.General.Structures.WideChar.TryParse(System.String,System.Nullable{Textify.General.Structures.WideChar}@)
+  name: TryParse(string, out WideChar?)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_TryParse_System_String_System_Nullable_Textify_General_Structures_WideChar___
+  commentId: M:Textify.General.Structures.WideChar.TryParse(System.String,System.Nullable{Textify.General.Structures.WideChar}@)
+  name.vb: TryParse(String, WideChar?)
+  fullName: Textify.General.Structures.WideChar.TryParse(string, out Textify.General.Structures.WideChar?)
+  fullName.vb: Textify.General.Structures.WideChar.TryParse(String, Textify.General.Structures.WideChar?)
+  nameWithType: WideChar.TryParse(string, out WideChar?)
+  nameWithType.vb: WideChar.TryParse(String, WideChar?)
+- uid: Textify.General.Structures.WideChar.TryParse*
+  name: TryParse
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_TryParse_
+  commentId: Overload:Textify.General.Structures.WideChar.TryParse
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideChar.TryParse
+  nameWithType: WideChar.TryParse
+- uid: Textify.General.Structures.WideChar.op_Addition(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator +(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Addition_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_Addition(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: +(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator +(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.+(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator +(WideChar, WideChar)
+  nameWithType.vb: WideChar.+(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_Addition*
+  name: operator +
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Addition_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: Textify.General.Structures.WideChar.operator +
+  fullName.vb: Textify.General.Structures.WideChar.+
+  nameWithType: WideChar.operator +
+  nameWithType.vb: WideChar.+
+- uid: Textify.General.Structures.WideChar.op_Equality(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator ==(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Equality_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_Equality(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: =(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator ==(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator ==(WideChar, WideChar)
+  nameWithType.vb: WideChar.=(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_Equality*
+  name: operator ==
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Equality_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: Textify.General.Structures.WideChar.operator ==
+  fullName.vb: Textify.General.Structures.WideChar.=
+  nameWithType: WideChar.operator ==
+  nameWithType.vb: WideChar.=
+- uid: Textify.General.Structures.WideChar.op_Explicit(System.Int64)~Textify.General.Structures.WideChar
+  name: explicit operator WideChar(long)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Explicit_System_Int64__Textify_General_Structures_WideChar
+  commentId: M:Textify.General.Structures.WideChar.op_Explicit(System.Int64)~Textify.General.Structures.WideChar
+  name.vb: CType(Long)
+  fullName: Textify.General.Structures.WideChar.explicit operator Textify.General.Structures.WideChar(long)
+  fullName.vb: Textify.General.Structures.WideChar.CType(Long)
+  nameWithType: WideChar.explicit operator WideChar(long)
+  nameWithType.vb: WideChar.CType(Long)
+- uid: Textify.General.Structures.WideChar.op_Explicit(System.String)~Textify.General.Structures.WideChar
+  name: explicit operator WideChar(string)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Explicit_System_String__Textify_General_Structures_WideChar
+  commentId: M:Textify.General.Structures.WideChar.op_Explicit(System.String)~Textify.General.Structures.WideChar
+  name.vb: CType(String)
+  fullName: Textify.General.Structures.WideChar.explicit operator Textify.General.Structures.WideChar(string)
+  fullName.vb: Textify.General.Structures.WideChar.CType(String)
+  nameWithType: WideChar.explicit operator WideChar(string)
+  nameWithType.vb: WideChar.CType(String)
+- uid: Textify.General.Structures.WideChar.op_Explicit*
+  name: explicit operator
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Explicit_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Explicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Textify.General.Structures.WideChar.explicit operator
+  fullName.vb: Textify.General.Structures.WideChar.CType
+  nameWithType: WideChar.explicit operator
+  nameWithType.vb: WideChar.CType
+- uid: Textify.General.Structures.WideChar.op_GreaterThan(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator >(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_GreaterThan_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_GreaterThan(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: '>(WideChar, WideChar)'
+  fullName: Textify.General.Structures.WideChar.operator >(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.>(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator >(WideChar, WideChar)
+  nameWithType.vb: WideChar.>(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_GreaterThan*
+  name: operator >
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_GreaterThan_
+  commentId: Overload:Textify.General.Structures.WideChar.op_GreaterThan
+  isSpec: "True"
+  name.vb: '>'
+  fullName: Textify.General.Structures.WideChar.operator >
+  fullName.vb: Textify.General.Structures.WideChar.>
+  nameWithType: WideChar.operator >
+  nameWithType.vb: WideChar.>
+- uid: Textify.General.Structures.WideChar.op_GreaterThanOrEqual(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator >=(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_GreaterThanOrEqual_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_GreaterThanOrEqual(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: '>=(WideChar, WideChar)'
+  fullName: Textify.General.Structures.WideChar.operator >=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.>=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator >=(WideChar, WideChar)
+  nameWithType.vb: WideChar.>=(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_GreaterThanOrEqual*
+  name: operator >=
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_GreaterThanOrEqual_
+  commentId: Overload:Textify.General.Structures.WideChar.op_GreaterThanOrEqual
+  isSpec: "True"
+  name.vb: '>='
+  fullName: Textify.General.Structures.WideChar.operator >=
+  fullName.vb: Textify.General.Structures.WideChar.>=
+  nameWithType: WideChar.operator >=
+  nameWithType.vb: WideChar.>=
+- uid: Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.Int64
+  name: implicit operator long(WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Implicit_Textify_General_Structures_WideChar__System_Int64
+  commentId: M:Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.Int64
+  name.vb: CType(WideChar)
+  fullName: Textify.General.Structures.WideChar.implicit operator long(Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.CType(Textify.General.Structures.WideChar)
+  nameWithType: WideChar.implicit operator long(WideChar)
+  nameWithType.vb: WideChar.CType(WideChar)
+- uid: Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.String
+  name: implicit operator string(WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Implicit_Textify_General_Structures_WideChar__System_String
+  commentId: M:Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.String
+  name.vb: CType(WideChar)
+  fullName: Textify.General.Structures.WideChar.implicit operator string(Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.CType(Textify.General.Structures.WideChar)
+  nameWithType: WideChar.implicit operator string(WideChar)
+  nameWithType.vb: WideChar.CType(WideChar)
+- uid: Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.ValueTuple{System.Char,System.Char}
+  name: implicit operator (char high, char low)(WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Implicit_Textify_General_Structures_WideChar__System_ValueTuple_System_Char_System_Char_
+  commentId: M:Textify.General.Structures.WideChar.op_Implicit(Textify.General.Structures.WideChar)~System.ValueTuple{System.Char,System.Char}
+  name.vb: CType(WideChar)
+  fullName: Textify.General.Structures.WideChar.implicit operator (char high, char low)(Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.CType(Textify.General.Structures.WideChar)
+  nameWithType: WideChar.implicit operator (char high, char low)(WideChar)
+  nameWithType.vb: WideChar.CType(WideChar)
+- uid: Textify.General.Structures.WideChar.op_Implicit*
+  name: implicit operator
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Implicit_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Textify.General.Structures.WideChar.implicit operator
+  fullName.vb: Textify.General.Structures.WideChar.CType
+  nameWithType: WideChar.implicit operator
+  nameWithType.vb: WideChar.CType
+- uid: Textify.General.Structures.WideChar.op_Inequality(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator !=(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Inequality_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_Inequality(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: <>(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator !=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.<>(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator !=(WideChar, WideChar)
+  nameWithType.vb: WideChar.<>(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_Inequality*
+  name: operator !=
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Inequality_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: Textify.General.Structures.WideChar.operator !=
+  fullName.vb: Textify.General.Structures.WideChar.<>
+  nameWithType: WideChar.operator !=
+  nameWithType.vb: WideChar.<>
+- uid: Textify.General.Structures.WideChar.op_LessThan(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator <(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_LessThan_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_LessThan(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: <(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator <(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.<(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator <(WideChar, WideChar)
+  nameWithType.vb: WideChar.<(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_LessThan*
+  name: operator <
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_LessThan_
+  commentId: Overload:Textify.General.Structures.WideChar.op_LessThan
+  isSpec: "True"
+  name.vb: <
+  fullName: Textify.General.Structures.WideChar.operator <
+  fullName.vb: Textify.General.Structures.WideChar.<
+  nameWithType: WideChar.operator <
+  nameWithType.vb: WideChar.<
+- uid: Textify.General.Structures.WideChar.op_LessThanOrEqual(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator <=(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_LessThanOrEqual_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_LessThanOrEqual(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: <=(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator <=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.<=(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator <=(WideChar, WideChar)
+  nameWithType.vb: WideChar.<=(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_LessThanOrEqual*
+  name: operator <=
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_LessThanOrEqual_
+  commentId: Overload:Textify.General.Structures.WideChar.op_LessThanOrEqual
+  isSpec: "True"
+  name.vb: <=
+  fullName: Textify.General.Structures.WideChar.operator <=
+  fullName.vb: Textify.General.Structures.WideChar.<=
+  nameWithType: WideChar.operator <=
+  nameWithType.vb: WideChar.<=
+- uid: Textify.General.Structures.WideChar.op_Subtraction(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name: operator -(WideChar, WideChar)
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Subtraction_Textify_General_Structures_WideChar_Textify_General_Structures_WideChar_
+  commentId: M:Textify.General.Structures.WideChar.op_Subtraction(Textify.General.Structures.WideChar,Textify.General.Structures.WideChar)
+  name.vb: -(WideChar, WideChar)
+  fullName: Textify.General.Structures.WideChar.operator -(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  fullName.vb: Textify.General.Structures.WideChar.-(Textify.General.Structures.WideChar, Textify.General.Structures.WideChar)
+  nameWithType: WideChar.operator -(WideChar, WideChar)
+  nameWithType.vb: WideChar.-(WideChar, WideChar)
+- uid: Textify.General.Structures.WideChar.op_Subtraction*
+  name: operator -
+  href: api/Textify.General.Structures.WideChar.html#Textify_General_Structures_WideChar_op_Subtraction_
+  commentId: Overload:Textify.General.Structures.WideChar.op_Subtraction
+  isSpec: "True"
+  name.vb: '-'
+  fullName: Textify.General.Structures.WideChar.operator -
+  fullName.vb: Textify.General.Structures.WideChar.-
+  nameWithType: WideChar.operator -
+  nameWithType.vb: WideChar.-
 - uid: Textify.General.TextTools
   name: TextTools
   href: api/Textify.General.TextTools.html
@@ -34567,6 +35020,22 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.GetListOfRepeatedLetters
   nameWithType: TextTools.GetListOfRepeatedLetters
+- uid: Textify.General.TextTools.GetWideChars(System.String)
+  name: GetWideChars(string)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWideChars_System_String_
+  commentId: M:Textify.General.TextTools.GetWideChars(System.String)
+  name.vb: GetWideChars(String)
+  fullName: Textify.General.TextTools.GetWideChars(string)
+  fullName.vb: Textify.General.TextTools.GetWideChars(String)
+  nameWithType: TextTools.GetWideChars(string)
+  nameWithType.vb: TextTools.GetWideChars(String)
+- uid: Textify.General.TextTools.GetWideChars*
+  name: GetWideChars
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWideChars_
+  commentId: Overload:Textify.General.TextTools.GetWideChars
+  isSpec: "True"
+  fullName: Textify.General.TextTools.GetWideChars
+  nameWithType: TextTools.GetWideChars
 - uid: Textify.General.TextTools.GetWrappedSentences(System.String,System.Int32)
   name: GetWrappedSentences(string, int)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_GetWrappedSentences_System_String_System_Int32_
