@@ -405,6 +405,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.General.Structures.WideString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.General.Structures.WideString.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.General.Structures.yml",
       "output": {
         ".html": {

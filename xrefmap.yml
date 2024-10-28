@@ -34544,6 +34544,251 @@ references:
   fullName.vb: Textify.General.Structures.WideChar.-
   nameWithType: WideChar.operator -
   nameWithType.vb: WideChar.-
+- uid: Textify.General.Structures.WideString
+  name: WideString
+  href: api/Textify.General.Structures.WideString.html
+  commentId: T:Textify.General.Structures.WideString
+  fullName: Textify.General.Structures.WideString
+  nameWithType: WideString
+- uid: Textify.General.Structures.WideString.#ctor(System.String)
+  name: WideString(string)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString__ctor_System_String_
+  commentId: M:Textify.General.Structures.WideString.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Textify.General.Structures.WideString.WideString(string)
+  fullName.vb: Textify.General.Structures.WideString.New(String)
+  nameWithType: WideString.WideString(string)
+  nameWithType.vb: WideString.New(String)
+- uid: Textify.General.Structures.WideString.#ctor*
+  name: WideString
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString__ctor_
+  commentId: Overload:Textify.General.Structures.WideString.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Textify.General.Structures.WideString.WideString
+  fullName.vb: Textify.General.Structures.WideString.New
+  nameWithType: WideString.WideString
+  nameWithType.vb: WideString.New
+- uid: Textify.General.Structures.WideString.CompareTo(Textify.General.Structures.WideString)
+  name: CompareTo(WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_CompareTo_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.CompareTo(Textify.General.Structures.WideString)
+  fullName: Textify.General.Structures.WideString.CompareTo(Textify.General.Structures.WideString)
+  nameWithType: WideString.CompareTo(WideString)
+- uid: Textify.General.Structures.WideString.CompareTo*
+  name: CompareTo
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_CompareTo_
+  commentId: Overload:Textify.General.Structures.WideString.CompareTo
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.CompareTo
+  nameWithType: WideString.CompareTo
+- uid: Textify.General.Structures.WideString.Equals(System.Object)
+  name: Equals(object)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Equals_System_Object_
+  commentId: M:Textify.General.Structures.WideString.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Textify.General.Structures.WideString.Equals(object)
+  fullName.vb: Textify.General.Structures.WideString.Equals(Object)
+  nameWithType: WideString.Equals(object)
+  nameWithType.vb: WideString.Equals(Object)
+- uid: Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString)
+  name: Equals(WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Equals_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString)
+  fullName: Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString)
+  nameWithType: WideString.Equals(WideString)
+- uid: Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name: Equals(WideString, WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Equals_Textify_General_Structures_WideString_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  fullName: Textify.General.Structures.WideString.Equals(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  nameWithType: WideString.Equals(WideString, WideString)
+- uid: Textify.General.Structures.WideString.Equals*
+  name: Equals
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Equals_
+  commentId: Overload:Textify.General.Structures.WideString.Equals
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.Equals
+  nameWithType: WideString.Equals
+- uid: Textify.General.Structures.WideString.GetEnumerator
+  name: GetEnumerator()
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_GetEnumerator
+  commentId: M:Textify.General.Structures.WideString.GetEnumerator
+  fullName: Textify.General.Structures.WideString.GetEnumerator()
+  nameWithType: WideString.GetEnumerator()
+- uid: Textify.General.Structures.WideString.GetEnumerator*
+  name: GetEnumerator
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_GetEnumerator_
+  commentId: Overload:Textify.General.Structures.WideString.GetEnumerator
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.GetEnumerator
+  nameWithType: WideString.GetEnumerator
+- uid: Textify.General.Structures.WideString.GetHashCode
+  name: GetHashCode()
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_GetHashCode
+  commentId: M:Textify.General.Structures.WideString.GetHashCode
+  fullName: Textify.General.Structures.WideString.GetHashCode()
+  nameWithType: WideString.GetHashCode()
+- uid: Textify.General.Structures.WideString.GetHashCode*
+  name: GetHashCode
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_GetHashCode_
+  commentId: Overload:Textify.General.Structures.WideString.GetHashCode
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.GetHashCode
+  nameWithType: WideString.GetHashCode
+- uid: Textify.General.Structures.WideString.Item(System.Int32)
+  name: this[int]
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Item_System_Int32_
+  commentId: P:Textify.General.Structures.WideString.Item(System.Int32)
+  name.vb: this[](Integer)
+  fullName: Textify.General.Structures.WideString.this[int]
+  fullName.vb: Textify.General.Structures.WideString.this[](Integer)
+  nameWithType: WideString.this[int]
+  nameWithType.vb: WideString.this[](Integer)
+- uid: Textify.General.Structures.WideString.Item*
+  name: this
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Item_
+  commentId: Overload:Textify.General.Structures.WideString.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: Textify.General.Structures.WideString.this
+  fullName.vb: Textify.General.Structures.WideString.this[]
+  nameWithType: WideString.this
+  nameWithType.vb: WideString.this[]
+- uid: Textify.General.Structures.WideString.Length
+  name: Length
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Length
+  commentId: P:Textify.General.Structures.WideString.Length
+  fullName: Textify.General.Structures.WideString.Length
+  nameWithType: WideString.Length
+- uid: Textify.General.Structures.WideString.Length*
+  name: Length
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_Length_
+  commentId: Overload:Textify.General.Structures.WideString.Length
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.Length
+  nameWithType: WideString.Length
+- uid: Textify.General.Structures.WideString.ToCharArray
+  name: ToCharArray()
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_ToCharArray
+  commentId: M:Textify.General.Structures.WideString.ToCharArray
+  fullName: Textify.General.Structures.WideString.ToCharArray()
+  nameWithType: WideString.ToCharArray()
+- uid: Textify.General.Structures.WideString.ToCharArray*
+  name: ToCharArray
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_ToCharArray_
+  commentId: Overload:Textify.General.Structures.WideString.ToCharArray
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.ToCharArray
+  nameWithType: WideString.ToCharArray
+- uid: Textify.General.Structures.WideString.ToString
+  name: ToString()
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_ToString
+  commentId: M:Textify.General.Structures.WideString.ToString
+  fullName: Textify.General.Structures.WideString.ToString()
+  nameWithType: WideString.ToString()
+- uid: Textify.General.Structures.WideString.ToString*
+  name: ToString
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_ToString_
+  commentId: Overload:Textify.General.Structures.WideString.ToString
+  isSpec: "True"
+  fullName: Textify.General.Structures.WideString.ToString
+  nameWithType: WideString.ToString
+- uid: Textify.General.Structures.WideString.op_Addition(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name: operator +(WideString, WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Addition_Textify_General_Structures_WideString_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.op_Addition(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name.vb: +(WideString, WideString)
+  fullName: Textify.General.Structures.WideString.operator +(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  fullName.vb: Textify.General.Structures.WideString.+(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  nameWithType: WideString.operator +(WideString, WideString)
+  nameWithType.vb: WideString.+(WideString, WideString)
+- uid: Textify.General.Structures.WideString.op_Addition*
+  name: operator +
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Addition_
+  commentId: Overload:Textify.General.Structures.WideString.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: Textify.General.Structures.WideString.operator +
+  fullName.vb: Textify.General.Structures.WideString.+
+  nameWithType: WideString.operator +
+  nameWithType.vb: WideString.+
+- uid: Textify.General.Structures.WideString.op_Equality(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name: operator ==(WideString, WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Equality_Textify_General_Structures_WideString_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.op_Equality(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name.vb: =(WideString, WideString)
+  fullName: Textify.General.Structures.WideString.operator ==(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  fullName.vb: Textify.General.Structures.WideString.=(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  nameWithType: WideString.operator ==(WideString, WideString)
+  nameWithType.vb: WideString.=(WideString, WideString)
+- uid: Textify.General.Structures.WideString.op_Equality*
+  name: operator ==
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Equality_
+  commentId: Overload:Textify.General.Structures.WideString.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: Textify.General.Structures.WideString.operator ==
+  fullName.vb: Textify.General.Structures.WideString.=
+  nameWithType: WideString.operator ==
+  nameWithType.vb: WideString.=
+- uid: Textify.General.Structures.WideString.op_Explicit(System.String)~Textify.General.Structures.WideString
+  name: explicit operator WideString(string)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Explicit_System_String__Textify_General_Structures_WideString
+  commentId: M:Textify.General.Structures.WideString.op_Explicit(System.String)~Textify.General.Structures.WideString
+  name.vb: CType(String)
+  fullName: Textify.General.Structures.WideString.explicit operator Textify.General.Structures.WideString(string)
+  fullName.vb: Textify.General.Structures.WideString.CType(String)
+  nameWithType: WideString.explicit operator WideString(string)
+  nameWithType.vb: WideString.CType(String)
+- uid: Textify.General.Structures.WideString.op_Explicit*
+  name: explicit operator
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Explicit_
+  commentId: Overload:Textify.General.Structures.WideString.op_Explicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Textify.General.Structures.WideString.explicit operator
+  fullName.vb: Textify.General.Structures.WideString.CType
+  nameWithType: WideString.explicit operator
+  nameWithType.vb: WideString.CType
+- uid: Textify.General.Structures.WideString.op_Implicit(Textify.General.Structures.WideString)~System.String
+  name: implicit operator string(WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Implicit_Textify_General_Structures_WideString__System_String
+  commentId: M:Textify.General.Structures.WideString.op_Implicit(Textify.General.Structures.WideString)~System.String
+  name.vb: CType(WideString)
+  fullName: Textify.General.Structures.WideString.implicit operator string(Textify.General.Structures.WideString)
+  fullName.vb: Textify.General.Structures.WideString.CType(Textify.General.Structures.WideString)
+  nameWithType: WideString.implicit operator string(WideString)
+  nameWithType.vb: WideString.CType(WideString)
+- uid: Textify.General.Structures.WideString.op_Implicit*
+  name: implicit operator
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Implicit_
+  commentId: Overload:Textify.General.Structures.WideString.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Textify.General.Structures.WideString.implicit operator
+  fullName.vb: Textify.General.Structures.WideString.CType
+  nameWithType: WideString.implicit operator
+  nameWithType.vb: WideString.CType
+- uid: Textify.General.Structures.WideString.op_Inequality(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name: operator !=(WideString, WideString)
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Inequality_Textify_General_Structures_WideString_Textify_General_Structures_WideString_
+  commentId: M:Textify.General.Structures.WideString.op_Inequality(Textify.General.Structures.WideString,Textify.General.Structures.WideString)
+  name.vb: <>(WideString, WideString)
+  fullName: Textify.General.Structures.WideString.operator !=(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  fullName.vb: Textify.General.Structures.WideString.<>(Textify.General.Structures.WideString, Textify.General.Structures.WideString)
+  nameWithType: WideString.operator !=(WideString, WideString)
+  nameWithType.vb: WideString.<>(WideString, WideString)
+- uid: Textify.General.Structures.WideString.op_Inequality*
+  name: operator !=
+  href: api/Textify.General.Structures.WideString.html#Textify_General_Structures_WideString_op_Inequality_
+  commentId: Overload:Textify.General.Structures.WideString.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: Textify.General.Structures.WideString.operator !=
+  fullName.vb: Textify.General.Structures.WideString.<>
+  nameWithType: WideString.operator !=
+  nameWithType.vb: WideString.<>
 - uid: Textify.General.TextTools
   name: TextTools
   href: api/Textify.General.TextTools.html
