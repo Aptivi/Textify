@@ -706,11 +706,8 @@ namespace Textify.General
             if (searchText is null)
                 throw new TextifyException("The search text may not be null");
 
-            int position = source.LastIndexOf(searchText);
-            if (position == -1)
-                return source;
-            string result = source.Remove(position, searchText.Length).Insert(position, replace);
-            return result;
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
         }
 
         /// <summary>
@@ -727,11 +724,8 @@ namespace Textify.General
             if (searchText is null)
                 throw new TextifyException("The search text may not be null");
 
-            int position = source.LastIndexOf(searchText);
-            if (position == -1)
-                return source;
-            string result = source.Remove(position, searchText.Length).Insert(position, $"{replace}");
-            return result;
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
         }
 
         /// <summary>
@@ -746,11 +740,8 @@ namespace Textify.General
             if (source is null)
                 throw new TextifyException("The source may not be null");
 
-            int position = source.LastIndexOf(searchText);
-            if (position == -1)
-                return source;
-            string result = source.Remove(position, 1).Insert(position, replace);
-            return result;
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
         }
 
         /// <summary>
@@ -765,7 +756,92 @@ namespace Textify.General
             if (source is null)
                 throw new TextifyException("The source may not be null");
 
-            int position = source.LastIndexOf(searchText);
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
+        }
+
+        /// <summary>
+        /// Replaces a specified occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A string to be replaced</param>
+        /// <param name="replace">A string to replace</param>
+        /// <param name="index">Index of occurrence</param>
+        /// <returns>String that has its specified occurrence of text replaced</returns>
+        public static string ReplaceOccurrence(this string source, string searchText, string replace, int index)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+            if (searchText is null)
+                throw new TextifyException("The search text may not be null");
+
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            int position = indexes[index];
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, searchText.Length).Insert(position, replace);
+            return result;
+        }
+
+        /// <summary>
+        /// Replaces a specified occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A string to be replaced</param>
+        /// <param name="replace">A character to replace</param>
+        /// <param name="index">Index of occurrence</param>
+        /// <returns>String that has its specified occurrence of text replaced</returns>
+        public static string ReplaceOccurrence(this string source, string searchText, char replace, int index)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+            if (searchText is null)
+                throw new TextifyException("The search text may not be null");
+
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            int position = indexes[index];
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, searchText.Length).Insert(position, $"{replace}");
+            return result;
+        }
+
+        /// <summary>
+        /// Replaces a specified occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A character to be replaced</param>
+        /// <param name="replace">A string to replace</param>
+        /// <param name="index">Index of occurrence</param>
+        /// <returns>String that has its specified occurrence of text replaced</returns>
+        public static string ReplaceOccurrence(this string source, char searchText, string replace, int index)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            int position = indexes[index];
+            if (position == -1)
+                return source;
+            string result = source.Remove(position, 1).Insert(position, replace);
+            return result;
+        }
+
+        /// <summary>
+        /// Replaces a specified occurrence of a text in source string with the replacement
+        /// </summary>
+        /// <param name="source">A string which has the specified text to replace</param>
+        /// <param name="searchText">A character to be replaced</param>
+        /// <param name="replace">A character to replace</param>
+        /// <param name="index">Index of occurrence</param>
+        /// <returns>String that has its specified occurrence of text replaced</returns>
+        public static string ReplaceOccurrence(this string source, char searchText, char replace, int index)
+        {
+            if (source is null)
+                throw new TextifyException("The source may not be null");
+
+            int[] indexes = [.. source.AllIndexesOf(searchText)];
+            int position = indexes[index];
             if (position == -1)
                 return source;
             string result = source.Remove(position, 1).Insert(position, $"{replace}");

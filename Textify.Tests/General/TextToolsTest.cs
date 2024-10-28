@@ -138,6 +138,60 @@ namespace Textify.Tests.General
         }
 
         /// <summary>
+        /// Tests replacing occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceOccurrence()
+        {
+            string expected = "Nitrocid is awesome and its features are great, because it is built with C#!";
+            string Source = "Nitrocid is awesome and is great, because it is built with C#!";
+            string Target = "is";
+            Source = Source.ReplaceOccurrence(Target, "its features are", 1);
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests replacing occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceOccurrenceChar()
+        {
+            string expected = "Nitrocid is awesome and its features are great!";
+            string Source = "Nitrocid is awesome and i great!";
+            Source = Source.ReplaceOccurrence('i', "its features are", 3);
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests replacing occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceOccurrenceWithChar()
+        {
+            string expected = "Nitrocid S awesome and is great!";
+            string Source = "Nitrocid is awesome and is great!";
+            string Target = "is";
+            Source = Source.ReplaceOccurrence(Target, 'S', 0);
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests replacing occurrence of a string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestReplaceOccurrenceCharWithChar()
+        {
+            string expected = "NitrocSd is awesome and i great!";
+            string Source = "Nitrocid is awesome and i great!";
+            Source = Source.ReplaceOccurrence('i', 'S', 1);
+            Source.ShouldBe(expected);
+        }
+
+        /// <summary>
         /// Tests replacing all specified occurrences of strings with a single string
         /// </summary>
         [TestMethod]
