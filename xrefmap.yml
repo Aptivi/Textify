@@ -35638,6 +35638,49 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.ReplaceLastOccurrence
   nameWithType: TextTools.ReplaceLastOccurrence
+- uid: Textify.General.TextTools.ReplaceOccurrence(System.String,System.Char,System.Char,System.Int32)
+  name: ReplaceOccurrence(string, char, char, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceOccurrence_System_String_System_Char_System_Char_System_Int32_
+  commentId: M:Textify.General.TextTools.ReplaceOccurrence(System.String,System.Char,System.Char,System.Int32)
+  name.vb: ReplaceOccurrence(String, Char, Char, Integer)
+  fullName: Textify.General.TextTools.ReplaceOccurrence(string, char, char, int)
+  fullName.vb: Textify.General.TextTools.ReplaceOccurrence(String, Char, Char, Integer)
+  nameWithType: TextTools.ReplaceOccurrence(string, char, char, int)
+  nameWithType.vb: TextTools.ReplaceOccurrence(String, Char, Char, Integer)
+- uid: Textify.General.TextTools.ReplaceOccurrence(System.String,System.Char,System.String,System.Int32)
+  name: ReplaceOccurrence(string, char, string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceOccurrence_System_String_System_Char_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.ReplaceOccurrence(System.String,System.Char,System.String,System.Int32)
+  name.vb: ReplaceOccurrence(String, Char, String, Integer)
+  fullName: Textify.General.TextTools.ReplaceOccurrence(string, char, string, int)
+  fullName.vb: Textify.General.TextTools.ReplaceOccurrence(String, Char, String, Integer)
+  nameWithType: TextTools.ReplaceOccurrence(string, char, string, int)
+  nameWithType.vb: TextTools.ReplaceOccurrence(String, Char, String, Integer)
+- uid: Textify.General.TextTools.ReplaceOccurrence(System.String,System.String,System.Char,System.Int32)
+  name: ReplaceOccurrence(string, string, char, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceOccurrence_System_String_System_String_System_Char_System_Int32_
+  commentId: M:Textify.General.TextTools.ReplaceOccurrence(System.String,System.String,System.Char,System.Int32)
+  name.vb: ReplaceOccurrence(String, String, Char, Integer)
+  fullName: Textify.General.TextTools.ReplaceOccurrence(string, string, char, int)
+  fullName.vb: Textify.General.TextTools.ReplaceOccurrence(String, String, Char, Integer)
+  nameWithType: TextTools.ReplaceOccurrence(string, string, char, int)
+  nameWithType.vb: TextTools.ReplaceOccurrence(String, String, Char, Integer)
+- uid: Textify.General.TextTools.ReplaceOccurrence(System.String,System.String,System.String,System.Int32)
+  name: ReplaceOccurrence(string, string, string, int)
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceOccurrence_System_String_System_String_System_String_System_Int32_
+  commentId: M:Textify.General.TextTools.ReplaceOccurrence(System.String,System.String,System.String,System.Int32)
+  name.vb: ReplaceOccurrence(String, String, String, Integer)
+  fullName: Textify.General.TextTools.ReplaceOccurrence(string, string, string, int)
+  fullName.vb: Textify.General.TextTools.ReplaceOccurrence(String, String, String, Integer)
+  nameWithType: TextTools.ReplaceOccurrence(string, string, string, int)
+  nameWithType.vb: TextTools.ReplaceOccurrence(String, String, String, Integer)
+- uid: Textify.General.TextTools.ReplaceOccurrence*
+  name: ReplaceOccurrence
+  href: api/Textify.General.TextTools.html#Textify_General_TextTools_ReplaceOccurrence_
+  commentId: Overload:Textify.General.TextTools.ReplaceOccurrence
+  isSpec: "True"
+  fullName: Textify.General.TextTools.ReplaceOccurrence
+  nameWithType: TextTools.ReplaceOccurrence
 - uid: Textify.General.TextTools.Reverse(System.String)
   name: Reverse(string)
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_Reverse_System_String_
