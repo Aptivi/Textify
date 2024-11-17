@@ -37,8 +37,17 @@ namespace Textify.Tools
         /// </summary>
         /// <param name="pattern">Specified pattern</param>
         /// <returns>True if valid; false otherwise</returns>
-        public static bool IsValidRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern) =>
-            IsValidRegex(new Regex(pattern));
+        public static bool IsValidRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
+        {
+            try
+            {
+                return IsValidRegex(new Regex(pattern));
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Determines whether the specified regular expression pattern is valid or not
