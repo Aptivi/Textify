@@ -36333,6 +36333,63 @@ references:
   commentId: T:Textify.Tools.RegexTools
   fullName: Textify.Tools.RegexTools
   nameWithType: RegexTools
+- uid: Textify.Tools.RegexTools.Escape(System.String)
+  name: Escape(string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Escape_System_String_
+  commentId: M:Textify.Tools.RegexTools.Escape(System.String)
+  name.vb: Escape(String)
+  fullName: Textify.Tools.RegexTools.Escape(string)
+  fullName.vb: Textify.Tools.RegexTools.Escape(String)
+  nameWithType: RegexTools.Escape(string)
+  nameWithType.vb: RegexTools.Escape(String)
+- uid: Textify.Tools.RegexTools.Escape*
+  name: Escape
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Escape_
+  commentId: Overload:Textify.Tools.RegexTools.Escape
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Escape
+  nameWithType: RegexTools.Escape
+- uid: Textify.Tools.RegexTools.Filter(System.String,System.String)
+  name: Filter(string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Filter_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.Filter(System.String,System.String)
+  name.vb: Filter(String, String)
+  fullName: Textify.Tools.RegexTools.Filter(string, string)
+  fullName.vb: Textify.Tools.RegexTools.Filter(String, String)
+  nameWithType: RegexTools.Filter(string, string)
+  nameWithType.vb: RegexTools.Filter(String, String)
+- uid: Textify.Tools.RegexTools.Filter(System.String,System.String,System.String)
+  name: Filter(string, string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Filter_System_String_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.Filter(System.String,System.String,System.String)
+  name.vb: Filter(String, String, String)
+  fullName: Textify.Tools.RegexTools.Filter(string, string, string)
+  fullName.vb: Textify.Tools.RegexTools.Filter(String, String, String)
+  nameWithType: RegexTools.Filter(string, string, string)
+  nameWithType.vb: RegexTools.Filter(String, String, String)
+- uid: Textify.Tools.RegexTools.Filter*
+  name: Filter
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Filter_
+  commentId: Overload:Textify.Tools.RegexTools.Filter
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Filter
+  nameWithType: RegexTools.Filter
+- uid: Textify.Tools.RegexTools.IsMatch(System.String,System.String)
+  name: IsMatch(string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsMatch_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.IsMatch(System.String,System.String)
+  name.vb: IsMatch(String, String)
+  fullName: Textify.Tools.RegexTools.IsMatch(string, string)
+  fullName.vb: Textify.Tools.RegexTools.IsMatch(String, String)
+  nameWithType: RegexTools.IsMatch(string, string)
+  nameWithType.vb: RegexTools.IsMatch(String, String)
+- uid: Textify.Tools.RegexTools.IsMatch*
+  name: IsMatch
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsMatch_
+  commentId: Overload:Textify.Tools.RegexTools.IsMatch
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.IsMatch
+  nameWithType: RegexTools.IsMatch
 - uid: Textify.Tools.RegexTools.IsValidRegex(System.String)
   name: IsValidRegex(string)
   href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_IsValidRegex_System_String_
@@ -36355,6 +36412,38 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.IsValidRegex
   nameWithType: RegexTools.IsValidRegex
+- uid: Textify.Tools.RegexTools.Match(System.String,System.String)
+  name: Match(string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Match_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.Match(System.String,System.String)
+  name.vb: Match(String, String)
+  fullName: Textify.Tools.RegexTools.Match(string, string)
+  fullName.vb: Textify.Tools.RegexTools.Match(String, String)
+  nameWithType: RegexTools.Match(string, string)
+  nameWithType.vb: RegexTools.Match(String, String)
+- uid: Textify.Tools.RegexTools.Match*
+  name: Match
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Match_
+  commentId: Overload:Textify.Tools.RegexTools.Match
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Match
+  nameWithType: RegexTools.Match
+- uid: Textify.Tools.RegexTools.Matches(System.String,System.String)
+  name: Matches(string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Matches_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.Matches(System.String,System.String)
+  name.vb: Matches(String, String)
+  fullName: Textify.Tools.RegexTools.Matches(string, string)
+  fullName.vb: Textify.Tools.RegexTools.Matches(String, String)
+  nameWithType: RegexTools.Matches(string, string)
+  nameWithType.vb: RegexTools.Matches(String, String)
+- uid: Textify.Tools.RegexTools.Matches*
+  name: Matches
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Matches_
+  commentId: Overload:Textify.Tools.RegexTools.Matches
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Matches
+  nameWithType: RegexTools.Matches
 - uid: Textify.Tools.RegexTools.ParseRegex(System.String)
   name: ParseRegex(string)
   href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_ParseRegex_System_String_
@@ -36371,6 +36460,22 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.ParseRegex
   nameWithType: RegexTools.ParseRegex
+- uid: Textify.Tools.RegexTools.Split(System.String,System.String)
+  name: Split(string, string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Split_System_String_System_String_
+  commentId: M:Textify.Tools.RegexTools.Split(System.String,System.String)
+  name.vb: Split(String, String)
+  fullName: Textify.Tools.RegexTools.Split(string, string)
+  fullName.vb: Textify.Tools.RegexTools.Split(String, String)
+  nameWithType: RegexTools.Split(string, string)
+  nameWithType.vb: RegexTools.Split(String, String)
+- uid: Textify.Tools.RegexTools.Split*
+  name: Split
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Split_
+  commentId: Overload:Textify.Tools.RegexTools.Split
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Split
+  nameWithType: RegexTools.Split
 - uid: Textify.Tools.RegexTools.TryParseRegex(System.String,System.Text.RegularExpressions.Regex@)
   name: TryParseRegex(string, out Regex?)
   href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_TryParseRegex_System_String_System_Text_RegularExpressions_Regex__
@@ -36387,6 +36492,22 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.TryParseRegex
   nameWithType: RegexTools.TryParseRegex
+- uid: Textify.Tools.RegexTools.Unescape(System.String)
+  name: Unescape(string)
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Unescape_System_String_
+  commentId: M:Textify.Tools.RegexTools.Unescape(System.String)
+  name.vb: Unescape(String)
+  fullName: Textify.Tools.RegexTools.Unescape(string)
+  fullName.vb: Textify.Tools.RegexTools.Unescape(String)
+  nameWithType: RegexTools.Unescape(string)
+  nameWithType.vb: RegexTools.Unescape(String)
+- uid: Textify.Tools.RegexTools.Unescape*
+  name: Unescape
+  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Unescape_
+  commentId: Overload:Textify.Tools.RegexTools.Unescape
+  isSpec: "True"
+  fullName: Textify.Tools.RegexTools.Unescape
+  nameWithType: RegexTools.Unescape
 - uid: Textify.Tools.TextifyException
   name: TextifyException
   href: api/Textify.Tools.TextifyException.html
