@@ -40,6 +40,7 @@ namespace Textify.Tests.General
         [DataRow("\U000F200btest")]
         [DataRow("😀test")]
         [DataRow("🩷test")]
+        [DataRow("")]
         [Description("Querying")]
         public void TestWideStringString(string representation)
         {
@@ -58,6 +59,7 @@ namespace Textify.Tests.General
         [DataRow("\U000F200btest")]
         [DataRow("😀test")]
         [DataRow("🩷test")]
+        [DataRow("")]
         [Description("Querying")]
         public void TestWideStringComparison(string representation)
         {
@@ -77,6 +79,7 @@ namespace Textify.Tests.General
         [DataRow("\U000F200btest", 6)]
         [DataRow("😀test", 6)]
         [DataRow("🩷test", 6)]
+        [DataRow("", 0)]
         [Description("Querying")]
         public void TestWideStringLength(string representation, int expected)
         {
@@ -95,6 +98,7 @@ namespace Textify.Tests.General
         [DataRow("\U000F200btest", true)]
         [DataRow("😀test", false)]
         [DataRow("🩷test", false)]
+        [DataRow("", false)]
         [Description("Querying")]
         public void TestWideStringEquals(string representation, bool expected)
         {
@@ -113,6 +117,7 @@ namespace Textify.Tests.General
         [DataRow("\U000F200btest", false)]
         [DataRow("😀test", true)]
         [DataRow("🩷test", true)]
+        [DataRow("", true)]
         [Description("Querying")]
         public void TestWideStringNotEquals(string representation, bool expected)
         {

@@ -153,7 +153,7 @@ namespace Textify.General.Structures
         public WideString(string source)
         {
             if (string.IsNullOrEmpty(source))
-                throw new ArgumentNullException("String is not specified");
+                source = "";
 
             // Get hi/lo values and install them
             chars = TextTools.GetWideChars(source);
