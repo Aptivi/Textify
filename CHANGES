@@ -1,10 +1,10 @@
-This version of Textify allows you to do much more with regular expressions.
+This version of Textify allows you to use empty strings to create a new `WideString` struct.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added more regex tools
+- `[*]` Improved support for empty strings in `WideString`
 
 Review the commit history if you want to get a deep insight about the changes.
 
