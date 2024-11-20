@@ -215,6 +215,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.KaomojiCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.KaomojiCategory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.KaomojiManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.KaomojiManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.KaomojiSubcategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.KaomojiSubcategory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.Unicode.Namealias.yml",
       "output": {
         ".html": {
