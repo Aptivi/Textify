@@ -43,6 +43,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\Textify.KaomojiArrayGen\Textify.KaomojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
   <ItemGroup>

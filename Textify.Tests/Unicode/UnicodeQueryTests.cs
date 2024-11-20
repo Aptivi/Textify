@@ -117,5 +117,15 @@ namespace Textify.Tests.Unicode
             emojiInstance.Name.ShouldBe(expectedName);
             emojiInstance.Sequence.ShouldBe(expectedSequence);
         }
+
+        [TestMethod]
+        [DataRow(KaomojiCategory.Positive, KaomojiSubcategory.Joy, 0, "(* ^ ω ^)")]
+        [DataRow(KaomojiCategory.Negative, KaomojiSubcategory.Dissatisfaction, 1, "(；⌣̀_⌣́)")]
+        [DataRow(KaomojiCategory.Neutral, KaomojiSubcategory.Doubt, 2, "(￢ ￢)")]
+        public void QueryKaomojiFromKaomojiEnums(KaomojiCategory category, KaomojiSubcategory subcategory, int sequenceIdx, string expectedSequence)
+        {
+            string sequence = KaomojiManager.GetKaomoji(category, subcategory, sequenceIdx);
+            sequence.ShouldBe(expectedSequence);
+        }
     }
 }

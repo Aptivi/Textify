@@ -30,6 +30,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Textify.CharArrayGen", "Tex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textify.EmojiArrayGen", "Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj", "{62DD1F22-852A-4571-A333-15FE29607D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textify.KaomojiArrayGen", "Textify.KaomojiArrayGen\Textify.KaomojiArrayGen.csproj", "{4A37B233-BA4F-404E-A568-8262CBAD3A82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{62DD1F22-852A-4571-A333-15FE29607D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62DD1F22-852A-4571-A333-15FE29607D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62DD1F22-852A-4571-A333-15FE29607D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A37B233-BA4F-404E-A568-8262CBAD3A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A37B233-BA4F-404E-A568-8262CBAD3A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A37B233-BA4F-404E-A568-8262CBAD3A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A37B233-BA4F-404E-A568-8262CBAD3A82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{7D95D016-F69E-4C27-946B-6657B9D25CF7} = {0A6A4E1B-3155-449E-9F2F-907FEBEDA33F}
 		{D62E0479-796D-4497-9BD7-BFD1AFEED231} = {F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}
 		{62DD1F22-852A-4571-A333-15FE29607D69} = {F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}
+		{4A37B233-BA4F-404E-A568-8262CBAD3A82} = {F41AEA29-7B5F-40ED-92C7-CFF25AF292BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61AE20E4-668F-42E2-B113-3B8F2A86F008}

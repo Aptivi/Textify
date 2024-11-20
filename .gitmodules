@@ -7,3 +7,6 @@
 [submodule "assets/UnicodeList"]
 	path = assets/UnicodeList
 	url = https://github.com/Aptivi-Analytics/UnicodeList
+[submodule "assets/KaomojiList"]
+	path = assets/KaomojiList
+	url = https://github.com/Aptivi-Analytics/KaomojiList
