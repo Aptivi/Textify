@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Textify\Textify.csproj" />
-    <ProjectReference Include="..\Textify.Data\Textify.Data.csproj" />
+    <ProjectReference Include="..\..\public\Textify\Textify.csproj" />
+    <ProjectReference Include="..\..\public\Textify.Data\Textify.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

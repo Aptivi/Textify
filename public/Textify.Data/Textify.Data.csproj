@@ -24,14 +24,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\README.md">
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\Textify\OfficialAppIcon-Textify-512.png">
+    <None Include="..\..\assets\OfficialAppIcon-Textify-512.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -42,8 +42,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-    <ProjectReference Include="..\Textify.KaomojiArrayGen\Textify.KaomojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\private\Textify.EmojiArrayGen\Textify.EmojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\private\Textify.KaomojiArrayGen\Textify.KaomojiArrayGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
   <ItemGroup>

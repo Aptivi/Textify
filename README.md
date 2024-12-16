@@ -5,7 +5,7 @@
 <br>
     
 <img
-  src = 'https://cdn.jsdelivr.net/gh/Aptivi/Textify@main/Textify/OfficialAppIcon-Textify-512.png'
+  src = 'https://cdn.jsdelivr.net/gh/Aptivi/Textify@main/assets/OfficialAppIcon-Textify-512.png'
   width = 256
   align = center
 />
