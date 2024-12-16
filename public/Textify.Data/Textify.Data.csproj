@@ -47,10 +47,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="../assets/WordsList/Processed/*.zip" Visible="false" />
-    <EmbeddedResource Include="../assets/UnicodeList/chars/*.zip" Visible="false" />
-    <EmbeddedResource Include="../assets/NamesList/Processed/*.zip" Visible="false" />
-    <EmbeddedResource Include="../assets/FigletFonts/*.flf" Visible="false" />
+    <EmbeddedResource Include="../../assets/WordsList/Processed/*.zip" Visible="false" />
+    <EmbeddedResource Include="../../assets/UnicodeList/chars/*.zip" Visible="false" />
+    <EmbeddedResource Include="../../assets/NamesList/Processed/*.zip" Visible="false" />
+    <EmbeddedResource Include="../../assets/FigletFonts/*.flf" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
