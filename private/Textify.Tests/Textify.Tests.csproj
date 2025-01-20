@@ -1,4 +1,4 @@
-﻿<Project Sdk="MSTest.Sdk/3.6.3">
+﻿<Project Sdk="MSTest.Sdk/3.7.1">
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net48</TargetFrameworks>
@@ -14,10 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\public\Textify.Data\Textify.Data.csproj" />
     <ProjectReference Include="..\..\public\Textify\Textify.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.12.0" />
   </ItemGroup>
 
 </Project>
