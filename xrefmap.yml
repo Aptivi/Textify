@@ -36651,22 +36651,6 @@ references:
   commentId: T:Textify.Tools.RegexTools
   fullName: Textify.Tools.RegexTools
   nameWithType: RegexTools
-- uid: Textify.Tools.RegexTools.Escape(System.String)
-  name: Escape(string)
-  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Escape_System_String_
-  commentId: M:Textify.Tools.RegexTools.Escape(System.String)
-  name.vb: Escape(String)
-  fullName: Textify.Tools.RegexTools.Escape(string)
-  fullName.vb: Textify.Tools.RegexTools.Escape(String)
-  nameWithType: RegexTools.Escape(string)
-  nameWithType.vb: RegexTools.Escape(String)
-- uid: Textify.Tools.RegexTools.Escape*
-  name: Escape
-  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Escape_
-  commentId: Overload:Textify.Tools.RegexTools.Escape
-  isSpec: "True"
-  fullName: Textify.Tools.RegexTools.Escape
-  nameWithType: RegexTools.Escape
 - uid: Textify.Tools.RegexTools.Filter(System.String,System.String)
   name: Filter(string, string)
   href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Filter_System_String_System_String_
@@ -36810,22 +36794,6 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.RegexTools.TryParseRegex
   nameWithType: RegexTools.TryParseRegex
-- uid: Textify.Tools.RegexTools.Unescape(System.String)
-  name: Unescape(string)
-  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Unescape_System_String_
-  commentId: M:Textify.Tools.RegexTools.Unescape(System.String)
-  name.vb: Unescape(String)
-  fullName: Textify.Tools.RegexTools.Unescape(string)
-  fullName.vb: Textify.Tools.RegexTools.Unescape(String)
-  nameWithType: RegexTools.Unescape(string)
-  nameWithType.vb: RegexTools.Unescape(String)
-- uid: Textify.Tools.RegexTools.Unescape*
-  name: Unescape
-  href: api/Textify.Tools.RegexTools.html#Textify_Tools_RegexTools_Unescape_
-  commentId: Overload:Textify.Tools.RegexTools.Unescape
-  isSpec: "True"
-  fullName: Textify.Tools.RegexTools.Unescape
-  nameWithType: RegexTools.Unescape
 - uid: Textify.Tools.TextifyException
   name: TextifyException
   href: api/Textify.Tools.TextifyException.html
