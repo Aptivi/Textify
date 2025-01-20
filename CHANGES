@@ -1,10 +1,10 @@
-This version of Textify allows you to manage Kaomoji emoticons.
+This version of Textify removes the Escape/Unescape functions from the regex tools.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added Kaomoji manager
+- `[-]` Removed Escape/Unescape from the regex tools
 
 Review the commit history if you want to get a deep insight about the changes.
 
