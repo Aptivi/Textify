@@ -1,5 +1,5 @@
 ﻿//
-// Textify  Copyright (C) 2023-2024  Aptivi
+// Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
 //
@@ -40,7 +40,7 @@ namespace Textify.KaomojiArrayGen
             string header =
                 $$"""
                 //
-                // Textify  Copyright (C) 2023-2024  Aptivi
+                // Textify  Copyright (C) 2023-2025  Aptivi
                 //
                 // This file is part of Textify
                 //
