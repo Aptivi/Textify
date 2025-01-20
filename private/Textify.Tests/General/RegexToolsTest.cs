@@ -174,51 +174,5 @@ namespace Textify.Tests.General
             string[]? split = default;
             Should.Throw(() => split = RegexTools.Split(text, pattern), typeof(ArgumentException));
         }
-
-        [TestMethod]
-        [DataRow(@"Twi\tch", @"Twi\\tch")]
-        [DataRow(@"Twi*tch", @"Twi\*tch")]
-        [DataRow(@"Twi+tch", @"Twi\+tch")]
-        [DataRow(@"Twi?tch", @"Twi\?tch")]
-        [DataRow(@"Twi|tch", @"Twi\|tch")]
-        [DataRow(@"Twi(tch", @"Twi\(tch")]
-        [DataRow(@"Twi{tch", @"Twi\{tch")]
-        [DataRow(@"Twi[tch", @"Twi\[tch")]
-        [DataRow(@"Twi)tch", @"Twi\)tch")]
-        [DataRow(@"Twi^tch", @"Twi\^tch")]
-        [DataRow(@"Twi$tch", @"Twi\$tch")]
-        [DataRow(@"Twi.tch", @"Twi\.tch")]
-        [DataRow(@"Twi#tch", @"Twi\#tch")]
-        [DataRow(@"Twi tch", @"Twi\ tch")]
-        [Description("Action")]
-        public void TestEscape(string text, string expected)
-        {
-            string? final = default;
-            Should.NotThrow(() => final = RegexTools.Escape(text));
-            final.ShouldBe(expected);
-        }
-
-        [TestMethod]
-        [DataRow(@"Twi\\tch", @"Twi\tch")]
-        [DataRow(@"Twi\*tch", @"Twi*tch")]
-        [DataRow(@"Twi\+tch", @"Twi+tch")]
-        [DataRow(@"Twi\?tch", @"Twi?tch")]
-        [DataRow(@"Twi\|tch", @"Twi|tch")]
-        [DataRow(@"Twi\(tch", @"Twi(tch")]
-        [DataRow(@"Twi\{tch", @"Twi{tch")]
-        [DataRow(@"Twi\[tch", @"Twi[tch")]
-        [DataRow(@"Twi\)tch", @"Twi)tch")]
-        [DataRow(@"Twi\^tch", @"Twi^tch")]
-        [DataRow(@"Twi\$tch", @"Twi$tch")]
-        [DataRow(@"Twi\.tch", @"Twi.tch")]
-        [DataRow(@"Twi\#tch", @"Twi#tch")]
-        [DataRow(@"Twi\ tch", @"Twi tch")]
-        [Description("Action")]
-        public void TestUnescape(string text, string expected)
-        {
-            string? final = default;
-            Should.NotThrow(() => final = RegexTools.Unescape(text));
-            final.ShouldBe(expected);
-        }
     }
 }

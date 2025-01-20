@@ -29,9 +29,6 @@ namespace Textify.Tools
     /// </summary>
     public static class RegexTools
     {
-        private static string[] escaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`"];
-        private static string[] unescaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`"];
-
         /// <summary>
         /// Determines whether the specified regular expression pattern is valid or not
         /// </summary>
@@ -178,21 +175,5 @@ namespace Textify.Tools
 
             return new Regex(pattern).Split(text);
         }
-
-        /// <summary>
-        /// Escapes the invalid characters from the string
-        /// </summary>
-        /// <param name="text">The text containing invalid characters to escape</param>
-        /// <returns>Escaped string</returns>
-        public static string Escape(string text) =>
-            text.ReplaceAllRange(escaped, unescaped);
-
-        /// <summary>
-        /// Unescapes the escaped characters from the string
-        /// </summary>
-        /// <param name="text">The text containing escaped characters to unescape</param>
-        /// <returns>Unescaped string</returns>
-        public static string Unescape(string text) =>
-            text.ReplaceAllRange(unescaped, escaped);
     }
 }
