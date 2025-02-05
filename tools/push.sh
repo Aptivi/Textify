@@ -31,12 +31,16 @@ releaseconf=$1
 if [ -z $releaseconf ]; then
 	releaseconf=Release
 fi
+nugetsource=$2
+if [ -z $nugetsource ]; then
+	nugetsource=nuget.org
+fi
 dotnetpath=`which dotnet`
 checkerror $? "dotnet is not found"
 
 # Push packages
 echo Pushing packages...
-find .. -type f -path "**/bin/$releaseconf/*.nupkg" -exec dotnet nuget push {} --api-key $NUGET_APIKEY --source "nuget.org" \;
+find .. -type f -path "**/bin/$releaseconf/*.nupkg" -exec dotnet nuget push {} --api-key $NUGET_APIKEY --source "$nugetsource" \;
 checkerror $? "Failed to push"
 
 # Inform success
