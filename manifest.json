@@ -21,7 +21,11 @@
           "relative_path": "api/Textify.Accessibility.BrailleBuilder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Accessibility.BrailleBuilder",
+      "Summary": "<p sourcefile=\"api/Textify.Accessibility.BrailleBuilder.yml\" sourcestartlinenumber=\"1\">Braille building tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -31,7 +35,11 @@
           "relative_path": "api/Textify.Accessibility.BrailleDots.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Accessibility.BrailleDots",
+      "Summary": "<p sourcefile=\"api/Textify.Accessibility.BrailleDots.yml\" sourcestartlinenumber=\"1\">Braille dot enumeration</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -41,7 +49,11 @@
           "relative_path": "api/Textify.Accessibility.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Accessibility",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -51,7 +63,11 @@
           "relative_path": "api/Textify.Data.Figlet.FigletException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.FigletException",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.FigletException.yml\" sourcestartlinenumber=\"1\">Type for exceptions raised by Figlet.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -61,7 +77,11 @@
           "relative_path": "api/Textify.Data.Figlet.FigletFontParser.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.FigletFontParser",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.FigletFontParser.yml\" sourcestartlinenumber=\"1\">Parses FIGlet font files.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -71,7 +91,11 @@
           "relative_path": "api/Textify.Data.Figlet.FigletFonts.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.FigletFonts",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.FigletFonts.yml\" sourcestartlinenumber=\"1\">Collection of bundled fonts, ready for use.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -81,7 +105,11 @@
           "relative_path": "api/Textify.Data.Figlet.FigletTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.FigletTools",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.FigletTools.yml\" sourcestartlinenumber=\"1\">Figlet tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -91,7 +119,11 @@
           "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletFont.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.Utilities.Lines.FigletFont",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.Utilities.Lines.FigletFont.yml\" sourcestartlinenumber=\"1\">Holds metadata and glyphs for rendering characters in this font.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -101,7 +133,11 @@
           "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.FigletTextDirection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.Utilities.Lines.FigletTextDirection",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.Utilities.Lines.FigletTextDirection.yml\" sourcestartlinenumber=\"1\">Enumeration of possible text directions.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -111,7 +147,11 @@
           "relative_path": "api/Textify.Data.Figlet.Utilities.Lines.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.Utilities.Lines",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -121,7 +161,11 @@
           "relative_path": "api/Textify.Data.Figlet.Utilities.StringPool.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.Utilities.StringPool",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Figlet.Utilities.StringPool.yml\" sourcestartlinenumber=\"1\">An object pool for merging references to identical strings.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -131,7 +175,11 @@
           "relative_path": "api/Textify.Data.Figlet.Utilities.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet.Utilities",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -141,7 +189,11 @@
           "relative_path": "api/Textify.Data.Figlet.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Figlet",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -151,7 +203,11 @@
           "relative_path": "api/Textify.Data.NameGen.NameGenderType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.NameGen.NameGenderType",
+      "Summary": "<p sourcefile=\"api/Textify.Data.NameGen.NameGenderType.yml\" sourcestartlinenumber=\"1\">Name gender type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -161,7 +217,11 @@
           "relative_path": "api/Textify.Data.NameGen.NameGenerator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.NameGen.NameGenerator",
+      "Summary": "<p sourcefile=\"api/Textify.Data.NameGen.NameGenerator.yml\" sourcestartlinenumber=\"1\">Name generator class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -171,7 +231,11 @@
           "relative_path": "api/Textify.Data.NameGen.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.NameGen",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -181,7 +245,11 @@
           "relative_path": "api/Textify.Data.Unicode.Emoji.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.Emoji",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.Emoji.yml\" sourcestartlinenumber=\"1\">Emoji information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -191,7 +259,11 @@
           "relative_path": "api/Textify.Data.Unicode.EmojiEnum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.EmojiEnum",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.EmojiEnum.yml\" sourcestartlinenumber=\"1\">Emoji enumeration</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -201,7 +273,11 @@
           "relative_path": "api/Textify.Data.Unicode.EmojiManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.EmojiManager",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.EmojiManager.yml\" sourcestartlinenumber=\"1\">Emoji management tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -211,7 +287,11 @@
           "relative_path": "api/Textify.Data.Unicode.EmojiStatus.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.EmojiStatus",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.EmojiStatus.yml\" sourcestartlinenumber=\"1\">Emoji status enumeration</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -221,7 +301,11 @@
           "relative_path": "api/Textify.Data.Unicode.KaomojiCategory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.KaomojiCategory",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.KaomojiCategory.yml\" sourcestartlinenumber=\"1\">Kaomoji category</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -231,7 +315,11 @@
           "relative_path": "api/Textify.Data.Unicode.KaomojiManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.KaomojiManager",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.KaomojiManager.yml\" sourcestartlinenumber=\"1\">Kaomoji management class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -241,7 +329,11 @@
           "relative_path": "api/Textify.Data.Unicode.KaomojiSubcategory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.KaomojiSubcategory",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.KaomojiSubcategory.yml\" sourcestartlinenumber=\"1\">Kaomoji subcategory</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -251,7 +343,11 @@
           "relative_path": "api/Textify.Data.Unicode.Namealias.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.Namealias",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.Namealias.yml\" sourcestartlinenumber=\"1\">Name alias</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -261,7 +357,11 @@
           "relative_path": "api/Textify.Data.Unicode.UnicodeCharInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UnicodeCharInfo",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.UnicodeCharInfo.yml\" sourcestartlinenumber=\"1\">Character</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -271,7 +371,11 @@
           "relative_path": "api/Textify.Data.Unicode.UnicodeQuery.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UnicodeQuery",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.UnicodeQuery.yml\" sourcestartlinenumber=\"1\">Unicode querying tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -281,7 +385,11 @@
           "relative_path": "api/Textify.Data.Unicode.UnicodeQueryType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UnicodeQueryType",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.UnicodeQueryType.yml\" sourcestartlinenumber=\"1\">Unicode character query type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -291,7 +399,11 @@
           "relative_path": "api/Textify.Data.Unicode.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -301,7 +413,11 @@
           "relative_path": "api/Textify.Data.Words.Profanity.ProfanityManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.Profanity.ProfanityManager",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Words.Profanity.ProfanityManager.yml\" sourcestartlinenumber=\"1\">Profanity management class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -311,7 +427,11 @@
           "relative_path": "api/Textify.Data.Words.Profanity.ProfanityOccurrenceInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.Profanity.ProfanityOccurrenceInfo",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Words.Profanity.ProfanityOccurrenceInfo.yml\" sourcestartlinenumber=\"1\">Profanity occurrence info class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -321,7 +441,11 @@
           "relative_path": "api/Textify.Data.Words.Profanity.ProfanitySearchType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.Profanity.ProfanitySearchType",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Words.Profanity.ProfanitySearchType.yml\" sourcestartlinenumber=\"1\">Profanity search type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -331,7 +455,11 @@
           "relative_path": "api/Textify.Data.Words.Profanity.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.Profanity",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -341,7 +469,11 @@
           "relative_path": "api/Textify.Data.Words.WordDataType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.WordDataType",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Words.WordDataType.yml\" sourcestartlinenumber=\"1\">Word data type to select what kind of words do we need to fetch</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -351,7 +483,11 @@
           "relative_path": "api/Textify.Data.Words.WordManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words.WordManager",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Words.WordManager.yml\" sourcestartlinenumber=\"1\">The word management class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -361,7 +497,11 @@
           "relative_path": "api/Textify.Data.Words.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Words",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -371,7 +511,11 @@
           "relative_path": "api/Textify.General.CharManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.CharManager",
+      "Summary": "<p sourcefile=\"api/Textify.General.CharManager.yml\" sourcestartlinenumber=\"1\">Character querying and management module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -381,7 +525,11 @@
           "relative_path": "api/Textify.General.Comparers.LogicalComparer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Comparers.LogicalComparer",
+      "Summary": "<p sourcefile=\"api/Textify.General.Comparers.LogicalComparer.yml\" sourcestartlinenumber=\"1\">Logical text comparer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -391,7 +539,11 @@
           "relative_path": "api/Textify.General.Comparers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Comparers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -401,7 +553,11 @@
           "relative_path": "api/Textify.General.Data.CharWidthType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Data.CharWidthType",
+      "Summary": "<p sourcefile=\"api/Textify.General.Data.CharWidthType.yml\" sourcestartlinenumber=\"1\">Character width type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -411,7 +567,11 @@
           "relative_path": "api/Textify.General.Data.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Data",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -421,7 +581,11 @@
           "relative_path": "api/Textify.General.EnclosedDoubleQuotesType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.EnclosedDoubleQuotesType",
+      "Summary": "<p sourcefile=\"api/Textify.General.EnclosedDoubleQuotesType.yml\" sourcestartlinenumber=\"1\">Type of enclosed double quotes in a word or phrase</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -431,7 +595,11 @@
           "relative_path": "api/Textify.General.Structures.WideChar.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Structures.WideChar",
+      "Summary": "<p sourcefile=\"api/Textify.General.Structures.WideChar.yml\" sourcestartlinenumber=\"1\">Wide character representation that represents 4 bytes for a 32-bit character</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -441,7 +609,11 @@
           "relative_path": "api/Textify.General.Structures.WideString.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Structures.WideString",
+      "Summary": "<p sourcefile=\"api/Textify.General.Structures.WideString.yml\" sourcestartlinenumber=\"1\">Wide string representation that represents an array of 4 wide characters</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -451,7 +623,11 @@
           "relative_path": "api/Textify.General.Structures.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.Structures",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -461,7 +637,11 @@
           "relative_path": "api/Textify.General.TextTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General.TextTools",
+      "Summary": "<p sourcefile=\"api/Textify.General.TextTools.yml\" sourcestartlinenumber=\"1\">Tools for text manipulation</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -471,7 +651,11 @@
           "relative_path": "api/Textify.General.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.General",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -481,7 +665,11 @@
           "relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.SpaceManager.Analysis.SpaceAnalysisResult",
+      "Summary": "<p sourcefile=\"api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.yml\" sourcestartlinenumber=\"1\">A class for the space analysis result</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -491,7 +679,11 @@
           "relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.SpaceManager.Analysis.SpaceAnalysisTools",
+      "Summary": "<p sourcefile=\"api/Textify.SpaceManager.Analysis.SpaceAnalysisTools.yml\" sourcestartlinenumber=\"1\">Space analysis tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -501,7 +693,11 @@
           "relative_path": "api/Textify.SpaceManager.Analysis.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.SpaceManager.Analysis",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -511,7 +707,11 @@
           "relative_path": "api/Textify.SpaceManager.Conversion.SpaceConversionTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.SpaceManager.Conversion.SpaceConversionTools",
+      "Summary": "<p sourcefile=\"api/Textify.SpaceManager.Conversion.SpaceConversionTools.yml\" sourcestartlinenumber=\"1\">Tools that allow you to use the analysis results to convert the spaces</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -521,7 +721,11 @@
           "relative_path": "api/Textify.SpaceManager.Conversion.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.SpaceManager.Conversion",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -531,7 +735,11 @@
           "relative_path": "api/Textify.Tools.JsonTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.JsonTools",
+      "Summary": "<p sourcefile=\"api/Textify.Tools.JsonTools.yml\" sourcestartlinenumber=\"1\">JSON tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -541,7 +749,11 @@
           "relative_path": "api/Textify.Tools.RegexTools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.RegexTools",
+      "Summary": "<p sourcefile=\"api/Textify.Tools.RegexTools.yml\" sourcestartlinenumber=\"1\">Regular expression tools</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -551,7 +763,11 @@
           "relative_path": "api/Textify.Tools.TextifyException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.TextifyException",
+      "Summary": "<p sourcefile=\"api/Textify.Tools.TextifyException.yml\" sourcestartlinenumber=\"1\">Textify error class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -561,7 +777,11 @@
           "relative_path": "api/Textify.Tools.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -571,7 +791,11 @@
           "relative_path": "api/Textify.Versioning.SemVer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Versioning.SemVer",
+      "Summary": "<p sourcefile=\"api/Textify.Versioning.SemVer.yml\" sourcestartlinenumber=\"1\">Class containing semantic versioning information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -581,7 +805,11 @@
           "relative_path": "api/Textify.Versioning.SemVerException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Versioning.SemVerException",
+      "Summary": "<p sourcefile=\"api/Textify.Versioning.SemVerException.yml\" sourcestartlinenumber=\"1\">Exception for semantic versioning</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -591,7 +819,11 @@
           "relative_path": "api/Textify.Versioning.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Versioning",
+      "Summary": null
     },
     {
       "type": "Toc",
