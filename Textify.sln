@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTargets", "private\BuildTargets\BuildTargets.csproj", "{06E4207D-D3D3-4A8C-949E-C0D0080ED798}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Textify", "public\Textify\Textify.csproj", "{CB3B9D62-0BA5-4A25-9633-101F2D075D8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public", "Public", "{0A6A4E1B-3155-449E-9F2F-907FEBEDA33F}"
@@ -35,8 +37,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Private", "Private", "{6C087629-90B5-4DEA-82A6-C60A238AD97C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{0EBDA30D-3153-4EA6-8BCA-684AE073910B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTargets", "private\BuildTargets\BuildTargets.csproj", "{06E4207D-D3D3-4A8C-949E-C0D0080ED798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
