@@ -10,3 +10,6 @@
 [submodule "assets/KaomojiList"]
 	path = assets/KaomojiList
 	url = https://github.com/Aptivi-Analytics/KaomojiList
+[submodule "tools"]
+	path = tools
+	url = https://github.com/Aptivi/tools
