@@ -413,3 +413,7 @@ DocGen/api/
 
 # Vim
 *.swp
+
+# Native libraries
+public/Textify.Data/runtimes/win-x64/
+public/Textify.Data/runtimes/win-arm64/

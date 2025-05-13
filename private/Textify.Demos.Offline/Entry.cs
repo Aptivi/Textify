@@ -36,6 +36,7 @@ namespace Textify.Demos.Offline
             new FixtureUnconditional(nameof(VersionInfo), "Parses SemVer", VersionInfo.Test),
             new FixtureUnconditional(nameof(VersionInfoRev), "Parses SemVer with revision part support", VersionInfoRev.Test),
             new FixtureUnconditional(nameof(WordGet), "Gets 10 words from both the common and the normal word lists", WordGet.Test),
+            new FixtureUnconditional(nameof(UnicodeRtlReverse), "Reverses the Unicode text", UnicodeRtlReverse.Test),
         ];
 
         static void Main()
