@@ -393,6 +393,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.UnicodeTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.UnicodeTools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UnicodeTools",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.UnicodeTools.yml\" sourcestartlinenumber=\"1\">Unicode tools</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.Unicode.yml",
       "output": {
         ".html": {

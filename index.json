@@ -134,10 +134,15 @@
     "title": "Enum UnicodeQueryType | Textify API - Aptivi",
     "summary": "Enum UnicodeQueryType Unicode character query type Namespace: Textify.Data.Unicode Assembly: Textify.Data.dll Syntax public enum UnicodeQueryType Fields Name Description Full All characters Simple Simple Unicode characters without the Unihan characters Unihan Unihan characters"
   },
+  "api/Textify.Data.Unicode.UnicodeTools.html": {
+    "href": "api/Textify.Data.Unicode.UnicodeTools.html",
+    "title": "Class UnicodeTools | Textify API - Aptivi",
+    "summary": "Class UnicodeTools Unicode tools Inheritance object UnicodeTools Namespace: Textify.Data.Unicode Assembly: Textify.Data.dll Syntax public static class UnicodeTools Properties | Edit this page View Source IcuDataLibPath Sets the libicudata path Declaration public static string IcuDataLibPath { get; set; } Property Value Type Description string | Edit this page View Source IcuLibPath Sets the libicu path Declaration public static string IcuLibPath { get; set; } Property Value Type Description string Methods | Edit this page View Source ReverseRtl(string) Reverses the RTL character order in a text Declaration public static string ReverseRtl(string text) Parameters Type Name Description string text Text to process Returns Type Description string A string that is obtained from a visual map Exceptions Type Condition TextifyException"
+  },
   "api/Textify.Data.Unicode.html": {
     "href": "api/Textify.Data.Unicode.html",
     "title": "Namespace Textify.Data.Unicode | Textify API - Aptivi",
-    "summary": "Namespace Textify.Data.Unicode Classes Emoji Emoji information EmojiManager Emoji management tools KaomojiManager Kaomoji management class Namealias Name alias UnicodeCharInfo Character UnicodeQuery Unicode querying tools Enums EmojiEnum Emoji enumeration EmojiStatus Emoji status enumeration KaomojiCategory Kaomoji category KaomojiSubcategory Kaomoji subcategory UnicodeQueryType Unicode character query type"
+    "summary": "Namespace Textify.Data.Unicode Classes Emoji Emoji information EmojiManager Emoji management tools KaomojiManager Kaomoji management class Namealias Name alias UnicodeCharInfo Character UnicodeQuery Unicode querying tools UnicodeTools Unicode tools Enums EmojiEnum Emoji enumeration EmojiStatus Emoji status enumeration KaomojiCategory Kaomoji category KaomojiSubcategory Kaomoji subcategory UnicodeQueryType Unicode character query type"
   },
   "api/Textify.Data.Words.Profanity.ProfanityManager.html": {
     "href": "api/Textify.Data.Words.Profanity.ProfanityManager.html",

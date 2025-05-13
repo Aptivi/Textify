@@ -33703,6 +33703,54 @@ references:
   commentId: F:Textify.Data.Unicode.UnicodeQueryType.Unihan
   fullName: Textify.Data.Unicode.UnicodeQueryType.Unihan
   nameWithType: UnicodeQueryType.Unihan
+- uid: Textify.Data.Unicode.UnicodeTools
+  name: UnicodeTools
+  href: api/Textify.Data.Unicode.UnicodeTools.html
+  commentId: T:Textify.Data.Unicode.UnicodeTools
+  fullName: Textify.Data.Unicode.UnicodeTools
+  nameWithType: UnicodeTools
+- uid: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
+  name: IcuDataLibPath
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuDataLibPath
+  commentId: P:Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
+  fullName: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
+  nameWithType: UnicodeTools.IcuDataLibPath
+- uid: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath*
+  name: IcuDataLibPath
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuDataLibPath_
+  commentId: Overload:Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
+  nameWithType: UnicodeTools.IcuDataLibPath
+- uid: Textify.Data.Unicode.UnicodeTools.IcuLibPath
+  name: IcuLibPath
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuLibPath
+  commentId: P:Textify.Data.Unicode.UnicodeTools.IcuLibPath
+  fullName: Textify.Data.Unicode.UnicodeTools.IcuLibPath
+  nameWithType: UnicodeTools.IcuLibPath
+- uid: Textify.Data.Unicode.UnicodeTools.IcuLibPath*
+  name: IcuLibPath
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuLibPath_
+  commentId: Overload:Textify.Data.Unicode.UnicodeTools.IcuLibPath
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.UnicodeTools.IcuLibPath
+  nameWithType: UnicodeTools.IcuLibPath
+- uid: Textify.Data.Unicode.UnicodeTools.ReverseRtl(System.String)
+  name: ReverseRtl(string)
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_ReverseRtl_System_String_
+  commentId: M:Textify.Data.Unicode.UnicodeTools.ReverseRtl(System.String)
+  name.vb: ReverseRtl(String)
+  fullName: Textify.Data.Unicode.UnicodeTools.ReverseRtl(string)
+  fullName.vb: Textify.Data.Unicode.UnicodeTools.ReverseRtl(String)
+  nameWithType: UnicodeTools.ReverseRtl(string)
+  nameWithType.vb: UnicodeTools.ReverseRtl(String)
+- uid: Textify.Data.Unicode.UnicodeTools.ReverseRtl*
+  name: ReverseRtl
+  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_ReverseRtl_
+  commentId: Overload:Textify.Data.Unicode.UnicodeTools.ReverseRtl
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.UnicodeTools.ReverseRtl
+  nameWithType: UnicodeTools.ReverseRtl
 - uid: Textify.Data.Words
   name: Textify.Data.Words
   href: api/Textify.Data.Words.html
