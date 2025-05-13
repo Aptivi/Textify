@@ -49,7 +49,7 @@ namespace Textify.Data.Unicode
         public static string ReverseRtl(string text)
         {
             // Check to see if libicuuc is initialized
-            if (NativeLoader.libManagerIcu is null)
+            if (!NativeLoader.loaded)
             {
                 if (string.IsNullOrEmpty(IcuLibPath) || string.IsNullOrEmpty(IcuDataLibPath))
                     NativeLoader.InitializeLibrary();

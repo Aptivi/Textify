@@ -20,9 +20,12 @@
 using SpecProbe.Loader;
 using SpecProbe.Software.Platform;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Textify.General;
 using Textify.Tools;
 
 namespace Textify.Data.Unicode.Icu
@@ -75,10 +78,23 @@ namespace Textify.Data.Unicode.Icu
                 if (PlatformHelper.IsOnMacOS())
                     libManagerIcu = new LibraryManager(new LibraryFile("libicucore.dylib"));
                 else
+                {
+                    List<string> icudtPaths = [libicudtLibPath, "libicudata.so"];
+                    List<string> icuucPaths = [libicuucLibPath, "libicuuc.so"];
+                    if (PlatformHelper.IsOnUnix())
+                    {
+                        string latestLibVerData = GetLatestLibVersion("libicudata");
+                        string latestLibVerUc = GetLatestLibVersion("libicuuc");
+                        if (!string.IsNullOrEmpty(latestLibVerData))
+                            icudtPaths.Add(latestLibVerData);
+                        if (!string.IsNullOrEmpty(latestLibVerUc))
+                            icuucPaths.Add(latestLibVerUc);
+                    }
                     libManagerIcu = new LibraryManager(
-                        new LibraryFile(libicudtLibPath, "libicudata.so"),
-                        new LibraryFile(libicuucLibPath, "libicuuc.so")
+                        new LibraryFile([.. icudtPaths]),
+                        new LibraryFile([.. icuucPaths])
                     );
+                }
                 libManagerIcu.LoadNativeLibrary();
 
                 // Verify that this library works
@@ -145,6 +161,46 @@ namespace Textify.Data.Unicode.Icu
                 return libraryManager.GetNativeMethodDelegate<TDelegate>(function) ??
                     throw new TextifyException($"Can't get delegate for {function}");
             }
+        }
+
+        internal static string GetLatestLibVersion(string libName)
+        {
+            string finalLibName = $"{libName}.so";
+            string unprefixedLibName = finalLibName.RemovePrefix("lib");
+            string archName = PlatformHelper.IsOnArm64() ? "aarch64" : "x86_64";
+            string[] commonPaths =
+            [
+                "/lib",
+                "/usr/lib",
+                "/usr/local/lib",
+                "/lib64",
+                "/usr/lib64",
+                "/usr/local/lib64",
+            ];
+
+            // Find the library in these paths
+            foreach (string path in commonPaths.Concat(commonPaths.Select((path) => Path.Combine(path, $"{archName}-linux-gnu"))))
+            {
+                if (!Directory.Exists(path))
+                    continue;
+
+                try
+                {
+                    // Search for versioned files
+                    var libFiles = Directory.GetFiles(path, finalLibName + "*")
+                        .Concat(Directory.GetFiles(path, unprefixedLibName + "*"));
+                    foreach (string file in libFiles.OrderDescendLogically())
+                    {
+                        if (File.Exists(file))
+                            return Path.GetFileName(file);
+                    }
+                }
+                catch
+                {
+                    continue;
+                }
+            }
+            return "";
         }
     }
 }
