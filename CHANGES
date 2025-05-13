@@ -1,10 +1,10 @@
-This version of Textify removes the Escape/Unescape functions from the regex tools.
+We've added a function that uses libicu to add RTL reverse.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[-]` Removed Escape/Unescape from the regex tools
+- `[+]` Added RTL reverse
 
 Review the commit history if you want to get a deep insight about the changes.
 
