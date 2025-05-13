@@ -33,6 +33,7 @@ namespace Textify.Data.Unicode.Icu
         internal static string libicudtLibPath = GetLibPath("icudt77");
         internal static LibraryManager? libManagerIcu;
         internal static bool loaded;
+        internal static int apiVersion = 0;
 
         /// <summary>
         /// Absolute path to the libicuuc library
@@ -79,6 +80,12 @@ namespace Textify.Data.Unicode.Icu
                         new LibraryFile(libicuucLibPath, "libicuuc.so")
                     );
                 libManagerIcu.LoadNativeLibrary();
+
+                // Verify that this library works
+                byte[] verBytes = new byte[4];
+                var verDelegate = GetDelegate<NativeInterop.u_getVersion>(libManagerIcu, nameof(NativeInterop.u_getVersion));
+                verDelegate.Invoke(verBytes);
+                apiVersion = verBytes[0];
             }
             catch (Exception ex)
             {
@@ -119,14 +126,24 @@ namespace Textify.Data.Unicode.Icu
             }
             else
             {
-                for (int i = 0; i <= 1000; i++)
+                if (apiVersion == 0)
                 {
-                    var del = libraryManager.GetNativeMethodDelegate<TDelegate>(function + $"_{i}");
-                    if (del is null)
-                        continue;
-                    return del;
+                    for (int i = 0; i <= 1000; i++)
+                    {
+                        var del = libraryManager.GetNativeMethodDelegate<TDelegate>(function + $"_{i}");
+                        if (del is null)
+                            continue;
+                        return del;
+                    }
                 }
-                throw new TextifyException($"Can't get delegate for {function}");
+                else
+                {
+                    var del = libraryManager.GetNativeMethodDelegate<TDelegate>(function + $"_{apiVersion}");
+                    if (del is not null)
+                        return del;
+                }
+                return libraryManager.GetNativeMethodDelegate<TDelegate>(function) ??
+                    throw new TextifyException($"Can't get delegate for {function}");
             }
         }
     }
