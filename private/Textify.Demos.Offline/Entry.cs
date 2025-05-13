@@ -17,8 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using CliTester.Instances;
-using CliTester.Tools;
+using Terminaux.Inputs.TestFixtures;
+using Terminaux.Inputs.TestFixtures.Tools;
 using Textify.Demos.Offline.Fixtures;
 
 namespace Textify.Demos.Offline
