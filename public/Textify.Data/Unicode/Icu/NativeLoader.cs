@@ -112,8 +112,11 @@ namespace Textify.Data.Unicode.Icu
             loaded = true;
         }
 
-        internal static string GetLibPath(string libName) =>
-            GetLibPath(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), libName);
+        internal static string GetLibPath(string libName)
+        {
+            var asm = typeof(NativeLoader).Assembly;
+            return GetLibPath(Path.GetDirectoryName(asm.Location), libName);
+        }
 
         internal static string GetLibPath(string root, string libName)
         {
