@@ -31661,6 +31661,34 @@ references:
   isSpec: "True"
   fullName: Textify.Data.Unicode.Namealias.Type
   nameWithType: Namealias.Type
+- uid: Textify.Data.Unicode.UBidi
+  name: Textify.Data.Unicode.UBidi
+  href: api/Textify.Data.Unicode.UBidi.html
+  commentId: N:Textify.Data.Unicode.UBidi
+  fullName: Textify.Data.Unicode.UBidi
+  nameWithType: Textify.Data.Unicode.UBidi
+- uid: Textify.Data.Unicode.UBidi.Bidi
+  name: Bidi
+  href: api/Textify.Data.Unicode.UBidi.Bidi.html
+  commentId: T:Textify.Data.Unicode.UBidi.Bidi
+  fullName: Textify.Data.Unicode.UBidi.Bidi
+  nameWithType: Bidi
+- uid: Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(System.String,System.Int32[])
+  name: LogicalToVisual(string, int[]?)
+  href: api/Textify.Data.Unicode.UBidi.Bidi.html#Textify_Data_Unicode_UBidi_Bidi_LogicalToVisual_System_String_System_Int32___
+  commentId: M:Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(System.String,System.Int32[])
+  name.vb: LogicalToVisual(String, Integer())
+  fullName: Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(string, int[]?)
+  fullName.vb: Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(String, Integer())
+  nameWithType: Bidi.LogicalToVisual(string, int[]?)
+  nameWithType.vb: Bidi.LogicalToVisual(String, Integer())
+- uid: Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual*
+  name: LogicalToVisual
+  href: api/Textify.Data.Unicode.UBidi.Bidi.html#Textify_Data_Unicode_UBidi_Bidi_LogicalToVisual_
+  commentId: Overload:Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual
+  nameWithType: Bidi.LogicalToVisual
 - uid: Textify.Data.Unicode.UnicodeCharInfo
   name: UnicodeCharInfo
   href: api/Textify.Data.Unicode.UnicodeCharInfo.html
@@ -33709,32 +33737,6 @@ references:
   commentId: T:Textify.Data.Unicode.UnicodeTools
   fullName: Textify.Data.Unicode.UnicodeTools
   nameWithType: UnicodeTools
-- uid: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
-  name: IcuDataLibPath
-  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuDataLibPath
-  commentId: P:Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
-  fullName: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
-  nameWithType: UnicodeTools.IcuDataLibPath
-- uid: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath*
-  name: IcuDataLibPath
-  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuDataLibPath_
-  commentId: Overload:Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
-  isSpec: "True"
-  fullName: Textify.Data.Unicode.UnicodeTools.IcuDataLibPath
-  nameWithType: UnicodeTools.IcuDataLibPath
-- uid: Textify.Data.Unicode.UnicodeTools.IcuLibPath
-  name: IcuLibPath
-  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuLibPath
-  commentId: P:Textify.Data.Unicode.UnicodeTools.IcuLibPath
-  fullName: Textify.Data.Unicode.UnicodeTools.IcuLibPath
-  nameWithType: UnicodeTools.IcuLibPath
-- uid: Textify.Data.Unicode.UnicodeTools.IcuLibPath*
-  name: IcuLibPath
-  href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_IcuLibPath_
-  commentId: Overload:Textify.Data.Unicode.UnicodeTools.IcuLibPath
-  isSpec: "True"
-  fullName: Textify.Data.Unicode.UnicodeTools.IcuLibPath
-  nameWithType: UnicodeTools.IcuLibPath
 - uid: Textify.Data.Unicode.UnicodeTools.ReverseRtl(System.String)
   name: ReverseRtl(string)
   href: api/Textify.Data.Unicode.UnicodeTools.html#Textify_Data_Unicode_UnicodeTools_ReverseRtl_System_String_

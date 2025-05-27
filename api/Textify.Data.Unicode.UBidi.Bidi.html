@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class UnicodeTools | Textify API - Aptivi </title>
+      <title>Class Bidi | Textify API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class UnicodeTools | Textify API - Aptivi ">
+      <meta name="title" content="Class Bidi | Textify API - Aptivi ">
     
-    <meta name="description" content="Unicode tools">
+    <meta name="description" content="Bidirectional class">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -78,42 +78,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Textify.Data.Unicode.UnicodeTools">
+            <article class="content wrap" id="_content" data-uid="Textify.Data.Unicode.UBidi.Bidi">
 
 
 
-  <h1 id="Textify_Data_Unicode_UnicodeTools" data-uid="Textify.Data.Unicode.UnicodeTools" class="text-break">Class UnicodeTools</h1>
-  <div class="markdown level0 summary"><p>Unicode tools</p>
+  <h1 id="Textify_Data_Unicode_UBidi_Bidi" data-uid="Textify.Data.Unicode.UBidi.Bidi" class="text-break">Class Bidi</h1>
+  <div class="markdown level0 summary"><p>Bidirectional class</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">UnicodeTools</span></div>
+    <div class="level1"><span class="xref">Bidi</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Unicode.html">Unicode</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Unicode.html">Unicode</a>.<a class="xref" href="Textify.Data.Unicode.UBidi.html">UBidi</a></h6>
   <h6><strong>Assembly</strong>: Textify.Data.dll</h6>
-  <h5 id="Textify_Data_Unicode_UnicodeTools_syntax">Syntax</h5>
+  <h5 id="Textify_Data_Unicode_UBidi_Bidi_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class UnicodeTools</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Bidi</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_UnicodeTools_ReverseRtl_System_String_.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.UnicodeTools.ReverseRtl(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_UBidi_Bidi_LogicalToVisual_System_String_System_Int32___.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(System.String%2CSystem.Int32%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/UnicodeTools.cs/#L36">View Source</a>
+    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/UBidi/Bidi.cs/#L87">View Source</a>
   </span>
-  <a id="Textify_Data_Unicode_UnicodeTools_ReverseRtl_" data-uid="Textify.Data.Unicode.UnicodeTools.ReverseRtl*"></a>
-  <h4 id="Textify_Data_Unicode_UnicodeTools_ReverseRtl_System_String_" data-uid="Textify.Data.Unicode.UnicodeTools.ReverseRtl(System.String)">ReverseRtl(string)</h4>
-  <div class="markdown level1 summary"><p>Reverses the RTL character order in a text</p>
+  <a id="Textify_Data_Unicode_UBidi_Bidi_LogicalToVisual_" data-uid="Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual*"></a>
+  <h4 id="Textify_Data_Unicode_UBidi_Bidi_LogicalToVisual_System_String_System_Int32___" data-uid="Textify.Data.Unicode.UBidi.Bidi.LogicalToVisual(System.String,System.Int32[])">LogicalToVisual(string, int[]?)</h4>
+  <div class="markdown level1 summary"><p>Converts the logical representation string to the visual one</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ReverseRtl(string text)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string LogicalToVisual(string input, int[]? lineBreaks = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped">
@@ -127,8 +127,14 @@
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>Text to process</p>
+        <td><span class="parametername">input</span></td>
+        <td><p>Input string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">int</span>[]</td>
+        <td><span class="parametername">lineBreaks</span></td>
+        <td><p>Line breaks to specify</p>
 </td>
       </tr>
     </tbody>
@@ -144,23 +150,8 @@
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><p>A string that is obtained from a visual map</p>
+        <td><p>Converted string</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Textify.Tools.TextifyException.html">TextifyException</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -173,10 +164,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_UnicodeTools.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.UnicodeTools%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_UBidi_Bidi.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.UBidi.Bidi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/UnicodeTools.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/UBidi/Bidi.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

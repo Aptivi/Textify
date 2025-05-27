@@ -351,6 +351,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.UBidi.Bidi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.UBidi.Bidi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UBidi.Bidi",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Unicode.UBidi.Bidi.yml\" sourcestartlinenumber=\"1\">Bidirectional class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Unicode.UBidi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Unicode.UBidi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Unicode.UBidi",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.Unicode.UnicodeCharInfo.yml",
       "output": {
         ".html": {
