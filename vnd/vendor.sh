@@ -1,47 +1,5 @@
 #!/bin/bash
 
-prebuild() {
-    # Check for dependencies
-    dotnetpath=`which dotnet`
-    checkerror $? "dotnet is not found"
-    sevenzpath=`which 7z`
-    checkerror $? "7z is not found"
-
-    # Turn off telemetry and logo
-    export DOTNET_CLI_TELEMETRY_OPTOUT=1
-    export DOTNET_NOLOGO=1
-
-    # Download compiled Windows libicu libraries
-    if [ ! -f $ROOTDIR/vnd/icu4c-77_1-Win64-MSVC2022.zip ]; then
-        curl -L --output $ROOTDIR/vnd/icu4c-77_1-Win64-MSVC2022.zip https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-Win64-MSVC2022.zip
-        checkvendorerror $?
-    fi
-    if [ ! -f $ROOTDIR/vnd/icu4c-77_1-WinARM64-MSVC2022.zip ]; then
-        curl -L --output $ROOTDIR/vnd/icu4c-77_1-WinARM64-MSVC2022.zip https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-WinARM64-MSVC2022.zip
-        checkvendorerror $?
-    fi
-
-    # Install the DLL for AMD64
-    cd $ROOTDIR/vnd && "$sevenzpath" e $ROOTDIR/vnd/icu4c-77_1-Win64-MSVC2022.zip bin64/icuuc77.dll && cd -
-    cd $ROOTDIR/vnd && "$sevenzpath" e $ROOTDIR/vnd/icu4c-77_1-Win64-MSVC2022.zip bin64/icudt77.dll && cd -
-    checkvendorerror $?
-    mkdir -p $ROOTDIR/public/Textify.Data/runtimes/win-x64/native/
-    checkvendorerror $?
-    mv $ROOTDIR/vnd/icuuc77.dll $ROOTDIR/public/Textify.Data/runtimes/win-x64/native/icuuc77.dll
-    mv $ROOTDIR/vnd/icudt77.dll $ROOTDIR/public/Textify.Data/runtimes/win-x64/native/icudt77.dll
-    checkvendorerror $?
-    
-    # Install the DLL for ARM64
-    cd $ROOTDIR/vnd && "$sevenzpath" e $ROOTDIR/vnd/icu4c-77_1-WinARM64-MSVC2022.zip binARM64/icuuc77.dll && cd -
-    cd $ROOTDIR/vnd && "$sevenzpath" e $ROOTDIR/vnd/icu4c-77_1-WinARM64-MSVC2022.zip binARM64/icudt77.dll && cd -
-    checkvendorerror $?
-    mkdir -p $ROOTDIR/public/Textify.Data/runtimes/win-arm64/native/
-    checkvendorerror $?
-    mv $ROOTDIR/vnd/icuuc77.dll $ROOTDIR/public/Textify.Data/runtimes/win-arm64/native/icuuc77.dll
-    mv $ROOTDIR/vnd/icudt77.dll $ROOTDIR/public/Textify.Data/runtimes/win-arm64/native/icudt77.dll
-    checkvendorerror $?
-}
-
 build() {
     # Check for dependencies
     dotnetpath=`which dotnet`

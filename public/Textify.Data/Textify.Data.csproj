@@ -45,22 +45,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- This is the only way to reliably copy all the runtimes -->
-    <None Include="runtimes\**\*.*" Pack="True" PackagePath="runtimes">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-
-    <!-- Necessary targets -->
-    <None Include="Textify.Data.targets" Pack="True" PackagePath="/" />
-
-    <!-- For packaging -->
     <None Include="../../assets/OfficialAppIcon-Textify-512.png" Pack="true" PackagePath="\" />
     <None Include="../../README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="SpecProbe.Loader" Version="3.5.1" />
-    <PackageReference Include="SpecProbe.Software" Version="3.5.1" />
   </ItemGroup>
 
 </Project>
