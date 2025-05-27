@@ -1,10 +1,10 @@
-We've added a function that uses libicu to add RTL reverse.
+We've added a function that improves the RTL reverse function by relying on BidiSharp's codebase.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added RTL reverse
+- `[-]` Removed native library dependency
 
 Review the commit history if you want to get a deep insight about the changes.
 
