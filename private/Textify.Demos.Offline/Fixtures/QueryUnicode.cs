@@ -34,7 +34,7 @@ namespace Textify.Demos.Offline.Fixtures
             TextWriterRaw.Write();
 
             // Query it
-            var charInstance = UnicodeQuery.QueryChar(character, UnicodeQueryType.Simple);
+            var charInstance = UnicodeQuery.QueryChar(character);
             TextWriterColor.Write($"Na (current): ", false);
             TextWriterColor.WriteColor(charInstance.Na, ConsoleColors.Yellow);
             TextWriterColor.Write($"Na1 (Unicode v1): ", false);

@@ -161,8 +161,10 @@ namespace Textify.Data.Unicode.UBidi
             typesList = new byte[text.Length];
             for (int i = 0; i < text.Length; i++)
             {
-                int chIndex     = Convert.ToInt32(text[i]);
-                typesList[i]    = BidiTypes.BidiCharTypes[chIndex];
+                int chIndex  = Convert.ToInt32(text[i]);
+                var uc = UnicodeQuery.QueryChar(chIndex);
+                string className = uc.Bc;
+                typesList[i] = (byte)Enum.Parse(typeof(BidiClass), className);
             }
         }
 
