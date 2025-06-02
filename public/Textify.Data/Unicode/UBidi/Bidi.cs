@@ -86,15 +86,25 @@ namespace Textify.Data.Unicode.UBidi
         /// <returns>Converted string</returns>
         public static string LogicalToVisual(string input, int[]? lineBreaks = null)
         {
-            // Optimization:
-            // Only continue if an RTL character is present
-            
             int     inputLength               = input.Length;
             byte[]  typesList                 = new byte[input.Length];
             byte[]  levelsList                = new byte[input.Length];
 
             // Analyze text bidi_class types
             ClassifyCharacters(input, ref typesList);
+
+            // Determine whether we have RTL characters
+            bool hasRtl = false;
+            foreach (var type in typesList)
+            {
+                if ((BidiClass)type == BidiClass.R || (BidiClass)type == BidiClass.AL || (BidiClass)type == BidiClass.AN)
+                {
+                    hasRtl = true;
+                    break;
+                }
+            }
+            if (!hasRtl)
+                return input;
 
             // Determine Matching PDI
             GetMatchingPDI(typesList, out int[] matchingPDI, out int[] matchingIsolateInitiator);
