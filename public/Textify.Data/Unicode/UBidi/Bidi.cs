@@ -70,11 +70,12 @@ namespace Textify.Data.Unicode.UBidi
             public int          length;
             public int[]        indexes = [];
             public byte[]       types = [];
+            public char[]       chars = [];
             public byte[]       resolvedLevels = [];
 
-            public IsolatingRunSequence(byte paragraphEmbeddingLevel, List<int> runIndexList, byte[] types, byte[] levels)
+            public IsolatingRunSequence(byte paragraphEmbeddingLevel, List<int> runIndexList, byte[] types, char[] chars, byte[] levels)
             {
-                this.ComputeIsolatingRunSequence(paragraphEmbeddingLevel, runIndexList, types, levels);
+                this.ComputeIsolatingRunSequence(paragraphEmbeddingLevel, runIndexList, types, chars, levels);
             }
         }
 
@@ -139,7 +140,7 @@ namespace Textify.Data.Unicode.UBidi
             int[] runCharsArray = GetRunForCharacter(levelRuns, inputLength);
 
             var sequences = GetIsolatingRunSequences(baseLevel, typesList, levelsList, levelRuns, matchingIsolateInitiator,
-                                                     matchingPDI, runCharsArray);
+                                                     matchingPDI, runCharsArray, input.ToCharArray());
 
             foreach (var sequence in sequences)
             {
@@ -475,8 +476,51 @@ namespace Textify.Data.Unicode.UBidi
         // In final results all NIs are resolved to R or L
         private static void ResolveNeutrals(this IsolatingRunSequence sequence)
         {
+            // N0
+            // We'll need to swap the paired brackets if we found the "strong" type.
+            var bracketStack = new Stack<int>();
+            var bracketPairs = new Dictionary<int, int>();
+            for (int i = 0; i < sequence.length; i++)
+            {
+                var character = sequence.chars[i];
+                var isBracket = BidiBracketMap.IsBracket(character, out var result);
+                if (isBracket)
+                {
+                    if (result.type == 'o')
+                        bracketStack.Push(i);
+                    else if (result.type == 'c')
+                    {
+                        while (bracketStack.Count > 0)
+                        {
+                            int openIdx = bracketStack.Pop();
+                            char expectedClose = BidiBracketMap.GetBracket(sequence.chars[openIdx]);
+                            if (character == expectedClose)
+                            {
+                                bracketPairs.Add(openIdx, i);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            foreach (var openIdx in bracketPairs.Keys)
+            {
+                BidiClass? strong = null;
+                int closeIdx = bracketPairs[openIdx];
+                for (int i = openIdx + 1; i < closeIdx; i++)
+                {
+                    BidiClass classType = (BidiClass)sequence.types[i];
+                    if (classType == BidiClass.L || classType == BidiClass.R || classType == BidiClass.AL)
+                    {
+                        strong = classType;
+                        break;
+                    }
+                }
 
-            // TODO: N0 rule (Paired Brackets algorithm)
+                BidiClass finalType = strong ?? sequence.sos;
+                sequence.types[openIdx] = (byte)finalType;
+                sequence.types[closeIdx] = (byte)finalType;
+            }
 
             // N1
             // Sequence of NIs will resolve to surrounding "strong" type if text on both sides was of same direction.
@@ -694,7 +738,7 @@ namespace Textify.Data.Unicode.UBidi
         }
 
         private static List<IsolatingRunSequence> GetIsolatingRunSequences(byte pLevel, byte[] types, byte[] levels, 
-        List<List<int>> levelRuns, int[] matchingIsolateInitiator, int[] matchingPDI, int[] runCharsArray)
+        List<List<int>> levelRuns, int[] matchingIsolateInitiator, int[] matchingPDI, int[] runCharsArray, char[] chars)
         {
             List<IsolatingRunSequence> allRunSequences = new(levelRuns.Count);
 
@@ -721,7 +765,7 @@ namespace Textify.Data.Unicode.UBidi
                         currRunSequence.AddRange(newRun);
                     }
 
-                    allRunSequences.Add(new IsolatingRunSequence(pLevel, currRunSequence, types, levels));
+                    allRunSequences.Add(new IsolatingRunSequence(pLevel, currRunSequence, types, chars, levels));
                 }
             }
 
@@ -731,11 +775,12 @@ namespace Textify.Data.Unicode.UBidi
         // X10 bullet 2 Determine start and end of sequence types (R or L) for an isolating run sequence
         // using run sequence indexes
         private static void ComputeIsolatingRunSequence(this IsolatingRunSequence sequence, byte pLevel, List<int> indexList, 
-        byte[] typesList, byte[] levels)
+        byte[] typesList, char[] chars, byte[] levels)
         {
             sequence.length = indexList.Count;
             sequence.indexes = [.. indexList];                     // Indexes of run in original text
-            
+            sequence.chars = chars;
+
             // Character types of run sequence
             sequence.types = new byte[indexList.Count];
             for (int i = 0; i < sequence.length; i++)

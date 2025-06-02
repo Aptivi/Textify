@@ -31,7 +31,7 @@ namespace Textify.Demos.Offline.Fixtures
             ConsoleMisc.TerminalReversesRtlText = true;
 
             // Print the normal phrase
-            string normalPhrase = "السلام عليكم! Terminaux رائعٌ!";
+            string normalPhrase = "السلام عليكم! Terminaux (رائعٌ)!";
             TextWriterColor.Write(normalPhrase);
 
             // Now, reverse the RTL characters
