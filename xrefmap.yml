@@ -33707,6 +33707,49 @@ references:
   isSpec: "True"
   fullName: Textify.Data.Unicode.UnicodeQuery.QueryChar
   nameWithType: UnicodeQuery.QueryChar
+- uid: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Char)
+  name: TryQueryChar(char)
+  href: api/Textify.Data.Unicode.UnicodeQuery.html#Textify_Data_Unicode_UnicodeQuery_TryQueryChar_System_Char_
+  commentId: M:Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Char)
+  name.vb: TryQueryChar(Char)
+  fullName: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(char)
+  fullName.vb: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(Char)
+  nameWithType: UnicodeQuery.TryQueryChar(char)
+  nameWithType.vb: UnicodeQuery.TryQueryChar(Char)
+- uid: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Char,Textify.Data.Unicode.UnicodeQueryType)
+  name: TryQueryChar(char, UnicodeQueryType)
+  href: api/Textify.Data.Unicode.UnicodeQuery.html#Textify_Data_Unicode_UnicodeQuery_TryQueryChar_System_Char_Textify_Data_Unicode_UnicodeQueryType_
+  commentId: M:Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Char,Textify.Data.Unicode.UnicodeQueryType)
+  name.vb: TryQueryChar(Char, UnicodeQueryType)
+  fullName: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(char, Textify.Data.Unicode.UnicodeQueryType)
+  fullName.vb: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(Char, Textify.Data.Unicode.UnicodeQueryType)
+  nameWithType: UnicodeQuery.TryQueryChar(char, UnicodeQueryType)
+  nameWithType.vb: UnicodeQuery.TryQueryChar(Char, UnicodeQueryType)
+- uid: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Int32)
+  name: TryQueryChar(int)
+  href: api/Textify.Data.Unicode.UnicodeQuery.html#Textify_Data_Unicode_UnicodeQuery_TryQueryChar_System_Int32_
+  commentId: M:Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Int32)
+  name.vb: TryQueryChar(Integer)
+  fullName: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(int)
+  fullName.vb: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(Integer)
+  nameWithType: UnicodeQuery.TryQueryChar(int)
+  nameWithType.vb: UnicodeQuery.TryQueryChar(Integer)
+- uid: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Int32,Textify.Data.Unicode.UnicodeQueryType)
+  name: TryQueryChar(int, UnicodeQueryType)
+  href: api/Textify.Data.Unicode.UnicodeQuery.html#Textify_Data_Unicode_UnicodeQuery_TryQueryChar_System_Int32_Textify_Data_Unicode_UnicodeQueryType_
+  commentId: M:Textify.Data.Unicode.UnicodeQuery.TryQueryChar(System.Int32,Textify.Data.Unicode.UnicodeQueryType)
+  name.vb: TryQueryChar(Integer, UnicodeQueryType)
+  fullName: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(int, Textify.Data.Unicode.UnicodeQueryType)
+  fullName.vb: Textify.Data.Unicode.UnicodeQuery.TryQueryChar(Integer, Textify.Data.Unicode.UnicodeQueryType)
+  nameWithType: UnicodeQuery.TryQueryChar(int, UnicodeQueryType)
+  nameWithType.vb: UnicodeQuery.TryQueryChar(Integer, UnicodeQueryType)
+- uid: Textify.Data.Unicode.UnicodeQuery.TryQueryChar*
+  name: TryQueryChar
+  href: api/Textify.Data.Unicode.UnicodeQuery.html#Textify_Data_Unicode_UnicodeQuery_TryQueryChar_
+  commentId: Overload:Textify.Data.Unicode.UnicodeQuery.TryQueryChar
+  isSpec: "True"
+  fullName: Textify.Data.Unicode.UnicodeQuery.TryQueryChar
+  nameWithType: UnicodeQuery.TryQueryChar
 - uid: Textify.Data.Unicode.UnicodeQueryType
   name: UnicodeQueryType
   href: api/Textify.Data.Unicode.UnicodeQueryType.html
