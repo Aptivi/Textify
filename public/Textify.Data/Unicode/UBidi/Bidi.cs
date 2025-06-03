@@ -72,6 +72,7 @@ namespace Textify.Data.Unicode.UBidi
             public byte[]       types = [];
             public char[]       chars = [];
             public byte[]       resolvedLevels = [];
+            public List<(int, int)> reverseBrackets = [];
 
             public IsolatingRunSequence(byte paragraphEmbeddingLevel, List<int> runIndexList, byte[] types, char[] chars, byte[] levels)
             {
@@ -142,6 +143,7 @@ namespace Textify.Data.Unicode.UBidi
             var sequences = GetIsolatingRunSequences(baseLevel, typesList, levelsList, levelRuns, matchingIsolateInitiator,
                                                      matchingPDI, runCharsArray, input.ToCharArray());
 
+            List<(int, int)> reverseBrackets = [];
             foreach (var sequence in sequences)
             {
                 // Rules W1-W7
@@ -154,6 +156,7 @@ namespace Textify.Data.Unicode.UBidi
                 sequence.ResolveImplicit();
 
                 sequence.ApplyTypesAndLevels(ref typesList, ref levelsList);
+                reverseBrackets.AddRange(sequence.reverseBrackets);
             }
 
             // Rules L1-L2
@@ -161,7 +164,7 @@ namespace Textify.Data.Unicode.UBidi
             int[] newIndexes = GetReorderedIndexes(baseLevel, typesList, levelsList, lines);
 
             // Return new text from ordered levels
-            var finalStr = GetOrderedString(input, newIndexes);
+            var finalStr = GetOrderedString(input, newIndexes, reverseBrackets);
 
             return finalStr;
         }
@@ -538,6 +541,8 @@ namespace Textify.Data.Unicode.UBidi
                 {
                     sequence.types[openIdx] = (byte)bracketDirection;
                     sequence.types[closeIdx] = (byte)bracketDirection;
+                    if (bracketDirection == BidiClass.R)
+                        sequence.reverseBrackets.Add((openIdx, closeIdx));
                 }
             }
 
@@ -994,11 +999,28 @@ namespace Textify.Data.Unicode.UBidi
         }
 
         // Return final correctly reversed string order
-        private static string GetOrderedString(string input, int[] newIndexes)
+        private static string GetOrderedString(string input, int[] newIndexes, List<(int, int)> reverseBrackets)
         {
             var sb = new StringBuilder(input.Length);
             for (int i = 0; i < newIndexes.Length; i++)
-                sb.Append(input[newIndexes[i]]);
+            {
+                int finalIdx = newIndexes[i];
+                foreach (var bracket in reverseBrackets)
+                {
+                    if (finalIdx == bracket.Item1)
+                    {
+                        finalIdx = bracket.Item2;
+                        break;
+                    }
+                    if (finalIdx == bracket.Item2)
+                    {
+                        finalIdx = bracket.Item1;
+                        break;
+                    }
+                }
+                char character = input[finalIdx];
+                sb.Append(character);
+            }
 
             return sb.ToString();
         }
