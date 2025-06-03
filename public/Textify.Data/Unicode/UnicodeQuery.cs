@@ -55,5 +55,35 @@ namespace Textify.Data.Unicode
         /// <param name="type">Database type to query</param>
         public static UnicodeCharInfo QueryChar(int charNum, UnicodeQueryType type) =>
             UnicodeQueryHandler.Serialize(charNum, type);
+
+        /// <summary>
+        /// Queries the character
+        /// </summary>
+        /// <param name="character">Character</param>
+        public static UnicodeCharInfo? TryQueryChar(char character) =>
+            TryQueryChar(Convert.ToInt32(character), UnicodeQueryType.Full);
+
+        /// <summary>
+        /// Queries the character
+        /// </summary>
+        /// <param name="charNum">Character number</param>
+        public static UnicodeCharInfo? TryQueryChar(int charNum) =>
+            TryQueryChar(charNum, UnicodeQueryType.Full);
+
+        /// <summary>
+        /// Queries the character
+        /// </summary>
+        /// <param name="character">Character</param>
+        /// <param name="type">Database type to query</param>
+        public static UnicodeCharInfo? TryQueryChar(char character, UnicodeQueryType type) =>
+            TryQueryChar(Convert.ToInt32(character), type);
+
+        /// <summary>
+        /// Queries the character
+        /// </summary>
+        /// <param name="charNum">Character number</param>
+        /// <param name="type">Database type to query</param>
+        public static UnicodeCharInfo? TryQueryChar(int charNum, UnicodeQueryType type) =>
+            UnicodeQueryHandler.TrySerialize(charNum, type);
     }
 }

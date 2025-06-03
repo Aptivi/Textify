@@ -64,6 +64,12 @@ namespace Textify.Data.Unicode
 
         internal static UnicodeCharInfo Serialize(int charNum, UnicodeQueryType type)
         {
+            return TrySerialize(charNum, type) ??
+                throw new TextifyException($"There is no character info for this number {charNum}, {type}.");
+        }
+
+        internal static UnicodeCharInfo? TrySerialize(int charNum, UnicodeQueryType type)
+        {
             var stream = UnpackUnicodeDataToStream(type);
             UnicodeCharInfo charInfo;
 
@@ -74,16 +80,16 @@ namespace Textify.Data.Unicode
                 foreach (var infoTuple in infoList)
                     if (infoTuple.Item1 == charNum)
                         return infoTuple.Item2;
-                throw new TextifyException($"There is no character info for this number {charNum}, {type}.");
+                return null;
             }
             else
             {
                 using var reader = XmlReader.Create(stream);
                 if (!reader.SkipToUcd())
-                    throw new TextifyException($"There is no UCD root element {charNum}, {type}.");
+                    return null;
                 reader.MoveToContent();
                 if (!reader.SkipToNum(charNum))
-                    throw new TextifyException($"There is no character info for this number {charNum}, {type}.");
+                    return null;
                 charInfo = ProcessInfo(reader);
                 if (cachedQueries.ContainsKey(type))
                     cachedQueries[type].Add((charNum, charInfo));
