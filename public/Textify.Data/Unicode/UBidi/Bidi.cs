@@ -479,7 +479,7 @@ namespace Textify.Data.Unicode.UBidi
             // N0
             // We'll need to swap the paired brackets if we found the "strong" type.
             var bracketStack = new Stack<int>();
-            var bracketPairs = new Dictionary<int, int>();
+            var bracketPairs = new List<(int, int)>();
             for (int i = 0; i < sequence.length; i++)
             {
                 var character = sequence.chars[i];
@@ -496,30 +496,49 @@ namespace Textify.Data.Unicode.UBidi
                             char expectedClose = BidiBracketMap.GetBracket(sequence.chars[openIdx]);
                             if (character == expectedClose)
                             {
-                                bracketPairs.Add(openIdx, i);
+                                bracketPairs.Add((openIdx, i));
                                 break;
                             }
                         }
                     }
                 }
             }
-            foreach (var openIdx in bracketPairs.Keys)
+            bracketPairs.Sort((o, i) => (i.Item1 - i.Item2).CompareTo(o.Item1 - o.Item2));
+            foreach (var (openIdx, closeIdx) in bracketPairs)
             {
                 BidiClass? strong = null;
-                int closeIdx = bracketPairs[openIdx];
+                bool opposite = false;
                 for (int i = openIdx + 1; i < closeIdx; i++)
                 {
                     BidiClass classType = (BidiClass)sequence.types[i];
-                    if (classType == BidiClass.L || classType == BidiClass.R || classType == BidiClass.AL)
+                    if (classType == BidiClass.L)
                     {
-                        strong = classType;
-                        break;
+                        if (strong is null)
+                            strong = BidiClass.L;
+                        else if (strong != BidiClass.L)
+                            opposite = true;
+                    }
+                    else if (classType == BidiClass.R || classType == BidiClass.AL ||
+                             classType == BidiClass.AN || classType == BidiClass.EN)
+                    {
+                        if (strong is null)
+                            strong = BidiClass.R;
+                        else if (strong != BidiClass.R)
+                            opposite = true;
                     }
                 }
 
-                BidiClass finalType = strong ?? sequence.sos;
-                sequence.types[openIdx] = (byte)finalType;
-                sequence.types[closeIdx] = (byte)finalType;
+                BidiClass embed = GetTypeForLevel(sequence.level);
+                BidiClass bracketDirection;
+                if (opposite || strong is null)
+                    bracketDirection = embed;
+                else
+                    bracketDirection = strong.Value;
+                if (bracketDirection == embed || (strong is not null && !opposite))
+                {
+                    sequence.types[openIdx] = (byte)bracketDirection;
+                    sequence.types[closeIdx] = (byte)bracketDirection;
+                }
             }
 
             // N1
@@ -779,7 +798,11 @@ namespace Textify.Data.Unicode.UBidi
         {
             sequence.length = indexList.Count;
             sequence.indexes = [.. indexList];                     // Indexes of run in original text
-            sequence.chars = chars;
+
+            // Characters of run sequence
+            sequence.chars = new char[indexList.Count];
+            for (int i = 0; i < sequence.length; i++)
+                sequence.chars[i] = chars[indexList[i]];
 
             // Character types of run sequence
             sequence.types = new byte[indexList.Count];
