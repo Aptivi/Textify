@@ -36738,6 +36738,210 @@ references:
   isSpec: "True"
   fullName: Textify.Tools.JsonTools.MinifyJsonText
   nameWithType: JsonTools.MinifyJsonText
+- uid: Textify.Tools.Placeholder
+  name: Textify.Tools.Placeholder
+  href: api/Textify.Tools.Placeholder.html
+  commentId: N:Textify.Tools.Placeholder
+  fullName: Textify.Tools.Placeholder
+  nameWithType: Textify.Tools.Placeholder
+- uid: Textify.Tools.Placeholder.PlaceInfo
+  name: PlaceInfo
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html
+  commentId: T:Textify.Tools.Placeholder.PlaceInfo
+  fullName: Textify.Tools.Placeholder.PlaceInfo
+  nameWithType: PlaceInfo
+- uid: Textify.Tools.Placeholder.PlaceInfo.#ctor(System.String,System.Func{System.String,System.String},System.String)
+  name: PlaceInfo(string, Func<string, string>, string)
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo__ctor_System_String_System_Func_System_String_System_String__System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceInfo.#ctor(System.String,System.Func{System.String,System.String},System.String)
+  name.vb: New(String, Func(Of String, String), String)
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceInfo(string, System.Func<string, string>, string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceInfo.New(String, System.Func(Of String, String), String)
+  nameWithType: PlaceInfo.PlaceInfo(string, Func<string, string>, string)
+  nameWithType.vb: PlaceInfo.New(String, Func(Of String, String), String)
+- uid: Textify.Tools.Placeholder.PlaceInfo.#ctor*
+  name: PlaceInfo
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo__ctor_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceInfo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceInfo
+  fullName.vb: Textify.Tools.Placeholder.PlaceInfo.New
+  nameWithType: PlaceInfo.PlaceInfo
+  nameWithType.vb: PlaceInfo.New
+- uid: Textify.Tools.Placeholder.PlaceInfo.Placeholder
+  name: Placeholder
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_Placeholder
+  commentId: P:Textify.Tools.Placeholder.PlaceInfo.Placeholder
+  fullName: Textify.Tools.Placeholder.PlaceInfo.Placeholder
+  nameWithType: PlaceInfo.Placeholder
+- uid: Textify.Tools.Placeholder.PlaceInfo.Placeholder*
+  name: Placeholder
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_Placeholder_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceInfo.Placeholder
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceInfo.Placeholder
+  nameWithType: PlaceInfo.Placeholder
+- uid: Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction
+  name: PlaceholderAction
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_PlaceholderAction
+  commentId: P:Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction
+  nameWithType: PlaceInfo.PlaceholderAction
+- uid: Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction*
+  name: PlaceholderAction
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_PlaceholderAction_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceholderAction
+  nameWithType: PlaceInfo.PlaceholderAction
+- uid: Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue
+  name: PlaceholderDefaultValue
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_PlaceholderDefaultValue
+  commentId: P:Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue
+  nameWithType: PlaceInfo.PlaceholderDefaultValue
+- uid: Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue*
+  name: PlaceholderDefaultValue
+  href: api/Textify.Tools.Placeholder.PlaceInfo.html#Textify_Tools_Placeholder_PlaceInfo_PlaceholderDefaultValue_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceInfo.PlaceholderDefaultValue
+  nameWithType: PlaceInfo.PlaceholderDefaultValue
+- uid: Textify.Tools.Placeholder.PlaceParse
+  name: PlaceParse
+  href: api/Textify.Tools.Placeholder.PlaceParse.html
+  commentId: T:Textify.Tools.Placeholder.PlaceParse
+  fullName: Textify.Tools.Placeholder.PlaceParse
+  nameWithType: PlaceParse
+- uid: Textify.Tools.Placeholder.PlaceParse.GetPlaceholder(System.String)
+  name: GetPlaceholder(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_GetPlaceholder_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.GetPlaceholder(System.String)
+  name.vb: GetPlaceholder(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.GetPlaceholder(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.GetPlaceholder(String)
+  nameWithType: PlaceParse.GetPlaceholder(string)
+  nameWithType.vb: PlaceParse.GetPlaceholder(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.GetPlaceholder*
+  name: GetPlaceholder
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_GetPlaceholder_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.GetPlaceholder
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.GetPlaceholder
+  nameWithType: PlaceParse.GetPlaceholder
+- uid: Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction(System.String)
+  name: GetPlaceholderAction(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_GetPlaceholderAction_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction(System.String)
+  name.vb: GetPlaceholderAction(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction(String)
+  nameWithType: PlaceParse.GetPlaceholderAction(string)
+  nameWithType.vb: PlaceParse.GetPlaceholderAction(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction*
+  name: GetPlaceholderAction
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_GetPlaceholderAction_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.GetPlaceholderAction
+  nameWithType: PlaceParse.GetPlaceholderAction
+- uid: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin(System.String)
+  name: IsPlaceholderBuiltin(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_IsPlaceholderBuiltin_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin(System.String)
+  name.vb: IsPlaceholderBuiltin(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin(String)
+  nameWithType: PlaceParse.IsPlaceholderBuiltin(string)
+  nameWithType.vb: PlaceParse.IsPlaceholderBuiltin(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin*
+  name: IsPlaceholderBuiltin
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_IsPlaceholderBuiltin_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderBuiltin
+  nameWithType: PlaceParse.IsPlaceholderBuiltin
+- uid: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered(System.String)
+  name: IsPlaceholderRegistered(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_IsPlaceholderRegistered_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered(System.String)
+  name.vb: IsPlaceholderRegistered(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered(String)
+  nameWithType: PlaceParse.IsPlaceholderRegistered(string)
+  nameWithType.vb: PlaceParse.IsPlaceholderRegistered(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered*
+  name: IsPlaceholderRegistered
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_IsPlaceholderRegistered_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.IsPlaceholderRegistered
+  nameWithType: PlaceParse.IsPlaceholderRegistered
+- uid: Textify.Tools.Placeholder.PlaceParse.ProbePlaces(System.String,System.Boolean)
+  name: ProbePlaces(string, bool)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_ProbePlaces_System_String_System_Boolean_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.ProbePlaces(System.String,System.Boolean)
+  name.vb: ProbePlaces(String, Boolean)
+  fullName: Textify.Tools.Placeholder.PlaceParse.ProbePlaces(string, bool)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.ProbePlaces(String, Boolean)
+  nameWithType: PlaceParse.ProbePlaces(string, bool)
+  nameWithType.vb: PlaceParse.ProbePlaces(String, Boolean)
+- uid: Textify.Tools.Placeholder.PlaceParse.ProbePlaces*
+  name: ProbePlaces
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_ProbePlaces_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.ProbePlaces
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.ProbePlaces
+  nameWithType: PlaceParse.ProbePlaces
+- uid: Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder(System.String,System.Func{System.String,System.String})
+  name: RegisterCustomPlaceholder(string, Func<string, string>)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_RegisterCustomPlaceholder_System_String_System_Func_System_String_System_String__
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder(System.String,System.Func{System.String,System.String})
+  name.vb: RegisterCustomPlaceholder(String, Func(Of String, String))
+  fullName: Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder(string, System.Func<string, string>)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder(String, System.Func(Of String, String))
+  nameWithType: PlaceParse.RegisterCustomPlaceholder(string, Func<string, string>)
+  nameWithType.vb: PlaceParse.RegisterCustomPlaceholder(String, Func(Of String, String))
+- uid: Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder*
+  name: RegisterCustomPlaceholder
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_RegisterCustomPlaceholder_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.RegisterCustomPlaceholder
+  nameWithType: PlaceParse.RegisterCustomPlaceholder
+- uid: Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs(System.String)
+  name: StripPlaceholderArgs(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_StripPlaceholderArgs_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs(System.String)
+  name.vb: StripPlaceholderArgs(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs(String)
+  nameWithType: PlaceParse.StripPlaceholderArgs(string)
+  nameWithType.vb: PlaceParse.StripPlaceholderArgs(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs*
+  name: StripPlaceholderArgs
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_StripPlaceholderArgs_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.StripPlaceholderArgs
+  nameWithType: PlaceParse.StripPlaceholderArgs
+- uid: Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder(System.String)
+  name: UnregisterCustomPlaceholder(string)
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_UnregisterCustomPlaceholder_System_String_
+  commentId: M:Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder(System.String)
+  name.vb: UnregisterCustomPlaceholder(String)
+  fullName: Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder(string)
+  fullName.vb: Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder(String)
+  nameWithType: PlaceParse.UnregisterCustomPlaceholder(string)
+  nameWithType.vb: PlaceParse.UnregisterCustomPlaceholder(String)
+- uid: Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder*
+  name: UnregisterCustomPlaceholder
+  href: api/Textify.Tools.Placeholder.PlaceParse.html#Textify_Tools_Placeholder_PlaceParse_UnregisterCustomPlaceholder_
+  commentId: Overload:Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder
+  isSpec: "True"
+  fullName: Textify.Tools.Placeholder.PlaceParse.UnregisterCustomPlaceholder
+  nameWithType: PlaceParse.UnregisterCustomPlaceholder
 - uid: Textify.Tools.RegexTools
   name: RegexTools
   href: api/Textify.Tools.RegexTools.html

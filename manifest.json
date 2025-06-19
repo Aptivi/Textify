@@ -785,6 +785,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Tools.Placeholder.PlaceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Tools.Placeholder.PlaceInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.Placeholder.PlaceInfo",
+      "Summary": "<p sourcefile=\"api/Textify.Tools.Placeholder.PlaceInfo.yml\" sourcestartlinenumber=\"1\">Placeholder information class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Tools.Placeholder.PlaceParse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Tools.Placeholder.PlaceParse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.Placeholder.PlaceParse",
+      "Summary": "<p sourcefile=\"api/Textify.Tools.Placeholder.PlaceParse.yml\" sourcestartlinenumber=\"1\">Placeholder parsing module</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Tools.Placeholder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Tools.Placeholder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Tools.Placeholder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Tools.RegexTools.yml",
       "output": {
         ".html": {
