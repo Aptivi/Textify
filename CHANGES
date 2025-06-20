@@ -1,10 +1,10 @@
-We've added a function that allows you to parse placeholders.
+We've added a function that fixes placeholders with arguments.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added placeholder parsing from Nitrocid
+- `[*]` Fixed placeholder parsing with arguments
 
 Review the commit history if you want to get a deep insight about the changes.
 
