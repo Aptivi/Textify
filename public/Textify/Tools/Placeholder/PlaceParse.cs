@@ -58,7 +58,7 @@ namespace Textify.Tools.Placeholder
                     string place = placeMatch.Value;
                     string arg = "";
                     if (place.Contains(':'))
-                        arg = place.Substring(place.IndexOf(':') + 1, place.Length - 1);
+                        arg = place.Substring(place.IndexOf(':') + 1, place.IndexOf('>') - place.IndexOf(':') - 1);
                     string placeNoArg = place.Replace($":{arg}>", ">");
 
                     // Fetch a placeholder
