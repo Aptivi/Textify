@@ -37,8 +37,11 @@ namespace Textify.Tests.Probers
 #pragma warning restore IDE0060
         {
             PlaceParse.RegisterCustomPlaceholder("greeting", (_) => "Hello!");
+            PlaceParse.RegisterCustomPlaceholder("greetingcustom", (name) => $"Hello, {name}!");
             PlaceParse.IsPlaceholderRegistered("<greeting>").ShouldBeTrue();
+            PlaceParse.IsPlaceholderRegistered("<greetingcustom>").ShouldBeTrue();
             PlaceParse.IsPlaceholderBuiltin("<greeting>").ShouldBeFalse();
+            PlaceParse.IsPlaceholderBuiltin("<greetingcustom>").ShouldBeFalse();
         }
 
         /// <summary>
@@ -65,6 +68,19 @@ namespace Textify.Tests.Probers
         [DataRow("Nitrocid, <greeting> How are you?", "Nitrocid, Hello! How are you?")]
         [Description("Action")]
         public void TestParseCustomPlaceholder(string stringToProbe, string expectedString)
+        {
+            string probed = PlaceParse.ProbePlaces(stringToProbe);
+            probed.ShouldBe(expectedString);
+        }
+
+        /// <summary>
+        /// Tests parsing placeholders
+        /// </summary>
+        [TestMethod]
+        [DataRow("<greetingcustom:Dennis>", "Hello, Dennis!")]
+        [DataRow("Dennis: \"<greetingcustom:Nadia>\"", "Dennis: \"Hello, Nadia!\"")]
+        [Description("Action")]
+        public void TestParseCustomPlaceholderWithArgs(string stringToProbe, string expectedString)
         {
             string probed = PlaceParse.ProbePlaces(stringToProbe);
             probed.ShouldBe(expectedString);
