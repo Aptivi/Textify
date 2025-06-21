@@ -78,6 +78,8 @@ namespace Textify.Tests.Probers
         /// </summary>
         [TestMethod]
         [DataRow("<greetingcustom:Dennis>", "Hello, Dennis!")]
+        [DataRow("<greetingcustom:Dennis> <greetingcustom:Alisha>", "Hello, Dennis! Hello, Alisha!")]
+        [DataRow("<greetingcustom:Dennis> <greeting> <greetingcustom:Alisha>", "Hello, Dennis! Hello! Hello, Alisha!")]
         [DataRow("Dennis: \"<greetingcustom:Nadia>\"", "Dennis: \"Hello, Nadia!\"")]
         [Description("Action")]
         public void TestParseCustomPlaceholderWithArgs(string stringToProbe, string expectedString)

@@ -49,7 +49,7 @@ namespace Textify.Tools.Placeholder
             try
             {
                 // Parse the text for the following placeholders:
-                var placeMatches = RegexTools.Matches(text, /* lang=regex */ @"\<.*\>");
+                var placeMatches = RegexTools.Matches(text, /* lang=regex */ @"\<.*?\>");
 
                 // Get all the placeholder matches and replace them as appropriate
                 foreach (Match placeMatch in placeMatches)
