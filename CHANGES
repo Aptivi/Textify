@@ -1,10 +1,10 @@
-We've added a function that fixes placeholders with arguments.
+We've added a function that fixes placeholders with multiple instances of placeholders.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed placeholder parsing with arguments
+- `[*]` Fixed placeholder parsing with multiple placeholders
 
 Review the commit history if you want to get a deep insight about the changes.
 
