@@ -19,6 +19,7 @@
 
 using System.IO;
 using System.Linq;
+using Textify.General;
 
 namespace Textify.Data.Tools
 {
@@ -40,7 +41,7 @@ namespace Textify.Data.Tools
             var asm = typeof(DataStreamTools).Assembly;
             string resourceName = $"{asm.GetName().Name}.{type}.{extension}";
             if (!HasResource(type, extension))
-                throw new InvalidDataException($"Resource type {type} with extension {extension} not found [{resourceName}]");
+                throw new InvalidDataException("Resource type {0} with extension {1} not found [{2}]".FormatString(type, extension, resourceName));
 
             // Return the stream
             return asm.GetManifestResourceStream(resourceName);

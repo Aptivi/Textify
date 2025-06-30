@@ -24,6 +24,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Textify.Data.Figlet.Utilities;
 using Textify.Data.Figlet.Utilities.Lines;
+using Textify.General;
 
 namespace Textify.Data.Figlet
 {
@@ -219,7 +220,7 @@ namespace Textify.Data.Figlet
 
                 // Try to parse the line
                 if (!ParseUtil.TryParse(line, out var code))
-                    throw new FigletException($"Unsupported code-tagged character code string \"{line}\".");
+                    throw new FigletException("Unsupported code-tagged character code string '{0}'.".FormatString(line));
 
                 // Read the required and sparse characters
                 if (code >= 0 && code < 256)

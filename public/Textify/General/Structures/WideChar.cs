@@ -319,7 +319,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException($"Invalid character. [High: {(int)high}, Low: {(int)low}]");
+                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException($"Invalid character. [High: {(int)high}, Low: {(int)low}]");
+                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
         }
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException($"Invalid character. [High: {(int)high}, Low: {(int)low}]");
+                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
         }
     }
 }

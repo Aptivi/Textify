@@ -685,7 +685,7 @@ namespace Textify.General
             if (toReplace is null || toReplace.Length == 0)
                 throw new TextifyException("Array of to be replacement characters may not be null");
             if (toBeReplaced.Length != toReplace.Length)
-                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which strings to replace.");
+                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which characters to replace.");
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace(toBeReplaced[i], toReplace[i]);
@@ -1721,7 +1721,7 @@ namespace Textify.General
         {
             // Check the value
             if (c < 0 || c > 0x10FFFF)
-                throw new TextifyException($"Invalid character number {c}.");
+                throw new TextifyException("Invalid character number {0}.".FormatString(c));
 
             // Check the cached width
             if (cachedWidths.ContainsKey(c))
@@ -1793,7 +1793,7 @@ namespace Textify.General
         {
             // Check the value
             if (c < 0 || c > 0x10FFFF)
-                throw new TextifyException($"Invalid character number {c}.");
+                throw new TextifyException("Invalid character number {0}.".FormatString(c));
 
             // Check the cached width
             if (cachedWidths.ContainsKey(c))
@@ -1847,7 +1847,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
             return string.Equals(source, target, comparison);
         }
 
@@ -1864,7 +1864,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
             return string.Equals(source, target, comparison);
         }
 
@@ -1881,7 +1881,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
             return source.StartsWith(target, comparison);
         }
 
@@ -1898,7 +1898,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
             return source.StartsWith(target, comparison);
         }
 
@@ -1915,7 +1915,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-insensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
             return source.EndsWith(target, comparison);
         }
 
@@ -1932,7 +1932,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException($"Comparison {comparison} not valid for case-sensitive string comparison");
+                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
             return source.EndsWith(target, comparison);
         }
 
@@ -2027,9 +2027,9 @@ namespace Textify.General
             if (string.IsNullOrEmpty(source))
                 return "";
             if (idx < 0)
-                throw new Exception($"Specified index [{idx}] may not be less than zero");
+                throw new Exception("Specified index [{0}] may not be less than zero".FormatString(idx));
             if (idx >= source.Length)
-                throw new Exception($"Specified index [{idx}] may not be larger than the source string length [{source.Length}]");
+                throw new Exception("Specified index [{0}] may not be larger than the source string length [{1}]".FormatString(idx, source.Length - 1));
 
             // Replace the character in a specified index
             char[] chars = source.ToCharArray();

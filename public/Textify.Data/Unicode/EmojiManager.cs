@@ -58,7 +58,7 @@ namespace Textify.Data.Unicode
         public static Emoji GetEmojiFromEnum(EmojiEnum name)
         {
             if (!emojis.TryGetValue(name, out Emoji emoji))
-                throw new ArgumentException($"Can't find emoji from enum [{(int)name}, {name}]");
+                throw new ArgumentException("Can't find emoji from enum [{0}, {1}]".FormatString((int)name, name));
             return emoji;
         }
     }

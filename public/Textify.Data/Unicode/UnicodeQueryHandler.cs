@@ -24,6 +24,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Xml;
 using Textify.Data.Tools;
+using Textify.General;
 using Textify.Tools;
 
 namespace Textify.Data.Unicode
@@ -65,7 +66,7 @@ namespace Textify.Data.Unicode
         internal static UnicodeCharInfo Serialize(int charNum, UnicodeQueryType type)
         {
             return TrySerialize(charNum, type) ??
-                throw new TextifyException($"There is no character info for this number {charNum}, {type}.");
+                throw new TextifyException("There is no character info for this number {0}, {1}.".FormatString(charNum, type.ToString()));
         }
 
         internal static UnicodeCharInfo? TrySerialize(int charNum, UnicodeQueryType type)

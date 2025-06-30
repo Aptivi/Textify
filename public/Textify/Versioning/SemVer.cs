@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Textify.General;
 
 namespace Textify.Versioning
 {
@@ -139,16 +140,16 @@ namespace Textify.Versioning
             {
                 GroupCollection matchGroups = match.Groups;
                 if (!int.TryParse(matchGroups[1].Value, out int major))
-                    throw new SemVerException($"Invalid major version part");
+                    throw new SemVerException("Invalid major version part");
                 if (!int.TryParse(matchGroups[2].Value, out int minor))
-                    throw new SemVerException($"Invalid minor version part");
+                    throw new SemVerException("Invalid minor version part");
                 if (!int.TryParse(matchGroups[3].Value, out int patch))
-                    throw new SemVerException($"Invalid patch version part");
+                    throw new SemVerException("Invalid patch version part");
                 string preReleaseInfo = matchGroups[4].Value;
                 string buildMetadata = matchGroups[5].Value;
                 return new SemVer(major, minor, patch, preReleaseInfo, buildMetadata);
             }
-            throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
+            throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(value));
         }
 
         /// <summary>
@@ -178,7 +179,7 @@ namespace Textify.Versioning
                 string buildMetadata = matchGroups[6].Value;
                 return new SemVer(major, minor, patch, rev, preReleaseInfo, buildMetadata);
             }
-            throw new SemVerException($"This version [{value}] is not a valid SemVer string.");
+            throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(value));
         }
 
         /// <summary>
@@ -261,7 +262,7 @@ namespace Textify.Versioning
             normalValid = matches.Count > 0;
             revValid = matchesRev.Count > 0;
             if (!revValid && !normalValid)
-                throw new SemVerException($"This version [{version}] is not a valid SemVer string.");
+                throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(version));
             return revValid;
         }
 

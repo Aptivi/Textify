@@ -72,7 +72,7 @@ namespace Textify.Tools
         public static Regex ParseRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException($"Regular expression pattern is invalid. [{pattern}]");
+                throw new ArgumentException("Regular expression pattern is invalid." + $" [{pattern}]");
             return new Regex(pattern);
         }
 

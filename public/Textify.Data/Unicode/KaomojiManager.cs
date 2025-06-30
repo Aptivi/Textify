@@ -18,6 +18,7 @@
 //
 
 using System.Linq;
+using Textify.General;
 using Textify.Tools;
 
 namespace Textify.Data.Unicode
@@ -49,7 +50,7 @@ namespace Textify.Data.Unicode
         {
             var subcategories = GetKaomojiSubcategories(category);
             if (!subcategories.Contains(subcategory))
-                throw new TextifyException($"There is no such subcategory for {category}");
+                throw new TextifyException("There is no such subcategory for {0}".FormatString(category));
             return kaomojis[category][subcategory];
         }
 

@@ -85,7 +85,7 @@ namespace Textify.Data.NameGen
             }
             catch (Exception ex)
             {
-                throw new TextifyException("Can't get names and surnames:" + $" {ex.Message}", ex);
+                throw new TextifyException("Can't get names and surnames" + $": {ex.Message}", ex);
             }
         }
 
