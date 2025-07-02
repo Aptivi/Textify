@@ -1,0 +1,203 @@
+{
+  "lang": "spa",
+  "name": "Spanish",
+  "cultures": [
+    "es",
+    "es-419",
+    "es-AR",
+    "es-BO",
+    "es-BR",
+    "es-BZ",
+    "es-CL",
+    "es-CO",
+    "es-CR",
+    "es-CU",
+    "es-DO",
+    "es-EC",
+    "es-ES",
+    "es-GQ",
+    "es-GT",
+    "es-HN",
+    "es-MX",
+    "es-NI",
+    "es-PA",
+    "es-PE",
+    "es-PH",
+    "es-PR",
+    "es-PY",
+    "es-SV",
+    "es-US",
+    "es-UY",
+    "es-VE"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Cadena no especificada."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "La cadena de origen no puede contener más de dos caracteres."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "Carácter no válido. [Alto: {0}, Bajo: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "El destino no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "El origen no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "El array de cadenas a reemplazar no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "El array de cadenas a reemplazar no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "La longitud del array de las cadenas a reemplazar no es igual a la longitud del array de las cadenas a reemplazar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "El array de caracteres a reemplazar no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "El array de caracteres a reemplazar no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "La longitud del array de las cadenas a reemplazar no es igual a la longitud del array de los caracteres a reemplazar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "La longitud del array de los caracteres a reemplazar no es igual a la longitud del array de las cadenas a reemplazar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "La longitud del array de los caracteres a reemplazar no es igual a la longitud del array de los caracteres a reemplazar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "El texto de búsqueda no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "Se especificó un valor de cadena vacío."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "El formato de destino no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "Las variables de destino no pueden ser nulas."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "La expresión de destino no puede ser nula."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "No se puede obtener el patrón de repetición de letras con cero o un número negativo de pasos."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "El desplazamiento está fuera de rango."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "El número de carácter {0} no es válido."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "La comparación {0} no es válida para la comparación de cadenas que no distingue entre mayúsculas y minúsculas."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "La comparación {0} no es válida para la comparación de cadenas que distingue entre mayúsculas y minúsculas."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "El índice especificado [{0}] no puede ser menor que cero."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "El índice especificado [{0}] no puede ser mayor que la longitud de la cadena de origen [{1}]."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "Para romper los sustitutos, debe haber dos caracteres sustitutos válidos."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "La cadena de origen no es un par sustituto válido."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "No se encontró el archivo para analizar el espacio."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "La secuencia no puede leer."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "La secuencia no puede buscar."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Error al intentar analizar los marcadores de posición. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "El marcador de posición no puede ser nulo."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "La acción del marcador de posición no puede ser nula."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "El marcador de posición no está registrado."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "El marcador de posición debe cumplir con este formato."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "El patrón de expresión regular no es válido."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Sintaxis de expresión regular no válida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Parte de la versión principal no válida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "Parte de la versión secundaria no válida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "Parte de la versión de parche no válida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "Parte de la versión de revisión no válida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "Esta versión [{0}] no es una cadena SemVer válida."
+    }
+  ]
+}

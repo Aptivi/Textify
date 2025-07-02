@@ -1,0 +1,82 @@
+{
+  "lang": "nor",
+  "name": "Norwegian",
+  "cultures": [
+    "nb",
+    "nb-NO",
+    "nb-SJ",
+    "nn",
+    "nn-NO",
+    "no"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "Internt figlet-unntak ved forsøk på å gjengi skrift fordi minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "Uventet EOF i skriftfil."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "Ustøttet kodemerket tegnstreng '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "Skriftfilen er tom."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "Skriftfilen har ugyldig første linje."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "Innebygd skrift er ikke implementert. Prøv å bruke FigletFontParser-klassen til å analysere tilpassede Figlet-skrifter."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "Kan ikke hente navn og etternavn."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "Navnene ble ikke funnet! Sørg for at navnebetingelsene er riktige."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "Etternavnene ble ikke funnet! Sørg for at etternavnebetingelsene er riktige."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "Det finnes ingen strøm med denne opplistingen."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "Det finnes ikke noe ressursnavn med denne opplistingen."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "Ressurstypen {0} med filtypen {1} ble ikke funnet [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "Kan ikke finne emoji fra opplistingen [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "Kategorien finnes ikke."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "Det finnes ingen slik underkategori for {0}."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "Det finnes ingen Unicode-spørringstype av denne typen."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "Det finnes ingen tegninformasjon for dette tallet {0}, {1}."
+    }
+  ]
+}

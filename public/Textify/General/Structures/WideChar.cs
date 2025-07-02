@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -19,6 +19,7 @@
 
 using System;
 using System.Diagnostics;
+using Textify.Language;
 using Textify.Tools;
 
 namespace Textify.General.Structures
@@ -309,9 +310,9 @@ namespace Textify.General.Structures
         public WideChar(string source, bool check = true)
         {
             if (string.IsNullOrEmpty(source))
-                throw new ArgumentNullException("String is not specified");
+                throw new ArgumentNullException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING"));
             if (source.Length > 2)
-                throw new ArgumentException("Source string may not contain greater than two characters");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX"));
 
             // Get hi/lo values and install them
             high = source.Length == 2 ? source[1] : '\0';
@@ -319,7 +320,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR").FormatString((int)high, (int)low));
         }
 
         /// <summary>
@@ -334,7 +335,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR").FormatString((int)high, (int)low));
         }
 
         /// <summary>
@@ -350,7 +351,7 @@ namespace Textify.General.Structures
 
             // Check for validity
             if (check && !IsValidChar())
-                throw new TextifyException("Invalid character. [High: {0}, Low: {1}]".FormatString((int)high, (int)low));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR").FormatString((int)high, (int)low));
         }
     }
 }

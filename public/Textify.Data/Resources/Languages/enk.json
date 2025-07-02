@@ -1,0 +1,77 @@
+{
+  "lang": "enk",
+  "name": "English (UK)",
+  "cultures": [
+    "en-GB"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "Internal figlet exception when trying to render font because minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "Unexpected EOF in Font file."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "Unsupported code-tagged character code string '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "Font file is empty."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "Font file has invalid first line."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "Built-in font not implemented. Try using the FigletFontParser class to parse custom Figlet fonts."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "Can't get names and surnames"
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "The names are not found! Please ensure that the name conditions are correct."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "The surnames are not found! Please ensure that the surname conditions are correct."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "There is no stream with this enumeration"
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "There is no resource name with this enumeration."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "Resource type {0} with extension {1} not found [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "Can't find emoji from enum [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "Category doesn't exist"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "There is no such subcategory for {0}"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "There is no Unicode query type of this type."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "There is no character info for this number {0}, {1}."
+    }
+  ]
+}

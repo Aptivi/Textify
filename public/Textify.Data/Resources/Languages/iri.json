@@ -1,0 +1,79 @@
+{
+  "lang": "iri",
+  "name": "Irish",
+  "cultures": [
+    "ga",
+    "ga-GB",
+    "ga-IE"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "Eisceacht inmheánach figlet agus iarracht á déanamh cló a rindreáil mar gheall ar minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "EOF gan choinne sa chomhad Cló."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "Teaghrán cód carachtair clib-chód gan tacaíocht '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "Tá an comhad cló folamh."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "Tá an chéad líne neamhbhailí sa chomhad cló."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "Níl an cló ionsuite curtha i bhfeidhm. Bain triail as an rang FigletFontParser a úsáid chun clónna Figlet saincheaptha a pharsáil."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "Ní féidir ainmneacha agus sloinnte a fháil"
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "Ní bhfuarthas na hainmneacha! Cinntigh le do thoil go bhfuil na coinníollacha ainm ceart."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "Ní bhfuarthas na sloinnte! Cinntigh le do thoil go bhfuil na coinníollacha sloinnte ceart."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "Níl aon sruth leis an áireamh seo"
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "Níl aon ainm acmhainne leis an áireamh seo."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "Cineál acmhainne {0} le síneadh {1} gan aimsiú [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "Ní féidir emoji a aimsiú ón áireamh [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "Níl an chatagóir ann"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "Níl aon fhochatagóir den sórt sin ann do {0}"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "Níl aon chineál fiosrúcháin Unicode den chineál seo ann."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "Níl aon fhaisnéis charachtair ann don uimhir seo {0}, {1}."
+    }
+  ]
+}

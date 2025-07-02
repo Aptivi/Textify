@@ -1,0 +1,103 @@
+{
+  "lang": "spa",
+  "name": "Spanish",
+  "cultures": [
+    "es",
+    "es-419",
+    "es-AR",
+    "es-BO",
+    "es-BR",
+    "es-BZ",
+    "es-CL",
+    "es-CO",
+    "es-CR",
+    "es-CU",
+    "es-DO",
+    "es-EC",
+    "es-ES",
+    "es-GQ",
+    "es-GT",
+    "es-HN",
+    "es-MX",
+    "es-NI",
+    "es-PA",
+    "es-PE",
+    "es-PH",
+    "es-PR",
+    "es-PY",
+    "es-SV",
+    "es-US",
+    "es-UY",
+    "es-VE"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "Excepción interna de Figlet al intentar renderizar la fuente porque minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "Final de archivo de fuente inesperado."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "Cadena de código de carácter con etiqueta de código no compatible '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "El archivo de fuente está vacío."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "El archivo de fuente tiene una primera línea no válida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "Fuente integrada no implementada. Intente usar la clase FigletFontParser para analizar fuentes Figlet personalizadas."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "No se pueden obtener nombres ni apellidos."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "¡No se encuentran los nombres! Asegúrese de que las condiciones del nombre sean correctas."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "¡No se encuentran los apellidos! Asegúrese de que las condiciones del apellido sean correctas."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "No hay flujo con esta enumeración."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "No hay nombre de recurso con esta enumeración."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "No se encuentra el tipo de recurso {0} con la extensión {1} [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "No se encuentra el emoji de la enumeración [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "La categoría no existe."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "No existe la subcategoría {0}."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "No existe ningún tipo de consulta Unicode de este tipo."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "No hay información de carácter para este número {0}, {1}."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -24,7 +24,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using Textify.Data.Tools;
-using Textify.General;
+using Textify.Data.Language;
 using Textify.Tools;
 
 namespace Textify.Data.NameGen
@@ -85,7 +85,7 @@ namespace Textify.Data.NameGen
             }
             catch (Exception ex)
             {
-                throw new TextifyException("Can't get names and surnames" + $": {ex.Message}", ex);
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA") + $": {ex.Message}", ex);
             }
         }
 
@@ -394,7 +394,7 @@ namespace Textify.Data.NameGen
 
             // Check the names
             if (ProcessedNames.Length == 0)
-                throw new TextifyException("The names are not found! Please ensure that the name conditions are correct.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES"));
 
             // Select random names
             for (int NameNum = 1; NameNum <= Count; NameNum++)
@@ -414,7 +414,7 @@ namespace Textify.Data.NameGen
 
             // Check the surnames
             if (ProcessedSurnames.Length == 0)
-                throw new TextifyException("The surnames are not found! Please ensure that the surname conditions are correct.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES"));
 
             // Select random surnames
             for (int NameNum = 1; NameNum <= Count; NameNum++)
@@ -433,7 +433,7 @@ namespace Textify.Data.NameGen
 
             // Check the names
             if (ProcessedNames.Length == 0)
-                throw new TextifyException("The names are not found! Please ensure that the name conditions are correct.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES"));
 
             return ProcessedNames;
         }
@@ -445,7 +445,7 @@ namespace Textify.Data.NameGen
 
             // Check the surnames
             if (ProcessedSurnames.Length == 0)
-                throw new TextifyException("The surnames are not found! Please ensure that the surname conditions are correct.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES"));
 
             return ProcessedSurnames;
         }

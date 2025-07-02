@@ -1,0 +1,79 @@
+{
+  "lang": "kor",
+  "name": "Korean",
+  "cultures": [
+    "ko",
+    "ko-KP",
+    "ko-KR"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "minMove < 0eulo inhae geulkkol-eul lendeolinghaneun jung naebu figlet ye-oega balsaenghaessseubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "geulkkol pail-e yegichi anh-eun EOFga issseubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "jiwondoeji anhneun kodeu taegeuga jijeongdoen munja kodeu munjayeol '{0}'ibnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "geulkkol pail-i bieo issseubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "geulkkol pail-ui cheos jul-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "gibon jegong geulkkol-i guhyeondoeji anh-assseubnida. FigletFontParser keullaeseuleul sayonghayeo sayongja jijeong Figlet geulkkol-eul gumun bunseoghae boseyo."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "ileumgwa seong-eul gajyeool su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "ileum-eul chaj-eul su eobs-seubnida! ileum jogeon-i olbaleunji hwag-inhaseyo."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "seong-eul chaj-eul su eobs-seubnida! seong jogeon-i olbaleunji hwag-inhaseyo."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "i yeolgeohyeong-eul gajin seuteulim-i eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "i yeolgeohyeong-eul gajin lisoseu ileum-i eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "hwagjangjaga {1}in lisoseu yuhyeong {0}eul(leul) chaj-eul su eobs-seubnida. [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "yeolgeohyeong [{0}, {1}]eseo imojileul chaj-eul su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "beomjuga jonjaehaji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "{0}e haedanghaneun hawi beomjuga eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "i yuhyeong-ui yunikodeu kwoli yuhyeong-i eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "i beonho {0}, {1}e daehan munja jeongboga eobs-seubnida."
+    }
+  ]
+}

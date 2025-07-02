@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -19,6 +19,7 @@
 
 using System;
 using System.IO;
+using Textify.Data.Language;
 
 namespace Textify.Data.Tools
 {
@@ -36,7 +37,7 @@ namespace Textify.Data.Tools
                     return DataStreamTools.GetStreamFrom(name);
                 }
             }
-            throw new NotImplementedException("There is no stream with this enumeration");
+            throw new NotImplementedException(LanguageTools.GetLocalized("TEXTIFY_DATA_EXCEPTION_NOSTREAM"));
         }
 
         private static string GetResourceName(DataType types) =>
@@ -59,7 +60,7 @@ namespace Textify.Data.Tools
                 DataType.WordsJustDirty => "bad-words",
                 DataType.CommonWords => "words-common-clean",
                 DataType.CommonWordsDirty => "words-common",
-                _ => throw new NotImplementedException("There is no resource name with this enumeration."),
+                _ => throw new NotImplementedException(LanguageTools.GetLocalized("TEXTIFY_DATA_EXCEPTION_NORESNAME")),
             };
     }
 }

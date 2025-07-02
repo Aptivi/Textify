@@ -1,0 +1,182 @@
+{
+  "lang": "nor",
+  "name": "Norwegian",
+  "cultures": [
+    "nb",
+    "nb-NO",
+    "nb-SJ",
+    "nn",
+    "nn-NO",
+    "no"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Streng er ikke spesifisert"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "Kildestrengen kan ikke inneholde mer enn to tegn"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "Ugyldig tegn. [Høy: {0}, Lav: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "Målet kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "Kilden kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "Matrise med strenger som skal erstattes kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "Matrise med strenger som skal erstattes kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "Matriselengden for strengene som skal erstattes er ikke lik matriselengden for strengene som skal erstattes."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "Matrise med tegn som skal erstattes kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "Matrise med tegn som skal erstattes kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "Matriselengden for strengene som skal erstattes er ikke lik matriselengden for tegnene som skal erstattes."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "Matriselengden for tegnene som skal erstattes er ikke lik matriselengden for strengene som skal erstattes."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "Matriselengden for tegnene som skal erstattes er ikke lik matriselengden for tegnene som skal erstattes."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "Søketeksten kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "Tom strengverdi spesifisert"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "Målformatet kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "Målvariablene kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "Måluttrykket kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "Kan ikke hente bokstavrepetisjonsmønsteret med null eller negativt antall trinn."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "Forskyvningen er utenfor rekkevidde"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "Ugyldig tegnnummer {0}."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "Sammenligning {0} er ikke gyldig for sammenligning av store og små bokstaver"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "Sammenligning {0} er ikke gyldig for sammenligning av store og små bokstaver"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "Angitt indeks [{0}] kan ikke være mindre enn null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "Angitt indeks [{0}] kan ikke være større enn kildestrengens lengde [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "For å bryte surrogater må det være to gyldige surrogattegn."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "Kildestrengen er ikke et gyldig surrogatpar."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "Filen ble ikke funnet for å analysere mellomrom fra."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "Strømmen kan ikke lese."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "Strømmen kan ikke søke."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Feil ved forsøk på å analysere plassholdere. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "Plassholderen kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "Plassholderhandlingen kan ikke være null"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "Plassholderen er ikke registrert"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "Plassholderen må oppfylle dette formatet"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "Regularuttrykksmønsteret er ugyldig."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Ugyldig syntaks for regularuttrykk."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Ugyldig hovedversjonsdel"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "Ugyldig underversjonsdel"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "Ugyldig oppdateringsversjonsdel"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "Ugyldig revisjonsversjonsdel"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "Denne versjonen [{0}] er ikke en gyldig SemVer-streng."
+    }
+  ]
+}

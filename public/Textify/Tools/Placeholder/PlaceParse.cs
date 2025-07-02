@@ -23,6 +23,7 @@ using System.Linq;
 using Textify.General;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using Textify.Language;
 
 namespace Textify.Tools.Placeholder
 {
@@ -79,7 +80,7 @@ namespace Textify.Tools.Placeholder
             catch (Exception ex)
             {
                 if (ThrowIfFailure)
-                    throw new TextifyException("Error trying to parse placeholders. {0}".FormatString(ex.Message));
+                    throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR").FormatString(ex.Message));
             }
             return text;
         }
@@ -93,9 +94,9 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (placeholderAction is null)
-                throw new TextifyException("Placeholder action may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL"));
 
             // Try to register
             if (!IsPlaceholderRegistered($"<{placeholder}>"))
@@ -113,11 +114,11 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (!IsPlaceholderRegistered(placeholder))
-                throw new TextifyException("Placeholder is not registered");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND"));
             if (!placeholder.StartsWith("<") || !placeholder.EndsWith(">"))
-                throw new TextifyException("Placeholder must satisfy this format" + ": <place>");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR") + ": <place>");
 
             // Try to unregister
             var place = GetPlaceholder(placeholder);
@@ -133,9 +134,9 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (!placeholder.StartsWith("<") || !placeholder.EndsWith(">"))
-                throw new TextifyException("Placeholder must satisfy this format" + ": <place>");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR") + ": <place>");
 
             // Check to see if we have this placeholder
             string placeNoArg = StripPlaceholderArgs(placeholder);
@@ -151,9 +152,9 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (!placeholder.StartsWith("<") || !placeholder.EndsWith(">"))
-                throw new TextifyException("Placeholder must satisfy this format" + ": <place>");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR") + ": <place>");
 
             // Check to see if we have this placeholder
             string placeNoArg = StripPlaceholderArgs(placeholder);
@@ -170,11 +171,11 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (!IsPlaceholderRegistered(placeholder))
-                throw new TextifyException("Placeholder is not registered");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND"));
             if (!placeholder.StartsWith("<") || !placeholder.EndsWith(">"))
-                throw new TextifyException("Placeholder must satisfy this format" + ": <place>");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR") + ": <place>");
 
             // Try to get a placeholder
             string placeNoArg = StripPlaceholderArgs(placeholder);
@@ -192,11 +193,11 @@ namespace Textify.Tools.Placeholder
         {
             // Sanity checks
             if (string.IsNullOrEmpty(placeholder))
-                throw new TextifyException("Placeholder may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL"));
             if (!IsPlaceholderRegistered(placeholder))
-                throw new TextifyException("Placeholder is not registered");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND"));
             if (!placeholder.StartsWith("<") || !placeholder.EndsWith(">"))
-                throw new TextifyException("Placeholder must satisfy this format" + ": <place>");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR") + ": <place>");
 
             // Try to get a placeholder action
             string placeNoArg = StripPlaceholderArgs(placeholder);

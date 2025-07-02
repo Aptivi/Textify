@@ -1,0 +1,186 @@
+{
+  "lang": "chi-T",
+  "name": "Chinese (Simplified)",
+  "cultures": [
+    "zh",
+    "zh-CN",
+    "zh-HK",
+    "zh-MO",
+    "zh-SG",
+    "zh-Hans",
+    "zh-Hans-CN",
+    "zh-Hans-HK",
+    "zh-Hans-MO",
+    "zh-Hans-SG"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "未指定字符串"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "源字符串不能包含超过两个字符"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "无效字符。[最高位：{0}，最低位：{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "目标不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "源不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "待替换字符串的数组不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "待替换字符串的数组不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "待替换字符串的数组长度不等于待替换字符串的数组长度。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "待替换字符的数组不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "待替换字符的数组不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "待替换字符串的数组长度不等于待替换字符的数组长度。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "待替换字符的数组长度不等于待替换字符串的数组长度。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "待替换字符的数组长度不等于待替换字符的数组长度。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "搜索文本不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "指定了空字符串值"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "目标格式不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "目标变量不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "目标表达式不能为空"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "无法获取步长为零或负数的字母重复模式。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "偏移量超出范围"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "字符数 {0} 无效。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "比较 {0} 对于不区分大小写的字符串比较无效"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "比较 {0} 对于区分大小写的字符串比较无效"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "指定的索引 [{0}] 不能小于零"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "指定的索引 [{0}] 不能大于源字符串的长度 [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "要断开代理项，需要有两个有效的代理项字符。"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "源字符串不是有效的代理项对。"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "未找到用于分析空间的文件。"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "流无法读取。"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "流无法定位。"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "尝试解析占位符时出错。 {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "占位符不能为空"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "占位符操作不能为空"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "占位符未注册"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "占位符必须满足此格式"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "正则表达式模式无效。"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "正则表达式语法无效。"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "主版本号部分无效"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "次版本号部分无效"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "补丁版本号部分无效"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "修订版本号部分无效"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "此版本 [{0}] 不是有效的 SemVer 字符串。"
+    }
+  ]
+}

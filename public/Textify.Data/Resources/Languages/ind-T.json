@@ -1,0 +1,78 @@
+{
+  "lang": "ind-T",
+  "name": "Hindi",
+  "cultures": [
+    "hi",
+    "hi-IN"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "फ़ॉन्ट रेंडर करने का प्रयास करते समय आंतरिक फ़िगलेट अपवाद क्योंकि minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "फ़ॉन्ट फ़ाइल में अनपेक्षित EOF."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "असमर्थित कोड-टैग किए गए वर्ण कोड स्ट्रिंग '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "फ़ॉन्ट फ़ाइल रिक्त है."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "फ़ॉन्ट फ़ाइल में अमान्य पहली पंक्ति है."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "अंतर्निहित फ़ॉन्ट लागू नहीं किया गया. कस्टम फ़िगलेट फ़ॉन्ट को पार्स करने के लिए FigletFontParser वर्ग का उपयोग करने का प्रयास करें."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "नाम और उपनाम नहीं मिल सकते"
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "नाम नहीं मिले! कृपया सुनिश्चित करें कि नाम की शर्तें सही हैं."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "उपनाम नहीं मिले! कृपया सुनिश्चित करें कि उपनाम की शर्तें सही हैं."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "इस गणना के साथ कोई स्ट्रीम नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "इस गणना के साथ कोई संसाधन नाम नहीं है."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "विस्तार {1} के साथ संसाधन प्रकार {0} नहीं मिला [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "enum से इमोजी नहीं मिल सकता [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "श्रेणी मौजूद नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "{0} के लिए ऐसी कोई उपश्रेणी नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "इस प्रकार का कोई यूनिकोड क्वेरी प्रकार नहीं है."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "इस संख्या {0}, {1} के लिए कोई वर्ण जानकारी नहीं है।"
+    }
+  ]
+}

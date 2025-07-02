@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -23,6 +23,7 @@ using System.IO;
 using Textify.Data.Figlet.Utilities;
 using Textify.Data.Figlet.Utilities.Lines;
 using Textify.Data.Tools;
+using Textify.Data.Language;
 
 namespace Textify.Data.Figlet
 {
@@ -49,7 +50,7 @@ namespace Textify.Data.Figlet
             static FigletFont FontFactory(string name)
             {
                 var font = ParseEmbeddedFont(name) ??
-                    throw new FigletException("Built-in font not implemented. Try using the FigletFontParser class to parse custom Figlet fonts.");
+                    throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT"));
                 return font;
             }
         }

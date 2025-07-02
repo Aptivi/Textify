@@ -1,0 +1,178 @@
+{
+  "lang": "ind",
+  "name": "Hindi",
+  "cultures": [
+    "hi-Latn",
+    "hi-Latn-IN"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "string nirdisht nahin hai"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "srot string mein do se adhik varn nahin ho sakate"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "amaany varn. [uchch: {0}, nimn: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "lakshy shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "srot shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "pratisthaapit kee jaane vaalee string kee saranee shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "pratisthaapan kee jaane vaalee string kee saranee shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "pratisthaapit kee jaane vaalee string kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "pratisthaapit kee jaane vaalee varn kee saranee shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "pratisthaapan kee jaane vaalee varn kee saranee shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "pratisthaapit kee jaane vaalee string kee saranee kee lambaee, pratisthaapit kee jaane vaalee varn kee saranee kee lambaee ke baraabar nahin hai."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee varn ... khoj paath shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "khaalee string maan nirdisht kiya gaya"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "lakshy praaroop shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "lakshy char shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "lakshy abhivyakti shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "shoony ya rnaatmak sankhya ke charanon ke saath akshar punaraavrtti paitarn praapt nahin kiya ja sakata."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "ophaset seema se baahar hai"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "amaany varn sankhya {0}."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "kes-asanvedanasheel string tulana ke lie tulana {0} maany nahin hai"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "kes-sanvedanasheel string tulana ke lie tulana {0} maany nahin hai"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "nirdisht soochakaank [{0}] shoony se kam nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "nirdisht soochakaank [{0}] srot string lambaee [{1}] se bada nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "saroget ko todane ke lie, do vaidh saroget varn hone chaahie."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "srot string ek vaidh saroget jodee nahin hai."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "spes ka vishleshan karane ke lie fail nahin milee."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "streem nahin padhee ja sakatee."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "streem nahin khoj sakatee."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "plesaholdar ko paars karane ka prayaas karate samay truti. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "plesaholdar shoony nahin ho sakata"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "plesaholdar kriya shoony nahin ho sakatee"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "plesaholdar panjeekrt nahin hai"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "plesaholdar ko is praaroop ko poora karana hoga"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "niyamit abhivyakti paitarn amaany hai."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "amaany niyamit abhivyakti sintaiks."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "amaany pramukh sanskaran bhaag"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "amaany laghu sanskaran bhaag"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "amaany paich sanskaran bhaag"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "amaany sanshodhan sanskaran bhaag"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "yah sanskaran [{0}] ek maany saimvair string nahin hai."
+    }
+  ]
+}

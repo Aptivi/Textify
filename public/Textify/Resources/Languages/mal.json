@@ -1,0 +1,181 @@
+{
+  "lang": "mal",
+  "name": "Malay",
+  "cultures": [
+    "ms",
+    "ms-BN",
+    "ms-ID",
+    "ms-MY",
+    "ms-SG"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Rentetan tidak dinyatakan"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "Rentetan sumber mungkin tidak mengandungi lebih daripada dua aksara"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "aksara tidak sah. [Tinggi: {0}, Rendah: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "Sasaran mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "Sumbernya mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "Tatasusunan rentetan yang akan diganti mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "Tatasusunan untuk menjadi rentetan gantian mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "Panjang tatasusunan rentetan yang hendak diganti tidak sama dengan panjang tatasusunan rentetan yang hendak diganti."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "Tatasusunan aksara yang akan diganti mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "Tatasusunan untuk menjadi aksara pengganti mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "Panjang tatasusunan rentetan yang hendak diganti tidak sama dengan panjang tatasusunan aksara yang hendak diganti."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "Panjang tatasusunan bagi aksara yang hendak diganti tidak sama dengan panjang tatasusunan rentetan yang hendak diganti."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "Panjang tatasusunan aksara yang hendak diganti tidak sama dengan panjang tatasusunan aksara yang hendak diganti."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "Teks carian mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "Nilai rentetan kosong ditentukan"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "Format sasaran mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "Var sasaran mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "Ungkapan sasaran mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "Tidak boleh mendapatkan corak pengulangan huruf dengan bilangan langkah sifar atau negatif."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "Offset berada di luar julat"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "Nombor aksara tidak sah {0}."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "Perbandingan {0} tidak sah untuk perbandingan rentetan tidak sensitif huruf besar-besaran"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "Perbandingan {0} tidak sah untuk perbandingan rentetan sensitif huruf besar-besaran"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "Indeks yang ditentukan [{0}] mungkin tidak kurang daripada sifar"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "Indeks yang ditentukan [{0}] mungkin tidak lebih besar daripada panjang rentetan sumber [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "Untuk memecahkan pengganti, perlu ada dua watak pengganti yang sah."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "Rentetan sumber bukan pasangan pengganti yang sah."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "Fail tidak ditemui untuk menganalisis ruang daripada."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "Strim tidak boleh membaca."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "Strim tidak boleh mencari."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Ralat semasa cuba menghuraikan ruang letak. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "Pemegang tempat mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "Tindakan pemegang tempat mungkin tidak batal"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "Pemegang tempat tidak didaftarkan"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "Pemegang tempat mesti memenuhi format ini"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "Corak ungkapan biasa tidak sah."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Sintaks ungkapan biasa tidak sah."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Bahagian versi utama tidak sah"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "Bahagian versi kecil tidak sah"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "Bahagian versi tampalan tidak sah"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "Bahagian versi semakan tidak sah"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "Versi [{0}] ini bukan rentetan SemVer yang sah."
+    }
+  ]
+}

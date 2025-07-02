@@ -1,0 +1,79 @@
+{
+  "lang": "kor-T",
+  "name": "Korean",
+  "cultures": [
+    "ko",
+    "ko-KP",
+    "ko-KR"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "minMove < 0으로 인해 글꼴을 렌더링하는 중 내부 figlet 예외가 발생했습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "글꼴 파일에 예기치 않은 EOF가 있습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "지원되지 않는 코드 태그가 지정된 문자 코드 문자열 '{0}'입니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "글꼴 파일이 비어 있습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "글꼴 파일의 첫 줄이 잘못되었습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "기본 제공 글꼴이 구현되지 않았습니다. FigletFontParser 클래스를 사용하여 사용자 지정 Figlet 글꼴을 구문 분석해 보세요."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "이름과 성을 가져올 수 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "이름을 찾을 수 없습니다! 이름 조건이 올바른지 확인하세요."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "성을 찾을 수 없습니다! 성 조건이 올바른지 확인하세요."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "이 열거형을 가진 스트림이 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "이 열거형을 가진 리소스 이름이 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "확장자가 {1}인 리소스 유형 {0}을(를) 찾을 수 없습니다. [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "열거형 [{0}, {1}]에서 이모지를 찾을 수 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "범주가 존재하지 않습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "{0}에 해당하는 하위 범주가 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "이 유형의 유니코드 쿼리 유형이 없습니다."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "이 번호 {0}, {1}에 대한 문자 정보가 없습니다."
+    }
+  ]
+}

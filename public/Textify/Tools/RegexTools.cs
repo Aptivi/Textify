@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -20,7 +20,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
-using Textify.General;
+using Textify.Language;
 
 namespace Textify.Tools
 {
@@ -72,7 +72,7 @@ namespace Textify.Tools
         public static Regex ParseRegex([StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException("Regular expression pattern is invalid." + $" [{pattern}]");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN") + $" [{pattern}]");
             return new Regex(pattern);
         }
 
@@ -119,7 +119,7 @@ namespace Textify.Tools
         public static Match Match(string text, [StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException("Invalid regular expression syntax.");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX"));
 
             return new Regex(pattern).Match(text);
         }
@@ -133,7 +133,7 @@ namespace Textify.Tools
         public static MatchCollection Matches(string text, [StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException("Invalid regular expression syntax.");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX"));
 
             return new Regex(pattern).Matches(text);
         }
@@ -157,7 +157,7 @@ namespace Textify.Tools
         public static string Filter(string text, [StringSyntax(StringSyntaxAttribute.Regex)] string pattern, string replaceWith)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException("Invalid regular expression syntax.");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX"));
 
             return new Regex(pattern).Replace(text, replaceWith);
         }
@@ -171,7 +171,7 @@ namespace Textify.Tools
         public static string[] Split(string text, [StringSyntax(StringSyntaxAttribute.Regex)] string pattern)
         {
             if (!IsValidRegex(pattern))
-                throw new ArgumentException("Invalid regular expression syntax.");
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX"));
 
             return new Regex(pattern).Split(text);
         }

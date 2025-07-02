@@ -1,0 +1,179 @@
+{
+  "lang": "kor",
+  "name": "Korean",
+  "cultures": [
+    "ko",
+    "ko-KP",
+    "ko-KR"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "munjayeol-i jijeongdoeji anh-assseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "soseu munjayeol-eun du munjaleul chogwahal su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "jalmosdoen munjaibnida. [sang-wi: {0}, hawi: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "daesang-eun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "soseuneun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "bakkul munjayeol baeyeol-eun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "bakkul munjayeol baeyeol-eun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "bakkul munjayeol-ui baeyeol gil-iga bakkul munjayeol-ui baeyeol gil-iwa gatji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "bakkul munjaui baeyeol-eun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "bakkul munjaui baeyeol-eun nulli anieoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "bakkul munjayeol-ui baeyeol gil-iga bakkul munjayeol-ui baeyeol gil-iwa gatji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "bakkul munjaui baeyeol gil-iga bakkul munjaui baeyeol gil-iwa gatji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "bakkul munjaui baeyeol gil-iga bakkul munjaui baeyeol gil-iwa gatji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "geomsaeg tegseuteuga nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "bin munjayeol gabs-i jijeongdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "daesang hyeongsig-i nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "daesang byeonsuga nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "daesang pyohyeonsig-i nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "0 ttoneun eumsu dangyeui munja banbog paeteon-eul gajyeool su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "opeuses-i beom-wileul beos-eonassseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "jalmosdoen munja beonho {0}ibnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "bigyo {0}eun(neun) daesomunjaleul gubunhaji anhneun munjayeol bigyoe yuhyohaji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "bigyo {0}eun(neun) daesomunjaleul gubunhaneun munjayeol bigyoe yuhyohaji anhseubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "jijeongdoen indegseu [{0}]eun(neun) 0boda jag-eul su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "jijeongdoen indegseu [{0}]eun(neun) soseu munjayeol gil-i [{1}]boda keul su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "seologeiteuleul bunlihalyeomyeon du gaeui yuhyohan seologeiteu munjaga iss-eoya habnida."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "soseu munjayeol-i yuhyohan seologeiteu ssang-i anibnida."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "gongbaeg-eul bunseoghal pail-eul chaj-eul su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "seuteulim-eseo ilg-eul su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "seuteulim-eseo geomsaeghal su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "jali pyosijaleul gumun bunseoghaneun jung olyuga balsaenghaessseubnida. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "jali pyosijaneun nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "jali pyosija jag-eob-eun nullil su eobs-seubnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "jali pyosijaga deunglogdoeji anh-assseubnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "jali pyosijaneun da-eum hyeongsig-eul chungjoghaeya habnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "jeong-gyu pyohyeonsig paeteon-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "jeong-gyu pyohyeonsig gumun-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "ju beojeon bubun-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "bu beojeon bubun-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "paechi beojeon bubun-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "sujeong beojeon bubun-i jalmosdoeeossseubnida."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "i beojeon [{0}]eun(neun) yuhyohan SemVer munjayeol-i anibnida."
+    }
+  ]
+}

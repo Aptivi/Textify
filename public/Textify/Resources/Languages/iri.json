@@ -1,0 +1,179 @@
+{
+  "lang": "iri",
+  "name": "Irish",
+  "cultures": [
+    "ga",
+    "ga-GB",
+    "ga-IE"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Níl teaghrán sonraithe"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "Ní fhéadfaidh níos mó ná dhá charachtar a bheith sa teaghrán foinse"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "Carachtar neamhbhailí. [Ard: {0}, Íseal: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "B'fhéidir nach bhfuil an sprioc nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "B'fhéidir nach bhfuil an fhoinse nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "B'fhéidir nach bhfuil eagar na dtéaghrán atá le hathsholáthar nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "B'fhéidir nach bhfuil eagar na dtéaghrán atá le hathsholáthar nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "Ní ionann fad an eagar de na teaghráin atá le hathsholáthar agus fad an eagar de na teaghráin atá le hathsholáthar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "B'fhéidir nach bhfuil eagar na gcarachtar atá le hathsholáthar nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "B'fhéidir nach bhfuil eagar na gcarachtar atá le hathsholáthar nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "Ní ionann fad an eagar de na teaghráin atá le hathsholáthar agus fad an eagar de na carachtair atá le hathsholáthar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "Ní ionann fad an eagar de na carachtair atá le hathsholáthar agus fad an eagar de na teaghráin atá le hathsholáthar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "Ní ionann fad an eagar de na carachtair atá le hathsholáthar agus fad an eagar de na carachtair atá le hathsholáthar."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "B’fhéidir nach bhfuil an téacs cuardaigh nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "Luach teaghrán folamh sonraithe"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "B’fhéidir nach bhfuil an fhormáid sprice nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "B’fhéidir nach bhfuil na hathróga sprice nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "B’fhéidir nach bhfuil an abairt sprice nialasach"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "Ní féidir an patrún athrá litreacha a fháil le líon céimeanna nialasach nó diúltach."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "Tá an fhritháireamh lasmuigh den raon"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "Uimhir charachtair neamhbhailí {0}."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "Níl an chomparáid {0} bailí le haghaidh comparáid teaghrán neamhíogair ó thaobh cás de"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "Níl an chomparáid {0} bailí le haghaidh comparáid teaghrán íogair ó thaobh cás de"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "Ní fhéadfaidh an t-innéacs sonraithe [{0}] a bheith níos lú ná nialas"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "Ní fhéadfaidh an t-innéacs sonraithe [{0}] a bheith níos mó ná fad an teaghráin foinse [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "Chun ionadaithe a bhriseadh, ní mór dhá charachtar ionadaithe bailí a bheith ann."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "Ní péire ionadaithe bailí é an teaghrán foinse."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "Níor aimsíodh comhad chun spás a anailísiú uaidh."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "Ní féidir leis an sruth léamh."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "Ní féidir leis an sruth cuardach."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Earráid ag iarraidh áitshealbhóirí a pharsáil. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "Ní fhéadfaidh an áitchoimeádaí a bheith neamhní"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "Ní fhéadfaidh gníomh an áitchoimeádaí a bheith neamhní"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "Níl an áitchoimeádaí cláraithe"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "Ní mór don áitchoimeádaí an fhormáid seo a chomhlíonadh"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "Tá patrún na rialtachta neamhbhailí."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Comhréir neamhbhailí na rialtachta."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Cuid mhórleagan neamhbhailí"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "Cuid mionleagan neamhbhailí"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "Cuid leagan paiste neamhbhailí"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "Cuid leagan athbhreithnithe neamhbhailí"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "Ní teaghrán bailí SemVer é an leagan seo [{0}]."
+    }
+  ]
+}

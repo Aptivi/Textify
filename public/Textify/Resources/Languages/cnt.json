@@ -1,0 +1,181 @@
+{
+  "lang": "cnt",
+  "name": "Chinese (Traditional)",
+  "cultures": [
+    "zh",
+    "zh-Hant",
+    "zh-Hant-HK",
+    "zh-Hant-MO",
+    "zh-Hant-TW"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Wèi zhǐdìng zì chuàn"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "láiyuán zì chuàn bùnéng bāohán chāoguò liǎng gè zìfú"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "wúxiào zì yuán. [Zuìgāo wèi:{0}, Zuìdī wèi:{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "Mùbiāo bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "láiyuán bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "dài tìhuàn zì chuàn de zhènliè bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "dài tìhuàn zì chuàn de zhènliè bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "dài tìhuàn zì chuàn de zhènliè chángdù bù děngyú dài tìhuàn zì chuàn de zhènliè chángdù."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "Dài tìhuàn zì yuán de zhènliè bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "dài tìhuàn zì yuán de zhènliè bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "dài tìhuàn zì chuàn de zhènliè chángdù bù děngyú dài tìhuàn zì yuán de zhènliè chángdù."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "Dài tìhuàn zì yuán de zhènliè chángdù bù děngyú dài tìhuàn zì chuàn de zhènliè chángdù."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "Dài tìhuàn zì yuán de zhènliè chángdù bù děngyú dài tìhuàn zì yuán de zhènliè chángdù."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "Sōuxún wénzì bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "zhǐdìngle kōng zì chuàn zhí"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "mùbiāo géshì bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "mùbiāo biàn shǔ bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "mùbiāo biǎodá shì bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "wúfǎ qǔdé bù zhǎng wéi líng huò fù shǔ de zìmǔ chóngfù móshì."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "Piān yí liàng chāochū fànwéi"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "zì yuán shù {0} wúxiào."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "Bǐjiào {0} duìyú bù qūfēn dàxiǎo xiě de zì chuàn bǐjiào wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "bǐjiào {0} duìyú qūfēn dàxiǎo xiě de zì chuàn bǐjiào wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "zhǐdìng de suǒyǐn [{0}] bùnéng xiǎoyú líng"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "zhǐdìng de suǒyǐn [{0}] bùnéng dàyú láiyuán zì chuàn de chángdù [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "yào duàn kāi dàilǐ xiàng, xūyào yǒu liǎng gè yǒuxiào de dàilǐ xiàng zì yuán."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "Láiyuán zì chuàn bùshì yǒuxiào de dàilǐ xiàng duì."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "Wèi zhǎodào yòng yú fēnxī kōngjiān de dǎng'àn."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "Liú wúfǎ dòu qǔ."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "Liú wúfǎ dìngwèi."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Chángshì jiěxī zhàn wèi fú shí chūcuò. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "Zhàn wèi fú bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "zhàn wèi fú cāozuò bùnéng wéi kōng"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "zhàn wèi fú wèi zhùcè"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "zhàn wèi fú bìxū mǎnzú cǐ géshì"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "zhèngguī biǎoshì shì móshì wúxiào."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Zhèngguī biǎoshì shì yǔfǎ wúxiào."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Zhǔ bǎnběn hàomǎ bùfèn wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "cì bǎnběn hào bùfèn wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "bǔdīng bǎnběn hào bùfèn wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "xiūdìng bǎnběn hàomǎ bùfèn wúxiào"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "cǐ bǎnběn [{0}] bùshì yǒuxiào de SemVer zì chuàn."
+    }
+  ]
+}

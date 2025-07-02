@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -26,6 +26,7 @@ using System.Text;
 using Textify.General.Comparers;
 using Textify.General.Data;
 using Textify.General.Structures;
+using Textify.Language;
 using Textify.SpaceManager;
 using Textify.Tools;
 
@@ -127,7 +128,7 @@ namespace Textify.General
         public static string[] SplitEncloseDoubleQuotesNoRelease(this string target, Func<char, bool> condition, char[]? partialQuoteSplitChars = null)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Build the split matches
             List<string> matchesStr = [];
@@ -201,7 +202,7 @@ namespace Textify.General
         public static string ReleaseDoubleQuotes(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             string ReleasedString = target;
             if (target.StartsWith("\"") && target.EndsWith("\"") && target != "\"" ||
@@ -222,7 +223,7 @@ namespace Textify.General
         public static EnclosedDoubleQuotesType GetEnclosedDoubleQuotesType(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             var type = EnclosedDoubleQuotesType.None;
             if (target.StartsWith("\"") && target.EndsWith("\"") && target != "\"")
@@ -243,7 +244,7 @@ namespace Textify.General
         public static string[] SplitNewLines(this string target, bool emptyStrings = true)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             var result = target.UnixifyNewLines().Split(Convert.ToChar(10));
             if (!emptyStrings)
@@ -260,7 +261,7 @@ namespace Textify.General
         public static string[] SplitNewLinesOld(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             return target
                 .Replace(Convert.ToChar(13).ToString(), "")
@@ -276,7 +277,7 @@ namespace Textify.General
         public static string UnixifyNewLines(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Convert Windows (CR+LF) and Mac OS 9 (CR) to Unix (LF)
             return target
@@ -299,7 +300,7 @@ namespace Textify.General
         public static bool StartsWithAnyOf(this string target, string[] values)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             bool started = false;
             foreach (string value in values)
@@ -316,7 +317,7 @@ namespace Textify.General
         public static bool StartsWithAllOf(this string source, string[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             List<string> done = [];
             foreach (string Value in values)
@@ -335,7 +336,7 @@ namespace Textify.General
         public static bool EndsWithAnyOf(this string source, string[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             var Started = default(bool);
             foreach (string Value in values)
             {
@@ -353,7 +354,7 @@ namespace Textify.General
         public static bool EndsWithAllOf(this string source, string[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             List<string> done = [];
             foreach (string Value in values)
@@ -373,7 +374,7 @@ namespace Textify.General
         public static bool ContainsAnyOf(this string source, string[] targets)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             foreach (string target in targets)
                 if (source.Contains(target))
@@ -390,7 +391,7 @@ namespace Textify.General
         public static bool ContainsAllOf(this string source, string[] targets)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             List<string> done = [];
             foreach (string Target in targets)
@@ -410,7 +411,7 @@ namespace Textify.General
         public static bool StartsWithAnyOf(this string target, char[] values)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             bool started = false;
             foreach (char value in values)
@@ -427,7 +428,7 @@ namespace Textify.General
         public static bool StartsWithAllOf(this string source, char[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             List<char> done = [];
             foreach (char Value in values)
@@ -446,7 +447,7 @@ namespace Textify.General
         public static bool EndsWithAnyOf(this string source, char[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             var Started = default(bool);
             foreach (char Value in values)
             {
@@ -464,7 +465,7 @@ namespace Textify.General
         public static bool EndsWithAllOf(this string source, char[] values)
         {
             if (source is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             List<char> done = [];
             foreach (char Value in values)
@@ -484,7 +485,7 @@ namespace Textify.General
         public static bool ContainsAnyOf(this string source, char[] targets)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             foreach (char target in targets)
                 if (source.Contains(target))
@@ -501,7 +502,7 @@ namespace Textify.General
         public static bool ContainsAllOf(this string source, char[] targets)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             List<char> done = [];
             foreach (char Target in targets)
@@ -523,9 +524,9 @@ namespace Textify.General
         public static string ReplaceAll(this string target, string[] toBeReplaced, string toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
 
             foreach (string ReplaceTarget in toBeReplaced)
                 target = target.Replace(ReplaceTarget, toReplace);
@@ -543,9 +544,9 @@ namespace Textify.General
         public static string ReplaceAll(this string target, string[] toBeReplaced, char toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
 
             foreach (string ReplaceTarget in toBeReplaced)
                 target = target.Replace(ReplaceTarget, $"{toReplace}");
@@ -563,9 +564,9 @@ namespace Textify.General
         public static string ReplaceAll(this string target, char[] toBeReplaced, string toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
 
             foreach (char ReplaceTarget in toBeReplaced)
                 target = target.Replace($"{ReplaceTarget}", toReplace);
@@ -583,9 +584,9 @@ namespace Textify.General
         public static string ReplaceAll(this string target, char[] toBeReplaced, char toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
 
             foreach (char ReplaceTarget in toBeReplaced)
                 target = target.Replace(ReplaceTarget, toReplace);
@@ -604,13 +605,13 @@ namespace Textify.General
         public static string ReplaceAllRange(this string target, string[] toBeReplaced, string[] toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
             if (toReplace is null || toReplace.Length == 0)
-                throw new TextifyException("Array of to be replacement strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT"));
             if (toBeReplaced.Length != toReplace.Length)
-                throw new TextifyException("Array length of which strings to be replaced doesn't equal the array length of which strings to replace.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT"));
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace(toBeReplaced[i], toReplace[i]);
@@ -629,13 +630,13 @@ namespace Textify.General
         public static string ReplaceAllRange(this string target, string[] toBeReplaced, char[] toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT"));
             if (toReplace is null || toReplace.Length == 0)
-                throw new TextifyException("Array of to be replacement characters may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR"));
             if (toBeReplaced.Length != toReplace.Length)
-                throw new TextifyException("Array length of which strings to be replaced doesn't equal the array length of which characters to replace.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR"));
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace(toBeReplaced[i], $"{toReplace[i]}");
@@ -654,13 +655,13 @@ namespace Textify.General
         public static string ReplaceAllRange(this string target, char[] toBeReplaced, string[] toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced characters may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR"));
             if (toReplace is null || toReplace.Length == 0)
-                throw new TextifyException("Array of to be replacement strings may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT"));
             if (toBeReplaced.Length != toReplace.Length)
-                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which strings to replace.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT"));
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace($"{toBeReplaced[i]}", toReplace[i]);
@@ -679,13 +680,13 @@ namespace Textify.General
         public static string ReplaceAllRange(this string target, char[] toBeReplaced, char[] toReplace)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (toBeReplaced is null || toBeReplaced.Length == 0)
-                throw new TextifyException("Array of to be replaced characters may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR"));
             if (toReplace is null || toReplace.Length == 0)
-                throw new TextifyException("Array of to be replacement characters may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR"));
             if (toBeReplaced.Length != toReplace.Length)
-                throw new TextifyException("Array length of which characters to be replaced doesn't equal the array length of which characters to replace.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR"));
 
             for (int i = 0, loopTo = toBeReplaced.Length - 1; i <= loopTo; i++)
                 target = target.Replace(toBeReplaced[i], toReplace[i]);
@@ -702,9 +703,9 @@ namespace Textify.General
         public static string ReplaceLastOccurrence(this string source, string searchText, string replace)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
             if (searchText is null)
-                throw new TextifyException("The search text may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
@@ -720,9 +721,9 @@ namespace Textify.General
         public static string ReplaceLastOccurrence(this string source, string searchText, char replace)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
             if (searchText is null)
-                throw new TextifyException("The search text may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
@@ -738,7 +739,7 @@ namespace Textify.General
         public static string ReplaceLastOccurrence(this string source, char searchText, string replace)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
@@ -754,7 +755,7 @@ namespace Textify.General
         public static string ReplaceLastOccurrence(this string source, char searchText, char replace)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             return ReplaceOccurrence(source, searchText, replace, indexes.Length - 1);
@@ -771,9 +772,9 @@ namespace Textify.General
         public static string ReplaceOccurrence(this string source, string searchText, string replace, int index)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
             if (searchText is null)
-                throw new TextifyException("The search text may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             int position = indexes[index];
@@ -794,9 +795,9 @@ namespace Textify.General
         public static string ReplaceOccurrence(this string source, string searchText, char replace, int index)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
             if (searchText is null)
-                throw new TextifyException("The search text may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             int position = indexes[index];
@@ -817,7 +818,7 @@ namespace Textify.General
         public static string ReplaceOccurrence(this string source, char searchText, string replace, int index)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             int position = indexes[index];
@@ -838,7 +839,7 @@ namespace Textify.General
         public static string ReplaceOccurrence(this string source, char searchText, char replace, int index)
         {
             if (source is null)
-                throw new TextifyException("The source may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL"));
 
             int[] indexes = [.. source.AllIndexesOf(searchText)];
             int position = indexes[index];
@@ -857,9 +858,9 @@ namespace Textify.General
         public static IEnumerable<int> AllIndexesOf(this string target, string value)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (string.IsNullOrEmpty(value))
-                throw new TextifyException("Empty string value specified");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL"));
 
             int index = 0;
             while (true)
@@ -881,7 +882,7 @@ namespace Textify.General
         public static IEnumerable<int> AllIndexesOf(this string target, char value)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             int index = 0;
             while (true)
@@ -903,9 +904,9 @@ namespace Textify.General
         public static string FormatString(this string Format, params object?[]? Vars)
         {
             if (Format is null)
-                throw new TextifyException("The target format may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL"));
             if (Vars is null)
-                throw new TextifyException("The target vars may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL"));
 
             string FormattedString = Format;
             try
@@ -928,7 +929,7 @@ namespace Textify.General
         public static bool IsStringNumeric(this string Expression)
         {
             if (string.IsNullOrWhiteSpace(Expression))
-                throw new TextifyException("The target expression may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL"));
 
             return double.TryParse(Expression, out double _);
         }
@@ -947,7 +948,7 @@ namespace Textify.General
 		public static string AddPrefix(this string text, string prefix, bool check = true)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             var builder = new StringBuilder(text);
             if ((check && !text.VerifyPrefix(prefix)) || !check)
@@ -969,7 +970,7 @@ namespace Textify.General
         public static string AddSuffix(this string text, string suffix, bool check = true)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             var builder = new StringBuilder(text);
             if ((check && !text.VerifySuffix(suffix)) || !check)
@@ -989,7 +990,7 @@ namespace Textify.General
 		public static string RemovePrefix(this string text, string prefix)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             if (text.StartsWith(prefix))
                 return text.Substring(prefix.Length).Trim();
@@ -1008,7 +1009,7 @@ namespace Textify.General
         public static string RemoveSuffix(this string text, string suffix)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             if (text.EndsWith(suffix))
                 return text.Substring(0, text.Length - suffix.Length);
@@ -1028,7 +1029,7 @@ namespace Textify.General
 		public static bool VerifyPrefix(this string text, string prefix, StringComparison comparison = StringComparison.CurrentCulture)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             return text.StartsWith(prefix, comparison);
         }
@@ -1046,7 +1047,7 @@ namespace Textify.General
         public static bool VerifySuffix(this string text, string suffix, StringComparison comparison = StringComparison.CurrentCulture)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             return text.EndsWith(suffix, comparison);
         }
@@ -1059,7 +1060,7 @@ namespace Textify.General
         public static string GetBase64Encoded(this string text)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             byte[] textBytes = Encoding.Default.GetBytes(text);
             return Convert.ToBase64String(textBytes);
@@ -1073,7 +1074,7 @@ namespace Textify.General
         public static string GetBase64Decoded(this string text)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             byte[] textBytes = Convert.FromBase64String(text);
             return Encoding.Default.GetString(textBytes);
@@ -1088,7 +1089,7 @@ namespace Textify.General
         public static string ShiftLetters(this string text, int shift)
         {
             if (text is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Get the character array
             char[] chars = text.ToCharArray();
@@ -1311,7 +1312,7 @@ namespace Textify.General
         public static string TruncateString(this string target, int threshold)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (threshold < 0)
                 threshold = 0;
             if (threshold == 0)
@@ -1362,7 +1363,7 @@ namespace Textify.General
         public static string UpperFirst(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             char[] chars = target.ToCharArray();
             chars[0] = char.ToUpper(chars[0]);
@@ -1377,7 +1378,7 @@ namespace Textify.General
         public static string LowerFirst(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             char[] chars = target.ToCharArray();
             chars[0] = char.ToLower(chars[0]);
@@ -1392,7 +1393,7 @@ namespace Textify.General
         public static string ToTitleCase(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             string[] exclusions = ["of", "the", "a", "an", "in", "on", "to", "from"];
 
@@ -1421,7 +1422,7 @@ namespace Textify.General
         public static string GetEnclosedWordFromIndex(this string target, int sourceIdx, bool includeSymbols = false)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Calculate the distance between two word spaces
             int distance = 0;
@@ -1449,7 +1450,7 @@ namespace Textify.General
         public static string Escape(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Escape characters now.
             return target.ReplaceAllRange(unescaped, escaped);
@@ -1463,7 +1464,7 @@ namespace Textify.General
         public static string Unescape(this string target)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
 
             // Unescape characters now.
             return target.ReplaceAllRange(escaped, unescaped);
@@ -1479,7 +1480,7 @@ namespace Textify.General
         public static int GetIndexOfEnclosedWordFromIndex(this string target, int sourceIdx, bool includeSymbols = false)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (string.IsNullOrEmpty(target))
                 return -1;
 
@@ -1507,9 +1508,9 @@ namespace Textify.General
         public static int GetLetterRepetitionPattern(this string target, int steps)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (steps <= 0)
-                throw new TextifyException("Can't get the letter repetition pattern with zero or negative number of steps.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID"));
             if (target.Length == 0)
                 return 0;
 
@@ -1558,7 +1559,7 @@ namespace Textify.General
         public static ReadOnlyDictionary<int, int> GetLetterRepetitionPatternTable(this string target, int iterations)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (target.Length == 0 || iterations <= 0)
                 return new(new Dictionary<int, int>());
 
@@ -1583,7 +1584,7 @@ namespace Textify.General
         public static ReadOnlyDictionary<char, int> GetListOfRepeatedLetters(this string target, bool removeSingle = false)
         {
             if (target is null)
-                throw new TextifyException("The target may not be null");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL"));
             if (target.Length == 0)
                 return new(new Dictionary<char, int>());
 
@@ -1697,7 +1698,7 @@ namespace Textify.General
             if (string.IsNullOrEmpty(source))
                 return "";
             if (offset < 0 || offset >= source.Length)
-                throw new ArgumentOutOfRangeException(nameof(offset), offset, "Offset is out of range");
+                throw new ArgumentOutOfRangeException(nameof(offset), offset, LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE"));
             if (source[offset] == '\0')
                 return "";
 
@@ -1721,7 +1722,7 @@ namespace Textify.General
         {
             // Check the value
             if (c < 0 || c > 0x10FFFF)
-                throw new TextifyException("Invalid character number {0}.".FormatString(c));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID").FormatString(c));
 
             // Check the cached width
             if (cachedWidths.ContainsKey(c))
@@ -1793,7 +1794,7 @@ namespace Textify.General
         {
             // Check the value
             if (c < 0 || c > 0x10FFFF)
-                throw new TextifyException("Invalid character number {0}.".FormatString(c));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID").FormatString(c));
 
             // Check the cached width
             if (cachedWidths.ContainsKey(c))
@@ -1847,7 +1848,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE").FormatString((int)comparison));
             return string.Equals(source, target, comparison);
         }
 
@@ -1864,7 +1865,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE").FormatString((int)comparison));
             return string.Equals(source, target, comparison);
         }
 
@@ -1881,7 +1882,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE").FormatString((int)comparison));
             return source.StartsWith(target, comparison);
         }
 
@@ -1898,7 +1899,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE").FormatString((int)comparison));
             return source.StartsWith(target, comparison);
         }
 
@@ -1915,7 +1916,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCultureIgnoreCase &&
                 comparison != StringComparison.InvariantCultureIgnoreCase &&
                 comparison != StringComparison.OrdinalIgnoreCase)
-                throw new ArgumentException("Comparison {0} not valid for case-insensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE").FormatString((int)comparison));
             return source.EndsWith(target, comparison);
         }
 
@@ -1932,7 +1933,7 @@ namespace Textify.General
             if (comparison != StringComparison.CurrentCulture &&
                 comparison != StringComparison.InvariantCulture &&
                 comparison != StringComparison.Ordinal)
-                throw new ArgumentException("Comparison {0} not valid for case-sensitive string comparison".FormatString((int)comparison));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE").FormatString((int)comparison));
             return source.EndsWith(target, comparison);
         }
 
@@ -2027,9 +2028,9 @@ namespace Textify.General
             if (string.IsNullOrEmpty(source))
                 return "";
             if (idx < 0)
-                throw new Exception("Specified index [{0}] may not be less than zero".FormatString(idx));
+                throw new Exception(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE").FormatString(idx));
             if (idx >= source.Length)
-                throw new Exception("Specified index [{0}] may not be larger than the source string length [{1}]".FormatString(idx, source.Length - 1));
+                throw new Exception(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE").FormatString(idx, source.Length - 1));
 
             // Replace the character in a specified index
             char[] chars = source.ToCharArray();
@@ -2058,9 +2059,9 @@ namespace Textify.General
         public static (char high, char low) BreakSurrogates(this string source)
         {
             if (source.Length != 2)
-                throw new TextifyException("To break surrogates, there needs to be two valid surrogate characters.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES"));
             if (!char.IsSurrogatePair(source[0], source[1]))
-                throw new TextifyException("The source string is not a valid surrogate pair.");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID"));
             return (source[0], source[1]);
         }
 

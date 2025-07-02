@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -25,6 +25,7 @@ using System.Text.RegularExpressions;
 using Textify.Data.Figlet.Utilities;
 using Textify.Data.Figlet.Utilities.Lines;
 using Textify.General;
+using Textify.Data.Language;
 
 namespace Textify.Data.Figlet
 {
@@ -172,7 +173,7 @@ namespace Textify.Data.Figlet
                     if (line == null)
                     {
                         if (!optional)
-                            throw new FigletException("Unexpected EOF in Font file.");
+                            throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF"));
                         else
                             break;
                     }
@@ -220,7 +221,7 @@ namespace Textify.Data.Figlet
 
                 // Try to parse the line
                 if (!ParseUtil.TryParse(line, out var code))
-                    throw new FigletException("Unsupported code-tagged character code string '{0}'.".FormatString(line));
+                    throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE").FormatString(line));
 
                 // Read the required and sparse characters
                 if (code >= 0 && code < 256)
@@ -280,10 +281,10 @@ namespace Textify.Data.Figlet
 
             // Read the first line and parse it
             var firstLine = reader.ReadLine() ??
-                throw new FigletException("Font file is empty.");
+                throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE"));
             var match = _firstLinePattern.Match(firstLine);
             if (!match.Success)
-                throw new FigletException("Font file has invalid first line.");
+                throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID"));
             return (reader, match);
         }
 

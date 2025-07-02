@@ -1,0 +1,179 @@
+{
+  "lang": "grk",
+  "name": "Greek",
+  "cultures": [
+    "el",
+    "el-CY",
+    "el-GR"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "Δεν έχει καθοριστεί συμβολοσειρά"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "Η συμβολοσειρά πηγής δεν μπορεί να περιέχει περισσότερους από δύο χαρακτήρες"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "Μη έγκυρος χαρακτήρας. [Υψηλή: {0}, Χαμηλή: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "Ο στόχος μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "Η πηγή μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "Ο πίνακας συμβολοσειρών προς αντικατάσταση μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "Ο πίνακας συμβολοσειρών αντικατάστασης μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "Το μήκος του πίνακα των συμβολοσειρών που θα αντικατασταθούν δεν ισούται με το μήκος του πίνακα των συμβολοσειρών που θα αντικατασταθούν."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "Ο πίνακας χαρακτήρων που θα αντικατασταθούν μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "Ο πίνακας χαρακτήρων αντικατάστασης μπορεί να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "Το μήκος του πίνακα των συμβολοσειρών που θα αντικατασταθούν δεν ισούται με το μήκος του πίνακα των χαρακτήρων που θα αντικατασταθούν."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "Το μήκος του πίνακα των χαρακτήρων που θα αντικατασταθούν δεν ισούται με το μήκος του πίνακα των συμβολοσειρών που θα αντικατασταθούν."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "Το μήκος του πίνακα των χαρακτήρων που θα αντικατασταθούν δεν ισούται με το μήκος του πίνακα των χαρακτήρων που θα αντικατασταθούν."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "Το κείμενο αναζήτησης ενδέχεται να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "Καθορίστηκε κενή τιμή συμβολοσειράς"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "Η μορφή στόχου ενδέχεται να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "Οι μεταβλητές στόχου ενδέχεται να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "Η έκφραση στόχου ενδέχεται να μην είναι null"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "Δεν είναι δυνατή η λήψη του μοτίβου επανάληψης γραμμάτων με μηδέν ή αρνητικό αριθμό βημάτων."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "Η μετατόπιση είναι εκτός εύρους"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "Μη έγκυρος αριθμός χαρακτήρων {0}."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "Η σύγκριση {0} δεν είναι έγκυρη για σύγκριση συμβολοσειρών χωρίς διάκριση πεζών-κεφαλαίων"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "Η σύγκριση {0} δεν είναι έγκυρη για σύγκριση συμβολοσειρών με διάκριση πεζών-κεφαλαίων"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "Ο καθορισμένος δείκτης [{0}] δεν μπορεί να είναι μικρότερος από μηδέν"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "Ο καθορισμένος δείκτης [{0}] δεν μπορεί να είναι μεγαλύτερος από το μήκος της συμβολοσειράς πηγής [{1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "Για να διασπαστούν τα υποκατάστατα, πρέπει να υπάρχουν δύο έγκυροι χαρακτήρες υποκατάστασης."
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "Η συμβολοσειρά πηγής δεν είναι έγκυρο ζεύγος υποκατάστατων."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "Δεν βρέθηκε αρχείο για ανάλυση χώρου."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "Η ροή δεν μπορεί να διαβάσει."
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "Η ροή δεν μπορεί να αναζητήσει."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "Σφάλμα κατά την προσπάθεια ανάλυσης placeholders. {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "Το σύμβολο κράτησης θέσης δεν μπορεί να είναι null"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "Η ενέργεια του συμβόλου κράτησης θέσης δεν μπορεί να είναι null"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "Το σύμβολο κράτησης θέσης δεν είναι καταχωρημένο"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "Το σύμβολο κράτησης θέσης πρέπει να ικανοποιεί αυτήν τη μορφή"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "Το μοτίβο κανονικής έκφρασης δεν είναι έγκυρο."
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "Μη έγκυρη σύνταξη κανονικής έκφρασης."
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "Μη έγκυρο κύριο μέρος έκδοσης"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "Μη έγκυρο δευτερεύον μέρος έκδοσης"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "Μη έγκυρο μέρος έκδοσης ενημέρωσης κώδικα"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "Μη έγκυρο μέρος έκδοσης αναθεώρησης"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "Αυτή η έκδοση [{0}] δεν είναι έγκυρη συμβολοσειρά SemVer."
+    }
+  ]
+}

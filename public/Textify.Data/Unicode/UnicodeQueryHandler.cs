@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -25,6 +25,7 @@ using System.Linq;
 using System.Xml;
 using Textify.Data.Tools;
 using Textify.General;
+using Textify.Data.Language;
 using Textify.Tools;
 
 namespace Textify.Data.Unicode
@@ -53,7 +54,7 @@ namespace Textify.Data.Unicode
                     xmlFile = "ucd.all.flat.xml";
                     break;
                 default:
-                    throw new ArgumentException("There is no Unicode query type of this type.");
+                    throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE"));
             }
 
             // Unpack the ZIP to stream
@@ -66,7 +67,7 @@ namespace Textify.Data.Unicode
         internal static UnicodeCharInfo Serialize(int charNum, UnicodeQueryType type)
         {
             return TrySerialize(charNum, type) ??
-                throw new TextifyException("There is no character info for this number {0}, {1}.".FormatString(charNum, type.ToString()));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE").FormatString(charNum, type.ToString()));
         }
 
         internal static UnicodeCharInfo? TrySerialize(int charNum, UnicodeQueryType type)

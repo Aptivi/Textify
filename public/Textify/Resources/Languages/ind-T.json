@@ -1,0 +1,178 @@
+{
+  "lang": "ind-T",
+  "name": "Hindi",
+  "cultures": [
+    "hi",
+    "hi-IN"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING",
+      "text": "स्ट्रिंग निर्दिष्ट नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX",
+      "text": "स्रोत स्ट्रिंग में दो से अधिक वर्ण नहीं हो सकते"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR",
+      "text": "अमान्य वर्ण। [उच्च: {0}, निम्न: {1}]"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL",
+      "text": "लक्ष्य शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL",
+      "text": "स्रोत शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT",
+      "text": "प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT",
+      "text": "प्रतिस्थापन की जाने वाली स्ट्रिंग की सरणी शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT",
+      "text": "प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी की लंबाई, प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी की लंबाई के बराबर नहीं है।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR",
+      "text": "प्रतिस्थापित की जाने वाली वर्ण की सरणी शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR",
+      "text": "प्रतिस्थापन की जाने वाली वर्ण की सरणी शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR",
+      "text": "प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी की लंबाई, प्रतिस्थापित की जाने वाली वर्ण की सरणी की लंबाई के बराबर नहीं है।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT",
+      "text": "प्रतिस्थापित की जाने वाली वर्ण की सरणी की लंबाई, प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी की लंबाई के बराबर नहीं है।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR",
+      "text": "प्रतिस्थापित की जाने वाली वर्ण की सरणी की लंबाई, प्रतिस्थापित की जाने वाली स्ट्रिंग की सरणी की लंबाई के बराबर नहीं है।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL",
+      "text": "प्रतिस्थापित की जाने वाली वर्ण की सरणी की लंबाई, प्रतिस्थापित की जाने वाली वर्ण ... खोज पाठ शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL",
+      "text": "खाली स्ट्रिंग मान निर्दिष्ट किया गया"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL",
+      "text": "लक्ष्य प्रारूप शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL",
+      "text": "लक्ष्य चर शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL",
+      "text": "लक्ष्य अभिव्यक्ति शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID",
+      "text": "शून्य या ऋणात्मक संख्या के चरणों के साथ अक्षर पुनरावृत्ति पैटर्न प्राप्त नहीं किया जा सकता।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE",
+      "text": "ऑफसेट सीमा से बाहर है"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID",
+      "text": "अमान्य वर्ण संख्या {0}।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE",
+      "text": "केस-असंवेदनशील स्ट्रिंग तुलना के लिए तुलना {0} मान्य नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE",
+      "text": "केस-संवेदनशील स्ट्रिंग तुलना के लिए तुलना {0} मान्य नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE",
+      "text": "निर्दिष्ट सूचकांक [{0}] शून्य से कम नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE",
+      "text": "निर्दिष्ट सूचकांक [{0}] स्रोत स्ट्रिंग लंबाई [{1}] से बड़ा नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES",
+      "text": "सरोगेट को तोड़ने के लिए, दो वैध सरोगेट वर्ण होने चाहिए।"
+    },
+    {
+      "loc": "TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID",
+      "text": "स्रोत स्ट्रिंग एक वैध सरोगेट जोड़ी नहीं है।"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND",
+      "text": "स्पेस का विश्लेषण करने के लिए फ़ाइल नहीं मिली।"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE",
+      "text": "स्ट्रीम नहीं पढ़ी जा सकती।"
+    },
+    {
+      "loc": "TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE",
+      "text": "स्ट्रीम नहीं खोज सकती।"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR",
+      "text": "प्लेसहोल्डर को पार्स करने का प्रयास करते समय त्रुटि। {0}"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL",
+      "text": "प्लेसहोल्डर शून्य नहीं हो सकता"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL",
+      "text": "प्लेसहोल्डर क्रिया शून्य नहीं हो सकती"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND",
+      "text": "प्लेसहोल्डर पंजीकृत नहीं है"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR",
+      "text": "प्लेसहोल्डर को इस प्रारूप को पूरा करना होगा"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN",
+      "text": "नियमित अभिव्यक्ति पैटर्न अमान्य है।"
+    },
+    {
+      "loc": "TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX",
+      "text": "अमान्य नियमित अभिव्यक्ति सिंटैक्स।"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR",
+      "text": "अमान्य प्रमुख संस्करण भाग"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR",
+      "text": "अमान्य लघु संस्करण भाग"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH",
+      "text": "अमान्य पैच संस्करण भाग"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION",
+      "text": "अमान्य संशोधन संस्करण भाग"
+    },
+    {
+      "loc": "TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING",
+      "text": "यह संस्करण [{0}] एक मान्य SemVer स्ट्रिंग नहीं है।"
+    }
+  ]
+}

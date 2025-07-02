@@ -1,0 +1,79 @@
+{
+  "lang": "grk",
+  "name": "Greek",
+  "cultures": [
+    "el",
+    "el-CY",
+    "el-GR"
+  ],
+  "locs": [
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE",
+      "text": "Εσωτερική εξαίρεση figlet κατά την προσπάθεια απόδοσης γραμματοσειράς επειδή minMove < 0."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNEXPECTEDEOF",
+      "text": "Μη αναμενόμενο EOF στο αρχείο γραμματοσειράς."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_UNSUPPORTEDLINE",
+      "text": "Μη υποστηριζόμενη συμβολοσειρά κωδικού χαρακτήρα με ετικέτα κώδικα '{0}'."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_EMPTYFONTFILE",
+      "text": "Το αρχείο γραμματοσειράς είναι κενό."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_FONTFILEINVALID",
+      "text": "Το αρχείο γραμματοσειράς έχει μη έγκυρη πρώτη γραμμή."
+    },
+    {
+      "loc": "TEXTIFY_DATA_FIGLET_EXCEPTION_NOBUILTINFONT",
+      "text": "Η ενσωματωμένη γραμματοσειρά δεν έχει υλοποιηθεί. Δοκιμάστε να χρησιμοποιήσετε την κλάση FigletFontParser για να αναλύσετε προσαρμοσμένες γραμματοσειρές Figlet."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NODATA",
+      "text": "Δεν είναι δυνατή η λήψη ονομάτων και επωνύμων"
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NONAMES",
+      "text": "Τα ονόματα δεν βρέθηκαν! Βεβαιωθείτε ότι οι συνθήκες ονόματος είναι σωστές."
+    },
+    {
+      "loc": "TEXTIFY_DATA_NAMEGEN_EXCEPTION_NOSURNAMES",
+      "text": "Τα επώνυμα δεν βρέθηκαν! Βεβαιωθείτε ότι οι συνθήκες επωνύμου είναι σωστές."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NOSTREAM",
+      "text": "Δεν υπάρχει ροή με αυτήν την απαρίθμηση"
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_NORESNAME",
+      "text": "Δεν υπάρχει όνομα πόρου με αυτήν την απαρίθμηση."
+    },
+    {
+      "loc": "TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND",
+      "text": "Ο τύπος πόρου {0} με επέκταση {1} δεν βρέθηκε [{2}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI",
+      "text": "Δεν είναι δυνατή η εύρεση emoji από την απαρίθμηση [{0}, {1}]"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY",
+      "text": "Η κατηγορία δεν υπάρχει"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY",
+      "text": "Δεν υπάρχει τέτοια υποκατηγορία για το {0}"
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOUNICODEQUERYTYPE",
+      "text": "Δεν υπάρχει τύπος ερωτήματος Unicode αυτού του τύπου."
+    },
+    {
+      "loc": "TEXTIFY_DATA_UNICODE_EXCEPTION_NOCHARINFONUMTYPE",
+      "text": "Δεν υπάρχουν πληροφορίες χαρακτήρα για αυτόν τον αριθμό {0}, {1}."
+    }
+  ]
+}

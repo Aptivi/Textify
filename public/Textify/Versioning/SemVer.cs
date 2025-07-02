@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Textify.General;
+using Textify.Language;
 
 namespace Textify.Versioning
 {
@@ -140,16 +141,16 @@ namespace Textify.Versioning
             {
                 GroupCollection matchGroups = match.Groups;
                 if (!int.TryParse(matchGroups[1].Value, out int major))
-                    throw new SemVerException("Invalid major version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR"));
                 if (!int.TryParse(matchGroups[2].Value, out int minor))
-                    throw new SemVerException("Invalid minor version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR"));
                 if (!int.TryParse(matchGroups[3].Value, out int patch))
-                    throw new SemVerException("Invalid patch version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH"));
                 string preReleaseInfo = matchGroups[4].Value;
                 string buildMetadata = matchGroups[5].Value;
                 return new SemVer(major, minor, patch, preReleaseInfo, buildMetadata);
             }
-            throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(value));
+            throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING").FormatString(value));
         }
 
         /// <summary>
@@ -168,18 +169,18 @@ namespace Textify.Versioning
             {
                 GroupCollection matchGroups = match.Groups;
                 if (!int.TryParse(matchGroups[1].Value, out int major))
-                    throw new SemVerException($"Invalid major version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR"));
                 if (!int.TryParse(matchGroups[2].Value, out int minor))
-                    throw new SemVerException($"Invalid minor version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR"));
                 if (!int.TryParse(matchGroups[3].Value, out int patch))
-                    throw new SemVerException($"Invalid patch version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH"));
                 if (!int.TryParse(matchGroups[4].Value, out int rev))
-                    throw new SemVerException($"Invalid revision version part");
+                    throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION"));
                 string preReleaseInfo = matchGroups[5].Value;
                 string buildMetadata = matchGroups[6].Value;
                 return new SemVer(major, minor, patch, rev, preReleaseInfo, buildMetadata);
             }
-            throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(value));
+            throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING").FormatString(value));
         }
 
         /// <summary>
@@ -262,7 +263,7 @@ namespace Textify.Versioning
             normalValid = matches.Count > 0;
             revValid = matchesRev.Count > 0;
             if (!revValid && !normalValid)
-                throw new SemVerException("This version [{0}] is not a valid SemVer string.".FormatString(version));
+                throw new SemVerException(LanguageTools.GetLocalized("TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING").FormatString(version));
             return revValid;
         }
 

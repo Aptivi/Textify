@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -21,6 +21,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Textify.Language;
 
 namespace Textify.SpaceManager.Analysis
 {
@@ -56,7 +57,7 @@ namespace Textify.SpaceManager.Analysis
             if (string.IsNullOrEmpty(pathToFile))
                 throw new ArgumentNullException(nameof(pathToFile));
             if (!File.Exists(pathToFile))
-                throw new FileNotFoundException("File not found to analyze space from.", pathToFile);
+                throw new FileNotFoundException(LanguageTools.GetLocalized("TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND"), pathToFile);
 
             // Open the file, analyze it, then close it.
             var fileReader = File.OpenRead(pathToFile);
@@ -75,9 +76,9 @@ namespace Textify.SpaceManager.Analysis
             if (stream is null)
                 throw new ArgumentNullException(nameof(stream));
             if (!stream.CanRead)
-                throw new InvalidOperationException("Stream can't read.");
+                throw new InvalidOperationException(LanguageTools.GetLocalized("TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE"));
             if (!stream.CanSeek)
-                throw new InvalidOperationException("Stream can't seek.");
+                throw new InvalidOperationException(LanguageTools.GetLocalized("TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE"));
             return new SpaceAnalysisResult(stream);
         }
 

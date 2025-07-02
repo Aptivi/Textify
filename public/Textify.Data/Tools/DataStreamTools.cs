@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -20,6 +20,7 @@
 using System.IO;
 using System.Linq;
 using Textify.General;
+using Textify.Data.Language;
 
 namespace Textify.Data.Tools
 {
@@ -41,7 +42,7 @@ namespace Textify.Data.Tools
             var asm = typeof(DataStreamTools).Assembly;
             string resourceName = $"{asm.GetName().Name}.{type}.{extension}";
             if (!HasResource(type, extension))
-                throw new InvalidDataException("Resource type {0} with extension {1} not found [{2}]".FormatString(type, extension, resourceName));
+                throw new InvalidDataException(LanguageTools.GetLocalized("TEXTIFY_DATA_EXCEPTION_RESTYPENOTFOUND").FormatString(type, extension, resourceName));
 
             // Return the stream
             return asm.GetManifestResourceStream(resourceName);

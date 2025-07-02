@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -19,6 +19,7 @@
 
 using System.Linq;
 using Textify.General;
+using Textify.Data.Language;
 using Textify.Tools;
 
 namespace Textify.Data.Unicode
@@ -36,7 +37,7 @@ namespace Textify.Data.Unicode
         public static KaomojiSubcategory[] GetKaomojiSubcategories(KaomojiCategory category)
         {
             if (!kaomojis.TryGetValue(category, out var subcategory))
-                throw new TextifyException("Category doesn't exist");
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJICATEGORY"));
             return [.. subcategory.Keys];
         }
 
@@ -50,7 +51,7 @@ namespace Textify.Data.Unicode
         {
             var subcategories = GetKaomojiSubcategories(category);
             if (!subcategories.Contains(subcategory))
-                throw new TextifyException("There is no such subcategory for {0}".FormatString(category));
+                throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_DATA_UNICODE_EXCEPTION_NOKAOMOJISUBCATEGORY").FormatString(category));
             return kaomojis[category][subcategory];
         }
 

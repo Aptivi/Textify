@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -20,6 +20,7 @@
 using System;
 using System.Linq;
 using Textify.General;
+using Textify.Data.Language;
 
 namespace Textify.Data.Unicode
 {
@@ -58,7 +59,7 @@ namespace Textify.Data.Unicode
         public static Emoji GetEmojiFromEnum(EmojiEnum name)
         {
             if (!emojis.TryGetValue(name, out Emoji emoji))
-                throw new ArgumentException("Can't find emoji from enum [{0}, {1}]".FormatString((int)name, name));
+                throw new ArgumentException(LanguageTools.GetLocalized("TEXTIFY_DATA_UNICODE_EXCEPTION_NOEMOJI").FormatString((int)name, name));
             return emoji;
         }
     }

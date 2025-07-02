@@ -1,4 +1,4 @@
-﻿//
+//
 // Textify  Copyright (C) 2023-2025  Aptivi
 //
 // This file is part of Textify
@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Textify.General;
+using Textify.Data.Language;
 
 namespace Textify.Data.Figlet.Utilities.Lines
 {
@@ -271,7 +272,7 @@ namespace Textify.Data.Figlet.Utilities.Lines
                 }
 
                 if (minMove < 0)
-                    throw new FigletException("Internal figlet exception when trying to render font because minMove < 0.");
+                    throw new FigletException(LanguageTools.GetLocalized("TEXTIFY_DATA_FIGLET_EXCEPTION_MINMOVENEGATIVE"));
 
                 return minMove;
             }
