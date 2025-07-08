@@ -25,9 +25,9 @@ namespace Textify.General.Data
     public enum CharWidthType
     {
         /// <summary>
-        /// Private characters
+        /// Formatting characters
         /// </summary>
-        Private,
+        Formatting,
         /// <summary>
         /// Non-printing characters
         /// </summary>
@@ -40,10 +40,6 @@ namespace Textify.General.Data
         /// Double width characters
         /// </summary>
         DoubleWidth,
-        /// <summary>
-        /// Ambiguous characters
-        /// </summary>
-        Ambiguous,
         /// <summary>
         /// Emoji characters
         /// </summary>

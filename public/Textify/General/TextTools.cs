@@ -39,20 +39,11 @@ namespace Textify.General
     {
         private static readonly string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
         private static readonly string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
-        private static readonly Dictionary<int, (int, CharWidthType)> cachedWidths = [];
 
         /// <summary>
         /// Whether to use two cells for unassigned characters or only one cell
         /// </summary>
         public static bool UseTwoCellsForUnassignedChars { get; set; }
-        /// <summary>
-        /// Whether to use two cells for ambiguous characters or only one cell
-        /// </summary>
-        public static bool UseTwoCellsForAmbiguousChars { get; set; }
-        /// <summary>
-        /// Whether to use two cells for private characters or only one cell
-        /// </summary>
-        public static bool UseTwoCellsForPrivateChars { get; set; }
 
         /// <summary>
         /// Splits the string enclosed in double quotes delimited by spaces using regular expression formula
@@ -1724,64 +1715,38 @@ namespace Textify.General
             if (c < 0 || c > 0x10FFFF)
                 throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID").FormatString(c));
 
-            // Check the cached width
-            if (cachedWidths.ContainsKey(c))
-                return cachedWidths[c].Item1;
+            // Check for null character
+            if (c == 0)
+                return 0;
 
-            // Use the character cell table defined in a separate code class to be able to determine the width
-            int width = 1;
-            CharWidthType widthType = (CharWidthType)(-1);
-            bool cacheable = true;
-            foreach ((var range, int cells, CharWidthType type) in CharWidths.ranges)
-            {
-                // Check for each range if we have a Unicode character that falls under one of the characters that take
-                // up either no cells or more than one cell.
-                foreach ((int first, int last) in range)
-                {
-                    if (c >= first && c <= last)
-                    {
-                        widthType = type;
-                        width = cells;
-                        break;
-                    }
-                }
-                if (width == 1)
-                    continue;
+            // Now, check for control characters
+            if (c < 32 || (c >= 0x7f && c < 0xa0))
+                return 0;
+            if (c == 0xad)
+                return 1;
 
-                // Now, check the value of the width
-                switch (width)
-                {
-                    case -1:
-                        // Unassigned character. This way, we need to let users select how to handle it by giving them a property
-                        // that allows them to set either one (default) or two cells to be taken.
-                        width = UseTwoCellsForUnassignedChars ? 2 : 1;
-                        cacheable = false;
-                        break;
-                    case -2:
-                        // Ambiguous character. See above.
-                        width = UseTwoCellsForAmbiguousChars ? 2 : 1;
-                        cacheable = false;
-                        break;
-                    case -3:
-                        // Private character. See above.
-                        width = UseTwoCellsForPrivateChars ? 2 : 1;
-                        cacheable = false;
-                        break;
-                }
-                break;
-            }
+            // Check for format characters
+            if (CharWidths.BinarySearch(c, CharWidths.formattingChars))
+                return 0;
 
-            // Add to cache if we can
-            if (cacheable)
-            {
-                // To ensure that we don't have any race condition, lock here and check.
-                lock (cachedWidths)
-                {
-                    if (!cachedWidths.ContainsKey(c))
-                        cachedWidths.Add(c, (width, widthType));
-                }
-            }
-            return width;
+            // Check for combining characters
+            if (CharWidths.BinarySearch(c, CharWidths.combiningChars))
+                return 0;
+
+            // Check for double width characters
+            if (CharWidths.BinarySearch(c, CharWidths.doubleWidthChars))
+                return 2;
+
+            // Check for emoji width characters
+            if (CharWidths.BinarySearch(c, CharWidths.emojiWidthChars))
+                return 2;
+
+            // Check for unknown characters
+            if (c >= CharWidths.unknownChars[0].Item1 && CharWidths.BinarySearch(c, CharWidths.unknownChars))
+                return UseTwoCellsForUnassignedChars ? 2 : 1;
+
+            // Assume that this character returns only one cell
+            return 1;
         }
 
         /// <summary>
@@ -1796,43 +1761,36 @@ namespace Textify.General
             if (c < 0 || c > 0x10FFFF)
                 throw new TextifyException(LanguageTools.GetLocalized("TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID").FormatString(c));
 
-            // Check the cached width
-            if (cachedWidths.ContainsKey(c))
-                return cachedWidths[c].Item2;
+            // Check for null character
+            if (c == 0)
+                return CharWidthType.NonPrinting;
 
-            // Use the character cell table defined in a separate code class to be able to determine the width type
-            int width = 1;
-            CharWidthType widthType = (CharWidthType)(-1);
-            foreach ((var range, int cells, CharWidthType type) in CharWidths.ranges)
-            {
-                // Check for each range if we have a Unicode character that falls under one of the characters that take
-                // up either no cells or more than one cell.
-                foreach ((int first, int last) in range)
-                {
-                    if (c >= first && c <= last)
-                    {
-                        widthType = type;
-                        width = cells;
-                        break;
-                    }
-                }
-                if (width == 1)
-                    continue;
-                break;
-            }
+            // Now, check for control characters
+            if (c < 32 || (c >= 0x7f && c < 0xa0) || c == 0xad)
+                return CharWidthType.NonPrinting;
 
-            // Add to cache if we can
-            bool cacheable = width >= 0;
-            if (cacheable)
-            {
-                // To ensure that we don't have any race condition, lock here and check.
-                lock (cachedWidths)
-                {
-                    if (!cachedWidths.ContainsKey(c))
-                        cachedWidths.Add(c, (width, widthType));
-                }
-            }
-            return widthType;
+            // Check for format characters
+            if (CharWidths.BinarySearch(c, CharWidths.formattingChars))
+                return CharWidthType.Formatting;
+
+            // Check for combining characters
+            if (CharWidths.BinarySearch(c, CharWidths.combiningChars))
+                return CharWidthType.Combining;
+
+            // Check for double width characters
+            if (CharWidths.BinarySearch(c, CharWidths.doubleWidthChars))
+                return CharWidthType.DoubleWidth;
+
+            // Check for emoji width characters
+            if (CharWidths.BinarySearch(c, CharWidths.emojiWidthChars))
+                return CharWidthType.Emoji;
+
+            // Check for unknown characters
+            if (c >= CharWidths.unknownChars[0].Item1 && CharWidths.BinarySearch(c, CharWidths.unknownChars))
+                return CharWidthType.Unassigned;
+
+            // Assume that this character returns only one cell
+            return (CharWidthType)(-1);
         }
 
         /// <summary>
