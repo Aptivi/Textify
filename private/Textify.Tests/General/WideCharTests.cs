@@ -218,7 +218,7 @@ namespace Textify.Tests.General
         [DataRow("\0", "\u0001")]
         [DataRow("A", "B")]
         [DataRow("\u200b", "\u200c")]
-        [DataRow("\U000F200b", "\udb89\udc0b")]
+        [DataRow("\U000F200b", "\udb88\udc0c")]
         [Description("Querying")]
         public void TestWideCharAddition(string representation, string expected)
         {
@@ -235,7 +235,7 @@ namespace Textify.Tests.General
         [DataRow("\u0001", "\0")]
         [DataRow("B", "A")]
         [DataRow("\u200c", "\u200b")]
-        [DataRow("\U000F200c", "\udb87\udc0c")]
+        [DataRow("\U000F200c", "\udb88\udc0b")]
         [Description("Querying")]
         public void TestWideCharSubtraction(string representation, string expected)
         {
@@ -252,7 +252,7 @@ namespace Textify.Tests.General
         [DataRow("\0", "\u0001")]
         [DataRow("A", "B")]
         [DataRow("\u200b", "\u200c")]
-        [DataRow("\U000F200b", "\udb89\udc0b")]
+        [DataRow("\U000F200b", "\udb88\udc0c")]
         [Description("Querying")]
         public void TestWideCharAdditionAlt(string representation, string expected)
         {
@@ -269,7 +269,7 @@ namespace Textify.Tests.General
         [DataRow("\u0001", "\0")]
         [DataRow("B", "A")]
         [DataRow("\u200c", "\u200b")]
-        [DataRow("\U000F200c", "\udb87\udc0c")]
+        [DataRow("\U000F200c", "\udb88\udc0b")]
         [Description("Querying")]
         public void TestWideCharSubtractionAlt(string representation, string expected)
         {
@@ -312,7 +312,7 @@ namespace Textify.Tests.General
         public void TestWideCharParseWithCode()
         {
             string target = "😀";
-            WideChar wideChar = WideChar.Parse(3724597309);
+            WideChar wideChar = WideChar.Parse(128512);
             string actual = wideChar.ToString();
             actual.ShouldBe(target);
         }
@@ -352,7 +352,7 @@ namespace Textify.Tests.General
         public void TestWideCharTryParseWithCode()
         {
             string target = "😀";
-            bool result = WideChar.TryParse(3724597309, out WideChar? wideChar);
+            bool result = WideChar.TryParse(128512, out WideChar? wideChar);
             string actual = wideChar?.ToString() ?? "";
             result.ShouldBeTrue();
             actual.ShouldBe(target);

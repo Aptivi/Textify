@@ -46,7 +46,7 @@ namespace Textify.General.Structures
         /// </summary>
         /// <returns>Character code that represents four bytes of a wide character in an integral value</returns>
         public readonly long GetCharCode() =>
-            (long)high << 16 | low;
+            high <= '\0' ? low : 0x10000 + ((low - 0xd800) << 10) + (high - 0xdc00);
 
         /// <summary>
         /// Checks to see if this is a valid UTF-32 character
@@ -330,8 +330,13 @@ namespace Textify.General.Structures
         /// <param name="check">Checks for validity</param>
         public WideChar(long charCode, bool check = true)
         {
-            high = (char)(charCode >> 16);
-            low = (char)(charCode & 65535);
+            if (charCode >= 0x10000)
+            {
+                low = (char)(0xd800 + ((charCode - 0x10000) >> 10));
+                high = (char)(0xdc00 + ((charCode - 0x10000) & 0x3ff));
+            }
+            else
+                low = (char)(charCode & 65535);
 
             // Check for validity
             if (check && !IsValidChar())
