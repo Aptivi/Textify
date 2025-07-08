@@ -1,10 +1,10 @@
-We've modified the list of widths to fix some issues related to cell widths of some characters.
+We've released this version to incorporate general improvements.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Modified the width list
+- `[*]` General improvements
 
 Review the commit history if you want to get a deep insight about the changes.
 
