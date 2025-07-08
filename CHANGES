@@ -1,10 +1,10 @@
-We've added a function that fixes placeholders with multiple instances of placeholders.
+We've modified the list of widths to fix some issues related to cell widths of some characters.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed placeholder parsing with multiple placeholders
+- `[*]` Modified the width list
 
 Review the commit history if you want to get a deep insight about the changes.
 
