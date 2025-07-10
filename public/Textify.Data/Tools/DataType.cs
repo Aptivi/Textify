@@ -92,5 +92,17 @@ namespace Textify.Data.Tools
         /// Initializes the zip files containing common words list, including the offensive words (18+)
         /// </summary>
         CommonWordsDirty = 65536,
+        /// <summary>
+        /// Initializes the JSON file containing char indexes without Unihan data
+        /// </summary>
+        UnicodeNoUnihanIndex = 131072,
+        /// <summary>
+        /// Initializes the JSON file containing char indexes with just Unihan data
+        /// </summary>
+        UnicodeUnihanIndex = 262144,
+        /// <summary>
+        /// Initializes the JSON file containing char indexes
+        /// </summary>
+        UnicodeIndex = 524288,
     }
 }

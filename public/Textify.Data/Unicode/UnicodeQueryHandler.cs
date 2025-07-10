@@ -27,30 +27,43 @@ using Textify.Data.Tools;
 using Textify.General;
 using Textify.Data.Language;
 using Textify.Tools;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace Textify.Data.Unicode
 {
     internal static class UnicodeQueryHandler
     {
         static readonly Dictionary<UnicodeQueryType, List<(int, UnicodeCharInfo)>> cachedQueries = [];
+        static readonly Dictionary<UnicodeQueryType, (MemoryStream stream, Dictionary<int, long> indexes)> streams = [];
 
-        internal static Stream UnpackUnicodeDataToStream(UnicodeQueryType type)
+        internal static (MemoryStream stream, Dictionary<int, long> indexes) UnpackUnicodeDataToStream(UnicodeQueryType type)
         {
+            if (streams.TryGetValue(type, out var stream))
+            {
+                stream.stream.Seek(0, SeekOrigin.Begin);
+                return stream;
+            }    
+
             // Select XML file based on type
             Stream unicodeData;
+            Stream unicodeIndexes;
             string xmlFile;
             switch (type)
             {
                 case UnicodeQueryType.Simple:
                     unicodeData = DataInitializer.GetStreamFrom(DataType.UnicodeNoUnihan);
+                    unicodeIndexes = DataInitializer.GetStreamFrom(DataType.UnicodeNoUnihanIndex, "json");
                     xmlFile = "ucd.nounihan.flat.xml";
                     break;
                 case UnicodeQueryType.Unihan:
                     unicodeData = DataInitializer.GetStreamFrom(DataType.UnicodeUnihan);
+                    unicodeIndexes = DataInitializer.GetStreamFrom(DataType.UnicodeUnihanIndex, "json");
                     xmlFile = "ucd.unihan.flat.xml";
                     break;
                 case UnicodeQueryType.Full:
                     unicodeData = DataInitializer.GetStreamFrom(DataType.Unicode);
+                    unicodeIndexes = DataInitializer.GetStreamFrom(DataType.UnicodeIndex, "json");
                     xmlFile = "ucd.all.flat.xml";
                     break;
                 default:
@@ -59,9 +72,16 @@ namespace Textify.Data.Unicode
 
             // Unpack the ZIP to stream
             var archive = new ZipArchive(unicodeData, ZipArchiveMode.Read);
+            var archiveStream = archive.GetEntry(xmlFile).Open();
+            var memoryStream = new MemoryStream();
+            archiveStream.CopyTo(memoryStream);
+            memoryStream.Seek(0, SeekOrigin.Begin);
+            string indexesJson = new StreamReader(unicodeIndexes).ReadToEnd();
+            Dictionary<int, long>? indexes = JsonConvert.DeserializeObject<Dictionary<int, long>?>(indexesJson);
+            streams[type] = (memoryStream, indexes ?? []);
 
             // Open the XML to stream
-            return archive.GetEntry(xmlFile).Open();
+            return streams[type];
         }
 
         internal static UnicodeCharInfo Serialize(int charNum, UnicodeQueryType type)
@@ -86,10 +106,10 @@ namespace Textify.Data.Unicode
             }
             else
             {
-                using var reader = XmlReader.Create(stream);
-                if (!reader.SkipToUcd())
+                if (!stream.indexes.TryGetValue(charNum, out var filePosition))
                     return null;
-                reader.MoveToContent();
+                stream.stream.Seek(filePosition, SeekOrigin.Begin);
+                using var reader = XmlReader.Create(stream.stream);
                 if (!reader.SkipToNum(charNum))
                     return null;
                 charInfo = ProcessInfo(reader);
@@ -101,17 +121,6 @@ namespace Textify.Data.Unicode
 
             // Return the final result
             return charInfo;
-        }
-
-        private static bool SkipToUcd(this XmlReader reader)
-        {
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Element && reader.Name == "ucd")
-                    return true;
-                reader.Skip();
-            }
-            return false;
         }
 
         private static bool SkipToNum(this XmlReader reader, int charNum)

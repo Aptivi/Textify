@@ -25,7 +25,7 @@ namespace Textify.Data.Tools
 {
     internal static class DataInitializer
     {
-        internal static Stream GetStreamFrom(DataType types)
+        internal static Stream GetStreamFrom(DataType types, string extension = "zip")
         {
             // Enumerate through all data types
             DataType[] enumTypes = (DataType[])Enum.GetValues(typeof(DataType));
@@ -34,7 +34,7 @@ namespace Textify.Data.Tools
                 if (types.HasFlag(enumType))
                 {
                     string name = GetResourceName(enumType);
-                    return DataStreamTools.GetStreamFrom(name);
+                    return DataStreamTools.GetStreamFrom(name, extension);
                 }
             }
             throw new NotImplementedException(LanguageTools.GetLocalized("TEXTIFY_DATA_EXCEPTION_NOSTREAM"));
@@ -53,6 +53,9 @@ namespace Textify.Data.Tools
                 DataType.Unicode => "ucd.all.flat",
                 DataType.UnicodeNoUnihan => "ucd.nounihan.flat",
                 DataType.UnicodeUnihan => "ucd.unihan.flat",
+                DataType.UnicodeIndex => "ucd.all.flat.index",
+                DataType.UnicodeNoUnihanIndex => "ucd.nounihan.flat.index",
+                DataType.UnicodeUnihanIndex => "ucd.unihan.flat.index",
                 DataType.Words => "words-clean-alpha",
                 DataType.WordsFull => "words-clean",
                 DataType.WordsDirty => "words_alpha",
