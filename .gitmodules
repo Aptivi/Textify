@@ -1,18 +1,18 @@
 [submodule "assets/NamesList"]
 	path = assets/NamesList
-	url = https://github.com/Aptivi-Analytics/NamesList
+	url = https://gitlab.com/aptivi/analytics/NamesList.git
 [submodule "assets/WordsList"]
 	path = assets/WordsList
-	url = https://github.com/Aptivi-Analytics/WordsList
+	url = https://gitlab.com/aptivi/analytics/WordsList.git
 [submodule "assets/UnicodeList"]
 	path = assets/UnicodeList
-	url = https://github.com/Aptivi-Analytics/UnicodeList
+	url = https://gitlab.com/aptivi/analytics/UnicodeList.git
 [submodule "assets/KaomojiList"]
 	path = assets/KaomojiList
-	url = https://github.com/Aptivi-Analytics/KaomojiList
+	url = https://gitlab.com/aptivi/analytics/KaomojiList.git
 [submodule "tools"]
 	path = tools
-	url = https://github.com/Aptivi/tools
+	url = https://gitlab.com/aptivi/main/tools.git
 [submodule "DocGen/theme"]
 	path = DocGen/theme
-	url = https://github.com/Aptivi/docfx-apt
+	url = https://gitlab.com/aptivi/main/docfx-apt.git
