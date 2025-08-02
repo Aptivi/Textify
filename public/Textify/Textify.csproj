@@ -7,8 +7,8 @@
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Description>A collection of tools that provide you text tools for your C# and Visual Basic applications.</Description>
-    <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
+    <PackageProjectUrl>https://gitlab.com/aptivi/main/Textify</PackageProjectUrl>
+    <RepositoryUrl>https://gitlab.com/aptivi/main/Textify</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library</PackageTags>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
