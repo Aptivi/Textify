@@ -11,8 +11,8 @@
       A collection of tools that provide you text tools for your C# and Visual Basic applications.
       This package provides the necessary data for Unicode, Words, Figlet, and Names. You can use this if you need to use extra features mentioned.
     </Description>
-    <PackageProjectUrl>https://gitlab.com/aptivi/main/Textify</PackageProjectUrl>
-    <RepositoryUrl>https://gitlab.com/aptivi/main/Textify</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Aptivi/Textify</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Aptivi/Textify</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dictionary;api;free;csharp;visualbasic;word;meaning;definition;text;tools;library</PackageTags>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>

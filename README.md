@@ -36,7 +36,7 @@
 
 <!----------------------------------------------------------------------------->
 
-[Releases]: https://gitlab.com/aptivi/main/Textify/-/releases
+[Releases]: https://github.com/Aptivi/Textify/releases
 [NuGet]: https://www.nuget.org/packages/Textify.Offline/
 
 [Libraries]: https://aptivi.gitbook.io/textify-manual/project-dependencies
