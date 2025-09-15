@@ -197,6 +197,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Localized.LocalStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Localized.LocalStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Localized.LocalStrings",
+      "Summary": "<p sourcefile=\"api/Textify.Data.Localized.LocalStrings.yml\" sourcestartlinenumber=\"1\">Localized string tools</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Data.Localized.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Data.Localized.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Data.Localized",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.Data.NameGen.NameGenderType.yml",
       "output": {
         ".html": {
@@ -701,6 +729,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Localized.LocalStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Localized.LocalStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Localized.LocalStrings",
+      "Summary": "<p sourcefile=\"api/Textify.Localized.LocalStrings.yml\" sourcestartlinenumber=\"1\">Localized string tools</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Textify.Localized.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Textify.Localized.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Textify.Localized",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Textify.SpaceManager.Analysis.SpaceAnalysisResult.yml",
       "output": {
         ".html": {
@@ -913,11 +969,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -936,11 +992,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

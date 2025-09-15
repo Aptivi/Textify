@@ -497,6 +497,108 @@ references:
   isSpec: "True"
   fullName: Textify.Data.Figlet.Utilities.StringPool.Pool
   nameWithType: StringPool.Pool
+- uid: Textify.Data.Localized
+  name: Textify.Data.Localized
+  href: api/Textify.Data.Localized.html
+  commentId: N:Textify.Data.Localized
+  fullName: Textify.Data.Localized
+  nameWithType: Textify.Data.Localized
+- uid: Textify.Data.Localized.LocalStrings
+  name: LocalStrings
+  href: api/Textify.Data.Localized.LocalStrings.html
+  commentId: T:Textify.Data.Localized.LocalStrings
+  fullName: Textify.Data.Localized.LocalStrings
+  nameWithType: LocalStrings
+- uid: Textify.Data.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name: CheckCulture(string, string)
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_CheckCulture_System_String_System_String_
+  commentId: M:Textify.Data.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name.vb: CheckCulture(String, String)
+  fullName: Textify.Data.Localized.LocalStrings.CheckCulture(string, string)
+  fullName.vb: Textify.Data.Localized.LocalStrings.CheckCulture(String, String)
+  nameWithType: LocalStrings.CheckCulture(string, string)
+  nameWithType.vb: LocalStrings.CheckCulture(String, String)
+- uid: Textify.Data.Localized.LocalStrings.CheckCulture*
+  name: CheckCulture
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_CheckCulture_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.CheckCulture
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.CheckCulture
+  nameWithType: LocalStrings.CheckCulture
+- uid: Textify.Data.Localized.LocalStrings.Exists(System.String,System.String)
+  name: Exists(string, string)
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Exists_System_String_System_String_
+  commentId: M:Textify.Data.Localized.LocalStrings.Exists(System.String,System.String)
+  name.vb: Exists(String, String)
+  fullName: Textify.Data.Localized.LocalStrings.Exists(string, string)
+  fullName.vb: Textify.Data.Localized.LocalStrings.Exists(String, String)
+  nameWithType: LocalStrings.Exists(string, string)
+  nameWithType.vb: LocalStrings.Exists(String, String)
+- uid: Textify.Data.Localized.LocalStrings.Exists*
+  name: Exists
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Exists_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.Exists
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.Exists
+  nameWithType: LocalStrings.Exists
+- uid: Textify.Data.Localized.LocalStrings.Languages
+  name: Languages
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Languages
+  commentId: P:Textify.Data.Localized.LocalStrings.Languages
+  fullName: Textify.Data.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Textify.Data.Localized.LocalStrings.Languages*
+  name: Languages
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Languages_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.Languages
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Textify.Data.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name: ListLanguagesCulture(string)
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_ListLanguagesCulture_System_String_
+  commentId: M:Textify.Data.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name.vb: ListLanguagesCulture(String)
+  fullName: Textify.Data.Localized.LocalStrings.ListLanguagesCulture(string)
+  fullName.vb: Textify.Data.Localized.LocalStrings.ListLanguagesCulture(String)
+  nameWithType: LocalStrings.ListLanguagesCulture(string)
+  nameWithType.vb: LocalStrings.ListLanguagesCulture(String)
+- uid: Textify.Data.Localized.LocalStrings.ListLanguagesCulture*
+  name: ListLanguagesCulture
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_ListLanguagesCulture_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.ListLanguagesCulture
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.ListLanguagesCulture
+  nameWithType: LocalStrings.ListLanguagesCulture
+- uid: Textify.Data.Localized.LocalStrings.Localizations
+  name: Localizations
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Localizations
+  commentId: P:Textify.Data.Localized.LocalStrings.Localizations
+  fullName: Textify.Data.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Textify.Data.Localized.LocalStrings.Localizations*
+  name: Localizations
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Localizations_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.Localizations
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Textify.Data.Localized.LocalStrings.Translate(System.String,System.String)
+  name: Translate(string, string)
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Translate_System_String_System_String_
+  commentId: M:Textify.Data.Localized.LocalStrings.Translate(System.String,System.String)
+  name.vb: Translate(String, String)
+  fullName: Textify.Data.Localized.LocalStrings.Translate(string, string)
+  fullName.vb: Textify.Data.Localized.LocalStrings.Translate(String, String)
+  nameWithType: LocalStrings.Translate(string, string)
+  nameWithType.vb: LocalStrings.Translate(String, String)
+- uid: Textify.Data.Localized.LocalStrings.Translate*
+  name: Translate
+  href: api/Textify.Data.Localized.LocalStrings.html#Textify_Data_Localized_LocalStrings_Translate_
+  commentId: Overload:Textify.Data.Localized.LocalStrings.Translate
+  isSpec: "True"
+  fullName: Textify.Data.Localized.LocalStrings.Translate
+  nameWithType: LocalStrings.Translate
 - uid: Textify.Data.NameGen
   name: Textify.Data.NameGen
   href: api/Textify.Data.NameGen.html
@@ -34430,12 +34532,6 @@ references:
   commentId: T:Textify.General.Data.CharWidthType
   fullName: Textify.General.Data.CharWidthType
   nameWithType: CharWidthType
-- uid: Textify.General.Data.CharWidthType.Ambiguous
-  name: Ambiguous
-  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Ambiguous
-  commentId: F:Textify.General.Data.CharWidthType.Ambiguous
-  fullName: Textify.General.Data.CharWidthType.Ambiguous
-  nameWithType: CharWidthType.Ambiguous
 - uid: Textify.General.Data.CharWidthType.Combining
   name: Combining
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Combining
@@ -34454,18 +34550,18 @@ references:
   commentId: F:Textify.General.Data.CharWidthType.Emoji
   fullName: Textify.General.Data.CharWidthType.Emoji
   nameWithType: CharWidthType.Emoji
+- uid: Textify.General.Data.CharWidthType.Formatting
+  name: Formatting
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Formatting
+  commentId: F:Textify.General.Data.CharWidthType.Formatting
+  fullName: Textify.General.Data.CharWidthType.Formatting
+  nameWithType: CharWidthType.Formatting
 - uid: Textify.General.Data.CharWidthType.NonPrinting
   name: NonPrinting
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_NonPrinting
   commentId: F:Textify.General.Data.CharWidthType.NonPrinting
   fullName: Textify.General.Data.CharWidthType.NonPrinting
   nameWithType: CharWidthType.NonPrinting
-- uid: Textify.General.Data.CharWidthType.Private
-  name: Private
-  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Private
-  commentId: F:Textify.General.Data.CharWidthType.Private
-  fullName: Textify.General.Data.CharWidthType.Private
-  nameWithType: CharWidthType.Private
 - uid: Textify.General.Data.CharWidthType.Unassigned
   name: Unassigned
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Unassigned
@@ -36420,32 +36516,6 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.UpperFirst
   nameWithType: TextTools.UpperFirst
-- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  name: UseTwoCellsForAmbiguousChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars
-  commentId: P:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
-- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars*
-  name: UseTwoCellsForAmbiguousChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars_
-  commentId: Overload:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  isSpec: "True"
-  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
-- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  name: UseTwoCellsForPrivateChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars
-  commentId: P:Textify.General.TextTools.UseTwoCellsForPrivateChars
-  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  nameWithType: TextTools.UseTwoCellsForPrivateChars
-- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars*
-  name: UseTwoCellsForPrivateChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars_
-  commentId: Overload:Textify.General.TextTools.UseTwoCellsForPrivateChars
-  isSpec: "True"
-  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  nameWithType: TextTools.UseTwoCellsForPrivateChars
 - uid: Textify.General.TextTools.UseTwoCellsForUnassignedChars
   name: UseTwoCellsForUnassignedChars
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForUnassignedChars
@@ -36491,6 +36561,108 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.VerifySuffix
   nameWithType: TextTools.VerifySuffix
+- uid: Textify.Localized
+  name: Textify.Localized
+  href: api/Textify.Localized.html
+  commentId: N:Textify.Localized
+  fullName: Textify.Localized
+  nameWithType: Textify.Localized
+- uid: Textify.Localized.LocalStrings
+  name: LocalStrings
+  href: api/Textify.Localized.LocalStrings.html
+  commentId: T:Textify.Localized.LocalStrings
+  fullName: Textify.Localized.LocalStrings
+  nameWithType: LocalStrings
+- uid: Textify.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name: CheckCulture(string, string)
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_CheckCulture_System_String_System_String_
+  commentId: M:Textify.Localized.LocalStrings.CheckCulture(System.String,System.String)
+  name.vb: CheckCulture(String, String)
+  fullName: Textify.Localized.LocalStrings.CheckCulture(string, string)
+  fullName.vb: Textify.Localized.LocalStrings.CheckCulture(String, String)
+  nameWithType: LocalStrings.CheckCulture(string, string)
+  nameWithType.vb: LocalStrings.CheckCulture(String, String)
+- uid: Textify.Localized.LocalStrings.CheckCulture*
+  name: CheckCulture
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_CheckCulture_
+  commentId: Overload:Textify.Localized.LocalStrings.CheckCulture
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.CheckCulture
+  nameWithType: LocalStrings.CheckCulture
+- uid: Textify.Localized.LocalStrings.Exists(System.String,System.String)
+  name: Exists(string, string)
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Exists_System_String_System_String_
+  commentId: M:Textify.Localized.LocalStrings.Exists(System.String,System.String)
+  name.vb: Exists(String, String)
+  fullName: Textify.Localized.LocalStrings.Exists(string, string)
+  fullName.vb: Textify.Localized.LocalStrings.Exists(String, String)
+  nameWithType: LocalStrings.Exists(string, string)
+  nameWithType.vb: LocalStrings.Exists(String, String)
+- uid: Textify.Localized.LocalStrings.Exists*
+  name: Exists
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Exists_
+  commentId: Overload:Textify.Localized.LocalStrings.Exists
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.Exists
+  nameWithType: LocalStrings.Exists
+- uid: Textify.Localized.LocalStrings.Languages
+  name: Languages
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Languages
+  commentId: P:Textify.Localized.LocalStrings.Languages
+  fullName: Textify.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Textify.Localized.LocalStrings.Languages*
+  name: Languages
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Languages_
+  commentId: Overload:Textify.Localized.LocalStrings.Languages
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.Languages
+  nameWithType: LocalStrings.Languages
+- uid: Textify.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name: ListLanguagesCulture(string)
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_ListLanguagesCulture_System_String_
+  commentId: M:Textify.Localized.LocalStrings.ListLanguagesCulture(System.String)
+  name.vb: ListLanguagesCulture(String)
+  fullName: Textify.Localized.LocalStrings.ListLanguagesCulture(string)
+  fullName.vb: Textify.Localized.LocalStrings.ListLanguagesCulture(String)
+  nameWithType: LocalStrings.ListLanguagesCulture(string)
+  nameWithType.vb: LocalStrings.ListLanguagesCulture(String)
+- uid: Textify.Localized.LocalStrings.ListLanguagesCulture*
+  name: ListLanguagesCulture
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_ListLanguagesCulture_
+  commentId: Overload:Textify.Localized.LocalStrings.ListLanguagesCulture
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.ListLanguagesCulture
+  nameWithType: LocalStrings.ListLanguagesCulture
+- uid: Textify.Localized.LocalStrings.Localizations
+  name: Localizations
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Localizations
+  commentId: P:Textify.Localized.LocalStrings.Localizations
+  fullName: Textify.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Textify.Localized.LocalStrings.Localizations*
+  name: Localizations
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Localizations_
+  commentId: Overload:Textify.Localized.LocalStrings.Localizations
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.Localizations
+  nameWithType: LocalStrings.Localizations
+- uid: Textify.Localized.LocalStrings.Translate(System.String,System.String)
+  name: Translate(string, string)
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Translate_System_String_System_String_
+  commentId: M:Textify.Localized.LocalStrings.Translate(System.String,System.String)
+  name.vb: Translate(String, String)
+  fullName: Textify.Localized.LocalStrings.Translate(string, string)
+  fullName.vb: Textify.Localized.LocalStrings.Translate(String, String)
+  nameWithType: LocalStrings.Translate(string, string)
+  nameWithType.vb: LocalStrings.Translate(String, String)
+- uid: Textify.Localized.LocalStrings.Translate*
+  name: Translate
+  href: api/Textify.Localized.LocalStrings.html#Textify_Localized_LocalStrings_Translate_
+  commentId: Overload:Textify.Localized.LocalStrings.Translate
+  isSpec: "True"
+  fullName: Textify.Localized.LocalStrings.Translate
+  nameWithType: LocalStrings.Translate
 - uid: Textify.SpaceManager.Analysis
   name: Textify.SpaceManager.Analysis
   href: api/Textify.SpaceManager.Analysis.html

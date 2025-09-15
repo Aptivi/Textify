@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class EmojiManager | Textify API - Aptivi </title>
+      <title>Class LocalStrings | Textify API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class EmojiManager | Textify API - Aptivi ">
+      <meta name="title" content="Class LocalStrings | Textify API - Aptivi ">
     
-    <meta name="description" content="Emoji management tools">
+    <meta name="description" content="Localized string tools">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -78,62 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Textify.Data.Unicode.EmojiManager">
+            <article class="content wrap" id="_content" data-uid="Textify.Localized.LocalStrings">
 
 
 
-  <h1 id="Textify_Data_Unicode_EmojiManager" data-uid="Textify.Data.Unicode.EmojiManager" class="text-break">Class EmojiManager</h1>
-  <div class="markdown level0 summary"><p>Emoji management tools</p>
+  <h1 id="Textify_Localized_LocalStrings" data-uid="Textify.Localized.LocalStrings" class="text-break">Class LocalStrings</h1>
+  <div class="markdown level0 summary"><p>Localized string tools</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">object</span></div>
-    <div class="level1"><span class="xref">EmojiManager</span></div>
+    <div class="level1"><span class="xref">LocalStrings</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Data.html">Data</a>.<a class="xref" href="Textify.Data.Unicode.html">Unicode</a></h6>
-  <h6><strong>Assembly</strong>: Textify.Data.dll</h6>
-  <h5 id="Textify_Data_Unicode_EmojiManager_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Textify.html">Textify</a>.<a class="xref" href="Textify.Localized.html">Localized</a></h6>
+  <h6><strong>Assembly</strong>: Textify.dll</h6>
+  <h5 id="Textify_Localized_LocalStrings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class EmojiManager</code></pre>
+    <pre><code class="lang-csharp hljs">public static class LocalStrings</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
 </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_EmojiManager_GetEmojiFromEmoji_System_String_.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.EmojiManager.GetEmojiFromEmoji(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/EmojiManager.cs/#L51">View Source</a>
-  </span>
-  <a id="Textify_Data_Unicode_EmojiManager_GetEmojiFromEmoji_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojiFromEmoji*"></a>
-  <h4 id="Textify_Data_Unicode_EmojiManager_GetEmojiFromEmoji_System_String_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojiFromEmoji(System.String)">GetEmojiFromEmoji(string)</h4>
-  <div class="markdown level1 summary"><p>Gets an emoji instance from the emoji</p>
+
+
+  <a id="Textify_Localized_LocalStrings_Languages_" data-uid="Textify.Localized.LocalStrings.Languages*"></a>
+  <h4 id="Textify_Localized_LocalStrings_Languages" data-uid="Textify.Localized.LocalStrings.Languages">Languages</h4>
+  <div class="markdown level1 summary"><p>Queries the languages</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Emoji GetEmojiFromEmoji(string sequence)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, string&gt; Languages { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">string</span></td>
-        <td><span class="parametername">sequence</span></td>
-        <td><p>Emoji representation</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
@@ -143,108 +120,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Textify.Data.Unicode.Emoji.html">Emoji</a></td>
-        <td><p>An emoji instance</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_EmojiManager_GetEmojiFromEnum_Textify_Data_Unicode_EmojiEnum_.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.EmojiManager.GetEmojiFromEnum(Textify.Data.Unicode.EmojiEnum)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/EmojiManager.cs/#L59">View Source</a>
-  </span>
-  <a id="Textify_Data_Unicode_EmojiManager_GetEmojiFromEnum_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojiFromEnum*"></a>
-  <h4 id="Textify_Data_Unicode_EmojiManager_GetEmojiFromEnum_Textify_Data_Unicode_EmojiEnum_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojiFromEnum(Textify.Data.Unicode.EmojiEnum)">GetEmojiFromEnum(EmojiEnum)</h4>
-  <div class="markdown level1 summary"><p>Gets an emoji instance from the name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Emoji GetEmojiFromEnum(EmojiEnum name)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Textify.Data.Unicode.EmojiEnum.html">EmojiEnum</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Name of emoji (enumeration of <a class="xref" href="Textify.Data.Unicode.EmojiEnum.html">EmojiEnum</a>)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Textify.Data.Unicode.Emoji.html">Emoji</a></td>
-        <td><p>An emoji instance</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_EmojiManager_GetEmojis.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.EmojiManager.GetEmojis%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/EmojiManager.cs/#L35">View Source</a>
-  </span>
-  <a id="Textify_Data_Unicode_EmojiManager_GetEmojis_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojis*"></a>
-  <h4 id="Textify_Data_Unicode_EmojiManager_GetEmojis" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojis">GetEmojis()</h4>
-  <div class="markdown level1 summary"><p>Gets a list of emoticons</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Emoji[] GetEmojis()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Textify.Data.Unicode.Emoji.html">Emoji</a>[]</td>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">string</span>, <span class="xref">string</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/Textify/new/main/apiSpec/new?filename=Textify_Data_Unicode_EmojiManager_GetEmojisFromName_System_String_.md&amp;value=---%0Auid%3A%20Textify.Data.Unicode.EmojiManager.GetEmojisFromName(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/Textify/blob/main/public/Textify.Data/Unicode/EmojiManager.cs/#L43">View Source</a>
-  </span>
-  <a id="Textify_Data_Unicode_EmojiManager_GetEmojisFromName_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojisFromName*"></a>
-  <h4 id="Textify_Data_Unicode_EmojiManager_GetEmojisFromName_System_String_" data-uid="Textify.Data.Unicode.EmojiManager.GetEmojisFromName(System.String)">GetEmojisFromName(string)</h4>
-  <div class="markdown level1 summary"><p>Gets an emoji instance from the name</p>
+
+
+  <a id="Textify_Localized_LocalStrings_Localizations_" data-uid="Textify.Localized.LocalStrings.Localizations*"></a>
+  <h4 id="Textify_Localized_LocalStrings_Localizations" data-uid="Textify.Localized.LocalStrings.Localizations">Localizations</h4>
+  <div class="markdown level1 summary"><p>Queries the localizations</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Emoji[] GetEmojisFromName(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string[] Localizations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="Textify_Localized_LocalStrings_CheckCulture_" data-uid="Textify.Localized.LocalStrings.CheckCulture*"></a>
+  <h4 id="Textify_Localized_LocalStrings_CheckCulture_System_String_System_String_" data-uid="Textify.Localized.LocalStrings.CheckCulture(System.String,System.String)">CheckCulture(string, string)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if the given culture in a specific language exists</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckCulture(string culture, string lang)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped">
@@ -258,8 +176,14 @@
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Name of emoji (case insensitive)</p>
+        <td><span class="parametername">culture</span></td>
+        <td><p>Culture ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">lang</span></td>
+        <td><p>Language to process</p>
 </td>
       </tr>
     </tbody>
@@ -274,8 +198,155 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Textify.Data.Unicode.Emoji.html">Emoji</a>[]</td>
-        <td><p>An emoji instance</p>
+        <td><span class="xref">bool</span></td>
+        <td><p>True if exists; false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Textify_Localized_LocalStrings_Exists_" data-uid="Textify.Localized.LocalStrings.Exists*"></a>
+  <h4 id="Textify_Localized_LocalStrings_Exists_System_String_System_String_" data-uid="Textify.Localized.LocalStrings.Exists(System.String,System.String)">Exists(string, string)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if the given string using the string ID in a specific language exists</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Exists(string id, string lang)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>String ID that represents a localization</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">lang</span></td>
+        <td><p>Language to translate to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><p>True if exists; false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Textify_Localized_LocalStrings_ListLanguagesCulture_" data-uid="Textify.Localized.LocalStrings.ListLanguagesCulture*"></a>
+  <h4 id="Textify_Localized_LocalStrings_ListLanguagesCulture_System_String_" data-uid="Textify.Localized.LocalStrings.ListLanguagesCulture(System.String)">ListLanguagesCulture(string)</h4>
+  <div class="markdown level1 summary"><p>Lists languages in a given culture</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] ListLanguagesCulture(string culture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">culture</span></td>
+        <td><p>Culture ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span>[]</td>
+        <td><p>A list of languages</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Textify_Localized_LocalStrings_Translate_" data-uid="Textify.Localized.LocalStrings.Translate*"></a>
+  <h4 id="Textify_Localized_LocalStrings_Translate_System_String_System_String_" data-uid="Textify.Localized.LocalStrings.Translate(System.String,System.String)">Translate(string, string)</h4>
+  <div class="markdown level1 summary"><p>Translates the given string using the string ID in a specific language</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Translate(string id, string lang)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>String ID that represents a localization</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><span class="parametername">lang</span></td>
+        <td><p>Language to translate to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">string</span></td>
+        <td><p>A translated string</p>
 </td>
       </tr>
     </tbody>
