@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+        <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="metadata">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+                <xsd:attribute name="name" use="required" type="xsd:string" />
+                <xsd:attribute name="type" type="xsd:string" />
+                <xsd:attribute name="mimetype" type="xsd:string" />
+                <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="assembly">
+            <xsd:complexType>
+                <xsd:attribute name="alias" type="xsd:string" />
+                <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="data">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="resheader">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+            </xsd:element>
+        </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+    <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING" xml:space="preserve">
+    <value>string nirdisht nahin hai</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX" xml:space="preserve">
+    <value>srot string mein do se adhik varn nahin ho sakate</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR" xml:space="preserve">
+    <value>amaany varn. [uchch: {0}, nimn: {1}]</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL" xml:space="preserve">
+    <value>lakshy shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL" xml:space="preserve">
+    <value>srot shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee string kee saranee shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT" xml:space="preserve">
+    <value>pratisthaapan kee jaane vaalee string kee saranee shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee string kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee varn kee saranee shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR" xml:space="preserve">
+    <value>pratisthaapan kee jaane vaalee varn kee saranee shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee string kee saranee kee lambaee, pratisthaapit kee jaane vaalee varn kee saranee kee lambaee ke baraabar nahin hai.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee string kee saranee kee lambaee ke baraabar nahin hai.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL" xml:space="preserve">
+    <value>pratisthaapit kee jaane vaalee varn kee saranee kee lambaee, pratisthaapit kee jaane vaalee varn ... khoj paath shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL" xml:space="preserve">
+    <value>khaalee string maan nirdisht kiya gaya</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL" xml:space="preserve">
+    <value>lakshy praaroop shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL" xml:space="preserve">
+    <value>lakshy char shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL" xml:space="preserve">
+    <value>lakshy abhivyakti shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID" xml:space="preserve">
+    <value>shoony ya rnaatmak sankhya ke charanon ke saath akshar punaraavrtti paitarn praapt nahin kiya ja sakata.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE" xml:space="preserve">
+    <value>ophaset seema se baahar hai</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID" xml:space="preserve">
+    <value>amaany varn sankhya {0}.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE" xml:space="preserve">
+    <value>kes-asanvedanasheel string tulana ke lie tulana {0} maany nahin hai</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE" xml:space="preserve">
+    <value>kes-sanvedanasheel string tulana ke lie tulana {0} maany nahin hai</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE" xml:space="preserve">
+    <value>nirdisht soochakaank [{0}] shoony se kam nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE" xml:space="preserve">
+    <value>nirdisht soochakaank [{0}] srot string lambaee [{1}] se bada nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES" xml:space="preserve">
+    <value>saroget ko todane ke lie, do vaidh saroget varn hone chaahie.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID" xml:space="preserve">
+    <value>srot string ek vaidh saroget jodee nahin hai.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND" xml:space="preserve">
+    <value>spes ka vishleshan karane ke lie fail nahin milee.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE" xml:space="preserve">
+    <value>streem nahin padhee ja sakatee.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE" xml:space="preserve">
+    <value>streem nahin khoj sakatee.</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR" xml:space="preserve">
+    <value>plesaholdar ko paars karane ka prayaas karate samay truti. {0}</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL" xml:space="preserve">
+    <value>plesaholdar shoony nahin ho sakata</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL" xml:space="preserve">
+    <value>plesaholdar kriya shoony nahin ho sakatee</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND" xml:space="preserve">
+    <value>plesaholdar panjeekrt nahin hai</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR" xml:space="preserve">
+    <value>plesaholdar ko is praaroop ko poora karana hoga</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN" xml:space="preserve">
+    <value>niyamit abhivyakti paitarn amaany hai.</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX" xml:space="preserve">
+    <value>amaany niyamit abhivyakti sintaiks.</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR" xml:space="preserve">
+    <value>amaany pramukh sanskaran bhaag</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR" xml:space="preserve">
+    <value>amaany laghu sanskaran bhaag</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH" xml:space="preserve">
+    <value>amaany paich sanskaran bhaag</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION" xml:space="preserve">
+    <value>amaany sanshodhan sanskaran bhaag</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING" xml:space="preserve">
+    <value>yah sanskaran [{0}] ek maany saimvair string nahin hai.</value>
+  </data>
+
+</root>

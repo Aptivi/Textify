@@ -17,20 +17,27 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using LocaleStation.Tools;
-using Textify.Localized;
+using System.Collections.Generic;
+using System.Resources;
 
 namespace Textify.Language
 {
     internal static class LanguageTools
     {
-        private const string localType = "Textify";
+        internal static readonly Dictionary<string, ResourceManager> resourceManagers = new()
+        {
+            { "Textify", new("Textify.Resources.Languages.Output.Localizations", typeof(LanguageTools).Assembly) }
+        };
 
         internal static string GetLocalized(string id)
         {
-            if (!LanguageCommon.IsCustomActionDefined(localType))
-                LanguageCommon.AddCustomAction(localType, new(() => LocalStrings.Languages, () => LocalStrings.Localizations, LocalStrings.Translate, LocalStrings.CheckCulture, LocalStrings.ListLanguagesCulture, LocalStrings.Exists));
-            return LanguageCommon.Translate(id);
+            foreach (var resourceManager in resourceManagers.Values)
+            {
+                string resourceLocalization = resourceManager.GetString(id);
+                if (!string.IsNullOrEmpty(resourceLocalization))
+                    return resourceLocalization;
+            }
+            return id;
         }
     }
 }

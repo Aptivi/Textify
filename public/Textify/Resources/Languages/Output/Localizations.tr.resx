@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+        <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="metadata">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+                <xsd:attribute name="name" use="required" type="xsd:string" />
+                <xsd:attribute name="type" type="xsd:string" />
+                <xsd:attribute name="mimetype" type="xsd:string" />
+                <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="assembly">
+            <xsd:complexType>
+                <xsd:attribute name="alias" type="xsd:string" />
+                <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="data">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="resheader">
+            <xsd:complexType>
+                <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+            </xsd:element>
+        </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+    <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_NOSTRING" xml:space="preserve">
+    <value>Dize belirtilmemiş</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_TWOCHARSMAX" xml:space="preserve">
+    <value>Kaynak dizesi iki karakterden fazla olamaz</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_STRUCTURES_WCHAR_EXCEPTION_INVALIDCHAR" xml:space="preserve">
+    <value>Geçersiz karakter. [Yüksek: {0}, Düşük: {1}]</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETISNULL" xml:space="preserve">
+    <value>Hedef boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SOURCEISNULL" xml:space="preserve">
+    <value>Kaynak boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_TEXT" xml:space="preserve">
+    <value>Değiştirilecek dizelerin dizisi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_TEXT" xml:space="preserve">
+    <value>Değiştirilecek dizelerin dizisi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_TEXT" xml:space="preserve">
+    <value>Değiştirilecek dizelerin dizisi uzunluğu, değiştirilecek dizelerin dizisi uzunluğuna eşit değildir.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTTARGETSARENULL_CHAR" xml:space="preserve">
+    <value>Değiştirilecek karakterlerin dizisi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTSOURCESARENULL_CHAR" xml:space="preserve">
+    <value>Değiştirilecek karakterlerin dizisi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_TEXT_CHAR" xml:space="preserve">
+    <value>Değiştirilecek dizelerin dizisi uzunluğu, değiştirilecek karakterlerin dizisi uzunluğuna eşit değildir.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_TEXT" xml:space="preserve">
+    <value>Değiştirilecek karakterlerin dizisi uzunluğu, değiştirilecek dizelerin dizisi uzunluğuna eşit değildir.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_REPLACEMENTARRAYLENGTHMISMATCH_CHAR_CHAR" xml:space="preserve">
+    <value>Değiştirilecek karakterlerin dizisi uzunluğu, değiştirilecek karakterlerin dizisi uzunluğuna eşit değildir.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SEARCHTEXTISNULL" xml:space="preserve">
+    <value>Arama metni boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_STRINGVALUEISNULL" xml:space="preserve">
+    <value>Boş dize değeri belirtildi</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETFORMATISNULL" xml:space="preserve">
+    <value>Hedef biçimi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETVARSARENULL" xml:space="preserve">
+    <value>Hedef değişkenleri boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_TARGETEXPRESSIONISNULL" xml:space="preserve">
+    <value>Hedef ifadesi boş olmayabilir</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_LRPSTEPSINVALID" xml:space="preserve">
+    <value>Sıfır veya negatif sayıda adım içeren harf tekrarlama deseni alınamıyor.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_OFFSETOUTOFRANGE" xml:space="preserve">
+    <value>Ofset aralık dışında</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_CHARNUMINVALID" xml:space="preserve">
+    <value>Geçersiz karakter sayısı {0}.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_NOCASE" xml:space="preserve">
+    <value>{0} karşılaştırması büyük/küçük harfe duyarlı olmayan dize karşılaştırması için geçerli değil</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_COMPARISONINVALID_CASE" xml:space="preserve">
+    <value>{0} karşılaştırması büyük/küçük harfe duyarlı dize karşılaştırması için geçerli değil</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_IDXNEGATIVE" xml:space="preserve">
+    <value>Belirtilen dizin [{0}] sıfırdan küçük olamaz</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_IDXOUTOFRANGE" xml:space="preserve">
+    <value>Belirtilen dizin [{0}] kaynak dize uzunluğundan [{1}] büyük olamaz</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_NEEDSSURROGATES" xml:space="preserve">
+    <value>Vekilleri ayırmak için iki geçerli vekil karakter olması gerekir.</value>
+  </data>
+  <data name="TEXTIFY_GENERAL_EXCEPTION_SURROGATESINVALID" xml:space="preserve">
+    <value>Kaynak dize geçerli bir vekil çifti değil.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_FILENOTFOUND" xml:space="preserve">
+    <value>Boşluk analiz edilecek dosya bulunamadı.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNREADABLE" xml:space="preserve">
+    <value>Akış okunamıyor.</value>
+  </data>
+  <data name="TEXTIFY_SPACEMAN_ANALYSIS_EXCEPTION_STREAMUNSEEKABLE" xml:space="preserve">
+    <value>Akış aranamıyor.</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PARSEERROR" xml:space="preserve">
+    <value>Yer tutucuları ayrıştırmaya çalışırken hata oluştu. {0}</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENULL" xml:space="preserve">
+    <value>Yer tutucu boş olamaz</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEACTIONNULL" xml:space="preserve">
+    <value>Yer tutucu eylemi boş olamaz</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACENOTFOUND" xml:space="preserve">
+    <value>Yer tutucu kayıtlı değil</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_PLACES_EXCEPTION_PLACEFORMATERROR" xml:space="preserve">
+    <value>Yer tutucu bu biçimi karşılamalıdır</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXPATTERN" xml:space="preserve">
+    <value>Düzenli ifade deseni geçersiz.</value>
+  </data>
+  <data name="TEXTIFY_TOOLS_REGEX_EXCEPTION_INVALIDREGEXSYNTAX" xml:space="preserve">
+    <value>Geçersiz düzenli ifade sözdizimi.</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MAJOR" xml:space="preserve">
+    <value>Geçersiz ana sürüm parçası</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_MINOR" xml:space="preserve">
+    <value>Geçersiz küçük sürüm parçası</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_PATCH" xml:space="preserve">
+    <value>Geçersiz yama sürümü parçası</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDPART_REVISION" xml:space="preserve">
+    <value>Geçersiz revizyon sürümü parçası</value>
+  </data>
+  <data name="TEXTIFY_VERSIONING_EXCEPTION_INVALIDSEMVERSTRING" xml:space="preserve">
+    <value>Bu sürüm [{0}] geçerli bir SemVer dizesi değil.</value>
+  </data>
+
+</root>
