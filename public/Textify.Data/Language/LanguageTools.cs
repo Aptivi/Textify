@@ -18,15 +18,19 @@
 //
 
 using MainLangTools = Textify.Language.LanguageTools;
+using ResourceLab.Management;
 
 namespace Textify.Data.Language
 {
     internal static class LanguageTools
     {
+        private const string LocalName = "Textify.Data";
+
         internal static string GetLocalized(string id)
         {
-            if (!MainLangTools.resourceManagers.ContainsKey("Textify.Data"))
-                MainLangTools.resourceManagers.Add("Textify.Data", new("Textify.Data.Resources.Languages.Output.Localizations", typeof(LanguageTools).Assembly));
+            // Add local resource
+            if (!ResourcesManager.ResourceManagerExists(LocalName))
+                ResourcesManager.AddResourceManager(LocalName, new($"{LocalName}.Resources.Languages.Output.Localizations", typeof(LanguageTools).Assembly));
             return MainLangTools.GetLocalized(id);
         }
     }
