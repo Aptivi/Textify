@@ -23,6 +23,7 @@ using Textify.Data.Figlet.Utilities;
 
 namespace Textify.Tests.Figlet
 {
+    [TestClass]
     public class StringPoolTest
     {
         [TestMethod]

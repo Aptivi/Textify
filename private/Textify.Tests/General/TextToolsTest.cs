@@ -1693,7 +1693,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests reading null terminated string
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello\0", 0, "Hello")]
         [DataRow("Hello\0", 3, "lo")]
         [DataRow("\0", 0, "")]
@@ -1710,7 +1710,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-insensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "HELLO", true)]
         [DataRow("Hello", "Hello", true)]
         [DataRow("", "", true)]
@@ -1725,7 +1725,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-sensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "HELLO", false)]
         [DataRow("Hello", "Hello", true)]
         [DataRow("", "", true)]
@@ -1740,7 +1740,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-insensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "He", true)]
         [DataRow("Hello", "HE", true)]
         [Description("Querying")]
@@ -1753,7 +1753,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-sensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "He", true)]
         [DataRow("Hello", "HE", false)]
         [Description("Querying")]
@@ -1766,7 +1766,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-insensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "lo", true)]
         [DataRow("Hello", "Lo", true)]
         [Description("Querying")]
@@ -1779,7 +1779,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-sensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "lo", true)]
         [DataRow("Hello", "Lo", false)]
         [Description("Querying")]
@@ -1792,7 +1792,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests comparing strings (case-insensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Hello", "lo", true)]
         [DataRow("Hello", "Lo", true)]
         [Description("Querying")]
@@ -1805,7 +1805,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests for palindrome (case-insensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Madam", true)]
         [DataRow("Hello", false)]
         [DataRow("Laal", true)]
@@ -1826,7 +1826,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests for palindrome (case-sensitive)
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Madam", false)]
         [DataRow("Hello", false)]
         [DataRow("Laal", false)]
@@ -1847,7 +1847,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests for character replacement
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Textyfy", 4, 'i', "Textify")]
         [DataRow("Nytrocid", 1, 'i', "Nitrocid")]
         [DataRow("", 0, 'A', "")]
@@ -1862,7 +1862,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests for character replacement
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DataRow("Textify", "Textify")]
         [DataRow("Nitrocid", "Nitrocid")]
         [DataRow("", "")]
@@ -1877,7 +1877,7 @@ namespace Textify.Tests.General
         /// <summary>
         /// Tests breaking a surrogate pair
         /// </summary>
-        [DataTestMethod]
+        [TestMethod]
         [DynamicData(nameof(TextToolsData.BrokenSurrogates), typeof(TextToolsData))]
         [Description("Querying")]
         public void TestBreakSurrogates(string source, (char, char) expected)
