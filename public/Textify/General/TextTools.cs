@@ -1267,12 +1267,12 @@ namespace Textify.General
                         finalMaximum = maximumLength - indentLength + compensate;
                         IncompleteSentenceBuilder.Append(charSplitLastText);
                     }
-                    else if (IncompleteSentenceBuilder.Length + word.Length < finalMaximum)
+                    else if (IncompleteSentenceBuilder.Length + word.Length <= finalMaximum)
                         IncompleteSentenceBuilder.Append(word);
 
                     // Check to see if we're at the maximum length
                     int nextWord = i + 1 >= words.Length ? 1 : words[i + 1].Length + 1;
-                    if (IncompleteSentenceBuilder.Length + nextWord >= finalMaximum)
+                    if (IncompleteSentenceBuilder.Length + nextWord > finalMaximum)
                     {
                         // We're at the character number of maximum character. Add the sentence to the list for "wrapping" in columns.
                         IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
@@ -1283,7 +1283,7 @@ namespace Textify.General
                         compensate = 0;
                     }
                     else
-                        IncompleteSentenceBuilder.Append(IncompleteSentenceBuilder.Length + nextWord >= finalMaximum || i + 1 >= words.Length ? "" : " ");
+                        IncompleteSentenceBuilder.Append(IncompleteSentenceBuilder.Length + nextWord > finalMaximum || i + 1 >= words.Length ? "" : " ");
                 }
                 if (IncompleteSentenceBuilder.Length > 0)
                     IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
