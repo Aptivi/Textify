@@ -34430,12 +34430,6 @@ references:
   commentId: T:Textify.General.Data.CharWidthType
   fullName: Textify.General.Data.CharWidthType
   nameWithType: CharWidthType
-- uid: Textify.General.Data.CharWidthType.Ambiguous
-  name: Ambiguous
-  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Ambiguous
-  commentId: F:Textify.General.Data.CharWidthType.Ambiguous
-  fullName: Textify.General.Data.CharWidthType.Ambiguous
-  nameWithType: CharWidthType.Ambiguous
 - uid: Textify.General.Data.CharWidthType.Combining
   name: Combining
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Combining
@@ -34454,18 +34448,18 @@ references:
   commentId: F:Textify.General.Data.CharWidthType.Emoji
   fullName: Textify.General.Data.CharWidthType.Emoji
   nameWithType: CharWidthType.Emoji
+- uid: Textify.General.Data.CharWidthType.Formatting
+  name: Formatting
+  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Formatting
+  commentId: F:Textify.General.Data.CharWidthType.Formatting
+  fullName: Textify.General.Data.CharWidthType.Formatting
+  nameWithType: CharWidthType.Formatting
 - uid: Textify.General.Data.CharWidthType.NonPrinting
   name: NonPrinting
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_NonPrinting
   commentId: F:Textify.General.Data.CharWidthType.NonPrinting
   fullName: Textify.General.Data.CharWidthType.NonPrinting
   nameWithType: CharWidthType.NonPrinting
-- uid: Textify.General.Data.CharWidthType.Private
-  name: Private
-  href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Private
-  commentId: F:Textify.General.Data.CharWidthType.Private
-  fullName: Textify.General.Data.CharWidthType.Private
-  nameWithType: CharWidthType.Private
 - uid: Textify.General.Data.CharWidthType.Unassigned
   name: Unassigned
   href: api/Textify.General.Data.CharWidthType.html#Textify_General_Data_CharWidthType_Unassigned
@@ -36420,32 +36414,6 @@ references:
   isSpec: "True"
   fullName: Textify.General.TextTools.UpperFirst
   nameWithType: TextTools.UpperFirst
-- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  name: UseTwoCellsForAmbiguousChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars
-  commentId: P:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
-- uid: Textify.General.TextTools.UseTwoCellsForAmbiguousChars*
-  name: UseTwoCellsForAmbiguousChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForAmbiguousChars_
-  commentId: Overload:Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  isSpec: "True"
-  fullName: Textify.General.TextTools.UseTwoCellsForAmbiguousChars
-  nameWithType: TextTools.UseTwoCellsForAmbiguousChars
-- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  name: UseTwoCellsForPrivateChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars
-  commentId: P:Textify.General.TextTools.UseTwoCellsForPrivateChars
-  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  nameWithType: TextTools.UseTwoCellsForPrivateChars
-- uid: Textify.General.TextTools.UseTwoCellsForPrivateChars*
-  name: UseTwoCellsForPrivateChars
-  href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForPrivateChars_
-  commentId: Overload:Textify.General.TextTools.UseTwoCellsForPrivateChars
-  isSpec: "True"
-  fullName: Textify.General.TextTools.UseTwoCellsForPrivateChars
-  nameWithType: TextTools.UseTwoCellsForPrivateChars
 - uid: Textify.General.TextTools.UseTwoCellsForUnassignedChars
   name: UseTwoCellsForUnassignedChars
   href: api/Textify.General.TextTools.html#Textify_General_TextTools_UseTwoCellsForUnassignedChars
