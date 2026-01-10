@@ -1,0 +1,26 @@
+<Solution>
+  <Folder Name="/Assets/">
+    <File Path="CHANGES" />
+    <File Path="CHANGES.TITLE" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Private/" />
+  <Folder Name="/Private/Demos/">
+    <Project Path="private/Textify.Demos.Offline/Textify.Demos.Offline.csproj" />
+  </Folder>
+  <Folder Name="/Private/Generators/">
+    <Project Path="private/Textify.CharArrayGen/Textify.CharArrayGen.csproj" />
+    <Project Path="private/Textify.EmojiArrayGen/Textify.EmojiArrayGen.csproj" />
+    <Project Path="private/Textify.KaomojiArrayGen/Textify.KaomojiArrayGen.csproj" />
+  </Folder>
+  <Folder Name="/Private/Helpers/">
+    <Project Path="private/BuildTargets/BuildTargets.csproj" />
+  </Folder>
+  <Folder Name="/Private/Tests/">
+    <Project Path="private/Textify.Tests/Textify.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Public/">
+    <Project Path="public/Textify.Data/Textify.Data.csproj" />
+    <Project Path="public/Textify/Textify.csproj" />
+  </Folder>
+</Solution>
