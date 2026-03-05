@@ -13,6 +13,7 @@
 [submodule "tools"]
 	path = tools
 	url = https://github.com/Aptivi/tools.git
+	branch = x/archived/legacy
 [submodule "DocGen/theme"]
 	path = DocGen/theme
 	url = https://github.com/Aptivi/docfx-apt.git
