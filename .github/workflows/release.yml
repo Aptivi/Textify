@@ -29,22 +29,22 @@ jobs:
         run: |
           make rel-ci
           make doc
-          ./tools/docgen-pack.sh
+          python tools/adt.py packdocs
           echo "SUBJECT=$(cat CHANGES.TITLE)" >> "$GITHUB_OUTPUT"
           echo 'BODY<<EOF' >> "$GITHUB_OUTPUT"
           cat CHANGES >> "$GITHUB_OUTPUT"
-          sha256sum tools/*.zip | sed -e 's/^/- /g' >> "$GITHUB_OUTPUT"
+          sha256sum artifacts/*.zip | sed -e 's/^/- /g' >> "$GITHUB_OUTPUT"
           echo 'EOF' >> "$GITHUB_OUTPUT"
       - name: Binary Attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-path: 'tools/*.zip'
+          subject-path: 'artifacts/*.zip'
       - name: Release Making
         uses: softprops/action-gh-release@v2
         with:
           body: ${{ steps.release-asset.outputs.BODY }}
           name: ${{ steps.release-asset.outputs.SUBJECT }}
           files: |
-            tools/*.zip
+            artifacts/*.zip
       - name: Package Publication
-        run: NUGET_APIKEY=${{ secrets.NUGET_APIKEY }} ./tools/push.sh
+        run: python tools/adt.py pushbin -a "${{ secrets.NUGET_APIKEY }}"
