@@ -44,6 +44,7 @@
     <EmbeddedResource Include="../../assets/UnicodeList/chars/*.json" Visible="false" />
     <EmbeddedResource Include="../../assets/NamesList/Processed/*.zip" Visible="false" />
     <EmbeddedResource Include="../../assets/FigletFonts/*.flf" Visible="false" />
+    <EmbeddedResource Include="../../assets/Cows/*.cow" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>

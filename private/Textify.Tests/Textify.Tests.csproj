@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
     <PackageReference Include="Shouldly" Version="4.3.0" />
 
     <PackageReference Remove="Microsoft.SourceLink.GitHub" />
@@ -16,6 +17,18 @@
   <ItemGroup>
     <ProjectReference Include="..\..\public\Textify.Data\Textify.Data.csproj" />
     <ProjectReference Include="..\..\public\Textify\Textify.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Cowsay\TestCows\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Cowsay\ExpectedOutputCows\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
