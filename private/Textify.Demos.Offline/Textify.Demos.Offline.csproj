@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Terminaux" Version="6.1.29" />
+    <PackageReference Include="Terminaux" Version="8.3.0.1" />
   </ItemGroup>
 
 </Project>

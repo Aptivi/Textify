@@ -17,7 +17,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-using Terminaux.Colors.Data;
+using Colorimetry.Data;
 using Terminaux.Inputs;
 using Terminaux.Writer.ConsoleWriters;
 using Textify.Data.Unicode;
@@ -30,7 +30,7 @@ namespace Textify.Demos.Offline.Fixtures
         {
             // Prompt for a character
             TextWriterColor.Write("Enter a character: ", false);
-            char character = Input.ReadKey(true).KeyChar;
+            char character = Input.ReadKey().KeyChar;
             TextWriterRaw.Write();
 
             // Query it

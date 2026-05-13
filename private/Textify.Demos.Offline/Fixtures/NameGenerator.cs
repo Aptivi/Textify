@@ -18,7 +18,7 @@
 //
 
 using System;
-using Terminaux.Colors.Data;
+using Colorimetry.Data;
 using Terminaux.Writer.ConsoleWriters;
 using Textify.Data.NameGen;
 using NameGen = Textify.Data.NameGen.NameGenerator;
