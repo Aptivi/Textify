@@ -17,6 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+// Originally found in https://github.com/rawsonm88/Cowsay
+
 using Shouldly;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
