@@ -85,7 +85,7 @@ namespace Textify.Tests.Cowsay
             // Then get a specific cow format multiple times
             var format1 = await provider.GetCowFormatAsync("default");
             var format2 = await provider.GetCowFormatAsync("default");
-            var format3 = await provider.GetCowFormatAsync("tux");
+            var format3 = await provider.GetCowFormatAsync("ibm");
 
             // Assert - formats should be retrieved successfully
             format1.ShouldNotBeNullOrEmpty();
