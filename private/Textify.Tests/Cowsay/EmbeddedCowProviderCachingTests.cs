@@ -80,7 +80,7 @@ namespace Textify.Tests.Cowsay
             var provider = new EmbeddedCowFormatProvider();
 
             // Act - call GetAvailableCowsAsync first to populate cache
-            var availableCows = await provider.GetAvailableCowsAsync();
+            _ = await provider.GetAvailableCowsAsync();
 
             // Then get a specific cow format multiple times
             var format1 = await provider.GetCowFormatAsync("default");

@@ -37,7 +37,6 @@ namespace Textify.Data.Cowsay
     {
         private readonly Lazy<IReadOnlyList<(string Name, string FullPath)>> _cachedCows;
         private const string ResourcePrefix = "Textify.Data.";
-        private static readonly Regex CowNamePattern = new(@"Textify\.Data\.*(\.cow$)*", RegexOptions.Compiled);
 
         /// <inheritdoc/>
         public async Task<string> GetCowFormatAsync(string cowName)
@@ -65,7 +64,7 @@ namespace Textify.Data.Cowsay
             return Task.FromResult<IReadOnlyList<string>>(names);
         }
 
-        private static IReadOnlyList<(string Name, string FullPath)> LoadCows()
+        internal static IReadOnlyList<(string Name, string FullPath)> LoadCows()
         {
             var assembly = typeof(DefaultCattleFarmer).Assembly;
             return assembly.GetManifestResourceNames()
