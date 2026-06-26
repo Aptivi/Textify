@@ -1,10 +1,10 @@
-We've released this version to improve cowsay parsing.
+We've released this version to add paragraph tools.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Improved cowsay parsing to take different syntax into account
+- `[+]` Added paragraph tools
 
 Review the commit history if you want to get a deep insight about the changes.
 
