@@ -1948,6 +1948,160 @@ namespace Textify.Tests.General
             var actual = TextTools.GetCharWidthType(c);
             actual.ShouldBe(expected);
         }
+
+        /// <summary>
+        /// Tests trimming new lines as string
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestTrimNewLinesAsString()
+        {
+            string source =
+                """
+
+
+                This new line should be the first line,
+                and this line should be the second one.
+
+                However, this line should be the fourth line,
+                not the third.
+
+
+                """;
+            string trimmed = source.TrimNewLines();
+            string expected =
+                """
+                This new line should be the first line,
+                and this line should be the second one.
+                
+                However, this line should be the fourth line,
+                not the third.
+                """.UnixifyNewLines();
+            trimmed.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests trimming new lines as string (edge case)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestTrimNewLinesAsStringEdgeCase()
+        {
+            string source =
+                """
+
+
+
+
+                """;
+            string trimmed = source.TrimNewLines();
+            string expected = "";
+            trimmed.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests trimming new lines as array
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestTrimNewLinesAsArray()
+        {
+            string[] source =
+                """
+
+
+                This new line should be the first line,
+                and this line should be the second one.
+
+                However, this line should be the fourth line,
+                not the third.
+
+
+                """.SplitNewLines();
+            string[] trimmed = source.TrimNewLines();
+            string[] expected =
+            [
+                "This new line should be the first line,",
+                "and this line should be the second one.",
+                "",
+                "However, this line should be the fourth line,",
+                "not the third.",
+            ];
+            trimmed.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests trimming new lines as array (edge case)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestTrimNewLinesAsArrayEdgeCase()
+        {
+            string[] source =
+                """
+
+
+
+
+                """.SplitNewLines();
+            string[] trimmed = source.TrimNewLines();
+            string[] expected = [];
+            trimmed.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests paragraphizing the source text
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestParagraphize()
+        {
+            string source =
+                """
+
+
+                This new line should be the first line,
+                and this line should be the second one.
+
+
+
+                However, this line should be the fourth line,
+                not the third, because we are dealing with
+                paragraphs. This is the second paragraph.
+
+
+                """;
+            string[] trimmed = source.Paragraphize();
+            string[] expected =
+            [
+                "This new line should be the first line,",
+                "and this line should be the second one.",
+                "",
+                "However, this line should be the fourth line,",
+                "not the third, because we are dealing with",
+                "paragraphs. This is the second paragraph.",
+            ];
+            trimmed.ShouldBe(expected);
+        }
+
+        /// <summary>
+        /// Tests paragraphizing the source text (edge case)
+        /// </summary>
+        [TestMethod]
+        [Description("Querying")]
+        public void TestParagraphizeEdgeCase()
+        {
+            string source =
+                """
+
+
+
+
+                """;
+            string[] trimmed = source.Paragraphize();
+            string[] expected = [];
+            trimmed.ShouldBe(expected);
+        }
     }
 
 }
