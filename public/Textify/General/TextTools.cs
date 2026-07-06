@@ -37,6 +37,7 @@ namespace Textify.General
     /// </summary>
     public static class TextTools
     {
+        private static readonly object widthLock = new();
         private static readonly string[] escaped = [@"\\", @"\*", @"\+", @"\?", @"\|", @"\{", @"\[", @"\(", @"\)", @"\^", @"\$", @"\.", @"\#", @"\ ", @"\-", @"\""", @"\'", @"\`", @"\!"];
         private static readonly string[] unescaped = [@"\", @"*", @"+", @"?", @"|", @"{", @"[", @"(", @")", @"^", @"$", @".", @"#", @" ", @"-", @"""", @"'", @"`", @"!"];
 
@@ -2137,6 +2138,280 @@ namespace Textify.General
 
             // Return the result
             return [.. paragraphized];
+        }
+
+        /// <summary>
+        /// Estimates the cell width (how many cells a string takes up - without VT sequence support)
+        /// </summary>
+        /// <param name="sentence">A sentence to process</param>
+        /// <returns>Length of the string by character widths (a.k.a. how many cells this sentence takes up)</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static int EstimateCellWidth(string sentence)
+        {
+            // We don't need to perform operations on null or empty strings
+            if (string.IsNullOrEmpty(sentence))
+                return 0;
+
+            // Iterate through every character inside this string to get their widths according to the Unicode
+            // standards to ensure that we have the correct cell width count that the string takes up.
+            int cells = 0;
+            int i = 0;
+            while (i < sentence.Length)
+            {
+                int len = GraphemeCluster.GetLength(sentence, i);
+                if (len <= 0)
+                    len = 1;
+                cells += GraphemeCluster.GetClusterWidth(sentence, i);
+                i += len;
+            }
+            return cells;
+        }
+
+        /// <summary>
+        /// Estimates the cell width (how many cells a string takes up - without VT sequence support) of a character
+        /// </summary>
+        /// <param name="sentence">A sentence to process</param>
+        /// <param name="index">Index of a character within a sentence</param>
+        /// <returns>Length of a character by character widths (a.k.a. how many cells this sentence takes up), or -1 if empty</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static int EstimateCellWidth(string sentence, int index)
+        {
+            lock (widthLock)
+            {
+                // We don't need to perform operations on null or empty strings
+                if (string.IsNullOrEmpty(sentence))
+                    return -1;
+
+                // Process index
+                if (index > sentence.Length - 1)
+                    index = sentence.Length - 1;
+
+                // Iterate through every character inside this string to get their widths according to the Unicode
+                // standards to ensure that we have the correct cell width count that the string takes up.
+                int clusterStart = GraphemeCluster.GetStart(sentence, index);
+                if (clusterStart != index)
+                    return 0;
+
+                return GraphemeCluster.GetClusterWidth(sentence, index);
+            }
+        }
+
+        /// <summary>
+        /// Estimates the amount of zero-width characters - without VT sequence support
+        /// </summary>
+        /// <param name="sentence">A sentence to process</param>
+        /// <returns>The amount of zero-width characters that this sentence contains</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static int EstimateZeroWidths(string sentence)
+        {
+            lock (widthLock)
+            {
+                // We don't need to perform operations on null or empty strings
+                if (string.IsNullOrEmpty(sentence))
+                    return 0;
+
+                // Iterate through every character inside this string to get their widths according to the Unicode
+                // standards to ensure that we calculate all the zero widths.
+                int zeroWidths = 0;
+                int i = 0;
+                while (i < sentence.Length)
+                {
+                    int len = GraphemeCluster.GetLength(sentence, i);
+                    if (len <= 0)
+                        len = 1;
+                    if (GraphemeCluster.GetClusterWidth(sentence, i) == 0)
+                        zeroWidths++;
+                    i += len;
+                }
+                return zeroWidths;
+            }
+        }
+
+        /// <summary>
+        /// Estimates the amount of zero-width characters - without VT sequence support
+        /// </summary>
+        /// <param name="sentence">A sentence to process</param>
+        /// <returns>The amount of zero-width characters that this sentence contains</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static int EstimateFullWidths(string sentence)
+        {
+            lock (widthLock)
+            {
+                // We don't need to perform operations on null or empty strings
+                if (string.IsNullOrEmpty(sentence))
+                    return 0;
+
+                // Iterate through every character inside this string to get their widths according to the Unicode
+                // standards to ensure that we calculate all the full widths.
+                int fullWidths = 0;
+                int i = 0;
+                while (i < sentence.Length)
+                {
+                    int len = GraphemeCluster.GetLength(sentence, i);
+                    if (len <= 0)
+                        len = 1;
+                    if (GraphemeCluster.GetClusterWidth(sentence, i) == 2)
+                        fullWidths++;
+                    i += len;
+                }
+                return fullWidths;
+            }
+        }
+
+        /// <summary>
+        /// Determines the text alignment X position (zero-based)
+        /// </summary>
+        /// <param name="text">Text to process</param>
+        /// <param name="width">Target width (zero-based)</param>
+        /// <param name="alignment">Text alignment</param>
+        /// <param name="leftMargin">Left margin (zero-based)</param>
+        /// <returns>A zero-based X position of the aligned text</returns>
+        /// <remarks>
+        /// Split the sentences using <see cref="GetWrappedSentencesByWords(string, int)"/> or
+        /// <see cref="GetWrappedSentences(string, int)"/> and call this for every line, or wrong
+        /// results will occur!
+        /// </remarks>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static int DetermineTextAlignment(string text, int width, TextAlignment alignment, int leftMargin = 0)
+        {
+            int maxWidth = EstimateCellWidth(text);
+
+            // Process the positions depending on the alignment
+            int x = leftMargin;
+            switch (alignment)
+            {
+                case TextAlignment.Right:
+                    x = leftMargin + width - maxWidth;
+                    break;
+                case TextAlignment.Middle:
+                    x = leftMargin + width / 2 - maxWidth / 2;
+                    break;
+            }
+            if (x < 0)
+                x = 0;
+            return x;
+        }
+
+        /// <summary>
+        /// Pads the string to the left with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the left</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <returns>Padded string</returns>
+        public static string PadLeft(string text, int totalLength) =>
+            PadLeft(text, totalLength, (WideChar)" ");
+
+        /// <summary>
+        /// Pads the string to the left with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the left</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <param name="padder">Pad character</param>
+        /// <returns>Padded string</returns>
+        public static string PadLeft(string text, int totalLength, string padder)
+        {
+            string pad = Pad(text, totalLength, padder);
+            return pad.ToString() + text;
+        }
+
+        /// <summary>
+        /// Pads the string to the right with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the right</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <returns>Padded string</returns>
+        public static string PadRight(string text, int totalLength) =>
+            PadRight(text, totalLength, " ");
+
+        /// <summary>
+        /// Pads the string to the right with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the right</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <param name="padder">Pad character</param>
+        /// <returns>Padded string</returns>
+        public static string PadRight(string text, int totalLength, string padder)
+        {
+            string pad = Pad(text, totalLength, padder);
+            return text + pad.ToString();
+        }
+
+        /// <summary>
+        /// Pads the string to the middle with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the middle</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <returns>Padded string</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string PadMiddle(string text, int totalLength) =>
+            PadMiddle(text, totalLength, " ");
+
+        /// <summary>
+        /// Pads the string to the middle with spaces - without VT sequence support
+        /// </summary>
+        /// <param name="text">Text to pad to the middle</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <param name="padder">Pad character</param>
+        /// <returns>Padded string</returns>
+        /// <remarks>If you want to be able to use the VT-sequence-enabled version, you must use Terminaux 3.0 or later.</remarks>
+        public static string PadMiddle(string text, int totalLength, string padder)
+        {
+            int alignment = DetermineTextAlignment(text, totalLength, TextAlignment.Middle);
+            int contentWidth = EstimateCellWidth(text);
+            string padded = PadLeft(text, alignment + contentWidth, padder);
+            int rightPadLength = totalLength - (alignment + contentWidth);
+            string rightPad = rightPadLength > 0 ? new(' ', rightPadLength) : "";
+            return padded + rightPad;
+        }
+
+        /// <summary>
+        /// Pads the string to the specified alignment with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the specified alignment</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <param name="alignment">Text alignment to pad the text</param>
+        /// <returns>Padded string</returns>
+        public static string Pad(string text, int totalLength, TextAlignment alignment) =>
+            Pad(text, totalLength, " ", alignment);
+
+        /// <summary>
+        /// Pads the string to the specified alignment with spaces
+        /// </summary>
+        /// <param name="text">Text to pad to the specified alignment</param>
+        /// <param name="totalLength">Total length (total cells) of the padded string</param>
+        /// <param name="padder">Pad character</param>
+        /// <param name="alignment">Text alignment to pad the text</param>
+        /// <returns>Padded string</returns>
+        public static string Pad(string text, int totalLength, string padder, TextAlignment alignment)
+        {
+            return
+                alignment == TextAlignment.Right ? PadLeft(text, totalLength, padder) :
+                alignment == TextAlignment.Middle ? PadMiddle(text, totalLength, padder) :
+                PadRight(text, totalLength, padder);
+        }
+
+        internal static string Pad(string text, int totalLength, string padder)
+        {
+            // Process the length and determine how many padders to use
+            int processedLength = EstimateCellWidth(text);
+            int padderWidth = EstimateCellWidth(padder);
+            int remaining = totalLength - processedLength;
+            StringBuilder pad = new();
+
+            // If the remaining is less than required, bail
+            while (remaining > 0)
+            {
+                // Edge case: padder width may be larger than remaining, so add space instead
+                if (padderWidth > remaining)
+                    padder = " ";
+
+                // Now, pad!
+                pad.Append(padder.ToString());
+                remaining -= padderWidth;
+            }
+
+            // Return pad
+            return pad.ToString();
         }
     }
 }

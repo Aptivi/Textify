@@ -17,6 +17,8 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 
+using Textify.General;
+
 namespace Textify.Tools
 {
     //
@@ -50,13 +52,27 @@ namespace Textify.Tools
             if (pos >= text.Length)
                 return 0;
 
-            int idx = pos + ReadSegmentForward(text, pos);
+            var seg = ReadSegment(text, pos);
+            int idx = pos + seg.Length;
             while (idx < text.Length && text[idx] == Zwj && idx + 1 < text.Length)
             {
                 idx++;
-                idx += ReadSegmentForward(text, idx);
+                idx += ReadSegment(text, idx).Length;
             }
             return idx - pos;
+        }
+
+        /// <summary>
+        /// Gets the grapheme cluster width
+        /// </summary>
+        /// <param name="text">Text to process</param>
+        /// <param name="clusterStart">Position to start processing from</param>
+        /// <returns>Total width of the sequence</returns>
+        public static int GetClusterWidth(string text, int clusterStart)
+        {
+            if (clusterStart < 0 || clusterStart >= text.Length)
+                return 0;
+            return ReadSegment(text, clusterStart).Width;
         }
 
         /// <summary>
@@ -98,52 +114,6 @@ namespace Textify.Tools
             }
             return pos;
         }
-
-        private static int ReadSegmentForward(string text, int pos)
-        {
-            if (pos >= text.Length)
-                return 0;
-
-            int len = (pos + 1 < text.Length && char.IsSurrogatePair(text[pos], text[pos + 1])) ? 2 : 1;
-            int idx = pos + len;
-
-            // Flags: two regional indicators paired together, nothing else attaches
-            if (len == 2 && IsRegionalIndicatorPair(text, pos))
-            {
-                int clusterStart = GetRegionalIndicatorClusterStart(text, pos);
-                if (clusterStart == pos)
-                    return GetRegionalIndicatorClusterLength(text, clusterStart);
-                return 2;
-            }
-
-            // Skin-tone modifier attaches directly to the base
-            if (IsModifierPair(text, idx))
-                idx += 2;
-
-            // Tag sequence: base emoji + run of tag chars + cancel tag
-            if (IsTagCharPair(text, idx))
-            {
-                while (IsTagCharPair(text, idx))
-                    idx += 2;
-                if (IsTagCancelPair(text, idx))
-                    idx += 2;
-            }
-
-            // Variation selector, then optional keycap combiner
-            if (idx < text.Length && (text[idx] == Vs15 || text[idx] == Vs16))
-            {
-                idx++;
-                if (idx < text.Length && text[idx] == KeycapCombiner)
-                    idx++;
-            }
-            else if (idx < text.Length && text[idx] == KeycapCombiner)
-            {
-                // Keycap without an explicit VS16 (rare but valid)
-                idx++;
-            }
-
-            return idx - pos;
-        }
         
         private static int GetRegionalIndicatorRunStart(string text, int pos)
         {
@@ -179,6 +149,67 @@ namespace Textify.Tools
 
         private static bool IsTagCancelPair(string text, int idx) =>
             IsPairInRange(text, idx, TagCancel, TagCancel);
+
+        private static SegmentInfo ReadSegment(string text, int pos)
+        {
+            if (pos >= text.Length)
+                return new SegmentInfo(0, 0);
+
+            // Flags: pair from the start of the run, always double-width as a whole unit,
+            // regardless of whatever width a lone regional indicator codepoint might report.
+            if (IsRegionalIndicatorPair(text, pos))
+            {
+                int clusterStart = GetRegionalIndicatorClusterStart(text, pos);
+                if (clusterStart == pos)
+                    return new SegmentInfo(GetRegionalIndicatorClusterLength(text, clusterStart), 2);
+
+                // Not pair-aligned (shouldn't normally happen with a proper cluster start) -
+                // treat as a lone RI codepoint instead of guessing.
+                int cp = char.ConvertToUtf32(text[pos], text[pos + 1]);
+                return new SegmentInfo(2, TextTools.GetCharWidth(cp));
+            }
+
+            bool isSurrogatePair = pos + 1 < text.Length && char.IsSurrogatePair(text[pos], text[pos + 1]);
+            int baseLen = isSurrogatePair ? 2 : 1;
+            int baseCodePoint = isSurrogatePair ? char.ConvertToUtf32(text[pos], text[pos + 1]) : text[pos];
+            int idx = pos + baseLen;
+            int width = TextTools.GetCharWidth(baseCodePoint);
+
+            // Skin-tone modifier: zero-width addition, doesn't change the base's width
+            if (IsModifierPair(text, idx))
+                idx += 2;
+
+            // Tag sequence: zero-width addition regardless of what GetCharWidth would
+            // (likely incorrectly) report for these astral, invisible codepoints
+            if (IsTagCharPair(text, idx))
+            {
+                while (IsTagCharPair(text, idx))
+                    idx += 2;
+                if (IsTagCancelPair(text, idx))
+                    idx += 2;
+            }
+
+            // Variation selectors / keycap combiner can override the base's default width
+            if (idx < text.Length && text[idx] == Vs16)
+            {
+                width = 2; // emoji presentation forces full width
+                idx++;
+                if (idx < text.Length && text[idx] == KeycapCombiner)
+                    idx++;
+            }
+            else if (idx < text.Length && text[idx] == Vs15)
+            {
+                width = 1; // text presentation forces narrow width
+                idx++;
+            }
+            else if (idx < text.Length && text[idx] == KeycapCombiner)
+            {
+                width = 2; // keycap without explicit VS16
+                idx++;
+            }
+
+            return new SegmentInfo(idx - pos, width);
+        }
     }
     //
     // ========== CODE ASSISTED BY Claude Sonnet 5 Medium WITH HUMAN REVIEW
