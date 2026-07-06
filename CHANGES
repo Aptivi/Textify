@@ -1,11 +1,10 @@
-We've released this version to add grapheme cluster tools and padding tools.
+We've released this version to fix the sentence wrapper that wraps beyond the maximum length in some cases, including CJK characters.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[+]` Added grapheme cluster tools
-- `[+]` Added padding tools
+- `[*]` Fixed sentence wrapper wrapping beyond maximum length in some cases
 
 Review the commit history if you want to get a deep insight about the changes.
 
