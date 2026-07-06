@@ -1159,15 +1159,19 @@ namespace Textify.General
                     bool isNewLine = splitText[i] == '\n';
 
                     // Append the character into the incomplete sentence builder.
+                    int len = GraphemeCluster.GetLength(splitText, i);
+                    string sequence = splitText.Substring(i, len);
+                    if (len > 1)
+                        i += len - 1;
                     if (!isNewLine)
-                        IncompleteSentenceBuilder.Append(ParagraphChar.ToString());
+                        IncompleteSentenceBuilder.Append(sequence);
 
                     // Also, compensate the \0 characters
                     if (splitText[i] == '\0')
                         compensate++;
 
                     // Check to see if we're at the maximum character number or at the new line
-                    if (IncompleteSentenceBuilder.Length == maximumLength - indentLength + compensate |
+                    if (IncompleteSentenceBuilder.Length >= maximumLength - indentLength + compensate - 1 |
                         i == splitText.Length - 1 |
                         isNewLine)
                     {
