@@ -1159,11 +1159,13 @@ namespace Textify.General
                     bool isNewLine = splitText[i] == '\n';
 
                     // Append the character into the incomplete sentence builder.
+                    int width = EstimateCellWidth(splitText, i);
                     int len = GraphemeCluster.GetLength(splitText, i);
                     string sequence = splitText.Substring(i, len);
                     if (len > 1)
                         i += len - 1;
-                    if (!isNewLine)
+                    bool notOverflow = EstimateCellWidth(IncompleteSentenceBuilder.ToString()) + width <= maximumLength - indentLength + compensate;
+                    if (!isNewLine && notOverflow)
                         IncompleteSentenceBuilder.Append(sequence);
 
                     // Also, compensate the \0 characters
@@ -1171,12 +1173,14 @@ namespace Textify.General
                         compensate++;
 
                     // Check to see if we're at the maximum character number or at the new line
-                    if (IncompleteSentenceBuilder.Length >= maximumLength - indentLength + compensate - 1 |
+                    string sentence = IncompleteSentenceBuilder.ToString();
+                    int nextCharWidth = EstimateCellWidth(splitText, i);
+                    if (EstimateCellWidth(sentence) + nextCharWidth > maximumLength - indentLength + compensate |
                         i == splitText.Length - 1 |
                         isNewLine)
                     {
                         // We're at the character number of maximum character. Add the sentence to the list for "wrapping" in columns.
-                        IncompleteSentences.Add(IncompleteSentenceBuilder.ToString());
+                        IncompleteSentences.Add(sentence);
                         if (explicitNewLine)
                             IncompleteSentences.Add("");
 
@@ -1184,6 +1188,8 @@ namespace Textify.General
                         IncompleteSentenceBuilder.Clear();
                         indentLength = 0;
                         compensate = 0;
+                        if (!notOverflow)
+                            IncompleteSentenceBuilder.Append(sequence);
                     }
                 }
             }
