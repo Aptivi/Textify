@@ -14,7 +14,7 @@
     <Project Path="private/Textify.KaomojiArrayGen/Textify.KaomojiArrayGen.csproj" />
   </Folder>
   <Folder Name="/Private/Helpers/">
-    <Project Path="private/BuildTargets/BuildTargets.csproj" />
+    <Project Path="private/Dtp/Dtp.csproj" />
   </Folder>
   <Folder Name="/Private/Tests/">
     <Project Path="private/Textify.Tests/Textify.Tests.csproj" />
