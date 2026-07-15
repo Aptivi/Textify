@@ -1,10 +1,10 @@
-We've released this version to fix the sentence wrapper that wraps beyond the maximum length in some cases, including CJK characters.
+We've released this version to fix the sentence wrapper in cases where null chars occur.
 
 ### Changes
 
 This release contains a variety of changes, including, but not limited to:
 
-- `[*]` Fixed sentence wrapper wrapping beyond maximum length in some cases
+- `[*]` General improvements and bug fixes
 
 Review the commit history if you want to get a deep insight about the changes.
 
