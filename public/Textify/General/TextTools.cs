@@ -1148,7 +1148,6 @@ namespace Textify.General
             // the first time and will be reverted back to zero after the incomplete sentence is formed.
             foreach (string splitText in text.SplitNewLines())
             {
-                int compensate = 0;
                 if (splitText.Length == 0)
                     IncompleteSentences.Add(splitText);
                 for (int i = 0; i < splitText.Length; i++)
@@ -1164,18 +1163,14 @@ namespace Textify.General
                     string sequence = splitText.Substring(i, len);
                     if (len > 1)
                         i += len - 1;
-                    bool notOverflow = EstimateCellWidth(IncompleteSentenceBuilder.ToString()) + width <= maximumLength - indentLength + compensate;
+                    bool notOverflow = EstimateCellWidth(IncompleteSentenceBuilder.ToString()) + width <= maximumLength - indentLength;
                     if (!isNewLine && notOverflow)
                         IncompleteSentenceBuilder.Append(sequence);
-
-                    // Also, compensate the \0 characters
-                    if (splitText[i] == '\0')
-                        compensate++;
 
                     // Check to see if we're at the maximum character number or at the new line
                     string sentence = IncompleteSentenceBuilder.ToString();
                     int nextCharWidth = EstimateCellWidth(splitText, i);
-                    if (EstimateCellWidth(sentence) + nextCharWidth > maximumLength - indentLength + compensate |
+                    if (EstimateCellWidth(sentence) + nextCharWidth > maximumLength - indentLength |
                         i == splitText.Length - 1 |
                         isNewLine)
                     {
@@ -1187,7 +1182,6 @@ namespace Textify.General
                         // Clean everything up
                         IncompleteSentenceBuilder.Clear();
                         indentLength = 0;
-                        compensate = 0;
                         if (!notOverflow)
                             IncompleteSentenceBuilder.Append(sequence);
                     }
