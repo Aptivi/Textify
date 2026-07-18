@@ -10,10 +10,6 @@
 [submodule "assets/KaomojiList"]
 	path = assets/KaomojiList
 	url = https://github.com/Aptivi-Analytics/KaomojiList.git
-[submodule "tools"]
-	path = tools
-	url = https://github.com/Aptivi/tools.git
-	branch = main
 [submodule "DocGen/theme"]
 	path = DocGen/theme
 	url = https://github.com/Aptivi/docfx-apt.git
